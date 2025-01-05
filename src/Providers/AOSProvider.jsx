@@ -1,7 +1,8 @@
 'use client'
 import React, { createContext } from 'react';
 import { useEffect } from 'react';
-import AOS from 'aos'
+import dynamic from 'next/dynamic';
+const AOS = dynamic(() => import('aos'), { ssr: false });
 import 'aos/dist/aos.css';
 
 const AOSProvider = ({ children }) => {
