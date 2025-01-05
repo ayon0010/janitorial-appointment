@@ -15,4 +15,4 @@ const nextConfig = {
   poweredByHeader: false, // Disable Next.js header if desired for security
 };
 
-module.exports = nextConfig;
+export default nextConfig;
