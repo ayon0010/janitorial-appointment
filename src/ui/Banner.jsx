@@ -64,6 +64,23 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
+                    <div className="banner-4 flex flex-col h-full">
+                        <div className='absolute inset-0 bg-black opacity-60'></div>
+                        <div className='my-auto 2xl:pl-40 xl:pl-40 z-30 w-1/2'>
+                            <h1 className='text-white font-bold poppins 2xl:text-6xl xl:text-5xl text-3xl'>Unlock Cleaning <br /><span className='text-green-600 banner-text'>Opportunities</span> with Ease</h1>
+                            <p className='my-6 inter text-xl font-semibold text-white opacity-60'>Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!</p>
+                            <div className='flex items-center gap-6'>
+                                <button className='rounded-[70px] px-10 text-lg nunito font-bold bg-primary text-white btn border-none'>
+                                    <Link href={'/register'}>
+                                        Sign Up
+                                    </Link>
+                                </button>
+                                <p className='text-white opacity-60 inter font-bold'>No Credit Card Required</p>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
                     <div className="banner-3 flex flex-col h-full">
                         <div className='absolute inset-0 bg-black opacity-60'></div>
                         <div className='m-auto z-30 w-3/4'>

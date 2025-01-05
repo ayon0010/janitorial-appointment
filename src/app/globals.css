@@ -272,6 +272,16 @@ input[type="checkbox"]:checked ~ .collapse-content {
   width: 100%;
   overflow: hidden;
 }
+.banner-4 {
+  position: relative;
+  background-image: url("../../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  width: 100%;
+  overflow: hidden;
+}
 
 .banner-text {
   line-height: 60px !important;
