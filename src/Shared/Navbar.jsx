@@ -36,10 +36,14 @@ const NavBar = () => {
             setScrolled(currentScrollTop < lastScrollTop && currentScrollTop > 80);
             lastScrollTop = currentScrollTop;
         };
+        if (typeof window !== "undefined") {
+            window.addEventListener('scroll', handleScroll);
+        }
 
-        window.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            if (typeof window !== "undefined") {
+                window.removeEventListener('scroll', handleScroll);
+            }
         };
     }, []);
 

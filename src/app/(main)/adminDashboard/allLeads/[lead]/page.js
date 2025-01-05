@@ -2,8 +2,6 @@ import formatTimestamp from '@/js/convertTime';
 import { cookies } from 'next/headers';
 import React from 'react';
 
-
-
 function formatDate(dateString) {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     const date = new Date(dateString);

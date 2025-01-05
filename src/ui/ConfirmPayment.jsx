@@ -54,23 +54,26 @@ export default function CompletePage() {
         if (!stripe) {
             return;
         }
+        if (typeof window !== "undefined") {
 
-        const clientSecret = new URLSearchParams(window.location.search).get(
-            "payment_intent_client_secret"
-        );
+            const clientSecret = new URLSearchParams(window.location.search).get(
+                "payment_intent_client_secret"
+            );
 
-        if (!clientSecret) {
-            return;
-        }
-
-        stripe.retrievePaymentIntent(clientSecret).then(({ paymentIntent }) => {
-            if (!paymentIntent) {
+            if (!clientSecret) {
                 return;
             }
 
-            setStatus(paymentIntent.status);
-            setIntentId(paymentIntent.id);
-        });
+            stripe.retrievePaymentIntent(clientSecret).then(({ paymentIntent }) => {
+                if (!paymentIntent) {
+                    return;
+                }
+
+                setStatus(paymentIntent.status);
+                setIntentId(paymentIntent.id);
+            });
+        }
+
     }, [stripe]);
 
     return (

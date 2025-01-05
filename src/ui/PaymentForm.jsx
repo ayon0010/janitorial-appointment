@@ -19,7 +19,7 @@ export default function PaymentForm({ dpmCheckerLink, product_Id, closeModal }) 
     const [status, setStatus] = useState("default");
     const [intentId, setIntentId] = useState(null);
     const axiosSecure = useAxiosSecure();
-    
+
     const close = () => {
         return closeModal();
     }
@@ -84,16 +84,19 @@ export default function PaymentForm({ dpmCheckerLink, product_Id, closeModal }) 
     useEffect(() => {
         if (!stripe) return;
 
-        const clientSecret = new URLSearchParams(window.location.search).get(
-            "payment_intent_client_secret"
-        );
+        if (typeof window !== "undefined") {
+            const clientSecret = new URLSearchParams(window.location.search).get(
+                "payment_intent_client_secret"
+            );
 
-        if (!clientSecret) return;
+            if (!clientSecret) return;
 
-        stripe.retrievePaymentIntent(clientSecret).then(({ paymentIntent }) => {
-            if (!paymentIntent) return;
-            setIntentId(paymentIntent.id);
-        });
+            stripe.retrievePaymentIntent(clientSecret).then(({ paymentIntent }) => {
+                if (!paymentIntent) return;
+                setIntentId(paymentIntent.id);
+            });
+        }
+
     }, [stripe]);
 
     return (
