@@ -5,6 +5,7 @@ import Navbar from '@/Shared/Navbar'
 import QueryProvider from '@/Providers/QueryProvider'
 import AOSProvider from '@/Providers/AOSProvider'
 import Chat from '../../Shared/Chat'
+import Script from 'next/script';
 
 
 export const inter = Inter({
@@ -40,6 +41,16 @@ export const nunito = Nunito({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" >
+      <head>
+        {/* Facebook SDK Script */}
+        <Script
+          id="facebook-sdk"
+          async
+          defer
+          crossOrigin="anonymous"
+          src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0&appId=619890160420977"
+        ></Script>
+      </head>
       <body className={`${inter.className}`}>
         <main className='overflow-hidden min-h-screen max-w-[1920px] mx-auto bg-[#edf4ef]'>
           <AuthProvider>
