@@ -6,9 +6,8 @@ import QueryProvider from '@/Providers/QueryProvider'
 import AOSProvider from '@/Providers/AOSProvider'
 import dynamic from "next/dynamic";
 
-// Dynamically load the Chat component from '../../Shared/Chat' without SSR
-const Chat = dynamic(() => import('../../Shared/Chat'), { ssr: false });
-
+// Dynamically load the Chat component from '../../Shared/Chat' without SS
+const Chat = dynamic(() => import("../../Shared/Chat"));
 
 export const inter = Inter({
   subsets: ['latin'],
