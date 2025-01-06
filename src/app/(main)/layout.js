@@ -4,6 +4,7 @@ import AuthProvider from '@/Providers/AuthProvider'
 import Navbar from '@/Shared/Navbar'
 import QueryProvider from '@/Providers/QueryProvider'
 import AOSProvider from '@/Providers/AOSProvider'
+import Chat from '../../Shared/Chat'
 
 
 export const inter = Inter({
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
               <AOSProvider>
                 <Navbar />
                 {children}
+                <Chat />
               </AOSProvider>
             </QueryProvider>
           </AuthProvider>
