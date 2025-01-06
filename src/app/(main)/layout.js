@@ -47,10 +47,10 @@ export default function RootLayout({ children }) {
               <AOSProvider>
                 <Navbar />
                 {children}
-                <Chat />
               </AOSProvider>
             </QueryProvider>
           </AuthProvider>
+          <Chat />
         </main>
       </body>
     </html>
