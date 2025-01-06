@@ -44,13 +44,14 @@ export default function RootLayout({ children }) {
     <html lang="en" >
       <head>
         {/* Facebook SDK Script */}
-        <Script
-          id="facebook-customer-chat-sdk"
+        <script
           async
           defer
           crossOrigin="anonymous"
-          src="https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js"
-        ></Script>
+          src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0&appId=619890160420977"
+          strategy="beforeInteractive"
+        />
+
         <Script id="facebook-sdk-init" strategy="lazyOnload">
           {`
     window.fbAsyncInit = function() {
