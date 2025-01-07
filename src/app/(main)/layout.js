@@ -42,30 +42,6 @@ export const nunito = Nunito({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" >
-      <head>
-        {/* Facebook SDK Script */}
-        <script
-          async
-          defer
-          crossOrigin="anonymous"
-          src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0&appId=619890160420977"
-          strategy="beforeInteractive"
-        />
-
-        <Script id="facebook-sdk-init" strategy="lazyOnload">
-          {`
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId: '619890160420977',
-        autoLogAppEvents: true,
-        xfbml: true,
-        version: 'v16.0'
-      });
-    };
-  `}
-        </Script>
-
-      </head>
       <body className={`${inter.className}`}>
         <main className='overflow-hidden min-h-screen max-w-[1920px] mx-auto bg-[#edf4ef]'>
           <AuthProvider>

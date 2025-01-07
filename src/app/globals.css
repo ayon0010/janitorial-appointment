@@ -347,6 +347,13 @@ input[type="checkbox"]:checked ~ .collapse-content {
   /* Change to your desired color */
 }
 
+.fb-customerchat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50; /* Ensure it stays on top of other elements */
+}
+
 @media screen and (max-width: 576px) {
   .dashboard {
     display: grid !important;
