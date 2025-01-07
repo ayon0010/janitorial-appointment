@@ -4,9 +4,10 @@ import AuthProvider from '@/Providers/AuthProvider'
 import Navbar from '@/Shared/Navbar'
 import QueryProvider from '@/Providers/QueryProvider'
 import AOSProvider from '@/Providers/AOSProvider'
-import Chat from '../../Shared/Chat'
-import Script from 'next/script';
+import dynamic from "next/dynamic";
 
+// Dynamically load the Chat component from '../../Shared/Chat' without SS
+const Chat = dynamic(() => import("../../Shared/Chat"));
 
 export const inter = Inter({
   subsets: ['latin'],
