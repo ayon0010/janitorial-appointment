@@ -16,7 +16,7 @@ const MessengerChat = () => {
             if (d.getElementById(id)) return;
             const js = d.createElement(s);
             js.id = id;
-            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            js.src = 'https://static.xx.fbcdn.net/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
         })(document, 'script', 'facebook-jssdk');
     }, []);
