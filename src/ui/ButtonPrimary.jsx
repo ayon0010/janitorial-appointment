@@ -9,7 +9,7 @@ const ButtonPrimary = ({ label, width }) => {
             <motion.a
                 initial='initial'
                 whileHover='hovered'
-                className={`relative block overflow-hidden whitespace-nowrap text-white  2xl:text-base xl:text-base 2xl:px-6 xl:px-4 px-2 text-[10px] font-semibold poppins 2xl:rounded-[35px] xl:rounded-[35px] rounded-3xl`}
+                className={`relative block overflow-hidden whitespace-nowrap text-white  2xl:text-base xl:text-base text-sm 2xl:px-6 xl:px-4 px-2 font-semibold poppins 2xl:rounded-[35px] xl:rounded-[35px] rounded-3xl`}
             >
                 <motion.div
                     animate={hover ? { y: '-100%' } : { y: '0' }}

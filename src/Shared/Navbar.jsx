@@ -99,6 +99,7 @@ const NavBar = () => {
         { name: 'Cleaning Calculator', href: '/cleaning-calculator' },
         { name: 'Pay Rate Checker', href: '/pay-rate-checker' },
         { name: 'Web & App Support', href: '/other-services' },
+        { name: 'Subscription', href: '/my-subscription' },
         { name: 'Help', href: '/help' },
     ]
 
@@ -255,7 +256,7 @@ const NavBar = () => {
             <Link href="/contact">Contact</Link>
         </li>
         <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/contact' ? 'text-orange' : ''}`}>
-            <Link href="/my-subscription">Subscription</Link>
+            <Link href="/book-an-appointment">Appointment</Link>
         </li>
     </>
 
@@ -312,34 +313,39 @@ const NavBar = () => {
                 <div className='absolute 2xl:top-[60px] xl:top-[60px] top-0 inset-0'>
                     <div className='bg-[#FBFCFF]'>
                         <div className='flex items-center justify-between  max-w-[1440px] mx-auto relative 2xl:h-[100px] xl:h-[100px] h-[80px] 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11 px-4'>
-                            <Link className='2xl:w-[140px] xl:w-[140px] w-[110px] 2xl:h-[110px] xl:h-[110px] h-auto' href={'/'}>
+                            <Link className='2xl:w-[140px] xl:w-[140px] w-[110px] 2xl:h-[110px] xl:h-[110px] h-[90px]' href={'/'}>
                                 <div className='absolute top-0 2xl:left-11 xl:left-11 left-5'>
                                     <div className='nav-start bg-white shadow-xl'>
-                                        <Image className='2xl:w-[140px] xl:w-[140px] w-[110px] 2xl:h-[110px] xl:h-[110px] h-auto object-contain' src={logo} alt='logo' />
+                                        <Image className='2xl:w-[140px] xl:w-[140px] w-[110px] 2xl:h-[110px] xl:h-[110px] h-[90px] object-contain' src={logo} alt='logo' />
                                     </div>
                                 </div>
                             </Link>
                             <div class="w-fit 2xl:block xl:block hidden">
-                                <ul class="flex navItems items-center justify-between 2xl:gap-8 xl:gap-6">
+                                <ul class="flex navItems items-center justify-between 2xl:gap-10 xl:gap-6">
                                     {
                                         navItems
                                     }
                                 </ul>
                             </div>
                             <div className="2xl:ml-0 xl:ml-0 ml-auto 2xl:hidden xl:hidden block">
-                                <div className="btn btn-ghost btn-circle" onClick={() => setNav(true)}>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M4 6h16M4 12h16M4 18h7" />
-                                    </svg>
+                                <div className='flex items-center gap-3'>
+                                    <Link href={'/Sign In'}>
+                                        <ButtonPrimary label={'Sign In'} />
+                                    </Link>
+                                    <div className="btn btn-ghost btn-circle" onClick={() => setNav(true)}>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-5 w-5"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="2"
+                                                d="M4 6h16M4 12h16M4 18h7" />
+                                        </svg>
+                                    </div>
                                 </div>
 
                                 <div
@@ -489,7 +495,7 @@ const NavBar = () => {
                                                     </>
                                                 </li>
                                                 <li className={`2xl:text-base xl:text-sm text-sm hover:text-orange transition-all text-black duration-100 font-bold py-3 border-b-[0.60px] border-b-black border-opacity-20 ${pathname === '/leads' ? 'text-orange' : ''}`}>
-                                                    <Link href="/my-subscription">Subscription</Link>
+                                                    <Link href="/my-subscription">Book an Appointment</Link>
                                                 </li>
                                                 <li className={`2xl:text-base xl:text-sm text-sm hover:text-orange transition-all text-black duration-100 font-bold py-3 ${pathname === '/contact' ? 'text-orange' : ''}`}>
                                                     <Link href="/contact">Contact</Link>
