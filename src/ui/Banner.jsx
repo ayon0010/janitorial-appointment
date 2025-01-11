@@ -9,6 +9,8 @@ import { FaArrowRight } from 'react-icons/fa';
 import 'swiper/css/pagination';
 import { TypeAnimation } from 'react-type-animation';
 import Link from 'next/link';
+import ButtonTertiary from './ButtonTertiary';
+import ButtonPrimary from './ButtonPrimary';
 
 const Banner = () => {
     return (
@@ -31,33 +33,24 @@ const Banner = () => {
                     <div className="banner-2 flex flex-col h-full">
                         <div className='absolute inset-0 bg-black opacity-60'></div>
                         <div className='m-auto z-30 w-3/4' data-aos="fade-down">
-                            <h1 className='text-white text-center font-bold poppins 2xl:text-6xl xl:text-5xl text-3xl leading-[100px]'>Find <span className=''>Qualified, Exclusive Janitorial Leads</span> <br /> available in Your Area!</h1>
-                            <p className='my-6 inter font-semibold text-center text-xl text-white opacity-80'>A reliable and stress-free appointment-setting service designed for janitors.<br />
+                            <h1 className='text-white text-center font-bold poppins 2xl:text-6xl xl:text-5xl text-3xl 2xl:leading-[100px] xl:leading-[100px]'>Find <span className=''>Qualified, Exclusive Janitorial Leads</span> <br /> available in Your Area!</h1>
+                            <p className='2xl:my-6 xl:my-6 my-3 inter font-semibold text-center text-xl text-white opacity-80'>A reliable and stress-free appointment-setting service designed for janitors.<br />
                                 Partner with the trusted provider of quality janitorial job opportunities.</p>
-                            <div className='flex items-center justify-center gap-6'>
-                                <button className='rounded-[70px] px-10 text-lg nunito font-bold bg-primary text-white btn border-none'>
-                                    <Link className='flex items-center gap-2' href={'/search/exclusive-leads'}>
-                                        <span>
-                                            Explore Now
-                                        </span>
-                                        <FaArrowRight />
-                                    </Link>
-                                </button>
-                            </div>
+                            <Link href={'/search/exclusive-leads'}>
+                                <ButtonTertiary label={'Explore Now'} />
+                            </Link>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="banner-1 flex flex-col h-full">
-                        <div className='my-auto 2xl:pl-40 xl:pl-40 z-30 w-1/2'>
-                            <h1 className='text-white font-bold poppins 2xl:text-6xl xl:text-5xl text-3xl'>Unlock Cleaning <br /><span className='text-green-600 banner-text'>Opportunities</span> with Ease</h1>
-                            <p className='my-6 inter text-xl font-semibold text-white opacity-60'>Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!</p>
+                        <div className='my-auto 2xl:pl-40 xl:pl-40 z-30 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10'>
+                            <h1 className='text-white font-bold poppins 2xl:text-6xl xl:text-5xl text-2xl'>Unlock Cleaning <br /><span className='text-green-600 banner-text'>Opportunities</span> with Ease</h1>
+                            <p className='my-6 inter 2xl:text-xl xl:text-xl text-base font-semibold text-white opacity-60'>Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!</p>
                             <div className='flex items-center gap-6'>
-                                <button className='rounded-[70px] px-10 text-lg nunito font-bold bg-primary text-white btn border-none'>
-                                    <Link href={'/register'}>
-                                        Sign Up
-                                    </Link>
-                                </button>
+                                <Link href={'/register'}>
+                                    <ButtonPrimary label={'Sign Up'} />
+                                </Link>
                                 <p className='text-white opacity-60 inter font-bold'>No Credit Card Required</p>
                             </div>
                         </div>
@@ -67,15 +60,12 @@ const Banner = () => {
                     <div className="banner-4 flex flex-col h-full">
                         <div className='absolute inset-0 bg-black opacity-60'></div>
                         <div className='my-auto 2xl:pl-40 xl:pl-40 z-30 w-1/2'>
-                            <h1 className='text-white font-bold poppins 2xl:text-6xl xl:text-5xl text-3xl'>Unlock Cleaning <br /><span className='text-green-600 banner-text'>Opportunities</span> with Ease</h1>
-                            <p className='my-6 inter text-xl font-semibold text-white opacity-60'>Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!</p>
+                            <h1 className='text-white font-bold poppins 2xl:text-6xl xl:text-5xl text-2xl'>Unlock Cleaning <br /><span className='text-green-600 banner-text'>Opportunities</span> with Ease</h1>
+                            <p className='my-6 inter 2xl:text-xl xl:text-xl text-base font-semibold text-white opacity-60'>Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!</p>
                             <div className='flex items-center gap-6'>
-                                <button className='rounded-[70px] px-10 text-lg nunito font-bold bg-primary text-white btn border-none'>
-                                    <Link href={'/register'}>
-                                        Sign Up
-                                    </Link>
-                                </button>
-                                <p className='text-white opacity-60 inter font-bold'>No Credit Card Required</p>
+                                <Link href={'/book-an-appointment'}>
+                                    <ButtonTertiary label={'Book an Appointment'} />
+                                </Link>
                             </div>
                         </div>
                     </div>
