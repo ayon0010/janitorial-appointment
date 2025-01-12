@@ -628,10 +628,10 @@ const NavBar = () => {
                     className={`bg-[#FBFCFF] ${scrolled ? 'pointer-events-auto' : 'pointer-events-none'} shadow-xl fixed right-0 left-0 z-50`}
                 >
                     <div className='flex 2xl:h-[100px] xl:h-[100px] h-[80px] items-center justify-between  max-w-[1440px] mx-auto relative 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11 px-4'>
-                        <Link className='2xl:w-[140px] xl:w-[140px] w-[110px] 2xl:h-[110px] xl:h-[110px] h-auto' href={'/'}>
+                        <Link className='2xl:w-[140px] xl:w-[140px] w-[110px] 2xl:h-[110px] xl:h-[110px] h-[90px]' href={'/'}>
                             <div className='absolute top-0 2xl:left-11 xl:left-11 left-5'>
                                 <div className='nav-start bg-white shadow-xl'>
-                                    <Image className='2xl:w-[140px] xl:w-[140px] w-[110px] 2xl:h-[110px] xl:h-[110px] h-auto object-contain' src={logo} alt='logo' />
+                                    <Image className='2xl:w-[140px] xl:w-[140px] w-[110px] 2xl:h-[110px] xl:h-[110px] h-[90px] object-contain' src={logo} alt='logo' />
                                 </div>
                             </div>
                         </Link>

@@ -18,14 +18,7 @@ export default function Home() {
             {/* Banner */}
             <Banner />
             {/* Section */}
-            <div className="max-w-screen-2xl mx-auto md:px-10 px-6">
-                <h5 className="text-secondary nunito text-center font-light text-xl mt-20 mb-4">How We Help You to Grow</h5>
-                <div className="w-[80%] mx-auto">
-                    <SectionTitles heading={'Discover Commercial Cleaning Leads Across the USA'} subHeading={"Janitorial Appointment connects cleaning companies with top commercial centers, hospitals, schools, and offices. Register now for exclusive access to appointment-setting opportunities."} />
-                </div>
-                <div>
-                    <Offers />
-                </div>
+            <div className="2xl:px-10 xl:px-10 px-6">
                 <h5 className="text-secondary nunito text-center font-light text-xl mt-20 mb-4">Effortless business growth.</h5>
                 <SectionTitles
                     heading={"Top Source for Commercial Cleaning Leads!"}
@@ -33,6 +26,15 @@ export default function Home() {
                         "High-quality commercial cleaning leads delivered to your inbox, connect with top prospects, and automate engagement with key decision-makers."
                     }
                 />
+                <Offers />
+            </div>
+            <div className="max-w-screen-2xl mx-auto md:px-10 px-6">
+                <h5 className="text-secondary nunito text-center font-light text-xl mt-20 mb-4">How We Help You to Grow</h5>
+                <div className="w-[80%] mx-auto">
+                    <SectionTitles heading={'Discover Commercial Cleaning Leads Across the USA'} subHeading={"Janitorial Appointment connects cleaning companies with top commercial centers, hospitals, schools, and offices. Register now for exclusive access to appointment-setting opportunities."} />
+                </div>
+
+
 
 
                 <div className="2xl:mt-40 xl:mt-40 mt-20">

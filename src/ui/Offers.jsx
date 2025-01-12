@@ -7,10 +7,10 @@ import img3 from '../../public/assets/appointment.svg'
 
 const Offers = () => {
     return (
-        <div className='grid grid-cols-3 gap-10 mt-10' data-aos="fade-up">
+        <div className='grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-10 mt-10' data-aos="fade-up">
             <div className="card card-compact shadow-xl py-4">
                 <figure className='px-10 pt-4'>
-                    <Image src={img1} className='2xl:w-[150px] xl:w-[120px] h-auto mx-auto' alt='sales' />
+                    <Image src={img1} className='2xl:w-[150px] xl:w-[120px] w-[90px] h-auto mx-auto' alt='sales' />
                 </figure>
                 <div className="card-body mx-auto mt-6">
                     <h2 className="card-title text-center 2xl:text-3xl xl:text-2xl  text-white font-bold poppins opacity-90">Optimized Sales Conversions</h2>
@@ -19,7 +19,7 @@ const Offers = () => {
             </div>
             <div className="card card-compact shadow-xl pt-4 pb-10">
                 <figure className='px-10 pt-4'>
-                    <Image src={img2} className='2xl:w-[150px] xl:w-[120px] h-auto mx-auto' alt='sales' />
+                    <Image src={img2} className='2xl:w-[150px] xl:w-[120px] w-[90px] h-auto mx-auto' alt='sales' />
                 </figure>
                 <div className="card-body mx-auto mt-6">
                     <h2 className="card-title text-center 2xl:text-3xl xl:text-2xl  text-white font-bold poppins opacity-90">Verified, High-Quality Leads</h2>
@@ -28,7 +28,7 @@ const Offers = () => {
             </div>
             <div className="card card-compact shadow-xl py-4">
                 <figure className='px-10 pt-4'>
-                    <Image src={img3} className='2xl:w-[150px] xl:w-[120px] h-auto mx-auto' alt='sales' />
+                    <Image src={img3} className='2xl:w-[150px] xl:w-[120px] w-[90px] h-auto mx-auto' alt='sales' />
                 </figure>
                 <div className="card-body mx-auto mt-6">
                     <h2 className="card-title text-center 2xl:text-3xl xl:text-2xl  text-white font-bold poppins opacity-90">Exclusive Appointment Setting for Janitorial Services</h2>
