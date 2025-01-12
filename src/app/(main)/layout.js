@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" >
       <body className={`${inter.className}`}>
-        <main className='overflow-hidden min-h-screen max-w-[1920px] mx-auto bg-[#edf4ef]'>
+        <main className='overflow-hidden min-h-screen max-w-[1920px] mx-auto bg-white'>
           <AuthProvider>
             <QueryProvider>
               <AOSProvider>

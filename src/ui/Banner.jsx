@@ -30,9 +30,7 @@ const Banner = () => {
                 loop={true}
                 effect="fade"
                 style={{
-                    '--swiper-pagination-color': '#16a34a', // Color of pagination dots
-                    // Ensures it’s positioned absolutely
-                    // '--swiper-pagination-bottom': '-40px', // Adjusts vertical position
+                    '--swiper-pagination-color': '#16a34a',
                 }}
                 modules={[Navigation, Autoplay, Pagination]} className="mySwiper">
                 <SwiperSlide>
