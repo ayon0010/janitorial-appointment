@@ -69,14 +69,14 @@ const Offers = () => {
                 </div>
                 <div className="card card-compact bg-[#EEEEEE] shadow-xl py-4">
                     <figure className='px-10 pt-4'>
-                        <Image src={img6} className='2xl:w-[150px] xl:w-[120px] w-[90px] h-auto mx-auto bg-[#EEEEEE]' alt='sales' />
+                        <Image src={img6} className='2xl:w-[150px] xl:w-[120px] w-[90px] h-auto mx-auto bg-[#EEEEEE]' alt='seo-digital-marketing' />
                     </figure>
                     <div className="card-body mt-10">
                         <h2 className="card-title w-fit mx-auto text-center 2xl:text-3xl xl:text-2xl text-black font-bold poppins opacity-90">
-                            Professional Web Solutions and Support Services
+                            Expert SEO and Digital Marketing Services
                         </h2>
                         <p className="text-center inter text-black 2xl:text-sm xl:text-xs opacity-90 px-4">
-                            We specialize in creating and maintaining websites tailored to your business needs, while offering reliable technical support to ensure seamless operations and growth.
+                            Our specialized SEO and digital marketing services help boost your online presence, drive targeted traffic, and generate high-quality leads. Let us optimize your website and marketing strategy for maximum growth and visibility.
                         </p>
                     </div>
                 </div>

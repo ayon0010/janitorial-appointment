@@ -13,6 +13,7 @@ import Footer from "@/Shared/Footer";
 import '../globals.css'
 import Offers from "@/ui/Offers";
 import Leads from "@/ui/Leads";
+import Appointment from "@/ui/Appointment";
 
 export default function Home() {
     return (
@@ -37,6 +38,9 @@ export default function Home() {
                 </div>
 
                 <Leads />
+
+                <Appointment />
+
 
                 <div className="2xl:mt-40 xl:mt-40 mt-20">
                     <h5 className="text-secondary nunito text-center font-light text-xl mt-20 mb-4">What We Offer</h5>
@@ -182,36 +186,6 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row-reverse flex-col">
-                    <div className="md:w-1/2 w-full bg-[#F4F4F4] py-10 rounded-[32px]">
-                        <Image src={side3} className="md:w-auto mx-auto md:h-[520px] w-1/2 h-auto" alt="" />
-                    </div>
-                    <div className="space-y-6 md:w-1/2 w-full md:my-auto md:pr-24">
-                        <h5 className="text-primary poppins font-medium md:text-lg text-sm">Automated Follow-Up Emails<span className="text-blue-500 zoom-animation ml-5">(Coming Soon)</span></h5>
-                        <h1 className="md:text-5xl text-3xl poppins font-semibold">Seamless follow-up email automation</h1>
-                        <p className="poppins font-normal text-sm">We will send automated follow-up emails to your leads after a specified number of days if you don&apos;t open or respond to your emails within a set timeframe</p>
-                        <div className="space-y-1">
-                            <div className="flex items-center gap-[11px]">
-                                <div>
-                                    <FaCheck />
-                                </div>
-                                <p className="md:text-lg text-sm font-medium poppins">Consistent Engagement</p>
-                            </div>
-                            <div className="flex items-center gap-[11px]">
-                                <div>
-                                    <FaCheck />
-                                </div>
-                                <p className="md:text-lg text-sm font-medium poppins">Improved Efficiency</p>
-                            </div>
-                            <div className="flex items-center gap-[11px]">
-                                <div>
-                                    <FaCheck />
-                                </div>
-                                <p className="md:text-lg text-sm font-medium poppins">Enhanced Conversion</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
                 </div>
 
                 <div className="md:mt-40 mt-20">

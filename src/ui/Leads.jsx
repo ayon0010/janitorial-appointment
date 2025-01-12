@@ -53,8 +53,8 @@ export default function Leads() {
                     delay={0.2}
                 >
                     <div className='p-6'>
-                        <h3 className={`text-white text-2xl `}>{headline}</h3>
-                        <p className={`text-white text-base mt-8 `}>{text}</p>
+                        <h3 className={`text-white 2xl:text-2xl xl:text-2xl text-xl`}>{headline}</h3>
+                        <p className={`text-white 2xl:text-base xl:text-base text-xs mt-8 `}>{text}</p>
                     </div>
                 </motion.div>
                 <figure>
