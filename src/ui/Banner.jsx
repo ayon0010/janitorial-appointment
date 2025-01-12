@@ -11,6 +11,12 @@ import { TypeAnimation } from 'react-type-animation';
 import Link from 'next/link';
 import ButtonTertiary from './ButtonTertiary';
 import ButtonPrimary from './ButtonPrimary';
+import Image from 'next/image';
+import image1 from '@/../public/assets/1904c9e7a4e1664e4e229a2f3c915594.png'
+import image1mbl from '@/../public/assets/1904c9e7a4e1664e4e229a2f3c9155941.png'
+import image3 from '@/../public/assets/c4fff5f6b137dec9009b9e4e2c05c82f.png'
+import image2 from '@/../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash.jpg'
+import image2mbl from '@/../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash1.jpg'
 
 const Banner = () => {
     return (
@@ -30,38 +36,37 @@ const Banner = () => {
                 }}
                 modules={[Navigation, Autoplay, Pagination]} className="mySwiper">
                 <SwiperSlide>
-                    <div className="banner-2 flex flex-col h-full">
-                        <div className='absolute inset-0 bg-black opacity-60'></div>
-                        <div className='m-auto z-30 w-3/4' data-aos="fade-down">
-                            <h1 className='text-white text-center font-bold poppins 2xl:text-6xl xl:text-5xl text-3xl 2xl:leading-[100px] xl:leading-[100px]'>Find <span className=''>Qualified, Exclusive Janitorial Leads</span> <br /> available in Your Area!</h1>
-                            <p className='2xl:my-6 xl:my-6 my-3 inter font-semibold text-center text-xl text-white opacity-80'>A reliable and stress-free appointment-setting service designed for janitors.<br />
-                                Partner with the trusted provider of quality janitorial job opportunities.</p>
-                            <Link href={'/search/exclusive-leads'}>
-                                <ButtonTertiary label={'Explore Now'} />
-                            </Link>
+                    <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto">
+                        <div className='absolute inset-0 z-20 h-full'>
+                            <Image src={image1} alt='' fill className='2xl:object-cover xl:object-cover object-center 2xl:block xl:block hidden' />
+                            <Image src={image1mbl} alt='' className='object-cover min-h-[600px] object-center 2xl:hidden xl:hidden block' />
                         </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="banner-1 flex flex-col h-full">
-                        <div className='my-auto 2xl:pl-40 xl:pl-40 z-30 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10'>
-                            <h1 className='text-white font-bold poppins 2xl:text-6xl xl:text-5xl text-2xl'>Unlock Cleaning <br /><span className='text-green-600 banner-text'>Opportunities</span> with Ease</h1>
-                            <p className='my-6 inter 2xl:text-xl xl:text-xl text-base font-semibold text-white opacity-60'>Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!</p>
+                        <div className='absolute inset-0 banner-1 z-30 2xl:block xl:block hidden'></div>
+                        <div className='absolute inset-0 bg-black opacity-55 z-30 2xl:hidden xl:hidden block'></div>
+                        <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40' data-aos="fade-right">
+                            <h1 className='text-white font-bold 2xl:text-6xl xl:text-5xl text-3xl'>Unlock Cleaning <br /><span className='text-green-600 banner-text'>Opportunities</span> with Ease</h1>
+                            <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-60'>Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!</p>
                             <div className='flex items-center gap-6'>
-                                <Link href={'/register'}>
-                                    <ButtonPrimary label={'Sign Up'} />
-                                </Link>
-                                <p className='text-white opacity-60 inter font-bold'>No Credit Card Required</p>
+                                <div>
+                                    <Link href={'/register'}>
+                                        <ButtonPrimary label={'Sign Up'} />
+                                    </Link>
+                                </div>
+                                <p className='text-white opacity-60 inter font-bold 2xl:text-base xl:text-base text-xs'>No Credit Card Required</p>
                             </div>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="banner-4 flex flex-col h-full">
-                        <div className='absolute inset-0 bg-black opacity-60'></div>
-                        <div className='my-auto 2xl:pl-40 xl:pl-40 z-30 w-1/2'>
-                            <h1 className='text-white font-bold poppins 2xl:text-6xl xl:text-5xl text-2xl'>Unlock Cleaning <br /><span className='text-green-600 banner-text'>Opportunities</span> with Ease</h1>
-                            <p className='my-6 inter 2xl:text-xl xl:text-xl text-base font-semibold text-white opacity-60'>Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!</p>
+                    <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto">
+                        <div className='absolute inset-0 z-20 h-full'>
+                            <Image src={image2} alt='' fill className='2xl:block xl:block hidden' />
+                            <Image src={image2mbl} fill alt='' className='min-h-[600px] object-center 2xl:hidden xl:hidden block' />
+                        </div>
+                        <div className='absolute inset-0 bg-black opacity-55 z-30'></div>
+                        <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
+                            <h1 className='text-white font-bold 2xl:text-6xl xl:text-5xl text-3xl'>Schedule <span className='text-green-600 banner-text'>Appointments</span> with Confidence</h1>
+                            <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-60'>Book appointments now to get the desired leads that match your business needs and unlock new opportunities effortlessly!</p>
                             <div className='flex items-center gap-6'>
                                 <Link href={'/book-an-appointment'}>
                                     <ButtonTertiary label={'Book an Appointment'} />
@@ -71,11 +76,28 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="banner-3 flex flex-col h-full">
-                        <div className='absolute inset-0 bg-black opacity-60'></div>
-                        <div className='m-auto z-30 w-3/4'>
-                            <h1 className='text-white text-center font-bold poppins 2xl:text-6xl xl:text-5xl text-3xl leading-[100px]'>EXPANDING YOUR BUSINESS IS OUR GOAL!</h1>
-                            <p className='my-6 text-xl inter font-semibold text-white opacity-90 text-center'>The Most Dependable Company for Cleaning & Janitorial Leads!
+                    <div className="banner-2 flex flex-col h-full">
+                        <div className='absolute inset-0 bg-black opacity-50'></div>
+                        <div className='m-auto z-30 2xl:w-[80%] xl:w-[80%] w-[90%]'>
+                            <h1 className='text-white text-center font-bold poppins 2xl:text-6xl xl:text-5xl text-3xl'>Find <span className=''>Qualified, Exclusive Janitorial Leads</span> <br className='2xl:block xl:block hidden' /> available in Your Area!</h1>
+                            <p className='2xl:my-6 xl:my-6 my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-60 text-center'>A reliable and stress-free appointment-setting service designed for janitors.<br />
+                                Partner with the trusted provider of quality janitorial job opportunities.</p>
+                            <Link className="flex justify-center items-center" href={'/search/exclusive-leads'}>
+                                <ButtonTertiary label={'Explore Now'} />
+                            </Link>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="banner-3 flex flex-col min-h-[600px] max-h-[800px] h-auto">
+                        <div className='absolute inset-0 z-20 h-full'>
+                            <Image src={image3} alt='' fill />
+                        </div>
+                        <div className='absolute inset-0 bg-black opacity-50 z-30'></div>
+
+                        <div className='m-auto z-40 w-3/4'>
+                            <h1 className='text-white text-center font-bold poppins 2xl:text-6xl xl:text-5xl text-3xl 2xl:leading-[100px] xl:leading-[100px]'>EXPANDING YOUR BUSINESS IS OUR GOAL!</h1>
+                            <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-70 text-center'>The Most Dependable Company for Cleaning & Janitorial Leads!
                                 <br />
                                 Our expert services, including
                                 <span className="ml-2"> {/* Add margin left for spacing */}
@@ -93,20 +115,15 @@ const Banner = () => {
                                             500,
                                         ]}
                                         speed={40}
-                                        style={{ fontSize: '1.25rem' }} // Change to your desired color (e.g., a shade of orange)
+                                        className='2xl:text-xl xl:text-xl text-sm' // Change to your desired color (e.g., a shade of orange)
                                         repeat={Infinity}
                                     />
                                 </span>
                             </p>
                             <div className='flex items-center justify-center gap-6'>
-                                <button className='rounded-[70px] px-10 text-lg nunito font-bold bg-primary text-white btn border-none'>
-                                    <Link className='flex items-center gap-2' href={'/contact'}>
-                                        <span>
-                                            Contact Us
-                                        </span>
-                                        <FaArrowRight />
-                                    </Link>
-                                </button>
+                                <Link className='flex items-center gap-2' href={'/contact'}>
+                                    <ButtonTertiary label={'Contact Us'} />
+                                </Link>
                             </div>
                         </div>
                     </div>
