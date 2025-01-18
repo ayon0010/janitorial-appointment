@@ -5,6 +5,7 @@ import Navbar from '@/Shared/Navbar'
 import QueryProvider from '@/Providers/QueryProvider'
 import AOSProvider from '@/Providers/AOSProvider'
 import dynamic from "next/dynamic";
+import MessengerChat from '@/Shared/Chat'
 
 // Dynamically load the Chat component from '../../Shared/Chat' without SS
 const Chat = dynamic(() => import("../../Shared/Chat"));
@@ -53,7 +54,7 @@ export default function RootLayout({ children }) {
               </AOSProvider>
             </QueryProvider>
           </AuthProvider>
-          <Chat />
+         <MessengerChat/>
         </main>
       </body>
     </html>

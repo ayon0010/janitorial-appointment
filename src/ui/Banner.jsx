@@ -43,14 +43,14 @@ const Banner = () => {
                         <div className='absolute inset-0 bg-black opacity-55 z-30 2xl:hidden xl:hidden block'></div>
                         <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40' data-aos="fade-right">
                             <h1 className='text-white font-bold 2xl:text-6xl xl:text-5xl text-3xl'>Unlock Cleaning <br /><span className='text-green-600 banner-text'>Opportunities</span> with Ease</h1>
-                            <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-60'>Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!</p>
+                            <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80'>Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!</p>
                             <div className='flex items-center gap-6'>
                                 <div>
                                     <Link href={'/register'}>
                                         <ButtonPrimary label={'Sign Up'} />
                                     </Link>
                                 </div>
-                                <p className='text-white opacity-60 inter font-bold 2xl:text-base xl:text-base text-xs'>No Credit Card Required</p>
+                                <p className='text-white opacity-80 inter font-bold 2xl:text-base xl:text-base text-xs'>No Credit Card Required</p>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ const Banner = () => {
                         <div className='absolute inset-0 bg-black opacity-55 z-30'></div>
                         <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
                             <h1 className='text-white font-bold 2xl:text-6xl xl:text-5xl text-3xl'>Schedule <span className='text-green-600 banner-text'>Appointments</span> with Confidence</h1>
-                            <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-60'>Book appointments now to get the desired leads that match your business needs and unlock new opportunities effortlessly!</p>
+                            <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80'>Book appointments now to get the desired leads that match your business needs and unlock new opportunities effortlessly!</p>
                             <div className='flex items-center gap-6'>
                                 <Link href={'/book-an-appointment'}>
                                     <ButtonTertiary label={'Book an Appointment'} />
@@ -78,7 +78,7 @@ const Banner = () => {
                         <div className='absolute inset-0 bg-black opacity-50'></div>
                         <div className='m-auto z-30 2xl:w-[80%] xl:w-[80%] w-[90%]'>
                             <h1 className='text-white text-center font-bold poppins 2xl:text-6xl xl:text-5xl text-3xl'>Find <span className=''>Qualified, Exclusive Janitorial Leads</span> <br className='2xl:block xl:block hidden' /> available in Your Area!</h1>
-                            <p className='2xl:my-6 xl:my-6 my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-60 text-center'>A reliable and stress-free appointment-setting service designed for janitors.<br />
+                            <p className='2xl:my-6 xl:my-6 my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80 text-center'>A reliable and stress-free appointment-setting service designed for janitors.<br />
                                 Partner with the trusted provider of quality janitorial job opportunities.</p>
                             <Link className="flex justify-center items-center" href={'/search/exclusive-leads'}>
                                 <ButtonTertiary label={'Explore Now'} />
@@ -123,6 +123,18 @@ const Banner = () => {
                                     <ButtonTertiary label={'Contact Us'} />
                                 </Link>
                             </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="banner-6 flex flex-col h-full">
+                        <div className='2xl:w-1/2 xl:w-1/2 w-full my-auto ml-auto z-30 pr-10'>
+                            <h2 className='2xl:text-6xl xl:text-5xl text-3xl font-semibold banner-text mb-6'>
+                                Elevate Your Brand, Expert <span className='text-green-600'>Digital Marketing, Web & App Solutions</span>
+                            </h2>
+                            <Link href={'/contact'}>
+                                <ButtonTertiary label={'Contact Us'} />
+                            </Link>
                         </div>
                     </div>
                 </SwiperSlide>

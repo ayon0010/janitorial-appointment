@@ -21,16 +21,7 @@ export default function Home() {
             {/* Banner */}
             <Banner />
             {/* Section */}
-            <div className="2xl:px-10 xl:px-10 px-6">
-                <h5 className="text-secondary nunito text-center font-light text-xl mt-20 mb-4">Effortless business growth.</h5>
-                <SectionTitles
-                    heading={"Boost Your Business with a Multi-Channel Lead Generation Strategy"}
-                    subHeading={
-                        "High-quality commercial cleaning leads delivered to your inbox, connect with top prospects, and automate engagement with key decision-makers."
-                    }
-                />
-                <Offers />
-            </div>
+
             <div className="max-w-screen-2xl mx-auto md:px-10 px-6">
                 <h5 className="text-secondary nunito text-center font-light text-xl mt-20 mb-4">How We Help You to Grow</h5>
                 <div className="w-[80%] mx-auto">
@@ -187,6 +178,16 @@ export default function Home() {
                     </div>
 
                 </div>
+                <div className="">
+                    <h5 className="text-secondary nunito text-center font-light text-xl mt-20 mb-4">Effortless business growth.</h5>
+                    <SectionTitles
+                        heading={"Boost Your Business with a Multi-Channel Lead Generation Strategy"}
+                        subHeading={
+                            "High-quality commercial cleaning leads delivered to your inbox, connect with top prospects, and automate engagement with key decision-makers."
+                        }
+                    />
+                    <Offers />
+                </div>
 
                 <div className="md:mt-40 mt-20">
 
@@ -199,7 +200,7 @@ export default function Home() {
                 </div>
                 <Reviews />
                 {/*  */}
-                <div className="md:mt-40 mt-20">
+                {/* <div className="md:mt-40 mt-20">
                     <SectionTitles
                         heading={"Essential Tools & Added Benefits"}
                         subHeading={
@@ -207,9 +208,10 @@ export default function Home() {
                         }
                     />
                     <Utilities />
-                </div>
+                </div> */}
 
             </div>
+
             <div className="bg-[#EBFAEF] md:py-48 py-12 max-w-screen-2xl mx-auto">
                 <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />
                 <Pricing />

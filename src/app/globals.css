@@ -340,7 +340,40 @@ input[type="checkbox"]:checked~.collapse-content {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url('../../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash.jpg');
+  height: 400px;
+  /* Matches the height of your div */
+  margin-top: 20px;
+  /* For spacing above */
+  position: relative;
+  /* Required for pseudo-elements */
+  overflow: hidden;
+}
+
+/* Backdrop filter effect */
+.parallax::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Semi-transparent overlay */
   backdrop-filter: blur(10px);
+  /* Apply blur effect */
+  z-index: -1;
+  /* Send the filter effect behind the content */
+}
+
+.banner-6 {
+  position: relative;
+  background-image: url("../../public/assets/Frame\ 1000002436.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  width: 100%;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 576px) {
