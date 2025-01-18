@@ -376,6 +376,16 @@ input[type="checkbox"]:checked~.collapse-content {
   overflow: hidden;
 }
 
+.appointment {
+  background-image: url("../../public/assets/appointment-bg-1-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.book-appointment::placeholder {
+  color: white !important;
+}
+
 @media screen and (max-width: 576px) {
   .dashboard {
     display: grid !important;

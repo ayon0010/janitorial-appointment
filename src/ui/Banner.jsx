@@ -14,7 +14,6 @@ import ButtonPrimary from './ButtonPrimary';
 import Image from 'next/image';
 import image1 from '@/../public/assets/1904c9e7a4e1664e4e229a2f3c915594.png'
 import image1mbl from '@/../public/assets/1904c9e7a4e1664e4e229a2f3c9155941.png'
-import image3 from '@/../public/assets/c4fff5f6b137dec9009b9e4e2c05c82f.png'
 import image2 from '@/../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash.jpg'
 import image2mbl from '@/../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash1.jpg'
 
@@ -89,12 +88,12 @@ const Banner = () => {
                 <SwiperSlide>
                     <div className="banner-3 flex flex-col min-h-[600px] max-h-[800px] h-auto">
                         <div className='absolute inset-0 z-20 h-full'>
-                            <Image src={image3} alt='' fill />
+                            <Image src={'https://i.ibb.co.com/SQRfYPc/c4fff5f6b137dec9009b9e4e2c05c82f.png'} alt='' fill />
                         </div>
                         <div className='absolute inset-0 bg-black opacity-50 z-30'></div>
 
                         <div className='m-auto z-40 w-3/4'>
-                            <h1 className='text-white text-center font-bold poppins 2xl:text-6xl xl:text-5xl text-3xl 2xl:leading-[100px] xl:leading-[100px]'>EXPANDING YOUR BUSINESS IS OUR GOAL!</h1>
+                            <h1 className='text-white text-center font-bold poppins 2xl:text-6xl xl:text-5xl text-3xl banner-text'>EXPANDING YOUR BUSINESS IS OUR GOAL!</h1>
                             <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-70 text-center'>The Most Dependable Company for Cleaning & Janitorial Leads!
                                 <br />
                                 Our expert services, including
