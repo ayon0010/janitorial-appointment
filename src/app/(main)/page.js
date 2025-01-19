@@ -14,6 +14,8 @@ import '../globals.css'
 import Offers from "@/ui/Offers";
 import Leads from "@/ui/Leads";
 import Appointment from "@/ui/Appointment";
+import Web from "@/ui/Web";
+import image from '@/../public/assets/group-young-business-people-working-office.jpg'
 
 export default function Home() {
     return (
@@ -189,7 +191,11 @@ export default function Home() {
                     <Offers />
                 </div>
 
-                <div className="md:mt-40 mt-20">
+                <div>
+                    <Web image={image} />
+                </div>
+
+                <div className="2xl:mt-40 xl:mt-40 mt-20">
 
                     <SectionTitles
                         heading={"What Our Clients Say"}

@@ -334,13 +334,13 @@ input[type="checkbox"]:checked~.collapse-content {
   /* Ensure it stays on top of other elements */
 }
 
-.parallax {
+.web {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('../../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash.jpg');
-  height: 400px;
+  background-image: url('../../public/assets/group-young-business-people-working-office.jpg');
+  height: 600px;
   /* Matches the height of your div */
   margin-top: 20px;
   /* For spacing above */
@@ -385,6 +385,8 @@ input[type="checkbox"]:checked~.collapse-content {
 .book-appointment::placeholder {
   color: white !important;
 }
+
+
 
 @media screen and (max-width: 576px) {
   .dashboard {
