@@ -1,4 +1,6 @@
-'use client'
+"use client";
+
+import { Suspense } from "react";
 import useAuth from '@/Hooks/useAuth';
 import Logo from '@/Shared/Logo';
 import Link from 'next/link';
@@ -11,13 +13,11 @@ import 'sweetalert2/src/sweetalert2.scss'
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
 
-const Page = () => {
+const LoginPage = () => {
     const searchParams = useSearchParams();
     const message = searchParams.get('message');
     const pathName = searchParams.get('redirect');
     console.log(pathName);
-    // const [token, setToken] = useState(Cookies.get('userToken'));
-    // console.log(token);
 
     const router = useRouter();
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -63,63 +63,6 @@ const Page = () => {
                         }
                     }, 2000);
                 }
-                // const token = Cookies.get('userToken');
-                // console.log(user, token);
-
-                // if (user) {
-                //     let token = ;
-                //     console.log(token);
-                //     if (token) {
-                //         Swal.fire({
-                //             position: "center",
-                //             icon: "success",
-                //             title: "Signed In Successfully",
-                //             showConfirmButton: false,
-                //             timer: 1500,
-                //         });
-                //     }
-                // }
-                // console.log(res);
-                // console.log(token)
-                // if (res && token) {
-
-                //     console.log(token);
-                //     router.push(path);
-                // }
-                // 
-                // 
-                // if (!token) {
-                //     await new Promise((resolve, reject) => {
-                //         const checkToken = setInterval(() => {
-                //             token = Cookies.get('userToken');
-                //             if (token) {
-                //                 clearInterval(checkToken);
-                //                 resolve(token);
-                //             }
-                //         }, 100);
-                //     })
-                // }
-                // if (token) {
-                //     let decoded = jwtDecode(token);
-                //     Swal.fire({
-                //         position: "center",
-                //         icon: "success",
-                //         title: "Signed In Successfully",
-                //         showConfirmButton: false,
-                //         timer: 1500,
-                //     });
-
-                //     reset();
-                //     console.log(decoded);
-                //     // Ensure decoded exists before routing
-                //     if (decoded?.isAdmin) {
-                //         router.push(`/adminDashboard`);
-                //     } else if (decoded?.isSeller) {
-                //         router.push(`/sellerDashboard`);
-                //     } else {
-                //         router.push(`/dashboard`);
-                //     }
-                // }
             })
             .catch((err) => {
                 console.log(err);
@@ -131,8 +74,6 @@ const Page = () => {
                 });
             });
     };
-
-
 
     return (
         <div className='h-screen flex items-center justify-center bg-white md:px-0 px-6'>
@@ -203,4 +144,10 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default function Page() {
+    return (
+        <Suspense>
+            <LoginPage />
+        </Suspense>
+    );
+}
