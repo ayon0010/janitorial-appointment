@@ -1,5 +1,5 @@
 'use client'
-import Lottie from 'lottie-react';
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 import React from 'react';
 import animation from '../../public/assets/Animation - 1737470603251c.json'
 import animation2 from '../../public/assets/Animation - 1737470167441contact.json'
