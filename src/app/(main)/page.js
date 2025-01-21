@@ -17,7 +17,10 @@ import Appointment from "@/ui/Appointment";
 import Web from "@/ui/Web";
 import image from '@/../public/assets/group-young-business-people-working-office.jpg'
 import contact from '../../../public/assets/contact.webp';
-import ContactInfo from "@/ui/ContactInfo";
+import dynamic from 'next/dynamic';
+const ContactInfo = dynamic(() => import('@/ui/ContactInfo'), {
+    ssr: false, // Set to true if you need server-side rendering for this component
+});
 
 export default function Home() {
     return (
