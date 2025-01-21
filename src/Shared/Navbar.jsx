@@ -606,7 +606,7 @@ const NavBar = () => {
                                 </p>
                                 <h2 className='text-2xl font-semibold text-center mt-8'>Contact Us</h2>
                                 <p className='mt-3 text-center'>contact@janitorialappointment.com</p>
-                                <p className='mt-3 text-center'>+880-195837780</p>
+                                <p className='mt-3 text-center'>+8801726108060</p>
                                 <div className='flex items-center justify-center gap-6 mt-6'>
                                     <FaFacebookSquare size={'1.5rem'} />
                                     <FaLinkedinIn size={'1.5rem'} />

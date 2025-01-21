@@ -398,4 +398,7 @@ input[type="checkbox"]:checked~.collapse-content {
     line-height: 25px !important;
   }
 
+  .banner-6 {
+    background-image: url('../../public/assets/Frame 1000002436m.png');
+  }
 }

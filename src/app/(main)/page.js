@@ -16,6 +16,8 @@ import Leads from "@/ui/Leads";
 import Appointment from "@/ui/Appointment";
 import Web from "@/ui/Web";
 import image from '@/../public/assets/group-young-business-people-working-office.jpg'
+import contact from '../../../public/assets/contact.webp';
+import ContactInfo from "@/ui/ContactInfo";
 
 export default function Home() {
     return (
@@ -217,11 +219,15 @@ export default function Home() {
                 </div> */}
 
             </div>
-
+            <div className="my-28 max-w-screen-2xl mx-auto">
+                <SectionTitles heading={"Contact Us"} />
+                <ContactInfo />
+            </div>
             <div className="bg-[#EBFAEF] md:py-48 py-12 max-w-screen-2xl mx-auto">
                 <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />
                 <Pricing />
             </div>
+
             <Footer />
         </div >
     )
