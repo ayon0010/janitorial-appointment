@@ -267,7 +267,7 @@ const NavBar = () => {
 
     return (
         render && (
-            <div className={`w-full relative z-50`}>
+            <div className={`w-full relative z-60`}>
                 {/* Nav Top Part */}
                 <div className='w-full 2xl:h-[60px] shadow-xl xl:h-[60px] h-0 hidden 2xl:flex xl:flex items-center justify-between bg-sky-200'>
                     {/* Nav Start */}
@@ -329,7 +329,7 @@ const NavBar = () => {
                             </div>
                             <div className="2xl:ml-0 xl:ml-0 ml-auto 2xl:hidden xl:hidden block">
                                 <div className='flex items-center gap-3'>
-                                    <Link href={'/Sign In'}>
+                                    <Link href={'/login'}>
                                         <ButtonPrimary label={'Sign In'} />
                                     </Link>
                                     <div className="btn btn-ghost btn-circle" onClick={() => setNav(true)}>
@@ -625,7 +625,7 @@ const NavBar = () => {
                     animate={{ top: scrolled ? 0 : -200 }}
                     exit={{ top: -2000, transition: { duration: 0, ease: "linear" } }}
                     transition={{ duration: 0.5, ease: "linear", delay: 0.01 }}
-                    className={`bg-[#FBFCFF] ${scrolled ? 'pointer-events-auto' : 'pointer-events-none'} shadow-xl fixed right-0 left-0 z-50`}
+                    className={`bg-[#FBFCFF] ${scrolled ? 'pointer-events-auto' : 'pointer-events-none'} shadow-xl fixed right-0 left-0 z-60`}
                 >
                     <div className='flex 2xl:h-[100px] xl:h-[100px] h-[80px] items-center justify-between  max-w-[1440px] mx-auto relative 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11 px-4'>
                         <Link className='2xl:w-[140px] xl:w-[140px] w-[110px] 2xl:h-[110px] xl:h-[110px] h-[90px]' href={'/'}>
@@ -644,19 +644,24 @@ const NavBar = () => {
                         </div>
                         {/* nav mobile */}
                         <div className="dropdown 2xl:ml-0 xl:ml-0 ml-auto 2xl:hidden xl:hidden block">
-                            <div onClick={() => setNav(true)} className="btn btn-ghost btn-circle">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M4 6h16M4 12h16M4 18h7" />
-                                </svg>
+                            <div className='flex items-center gap-3'>
+                                <Link href={'/login'}>
+                                    <ButtonPrimary label={'Sign In'} />
+                                </Link>
+                                <div className="btn btn-ghost btn-circle" onClick={() => setNav(true)}>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="M4 6h16M4 12h16M4 18h7" />
+                                    </svg>
+                                </div>
                             </div>
                             <div
                                 className={`h-screen w-full bg-white overflow-y-auto overflow-x-hidden z-[60] transition-all duration-1000 ease-in-out fixed top-0 right-0 ${nav ? 'left-0' : '-left-full'
