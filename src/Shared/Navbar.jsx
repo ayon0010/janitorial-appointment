@@ -267,7 +267,7 @@ const NavBar = () => {
 
     return (
         render && (
-            <div className={`w-full relative z-60`}>
+            <div className={`w-full relative z-[100]`}>
                 {/* Nav Top Part */}
                 <div className='w-full 2xl:h-[60px] shadow-xl xl:h-[60px] h-0 hidden 2xl:flex xl:flex items-center justify-between bg-sky-200'>
                     {/* Nav Start */}
@@ -349,7 +349,7 @@ const NavBar = () => {
                                 </div>
 
                                 <div
-                                    className={`h-screen w-full bg-white overflow-y-auto overflow-x-hidden z-[60] transition-all duration-1000 ease-in-out fixed top-0 right-0 ${nav ? 'left-0' : '-left-full'
+                                    className={`h-screen w-full bg-white overflow-y-auto overflow-x-hidden z-[100] transition-all duration-1000 ease-in-out fixed top-0 right-0 ${nav ? 'left-0' : '-left-full'
                                         }`}
                                 >
                                     <span
@@ -625,7 +625,7 @@ const NavBar = () => {
                     animate={{ top: scrolled ? 0 : -200 }}
                     exit={{ top: -2000, transition: { duration: 0, ease: "linear" } }}
                     transition={{ duration: 0.5, ease: "linear", delay: 0.01 }}
-                    className={`bg-[#FBFCFF] ${scrolled ? 'pointer-events-auto' : 'pointer-events-none'} shadow-xl fixed right-0 left-0 z-60`}
+                    className={`bg-[#FBFCFF] ${scrolled ? 'pointer-events-auto' : 'pointer-events-none'} shadow-xl fixed right-0 left-0 z-[100]`}
                 >
                     <div className='flex 2xl:h-[100px] xl:h-[100px] h-[80px] items-center justify-between  max-w-[1440px] mx-auto relative 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11 px-4'>
                         <Link className='2xl:w-[140px] xl:w-[140px] w-[110px] 2xl:h-[110px] xl:h-[110px] h-[90px]' href={'/'}>
