@@ -2,7 +2,7 @@
 import useAuth from '@/Hooks/useAuth';
 import Logo from '@/Shared/Logo';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
@@ -11,13 +11,18 @@ import 'sweetalert2/src/sweetalert2.scss'
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
 
-const Page = ({ searchParams }) => {
-    const message = searchParams?.message;
+const Page = () => {
+    const searchParams = useSearchParams();
+    const message = searchParams.get('message');
+    const pathName = searchParams.get('redirect');
+    console.log(pathName);
+    // const [token, setToken] = useState(Cookies.get('userToken'));
+    // console.log(token);
+
     const router = useRouter();
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const { signIn, user } = useAuth();
     const [showPassword, setShowPassword] = useState(false);
-
 
     const togglePasswordVisibility = () => {
         setShowPassword(prev => !prev);
@@ -39,39 +44,82 @@ const Page = ({ searchParams }) => {
 
         signIn(email, password)
             .then(async (res) => {
-                let token = Cookies.get('userToken');
-                if (!token) {
-                    await new Promise((resolve, reject) => {
-                        const checkToken = setInterval(() => {
-                            token = Cookies.get('userToken');
-                            if (token) {
-                                clearInterval(checkToken);
-                                resolve(token);
-                            }
-                        }, 100);
-                    })
+                const user = res.user;
+                if (user) {
+                    setTimeout(() => {
+                        Swal.close();
+                        Swal.fire({
+                            position: "center",
+                            icon: "success",
+                            title: "Signed In Successfully",
+                            showConfirmButton: false,
+                            timer: 2000,
+                        });
+                        let token = Cookies.get("userToken");
+                        if (token) {
+                            let decoded = jwtDecode(token);
+                            const path = pathName ? pathName : decoded?.isAdmin ? '/adminDashboard' : decoded?.isSeller ? '/sellerDashboard' : '/dashboard';
+                            router.push(path);
+                        }
+                    }, 2000);
                 }
-                if (token) {
-                    let decoded = jwtDecode(token);
-                    Swal.fire({
-                        position: "center",
-                        icon: "success",
-                        title: "Signed In Successfully",
-                        showConfirmButton: false,
-                        timer: 1500,
-                    });
+                // const token = Cookies.get('userToken');
+                // console.log(user, token);
 
-                    reset();
-                    console.log(decoded);
-                    // Ensure decoded exists before routing
-                    if (decoded?.isAdmin) {
-                        router.push(`/adminDashboard`);
-                    } else if (decoded?.isSeller) {
-                        router.push(`/sellerDashboard`);
-                    } else {
-                        router.push(`/dashboard`);
-                    }
-                }
+                // if (user) {
+                //     let token = ;
+                //     console.log(token);
+                //     if (token) {
+                //         Swal.fire({
+                //             position: "center",
+                //             icon: "success",
+                //             title: "Signed In Successfully",
+                //             showConfirmButton: false,
+                //             timer: 1500,
+                //         });
+                //     }
+                // }
+                // console.log(res);
+                // console.log(token)
+                // if (res && token) {
+
+                //     console.log(token);
+                //     router.push(path);
+                // }
+                // 
+                // 
+                // if (!token) {
+                //     await new Promise((resolve, reject) => {
+                //         const checkToken = setInterval(() => {
+                //             token = Cookies.get('userToken');
+                //             if (token) {
+                //                 clearInterval(checkToken);
+                //                 resolve(token);
+                //             }
+                //         }, 100);
+                //     })
+                // }
+                // if (token) {
+                //     let decoded = jwtDecode(token);
+                //     Swal.fire({
+                //         position: "center",
+                //         icon: "success",
+                //         title: "Signed In Successfully",
+                //         showConfirmButton: false,
+                //         timer: 1500,
+                //     });
+
+                //     reset();
+                //     console.log(decoded);
+                //     // Ensure decoded exists before routing
+                //     if (decoded?.isAdmin) {
+                //         router.push(`/adminDashboard`);
+                //     } else if (decoded?.isSeller) {
+                //         router.push(`/sellerDashboard`);
+                //     } else {
+                //         router.push(`/dashboard`);
+                //     }
+                // }
             })
             .catch((err) => {
                 console.log(err);

@@ -67,7 +67,7 @@ const AuthProvider = ({ children }) => {
                 setLoader(false);
                 axiosPublic.post('/userEmail', { email: currentUser.email })
                     .then(res => {
-                        const { token } = res?.data;
+                        const { token } = res?.data;                        
                         if (token) {
                             Cookies.set('userToken', token, { expires: 1 / 24 });
                             setUser(currentUser);
