@@ -1,4 +1,5 @@
 'use client'
+import dynamic from 'next/dynamic';
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 import React from 'react';
 import animation from '../../public/assets/Animation - 1737470603251c.json'
