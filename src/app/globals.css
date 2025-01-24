@@ -393,7 +393,7 @@ input[type="checkbox"]:checked~.collapse-content {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-image: url('../../public/assets/group-young-business-people-working-office.jpg');
     height: 500px;
     /* Matches the height of your div */

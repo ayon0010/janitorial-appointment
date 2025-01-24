@@ -8,8 +8,6 @@ import 'sweetalert2/dist/sweetalert2.css';
 import { usStates } from '@/js/states';
 import { useRouter } from 'next/navigation';
 import useAxiosPublic from '@/Hooks/useAxiosPublic';
-import { doc, setDoc } from 'firebase/firestore';
-import { db } from '@/js/firebase.init';
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors, isSubmitting }, watch, reset } = useForm();
@@ -20,18 +18,24 @@ const Register = () => {
     const onSubmit = async (data) => {
         const { companyName, email, password, confirmPassword, serviceState, serviceCities } = data;
 
+
         if (password !== confirmPassword) {
             return;
         }
 
         try {
+            Swal.fire({
+                title: 'Creating Your Account...',
+                text: 'Please wait',
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                },
+            });
             const res = await signUp(email, password);
             const user = res.user;
-
             await updateUserProfile(companyName);
-
             const cities = serviceCities.split(',').map(city => city.trim());
-
             const response = await axiosPublic.post('user', {
                 userId: user.uid,
                 companyName,
@@ -40,26 +44,19 @@ const Register = () => {
                 serviceCity1: cities[0],
                 serviceCity2: cities[1]
             });
-
-            await setDoc(doc(db, "users", user?.uid), {
-                uid: user.uid,
-                displayName: user?.displayName,
-                email: user?.email,
-                photoURL: user?.photoURL
-            });
-
-            await setDoc(doc(db, 'usersChat', user?.uid), {})
-
             if (response.data.insertedId) {
-                Swal.fire({
-                    position: "center",
-                    icon: "success",
-                    title: "Signed Up",
-                    showConfirmButton: false,
-                    timer: 1500,
-                });
-                router.push('/dashboard');
-                reset();
+                setTimeout(() => {
+                    Swal.close();
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Signed Up",
+                        showConfirmButton: false,
+                        timer: 1500,
+                    });
+                    router.push('/dashboard')
+                    reset();
+                }, 2000);
             }
         } catch (error) {
             Swal.fire({

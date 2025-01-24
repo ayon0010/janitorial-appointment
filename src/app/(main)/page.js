@@ -224,10 +224,11 @@ export default function Home() {
                 <ContactInfo />
             </div>
             <div className="bg-[#EBFAEF] md:py-48 py-12 max-w-screen-2xl mx-auto">
-                <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />
+                <div className="px-6">
+                    <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />
+                </div>
                 <Pricing />
             </div>
-
             <Footer />
         </div >
     )

@@ -3,7 +3,7 @@ import { cookies } from 'next/headers'
 import { NextResponse } from 'next/server'
 
 
-const userRoutes = ['/profile'];
+const userRoutes = ['/profile', '/dashboard'];
 const adminRoutes = ['/adminDashboard', '/adminDashboard/allLeads', '/adminDashboard/allUser', '/adminDashboard/leadUpload', '/adminDashboard/allLeads/:id', '/adminDashboard/subscriber'];
 const sellerRoutes = ['/sellerDashboard', '/sellerDashboard/leadUpload'];
 
