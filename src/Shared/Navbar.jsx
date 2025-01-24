@@ -268,7 +268,7 @@ const NavBar = () => {
 
     return (
         render && (
-            <div className={`w-full relative z-[100]`}>
+            <div className={`w-full relative z-[99]`}>
                 {/* Nav Top Part */}
                 <div className='w-full 2xl:h-[60px] shadow-xl xl:h-[60px] h-0 hidden 2xl:flex xl:flex items-center justify-between bg-sky-200'>
                     {/* Nav Start */}
