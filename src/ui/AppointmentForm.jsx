@@ -65,18 +65,20 @@ const AppointmentForm = () => {
                 },
             });
             console.log(data);
-
-            // Make the patch request with axiosSecure
-            const response = await axiosSecure.patch(`/user/${userInfo?._id}`, data)
             // On success, show success alert
+            if (typeof window !== 'undefined') {
+                const email = localStorage.removeItem('email');
+                const name = localStorage.removeItem('name');
+            }
             Swal.fire({
                 title: 'Success!',
                 text: 'Your information has been successfully updated.',
                 icon: 'success',
-                timer: 3000, // Auto close after 3 seconds
+                timer: 1200, // Auto close after 3 seconds
                 showConfirmButton: false,
             });
-            refetch();
+            // refetch();
+
         } catch (error) {
             // On error, show error alert
             Swal.fire({
