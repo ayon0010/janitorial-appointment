@@ -29,8 +29,8 @@ const pricingPlans = [
         features: [
             "View unlimited cleaning opportunities.",
             "Contact information for decision makers and local businesses.",
-            "10% off all Exclusive Leads!",
-            "Instant Notifications when an Exclusive Lead or LayUp is posted."
+            "10% off all leads!",
+            "Instant Notifications when anyof leads are uploaded"
         ],
         buttonLabel: "Start Now",
         buttonClass: "text-black bg-white hover:bg-green-700 hover:text-white",

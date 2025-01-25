@@ -127,12 +127,13 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="banner-6 flex flex-col h-full">
+                    <div className="banner-6 flex flex-col h-full relative">
+                        <div className='absolute inset-0 bg-black opacity-50 2xl:hidden xl:hidden block'></div>
                         <div className='2xl:w-1/2 xl:w-1/2 w-full my-auto ml-auto z-30 pr-10 2xl:px-6 xl:px-6 px-10'>
-                            <h2 className='2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:banner-text xl:banner-text'>
+                            <h2 className='2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:banner-text xl:banner-text 2xl:text-black xl:text-black text-white'>
                                 Elevate Your Brand, Expert <span className='text-green-600'>Digital Marketing, Web & App Solutions</span>
                             </h2>
-                            <p className='inter 2xl:text-xl xl:text-xl text-sm font-semibold my-6'>
+                            <p className='inter 2xl:text-xl xl:text-xl text-sm font-semibold my-6 2xl:text-black xl:text-black text-white'>
                                 We deliver premier IT solutions designed specifically for cleaning companies, empowering your business to achieve greater efficiency and growth.</p>
                             <Link href={'/contact'}>
                                 <ButtonTertiary label={'Contact Us'} />

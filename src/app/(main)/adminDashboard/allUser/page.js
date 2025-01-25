@@ -89,7 +89,7 @@ const Page = () => {
     }
 
     return (
-        <div className='2xl:px-[70px] xl:px-16 px-8 2xl:my-36 xl:my-28 my-16'>
+        <div className='2xl:px-[70px] xl:px-16 px-8 2xl:my-36 xl:my-28 pt-36 pb-16'>
             <SectionTitles heading={'See all the users'} subHeading={'Manage all users'} />
             <div className='my-10'>
                 <div className="overflow-x-auto">
