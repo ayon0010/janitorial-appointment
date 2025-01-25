@@ -43,7 +43,7 @@ export default function Home() {
 
 
                     <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row-reverse flex-col">
-                        <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F4F4F4] rounded-[32px]" data-aos="fade-left">
+                        <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F5F6F7] rounded-[32px]" data-aos="fade-left">
                             <Image src={slide4} className="md:h-[400px] md:w-auto w-full h-auto" alt="" />
                         </div>
                         <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pr-24">
@@ -84,7 +84,7 @@ export default function Home() {
                     </div>
 
                     <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row flex-col">
-                        <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pr-10 pb-6 pt-6 pr-6 bg-[#F4F4F4] rounded-[32px]" data-aos="fade-right">
+                        <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pr-10 pb-6 pt-6 pr-6 bg-[#F5F6F7] rounded-[32px]" data-aos="fade-right">
                             <Image src={side2} className="md:h-[400px] md:w-auto w-full h-auto" alt="" />
                         </div>
                         <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pl-24">
@@ -115,7 +115,7 @@ export default function Home() {
                     </div>
 
                     <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row-reverse flex-col">
-                        <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F4F4F4] rounded-[32px]" data-aos="fade-left">
+                        <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F5F6F7] rounded-[32px]" data-aos="fade-left">
                             <Image src={side2} className="md:h-[400px] md:w-auto w-full h-auto" alt="" />
                         </div>
                         <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pr-24">
@@ -146,7 +146,7 @@ export default function Home() {
                     </div>
 
                     <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row flex-col" >
-                        <div className="md:w-1/2 w-full bg-[#F4F4F4] rounded-[32px]" data-aos="fade-right">
+                        <div className="md:w-1/2 w-full bg-[#F5F6F7] rounded-[32px]" data-aos="fade-right">
                             <Image src={side1} className="md:w-auto mx-auto md:h-[500px] w-3/4" alt="" />
                         </div>
                         <div className="space-y-6 md:w-1/2 w-full md:my-auto md:pl-24">
@@ -219,7 +219,7 @@ export default function Home() {
                 </div> */}
 
             </div>
-            <div className="my-28 max-w-screen-2xl mx-auto">
+            <div className="py-28 max-w-screen-2xl mx-auto bg-white">
                 <SectionTitles heading={"Contact Us"} />
                 <ContactInfo />
             </div>

@@ -201,7 +201,7 @@ const NavBar = () => {
                                 },
                             }
                         }
-                        className={`w-[350px] ${mouse ? 'block' : 'hidden'} pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0`}>
+                        className={`w-[350px] ${mouse ? 'block' : 'hidden'} pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0 shadow-xl`}>
                         {
                             Services.map((s, i) => <li key={i} className='border-b-[0.60px] parent-option border-opacity-30 border-b-gray '>
                                 <Option href={s.href}>{s.name}</Option>
@@ -243,7 +243,7 @@ const NavBar = () => {
                                 },
                             }
                         }
-                        className={`w-[350px] pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0  ${mouse1 ? 'block' : 'hidden'}`}>
+                        className={`w-[350px] pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0 shadow-2xl ${mouse1 ? 'block' : 'hidden'}`}>
                         {
                             Leads.map((s, i) => <li key={i} className='border-b-[0.60px] parent-option border-opacity-30 border-b-gray '>
                                 <Option href={s.href}>{s.name}</Option>
@@ -270,7 +270,7 @@ const NavBar = () => {
         render && (
             <div className={`w-full relative z-[100]`}>
                 {/* Nav Top Part */}
-                <div className='w-full 2xl:h-[60px] shadow-xl xl:h-[60px] h-0 hidden 2xl:flex xl:flex items-center justify-between bg-sky-200'>
+                <div className='w-full 2xl:h-[60px] xl:h-[60px] h-0 hidden 2xl:flex xl:flex items-center justify-between bg-sky-200'>
                     {/* Nav Start */}
                     <div className='flex gap-4 items-center px-11 py-[12px]'>
                         <h3 className='text-base'>Connect with us</h3>
@@ -312,7 +312,7 @@ const NavBar = () => {
                 </div>
                 {/* NavBar */}
                 <div className='absolute 2xl:top-[60px] xl:top-[60px] top-0 inset-0'>
-                    <div className='bg-[#FBFCFF]'>
+                    <div className='bg-[#FBFCFF] shadow-xl'>
                         <div className='flex items-center justify-between  max-w-[1440px] mx-auto relative 2xl:h-[100px] xl:h-[100px] h-[80px] 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11 px-4'>
                             <Link className='2xl:w-[140px] xl:w-[140px] w-[110px] 2xl:h-[110px] xl:h-[110px] h-[90px]' href={'/'}>
                                 <div className='absolute top-0 2xl:left-11 xl:left-11 left-5'>
@@ -516,7 +516,7 @@ const NavBar = () => {
                                                 <motion.div
                                                     whileHover='show'
                                                     initial='hidden'
-                                                    className={`2xl:text-xl xl:text-base 2xl:h-[60px] xl:h-[60px] text-sm font-semibold h-full hover-color hover:text-orange transition-all duration-100 flex gap-[2px]`}>
+                                                    className={`2xl:text-xl xl:text-base 2xl:h-[60px] xl:h-[60px] text-sm font-semibold h-full hover-color hover:text-orange transition-all duration-100 flex gap-[2px] `}>
                                                     <span className='my-auto'>{userName?.length < 20 ? userName : userName?.slice(0, 16)}...</span>
 
                                                     <motion.div
@@ -540,7 +540,7 @@ const NavBar = () => {
                                                                 },
                                                             }
                                                         }
-                                                        className={`w-[350px] pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0  ${mouse2 ? 'block' : 'hidden'}`}>
+                                                        className={`w-[350px] pt-10 px-10 pb-6 absolute top-[60px] bg-white shadow-2xl left-0  ${mouse2 ? 'block' : 'hidden'}`}>
                                                         <ul>
                                                             {
                                                                 UserDetails.map((s, i) => <li key={i} className='border-b-[0.60px] parent-option border-opacity-30 border-b-gray '>
@@ -704,7 +704,7 @@ const NavBar = () => {
                                                                 },
                                                             }
                                                         }
-                                                        className={`w-[350px] pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0  ${mouse2 ? 'block' : 'hidden'}`}>
+                                                        className={`w-[350px] pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0 shadow-2xl  ${mouse2 ? 'block' : 'hidden'}`}>
                                                         <ul>
                                                             {
                                                                 UserDetails.map((s, i) => <li key={i} className='border-b-[0.60px] parent-option border-opacity-30 border-b-gray '>

@@ -6,6 +6,7 @@ import QueryProvider from '@/Providers/QueryProvider'
 import AOSProvider from '@/Providers/AOSProvider'
 import dynamic from "next/dynamic";
 import MessengerChat from '@/Shared/Chat'
+import Footer from '@/Shared/Footer'
 
 // Dynamically load the Chat component from '../../Shared/Chat' without SS
 const Chat = dynamic(() => import("../../Shared/Chat"));
@@ -45,16 +46,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" >
       <body className={`${inter.className}`}>
-        <main className='overflow-hidden min-h-screen max-w-[1920px] mx-auto bg-white'>
+        <main className='overflow-hidden min-h-screen max-w-[1920px] mx-auto bg-[#EEEFF1]'>
           <AuthProvider>
             <QueryProvider>
               <AOSProvider>
                 <Navbar />
                 {children}
+                <Footer />
               </AOSProvider>
             </QueryProvider>
           </AuthProvider>
-         <MessengerChat/>
+          <MessengerChat />
         </main>
       </body>
     </html>

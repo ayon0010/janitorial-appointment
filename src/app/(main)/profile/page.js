@@ -17,7 +17,7 @@ const Page = () => {
     // Fetch user data
     const { isLoading, userInfo, refetch } = GetUserData();
     const axiosSecure = useAxiosSecure();
-    const { user } = useAuth();
+    const { user, updateUserProfile } = useAuth();
     console.log(userInfo);
 
     // Initialize form with default values
@@ -108,8 +108,8 @@ const Page = () => {
                     Swal.showLoading(); // Display loading spinner
                 },
             });
-            console.log(data);
-
+            const name = data.companyName;
+            await updateUserProfile(name);
             // Make the patch request with axiosSecure
             const response = await axiosSecure.patch(`/user/${userInfo?._id}`, data)
             // On success, show success alert
@@ -135,15 +135,15 @@ const Page = () => {
 
 
     return (
-        <div className="py-40 2xl:pt-60 px-10">
+        <div className="py-40 2xl:pt-60 px-10 bg-white">
             <PageTitle
                 heading={'Profile'}
                 subHeading={`Hi! ${userInfo?.companyName || user?.displayName || " "}, Here you can manage your profile`}
             />
 
             <form className="mt-20" onSubmit={handleSubmit(onSubmit)}>
-                <div className="flex items-start gap-20">
-                    <div className="w-1/2 flex flex-col gap-y-10">
+                <div className="flex items-start 2xl:flex-row xl:flex-row flex-col gap-20">
+                    <div className="2xl:w-1/2 xl:w-1/2 w-full flex flex-col gap-y-10">
                         <InputField
                             label={'Company Name'}
                             placeholder={'Enter your company name'}
@@ -266,7 +266,7 @@ const Page = () => {
                         />
                     </div>
 
-                    <div className="w-1/2 flex flex-col gap-y-10">
+                    <div className="2xl:w-1/2 xl:w-1/2 w-full flex flex-col gap-y-10">
                         <InputField
                             label={'Main Contact'}
                             type={'text'}

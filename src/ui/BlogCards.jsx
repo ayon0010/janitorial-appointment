@@ -4,8 +4,10 @@ import Link from 'next/link';
 import React from 'react';
 import formatTimestamp from '@/js/convertTime';
 import { urlFor } from '@/lib/sanity';
+import { PortableText } from 'next-sanity';
 
 const BlogCards = ({ blog }) => {
+    const contentWithoutHeadline = blog.content.filter((block) => block._type !== 'heading');
     console.log(blog)
     return (
         <div className="card p-3 shadow-xl">
@@ -13,7 +15,7 @@ const BlogCards = ({ blog }) => {
                 <Image layout='responsive' src={urlFor(blog.titleImage).url()} alt='' width={950} height={665} className='w-full h-[150px]' />
             </figure>
             <div className="card-body p-0 mt-3">
-                <h2 className="card-title inter text-base font-semibold">{blog?.title?.length > 50 ? `${blog?.title?.slice(0, 50)}...` : blog?.title}</h2>
+                <h2 className="card-title inter text-base font-semibold">{blog?.title}</h2>
                 <hr className='h-[2px]' />
                 <div className='flex items-center gap-2'>
                     <Image src={urlFor(blog?.authorImage).url()} width={30} height={1552} className='w-[30px] h-auto rounded-full' alt='' />
