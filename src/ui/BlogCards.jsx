@@ -20,7 +20,6 @@ const BlogCards = ({ blog }) => {
                     <h5 className='text-xs font-bold inter'>{blog?.authorName}</h5>
                 </div>
                 <p className='inter text-xs font-normal text-[#6C757D]'>{formatTimestamp(blog?.date)}</p>
-                <p className='text-[#6C757D] font-normal inter text-xs'>Aenean eleifend ante maecenas pulvinar montes lorem et pede dis dolor pretium donec dictum. Vici consequat justo enim. </p>
                 <div className="card-actions">
                     <Link className='w-full' href={`/blogs/${blog?.currentSlug}`}>
                         <button className="btn w-full rounded-lg bg-primary text-white">View post</button>
