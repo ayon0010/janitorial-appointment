@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import animation from '../../public/assets/Animation - 1737791900666appointment.json'
 import dynamic from 'next/dynamic';
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
@@ -17,10 +17,37 @@ import FormButton from '@/Shared/FormButton';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
 const AppointmentForm = () => {
+
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const email = localStorage.getItem('email');
+            const name = localStorage.getItem('name');
+            setEmail(email);
+            setName(name);
+        }
+    }, [])
+
+    console.log(email, name);
+
+
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         defaultValues: {
+            companyName: name,
+            email: email
         }
     });
+
+
+    useEffect(() => {
+        reset({
+            companyName: name,
+            email: email
+        })
+    }, [email, name])
+
+
 
     const onSubmit = async (data) => {
         console.log(data);
@@ -112,6 +139,14 @@ const AppointmentForm = () => {
                         errors={errors}
                     />
                     <InputField
+                        label={'Email *'}
+                        placeholder={'Enter your email'}
+                        type={'email'}
+                        register={register}
+                        name={'email'}
+                        errors={errors}
+                    />
+                    <InputField
                         label={'Contact Number *'}
                         placeholder={'Enter your contact number'}
                         type={'text'}
@@ -159,7 +194,7 @@ const AppointmentForm = () => {
                         name={'dnc'}
                         errors={errors}
                     />
-                    <div className='2xl:block xl:block hidden'></div>
+                    {/* <div className='2xl:block xl:block hidden'></div> */}
                     <div className="2xl:w-3/4 xl:w-3/4 w-full">
                         <FormButton label={'Book an appointment'} />
                     </div>
