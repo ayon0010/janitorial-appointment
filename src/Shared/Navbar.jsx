@@ -268,7 +268,7 @@ const NavBar = () => {
 
     return (
         render && (
-            <div className={`w-full relative z-[100]`}>
+            <div className={`w-full relative z-[99]`}>
                 {/* Nav Top Part */}
                 <div className='w-full 2xl:h-[60px] shadow-xl xl:h-[60px] h-0 hidden 2xl:flex xl:flex items-center justify-between bg-sky-200'>
                     {/* Nav Start */}
@@ -363,6 +363,7 @@ const NavBar = () => {
                                         X
                                     </span>
 
+<<<<<<< HEAD
                                     <div className="pt-10 px-10 pb-20 w-full">
                                         <Image src={logo} alt="" className="w-[100px] h-auto" />
                                         <div className='mt-6'>
@@ -374,6 +375,77 @@ const NavBar = () => {
                                                         setClicked1(false)
                                                         setClicked2(false)
                                                     }}>
+=======
+                                    <div
+                                        className={`h-screen w-full bg-white overflow-y-auto overflow-x-hidden z-[1000] transition-all duration-1000 ease-in-out fixed top-0 right-0 ${nav ? 'left-0' : '-left-full'
+                                            }`}
+                                    >
+                                        <span
+                                            onClick={() => setNav(false)}
+                                            className="absolute top-2 right-4 text-3xl cursor-pointer"
+                                        >
+                                            X
+                                        </span>
+
+                                        <div className="pt-10 px-10 pb-20 w-full">
+                                            <Image src={logo} alt="" className="w-[100px] h-auto" />
+                                            <div className='mt-6'>
+                                                <ul className='pb-10'>
+                                                    {
+                                                        user &&
+                                                        <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100 cursor-pointer`} onClick={() => {
+                                                            setClicked(!click)
+                                                            setClicked1(false)
+                                                            setClicked2(false)
+                                                        }}>
+                                                            <div className='flex items-center justify-between border-b-[0.60px] border-b-black border-opacity-20 py-3'>
+                                                                <div className='flex items-center gap-2'>
+                                                                    <div className="md:w-[32px] relative md:h-[32px] w-[30px] h-[30px] rounded-full bg-primary text-white">
+                                                                        <span className="absolute top-1/2 right-1/2 transform -translate-y-1/2 translate-x-1/2 md:text-base text-xs font-normal">{firstLetter}</span>
+                                                                    </div>
+                                                                    <span className='my-auto'>{userName}...</span>
+                                                                </div>
+                                                                <div className='bg-slate-300 p-1 rounded bg-opacity-45'>
+                                                                    <motion.div
+                                                                        animate={{ rotate: click ? 180 : 0 }}
+                                                                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                                                                        className="h-fit"
+                                                                    >
+                                                                        <FaChevronDown size={14} />
+                                                                    </motion.div>
+                                                                </div>
+                                                            </div>
+                                                            <>
+                                                                <motion.div
+                                                                    animate={click ? { height: 'fit-content', pointerEvents: 'auto' } : { height: '0px', pointerEvents: 'none' }}
+                                                                    transition={{ duration: 0.5, ease: 'easeInOut' }}
+                                                                    className='w-full overflow-hidden pl-4'>
+                                                                    {
+                                                                        UserDetails?.map((a, i) => (
+                                                                            <p key={i} className='py-2 text-black hover:text-orange transition-all duration-300 ease-linear border-b-[0.60px] border-b-black border-opacity-20' onClick={() => setNav(false)}>
+                                                                                <Link href={a.href}>{a.name}</Link>
+                                                                            </p>
+                                                                        ))
+                                                                    }
+                                                                    <p onClick={() => handleLogOut()} className='py-2 text-black hover:text-orange transition-all duration-300 ease-linear border-b-[0.60px] border-b-black border-opacity-20'>
+                                                                        Log Out
+                                                                    </p>
+                                                                </motion.div>
+
+                                                            </>
+                                                        </li>
+                                                    }
+                                                    <li className={`2xl:text-base xl:text-sm text-sm hover:text-orange transition-all duration-100 font-bold py-3 border-b-[0.60px] border-b-black border-opacity-20 ${pathname === '/' ? 'text-orange' : ''}`} onClick={() => setNav(false)}>
+                                                        <Link href={'/'}>Home</Link>
+                                                    </li>
+                                                    <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange py-3 border-b-[0.60px] border-b-black border-opacity-20 transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`} onClick={() => setNav(false)}>
+                                                        <Link href="/about">About</Link>
+                                                    </li>
+                                                    <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange py-3 border-b-[0.60px] border-b-black border-opacity-20 transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`} onClick={() => setNav(false)}>
+                                                        <Link href="/blogs">Blogs</Link>
+                                                    </li>
+                                                    <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100`}>
+>>>>>>> 2eafa7172c2f01ac49bcab300bc488526c31943d
                                                         <div className='flex items-center justify-between border-b-[0.60px] border-b-black border-opacity-20 py-3'>
                                                             <div className='flex items-center gap-2'>
                                                                 <div className="md:w-[32px] relative md:h-[32px] w-[30px] h-[30px] rounded-full bg-primary text-white">
