@@ -7,9 +7,8 @@ const MessengerChat = () => {
     <div>
       <MessengerCustomerChat
         pageId="498761066660090"
-        appId="<APP_ID>"
-        htmlRef="<REF_STRING>"
-      />,
+        appId="619890160420977"
+      />
     </div>
   );
 };
