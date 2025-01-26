@@ -41,8 +41,21 @@ const Banner = () => {
                 <SwiperSlide>
                     <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto">
                         <div className='absolute inset-0 z-20 h-full'>
-                            <Image src={image1} alt='' fill className='2xl:object-cover xl:object-cover object-center 2xl:block xl:block hidden' loading="lazy" />
-                            <Image src={image1mbl} alt='' className='object-cover min-h-[600px] object-center 2xl:hidden xl:hidden block' loading="lazy" />
+                            <Image
+                                src={image1}
+                                alt="Janitorial appointment and commercial cleaning leads to grow your business"
+                                fill
+                                className="2xl:object-cover xl:object-cover object-center 2xl:block xl:block hidden"
+                                loading="lazy"
+                            />
+                            <Image
+                                src={image1mbl}
+                                alt="Mobile view showcasing janitorial appointments and commercial cleaning leads for business growth"
+                                className="object-cover min-h-[600px] object-center 2xl:hidden xl:hidden block"
+                                loading="lazy"
+                                width={2682}
+                                height={1736}
+                            />
                         </div>
                         <div className='absolute inset-0 banner-1 z-30 2xl:block xl:block hidden'></div>
                         <div className='absolute inset-0 bg-black opacity-55 z-30 2xl:hidden xl:hidden block'></div>
@@ -63,8 +76,21 @@ const Banner = () => {
                 <SwiperSlide>
                     <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto">
                         <div className='absolute inset-0 z-20 h-full'>
-                            <Image src={image2} alt='' fill className='2xl:block xl:block hidden' loading="lazy" />
-                            <Image src={image2mbl} fill alt='' className='min-h-[600px] object-center 2xl:hidden xl:hidden block' loading="lazy" />
+                            <Image
+                                src={image2}
+                                alt="High-quality janitorial appointment booking and commercial cleaning leads for business growth"
+                                fill
+                                className="2xl:block xl:block hidden"
+                                loading="lazy"
+                            />
+
+                            <Image
+                                src={image2mbl}
+                                alt="Mobile view of booking janitorial appointments and commercial cleaning leads"
+                                fill
+                                className="min-h-[600px] object-center 2xl:hidden xl:hidden block"
+                                loading="lazy"
+                            />
                         </div>
                         <div className='absolute inset-0 bg-black opacity-55 z-30'></div>
                         <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
@@ -94,7 +120,12 @@ const Banner = () => {
                 <SwiperSlide>
                     <div className="banner-3 flex flex-col min-h-[600px] max-h-[800px] h-auto">
                         <div className='absolute inset-0 z-20 h-full'>
-                            <Image src={image3} className='' alt='' fill loading="lazy" />
+                            <Image
+                                src={image3}
+                                alt="Telemarketing services for janitorial appointments and commercial cleaning leads"
+                                fill
+                                loading="lazy"
+                            />
                         </div>
                         <div className='absolute inset-0 bg-black opacity-50 z-30'></div>
                         <div className='m-auto z-40 w-3/4'>

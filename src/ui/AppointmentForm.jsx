@@ -118,19 +118,8 @@ const AppointmentForm = () => {
                     >
                         <h1 className='text-green-500 2xl:text-4xl xl:text-4xl text-2xl font-semibold 2xl:text-start xl:text-start text-center'>Book an appointment</h1>
                         <p className='text-gray-700 text-sm font-semibold mt-4 2xl:text-start xl:text-start text-center'>Get in touch with our team to schedule <br /> a convenient time for your cleaning service.<br /> We're here to help!</p>
-                        {/* <div className='grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-3 justify-center mt-4 gap-2 w-[200px]'>
-                            <Image className='cursor-pointer' src={fb} alt='fb' />
-                            <Image className='cursor-pointer' src={insta} alt='insta' />
-                            <Image className='cursor-pointer' src={linked} alt='linked' />
-                            <Image className='cursor-pointer' src={twitt} alt='twitt' />
-                            <Image className='cursor-pointer' src={youtube} alt='youtube' />
-                        </div> */}
                     </motion.div>
                 </div>
-                {/* <div className='w-3/4 mx-auto space-y-6'>
-                    <SectionTitles heading={'Find Us on Social Media'} subHeading={"If you want to contact us in person or simply want to know more about us, here's some helpful information about us"} />
-
-                </div> */}
                 <form className='mt-10 grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-10 max-w-[1440px] mx-auto' onSubmit={handleSubmit(onSubmit)}>
                     <InputField
                         label={'Company Name *'}

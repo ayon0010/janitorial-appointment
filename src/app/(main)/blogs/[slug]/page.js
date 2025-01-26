@@ -35,7 +35,7 @@ const page = async ({ params }) => {
         <div className="2xl:pt-40 xl:pt-40 pt-28 pb-20 px-10">
             <h2 className="2xl:text-5xl xl:text-5xl text-3xl inter font-bold text-black text-center">{data?.title}</h2>
             <p className="mt-10 text-center flex justify-center items-center gap-2"><FaRegCalendar className="mt-1" size={'1.2rem'} /><span className="inter 2xl:text-2xl xl:text-2xl text-xl font-semibold">{formatTimestamp(data?.date)}</span></p>
-            <Image priority layout="responsive" src={urlFor(data?.titleImage).url()} width={950} height={665} className="my-10 w-full h-auto" alt="" />
+            <Image priority layout="responsive" src={urlFor(data?.titleImage).url()} width={950} height={665} className="my-10 w-full h-auto" alt={data?.title} />
             <div className="2xl:px-16 xl:px-16">
                 <div className="flex items-center gap-2 mb-10">
                     <Image src={urlFor(data?.authorImage).url()} width={30} height={1552} className='w-[50px] h-auto rounded-full' alt='' />

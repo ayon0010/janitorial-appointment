@@ -340,7 +340,15 @@ const page = () => {
                     <SectionTitles heading={'Our Case Studies'} />
                     <div className="2xl:mt-12 xl:mt-10">
                         <div className='grid grid-cols-2 items-center 2xl:gap-14 xl:gap-10'>
-                            <Image src={capture1} className='h-full rounded-[20px]' alt="" />
+                            <Image
+                                src={capture1}
+                                className='h-full rounded-[20px]'
+                                alt="IT support for janitorial services to enhance business operations and efficiency"
+                                width={1896}
+                                height={837}
+                                loading='lazy'
+                            />
+
                             <div className=''>
                                 <h1 className={` count`}>01</h1>
                                 <h3 className='poppins 2xl:text-3xl xl:text-2xl font-medium'>Forest website design</h3>
@@ -363,10 +371,25 @@ const page = () => {
                                     <a href="https://games.afs-foiling.com/" target='_blank'>Details</a>
                                 </button>
                             </div>
-                            <Image src={capture2} className='h-full rounded-[20px]' alt="" />
+                            <Image
+                                src={capture2}
+                                className='h-full rounded-[20px]'
+                                alt="IT support for janitorial services, improving operational efficiency and service quality"
+                                width={1897}
+                                height={844}
+                                loading='lazy'
+                            />
+
                         </div>
                         <div className='grid grid-cols-2 items-center 2xl:gap-14 xl:gap-10'>
-                            <Image src={capture3} className='h-full rounded-[20px]' alt="" />
+                            <Image
+                                src={capture3}
+                                className='h-full rounded-[20px]'
+                                alt="IT support for janitorial services to optimize operations and boost productivity"
+                                width={2400}
+                                height={1800}
+                                loading='lazy'
+                            />
                             <div className=''>
                                 <h1 className={` count`}>03</h1>
                                 <h3 className='poppins 2xl:text-3xl xl:text-2xl font-medium'>Forest website design</h3>
@@ -386,7 +409,7 @@ const page = () => {
                     </div>
                 </div>
                 <div className="2xl:py-40 xl:py-28">
-                    <h3 className='text-primary font-bold poppins 2xl:text-[20px] xl:text-lg uppercase text-center'>POrtfolio</h3>
+                    <h3 className='text-primary font-bold poppins 2xl:text-[20px] xl:text-lg uppercase text-center'>Portfolio</h3>
                     <SectionTitles heading={'People Lie Work Don’t'} />
                     <div className='grid grid-cols-2 gap-11 2xl:mt-20 xl:mt-16'>
                         <Image src={desing1} alt='' className='rounded-2xl' />

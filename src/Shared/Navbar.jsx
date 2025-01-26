@@ -341,7 +341,13 @@ const NavBar = () => {
                                     </span>
 
                                     <div className="pt-10 px-10 pb-20 w-full">
-                                        <Image src={logo} alt="" className="w-[100px] h-auto" />
+                                        <Image
+                                            src={logo}
+                                            alt="Janitorial Appointment Scheduling Logo - Reliable and professional janitorial services"
+                                            className="w-[100px] h-auto"
+                                            width={429}
+                                            height={221}
+                                        />
                                         <div className='mt-6'>
                                             <ul className='pb-10'>
                                                 {

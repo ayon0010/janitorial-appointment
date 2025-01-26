@@ -10,8 +10,6 @@ import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
-import Cookies from "js-cookie";
-import { jwtDecode } from "jwt-decode";
 
 const LoginPage = () => {
     const searchParams = useSearchParams();
@@ -46,22 +44,15 @@ const LoginPage = () => {
             .then(async (res) => {
                 const user = res.user;
                 if (user) {
-                    setTimeout(() => {
-                        Swal.close();
-                        Swal.fire({
-                            position: "center",
-                            icon: "success",
-                            title: "Signed In Successfully",
-                            showConfirmButton: false,
-                            timer: 2000,
-                        });
-                        let token = Cookies.get("userToken");
-                        if (token) {
-                            let decoded = jwtDecode(token);
-                            const path = pathName ? pathName : decoded?.isAdmin ? '/adminDashboard' : decoded?.isSeller ? '/sellerDashboard' : '/dashboard';
-                            router.push(path);
-                        }
-                    }, 2000);
+                    Swal.close();
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Signed In Successfully",
+                        showConfirmButton: false,
+                        timer: 2000,
+                    });
+                    router.push('/')
                 }
             })
             .catch((err) => {

@@ -61,7 +61,7 @@ const page = () => {
                     </div>
                 </form>
                 <div className="w-1/2">
-                    <Image src={image} alt='pay-rate-checker' className='w-1/2 h-auto mx-auto' />
+                    <Image src={image} alt='pay-rate-checker' className='w-1/2 h-auto mx-auto'/>
                     <p className='text-center nunito font-semibold text-4xl mt-6'>Compare Confidently</p>
                 </div>
             </div>

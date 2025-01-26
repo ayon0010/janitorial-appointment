@@ -10,6 +10,7 @@ import linked from '@/../public/assets/Frame (11).svg'
 import twitt from '@/../public/assets/Frame (12).svg'
 import youtube from '@/../public/assets/Frame (13).svg'
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 const ContactInfo = () => {
@@ -28,11 +29,21 @@ const ContactInfo = () => {
                 <div className=''>
                     {/* <SectionTitles heading={'Find Us on Social Media'} subHeading={"If you want to contact us in person or simply want to know more about us, here's some helpful information about us"} /> */}
                     <div className='grid 2xl:grid-cols-5 xl:grid-cols-5 grid-cols-2 2xl:gap-8 xl:gap-8 gap-6'>
-                        <Image className='cursor-pointer' src={fb} alt='fb' />
-                        <Image className='cursor-pointer' src={insta} alt='insta' />
-                        <Image className='cursor-pointer' src={linked} alt='linked' />
-                        <Image className='cursor-pointer' src={twitt} alt='twitt' />
-                        <Image className='cursor-pointer' src={youtube} alt='youtube' />
+                        <Link href="https://www.facebook.com" target="_blank">
+                            <Image className='cursor-pointer' src={fb} alt="Facebook" />
+                        </Link>
+                        <Link href="https://www.instagram.com" target="_blank">
+                            <Image className='cursor-pointer' src={insta} alt="Instagram" />
+                        </Link>
+                        <Link href="https://www.linkedin.com" target="_blank">
+                            <Image className='cursor-pointer' src={linked} alt="LinkedIn" />
+                        </Link>
+                        <Link href="https://twitter.com" target="_blank">
+                            <Image className='cursor-pointer' src={twitt} alt="Twitter" />
+                        </Link>
+                        <Link href="https://www.youtube.com" target="_blank">
+                            <Image className='cursor-pointer' src={youtube} alt="YouTube" />
+                        </Link>
                     </div>
                 </div>
                 <p className='text-lg text-center'>With your specific requirements, we can accurately determine the category of janitorial jobs you are prepared to handle!</p>

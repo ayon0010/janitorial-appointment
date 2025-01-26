@@ -29,7 +29,7 @@ export default function Leads() {
     };
 
 
-    const Card = ({ img, headline, text, icon }) => {
+    const Card = ({ img, headline, text, icon, alt }) => {
         return (
             <div
                 className="relative overflow-hidden group"
@@ -54,9 +54,13 @@ export default function Leads() {
                     >
                         <Image
                             src={img}
-                            alt=""
+                            alt={alt}
                             className="h-full w-full object-cover"
+                            width={4032}
+                            height={3024}
+                            loading='lazy'
                         />
+
                     </div>
 
                     {/* Icon and headline */}
@@ -76,31 +80,38 @@ export default function Leads() {
 
         <div className='my-20'>
             <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 gap-y-8'>
-                <Card img={img1} headline={'Medical Cleaning Leads'} text={'Secure high-quality medical cleaning leads tailored to your business needs. Our service connects you with key decision-makers in healthcare facilities, ensuring reliable opportunities to grow your cleaning operations effectively.'} />
+                <Card img={img1} headline={'Medical Cleaning Leads'} text={'Secure high-quality medical cleaning leads tailored to your business needs. Our service connects you with key decision-makers in healthcare facilities, ensuring reliable opportunities to grow your cleaning operations effectively.'}
+                    alt="Medical cleaning leads for healthcare facilities and janitorial services"
+                />
                 <Card
                     img={img4}
                     headline={'Gym/Fitness Center Cleaning Leads'}
                     text={'Gain access to high-quality gym and fitness center cleaning leads. Our service connects you with gym owners and managers, providing tailored cleaning opportunities to help maintain clean and hygienic workout environments.'}
+                    alt="Gym and fitness center cleaning leads for janitorial services"
                 />
                 <Card
                     img={img5}
                     headline={'Daycare Cleaning Leads'}
+                    alt="Daycare cleaning leads for janitorial services and facility maintenance"
                     text={'Expand your cleaning business with exclusive daycare cleaning leads. We connect you with trusted decision-makers in daycare centers, helping you secure long-term contracts and reliable growth opportunities.'}
                 />
 
                 <Card
                     img={img2}
                     headline={'Apartment Cleaning Leads'}
+                    alt="Apartment cleaning leads for janitorial services and residential cleaning"
                     text={'Secure valuable apartment cleaning leads designed to grow your business. Our service connects you with property managers and landlords, providing access to high-demand cleaning opportunities in residential complexes.'}
                 />
                 <Card
                     img={img3}
                     headline={'General Office Cleaning Leads'}
+                    alt="General office cleaning leads for professional janitorial services and facility upkeep"
                     text={'Unlock valuable office cleaning leads tailored to meet your business needs. Our service connects you with office managers and businesses, offering consistent opportunities to maintain clean, professional workspaces.'}
                 />
                 <Card
                     img={img6}
                     headline={'Church Cleaning Leads'}
+                    alt="Church cleaning leads for janitorial services and religious facility maintenance" 
                     text={'Access high-quality church cleaning leads tailored to your business needs. Our service connects you with church administrators and organizers, providing opportunities to maintain clean and welcoming places of worship.'}
                 />
             </div>

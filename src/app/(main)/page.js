@@ -43,8 +43,16 @@ export default function Home() {
             <div className=" md:px-10 px-6">
                 <div className="">
                     <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row-reverse flex-col">
-                        <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F5F6F7] rounded-[32px]" data-aos="fade-left">
-                            <Image src={slide4} className="md:h-[400px] md:w-auto w-full h-auto" alt="" />
+                        <div className="md:w-fit w-full md:pb-6 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F5F6F7] rounded-[32px]" data-aos="fade-left">
+                            <Image
+                                src={slide4}
+                                alt="Commercial Cleaning Leads across USA"
+                                className="md:h-[400px] md:w-auto w-full h-auto"
+                                loading="lazy"
+                                width={1609}
+                                height={813}
+                                priority={false} // Use `true` if this image is above the fold
+                            />
                         </div>
                         <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pr-24">
                             <h5 className="text-primary poppins font-medium md:text-lg text-sm">Nationwide Lead Supply</h5>
@@ -85,7 +93,15 @@ export default function Home() {
 
                     <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row flex-col">
                         <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pr-10 pb-6 pt-6 pr-6 bg-[#F5F6F7] rounded-[32px]" data-aos="fade-right">
-                            <Image src={side2} className="md:h-[400px] md:w-auto w-full h-auto" alt="" />
+                            <Image
+                                src={side2}
+                                alt="Uncover Top Janitorial Leads"
+                                className="md:h-[400px] md:w-auto w-full h-auto"
+                                loading="lazy"
+                                width={2895}
+                                height={1891}
+
+                            />
                         </div>
                         <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pl-24">
                             <h5 className="text-primary poppins font-medium md:text-lg text-sm">Upcoming Cleaning Project Access</h5>
@@ -116,7 +132,15 @@ export default function Home() {
 
                     <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row-reverse flex-col">
                         <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F5F6F7] rounded-[32px]" data-aos="fade-left">
-                            <Image src={side2} className="md:h-[400px] md:w-auto w-full h-auto" alt="" />
+                            <Image
+                                src={side2}
+                                alt="Reach decision makers instantly and effortlessly with top janitorial leads"
+                                className="md:h-[400px] md:w-auto w-full h-auto"
+                                loading="lazy"
+                                width={2895}
+                                height={1891}
+
+                            />
                         </div>
                         <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pr-24">
                             <h5 className="text-primary poppins font-medium md:text-lg text-sm">Local Decision Maker Discovery</h5>
@@ -147,7 +171,14 @@ export default function Home() {
 
                     <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row flex-col" >
                         <div className="md:w-1/2 w-full bg-[#F5F6F7] rounded-[32px]" data-aos="fade-right">
-                            <Image src={side1} className="md:w-auto mx-auto md:h-[500px] w-3/4" alt="" />
+                            <Image
+                                src={side1}
+                                className="md:w-auto mx-auto md:h-[500px] w-3/4"
+                                alt="Buy high-quality commercial leads for janitorial services to boost your business"
+                                loading="lazy"
+                                width={1840}
+                                height={2192}
+                            />
                         </div>
                         <div className="space-y-6 md:w-1/2 w-full md:my-auto md:pl-24">
                             <h5 className="text-primary poppins font-medium md:text-lg text-sm">Buy High-Quality Cleaning Leads</h5>
@@ -207,16 +238,6 @@ export default function Home() {
                 </div>
                 <Reviews />
                 {/*  */}
-                {/* <div className="md:mt-40 mt-20">
-                    <SectionTitles
-                        heading={"Essential Tools & Added Benefits"}
-                        subHeading={
-                            "Streamline Your Success: Essential Tools and Added Benefits for Efficient Janitorial Appointment Management and Business Growth"
-                        }
-                    />
-                    <Utilities />
-                </div> */}
-
             </div>
             <div className="py-28  bg-white">
                 <SectionTitles heading={"Contact Us"} />

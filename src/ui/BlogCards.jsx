@@ -12,13 +12,13 @@ const BlogCards = ({ blog }) => {
     return (
         <div className="card p-3 shadow-xl">
             <figure>
-                <Image layout='responsive' src={urlFor(blog.titleImage).url()} alt='' width={950} height={665} className='w-full h-[150px]' />
+                <Image layout='responsive' src={urlFor(blog.titleImage).url()} alt={blog.title || blog?.currentSlug} width={950} height={665} className='w-full h-[150px]' />
             </figure>
             <div className="card-body p-0 mt-3">
                 <h2 className="card-title inter text-base font-semibold">{blog?.title}</h2>
                 <hr className='h-[2px]' />
                 <div className='flex items-center gap-2'>
-                    <Image src={urlFor(blog?.authorImage).url()} width={30} height={1552} className='w-[30px] h-auto rounded-full' alt='' />
+                    <Image src={urlFor(blog?.authorImage).url()} width={30} height={1552} className='w-[30px] h-auto rounded-full' alt={blog.authorName} />
                     <h5 className='text-xs font-bold inter'>{blog?.authorName}</h5>
                 </div>
                 <p className='inter text-xs font-normal text-[#6C757D]'>{formatTimestamp(blog?.date)}</p>

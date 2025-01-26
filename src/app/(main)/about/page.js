@@ -23,8 +23,20 @@ const page = () => {
     return (
         <div className="pt-[80px]">
             <div className="relative 2xl:h-auto xl:h-auto h-[430px] z-10">
-                <Image className="w-full 2xl:block xl:block hidden" src={aboutImage} alt="about-us" />
-                <Image className="w-full 2xl:hidden xl:hidden block h-full object-cover z-20" src={aboutImage1} alt="about-us" />
+                <Image
+                    className="w-full 2xl:block xl:block hidden"
+                    src={aboutImage}
+                    alt="About us - Learn more about our cleaning services and expertise"
+                    loading='lazy'
+                />
+
+                <Image
+                    className="w-full 2xl:hidden xl:hidden block h-full object-cover z-20"
+                    src={aboutImage1}
+                    loading='lazy'
+                    alt="About our company and professional janitorial services"
+                />
+
                 <div className="absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-40">
                     <h2 className="2xl:text-6xl xl:text-5xl text-3xl font-medium 2xl:text-white xl:text-white text-black text-center poppins">The Path to Success</h2>
                     <p className="text-sm 2xl:text-white xl:text-white text-black font-medium text-center inter">About Us</p>
@@ -70,7 +82,14 @@ const page = () => {
                             <Image src={video} className="w-full h-auto" alt="" />
                         </div>
                         <div className="mt-6 h-full">
-                            <Image src={image} className="rounded-[30px] h-full" alt="" />
+                            <Image
+                                src={image}
+                                className="rounded-[30px] h-full"
+                                alt="Telemarketing and business support services for enhanced lead generation and customer outreach"
+                                width={1920}
+                                height={1080}
+                                loading='lazy'
+                            />
                         </div>
                     </div>
                 </div>

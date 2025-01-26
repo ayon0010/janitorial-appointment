@@ -45,18 +45,16 @@ const Register = () => {
                 serviceCity2: cities[1]
             });
             if (response.data.insertedId) {
-                setTimeout(() => {
-                    Swal.close();
-                    Swal.fire({
-                        position: "center",
-                        icon: "success",
-                        title: "Signed Up",
-                        showConfirmButton: false,
-                        timer: 1500,
-                    });
-                    router.push('/dashboard')
-                    reset();
-                }, 2000);
+                Swal.close();
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "Signed Up",
+                    showConfirmButton: false,
+                    timer: 1500,
+                });
+                router.push('/')
+                reset();
             }
         } catch (error) {
             Swal.fire({
