@@ -4,13 +4,9 @@ import AuthProvider from '@/Providers/AuthProvider'
 import Navbar from '@/Shared/Navbar'
 import QueryProvider from '@/Providers/QueryProvider'
 import AOSProvider from '@/Providers/AOSProvider'
-import dynamic from "next/dynamic";
-import MessengerChat from '@/Shared/Chat'
 import Footer from '@/Shared/Footer'
 import ChatProvider from '@/Providers/ChatProvider'
 
-// Dynamically load the Chat component from '../../Shared/Chat' without SS
-const Chat = dynamic(() => import("../../Shared/Chat"));
 
 export const inter = Inter({
   subsets: ['latin'],
@@ -18,9 +14,18 @@ export const inter = Inter({
 })
 
 export const metadata = {
-  title: 'Janitorial Appointment Services | Find Reliable Cleaning Leads',
-  description: 'Discover reliable janitorial appointment services and cleaning leads tailored for your business needs. Connect with decision-makers and maximize your cleaning opportunities effortlessly.',
-}
+  title: "Janitorial Appointments and Commercial Cleaning Leads",
+  description:
+    "Generate high-quality janitorial appointments, commercial cleaning leads, and boost your janitorial business with effective lead generation strategies.",
+  keywords: [
+    "janitorial appointments",
+    "commercial cleaning leads",
+    "janitorial lead generation",
+  ],
+  authors: [{ name: "Al Shariar Auon" }],
+  viewport: "width=device-width, initial-scale=1.0",
+  charset: "UTF-8",
+};
 
 
 export const anton = Anton({
