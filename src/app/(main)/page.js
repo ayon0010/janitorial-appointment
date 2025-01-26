@@ -1,22 +1,18 @@
 import Image from "next/image";
-import side1 from "@/../public/assets/597346f805a7ac1230c3c0eb176f2c90.png";
-import side2 from "@/../public/assets/3a5f8d21d291fb96da9cf2d4b91d2db0.png";
-import side3 from "@/../public/assets/21d3c07652283c432b6c4b982b0d04d0.png";
-import slide4 from '../../../public/assets/Screenshot (12).png';
+import side1 from "@/../public/assets/597346f805a7ac1230c3c0eb176f2c90_result.webp";
+import side2 from "@/../public/assets/3a5f8d21d291fb96da9cf2d4b91d2db0_result_result.webp";
+import slide4 from '../../../public/assets/Screenshot (12)_result_result_result.webp';
 import Banner from "@/ui/Banner";
 import SectionTitles from "@/ui/SectionTitles";
 import FaCheck from "@/ui/FaCheck";
 import Reviews from "@/ui/Reviews";
-import Utilities from "@/ui/Utilities";
 import Pricing from "@/ui/Pricing";
-import Footer from "@/Shared/Footer";
 import '../globals.css'
 import Offers from "@/ui/Offers";
 import Leads from "@/ui/Leads";
 import Appointment from "@/ui/Appointment";
 import Web from "@/ui/Web";
-import image from '@/../public/assets/group-young-business-people-working-office.jpg'
-import contact from '../../../public/assets/contact.webp';
+import image from '@/../public/assets/group-young-business-people-working-office_result.webp';
 import ContactInfo from "@/ui/ContactInfo";
 
 export default function Home() {
@@ -24,24 +20,28 @@ export default function Home() {
         <div>
             {/* Banner */}
             <Banner />
-            {/* Section */}
-
-            <div className="max-w-screen-2xl mx-auto md:px-10 px-6">
-                <h5 className="text-secondary nunito text-center font-light text-xl mt-20 mb-4">How We Help You to Grow</h5>
+            <div className="2xl:px-10 xl:px-10 px-6">
+                <h5 className="text-secondary text-center font-light text-xl mt-20 mb-4">How We Help You to Grow</h5>
                 <div className="w-[80%] mx-auto">
                     <SectionTitles heading={'Discover Commercial Cleaning Leads Across the USA'} subHeading={"Janitorial Appointment connects cleaning companies with top commercial centers, hospitals, schools, and offices. Register now for exclusive access to appointment-setting opportunities."} />
                 </div>
-
                 <Leads />
-
                 <Appointment />
-
-
-                <div className="2xl:mt-40 xl:mt-40 mt-20">
-                    <h5 className="text-secondary nunito text-center font-light text-xl mt-20 mb-4">What We Offer</h5>
+                <div className="2xl:py-20 xl:py-20 py-10">
+                    <div className="px-6">
+                        <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />
+                    </div>
+                    <Pricing />
+                </div>
+                <div>
+                    <h5 className="text-secondary  text-center font-light text-xl mt-20 mb-4">What We Offer</h5>
                     <SectionTitles heading={'Maximize results with minimal effort'} subHeading={"Get cleaning contracts sent straight to your inbox, easily find and delegate tasks to subcontractors, and engage with decision makers automatically"} />
+                </div>
+            </div>
 
 
+            <div className=" md:px-10 px-6">
+                <div className="">
                     <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row-reverse flex-col">
                         <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F5F6F7] rounded-[32px]" data-aos="fade-left">
                             <Image src={slide4} className="md:h-[400px] md:w-auto w-full h-auto" alt="" />
@@ -183,7 +183,7 @@ export default function Home() {
 
                 </div>
                 <div className="">
-                    <h5 className="text-secondary nunito text-center font-light text-xl mt-20 mb-4">Effortless business growth.</h5>
+                    <h5 className="text-secondary  text-center font-light text-xl mt-20 mb-4">Effortless business growth.</h5>
                     <SectionTitles
                         heading={"Boost Your Business with a Multi-Channel Lead Generation Strategy"}
                         subHeading={
@@ -198,7 +198,6 @@ export default function Home() {
                 </div>
 
                 <div className="2xl:mt-40 xl:mt-40 mt-20">
-
                     <SectionTitles
                         heading={"What Our Clients Say"}
                         subHeading={
@@ -219,17 +218,10 @@ export default function Home() {
                 </div> */}
 
             </div>
-            <div className="py-28 max-w-screen-2xl mx-auto bg-white">
+            <div className="py-28  bg-white">
                 <SectionTitles heading={"Contact Us"} />
                 <ContactInfo />
             </div>
-            <div className="bg-[#EBFAEF] md:py-48 py-12 max-w-screen-2xl mx-auto">
-                <div className="px-6">
-                    <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />
-                </div>
-                <Pricing />
-            </div>
-            <Footer />
         </div >
     )
 }

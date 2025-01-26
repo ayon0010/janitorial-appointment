@@ -1,14 +1,10 @@
 'use client';
-import { usStates } from '@/js/states';
-import image from '@/../public/assets/Frame.svg';
+import { usStates } from "@/js/states";
+import FormButton from "@/Shared/FormButton";
+import InputField from "@/Shared/InputField";
 import PageTitle from "@/Shared/PageTitle";
-import Image from "next/image";
-import InputField from '@/Shared/InputField';
-import SelectField from '@/Shared/SelectField';
-import FormButton from '@/Shared/FormButton';
-import { useForm } from 'react-hook-form';
-import Loading from '../loading';
-
+import SelectField from "@/Shared/SelectField";
+import { useForm } from "react-hook-form";
 
 const Page = () => {
     const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
@@ -36,14 +32,10 @@ const Page = () => {
         }
     };
 
-    if (isSubmitting) {
-        return <Loading />;
-    }
-
     return (
         <div className="pb-20 pt-40 px-10 bg-white">
             <PageTitle
-                heading={'Single Decision Maker Search'}
+                heading={'Decision Maker Search'}
                 subHeading={'Verified emails have been double validated. Unverified emails are catch-all emails that may or may not work.'}
             />
 
@@ -91,10 +83,6 @@ const Page = () => {
 
                     <FormButton width={'w-3/4'} label={'Search'} disabled={isSubmitting} />
                 </form>
-                <div className="w-1/2">
-                    <Image src={image} alt='decision-maker' className='w-1/2 h-auto mx-auto' />
-                    <p className='text-center nunito font-semibold text-4xl mt-6'>Compare Confidently</p>
-                </div>
             </div>
         </div>
     );

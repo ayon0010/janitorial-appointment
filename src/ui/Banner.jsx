@@ -12,11 +12,11 @@ import Link from 'next/link';
 import ButtonTertiary from './ButtonTertiary';
 import ButtonPrimary from './ButtonPrimary';
 import Image from 'next/image';
-import image1 from '@/../public/assets/1904c9e7a4e1664e4e229a2f3c915594.png'
-import image1mbl from '@/../public/assets/1904c9e7a4e1664e4e229a2f3c9155941.png'
-import image2 from '@/../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash.jpg'
-import image2mbl from '@/../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash1.jpg'
-import image3 from '@/../public/assets/c4fff5f6b137dec9009b9e4e2c05c82f.png'
+import image1 from '../../public/assets/1904c9e7a4e1664e4e229a2f3c915594_result_result.webp';
+import image1mbl from '../../public/assets/1904c9e7a4e1664e4e229a2f3c9155941_result_result.webp';
+import image2 from '@/../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash_result.webp'
+import image2mbl from '@/../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash1_result.webp';
+import image3 from '@/../public/assets/c4fff5f6b137dec9009b9e4e2c05c82f_result_result.webp'
 
 const Banner = () => {
     return (
@@ -26,18 +26,23 @@ const Banner = () => {
                 autoplay={{
                     delay: 7000,
                 }}
-                pagination={{ clickable: true }}
+                pagination={{
+                    clickable: true,
+                    el: '.swiper-pagination',
+                }}
                 loop={true}
-                effect="fade"
+                effect="slide" // Changed from "fade" to "slide" for better performance
                 style={{
                     '--swiper-pagination-color': '#16a34a',
                 }}
-                modules={[Navigation, Autoplay, Pagination]} className="mySwiper">
+                modules={[Navigation, Autoplay, Pagination]}
+                className="mySwiper"
+            >
                 <SwiperSlide>
                     <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto">
                         <div className='absolute inset-0 z-20 h-full'>
-                            <Image src={image1} alt='' fill className='2xl:object-cover xl:object-cover object-center 2xl:block xl:block hidden' />
-                            <Image src={image1mbl} alt='' className='object-cover min-h-[600px] object-center 2xl:hidden xl:hidden block' />
+                            <Image src={image1} alt='' fill className='2xl:object-cover xl:object-cover object-center 2xl:block xl:block hidden' loading="lazy" />
+                            <Image src={image1mbl} alt='' className='object-cover min-h-[600px] object-center 2xl:hidden xl:hidden block' loading="lazy" />
                         </div>
                         <div className='absolute inset-0 banner-1 z-30 2xl:block xl:block hidden'></div>
                         <div className='absolute inset-0 bg-black opacity-55 z-30 2xl:hidden xl:hidden block'></div>
@@ -58,8 +63,8 @@ const Banner = () => {
                 <SwiperSlide>
                     <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto">
                         <div className='absolute inset-0 z-20 h-full'>
-                            <Image src={image2} alt='' fill className='2xl:block xl:block hidden' />
-                            <Image src={image2mbl} fill alt='' className='min-h-[600px] object-center 2xl:hidden xl:hidden block' />
+                            <Image src={image2} alt='' fill className='2xl:block xl:block hidden' loading="lazy" />
+                            <Image src={image2mbl} fill alt='' className='min-h-[600px] object-center 2xl:hidden xl:hidden block' loading="lazy" />
                         </div>
                         <div className='absolute inset-0 bg-black opacity-55 z-30'></div>
                         <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
@@ -89,16 +94,15 @@ const Banner = () => {
                 <SwiperSlide>
                     <div className="banner-3 flex flex-col min-h-[600px] max-h-[800px] h-auto">
                         <div className='absolute inset-0 z-20 h-full'>
-                            <Image src={image3} className='' alt='' fill />
+                            <Image src={image3} className='' alt='' fill loading="lazy" />
                         </div>
                         <div className='absolute inset-0 bg-black opacity-50 z-30'></div>
-
                         <div className='m-auto z-40 w-3/4'>
                             <h1 className='text-white text-center font-bold poppins 2xl:text-6xl xl:text-5xl text-3xl banner-text'>EXPANDING YOUR BUSINESS IS OUR GOAL!</h1>
                             <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-70 text-center'>The Most Dependable Company for Cleaning & Janitorial Leads!
                                 <br />
                                 Our expert services, including
-                                <span className="ml-2"> {/* Add margin left for spacing */}
+                                <span className="ml-2">
                                     <TypeAnimation
                                         preRenderFirstString={true}
                                         sequence={[
@@ -113,7 +117,7 @@ const Banner = () => {
                                             500,
                                         ]}
                                         speed={40}
-                                        className='2xl:text-xl xl:text-xl text-sm' // Change to your desired color (e.g., a shade of orange)
+                                        className='2xl:text-xl xl:text-xl text-sm'
                                         repeat={Infinity}
                                     />
                                 </span>
@@ -143,6 +147,7 @@ const Banner = () => {
                 </SwiperSlide>
             </Swiper>
         </div>
+
     );
 };
 

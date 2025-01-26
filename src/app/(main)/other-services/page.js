@@ -1,30 +1,29 @@
 import React from 'react';
 import FaFrontWeb from '@/icons/FaFrontWeb';
-import figmaImage from '@/../public/assets/57e09f4566db0a1ac970d15dde355756.png'
-import webImage from '@/../public/assets/2f30fd9858f1c6f448b335b02d2da4a0.jpeg'
-import backEnd from '@/../public/assets/6341ab570f90e6856a22d36785e40e3a.jpeg'
-import seo from '@/../public/assets/b6632a329f59df9325cd9067db020c92.jpeg'
-import telemarketing from '@/../public/assets/42f55d3345549aca47bef4b67d70a404.jpeg'
-import people from '@/../public/assets/c39594c5017acc3ecabfac7eb3315e8d.jpeg'
+import figmaImage from '@/../public/assets/57e09f4566db0a1ac970d15dde355756_result_result.webp'
+import webImage from '@/../public/assets/2f30fd9858f1c6f448b335b02d2da4a0_result_result.webp'
+import backEnd from '@/../public/assets/6341ab570f90e6856a22d36785e40e3a_result_result.webp'
+import seo from '@/../public/assets/b6632a329f59df9325cd9067db020c92_result_result.webp'
+import telemarketing from '@/../public/assets/42f55d3345549aca47bef4b67d70a404_result_result.webp'
+import people from '@/../public/assets/c39594c5017acc3ecabfac7eb3315e8d_result_result.webp'
 import Image from 'next/image';
 import SectionTitles from '@/ui/SectionTitles';
-import img1 from '@/../public/assets/67808d23a26a33ebca61d4f6d94c1822.png'
-import img2 from '@/../public/assets/9b4078e905ffb67a9fa1ee52151decca.png'
-import img3 from '@/../public/assets/c4fff5f6b137dec9009b9e4e2c05c82f.png'
-import capture1 from '@/../public/assets/Capture.PNG'
-import capture2 from '@/../public/assets/Capture2.PNG'
-import capture3 from '@/../public/assets/Capture3.PNG'
-import desing1 from '@/../public/assets/016398bfcbe842bfe46ef81a5438c984.png'
-import desing2 from '@/../public/assets/126d255806c5000ad6d009871cc3b81b.png'
-import desing3 from '@/../public/assets/b3e87b895d98f825cbfa5eaddda18e4b.png'
-import desing4 from '@/../public/assets/927cc8b897e6124b1c31ff8bc507f55a.png'
-import Footer from '@/Shared/Footer';
+import img1 from '@/../public/assets/67808d23a26a33ebca61d4f6d94c1822_result_result.webp'
+import img2 from '@/../public/assets/9b4078e905ffb67a9fa1ee52151decca_result_result.webp'
+import img3 from '@/../public/assets/c4fff5f6b137dec9009b9e4e2c05c82f_result_result.webp'
+import capture1 from '@/../public/assets/Capture_result_result.webp'
+import capture2 from '@/../public/assets/Capture2_result_result.webp'
+import capture3 from '@/../public/assets/Capture3_result_result.webp'
+import desing1 from '@/../public/assets/016398bfcbe842bfe46ef81a5438c984_result_result.webp'
+import desing2 from '@/../public/assets/126d255806c5000ad6d009871cc3b81b_result_result.webp'
+import desing3 from '@/../public/assets/b3e87b895d98f825cbfa5eaddda18e4b_result_result.webp'
+import desing4 from '@/../public/assets/927cc8b897e6124b1c31ff8bc507f55a_result_result.webp'
 
 const page = () => {
     return (
         <div>
             <div className='2xl:px-40 xl:px-28 px-10 bg-white'>
-                <div className='2xl:py-40 xl:py-28 py-28'>
+                <div className='2xl:py-44 xl:py-44 py-36'>
                     <h1 className={`2xl:text-7xl xl:text-5xl text-3xl `}>Complete IT Solutions &
                         Targeted Telemarketing for Every Sector</h1>
                     <div className='mt-6 grid xl:grid-cols-4 2xl:grid-cols-5 grid-cols-2 gap-5'>
@@ -397,7 +396,6 @@ const page = () => {
                     </div>
                 </div>
             </div >
-            <Footer />
         </div>
     );
 };

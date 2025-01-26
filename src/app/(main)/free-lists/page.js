@@ -1,7 +1,7 @@
 const page = () => {
     return (
         <div>
-            
+            Compare soon
         </div>
     );
 };

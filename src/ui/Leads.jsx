@@ -1,18 +1,12 @@
 'use client'
 import React, { useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { motion } from "framer-motion";
-import 'swiper/css';
-import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
-import img1 from '../../public/assets/martha-dominguez-de-gouveia-KF-h9HMxRKg-unsplash (1).jpg'
-import img2 from '../../public/assets/kate-darmody-TDIdPmW2P9k-unsplash.jpg'
-import img3 from '../../public/assets/benjamin-child-GWe0dlVD9e0-unsplash.jpg'
-import img5 from '../../public/assets/gautam-arora-78Ae6N7rNvI-unsplash.jpg'
-import img6 from '../../public/assets/debby-hudson-sgdyBq6kheQ-unsplash (1).jpg'
-import img4 from '../../public/assets/danielle-cerullo-CQfNt66ttZM-unsplash.jpg'
-import { FaBook, FaBusinessTime, FaLanguage, FaUserGraduate } from 'react-icons/fa';
-import { MdLanguage } from 'react-icons/md';
+import img1 from '../../public/assets/martha-dominguez-de-gouveia-KF-h9HMxRKg-unsplash (1)_result_result.webp';
+import img2 from '../../public/assets/kate-darmody-TDIdPmW2P9k-unsplash_result_result_result.webp'
+import img3 from '../../public/assets/benjamin-child-GWe0dlVD9e0-unsplash_result_result_result.webp'
+import img5 from '../../public/assets/gautam-arora-78Ae6N7rNvI-unsplash_result_result.webp'
+import img6 from '../../public/assets/debby-hudson-sgdyBq6kheQ-unsplash (1)_result_result_result.webp'
+import img4 from '../../public/assets/danielle-cerullo-CQfNt66ttZM-unsplash_result_result_result.webp'
 
 // import img3 from '../../public/assets/'
 
@@ -36,52 +30,47 @@ export default function Leads() {
 
 
     const Card = ({ img, headline, text, icon }) => {
-        const [hover, setHover] = useState(false);
         return (
-            <div className="relative overflow-hidden" onMouseEnter={(e) => setHover(true)} onMouseLeave={() => setHover(false)}>
+            <div
+                className="relative overflow-hidden group"
+            >
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/60 z-40 pointer-events-none" />
-                <motion.div
-                    className='absolute bottom-0 right-0 left-0 z-[45] bg-gradient-to-b from-black/70 via-black/60 to-black/40 pointer-events-none'
-                    initial={{ top: "100%", opacity: 0 }}
-                    animate={hover ? { top: "0%", opacity: 1 } : { top: "100%", opacity: 0 }}
-                    transition={{
-                        duration: 0.8,
-                        ease: [0.22, 1, 0.36, 1], // Ease out cubic for a realistic flow
-                        opacity: { duration: 0.5, ease: "easeInOut" }, // Fading effect
-                    }}
-                    delay={0.2}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-40 pointer-events-none" />
+
+                {/* Content that appears on hover */}
+                <div
+                    className="absolute bottom-0 right-0 left-0 top-0 z-[45] bg-gradient-to-b from-black/70 via-black/60 to-black/40 opacity-0 group-hover:opacity-100 transform translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-out pointer-events-none"
                 >
-                    <div className='p-6'>
-                        <h3 className={`text-white 2xl:text-2xl xl:text-2xl text-xl`}>{headline}</h3>
-                        <p className={`text-white 2xl:text-base xl:text-base text-xs mt-8 `}>{text}</p>
+                    <div className="p-6">
+                        <h3 className="text-white text-xl xl:text-2xl">{headline}</h3>
+                        <p className="text-white text-xs xl:text-base mt-8">{text}</p>
                     </div>
-                </motion.div>
+                </div>
+
                 <figure>
-                    {/* Animated Image */}
-                    <motion.div
-                        className="h-[230px] w-full z-30"
-                        whileHover={{ scale: 1.1 }}
-                        transition={{ duration: 0.6, ease: "linear", type: 'spring' }}
-                        delay={0.5}
+                    {/* Image with hover effect */}
+                    <div
+                        className="h-[230px] w-full z-30 transform transition-transform duration-500 ease-out group-hover:scale-110"
                     >
                         <Image
                             src={img}
                             alt=""
                             className="h-full w-full object-cover"
                         />
-                    </motion.div>
-                    {/* Icon */}
-                    <div className={`absolute bottom-8 left-6 z-50 ${hover && 'hidden'}`}>
+                    </div>
+
+                    {/* Icon and headline */}
+                    <div className="absolute bottom-8 left-6 z-50 group-hover:hidden">
                         {icon}
-                        <div className='mt-1'>
-                            <h3 className={`text-white text-2xl`}>{headline}</h3>
+                        <div className="mt-1">
+                            <h3 className="text-white text-2xl">{headline}</h3>
                         </div>
                     </div>
                 </figure>
             </div>
-        )
-    }
+        );
+    };
+
 
     return (
 

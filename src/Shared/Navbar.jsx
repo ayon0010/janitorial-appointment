@@ -98,10 +98,8 @@ const NavBar = () => {
         { name: 'Decision Maker', href: '/decision-maker' },
         { name: 'Single Decision Maker', href: '/single-decision-maker' },
         { name: 'Cleaning Calculator', href: '/cleaning-calculator' },
-        { name: 'Pay Rate Checker', href: '/pay-rate-checker' },
         { name: 'Web & App Support', href: '/other-services' },
         { name: 'Subscription', href: '/my-subscription' },
-        { name: 'Help', href: '/help' },
     ]
 
     const Leads = [
@@ -120,42 +118,21 @@ const NavBar = () => {
 
     const Option = ({ children, arr, show, href }) => {
         return (
-            <motion.div
-                whileHover="show"
-                initial="hidden"
-                className="uppercase font-semibold 2xl:text-base xl:text-sm text-sm py-3 w-full"
-            >
-                <motion.span
-                    variants={{
-                        show: {
-                            color: '#c6250c', // Change color on hover
-                            x: 40, // Move 40px to the right
-                            transition: { duration: 0.3, ease: 'easeInOut' }, // Smooth transition
-                            pointerEvents: 'auto', //
-                        },
-                        hidden: {
-                            color: '#000000', // Default color
-                            x: 0, // Default position
-                            transition: { duration: 0.3, ease: 'easeInOut' },
-                            pointerEvents: 'none', //	
-                        },
-                    }}
-                    className="relative"
-                >
-                    <span className='flex items-center justify-between'>
-                        <span className='flex items-center parent-you'>
-                            <span className="w-[0px] h-[4px] bg-orange line-option">
-
-                            </span>
-                            <span>
-                                <Link href={`${href}`}>
+            <div className="relative group py-3 w-full">
+                <span className="relative transition-all duration-300 ease-in-out group-hover:text-orange-600">
+                    <span className="flex items-center">
+                        <span className='flex items-center'>
+                            <span className='group-hover:w-[18px] w-[0px] group-hover:mr-2 transition-all duration-300 h-[4px] bg-orange'></span>
+                            <Link href={`${href}`}>
+                                <span className="text-black group-hover:text-orange delay-75">
                                     {children}
-                                </Link>
-                            </span>
+                                </span>
+                            </Link>
                         </span>
                     </span>
-                </motion.span>
-            </motion.div>
+                </span>
+            </div>
+
         )
     }
 

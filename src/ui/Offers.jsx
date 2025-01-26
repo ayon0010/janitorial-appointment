@@ -12,7 +12,7 @@ const Offers = () => {
     return (
         <div>
             <div className='grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-10 mt-10' data-aos="fade-up">
-                <div className="card card-compact py-4 bg-[#EEEEEE] shadow-xl">
+                <div className="card card-compact py-4 bg-green-50 shadow-xl">
                     <figure className='px-10 pt-4'>
                         <Image src={img1} className='2xl:w-[150px] xl:w-[120px] w-[90px] h-auto mx-auto' alt='sales' />
                     </figure>
@@ -21,7 +21,7 @@ const Offers = () => {
                         <p className='text-center inter text-black 2xl:text-sm xl:text-xs opacity-90 px-4'>Achieve sales conversion rates of 20% to 30%, customized based on your service needs and target areas, maximizing revenue opportunities.</p>
                     </div>
                 </div>
-                <div className="card card-compact bg-[#EEEEEE] shadow-xl pt-4 pb-10">
+                <div className="card card-compact bg-green-50 shadow-xl pt-4 pb-10">
                     <figure className='px-10 pt-4'>
                         <Image src={img2} className='2xl:w-[150px] xl:w-[120px] w-[90px] h-auto mx-auto' alt='sales' />
                     </figure>
@@ -30,7 +30,7 @@ const Offers = () => {
                         <p className='text-center inter text-black 2xl:text-sm xl:text-xs opacity-90 px-4'>Our thorough 3-step verification process ensures reliable, premium-quality leads tailored to your specifications across the U.S. and Canada.</p>
                     </div>
                 </div>
-                <div className="card card-compact bg-[#EEEEEE] shadow-xl py-4">
+                <div className="card card-compact bg-green-50 shadow-xl py-4">
                     <figure className='px-10 pt-4'>
                         <Image src={img3} className='2xl:w-[150px] xl:w-[120px] w-[90px] h-auto mx-auto' alt='sales' />
                     </figure>
@@ -41,7 +41,7 @@ const Offers = () => {
                 </div>
             </div>
             <div className='grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-10 mt-10' data-aos="fade-up">
-                <div className="card card-compact bg-[#EEEEEE] shadow-xl py-4">
+                <div className="card card-compact bg-green-50 shadow-xl py-4">
                     <figure className='px-10 pt-4'>
                         <Image src={img4} className='2xl:w-[150px] xl:w-[120px] w-[90px] h-auto mx-auto' alt='sales' />
                     </figure>
@@ -54,9 +54,9 @@ const Offers = () => {
                         </p>
                     </div>
                 </div>
-                <div className="card card-compact bg-[#EEEEEE] shadow-xl py-4">
+                <div className="card card-compact bg-green-50 shadow-xl py-4">
                     <figure className='px-10 pt-4'>
-                        <Image src={img5} className='2xl:w-[150px] xl:w-[120px] w-[90px] h-auto mx-auto bg-[#EEEEEE]' alt='sales' />
+                        <Image src={img5} className='2xl:w-[150px] xl:w-[120px] w-[90px] h-auto mx-auto bg-green-50' alt='sales' />
                     </figure>
                     <div className="card-body mt-6">
                         <h2 className="card-title w-fit mx-auto text-center 2xl:text-3xl xl:text-2xl text-black font-bold poppins opacity-90">
@@ -67,9 +67,9 @@ const Offers = () => {
                         </p>
                     </div>
                 </div>
-                <div className="card card-compact bg-[#EEEEEE] shadow-xl py-4">
+                <div className="card card-compact bg-green-50 shadow-xl py-4">
                     <figure className='px-10 pt-4'>
-                        <Image src={img6} className='2xl:w-[150px] xl:w-[120px] w-[90px] h-auto mx-auto bg-[#EEEEEE]' alt='seo-digital-marketing' />
+                        <Image src={img6} className='2xl:w-[150px] xl:w-[120px] w-[90px] h-auto mx-auto bg-green-50' alt='seo-digital-marketing' />
                     </figure>
                     <div className="card-body mt-10">
                         <h2 className="card-title w-fit mx-auto text-center 2xl:text-3xl xl:text-2xl text-black font-bold poppins opacity-90">

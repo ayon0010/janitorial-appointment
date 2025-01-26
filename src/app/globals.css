@@ -32,7 +32,7 @@
 }
 
 .banner {
-  background: url("../../public/assets/fc8401c42aac2193aa4293ac4cb98056\ \(1\).jpg") lightgray 50% / cover no-repeat;
+  background: url("../../public/assets/fc8401c42aac2193aa4293ac4cb98056\ \(1\)_result_result.webp") lightgray 50% / cover no-repeat;
 }
 
 .text-secondary {
@@ -40,7 +40,7 @@
 }
 
 .login {
-  background-image: url("../../public//assets/Untitled.png");
+  background-image: url("../../public//assets/Untitled_result_result.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -110,7 +110,7 @@
 }
 
 .subscription {
-  background-image: url("../../public/assets/d52f550b3b5989cf96d343f41333a3ab.png");
+  background-image: url("../../public/assets/d52f550b3b5989cf96d343f41333a3ab_result_result.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -231,7 +231,7 @@ input[type="checkbox"]:checked~.collapse-content {
 .banner-2 {
   position: relative;
   /* Position the banner to allow absolute positioning of overlay */
-  background-image: url("../../public/assets/clay-banks-BY-R0UNRE7w-unsplash.jpg");
+  background-image: url("../../public/assets/clay-banks-BY-R0UNRE7w-unsplash_result_result.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -242,7 +242,7 @@ input[type="checkbox"]:checked~.collapse-content {
 
 .banner-3 {
   position: relative;
-  background-image: url("../../public/assets/c4fff5f6b137dec9009b9e4e2c05c82f.png");
+  background-image: url("../../public/assets/c4fff5f6b137dec9009b9e4e2c05c82f_result_result.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -253,7 +253,7 @@ input[type="checkbox"]:checked~.collapse-content {
 
 .banner-4 {
   position: relative;
-  background-image: url("../../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash.jpg");
+  background-image: url("../../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash_result.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -339,7 +339,7 @@ input[type="checkbox"]:checked~.collapse-content {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('../../public/assets/group-young-business-people-working-office.jpg');
+  background-image: url('../../public/assets/group-young-business-people-working-office_result.webp');
   height: 600px;
   /* Matches the height of your div */
   margin-top: 20px;
@@ -367,7 +367,7 @@ input[type="checkbox"]:checked~.collapse-content {
 
 .banner-6 {
   position: relative;
-  background-image: url("../../public/assets/Frame\ 1000002436.png");
+  background-image: url("../../public/assets/Frame\ 1000002436\ \(1\)_result_result.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -377,7 +377,7 @@ input[type="checkbox"]:checked~.collapse-content {
 }
 
 .appointment {
-  background-image: url("../../public/assets/appointment-bg-1-1.jpg");
+  background-image: url("../../public/assets/appointment-bg-1-1_result_result.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -394,7 +394,7 @@ input[type="checkbox"]:checked~.collapse-content {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../../public/assets/group-young-business-people-working-office.jpg');
+    background-image: url('../../public/assets/group-young-business-people-working-office_result.webp');
     height: 500px;
     /* Matches the height of your div */
     margin-top: 20px;
@@ -414,6 +414,6 @@ input[type="checkbox"]:checked~.collapse-content {
   }
 
   .banner-6 {
-    background-image: url('../../public/assets/igor-savelev-mxUtpzc85fI-unsplash.jpg');
+    background-image: url('../../public/assets/igor-savelev-mxUtpzc85fI-unsplash_result_result.webp');
   }
 }

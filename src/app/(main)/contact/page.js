@@ -3,7 +3,7 @@ import React from 'react';
 import contact from '@/../public/assets/Frame (6).svg'
 import Image from 'next/image';
 import FaTick from '@/icons/FaTick';
-import image from '@/../public/assets/image 36.png'
+import image from '../../../../public/assets/image 36_result_result.webp'
 import FaAddress from '@/icons/FaAddress';
 import FaPhone from '@/icons/FaPhone';
 import FaEmail from '@/icons/FaEmail';
