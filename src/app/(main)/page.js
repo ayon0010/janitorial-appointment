@@ -241,7 +241,7 @@ export default function Home() {
             </div>
             <div className="py-28  bg-white">
                 <SectionTitles heading={"Contact Us"} />
-                {/* <ContactInfo /> */}
+                <ContactInfo />
             </div>
         </div >
     )
