@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import animation from '../../public/assets/Animation - 1737791900666appointment.json';
-import dynamic from 'next/dynamic';
 // import { motion } from 'framer-motion'; // Assuming you're using motion in the rest of the code as well
 import { motion } from 'framer-motion'; // This is kept as it was in your code
 import InputField from '@/Shared/InputField';
