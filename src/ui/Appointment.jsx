@@ -106,7 +106,7 @@ const Appointment = () => {
                                     {...register('service', { required: 'Please select a service' })}
                                     className="select select-bordered rounded-none w-full bg-[#645CFF] py-3 book-appointment text-white"
                                 >
-                                    <option value="" disabled selected>
+                                    <option value="" disabled defaultValue={'---'} selected>
                                         ---
                                     </option>
                                     <option value="Janitorial Leads">Janitorial Leads</option>

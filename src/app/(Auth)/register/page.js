@@ -65,8 +65,8 @@ const Register = () => {
         }
     };
 
-    const inputClass = "input input-bordered w-full";
-    const errorClass = "text-red-500 text-sm";
+    const inputclassName = "input input-bordered w-full";
+    const errorclassName = "text-red-500 text-sm";
 
     return (
         <div className="md:h-screen login lg:px-16 max-w-screen-2xl mx-auto md:py-0 py-10">
@@ -165,7 +165,7 @@ const Register = () => {
                                         </div>
                                         {field.type === "select" ? (
                                             <select className="select text-primary text-base select-bordered w-full" {...register(field.name, { required: field.required })}>
-                                                <option disabled selected>Pick Your State</option>
+                                                <option disabled selected defaultValue={'Pick Your State'}>Pick Your State</option>
                                                 {field.options.map((option, index) => (
                                                     <option key={index} value={option}>{option}</option>
                                                 ))}
@@ -174,7 +174,7 @@ const Register = () => {
                                             <input
                                                 type={field.type}
                                                 placeholder={field.placeholder}
-                                                className={inputClass}
+                                                className={inputclassName}
                                                 {...register(field.name, {
                                                     required: field.required,
                                                     pattern: field.pattern,
@@ -183,7 +183,7 @@ const Register = () => {
                                                 })}
                                             />
                                         )}
-                                        {errors[field.name] && <p className={errorClass}>{errors[field.name].message}</p>}
+                                        {errors[field.name] && <p className={errorclassName}>{errors[field.name].message}</p>}
                                     </label>
                                 </div>
                             ))}

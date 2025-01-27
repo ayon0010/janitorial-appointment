@@ -15,7 +15,7 @@ const page = () => {
                         </label>
                         <select
                             className="select select-bordered rounded-[10px] bg-white border border-[#5C6272]">
-                            <option className="text-[#666968] poppins text-lg" selected disabled>Pick a type</option>
+                            <option className="text-[#666968] poppins text-lg" selected defaultValue={'Pick a type'} disabled>Pick a type</option>
                             <option className="text-[#666968] poppins text-lg" value="Full Time">Full Time</option>
                             <option className="text-[#666968] poppins text-lg" value="Part Time">Part Time</option>
                         </select>
@@ -36,7 +36,7 @@ const page = () => {
                         </label>
                         <select
                             className="select select-bordered rounded-[10px] bg-white border border-[#5C6272]">
-                            <option className="text-[#666968] poppins text-lg" selected disabled>Select a sate</option>
+                            <option className="text-[#666968] poppins text-lg" selected defaultValue={'Select a state'} disabled>Select a sate</option>
                             {
                                 usStates.map(state => {
                                     return (

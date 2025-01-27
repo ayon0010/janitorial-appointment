@@ -10,10 +10,10 @@ const page = () => {
                 <div className="flex items-center gap-20">
                     <div className="md:w-1/2">
                         <h5 className="text-lg font-bold inter mb-4">Select a payment method</h5>
-                        <div class="flex items-center">
-                            <div class="flex-grow border-t-2 border-black"></div>
-                            <span class="px-4 font-bold text-xs inter">or</span>
-                            <div class="flex-grow border-t-2 border-black"></div>
+                        <div className="flex items-center">
+                            <div className="flex-grow border-t-2 border-black"></div>
+                            <span className="px-4 font-bold text-xs inter">or</span>
+                            <div className="flex-grow border-t-2 border-black"></div>
                         </div>
                         <form className="mt-8 grid grid-cols-2 gap-y-8 gap-x-4">
                             <div className="form-control col-span-2">
@@ -47,7 +47,7 @@ const page = () => {
                                 <input type="text" value={'United States'} disabled placeholder="1234  1234  1234 1234" className="input input-bordered rounded-[3.75px] border-[0.75px] border-[#50565B] bg-inherit" required />
                             </div>
                         </form>
-                        <p className="mt-8">Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                        <p className="mt-8">Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. className aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
                     </div>
                     <div className="md:w-1/2">
                         <div className="bg-[#0A2333] py-6 px-8">
@@ -63,7 +63,7 @@ const page = () => {
                                     <h3 className="inter text-2xl font-bold">$0.00</h3>
                                 </div>
                                 <button className="bg-[#76FB91] rounded-[3.75px] btn w-full text-sm font-bold">Start Your trial</button>
-                                <p className="mt-7 inter font-normal text-white">Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.</p>
+                                <p className="mt-7 inter font-normal text-white">Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. className aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.</p>
                             </div>
                         </div>
                         <p className="text-sm inter font-normal my-8">How did you first hear about us? (optional)</p>

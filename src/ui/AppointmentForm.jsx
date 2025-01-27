@@ -1,25 +1,22 @@
-'use client'
+'use client';
 import React, { useEffect, useState } from 'react';
-import animation from '../../public/assets/Animation - 1737791900666appointment.json'
+import animation from '../../public/assets/Animation - 1737791900666appointment.json';
 import dynamic from 'next/dynamic';
-const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
-import { motion } from 'framer-motion';
-import SectionTitles from './SectionTitles';
-import Image from 'next/image';
-import fb from '@/../public/assets/Frame (8).svg'
-import insta from '@/../public/assets/Frame (10).svg'
-import linked from '@/../public/assets/Frame (11).svg'
-import twitt from '@/../public/assets/Frame (12).svg'
-import youtube from '@/../public/assets/Frame (13).svg'
+// import { motion } from 'framer-motion'; // Assuming you're using motion in the rest of the code as well
+import { motion } from 'framer-motion'; // This is kept as it was in your code
 import InputField from '@/Shared/InputField';
 import { useForm } from 'react-hook-form';
 import FormButton from '@/Shared/FormButton';
-import Swal from 'sweetalert2/dist/sweetalert2.js'
-import 'sweetalert2/src/sweetalert2.scss'
-const AppointmentForm = () => {
+import Swal from 'sweetalert2/dist/sweetalert2.js';
+import 'sweetalert2/src/sweetalert2.scss';
 
+// Import lottie-web
+import lottie from 'lottie-web';
+
+const AppointmentForm = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
+
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const email = localStorage.getItem('email');
@@ -27,10 +24,9 @@ const AppointmentForm = () => {
             setEmail(email);
             setName(name);
         }
-    }, [])
+    }, []);
 
     console.log(email, name);
-
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         defaultValues: {
@@ -39,21 +35,17 @@ const AppointmentForm = () => {
         }
     });
 
-
     useEffect(() => {
         reset({
             companyName: name,
             email: email
-        })
-    }, [email, name])
-
-
+        });
+    }, [email, name]);
 
     const onSubmit = async (data) => {
         console.log(data);
 
         try {
-            // Show loading alert
             Swal.fire({
                 title: 'Updating user...',
                 text: 'Please wait while we update your information.',
@@ -61,26 +53,25 @@ const AppointmentForm = () => {
                 allowOutsideClick: false,
                 showConfirmButton: false,
                 willOpen: () => {
-                    Swal.showLoading(); // Display loading spinner
+                    Swal.showLoading();
                 },
             });
+
             console.log(data);
-            // On success, show success alert
+
             if (typeof window !== 'undefined') {
                 const email = localStorage.removeItem('email');
                 const name = localStorage.removeItem('name');
             }
+
             Swal.fire({
                 title: 'Success!',
                 text: 'Your information has been successfully updated.',
                 icon: 'success',
-                timer: 1200, // Auto close after 3 seconds
+                timer: 1200,
                 showConfirmButton: false,
             });
-            // refetch();
-
         } catch (error) {
-            // On error, show error alert
             Swal.fire({
                 title: 'Error!',
                 text: 'Something went wrong while updating your information.',
@@ -90,37 +81,57 @@ const AppointmentForm = () => {
             console.error('Error updating user info:', error);
         }
     };
+
+    useEffect(() => {
+        const animationContainer = document.getElementById('lottie-animation');
+        lottie.loadAnimation({
+            container: animationContainer,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            animationData: animation
+        });
+
+        // Cleanup on component unmount
+        return () => {
+            lottie.destroy();
+        };
+    }, []);
+
     return (
-        <div className='pt-[100px] px-10 pb-20'>
+        <div className="pt-[100px] px-10 pb-20">
             <div>
-                <div
-                    className='flex 2xl:flex-row xl:flex-row flex-col items-center justify-center'
-                >
+                <div className="flex 2xl:flex-row xl:flex-row flex-col items-center justify-center">
                     <motion.div
                         initial={{ x: 150 }}
                         animate={{ x: 0 }}
                         transition={{
-                            duration: 1, // Animation duration in seconds
-                            ease: [0.42, 0, 0.58, 1], // Makes the animation smooth
-                            delay: 0.5, // Adds a delay of 0.5 seconds before the animation starts
+                            duration: 1,
+                            ease: [0.42, 0, 0.58, 1],
+                            delay: 0.5,
                         }}
-                        className='w-fit'>
-                        <Lottie animationData={animation} loop={false} className={`h-auto 2xl:w-[300px] xl:w-[300px] bg-transparent`} />
+                        className="w-fit"
+                    >
+                        <div id="lottie-animation" className="h-auto 2xl:w-[300px] xl:w-[300px] bg-transparent" />
                     </motion.div>
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.5, }}
-                        animate={{ opacity: 1, scale: 1, }}
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
                         transition={{
-                            duration: 0.4, // Animation duration in seconds
-                            ease: [0.42, 0, 0.58, 1], // Makes the animation smooth
-                            delay: 1.5, // Adds a delay of 1 second before the animation starts
+                            duration: 0.4,
+                            ease: [0.42, 0, 0.58, 1],
+                            delay: 1.5,
                         }}
                     >
-                        <h1 className='text-green-500 2xl:text-4xl xl:text-4xl text-2xl font-semibold 2xl:text-start xl:text-start text-center'>Book an appointment</h1>
-                        <p className='text-gray-700 text-sm font-semibold mt-4 2xl:text-start xl:text-start text-center'>Get in touch with our team to schedule <br /> a convenient time for your cleaning service.<br /> We're here to help!</p>
+                        <h1 className="text-green-500 2xl:text-4xl xl:text-4xl text-2xl font-semibold 2xl:text-start xl:text-start text-center">
+                            Book an appointment
+                        </h1>
+                        <p className="text-gray-700 text-sm font-semibold mt-4 2xl:text-start xl:text-start text-center">
+                            Get in touch with our team to schedule <br /> a convenient time for your cleaning service.<br /> We're here to help!
+                        </p>
                     </motion.div>
                 </div>
-                <form className='mt-10 grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-10 max-w-[1440px] mx-auto' onSubmit={handleSubmit(onSubmit)}>
+                <form className="mt-10 grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-10 max-w-[1440px] mx-auto" onSubmit={handleSubmit(onSubmit)}>
                     <InputField
                         label={'Company Name *'}
                         placeholder={'Enter your company name'}
@@ -185,13 +196,12 @@ const AppointmentForm = () => {
                         name={'dnc'}
                         errors={errors}
                     />
-                    {/* <div className='2xl:block xl:block hidden'></div> */}
                     <div className="2xl:w-3/4 xl:w-3/4 w-full">
                         <FormButton label={'Book an appointment'} />
                     </div>
                 </form>
             </div>
-        </div >
+        </div>
     );
 };
 

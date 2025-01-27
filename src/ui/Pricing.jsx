@@ -14,11 +14,11 @@ const pricingPlans = [
             "Cleaning opportunities sent to your inbox.",
         ],
         buttonLabel: "Start Now",
-        buttonClass: "btn-outline hover:bg-green-700 hover:text-white",
-        containerClass: "bg-white",
-        priceClass: "text-6xl font-bold",
-        priceUnitClass: "text-gray-500 font-semibold text-base",
-        descriptionClass: "nunito text-xs font-normal"
+        buttonclassName: "btn-outline hover:bg-green-700 hover:text-white",
+        containerclassName: "bg-white",
+        priceclassName: "text-6xl font-bold",
+        priceUnitclassName: "text-gray-500 font-semibold text-base",
+        descriptionclassName: "nunito text-xs font-normal"
     },
     {
         title: "Professional Plan",
@@ -33,11 +33,11 @@ const pricingPlans = [
             "Instant Notifications when anyof leads are uploaded"
         ],
         buttonLabel: "Start Now",
-        buttonClass: "text-black bg-white hover:bg-green-700 hover:text-white",
-        containerClass: "bg-primary",
-        priceClass: "text-6xl font-bold text-white",
-        priceUnitClass: "font-semibold text-base text-white",
-        descriptionClass: "nunito text-xs font-normal text-white"
+        buttonclassName: "text-black bg-white hover:bg-green-700 hover:text-white",
+        containerclassName: "bg-primary",
+        priceclassName: "text-6xl font-bold text-white",
+        priceUnitclassName: "font-semibold text-base text-white",
+        descriptionclassName: "nunito text-xs font-normal text-white"
     },
     {
         title: "Essential Plan",
@@ -52,11 +52,11 @@ const pricingPlans = [
             "Instant Notifications when an Exclusive Lead or LayUp is posted."
         ],
         buttonLabel: "Start Now",
-        buttonClass: "btn-outline hover:bg-green-700 hover:text-white",
-        containerClass: "bg-white",
-        priceClass: "text-6xl font-bold",
-        priceUnitClass: "text-gray-500 font-semibold text-base",
-        descriptionClass: "nunito text-xs font-normal"
+        buttonclassName: "btn-outline hover:bg-green-700 hover:text-white",
+        containerclassName: "bg-white",
+        priceclassName: "text-6xl font-bold",
+        priceUnitclassName: "text-gray-500 font-semibold text-base",
+        descriptionclassName: "nunito text-xs font-normal"
     }
 ];
 
@@ -64,28 +64,28 @@ const Pricing = () => {
     return (
         <div className='md:px-10 px-6 grid md:grid-cols-3 grid-cols-1 gap-6 2xl:mt-20 xl:mt-20 mt-10'>
             {pricingPlans.map((plan, index) => (
-                <div key={index} className={`rounded-[30px] py-12 px-10 ${plan.containerClass} flex flex-col`}>
-                    <h3 className={`text-2xl font-medium nunito ${plan.containerClass === 'bg-white' ? '' : 'text-white'}`}>{plan.title}</h3>
-                    <small className={`nunito text-xs font-normal ${plan.containerClass === 'bg-white' ? '' : 'text-white'}`}>{plan.description}</small>
+                <div key={index} className={`rounded-[30px] py-12 px-10 ${plan.containerclassName} flex flex-col`}>
+                    <h3 className={`text-2xl font-medium nunito ${plan.containerclassName === 'bg-white' ? '' : 'text-white'}`}>{plan.title}</h3>
+                    <small className={`nunito text-xs font-normal ${plan.containerclassName === 'bg-white' ? '' : 'text-white'}`}>{plan.description}</small>
                     <div className='mt-10'>
-                        <small className={`nunito text-xs font-normal ${plan.containerClass === 'bg-white' ? '' : 'text-white'}`}>Starting from</small>
+                        <small className={`nunito text-xs font-normal ${plan.containerclassName === 'bg-white' ? '' : 'text-white'}`}>Starting from</small>
                         <div>
-                            <span className={` ${plan.priceClass} inter`}>{plan.price}</span>
-                            <span className={` ${plan.priceUnitClass}`}>{plan.priceUnit}</span>
+                            <span className={` ${plan.priceclassName} inter`}>{plan.price}</span>
+                            <span className={` ${plan.priceUnitclassName}`}>{plan.priceUnit}</span>
                         </div>
-                        {plan.discount && <p className={`text-sm nunito ${plan.containerClass === 'bg-white' ? '' : 'text-white'}`}>{plan.discount}</p>}
+                        {plan.discount && <p className={`text-sm nunito ${plan.containerclassName === 'bg-white' ? '' : 'text-white'}`}>{plan.discount}</p>}
                     </div>
                     <div className='my-7 space-y-6'>
                         {plan.features.map((feature, index) => (
                             <div key={index} className='flex items-center gap-2'>
                                 <TickCircle />
-                                <p className={`text-base nunito font-normal ${plan.containerClass === 'bg-white' ? '' : 'text-white'}`}>{feature}</p>
+                                <p className={`text-base nunito font-normal ${plan.containerclassName === 'bg-white' ? '' : 'text-white'}`}>{feature}</p>
                             </div>
                         ))}
                     </div>
                     <div className='mt-auto'>
                         <Link href={'/my-subscription'}>
-                            <button className={`btn ${plan.buttonClass} font-semibold w-full`}>{plan.buttonLabel}</button>
+                            <button className={`btn ${plan.buttonclassName} font-semibold w-full`}>{plan.buttonLabel}</button>
                         </Link>
                     </div>
                 </div>

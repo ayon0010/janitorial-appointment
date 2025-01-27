@@ -1,4 +1,3 @@
-'use client'
 import Dot from "@/ui/Dot";
 
 const Loading = () => {

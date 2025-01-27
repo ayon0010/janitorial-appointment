@@ -1,5 +1,3 @@
-'use client'
-import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import img1 from '../../public/assets/martha-dominguez-de-gouveia-KF-h9HMxRKg-unsplash (1)_result_result.webp';
 import img2 from '../../public/assets/kate-darmody-TDIdPmW2P9k-unsplash_result_result_result.webp'
@@ -14,20 +12,6 @@ import img4 from '../../public/assets/danielle-cerullo-CQfNt66ttZM-unsplash_resu
 
 
 export default function Leads() {
-    const swiperRef = useRef(null);
-    const [activeIndex, setActiveIndex] = useState(0);
-
-    const goToSlide = (index) => {
-        if (swiperRef.current && swiperRef.current.swiper) {
-            swiperRef.current.swiper.slideTo(index);
-            setActiveIndex(index);
-        }
-    };
-
-    const handleSlideChange = (swiper) => {
-        setActiveIndex(swiper.activeIndex); // Reinitialize AOS to apply animations to the new slide
-    };
-
 
     const Card = ({ img, headline, text, icon, alt }) => {
         return (

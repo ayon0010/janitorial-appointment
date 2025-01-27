@@ -7,7 +7,7 @@ const ButtonTertiary = ({ label, width }) => {
     const [hover, setHover] = useState(false)
     return (
         <div className={`${width ? 'w-full rounded-lg' : 'w-fit rounded-[40px]'} h-fit overflow-clip py-4 btn border-none relative btn-hover bg-primary`} onMouseEnter={(e) => setHover(true)} onMouseLeave={(e) => setHover(false)}>
-            <motion.a
+            <motion.div
                 initial='initial'
                 whileHover='hovered'
                 className={`relative block overflow-hidden whitespace-nowrap text-white  2xl:text-base xl:text-base text-sm 2xl:px-6 xl:px-4 px-2 font-semibold poppins 2xl:rounded-[35px] xl:rounded-[35px] rounded-3xl`}
@@ -26,7 +26,7 @@ const ButtonTertiary = ({ label, width }) => {
                     {label}
                     <FaArrowRight />
                 </motion.div>
-            </motion.a>
+            </motion.div>
         </div>
 
     );

@@ -1,4 +1,3 @@
-'use client'
 import Image from 'next/image';
 import React from 'react';
 import img1 from '../../public/assets/acquisition-_1_.svg'
@@ -11,7 +10,7 @@ import img6 from '../../public/assets/pngtree-seo-setting-icon-png-image_328700.
 const Offers = () => {
     return (
         <div>
-            <div className='grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-10 mt-10' data-aos="fade-up">
+            <div className='grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-10 mt-10'>
                 <div className="card card-compact py-4 bg-green-50 shadow-xl">
                     <figure className='px-10 pt-4'>
                         <Image
@@ -62,7 +61,7 @@ const Offers = () => {
                     </div>
                 </div>
             </div>
-            <div className='grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-10 mt-10' data-aos="fade-up">
+            <div className='grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-10 mt-10'>
                 <div className="card card-compact bg-green-50 shadow-xl py-4">
                     <figure className='px-10 pt-4'>
                         <Image

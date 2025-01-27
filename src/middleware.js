@@ -7,9 +7,9 @@ const userRoutes = ['/profile', '/dashboard'];
 const adminRoutes = ['/adminDashboard', '/adminDashboard/allLeads', '/adminDashboard/allUser', '/adminDashboard/leadUpload', '/adminDashboard/allLeads/:id', '/adminDashboard/subscriber'];
 const sellerRoutes = ['/sellerDashboard', '/sellerDashboard/leadUpload'];
 
-export function middleware(request) {
+export async function middleware(request) {
     const pathname = request.nextUrl.pathname;
-    const cookieStore = cookies()
+    const cookieStore = await cookies()
     const userTokenObj = cookieStore.get('userToken');
     const token = userTokenObj?.value;
     console.log(token);

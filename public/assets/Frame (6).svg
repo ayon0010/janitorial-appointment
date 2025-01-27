@@ -10,11 +10,11 @@
 <rect x="28.0134" width="489.876" height="661.637" fill="url(#pattern1_340_886)"/>
 </g>
 <rect x="38.25" y="30.25" width="11.5" height="11.5" rx="5.75" fill="#EE6A5F"/>
-<rect x="38.25" y="30.25" width="11.5" height="11.5" rx="5.75" stroke="#CE5347" stroke-width="0.5"/>
+<rect x="38.25" y="30.25" width="11.5" height="11.5" rx="5.75" stroke="#CE5347" strokeWidth="0.5"/>
 <rect x="58.25" y="30.25" width="11.5" height="11.5" rx="5.75" fill="#F5BD4F"/>
-<rect x="58.25" y="30.25" width="11.5" height="11.5" rx="5.75" stroke="#D6A243" stroke-width="0.5"/>
+<rect x="58.25" y="30.25" width="11.5" height="11.5" rx="5.75" stroke="#D6A243" strokeWidth="0.5"/>
 <rect x="78.25" y="30.25" width="11.5" height="11.5" rx="5.75" fill="#61C454"/>
-<rect x="78.25" y="30.25" width="11.5" height="11.5" rx="5.75" stroke="#58A942" stroke-width="0.5"/>
+<rect x="78.25" y="30.25" width="11.5" height="11.5" rx="5.75" stroke="#58A942" strokeWidth="0.5"/>
 <defs>
 <pattern id="pattern0_340_886" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_340_886" transform="matrix(0.00174696 0 0 0.00145183 -0.535518 0)"/>

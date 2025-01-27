@@ -43,7 +43,7 @@ export default function Home() {
             <div className=" md:px-10 px-6">
                 <div className="">
                     <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row-reverse flex-col">
-                        <div className="md:w-fit w-full md:pb-6 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F5F6F7] rounded-[32px]" data-aos="fade-left">
+                        <div className="md:w-fit w-full md:pb-6 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F5F6F7] rounded-[32px]">
                             <Image
                                 src={slide4}
                                 alt="Commercial Cleaning Leads across USA"
@@ -92,7 +92,7 @@ export default function Home() {
                     </div>
 
                     <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row flex-col">
-                        <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pr-10 pb-6 pt-6 pr-6 bg-[#F5F6F7] rounded-[32px]" data-aos="fade-right">
+                        <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pr-10 pb-6 pt-6 pr-6 bg-[#F5F6F7] rounded-[32px]" >
                             <Image
                                 src={side2}
                                 alt="Uncover Top Janitorial Leads"
@@ -131,7 +131,7 @@ export default function Home() {
                     </div>
 
                     <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row-reverse flex-col">
-                        <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F5F6F7] rounded-[32px]" data-aos="fade-left">
+                        <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F5F6F7] rounded-[32px]">
                             <Image
                                 src={side2}
                                 alt="Reach decision makers instantly and effortlessly with top janitorial leads"
@@ -170,7 +170,7 @@ export default function Home() {
                     </div>
 
                     <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row flex-col" >
-                        <div className="md:w-1/2 w-full bg-[#F5F6F7] rounded-[32px]" data-aos="fade-right">
+                        <div className="md:w-1/2 w-full bg-[#F5F6F7] rounded-[32px]">
                             <Image
                                 src={side1}
                                 className="md:w-auto mx-auto md:h-[500px] w-3/4"
@@ -241,7 +241,7 @@ export default function Home() {
             </div>
             <div className="py-28  bg-white">
                 <SectionTitles heading={"Contact Us"} />
-                <ContactInfo />
+                {/* <ContactInfo /> */}
             </div>
         </div >
     )

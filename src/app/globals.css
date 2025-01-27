@@ -125,7 +125,7 @@
 
 .serial {
   color: #0d0d0d;
-  -webkit-text-stroke-width: 1.1111111640930176;
+  -webkit-text-strokeWidth: 1.1111111640930176;
   -webkit-text-stroke-color: #c7f2ab;
   font-size: 66.667px;
   font-style: normal;
@@ -276,44 +276,10 @@ input[type="checkbox"]:checked~.collapse-content {
   line-height: 1;
 }
 
-.parent-option:hover .line-option {
-  opacity: 1;
-  width: 18px !important;
-  margin-right: 12px !important;
-  transition:
-    width 200ms linear,
-    margin-right 200ms linear;
-  /* visibility immediately after opacity */
-}
+/*  */
 
-.parent-option-1:hover .line-option-1 {
-  opacity: 1;
-  width: 18px !important;
-  margin-right: 12px !important;
-  transition:
-    width 200ms linear,
-    margin-right 200ms linear;
-  /* visibility immediately after opacity */
-}
-
-.parent-option-1 .line-option-1 {
-  opacity: 1;
-  width: 0x !important;
-  margin-right: 0px !important;
-  transition:
-    width 200ms linear,
-    margin-right 200ms linear;
-  /* visibility immediately after opacity */
-}
-
-.parent-option .line-option {
-  opacity: 1;
-  width: 0x !important;
-  margin-right: 0px !important;
-  transition:
-    width 200ms linear,
-    margin-right 200ms linear;
-  /* visibility immediately after opacity */
+.option:hover .option-text {
+  @apply text-orange !important;
 }
 
 .dropdown-icon:hover .dropdown-path {

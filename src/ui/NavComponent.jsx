@@ -26,21 +26,21 @@ const NavComponent = () => {
                     </div>
                     <div className='bg-deep-blue flex gap-1 items-center px-12 py-[12px]'>
                         <FaPhone />
-                        <div class="phone-number">
-                            <span class="letter text-base font-semibold text-white animate__backOutDown">+</span>
-                            <span class="letter text-base font-semibold text-white">8</span>
-                            <span class="letter text-base font-semibold text-white">8</span>
-                            <span class="letter text-base font-semibold text-white">0</span>
-                            <span class="letter text-base font-semibold text-white">-</span>
-                            <span class="letter text-base font-semibold text-white">1</span>
-                            <span class="letter text-base font-semibold text-white">9</span>
-                            <span class="letter text-base font-semibold text-white">5</span>
-                            <span class="letter text-base font-semibold text-white">8</span>
-                            <span class="letter text-base font-semibold text-white">3</span>
-                            <span class="letter text-base font-semibold text-white">7</span>
-                            <span class="letter text-base font-semibold text-white">7</span>
-                            <span class="letter text-base font-semibold text-white">8</span>
-                            <span class="letter text-base font-semibold text-white">0</span>
+                        <div className="phone-number">
+                            <span className="letter text-base font-semibold text-white animate__backOutDown">+</span>
+                            <span className="letter text-base font-semibold text-white">8</span>
+                            <span className="letter text-base font-semibold text-white">8</span>
+                            <span className="letter text-base font-semibold text-white">0</span>
+                            <span className="letter text-base font-semibold text-white">-</span>
+                            <span className="letter text-base font-semibold text-white">1</span>
+                            <span className="letter text-base font-semibold text-white">9</span>
+                            <span className="letter text-base font-semibold text-white">5</span>
+                            <span className="letter text-base font-semibold text-white">8</span>
+                            <span className="letter text-base font-semibold text-white">3</span>
+                            <span className="letter text-base font-semibold text-white">7</span>
+                            <span className="letter text-base font-semibold text-white">7</span>
+                            <span className="letter text-base font-semibold text-white">8</span>
+                            <span className="letter text-base font-semibold text-white">0</span>
                         </div>
                     </div>
                 </div>

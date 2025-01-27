@@ -1,33 +1,57 @@
 'use client'
-import dynamic from 'next/dynamic';
-const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
-import React from 'react';
-import animation from '../../public/assets/Animation - 1737470603251c.json'
-import animation2 from '../../public/assets/Animation - 1737470167441contact.json'
-import fb from '@/../public/assets/Frame (8).svg'
-import insta from '@/../public/assets/Frame (10).svg'
-import linked from '@/../public/assets/Frame (11).svg'
-import twitt from '@/../public/assets/Frame (12).svg'
-import youtube from '@/../public/assets/Frame (13).svg'
+import { useEffect, useRef } from 'react';
+import lottie from 'lottie-web';
+import animation from '../../public/assets/Animation - 1737470603251c.json';
+import animation2 from '../../public/assets/Animation - 1737470167441contact.json';
+import fb from '@/../public/assets/Frame (8).svg';
+import insta from '@/../public/assets/Frame (10).svg';
+import linked from '@/../public/assets/Frame (11).svg';
+import twitt from '@/../public/assets/Frame (12).svg';
+import youtube from '@/../public/assets/Frame (13).svg';
 import Image from 'next/image';
 import Link from 'next/link';
 
-
 const ContactInfo = () => {
+    const animationRef = useRef(null);
+    const animation2Ref = useRef(null);
+
+    useEffect(() => {
+        // Initialize Lottie animations for both refs
+        const animationInstance = lottie.loadAnimation({
+            container: animationRef.current,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            animationData: animation,
+        });
+
+        const animation2Instance = lottie.loadAnimation({
+            container: animation2Ref.current,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            animationData: animation2,
+            speed: 0.4,
+        });
+
+        // Cleanup Lottie animations on component unmount
+        return () => {
+            animationInstance.destroy();
+            animation2Instance.destroy();
+        };
+    }, []);
+
     return (
         <div className='px-10 grid 2xl:grid-cols-2 xl:grid-cols-2 items-center'>
             <div className='w-full h-auto'>
-                <Lottie animationData={animation} className='w-full h-full' loop={true} />
+                {/* Lottie animation for the first animation */}
+                <div ref={animationRef} className='w-full h-full' />
             </div>
             <div className='space-y-8'>
-                {/* <h2 className='text-green-500 font-semibold 2xl:text-5xl xl:text-5xl'>Contact Us Today</h2> */}
-
-                <div>
-                    <Lottie animationData={animation2} className='h-[200px] w-auto' loop={true} speed={0.4} />
-                </div>
+                {/* Lottie animation for the second animation */}
+                <div ref={animation2Ref} className='h-[200px] w-auto' />
                 <p className='text-3xl font-semibold text-center'>+8801726108060</p>
                 <div className=''>
-                    {/* <SectionTitles heading={'Find Us on Social Media'} subHeading={"If you want to contact us in person or simply want to know more about us, here's some helpful information about us"} /> */}
                     <div className='grid 2xl:grid-cols-5 xl:grid-cols-5 grid-cols-2 2xl:gap-8 xl:gap-8 gap-6'>
                         <Link href="https://www.facebook.com" target="_blank">
                             <Image className='cursor-pointer' src={fb} alt="Facebook" />

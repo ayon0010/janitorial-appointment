@@ -3,7 +3,6 @@ import '../globals.css'
 import AuthProvider from '@/Providers/AuthProvider'
 import Navbar from '@/Shared/Navbar'
 import QueryProvider from '@/Providers/QueryProvider'
-import AOSProvider from '@/Providers/AOSProvider'
 import Footer from '@/Shared/Footer'
 import ChatProvider from '@/Providers/ChatProvider'
 
@@ -55,13 +54,11 @@ export default function RootLayout({ children }) {
         <main className='overflow-hidden min-h-screen max-w-[1920px] mx-auto bg-[#EEEFF1]'>
           <AuthProvider>
             <QueryProvider>
-              <AOSProvider>
-                <ChatProvider>
-                  <Navbar />
-                  {children}
-                  <Footer />
-                </ChatProvider>
-              </AOSProvider>
+              <ChatProvider>
+                <Navbar />
+                {children}
+                <Footer />
+              </ChatProvider>
             </QueryProvider>
           </AuthProvider>
         </main>

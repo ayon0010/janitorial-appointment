@@ -2,7 +2,7 @@ import { useState } from "react";
 import PageTitle from "./PageTitle";
 
 const DecisionMaker = ({ name }) => {
-    
+
     const [color, setColor] = useState(false);
     const [color2, setColor2] = useState(false);
     const states = [
@@ -23,7 +23,7 @@ const DecisionMaker = ({ name }) => {
             <form className="w-full">
                 <div className="mt-10 grid grid-cols-4 gap-3">
                     <select onClick={() => setColor(!color)} className={`p-2 border-2 border-gray-200 w-full max-w-xs ${color ? 'text-primary' : 'text-black'}`}>
-                        <option disabled selected>Search By</option>
+                        <option disabled defaultValue={'Search By'} selected>Search By</option>
                         <option>Company Name</option>
                         <option>First Name</option>
                         <option>Last Name</option>
@@ -31,7 +31,7 @@ const DecisionMaker = ({ name }) => {
                     <input type="text" className="w-full max-w-xs p-[6px] border-2 border-gray-200" placeholder="Enter the company or deci" />
                     <input type="text" className="w-full max-w-xs p-[6px] border-2 border-gray-200" placeholder="City" />
                     <select onClick={() => setColor2(!color2)} className={`p-2 border-2 border-gray-200 w-full max-w-xs ${color2 ? 'text-primary' : 'text-black'}`}>
-                        <option disabled selected>Pick a State</option>
+                        <option disabled defaultValue={'Pick a State'} selected>Pick a State</option>
                         {
                             states.map((state, i) => {
                                 return (
