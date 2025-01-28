@@ -14,7 +14,8 @@ import Appointment from "@/ui/Appointment";
 import Web from "@/ui/Web";
 import image from '@/../public/assets/group-young-business-people-working-office_result.webp';
 import ContactInfo from "@/ui/ContactInfo";
-
+import ReviewItems from "../../../ReviewItems";
+import { data } from '@/js/states';
 export default function Home() {
     return (
         <div>
@@ -235,6 +236,17 @@ export default function Home() {
                             "We appreciate your trust in Janitorial Appointment! Our commitment is to provide quality janitorial leads and reliable service connections to meet your business needs. Hear from clients who have successfully grown their businesses with us."
                         }
                     />
+                </div>
+                <div>
+                    <div className='md:grid md:grid-cols-3 md:gap-3 hidden'>
+                        {
+                            data?.map((d, i) => {
+                                return (
+                                    <ReviewItems key={i} d={d} />
+                                )
+                            })
+                        }
+                    </div>
                 </div>
                 <Reviews />
                 {/*  */}

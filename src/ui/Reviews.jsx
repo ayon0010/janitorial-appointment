@@ -10,15 +10,7 @@ import ReviewItems from '../../ReviewItems';
 const Reviews = () => {
     return (
         <div className='my-10'>
-            <div className='md:grid md:grid-cols-3 md:gap-3 hidden'>
-                {
-                    data?.map((d, i) => {
-                        return (
-                            <ReviewItems key={i} d={d} />
-                        )
-                    })
-                }
-            </div>
+            
             <div className='block md:hidden'>
                 <Swiper
                     effect={'cards'}
