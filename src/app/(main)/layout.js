@@ -29,19 +29,22 @@ export const metadata = {
 
 
 export const anton = Anton({
-  subsets: ['latin'],  // The subsets of the font you want to load
+  subsets: ['latin'],
+  display: 'swap', // The subsets of the font you want to load
   weight: '400',       // Specify the weight as a string, not as an array
 });
 
 
 export const poppins = Poppins({
   subsets: ['latin'],
+  display: 'swap',
   weight: ['400', '500', '600', '900'],
   variable: '--font-poppins',
 })
 
 export const nunito = Nunito({
   subsets: ['latin'],
+  display: 'swap',
   weight: ['400', '500', '600', '900'],
   variable: '--font-nunito',
 })
