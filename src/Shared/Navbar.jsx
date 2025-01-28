@@ -116,7 +116,7 @@ const Navbar = async () => {
                             </div>
                         </Link>
                         {/* Nav Items */}
-                        <div className="w-fit">
+                        <div className="max-w-[556px]">
                             <ul className="flex navItems items-center justify-between 2xl:gap-10 xl:gap-6">
                                 <NavItems Services={Services} Leads={Leads} />
                             </ul>
