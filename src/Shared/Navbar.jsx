@@ -122,7 +122,7 @@ const Navbar = async () => {
                             </ul>
                         </div>
                         {/* User Items */}
-                        <NavUser UserDetails={UserDetails} />
+                        <div className='max-w-[350px]'><NavUser UserDetails={UserDetails} /></div>
                     </div>
                     {/* Nav Mobile */}
                     <div className='2xl:hidden xl:hidden h-[80px] flex items-center justify-between px-6'>
