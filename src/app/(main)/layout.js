@@ -9,6 +9,7 @@ import ChatProvider from '@/Providers/ChatProvider'
 
 export const inter = Inter({
   subsets: ['latin'],
+  display: 'swap',
   variable: '--font-inter'
 })
 

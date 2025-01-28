@@ -60,7 +60,10 @@ const Banner = () => {
                         <div className='absolute inset-0 banner-1 z-30 2xl:block xl:block hidden'></div>
                         <div className='absolute inset-0 bg-black opacity-55 z-30 2xl:hidden xl:hidden block'></div>
                         <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
-                            <h1 className='text-white font-bold 2xl:text-6xl xl:text-5xl text-3xl'>Unlock Cleaning <br /><span className='text-green-600 banner-text'>Opportunities</span> with Ease</h1>
+                            <h1 className={`text-white font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl`}>
+                                Unlock Cleaning <br />
+                                <span className="text-green-600 banner-text">Opportunities</span> with Ease
+                            </h1>
                             <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80'>Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!</p>
                             <div className='flex items-center gap-6'>
                                 <div>
