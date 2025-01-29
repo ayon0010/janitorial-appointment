@@ -48,6 +48,14 @@ export async function generateMetadata({ params }) {
                 "Explore industry news and expert tips on generating janitorial appointments and commercial cleaning leads to grow your business.",
             url: "https://www.janitorialappointment.com/blogs/" + params.slug,
             type: "website",
+            images:
+                [
+                    {
+                        url: urlFor(data?.titleImage).url(),
+                        width: 800,
+                        height: 600,
+                    }
+                ]
         },
         twitter: {
             card: "",
