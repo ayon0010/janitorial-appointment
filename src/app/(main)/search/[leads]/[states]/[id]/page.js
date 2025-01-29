@@ -5,6 +5,9 @@ import getDateDifference from "@/js/calculateDate";
 import Bookmarks from "@/ui/Bookmarks";
 import BuyLeadMessage from "@/ui/BuyLeadMessage";
 
+
+export const revalidate = 1;
+
 const page = async ({ params }) => {
     const { leads, states, id } = params;
     const data = await getLeadById(leads, states, id);

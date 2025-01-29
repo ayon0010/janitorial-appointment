@@ -47,8 +47,6 @@ const Banner = () => {
                                 fill
                                 className="2xl:object-cover xl:object-cover object-center 2xl:block xl:block hidden"
                                 loading="lazy"
-                                width={4096}
-                                height={1824}
                             />
                             <Image
                                 src={image1mbl}
@@ -87,8 +85,7 @@ const Banner = () => {
                                 fill
                                 className="2xl:block xl:block hidden"
                                 loading="lazy"
-                                width={4096}
-                                height={1824}
+                             
                             />
 
                             <Image
@@ -97,8 +94,7 @@ const Banner = () => {
                                 fill
                                 className="min-h-[600px] object-center 2xl:hidden xl:hidden block"
                                 loading="lazy"
-                                width={2682}
-                                height={1736}
+                                
                             />
                         </div>
                         <div className='absolute inset-0 bg-black opacity-55 z-30'></div>
@@ -134,8 +130,7 @@ const Banner = () => {
                                 alt="Telemarketing services for janitorial appointments and commercial cleaning leads"
                                 fill
                                 loading="lazy"
-                                width={4096}
-                                height={1824}
+                                
                             />
                         </div>
                         <div className='absolute inset-0 bg-black opacity-50 z-30'></div>

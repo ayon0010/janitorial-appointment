@@ -7,16 +7,37 @@ import image2 from '@/../public/assets/Frame 1.svg';
 import FaLeads from "@/icons/FaLeads";
 import FaWeb from "@/icons/FaWeb";
 import FaCircleCheck from "@/icons/FaCheck";
-import ryan from '@/../public/assets/354198829_3532949156925131_7111049050546887557_n.jpg'
-import Footer from "@/Shared/Footer";
 import SectionTitles from "@/ui/SectionTitles";
 import { FaStar } from "react-icons/fa";
 import rev1 from '@/../public/assets/close-up-young-successful-man-smiling-camera-standing-casual-outfit-against-blue-background 1.svg'
 import rev2 from '@/../public/assets/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes.svg'
 import aboutImage1 from '@/../public/assets/Group 13778.svg'
-import ayon from '@/../public/assets/462672421_2310475689286628_7856711266779259180_n.jpg'
-import sneha from '@/../public/assets/462835113_1117568373068364_714874652603614545_n.jpg'
-import shanto from '@/../public/assets/451321767_3840503976220793_5243108772079747298_n.jpg'
+
+
+export const metadata = {
+    title: "About Us - Janitorial Appointments & Commercial Cleaning Leads",
+    description: "Learn more about our company, your trusted partner for generating high-quality janitorial appointments and commercial cleaning leads. We help businesses connect with top cleaning service providers.",
+    keywords: [
+        "janitorial appointments",
+        "commercial cleaning leads",
+        "cleaning services leads",
+        "business cleaning appointments",
+        "commercial cleaning solutions"
+    ],
+    openGraph: {
+        title: "About Us - Janitorial Appointments & Commercial Cleaning Leads",
+        description:
+            "Discover how we generate quality janitorial appointments and commercial cleaning leads for businesses. Partner with us for your growth.",
+        url: "https://www.janitorialappointment.com/about",
+        type: "website",
+    },
+    twitter: {
+        card: "",
+        title: "About Us - Janitorial Appointments & Commercial Cleaning Leads",
+        description:
+            "Find out how we specialize in providing janitorial appointments and commercial cleaning leads. Get in touch today!",
+    },
+};
 
 
 const page = () => {
@@ -153,52 +174,10 @@ const page = () => {
             </div>
 
             <div className="2xl:py-24 xl:py-16 py-10 2xl:px-40 xl:px-28 px-10">
-                <div className="grid 2xl:grid-cols-4 xl:grid-cols-4 grid-cols-2 2xl:gap-8 xl:gap-4 gap-4 items-stretch">
-                    <div className="col-span-2">
-                        <div className="flex items-center gap-5">
-                            <hr className="w-[50px] h-[1px] bg-[#808080] 2xl:block xl:block hidden" />
-                            <p className="text-[#808080] 2xl:text-xl xl:text-lg 2xl:font-normal xl:font-normal font-bold text-lg"> Meet our company family</p>
-                        </div>
-                        <h1 className="2xl:text-6xl xl:text-5xl text-4xl poppins 2xl:my-0 xl:my-0 my-4 inter 2xl:font-medium xl:font-medium font-semibold">Our skilled team will support you.</h1>
-                    </div>
-                    <div>
-                        <Image className="h-[250px]" height={250} src={ryan} alt="" />
-                        <h2 className="text-[#0D0D0D] 2xl:text-2xl xl:text-xl font-semibold 2xl:mt-5 xl:mt-2 mt-[6px]">Ryan Afzal</h2>
-                        <p className="text-[#808080]">CEO and Head of telemarketing service</p>
-                    </div>
-                    <div>
-                        <Image className="h-[250px]" height={250} src={ayon} alt="" />
-                        <h2 className="text-[#0D0D0D] 2xl:text-2xl xl:text-xl font-semibold 2xl:mt-5 xl:mt-2 mt-[6px]">Shariar Ayon</h2>
-                        <p className="text-[#808080]">Web and Mobile Application Developer & Technical Support Specialist</p>
-                    </div>
-                    <div>
-                        <Image className="h-[250px] w-full" height={250} src={sneha} alt="" />
-                        <h2 className="text-[#0D0D0D] 2xl:text-2xl xl:text-xl font-semibold 2xl:mt-5 xl:mt-2 mt-[6px]">Zarin Refa Sneha</h2>
-                        <p className="text-[#808080]">Lead Generation Specialist and Appointment Setter</p>
-                    </div>
-                    <div>
-                        <Image className="h-[250px]" height={250} src={shanto} alt="" />
-                        <h2 className="text-[#0D0D0D] 2xl:text-2xl xl:text-xl font-semibold 2xl:mt-5 xl:mt-2 mt-[6px]">Shanto Hossain</h2>
-                        <p className="text-[#808080]">SEO Specialist</p>
-                    </div>
-                    <div>
-                        <Image className="h-[250px]" height={250} src={ryan} alt="" />
-                        <h2 className="text-[#0D0D0D] 2xl:text-2xl xl:text-xl font-semibold 2xl:mt-5 xl:mt-2 mt-[6px]">Ryan Afzal</h2>
-                        <p className="text-[#171212]">CEO and Head of telemarketing service</p>
-                    </div>
-                    <div>
-                        <Image className="h-[250px]" height={250} src={ryan} alt="" />
-                        <h2 className="text-[#0D0D0D] 2xl:text-2xl xl:text-xl font-semibold 2xl:mt-5 xl:mt-2 mt-[6px]">Ryan Afzal</h2>
-                        <p className="text-[#808080]">CEO and Head of telemarketing service</p>
-                    </div>
-                </div>
-            </div>
-
-            <div className="2xl:py-24 xl:py-16 py-10 2xl:px-40 xl:px-28 px-10">
                 <div className="grid 2xl:grid-cols-5 xl:grid-cols-5 grid-cols-1">
                     <div className="2xl:col-span-2 xl:col-span-2 h-full flex flex-col justify-between">
                         <h1 className="text-[#0D0D0D] 2xl:text-left xl:text-left text-center font-semibold 2xl:mb-0 xl:mb-0 mb-6 2xl:text-5xl xl:text-4xl text-3xl">Need More <br className="2xl:block xl:block hidden" /> Help?</h1>
-                        <p className="text-[#808080] 2xl:text-xl xl:text-lg text-lg font-semibold mt-auto 2xl:block xl:block hidden">Couldn’t not find what you were looking for?<br /> write to us at <a className="text-black" href="mailTo:example@example.info">example@example.info</a>
+                        <p className="text-[#808080] 2xl:text-xl xl:text-lg text-lg font-semibold mt-auto 2xl:block xl:block hidden">Couldn’t not find what you were looking for?<br /> write to us at <a className="text-black" href="mailTo:contact@janitorialappointment.com">contact@janitorialappointment.com</a>
                         </p>
                         <p className="text-[#808080] 2xl:text-xl xl:text-lg text-lg font-semibold text-center mb-6 2xl:hidden xl:hidden block">We`re happy to answer your questions</p>
                     </div>
@@ -278,7 +257,6 @@ const page = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

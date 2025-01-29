@@ -19,6 +19,31 @@ authorName,
     return data;
 }
 
+export const metadata = {
+    title: "Janitorial Appointments & Commercial Cleaning Leads Blog",
+    description:
+        "Stay updated with the latest insights on janitorial appointments and commercial cleaning leads. Learn tips and strategies to grow your business.",
+    keywords: [
+        "janitorial appointments",
+        "commercial cleaning leads",
+        "cleaning business tips",
+        "lead generation for cleaning services",
+        "janitorial marketing strategies",
+    ],
+    openGraph: {
+        title: "Janitorial Appointments & Commercial Cleaning Leads Blog",
+        description:
+            "Explore industry news and expert tips on generating janitorial appointments and commercial cleaning leads to grow your business.",
+        url: "https://www.janitorialappointment.com/blogs",
+        type: "website",
+    },
+    twitter: {
+        card: "",
+        title: "Janitorial Appointments & Commercial Cleaning Leads Blog",
+        description:
+            "Discover expert insights on janitorial appointments and commercial cleaning leads for growing your cleaning business.",
+    },
+};
 
 
 const page = async () => {

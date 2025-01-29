@@ -106,23 +106,30 @@ const Navbar = async () => {
             {/* NavBar */}
             <div className='absolute 2xl:top-[60px] xl:top-[60px] top-0 inset-0'>
                 <div className='bg-[#FBFCFF] shadow-xl'>
-                    <div className='items-center justify-between  max-w-[1440px] mx-auto relative 2xl:h-[100px] xl:h-[100px] 2xl:flex xl:flex hidden 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11'>
+                    <div className='items-center justify-between max-w-[1440px] mx-auto relative 2xl:h-[100px] xl:h-[100px] 2xl:flex xl:flex hidden 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11'>
                         {/* Logo */}
                         <Link className='2xl:w-[140px] xl:w-[140px] w-[110px] 2xl:h-[110px] xl:h-[110px] h-[90px]' href={'/'}>
                             <div className='absolute top-0 2xl:left-11 xl:left-11 left-5'>
                                 <div className='nav-start bg-white shadow-xl'>
-                                    <Image className='2xl:w-[140px] xl:w-[140px] w-[110px] 2xl:h-[110px] xl:h-[110px] h-[90px] object-contain' width={140} height={90} src={logo} alt='janitorial-appointment-logo' />
+                                    <Image
+                                        className='object-contain h-[110px]'
+                                        width={140}
+                                        height={90}
+                                        sizes="(min-width: 1536px) 140px, (min-width: 1280px) 110px"
+                                        src={logo}
+                                        alt='janitorial-appointment-logo'
+                                    />
                                 </div>
                             </div>
                         </Link>
                         {/* Nav Items */}
-                        <div className="max-w-[556px]">
+                        <div className="">
                             <ul className="flex navItems items-center justify-between 2xl:gap-10 xl:gap-6">
                                 <NavItems Services={Services} Leads={Leads} />
                             </ul>
                         </div>
                         {/* User Items */}
-                        <div className='max-w-[350px]'><NavUser UserDetails={UserDetails} /></div>
+                        <div className=''><NavUser UserDetails={UserDetails} /></div>
                     </div>
                     {/* Nav Mobile */}
                     <div className='2xl:hidden xl:hidden h-[80px] flex items-center justify-between px-6'>
