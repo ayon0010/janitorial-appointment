@@ -13,20 +13,6 @@ export const inter = Inter({
   variable: '--font-inter'
 })
 
-export const metadata = {
-  title: "Janitorial Appointments and Commercial Cleaning Leads",
-  description:
-    "Generate high-quality janitorial appointments, commercial cleaning leads, and boost your janitorial business with effective lead generation strategies.",
-  keywords: [
-    "janitorial appointments",
-    "commercial cleaning leads",
-    "janitorial lead generation",
-  ],
-  authors: [{ name: "Al Shariar Auon" }],
-  viewport: "width=device-width, initial-scale=1.0",
-  charset: "UTF-8",
-};
-
 
 export const anton = Anton({
   subsets: ['latin'],
