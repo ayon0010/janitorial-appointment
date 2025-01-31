@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import Image from "next/image";
 import aboutImage from '@/../public/assets/Frame 1272636201.svg'
 import FaTelemarketting from "@/icons/FaTelemarketting";
@@ -5,6 +6,7 @@ import video from '@/../public/assets/Frame.png'
 import image from '@/../public/assets/699f0ea426e250f89c5625fd3790a47b_result_result.webp';
 import image2 from '@/../public/assets/Frame 1.svg';
 import FaLeads from "@/icons/FaLeads";
+
 import FaWeb from "@/icons/FaWeb";
 import FaCircleCheck from "@/icons/FaCheck";
 import SectionTitles from "@/ui/SectionTitles";
