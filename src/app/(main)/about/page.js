@@ -1,4 +1,3 @@
-export const dynamic = "force-static";
 import Image from "next/image";
 import aboutImage from '@/../public/assets/Frame 1272636201.svg'
 import FaTelemarketting from "@/icons/FaTelemarketting";
