@@ -72,11 +72,11 @@ export default function Home() {
                             />
                         </div>
                         <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pr-24">
-                            <h5 className="text-primary poppins font-medium md:text-lg text-sm">Nationwide Lead Supply</h5>
-                            <h1 className="md:text-5xl text-3xl poppins font-semibold">
+                            <h5 className="text-primary  font-medium md:text-lg text-sm">Nationwide Lead Supply</h5>
+                            <h1 className="md:text-5xl text-3xl  font-semibold">
                                 Get Quality Leads from Anywhere in the U.S.
                             </h1>
-                            <p className="poppins font-normal text-sm">
+                            <p className=" font-normal text-sm">
                                 We provide verified leads from all over the United States, helping you connect with potential clients no matter where your business operates.
                             </p>
                             <div className="space-y-1">
@@ -84,25 +84,25 @@ export default function Home() {
                                     <div>
                                         <FaCheck />
                                     </div>
-                                    <p className="md:text-lg text-sm font-medium poppins">Effortless Networking</p>
+                                    <p className="md:text-lg text-sm font-medium ">Effortless Networking</p>
                                 </div>
                                 <div className="flex items-center gap-[11px]">
                                     <div>
                                         <FaCheck />
                                     </div>
-                                    <p className="md:text-lg text-sm font-medium poppins">Seamless Outreach</p>
+                                    <p className="md:text-lg text-sm font-medium ">Seamless Outreach</p>
                                 </div>
                                 <div className="flex items-center gap-[11px]">
                                     <div>
                                         <FaCheck />
                                     </div>
-                                    <p className="md:text-lg text-sm font-medium poppins">Nationwide Lead Coverage</p>
+                                    <p className="md:text-lg text-sm font-medium ">Nationwide Lead Coverage</p>
                                 </div>
                                 <div className="flex items-center gap-[11px]">
                                     <div>
                                         <FaCheck />
                                     </div>
-                                    <p className="md:text-lg text-sm font-medium poppins">Verified and Targeted Leads</p>
+                                    <p className="md:text-lg text-sm font-medium ">Verified and Targeted Leads</p>
                                 </div>
                             </div>
                         </div>
@@ -121,27 +121,27 @@ export default function Home() {
                             />
                         </div>
                         <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pl-24">
-                            <h5 className="text-primary poppins font-medium md:text-lg text-sm">Upcoming Cleaning Project Access</h5>
-                            <h1 className="md:text-5xl text-3xl poppins font-semibold">Uncover Top <br /> Cleaning Jobs</h1>
-                            <p className="poppins font-normal text-sm">Access upcoming cleaning projects, including office and construction clean-ups, all gathered in one place.</p>
+                            <h5 className="text-primary  font-medium md:text-lg text-sm">Upcoming Cleaning Project Access</h5>
+                            <h1 className="md:text-5xl text-3xl  font-semibold">Uncover Top <br /> Cleaning Jobs</h1>
+                            <p className=" font-normal text-sm">Access upcoming cleaning projects, including office and construction clean-ups, all gathered in one place.</p>
                             <div className="space-y-1">
                                 <div className="flex items-center gap-[11px]">
                                     <div className="">
                                         <FaCheck />
                                     </div>
-                                    <p className="md:text-lg text-sm font-medium poppins">Effortless Access</p>
+                                    <p className="md:text-lg text-sm font-medium ">Effortless Access</p>
                                 </div>
                                 <div className="flex items-center gap-[11px]">
                                     <div className="">
                                         <FaCheck />
                                     </div>
-                                    <p className="md:text-lg text-sm font-medium poppins">Enhanced Planning</p>
+                                    <p className="md:text-lg text-sm font-medium ">Enhanced Planning</p>
                                 </div>
                                 <div className="flex items-center gap-[11px]">
                                     <div className="">
                                         <FaCheck />
                                     </div>
-                                    <p className="md:text-lg text-sm font-medium poppins">Expanded Opportunities</p>
+                                    <p className="md:text-lg text-sm font-medium ">Expanded Opportunities</p>
                                 </div>
                             </div>
                         </div>
@@ -160,27 +160,27 @@ export default function Home() {
                             />
                         </div>
                         <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pr-24">
-                            <h5 className="text-primary poppins font-medium md:text-lg text-sm">Local Decision Maker Discovery</h5>
-                            <h1 className="md:text-5xl text-3xl poppins font-semibold">Reach Decision Makers Instantly & Effortlessly</h1>
-                            <p className="poppins font-normal text-sm">Discover key decision makers nearby and initiate contact seamlessly</p>
+                            <h5 className="text-primary  font-medium md:text-lg text-sm">Local Decision Maker Discovery</h5>
+                            <h1 className="md:text-5xl text-3xl  font-semibold">Reach Decision Makers Instantly & Effortlessly</h1>
+                            <p className=" font-normal text-sm">Discover key decision makers nearby and initiate contact seamlessly</p>
                             <div className="space-y-1">
                                 <div className="flex items-center gap-[11px]">
                                     <div>
                                         <FaCheck />
                                     </div>
-                                    <p className="md:text-lg text-sm font-medium poppins">Effortless Networking</p>
+                                    <p className="md:text-lg text-sm font-medium ">Effortless Networking</p>
                                 </div>
                                 <div className="flex items-center gap-[11px]">
                                     <div>
                                         <FaCheck />
                                     </div>
-                                    <p className="md:text-lg text-sm font-medium poppins">Seamless Outreach</p>
+                                    <p className="md:text-lg text-sm font-medium ">Seamless Outreach</p>
                                 </div>
                                 <div className="flex items-center gap-[11px]">
                                     <div>
                                         <FaCheck />
                                     </div>
-                                    <p className="md:text-lg text-sm font-medium poppins">Enhanced Collaboration</p>
+                                    <p className="md:text-lg text-sm font-medium ">Enhanced Collaboration</p>
                                 </div>
                             </div>
                         </div>
@@ -198,11 +198,11 @@ export default function Home() {
                             />
                         </div>
                         <div className="space-y-6 md:w-1/2 w-full md:my-auto md:pl-24">
-                            <h5 className="text-primary poppins font-medium md:text-lg text-sm">Buy High-Quality Cleaning Leads</h5>
-                            <h1 className="md:text-5xl text-3xl poppins font-semibold">
+                            <h5 className="text-primary  font-medium md:text-lg text-sm">Buy High-Quality Cleaning Leads</h5>
+                            <h1 className="md:text-5xl text-3xl  font-semibold">
                                 Get Access to Exclusive Leads for Your Cleaning Business
                             </h1>
-                            <p className="poppins font-normal text-sm">
+                            <p className=" font-normal text-sm">
                                 Purchase our curated leads to connect with potential clients actively seeking cleaning services. Start growing your business with targeted, high-quality leads tailored to your needs.
                             </p>
 
@@ -211,19 +211,19 @@ export default function Home() {
                                     <div className="">
                                         <FaCheck />
                                     </div>
-                                    <p className="md:text-lg text-sm font-medium poppins">Exclusive Cleaning Leads</p>
+                                    <p className="md:text-lg text-sm font-medium ">Exclusive Cleaning Leads</p>
                                 </div>
                                 <div className="flex items-center gap-[11px]">
                                     <div className="">
                                         <FaCheck />
                                     </div>
-                                    <p className="md:text-lg text-sm font-medium poppins">Verified Client Information</p>
+                                    <p className="md:text-lg text-sm font-medium ">Verified Client Information</p>
                                 </div>
                                 <div className="flex items-center gap-[11px]">
                                     <div className="">
                                         <FaCheck />
                                     </div>
-                                    <p className="md:text-lg text-sm font-medium poppins">Boosted Business Growth</p>
+                                    <p className="md:text-lg text-sm font-medium ">Boosted Business Growth</p>
                                 </div>
                             </div>
                         </div>

@@ -1,4 +1,4 @@
-import getLeadByState from "@/lib/getLeadByState";
+import getLeads from "@/lib/getLeadById";
 import LeadsByCity from "@/ui/LeadsByCity";
 
 
@@ -7,15 +7,25 @@ function capitalizeFirstLetter(string) {
     return string?.charAt(0)?.toUpperCase() + string?.slice(1);
 }
 
+// export const revalidate = 1;
+// export async function generateStaticParams() {
+//     const x = await getLeads();
+//     return x.map((d) => {
+//         const category = d.category;
+//         const states = d.states;
+//         return {
+//             category, states
+//         }
+//     })
+// }
 
-const page = async ({ params }) => {
-    const { leads, states } = params;
+
+const States = async ({ States }) => {
+
+    const [leads, states] = States;
     const decodeState = decodeURIComponent(states);
     console.log(decodeState);
-    
-    const data = await getLeadByState(leads, states);
-    console.log(data);
-
+    const data = await getLeads(leads, states);
     return (
         <div className="2xl:pt-40 xl:pt-40 xl:pb-20 2xl:pb-20 py-24 px-6">
             <div>
@@ -36,4 +46,4 @@ const page = async ({ params }) => {
     );
 };
 
-export default page;
+export default States;

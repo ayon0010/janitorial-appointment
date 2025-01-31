@@ -23,14 +23,6 @@
   font-family: var(--font-inter) !important;
 }
 
-.nunito {
-  font-family: var(--font-nunito) !important;
-}
-
-.poppins {
-  font-family: var(--font-poppins) !important;
-}
-
 .banner {
   background: url("../../public/assets/fc8401c42aac2193aa4293ac4cb98056\ \(1\)_result_result.webp") lightgray 50% / cover no-repeat;
 }

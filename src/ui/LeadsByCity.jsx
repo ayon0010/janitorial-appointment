@@ -44,7 +44,7 @@ const LeadsByCity = ({ data, states }) => {
                     />
                     :
                     <div className='my-10'>
-                        <h2 className='text-center poppins font-semibold text-2xl'>No leads available in {states}</h2>
+                        <h2 className='text-center  font-semibold text-2xl'>No leads available in {states}</h2>
                     </div>
             }
 

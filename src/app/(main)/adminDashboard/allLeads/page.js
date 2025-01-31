@@ -180,50 +180,50 @@ const Page = () => {
                                     <>
                                         <tr key={lead?._id}>
                                             <td>
-                                                <p className='text-xs font-semibold text-black poppins text-center'>{lead?.companyName}</p>
+                                                <p className='text-xs font-semibold text-black  text-center'>{lead?.companyName}</p>
                                             </td>
                                             <td>
-                                                <p className='text-xs font-semibold text-black poppins text-center'>{lead?.businessName}</p>
+                                                <p className='text-xs font-semibold text-black  text-center'>{lead?.businessName}</p>
                                             </td>
                                             <td>
-                                                <p className='text-xs font-semibold text-black poppins text-center'>{lead?.firstName} {lead?.lastName}</p>
+                                                <p className='text-xs font-semibold text-black  text-center'>{lead?.firstName} {lead?.lastName}</p>
                                             </td>
                                             <td>
-                                                <p className='text-xs font-semibold text-black poppins text-center'>{lead?.date}</p>
+                                                <p className='text-xs font-semibold text-black  text-center'>{lead?.date}</p>
                                             </td>
                                             <td>
-                                                <p className='text-xs font-semibold text-black poppins text-center'>{lead?.time}</p>
+                                                <p className='text-xs font-semibold text-black  text-center'>{lead?.time}</p>
                                             </td>
                                             <td>
-                                                <p className='text-xs font-semibold text-black poppins text-center'>{lead?.states}</p>
+                                                <p className='text-xs font-semibold text-black  text-center'>{lead?.states}</p>
                                             </td>
                                             <td>
-                                                <p className='text-xs font-semibold text-black poppins text-center'>{lead?.city}</p>
+                                                <p className='text-xs font-semibold text-black  text-center'>{lead?.city}</p>
                                             </td>
                                             <td>
-                                                <p className='text-xs font-semibold text-black poppins text-center'>{lead?.area}</p>
+                                                <p className='text-xs font-semibold text-black  text-center'>{lead?.area}</p>
                                             </td>
                                             <td>
-                                                <p className='text-xs font-semibold text-black poppins text-center'>{formatTimestamp(lead?.uploadDate)}</p>
+                                                <p className='text-xs font-semibold text-black  text-center'>{formatTimestamp(lead?.uploadDate)}</p>
                                             </td>
                                             <td>
                                                 <audio src={lead?.audio} controls />
                                             </td>
                                             <td>
                                                 {lead?.verified ?
-                                                    <p className='text-xs font-semibold text-green-500 poppins text-center'>Verified</p>
+                                                    <p className='text-xs font-semibold text-green-500  text-center'>Verified</p>
                                                     :
-                                                    <p className='text-xs font-semibold text-red-500 poppins text-center'>Not verified</p>
+                                                    <p className='text-xs font-semibold text-red-500  text-center'>Not verified</p>
                                                 }
 
                                             </td>
                                             <td>
-                                                <p className='text-xs font-semibold text-black poppins text-center'>
+                                                <p className='text-xs font-semibold text-black  text-center'>
                                                     {lead?.additionalDetails?.slice(0, 20)}...
                                                 </p>
                                             </td>
                                             <td>
-                                                <p className='text-xs font-semibold text-black poppins text-center'>
+                                                <p className='text-xs font-semibold text-black  text-center'>
                                                     {lead?.category}
                                                 </p>
                                             </td>

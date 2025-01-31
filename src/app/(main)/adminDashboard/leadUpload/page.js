@@ -79,7 +79,7 @@ const LeadForm = () => {
             <div className='bg-[#C7F2AB] px-6 py-5 rounded-xl flex items-start gap-3 w-fit mx-auto'>
                 <div className=''>
                     <h3 className='font-bold text-xs text-center'>Upload Leads</h3>
-                    <p className='poppins text-xs mt-1 text-center'>Sell your leads faster and get profit</p>
+                    <p className=' text-xs mt-1 text-center'>Sell your leads faster and get profit</p>
                 </div>
             </div>
             <div className='2xl:px-28 xl:px-20 px-10 2xl:mt-28 xl:mt-16 mt-10'>
@@ -95,7 +95,7 @@ const LeadForm = () => {
                             <div>
                                 <div className="form-control relative">
                                     <label className="label absolute bg-white left-[2%] -top-[50%]">
-                                        <span className="label-text text-primary font-normal text-base poppins">Lead Name</span>
+                                        <span className="label-text text-primary font-normal text-base ">Lead Name</span>
                                     </label>
                                     <input
                                         type="text"
@@ -178,7 +178,7 @@ const LeadForm = () => {
                             <div className='col-start-1 row-start-3'>
                                 <div className="form-control relative">
                                     <label className="label absolute bg-white left-[2%] -top-[50%]">
-                                        <span className="label-text text-primary font-normal text-base poppins">Last Name</span>
+                                        <span className="label-text text-primary font-normal text-base ">Last Name</span>
                                     </label>
                                     <input
                                         type="text"
@@ -191,7 +191,7 @@ const LeadForm = () => {
                             <div className=''>
                                 <div className="form-control relative">
                                     <label className="label absolute bg-white left-[2%] -top-[50%]">
-                                        <span className="label-text text-primary font-normal text-base poppins">Phone Number</span>
+                                        <span className="label-text text-primary font-normal text-base ">Phone Number</span>
                                     </label>
                                     <input
                                         type="text"
@@ -224,7 +224,7 @@ const LeadForm = () => {
                             <div>
                                 <div className="form-control relative">
                                     <label className="label absolute bg-white left-[2%] -top-[50%]">
-                                        <span className="label-text text-primary font-normal text-base poppins">Scope</span>
+                                        <span className="label-text text-primary font-normal text-base ">Scope</span>
                                     </label>
                                     <input
                                         type="text"
@@ -267,7 +267,7 @@ const LeadForm = () => {
                             <div className='row-span-4'>
                                 <div className="form-control relative">
                                     <label className="label absolute bg-white left-[2%] -top-[8%]">
-                                        <span className="label-text text-primary font-normal text-base poppins">Additional Details</span>
+                                        <span className="label-text text-primary font-normal text-base ">Additional Details</span>
                                     </label>
                                     <textarea
                                         type='text'

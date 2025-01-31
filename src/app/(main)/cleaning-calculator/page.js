@@ -11,18 +11,18 @@ const page = () => {
                 <form className="w-1/2 space-y-10">
                     <div className="form-control relative">
                         <label className="label absolute bg-white left-[2%] -top-[50%]">
-                            <span className="label-text text-primary font-normal text-base poppins">Type</span>
+                            <span className="label-text text-primary font-normal text-base ">Type</span>
                         </label>
                         <select
                             className="select select-bordered rounded-[10px] bg-white border border-[#5C6272]">
-                            <option className="text-[#666968] poppins text-lg" selected defaultValue={'Pick a type'} disabled>Pick a type</option>
-                            <option className="text-[#666968] poppins text-lg" value="Full Time">Full Time</option>
-                            <option className="text-[#666968] poppins text-lg" value="Part Time">Part Time</option>
+                            <option className="text-[#666968]  text-lg" selected defaultValue={'Pick a type'} disabled>Pick a type</option>
+                            <option className="text-[#666968]  text-lg" value="Full Time">Full Time</option>
+                            <option className="text-[#666968]  text-lg" value="Part Time">Part Time</option>
                         </select>
                     </div>
                     <div className="form-control relative">
                         <label className="label absolute bg-white left-[2%] -top-[50%]">
-                            <span className="label-text text-primary font-normal text-base poppins">Pay rate</span>
+                            <span className="label-text text-primary font-normal text-base ">Pay rate</span>
                         </label>
                         <input
                             type="number"
@@ -32,15 +32,15 @@ const page = () => {
                     </div>
                     <div className="form-control relative">
                         <label className="label absolute bg-white left-[2%] -top-[50%]">
-                            <span className="label-text text-primary font-normal text-base poppins">State</span>
+                            <span className="label-text text-primary font-normal text-base ">State</span>
                         </label>
                         <select
                             className="select select-bordered rounded-[10px] bg-white border border-[#5C6272]">
-                            <option className="text-[#666968] poppins text-lg" selected defaultValue={'Select a state'} disabled>Select a sate</option>
+                            <option className="text-[#666968]  text-lg" selected defaultValue={'Select a state'} disabled>Select a sate</option>
                             {
                                 usStates.map(state => {
                                     return (
-                                        <option key={state} className="text-[#666968] poppins text-lg" value="Company Name">{state}</option>
+                                        <option key={state} className="text-[#666968]  text-lg" value="Company Name">{state}</option>
                                     )
                                 })
                             }
@@ -48,7 +48,7 @@ const page = () => {
                     </div>
                     <div className="form-control relative">
                         <label className="label absolute bg-white left-[2%] -top-[50%]">
-                            <span className="label-text text-primary font-normal text-base poppins">City</span>
+                            <span className="label-text text-primary font-normal text-base ">City</span>
                         </label>
                         <input
                             type="text"
@@ -57,7 +57,7 @@ const page = () => {
                         />
                     </div>
                     <div className="form-control relative">
-                        <button className="bg-primary text-white w-3/4 btn rounded-[16px] poppins text-lg font-semibold h-[60px]">Check Pay Rate <FaArrowRight /></button>
+                        <button className="bg-primary text-white w-3/4 btn rounded-[16px]  text-lg font-semibold h-[60px]">Check Pay Rate <FaArrowRight /></button>
                     </div>
                 </form>
                 <div className="w-1/2">

@@ -54,7 +54,7 @@ const page = async () => {
     return (
         <div className="2xl:pt-40 xl:pt-40 pt-28 pb-20 px-10">
             <h1 className="text-2xl font-bold inter">Stories, News, and Insights for Business Growth</h1>
-            <p className="poppins 2xl:text-sm xl:text-sm text-xs opacity-60 font-medium mt-3">A thoughtfully curated blog featuring stories, news, and insights to help you grow and enhance your cleaning service business.</p>
+            <p className=" 2xl:text-sm xl:text-sm text-xs opacity-60 font-medium mt-3">A thoughtfully curated blog featuring stories, news, and insights to help you grow and enhance your cleaning service business.</p>
             <div className='grid 2xl:grid-cols-4 xl:grid-cols-4 grid-cols-1 items-stretch gap-6 mt-10'>
                 {
                     blogs.map((blog, i) => {

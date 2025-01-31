@@ -33,8 +33,8 @@ const Navbar = async () => {
 
     const Leads = [
         { name: 'Exclusive Leads', href: '/search/exclusive-leads' },
-        { name: 'Opportunities', href: '/search/layups' },
-        { name: 'Lay Ups', href: '/search/opportunities' },
+        { name: 'Opportunities', href: '/search/opportunities' },
+        { name: 'Lay Ups', href: '/search/layUps' },
     ];
 
     let UserDetails = [

@@ -1,4 +1,4 @@
-import { Anton, Inter, Nunito, Poppins } from 'next/font/google'
+import { Inter, Nunito,  } from 'next/font/google'
 import '../globals.css'
 import AuthProvider from '@/Providers/AuthProvider'
 import Navbar from '@/Shared/Navbar'
@@ -13,20 +13,6 @@ export const inter = Inter({
   variable: '--font-inter'
 })
 
-
-export const anton = Anton({
-  subsets: ['latin'],
-  display: 'swap', // The subsets of the font you want to load
-  weight: '400',       // Specify the weight as a string, not as an array
-});
-
-
-export const poppins = Poppins({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '500', '600', '900'],
-  variable: '--font-poppins',
-})
 
 export const nunito = Nunito({
   subsets: ['latin'],

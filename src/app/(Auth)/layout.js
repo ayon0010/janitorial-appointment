@@ -1,4 +1,4 @@
-import { Inter, Nunito, Poppins } from 'next/font/google'
+import { Inter, Nunito,  } from 'next/font/google'
 import '../globals.css'
 import AuthProvider from '@/Providers/AuthProvider'
 
@@ -35,12 +35,6 @@ export const metadata = {
 
 
 
-export const poppins = Poppins({
-    subsets: ['latin'],
-    weight: ['400', '500', '600', '900'],
-    variable: '--font-poppins',
-})
-
 export const nunito = Nunito({
     subsets: ['latin'],
     weight: ['400', '500', '600', '900'],
@@ -52,7 +46,7 @@ export const nunito = Nunito({
 export default function RootLayout({ children }) {
     return (
         <html lang="en" >
-            <body className={`${inter.variable} ${poppins.variable} ${nunito.variable}`}>
+            <body className={``}>
                 <main className='bg-white overflow-hidden'>
                     <AuthProvider>
                         {children}

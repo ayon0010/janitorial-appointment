@@ -174,7 +174,7 @@ const Page = () => {
 
                         {/* <div className="form-control relative">
                             <label className="label absolute bg-white left-[2%] -top-[50%]">
-                                <span className="label-text text-primary font-normal text-base poppins">Company Logo</span>
+                                <span className="label-text text-primary font-normal text-base ">Company Logo</span>
                             </label>
                             <CustomFileInput
                                 label={'Select a logo to upload'}
@@ -240,7 +240,7 @@ const Page = () => {
                         {
                             serviceCityCount < 4 &&
                             <div className="flex items-center gap-5">
-                                <p className="text-primary poppins font-normal text-lg">Add more Service Cities</p>
+                                <p className="text-primary  font-normal text-lg">Add more Service Cities</p>
                                 <svg onClick={() => handleAddField('city')} className="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
                                     <path d="M21.1587 15.5743V25.8634M26.3032 20.7188H16.0141M36.5923 20.7188C36.5923 22.7456 36.1931 24.7525 35.4175 26.625C34.6419 28.4975 33.5051 30.1989 32.0719 31.6321C30.6388 33.0652 28.9374 34.2021 27.0649 34.9777C25.1924 35.7533 23.1854 36.1525 21.1587 36.1525C19.1319 36.1525 17.125 35.7533 15.2525 34.9777C13.38 34.2021 11.6786 33.0652 10.2454 31.6321C8.81227 30.1989 7.67544 28.4975 6.89982 26.625C6.12421 24.7525 5.72501 22.7456 5.72501 20.7188C5.72501 16.6256 7.35105 12.6999 10.2454 9.80557C13.1398 6.9112 17.0654 5.28516 21.1587 5.28516C25.2519 5.28516 29.1775 6.9112 32.0719 9.80557C34.9663 12.6999 36.5923 16.6256 36.5923 20.7188Z" stroke="#878787" strokeWidth="2.57228" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
@@ -333,7 +333,7 @@ const Page = () => {
                         {
                             socialCount < 4 &&
                             <div className="flex items-center gap-5">
-                                <p className="text-primary poppins font-normal text-lg">Add more Social Media</p>
+                                <p className="text-primary  font-normal text-lg">Add more Social Media</p>
                                 <svg onClick={() => handleAddField('social')} className="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
                                     <path d="M21.1587 15.5743V25.8634M26.3032 20.7188H16.0141M36.5923 20.7188C36.5923 22.7456 36.1931 24.7525 35.4175 26.625C34.6419 28.4975 33.5051 30.1989 32.0719 31.6321C30.6388 33.0652 28.9374 34.2021 27.0649 34.9777C25.1924 35.7533 23.1854 36.1525 21.1587 36.1525C19.1319 36.1525 17.125 35.7533 15.2525 34.9777C13.38 34.2021 11.6786 33.0652 10.2454 31.6321C8.81227 30.1989 7.67544 28.4975 6.89982 26.625C6.12421 24.7525 5.72501 22.7456 5.72501 20.7188C5.72501 16.6256 7.35105 12.6999 10.2454 9.80557C13.1398 6.9112 17.0654 5.28516 21.1587 5.28516C25.2519 5.28516 29.1775 6.9112 32.0719 9.80557C34.9663 12.6999 36.5923 16.6256 36.5923 20.7188Z" stroke="#878787" strokeWidth="2.57228" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
@@ -343,7 +343,7 @@ const Page = () => {
 
                         <div className="form-control relative">
                             <label className="label absolute bg-white left-[2%] -top-[8%]">
-                                <span className="label-text text-primary font-normal text-base poppins">Company Details</span>
+                                <span className="label-text text-primary font-normal text-base ">Company Details</span>
                             </label>
                             <textarea
                                 placeholder="companyDetails"

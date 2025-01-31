@@ -57,72 +57,72 @@ const page = async ({ params }) => {
 
     return (
         <div className="2xl:px-40 xl:px-28 2xl:pt-52 xl:pt-40 py-28 px-6 space-y-2">
-            <h3 className="text-2xl font-semibold poppins">Uploader: {companyName}</h3>
-            <h4 className="text-xl font-semibold poppins">
+            <h3 className="text-2xl font-semibold ">Uploader: {companyName}</h3>
+            <h4 className="text-xl font-semibold ">
                 <span>Business Name</span>: {businessName}
             </h4>
-            <p className="text-base font-semibold poppins text-black">
-                Appointment On: <span className="text-gray-500 text-sm poppins">{formatDate(date)} at {time}</span>
+            <p className="text-base font-semibold  text-black">
+                Appointment On: <span className="text-gray-500 text-sm ">{formatDate(date)} at {time}</span>
             </p>
-            <p className="text-base font-semibold poppins text-black">
-                Address: <span className="text-gray-500 text-sm poppins">{location}</span>
+            <p className="text-base font-semibold  text-black">
+                Address: <span className="text-gray-500 text-sm ">{location}</span>
             </p>
-            <h4 className="text-xl font-semibold poppins">
+            <h4 className="text-xl font-semibold ">
                 <span>Decision Maker:</span> {firstName} {lastName}
             </h4>
-            <p className="text-base font-semibold poppins text-black">
+            <p className="text-base font-semibold  text-black">
                 Current Cleaning Status (Inhouse/Outsourced):{' '}
-                <span className="text-gray-500 text-sm poppins">{cleaning}</span>
+                <span className="text-gray-500 text-sm ">{cleaning}</span>
             </p>
-            <p className="text-base font-semibold poppins text-black">
-                Cleaning Frequency: <span className="text-gray-500 text-sm poppins">{frequency}</span>
+            <p className="text-base font-semibold  text-black">
+                Cleaning Frequency: <span className="text-gray-500 text-sm ">{frequency}</span>
             </p>
-            <p className="text-base font-semibold poppins text-black">
-                Size of the facility: <span className="text-gray-500 text-sm poppins">{area} unit</span>
+            <p className="text-base font-semibold  text-black">
+                Size of the facility: <span className="text-gray-500 text-sm ">{area} unit</span>
             </p>
-            <p className="text-base font-semibold poppins text-black">
-                Common area: <span className="text-gray-500 text-sm poppins">{scope}</span>
+            <p className="text-base font-semibold  text-black">
+                Common area: <span className="text-gray-500 text-sm ">{scope}</span>
             </p>
-            <p className="text-base font-semibold poppins text-black">
-                Opportunity Type: <span className="text-gray-500 text-sm poppins">{opportunityType}</span>
+            <p className="text-base font-semibold  text-black">
+                Opportunity Type: <span className="text-gray-500 text-sm ">{opportunityType}</span>
             </p>
 
             {/* New Fields */}
-            <p className="text-base font-semibold poppins text-black">
-                Additional Details: <span className="text-gray-500 text-sm poppins">{additionalDetails}</span>
+            <p className="text-base font-semibold  text-black">
+                Additional Details: <span className="text-gray-500 text-sm ">{additionalDetails}</span>
             </p>
-            <p className="text-base font-semibold poppins text-black">
-                Lead Name: <span className="text-gray-500 text-sm poppins">{leadName}</span>
+            <p className="text-base font-semibold  text-black">
+                Lead Name: <span className="text-gray-500 text-sm ">{leadName}</span>
             </p>
-            <p className="text-base font-semibold poppins text-black">
-                Meeting Time: <span className="text-gray-500 text-sm poppins">{time}</span>
+            <p className="text-base font-semibold  text-black">
+                Meeting Time: <span className="text-gray-500 text-sm ">{time}</span>
             </p>
-            <p className="text-base font-semibold poppins text-black">
-                State: <span className="text-gray-500 text-sm poppins">{states}</span>
+            <p className="text-base font-semibold  text-black">
+                State: <span className="text-gray-500 text-sm ">{states}</span>
             </p>
-            <p className="text-base font-semibold poppins text-black">
-                City: <span className="text-gray-500 text-sm poppins">{city}</span>
+            <p className="text-base font-semibold  text-black">
+                City: <span className="text-gray-500 text-sm ">{city}</span>
             </p>
-            <p className="text-base font-semibold poppins text-black">
-                Facility Type: <span className="text-gray-500 text-sm poppins">{type}</span>
+            <p className="text-base font-semibold  text-black">
+                Facility Type: <span className="text-gray-500 text-sm ">{type}</span>
             </p>
-            <p className="text-base font-semibold poppins text-black">
-                Verified: <span className="text-gray-500 text-sm poppins">{verified ? 'Yes' : 'No'}</span>
+            <p className="text-base font-semibold  text-black">
+                Verified: <span className="text-gray-500 text-sm ">{verified ? 'Yes' : 'No'}</span>
             </p>
-            <p className="text-base font-semibold poppins text-black">
-                Sold: <span className="text-gray-500 text-sm poppins">{sold ? 'Yes' : 'No'}</span>
+            <p className="text-base font-semibold  text-black">
+                Sold: <span className="text-gray-500 text-sm ">{sold ? 'Yes' : 'No'}</span>
             </p>
-            <p className="text-base font-semibold poppins text-black">
-                Prize: <span className="text-gray-500 text-sm poppins">${prize}</span>
+            <p className="text-base font-semibold  text-black">
+                Prize: <span className="text-gray-500 text-sm ">${prize}</span>
             </p>
-            <p className="text-base font-semibold poppins text-black">
-                Upload Date: <span className="text-gray-500 text-sm poppins">{formatTimestamp(uploadDate)}</span>
+            <p className="text-base font-semibold  text-black">
+                Upload Date: <span className="text-gray-500 text-sm ">{formatTimestamp(uploadDate)}</span>
             </p>
 
             {/* Audio Section */}
             {audio && (
                 <div className="audio-section flex items-center gap-2">
-                    <h4 className="text-xl font-semibold poppins">Audio Message:</h4>
+                    <h4 className="text-xl font-semibold ">Audio Message:</h4>
                     <audio controls className="w-full">
                         <source src={audio} type="audio/mpeg" />
                         Your browser does not support the audio element.

@@ -103,7 +103,7 @@ export default function PaymentForm({ dpmCheckerLink, product_Id, closeModal }) 
         <>
             <form id="payment-form" onSubmit={handleSubmit}>
                 <p className="my-2 text-[8px] text-gray-400">
-                    You are going to receive your invoice <span className="poppins font-semibold">{user?.email}</span>
+                    You are going to receive your invoice <span className=" font-semibold">{user?.email}</span>
                 </p>
                 <PaymentElement id="payment-element" options={paymentElementOptions} />
                 <button className="rounded-lg btn bg-primary text-white my-3" disabled={isLoading || !stripe || !elements} id="submit">
@@ -115,7 +115,7 @@ export default function PaymentForm({ dpmCheckerLink, product_Id, closeModal }) 
                 {message && <div id="payment-message" className={`${message === 'Your payment has been processed successfully.' ? 'text-green-600' : 'text-red-500'}`}>{message}</div>}
             </form>
             <div id="dpm-annotation">
-                <p className="w-fit ml-auto mt-2 flex items-center gap-2 poppins font-semibold text-gray-500">
+                <p className="w-fit ml-auto mt-2 flex items-center gap-2  font-semibold text-gray-500">
                     <span>Powered By</span> <FaStripe size={'2rem'} />
                 </p>
             </div>

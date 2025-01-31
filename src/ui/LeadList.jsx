@@ -37,9 +37,9 @@ const LeadList = ({ leadList }) => {
                         {
                             leadList.map((lead, index) => (
                                 <tr key={index}>
-                                    <td className="text-center poppins text-base">{lead.listName}</td>
-                                    <td className="text-center poppins text-base">{lead.state}</td>
-                                    <td className="text-center poppins text-base">{lead.emailTemplate}</td>
+                                    <td className="text-center  text-base">{lead.listName}</td>
+                                    <td className="text-center  text-base">{lead.state}</td>
+                                    <td className="text-center  text-base">{lead.emailTemplate}</td>
                                     <td>
                                         <button onClick={() => handleDelete(lead._id)} className="btn btn-outline text-primary text-lg rounded-lg hover:bg-primary hover:text-white">Delete</button>
                                         <button className="btn btn-outline text-red-500 text-lg rounded-lg ml-5 hover:text-white hover:bg-red-500">Edit</button>

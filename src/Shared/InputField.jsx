@@ -6,7 +6,7 @@ const InputField = ({ label, type, placeholder, register, name, errors, disabled
             <div>
                 <div className="form-control relative">
                     <label className="label absolute bg-white left-[2%] -top-[50%]">
-                        <span className="label-text text-primary font-normal text-base poppins">{label}</span>
+                        <span className="label-text text-primary font-normal text-base ">{label}</span>
                     </label>
                     <input
                         type={type}

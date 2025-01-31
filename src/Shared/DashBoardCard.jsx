@@ -8,7 +8,7 @@ const DashboardCard = ({ Icon, title, description, iconMargin, size, href }) => 
             </div>
             <div>
                 <h3 className='font-bold text-xs'>{title}</h3>
-                <p className='poppins text-xs'>{description}</p>
+                <p className=' text-xs'>{description}</p>
             </div>
         </Link>
     </div>

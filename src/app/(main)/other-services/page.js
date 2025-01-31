@@ -30,8 +30,8 @@ const page = () => {
                         <div className='flex items-center gap-[10px] rounded-[8.168px] bg-green-100 px-4 py-[10px]'>
                             <FaFrontWeb />
                             <div>
-                                <h1 className='text-[#000] poppins 2xl:text-sm xl:text-sm text-[10px] font-semibold'>Front-End Developer</h1>
-                                <p className='text-[#474747] 2xl:text-[10px] xl:text-[10px] text-[7px] font-medium poppins'>Crafting Interactive Interfaces</p>
+                                <h1 className='text-[#000]  2xl:text-sm xl:text-sm text-[10px] font-semibold'>Front-End Developer</h1>
+                                <p className='text-[#474747] 2xl:text-[10px] xl:text-[10px] text-[7px] font-medium '>Crafting Interactive Interfaces</p>
                             </div>
                         </div>
                         <div className='flex items-center gap-[10px] rounded-[8.168px] bg-green-100 px-4 py-[10px]'>
@@ -60,8 +60,8 @@ const page = () => {
                                 </defs>
                             </svg>
                             <div>
-                                <h1 className='text-[#000] poppins 2xl:text-sm xl:text-sm text-[10px] font-semibold'>Tele Marketing</h1>
-                                <p className='text-[#474747] 2xl:text-[10px] xl:text-[10px] text-[7px] font-medium poppins'>Generate leads for Business Growth</p>
+                                <h1 className='text-[#000]  2xl:text-sm xl:text-sm text-[10px] font-semibold'>Tele Marketing</h1>
+                                <p className='text-[#474747] 2xl:text-[10px] xl:text-[10px] text-[7px] font-medium '>Generate leads for Business Growth</p>
                             </div>
                         </div>
                         <div className='flex items-center gap-[10px] rounded-[8.168px] bg-green-100 px-4 py-[10px]'>
@@ -86,8 +86,8 @@ const page = () => {
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M22.4521 12.5095C22.4521 11.9241 22.5391 11.4336 22.7131 11.0302C22.8442 10.7367 23.0263 10.4688 23.2511 10.2391C23.4639 10.0182 23.7196 9.84318 24.0026 9.72487C24.3964 9.56301 24.8189 9.48229 25.2446 9.48755C26.0911 9.48755 26.7714 9.75652 27.2856 10.2786C27.7919 10.8087 28.053 11.5444 28.053 12.4858C28.053 13.4114 27.7999 14.1471 27.2936 14.6692C27.0287 14.9358 26.711 15.1439 26.3608 15.2801C26.0106 15.4164 25.6358 15.4778 25.2605 15.4603C24.8827 15.4785 24.5052 15.4176 24.1524 15.2813C23.7995 15.1451 23.479 14.9366 23.2115 14.6692C22.9486 14.3772 22.7461 14.036 22.6157 13.6653C22.4854 13.2947 22.4297 12.9018 22.4521 12.5095ZM23.6545 12.47C23.6545 13.1266 23.8048 13.617 24.1055 13.9572C24.2476 14.1209 24.4241 14.2511 24.6224 14.3387C24.8207 14.4262 25.0359 14.4688 25.2525 14.4635C25.4693 14.4694 25.6847 14.427 25.883 14.3394C26.0814 14.2519 26.2579 14.1213 26.3996 13.9572C26.7002 13.625 26.8426 13.1266 26.8426 12.4541C26.8426 11.7975 26.7002 11.2991 26.4075 10.9748C26.2623 10.8144 26.0835 10.688 25.8839 10.6046C25.6843 10.5212 25.4687 10.4828 25.2525 10.4922C24.7779 10.4922 24.3823 10.6505 24.0975 10.9827C23.7969 11.315 23.6545 11.8054 23.6545 12.47Z" fill="#424143" />
                             </svg>
                             <div>
-                                <h1 className='text-[#000] poppins 2xl:text-sm xl:text-sm text-[10px] font-semibold'>SEO Expert</h1>
-                                <p className='text-[#474747] 2xl:text-[10px] xl:text-[10px] text-[7px] font-medium poppins'>Boosting Your Online Visibility</p>
+                                <h1 className='text-[#000]  2xl:text-sm xl:text-sm text-[10px] font-semibold'>SEO Expert</h1>
+                                <p className='text-[#474747] 2xl:text-[10px] xl:text-[10px] text-[7px] font-medium '>Boosting Your Online Visibility</p>
                             </div>
                         </div>
                         <div className='flex items-center gap-[10px] rounded-[8.168px] bg-green-100 px-4 py-[10px]'>
@@ -129,8 +129,8 @@ const page = () => {
                                 </defs>
                             </svg>
                             <div>
-                                <h1 className='text-[#000] poppins 2xl:text-sm xl:text-sm text-[10px] font-semibold'>UI/UX Designer</h1>
-                                <p className='text-[#474747] 2xl:text-[10px] xl:text-[10px] text-[7px] font-medium poppins'>Designing Engaging Experiences</p>
+                                <h1 className='text-[#000]  2xl:text-sm xl:text-sm text-[10px] font-semibold'>UI/UX Designer</h1>
+                                <p className='text-[#474747] 2xl:text-[10px] xl:text-[10px] text-[7px] font-medium '>Designing Engaging Experiences</p>
                             </div>
                         </div>
                         <div className='flex items-center gap-[10px] rounded-[8.168px] bg-green-100 px-4 py-[10px]'>
@@ -155,8 +155,8 @@ const page = () => {
                                 </defs>
                             </svg>
                             <div>
-                                <h1 className='text-[#000] poppins 2xl:text-sm xl:text-sm text-[10px] font-semibold'>Back-End Developer</h1>
-                                <p className='text-[#474747] 2xl:text-[10px] xl:text-[10px] text-[7px] font-medium poppins'>Building Powerful & Light Backends</p>
+                                <h1 className='text-[#000]  2xl:text-sm xl:text-sm text-[10px] font-semibold'>Back-End Developer</h1>
+                                <p className='text-[#474747] 2xl:text-[10px] xl:text-[10px] text-[7px] font-medium '>Building Powerful & Light Backends</p>
                             </div>
                         </div>
                     </div>
@@ -166,10 +166,10 @@ const page = () => {
                                 <Image className='h-[174px] rounded-[10px]' src={figmaImage} alt='' />
                             </figure>
                             <div className="card-body">
-                                <h2 className="card-title poppins text-primary text-xl font-semibold">UI/UX Design</h2>
-                                <p className='text-xs poppins text-[#000] opacity-50'>Designs intuitive and visually appealing interfaces that enhance user experience</p>
+                                <h2 className="card-title  text-primary text-xl font-semibold">UI/UX Design</h2>
+                                <p className='text-xs  text-[#000] opacity-50'>Designs intuitive and visually appealing interfaces that enhance user experience</p>
                                 <div className="card-actions justify-start mt-3">
-                                    <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold poppins rounded-lg">Contact Us Now</button>
+                                    <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
                                 </div>
                             </div>
                         </div>
@@ -178,10 +178,10 @@ const page = () => {
                                 <Image className='h-[174px] rounded-[10px]' src={webImage} alt='' />
                             </figure>
                             <div className="card-body">
-                                <h2 className="card-title poppins text-primary text-xl font-semibold">Front-End Develop</h2>
-                                <p className='text-xs poppins text-[#000] opacity-50'>Transforms design into responsive, interactive web pages with clean code</p>
+                                <h2 className="card-title  text-primary text-xl font-semibold">Front-End Develop</h2>
+                                <p className='text-xs  text-[#000] opacity-50'>Transforms design into responsive, interactive web pages with clean code</p>
                                 <div className="card-actions justify-start mt-3">
-                                    <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold poppins rounded-lg">Contact Us Now</button>
+                                    <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
                                 </div>
                             </div>
                         </div>
@@ -190,10 +190,10 @@ const page = () => {
                                 <Image src={backEnd} className='h-[174px] rounded-[10px]' alt='' />
                             </figure>
                             <div className="card-body">
-                                <h2 className="card-title poppins text-primary text-xl font-semibold">Back-End Develop</h2>
-                                <p className='text-xs poppins text-[#000] opacity-50'>Powering Your Applications with Robust Backend Solutions</p>
+                                <h2 className="card-title  text-primary text-xl font-semibold">Back-End Develop</h2>
+                                <p className='text-xs  text-[#000] opacity-50'>Powering Your Applications with Robust Backend Solutions</p>
                                 <div className="card-actions justify-start mt-3">
-                                    <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold poppins rounded-lg">Contact Us Now</button>
+                                    <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
                                 </div>
                             </div>
                         </div>
@@ -202,10 +202,10 @@ const page = () => {
                                 <Image src={seo} className='h-[174px] rounded-[10px]' alt='' />
                             </figure>
                             <div className="card-body">
-                                <h2 className="card-title poppins text-primary text-xl font-semibold">Search Engine Optimization (SEO)</h2>
-                                <p className='text-xs poppins text-[#000] opacity-50'>Optimizes websites and content to improve rankings and drive organic traffic</p>
+                                <h2 className="card-title  text-primary text-xl font-semibold">Search Engine Optimization (SEO)</h2>
+                                <p className='text-xs  text-[#000] opacity-50'>Optimizes websites and content to improve rankings and drive organic traffic</p>
                                 <div className="card-actions justify-start mt-3">
-                                    <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold poppins rounded-lg">Contact Us Now</button>
+                                    <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
                                 </div>
                             </div>
                         </div>
@@ -214,10 +214,10 @@ const page = () => {
                                 <Image className='h-[174px] rounded-[10px]' src={telemarketing} alt='' />
                             </figure>
                             <div className="card-body">
-                                <h2 className="card-title poppins text-primary text-xl font-semibold">Tele Marketing</h2>
-                                <p className='text-xs poppins text-[#000] opacity-50'>Identifies and connects with potential customers to drive business growth and conversions</p>
+                                <h2 className="card-title  text-primary text-xl font-semibold">Tele Marketing</h2>
+                                <p className='text-xs  text-[#000] opacity-50'>Identifies and connects with potential customers to drive business growth and conversions</p>
                                 <div className="card-actions justify-start mt-3">
-                                    <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold poppins rounded-lg">Contact Us Now</button>
+                                    <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
                                 </div>
                             </div>
                         </div>
@@ -228,14 +228,14 @@ const page = () => {
                         <Image className='max-h-[750px] w-full object-contain' src={people} alt='' />
                     </div>
                     <div>
-                        <h3 className='text-primary font-bold poppins 2xl:text-[20px] xl:text-lg'>A BIT</h3>
+                        <h3 className='text-primary font-bold  2xl:text-[20px] xl:text-lg'>A BIT</h3>
                         <h1 className='2xl:text-6xl xl:text-5xl text-[#000] mt-[10px]'>About Us</h1>
                         <div className='mt-10'>
-                            <p className='text-[#000] poppins font-normal 2xl:text-lg xl:text-base'>We provide a wide range of IT solutions designed to help businesses thrive. From UI/UX design for web and mobile apps to front-end and back-end development, we ensure your digital products are both visually stunning and functionally robust.</p>
+                            <p className='text-[#000]  font-normal 2xl:text-lg xl:text-base'>We provide a wide range of IT solutions designed to help businesses thrive. From UI/UX design for web and mobile apps to front-end and back-end development, we ensure your digital products are both visually stunning and functionally robust.</p>
 
-                            <p className='text-[#000] poppins font-normal 2xl:text-lg xl:text-base my-4'>In addition to our IT services, we offer telemarketing solutions to generate high-quality leads and drive sales through targeted cold calling. Our SEO services boost your online presence, helping you reach a wider audience.</p>
+                            <p className='text-[#000]  font-normal 2xl:text-lg xl:text-base my-4'>In addition to our IT services, we offer telemarketing solutions to generate high-quality leads and drive sales through targeted cold calling. Our SEO services boost your online presence, helping you reach a wider audience.</p>
 
-                            <p className='text-[#000] poppins font-normal 2xl:text-lg xl:text-base'>
+                            <p className='text-[#000]  font-normal 2xl:text-lg xl:text-base'>
                                 We pride ourselves on delivering customized solutions that align with your unique business needs. With a focus on innovation, quality, and customer satisfaction, we’re here to help you succeed in today’s competitive digital landscape.
                             </p>
                         </div>
@@ -249,8 +249,8 @@ const page = () => {
                                         <path d="M25.4721 36.5861C25.1755 36.5861 24.8845 36.7068 24.6747 36.9166C24.4649 37.1264 24.3442 37.4174 24.3442 37.714C24.3442 38.0106 24.4649 38.3016 24.6747 38.5114C24.8845 38.7212 25.1755 38.8419 25.4721 38.8419C25.7688 38.8419 26.0598 38.7212 26.2695 38.5114C26.4793 38.3016 26.6 38.0106 26.6 37.714C26.6 37.4174 26.4793 37.1264 26.2695 36.9166C26.0598 36.7068 25.7688 36.5861 25.4721 36.5861Z" fill="#246532" />
                                     </svg>
                                     <div>
-                                        <h3 className='text-primary poppins font-bold inter text-2xl'>5 year+</h3>
-                                        <p className='text-lg text-[#000] poppins'>Experience</p>
+                                        <h3 className='text-primary  font-bold inter text-2xl'>5 year+</h3>
+                                        <p className='text-lg text-[#000] '>Experience</p>
                                     </div>
                                 </div>
                                 <div className='flex items-start gap-[17px]'>
@@ -265,8 +265,8 @@ const page = () => {
                                         <path d="M39.346 18.8491H19.5639C18.9414 18.8491 18.436 19.354 18.436 19.9769C18.436 20.5999 18.9414 21.1048 19.5639 21.1048H39.346C39.9689 21.1048 40.4738 20.5999 40.4738 19.9769C40.4738 19.354 39.9689 18.8491 39.346 18.8491Z" fill="#246532" />
                                     </svg>
                                     <div>
-                                        <h3 className='text-primary poppins font-bold inter text-2xl'>700+</h3>
-                                        <p className='text-lg text-[#000] poppins'>Projects</p>
+                                        <h3 className='text-primary  font-bold inter text-2xl'>700+</h3>
+                                        <p className='text-lg text-[#000] '>Projects</p>
                                     </div>
                                 </div>
                             </div>
@@ -277,8 +277,8 @@ const page = () => {
                                     <path d="M46.1922 50.9274C45.4384 49.4187 44.3343 48.0783 42.9992 47.0512C42.5055 46.6712 41.7974 46.7636 41.4176 47.2574C41.0377 47.7512 41.1301 48.4593 41.6238 48.8392C42.6901 49.6595 43.5719 50.7302 44.174 51.9355C44.453 52.4937 45.1308 52.7184 45.6871 52.4405C46.2443 52.1621 46.4704 51.4847 46.1922 50.9274Z" fill="#246532" />
                                 </svg>
                                 <div>
-                                    <h3 className='text-primary poppins font-bold inter text-2xl'>700+</h3>
-                                    <p className='text-lg text-[#000] poppins'>Projects</p>
+                                    <h3 className='text-primary  font-bold inter text-2xl'>700+</h3>
+                                    <p className='text-lg text-[#000] '>Projects</p>
                                 </div>
                             </div>
                         </div>
@@ -336,7 +336,7 @@ const page = () => {
                     </div>
                 </div>
                 <div className=''>
-                    <h3 className='text-primary text-center font-bold poppins 2xl:text-[20px] xl:text-lg uppercase'>Case studies</h3>
+                    <h3 className='text-primary text-center font-bold  2xl:text-[20px] xl:text-lg uppercase'>Case studies</h3>
                     <SectionTitles heading={'Our Case Studies'} />
                     <div className="2xl:mt-12 xl:mt-10">
                         <div className='grid grid-cols-2 items-center 2xl:gap-14 xl:gap-10'>
@@ -351,8 +351,8 @@ const page = () => {
 
                             <div className=''>
                                 <h1 className={` count`}>01</h1>
-                                <h3 className='poppins 2xl:text-3xl xl:text-2xl font-medium'>Forest website design</h3>
-                                <p className='text-[#000] poppins text-base my-7'>
+                                <h3 className=' 2xl:text-3xl xl:text-2xl font-medium'>Forest website design</h3>
+                                <p className='text-[#000]  text-base my-7'>
                                     I&apos;m a top online marketer and branding expert. I started my career by launching the popular fitness brand Muscle Prodigy. In just a few short years, I built the brand to millions of social media followers and website visitors. I also created award-winning online products with millions of dollars in online sales. you want.
                                 </p>
                                 <button className='text-green-400 px-10 text-lg font-medium rounded-lg btn btn-outline hover:bg-green-400 hover:text-white hover:border-none'>
@@ -363,8 +363,8 @@ const page = () => {
                         <div className='grid grid-cols-2 items-center 2xl:gap-14 xl:gap-10 2xl:my-20 xl:my-14'>
                             <div className=''>
                                 <h1 className={` count`}>02</h1>
-                                <h3 className='poppins 2xl:text-3xl xl:text-2xl font-medium'>Forest website design</h3>
-                                <p className='text-[#000] poppins text-base my-7'>
+                                <h3 className=' 2xl:text-3xl xl:text-2xl font-medium'>Forest website design</h3>
+                                <p className='text-[#000]  text-base my-7'>
                                     I&apos;m a top online marketer and branding expert. I started my career by launching the popular fitness brand Muscle Prodigy. In just a few short years, I built the brand to millions of social media followers and website visitors. I also created award-winning online products with millions of dollars in online sales. you want.
                                 </p>
                                 <button className='text-green-400 px-10 text-lg font-medium rounded-lg btn btn-outline hover:bg-green-400 hover:text-white hover:border-none'>
@@ -392,8 +392,8 @@ const page = () => {
                             />
                             <div className=''>
                                 <h1 className={` count`}>03</h1>
-                                <h3 className='poppins 2xl:text-3xl xl:text-2xl font-medium'>Forest website design</h3>
-                                <p className='text-[#000] poppins text-base my-7'>
+                                <h3 className=' 2xl:text-3xl xl:text-2xl font-medium'>Forest website design</h3>
+                                <p className='text-[#000]  text-base my-7'>
                                     I&apos;m a top online marketer and branding expert. I started my career by launching the popular fitness brand Muscle Prodigy. In just a few short years, I built the brand to millions of social media followers and website visitors. I also created award-winning online products with millions of dollars in online sales. you want.
                                 </p>
                                 <button className='text-green-400 px-10 text-lg font-medium rounded-lg btn btn-outline hover:bg-green-400 hover:text-white hover:border-none'>
@@ -409,7 +409,7 @@ const page = () => {
                     </div>
                 </div>
                 <div className="2xl:py-40 xl:py-28">
-                    <h3 className='text-primary font-bold poppins 2xl:text-[20px] xl:text-lg uppercase text-center'>Portfolio</h3>
+                    <h3 className='text-primary font-bold  2xl:text-[20px] xl:text-lg uppercase text-center'>Portfolio</h3>
                     <SectionTitles heading={'People Lie Work Don’t'} />
                     <div className='grid grid-cols-2 gap-11 2xl:mt-20 xl:mt-16'>
                         <Image src={desing1} alt='' className='rounded-2xl' />

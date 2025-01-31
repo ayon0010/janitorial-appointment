@@ -14,7 +14,7 @@ const Profiled = () => {
             <Image src={woman} alt='avatar' className='absolute bottom-0 2xl:left-52 xl:left-[134px] left-7' />
             <div className='absolute top-1/2 xl:right-28 2xl:right-64 right-8 transform -translate-y-1/2 2xl:w-fit xl:w-fit w-1/4'>
                 <h3 className='2xl:text-4xl xl:text-4xl font-bold text-2xl 2xl:text-left xl:text-left text-center'>{name}</h3>
-                <p className='text-base font-normal poppins text-center'>Welcome to your dashboard.</p>
+                <p className='text-base font-normal  text-center'>Welcome to your dashboard.</p>
             </div>
         </div>
     );

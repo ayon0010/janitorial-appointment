@@ -23,7 +23,7 @@ const Offers = () => {
                         />
                     </figure>
                     <div className="card-body mt-6">
-                        <h2 className="card-title w-fit mx-auto text-center 2xl:text-3xl xl:text-2xl  text-black font-bold poppins opacity-90">Optimized Sales Conversions</h2>
+                        <h2 className="card-title w-fit mx-auto text-center 2xl:text-3xl xl:text-2xl  text-black font-bold  opacity-90">Optimized Sales Conversions</h2>
                         <p className='text-center inter text-black 2xl:text-sm xl:text-xs opacity-90 px-4'>Achieve sales conversion rates of 20% to 30%, customized based on your service needs and target areas, maximizing revenue opportunities.</p>
                     </div>
                 </div>
@@ -40,7 +40,7 @@ const Offers = () => {
                         />
                     </figure>
                     <div className="card-body mt-6">
-                        <h2 className="card-title w-fit mx-auto text-center 2xl:text-3xl xl:text-2xl  text-black font-bold poppins opacity-90">Verified, High-Quality Commercial Leads</h2>
+                        <h2 className="card-title w-fit mx-auto text-center 2xl:text-3xl xl:text-2xl  text-black font-bold  opacity-90">Verified, High-Quality Commercial Leads</h2>
                         <p className='text-center inter text-black 2xl:text-sm xl:text-xs opacity-90 px-4'>Our thorough 3-step verification process ensures reliable, premium-quality leads tailored to your specifications across the U.S. and Canada.</p>
                     </div>
                 </div>
@@ -56,7 +56,7 @@ const Offers = () => {
                         />
                     </figure>
                     <div className="card-body mt-6">
-                        <h2 className="card-title w-fit mx-auto text-center 2xl:text-3xl xl:text-2xl  text-black font-bold poppins opacity-90">Exclusive Appointment Setting for Janitorial Services</h2>
+                        <h2 className="card-title w-fit mx-auto text-center 2xl:text-3xl xl:text-2xl  text-black font-bold  opacity-90">Exclusive Appointment Setting for Janitorial Services</h2>
                         <p className='text-center inter text-black 2xl:text-sm xl:text-xs opacity-90 px-4'>We specialize in securing appointments for cleaning services, connecting you directly with key contacts through targeted telemarketing and social outreach.</p>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ const Offers = () => {
                         />
                     </figure>
                     <div className="card-body mt-6">
-                        <h2 className="card-title w-fit mx-auto text-center 2xl:text-3xl xl:text-2xl text-black font-bold poppins opacity-90">
+                        <h2 className="card-title w-fit mx-auto text-center 2xl:text-3xl xl:text-2xl text-black font-bold  opacity-90">
                             Expert Telemarketing for Janitorial Services
                         </h2>
                         <p className="text-center inter text-black 2xl:text-sm xl:text-xs opacity-90 px-4">
@@ -94,7 +94,7 @@ const Offers = () => {
                         />
                     </figure>
                     <div className="card-body mt-6">
-                        <h2 className="card-title w-fit mx-auto text-center 2xl:text-3xl xl:text-2xl text-black font-bold poppins opacity-90">
+                        <h2 className="card-title w-fit mx-auto text-center 2xl:text-3xl xl:text-2xl text-black font-bold  opacity-90">
                             Professional Web Solutions and Support Services
                         </h2>
                         <p className="text-center inter text-black 2xl:text-sm xl:text-xs opacity-90 px-4">
@@ -114,7 +114,7 @@ const Offers = () => {
                         />
                     </figure>
                     <div className="card-body mt-10">
-                        <h2 className="card-title w-fit mx-auto text-center 2xl:text-3xl xl:text-2xl text-black font-bold poppins opacity-90">
+                        <h2 className="card-title w-fit mx-auto text-center 2xl:text-3xl xl:text-2xl text-black font-bold  opacity-90">
                             Expert SEO and Digital Marketing Services
                         </h2>
                         <p className="text-center inter text-black 2xl:text-sm xl:text-xs opacity-90 px-4">

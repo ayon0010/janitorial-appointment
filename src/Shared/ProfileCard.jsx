@@ -35,7 +35,7 @@ const ProfileCard = ({ sellerDashboard, userDashboard, adminDashboard }) => {
                         <div className='bg-[#C7F2AB] px-6 py-5 rounded-xl flex items-start gap-3'>
                             <div>
                                 <h3 className='font-bold text-xs'>Premium Membership</h3>
-                                <p className='poppins text-xs mt-1'>Upgrade for more features</p>
+                                <p className=' text-xs mt-1'>Upgrade for more features</p>
                             </div>
                         </div>
                     }
@@ -44,7 +44,7 @@ const ProfileCard = ({ sellerDashboard, userDashboard, adminDashboard }) => {
                         <div className='bg-[#C7F2AB] px-6 py-5 rounded-xl flex items-start gap-3'>
                             <div>
                                 <h3 className='font-bold text-xs'>Seller Dashboard</h3>
-                                <p className='poppins text-xs mt-1'>Upload your lead from this account</p>
+                                <p className=' text-xs mt-1'>Upload your lead from this account</p>
                             </div>
                         </div>
                     }
@@ -53,7 +53,7 @@ const ProfileCard = ({ sellerDashboard, userDashboard, adminDashboard }) => {
                         <div className='bg-[#C7F2AB] px-6 py-5 rounded-xl flex items-start gap-3'>
                             <div className='w-full'>
                                 <h3 className='font-bold text-xs text-center'>Admin Dashboard</h3>
-                                <p className='poppins text-xs mt-1 text-center'>Welcome back Admin</p>
+                                <p className=' text-xs mt-1 text-center'>Welcome back Admin</p>
                             </div>
                         </div>
                     }
@@ -85,7 +85,7 @@ const ProfileCard = ({ sellerDashboard, userDashboard, adminDashboard }) => {
                         </div>
                         <div>
                             <h3 className='font-bold text-xs'>New Message !</h3>
-                            <p className='poppins text-xs'>You got a new message from our admin panel</p>
+                            <p className=' text-xs'>You got a new message from our admin panel</p>
                         </div>
                     </div>
                     <DashboardCard

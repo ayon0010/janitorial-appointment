@@ -59,7 +59,7 @@ const page = () => {
                 />
 
                 <div className="absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-40">
-                    <h2 className="2xl:text-6xl xl:text-5xl text-3xl font-medium 2xl:text-white xl:text-white text-black text-center poppins">The Path to Success</h2>
+                    <h2 className="2xl:text-6xl xl:text-5xl text-3xl font-medium 2xl:text-white xl:text-white text-black text-center ">The Path to Success</h2>
                     <p className="text-sm 2xl:text-white xl:text-white text-black font-medium text-center inter">About Us</p>
                 </div>
             </div>
@@ -68,7 +68,7 @@ const page = () => {
                     <div className="flex flex-col h-full justify-between">
                         <div>
                             <h5 className="text-primary text-sm xl:text-sm 2xl:text-lg 2xl:font-medium xl:font-medium font-semibold">Why choose us</h5>
-                            <h1 className="2xl:text-5xl xl:text-4xl text-3xl 2xl:font-medium xl:font-medium font-semibold inter mt-2 poppins">Creative and Unique <br /> Solutions</h1>
+                            <h1 className="2xl:text-5xl xl:text-4xl text-3xl 2xl:font-medium xl:font-medium font-semibold inter mt-2 ">Creative and Unique <br /> Solutions</h1>
                         </div>
                         <div className="flex 2xl:flex-row xl:flex-row flex-col items-start gap-5 py-6 border-b-2 border-[#D6D6D6] mt-6">
                             <div>
@@ -185,7 +185,7 @@ const page = () => {
                         <div className="pt-10 pb-6 border-b-[#D6D6D6] border-b-[1px]">
                             <div className="flex 2xl:gap-10 xl:gap-8 gap-4  items-start px-5">
                                 <div className="mt-6">
-                                    <h1 className="2xl:text-4xl xl:text-4xl text-3xl font-semibold poppins">01</h1>
+                                    <h1 className="2xl:text-4xl xl:text-4xl text-3xl font-semibold ">01</h1>
                                 </div>
                                 <div>
                                     <h1 className="text-[#0D0D0D] 2xl:text-xl xl:text-lg font-medium">What telemarketing services do you provide?</h1>
@@ -196,7 +196,7 @@ const page = () => {
                         <div className="py-6 border-b-[#D6D6D6] border-b-[1px]">
                             <div className="flex 2xl:gap-10 xl:gap-8 gap-4 items-start px-5">
                                 <div className="mt-6">
-                                    <h1 className="2xl:text-4xl xl:text-4xl text-3xl font-semibold poppins">02</h1>
+                                    <h1 className="2xl:text-4xl xl:text-4xl text-3xl font-semibold ">02</h1>
                                 </div>
                                 <div>
                                     <h1 className="text-[#0D0D0D] 2xl:text-xl xl:text-lg font-medium">How do you generate leads for my business?</h1>
@@ -207,7 +207,7 @@ const page = () => {
                         <div className="pt-6 pb-10 border-b-[#D6D6D6] border-b-[1px]">
                             <div className="flex 2xl:gap-10 xl:gap-8 gap-4 items-start px-5">
                                 <div className="mt-6">
-                                    <h1 className="2xl:text-4xl xl:text-4xl text-3xl font-semibold poppins">03</h1>
+                                    <h1 className="2xl:text-4xl xl:text-4xl text-3xl font-semibold ">03</h1>
                                 </div>
                                 <div>
                                     <h1 className="text-[#0D0D0D] 2xl:text-xl xl:text-lg font-medium">What type of web solutions do you offer?</h1>

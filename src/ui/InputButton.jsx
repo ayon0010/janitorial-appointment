@@ -24,7 +24,7 @@ const CustomFileInput = forwardRef(({ onChange, onBlur, name, ...props }, ref) =
     };
 
     return (
-        <div className={`text-[#666968] poppins text-sm font-normal rounded-[10px] ${props.bg} border border-[#5C6272] ${props.width} flex items-center justify-between px-4 py-1`}>
+        <div className={`text-[#666968]  text-sm font-normal rounded-[10px] ${props.bg} border border-[#5C6272] ${props.width} flex items-center justify-between px-4 py-1`}>
             {/* Hidden file input */}
             <input
                 type="file"
@@ -38,7 +38,7 @@ const CustomFileInput = forwardRef(({ onChange, onBlur, name, ...props }, ref) =
             />
             {fileName ?
                 <div className='relative'>
-                    <p className="poppins border border-black w-fit px-4">
+                    <p className=" border border-black w-fit px-4">
                         Selected file: {fileName}
                     </p>
                     <span onClick={handleCross} className='absolute -top-[10px] -right-[2px] cursor-pointer'>x</span>

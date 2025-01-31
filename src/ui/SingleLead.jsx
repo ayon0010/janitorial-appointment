@@ -1,24 +1,41 @@
 import Dot from "@/ui/Dot";
 import FireIcon from "@/ui/FireIcon";
-import getLeadById from "@/lib/getLeadById";
 import getDateDifference from "@/js/calculateDate";
 import Bookmarks from "@/ui/Bookmarks";
 import BuyLeadMessage from "@/ui/BuyLeadMessage";
+import getLeads from "@/lib/getLeadById";
 
 
-export const revalidate = 1;
 
-const page = async ({ params }) => {
-    const { leads, states, id } = params;
-    const data = await getLeadById(leads, states, id);
+
+
+// export const revalidate = 1;
+// export async function generateStaticParams() {
+//     const x = await getLeads();
+//     return x.map((d) => {
+//         const category = d.category;
+//         const states = d.states;
+//         const id = d._id;
+//         return {
+//             category, states, id
+//         }
+//     })
+// }
+
+
+
+
+const SingleLead = async ({ Lead }) => {
+    const [leads, states, id] = Lead;
+    console.log(leads, states, id, 'z');
+
+    const data = await getLeads(leads, states, id);
     const appointmentDate = data?.date;
     const currentDate = new Date(); // Replace with new Date() in production
     const isDisabled = new Date(appointmentDate) < currentDate;
 
-    console.log(data);
-
     return (
-        <div className="pt-40 pb-20 px-10">
+        <div className="pt-40 pb-20 px-10 bg-white">
             <div>
                 {
                     data?.sold ?
@@ -77,4 +94,4 @@ const SoldMessage = () => (
 
 
 
-export default page;
+export default SingleLead;
