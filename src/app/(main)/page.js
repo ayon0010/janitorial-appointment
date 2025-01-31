@@ -1,4 +1,3 @@
-export const dynamic = "force-static";
 import Image from "next/image";
 import side1 from "@/../public/assets/597346f805a7ac1230c3c0eb176f2c90_result.webp";
 import side2 from "@/../public/assets/3a5f8d21d291fb96da9cf2d4b91d2db0_result_result.webp";
