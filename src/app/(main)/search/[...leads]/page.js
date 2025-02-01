@@ -31,13 +31,13 @@ export async function generateStaticParams() {
     const leadsData = await getLeads();
 
     // Categories (one-level paths)
-    const categories = leadsData.map((lead) => [lead.category]);
+    const categories = leadsData.map((lead) => [lead?.category]);
 
     // States with Category (two-level paths)
-    const statesWithCategory = leadsData.map((lead) => [lead.category, lead.states]);
+    const statesWithCategory = leadsData.map((lead) => [lead?.category, lead?.states]);
 
     // Full paths with category, states, and lead ID (three-level paths)
-    const allLeads = leadsData.map((lead) => [lead.category, lead.states, lead._id]);
+    const allLeads = leadsData.map((lead) => [lead?.category, lead?.states, lead?._id]);
 
     // Combine all paths
     const pathSegments = [...categories, ...statesWithCategory, ...allLeads];

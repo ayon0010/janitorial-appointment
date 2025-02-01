@@ -1,6 +1,7 @@
+'use client'
 import React from 'react';
 import { jwtDecode } from 'jwt-decode';
-import { cookies } from 'next/headers'
+import Cookies from 'js-cookie';
 import Facebook from '@/icons/Facebook';
 import FaLinkedIn from '@/icons/FaLinkedIn';
 import FaTwitter from '@/icons/FaTwitter';
@@ -14,13 +15,9 @@ import logo from '../../public/assets/Janitorial.png';
 import NavUser from './NavUser';
 import NavMobile from './NavMobile';
 
-const Navbar = async () => {
+const Navbar = () => {
     // User Token
-    const cookieStore = await cookies()
-    const userTokenObj = cookieStore.get('userToken');
-    const token = userTokenObj?.value;
-
-
+    const token = Cookies.get('userToken');
 
     // Nav Links
     const Services = [

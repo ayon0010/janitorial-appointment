@@ -28,7 +28,6 @@ export const metadata = {
         "janitorial lead generation",
     ],
     authors: [{ name: "Al Shariar Auon" }],
-    viewport: "width=device-width, initial-scale=1.0",
     charset: "UTF-8",
 };
 
