@@ -9,6 +9,7 @@ import React from 'react';
 
 const page = async ({ params }) => {
     const { leads } = await params;
+    
     if (leads?.length === 3) {
         return (
             <SingleLead Lead={leads} />
@@ -23,6 +24,7 @@ const page = async ({ params }) => {
             <LeadPage Lead={leads[0]} />
         );
     }
+
 };
 
 export default page;

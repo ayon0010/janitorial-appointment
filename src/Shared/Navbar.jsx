@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { jwtDecode } from 'jwt-decode';
 import Cookies from 'js-cookie';
 import Facebook from '@/icons/Facebook';
@@ -20,6 +20,8 @@ import logo from '../../public/assets/Janitorial.png';
 const Navbar = () => {
     // User Token
     const token = Cookies.get('userToken');
+    const [isSeller, setSeller] = useState(false);
+    const [isAdmin, setAdmin] = useState(false);
 
     // Nav Links
     const Services = [
@@ -39,6 +41,8 @@ const Navbar = () => {
     let UserDetails = [
         { name: 'Profile', href: '/profile' },
         { name: 'Dashboard', href: '/dashboard' },
+        isSeller && { href: '/sellerDashboard', name: 'Seller dashboard' },
+        isAdmin && { href: '/adminDashboard', name: 'Admin dashboard' },
     ];
     useEffect(() => {
         if (token) {
@@ -47,10 +51,10 @@ const Navbar = () => {
             const isAdmin = decoded?.isAdmin;
 
             if (isSeller) {
-                UserDetails.push({ href: '/sellerDashboard', name: 'Seller dashboard' });
+                setSeller(true);
             }
             if (isAdmin) {
-                UserDetails.push({ href: '/adminDashboard', name: 'Admin dashboard' });
+                setAdmin(true);
             }
         }
     }, [token]);

@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
           <AuthProvider>
             <QueryProvider>
               <ChatProvider>
-                {/* <Navbar /> */}
+                <Navbar />
                 {children}
                 <Footer />
               </ChatProvider>
