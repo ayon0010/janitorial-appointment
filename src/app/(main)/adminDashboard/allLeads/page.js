@@ -7,10 +7,10 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import dynamic from 'next/dynamic';
-const Modal = dynamic(() => import('@/ui/Modal'), { ssr: false });
-const GetAllLeads = dynamic(() => import('@/lib/GetAllLeads'), { ssr: false });
 const Dot = dynamic(() => import('@/ui/Dot'), { ssr: false });
-const Info = dynamic(() => import('@/ui/Info'), { ssr: false });
+import Modal from '@/ui/Modal';
+import GetAllLeads from '@/lib/GetAllLeads';
+import Info from '@/ui/Info';
 
 const Page = () => {
 
