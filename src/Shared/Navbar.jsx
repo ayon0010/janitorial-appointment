@@ -8,12 +8,14 @@ import FaTwitter from '@/icons/FaTwitter';
 import FaWhatsapp from '@/icons/FaWhatsapp';
 import FaPhone from '@/icons/FaPhone';
 import FaEmail from '@/icons/FaEmail';
-import NavItems from './NavItems';
+import dynamic from 'next/dynamic'
+const NavItems = dynamic(() => import('./NavItems'), { ssr: false });
+const NavUser = dynamic(() => import('./NavUser'), { ssr: false });
+const NavMobile = dynamic(() => import('./NavMobile'), { ssr: false });
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../public/assets/Janitorial.png';
-import NavUser from './NavUser';
-import NavMobile from './NavMobile';
+
 
 const Navbar = () => {
     // User Token
@@ -94,6 +96,7 @@ const Navbar = () => {
         )
     }
 
+    if (typeof window === 'undefined') return null;
 
 
     return (
