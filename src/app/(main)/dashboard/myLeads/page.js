@@ -7,6 +7,7 @@ import SectionTitles from '@/ui/SectionTitles';
 import React from 'react';
 import Swal from 'sweetalert2';
 
+if (typeof window === 'undefined') return null;
 const Page = () => {
     const { user } = useAuth();
     const { savedLeads, refetch } = GetSavedLead(user?.uid);
