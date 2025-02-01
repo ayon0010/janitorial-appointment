@@ -1,10 +1,10 @@
 import { Inter, Nunito, } from 'next/font/google'
 import '../globals.css'
 import AuthProvider from '@/Providers/AuthProvider'
-import Navbar from '@/Shared/Navbar'
 import QueryProvider from '@/Providers/QueryProvider'
 import Footer from '@/Shared/Footer'
 import ChatProvider from '@/Providers/ChatProvider'
+import Navbar from '@/Shared/Navbar'
 
 
 export const inter = Inter({
