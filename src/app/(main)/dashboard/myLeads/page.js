@@ -7,8 +7,9 @@ import SectionTitles from '@/ui/SectionTitles';
 import React from 'react';
 import Swal from 'sweetalert2';
 
-if (typeof window === 'undefined') return null;
+
 const Page = () => {
+
     const { user } = useAuth();
     const { savedLeads, refetch } = GetSavedLead(user?.uid);
     const axiosSecure = useAxiosSecure();
@@ -58,7 +59,7 @@ const Page = () => {
             </button>
         )
     }
-
+    if (typeof window === 'undefined') return null;
     return (
         <div className='pt-40 pb-20 px-10'>
             <SectionTitles heading={'Bookmarked'} subHeading={'Saved leads'} />
