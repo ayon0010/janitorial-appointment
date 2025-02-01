@@ -59,7 +59,7 @@ const Page = () => {
             </button>
         )
     }
-    if (typeof window === 'undefined') return null;
+
     return (
         <div className='pt-40 pb-20 px-10'>
             <SectionTitles heading={'Bookmarked'} subHeading={'Saved leads'} />
