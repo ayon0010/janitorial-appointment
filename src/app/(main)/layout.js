@@ -4,7 +4,7 @@ import AuthProvider from '@/Providers/AuthProvider'
 import QueryProvider from '@/Providers/QueryProvider'
 import Footer from '@/Shared/Footer'
 import ChatProvider from '@/Providers/ChatProvider'
-// import Navbar from '@/Shared/Navbar'
+import Navbar from '@/Shared/Navbar'
 
 
 export const inter = Inter({
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
           <AuthProvider>
             <QueryProvider>
               <ChatProvider>
-                {/* <Navbar /> */}
+                <Navbar />
                 {children}
                 <Footer />
               </ChatProvider>
