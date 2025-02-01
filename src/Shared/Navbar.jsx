@@ -44,6 +44,8 @@ const Navbar = () => {
         isSeller && { href: '/sellerDashboard', name: 'Seller dashboard' },
         isAdmin && { href: '/adminDashboard', name: 'Admin dashboard' },
     ];
+
+    // Token
     useEffect(() => {
         if (token) {
             const decoded = jwtDecode(token);
@@ -59,11 +61,26 @@ const Navbar = () => {
         }
     }, [token]);
 
-    console.log(UserDetails); // Debugging or further processing
 
+    // Nav Position
+    const [topPosition, setTopPosition] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            console.log(scrollPosition);
+            if (scrollPosition > 90) {
+                setTopPosition(true);
+            }
+            else {
+                setTopPosition(false)
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
 
-
-
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [])
 
 
     // Nav Top Part
@@ -107,7 +124,7 @@ const Navbar = () => {
             {/* Nav Top Part */}
             <NavComponent />
             {/* NavBar */}
-            <div className='absolute 2xl:top-[60px] xl:top-[60px] top-0 inset-0'>
+            <div className={`${!topPosition ? 'absolute 2xl:top-[60px] xl:top-[60px] top-0' : 'fixed 2xl:top-0 xl:top-0 top-0'} left-0 right-0`}>
                 <div className='bg-[#FBFCFF] shadow-xl'>
                     <div className='items-center justify-between max-w-[1440px] mx-auto relative 2xl:h-[100px] xl:h-[100px] 2xl:flex xl:flex hidden 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11'>
                         {/* Logo */}
