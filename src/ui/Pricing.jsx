@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import TickCircle from './TickCircle';
+import PaymentLink from './PaymentLink';
 
 const pricingPlans = [
     {
@@ -18,7 +19,8 @@ const pricingPlans = [
         containerclassName: "bg-white",
         priceclassName: "text-6xl font-bold",
         priceUnitclassName: "text-gray-500 font-semibold text-base",
-        descriptionclassName: "nunito text-xs font-normal"
+        descriptionclassName: "nunito text-xs font-normal",
+        register: '/register'
     },
     {
         title: "Professional Plan",
@@ -37,12 +39,13 @@ const pricingPlans = [
         containerclassName: "bg-primary",
         priceclassName: "text-6xl font-bold text-white",
         priceUnitclassName: "font-semibold text-base text-white",
-        descriptionclassName: "nunito text-xs font-normal text-white"
+        descriptionclassName: "nunito text-xs font-normal text-white",
+        paymentLink: process.env.NEXT_PUBLIC_STRIPE_BI_ANNUALLY_LINK
     },
     {
         title: "Essential Plan",
         description: "Affordable and Reliable",
-        price: "$60",
+        price: "$50",
         priceUnit: "/bi-annually",
         discount: "Billed every 6 months",
         features: [
@@ -56,7 +59,8 @@ const pricingPlans = [
         containerclassName: "bg-white",
         priceclassName: "text-6xl font-bold",
         priceUnitclassName: "text-gray-500 font-semibold text-base",
-        descriptionclassName: "nunito text-xs font-normal"
+        descriptionclassName: "nunito text-xs font-normal",
+        paymentLink: process.env.NEXT_PUBLIC_STRIPE_YEARLY_LINK
     }
 ];
 
@@ -84,9 +88,7 @@ const Pricing = () => {
                         ))}
                     </div>
                     <div className='mt-auto'>
-                        <Link href={'/my-subscription'}>
-                            <button className={`btn ${plan.buttonclassName} font-semibold w-full`}>{plan.buttonLabel}</button>
-                        </Link>
+                        {index !== 0 ? <PaymentLink plan={plan} link={`${plan.paymentLink}`} register={index} /> : <Link href={`/login`}> <button className={`btn ${plan.buttonclassName} font-semibold w-full`}>Start Now</button></Link>}
                     </div>
                 </div>
             ))}

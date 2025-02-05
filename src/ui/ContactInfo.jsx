@@ -20,7 +20,7 @@ const ContactInfo = () => {
         const animationInstance = lottie.loadAnimation({
             container: animationRef.current,
             renderer: 'svg',
-            loop: true,
+            loop: false,
             autoplay: true,
             animationData: animation,
         });
@@ -28,7 +28,7 @@ const ContactInfo = () => {
         const animation2Instance = lottie.loadAnimation({
             container: animation2Ref.current,
             renderer: 'svg',
-            loop: true,
+            loop: false,
             autoplay: true,
             animationData: animation2,
             speed: 0.4,

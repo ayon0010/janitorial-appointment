@@ -15,9 +15,10 @@ const LoginPage = () => {
     const searchParams = useSearchParams();
     const message = searchParams.get('message');
     const pathName = searchParams.get('redirect');
-    console.log(pathName);
+    console.log(pathName); 
 
     const router = useRouter();
+
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const { signIn, user } = useAuth();
     const [showPassword, setShowPassword] = useState(false);
@@ -52,7 +53,16 @@ const LoginPage = () => {
                         showConfirmButton: false,
                         timer: 2000,
                     });
-                    router.push('/')
+                    if (typeof window !== 'undefined') {
+                        const paymentLink = localStorage.getItem('paymentLink');
+                        if (paymentLink) {
+                            router.push(paymentLink + `?prefilled_email=${user.email}`);
+                            localStorage.removeItem('paymentLink');
+                        }
+                        else {
+                            router.push('/');
+                        }
+                    }
                 }
             })
             .catch((err) => {

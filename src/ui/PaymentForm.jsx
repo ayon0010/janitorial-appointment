@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useState } from "react";
 import {
     PaymentElement,
@@ -19,7 +20,6 @@ export default function PaymentForm({ dpmCheckerLink, product_Id, closeModal }) 
     const [status, setStatus] = useState("default");
     const [intentId, setIntentId] = useState(null);
     const axiosSecure = useAxiosSecure();
-
     const close = () => {
         return closeModal();
     }
@@ -61,11 +61,14 @@ export default function PaymentForm({ dpmCheckerLink, product_Id, closeModal }) 
                     userId: user?.uid,
                     email: user?.email,
                     product_Id,
-                    amount: paymentIntent.amount,
+                    amount: paymentIntent.amount / 100,
                     status: paymentIntent.status,
                     time: new Date(),
                     currency: 'usd'
                 })
+                if (typeof window !== 'undefined') {
+                    localStorage.removeItem('paymentLink', pathName);
+                }
                 setRedirect(true);
             } catch (postError) {
                 console.error("Error posting payment data:", postError);

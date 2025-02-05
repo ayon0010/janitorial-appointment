@@ -37,25 +37,29 @@ export default function Home() {
             {/* Banner */}
             <Banner />
             <div className="2xl:px-10 xl:px-10 px-6">
-                <h5 className="text-secondary text-center font-light text-xl mt-20 mb-4">How We Help You to Grow</h5>
-                <div className="w-[80%] mx-auto">
-                    <SectionTitles heading={'Discover Commercial Cleaning Leads Across the USA'} subHeading={"Janitorial Appointment connects cleaning companies with top commercial centers, hospitals, schools, and offices. Register now for exclusive access to appointment-setting opportunities."} />
+                <div className="mt-20">
+                    <div className="px-6 mb-10">
+                        <SectionTitles heading={"Book an appointment"} subHeading={"Reserve a convenient time for your appointment"} />
+                    </div>
+                    <Appointment />
                 </div>
-                <Leads />
-                <Appointment />
                 <div className="2xl:py-20 xl:py-20 py-10">
                     <div className="px-6">
                         <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />
                     </div>
                     <Pricing />
                 </div>
-                <div>
-                    <h5 className="text-secondary  text-center font-light text-xl mt-20 mb-4">What We Offer</h5>
-                    <SectionTitles heading={'Maximize results with minimal effort'} subHeading={"Get cleaning contracts sent straight to your inbox, easily find and delegate tasks to subcontractors, and engage with decision makers automatically"} />
+                <h5 className="text-secondary text-center font-light text-xl mt-20 mb-4">How We Help You to Grow</h5>
+                <div className="w-[80%] mx-auto">
+                    <SectionTitles heading={'Discover Commercial Cleaning Leads Across the USA'} subHeading={"Janitorial Appointment connects cleaning companies with top commercial centers, hospitals, schools, and offices. Register now for exclusive access to appointment-setting opportunities."} />
                 </div>
+                <Leads />
             </div>
 
-
+            <div>
+                <h5 className="text-secondary  text-center font-light text-xl mt-20 mb-4">What We Offer</h5>
+                <SectionTitles heading={'Maximize results with minimal effort'} subHeading={"Get cleaning contracts sent straight to your inbox, easily find and delegate tasks to subcontractors, and engage with decision makers automatically"} />
+            </div>
             <div className=" md:px-10 px-6">
                 <div className="">
                     <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row-reverse flex-col">

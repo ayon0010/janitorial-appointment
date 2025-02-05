@@ -12,6 +12,7 @@ const GetAllLeads = dynamic(() => import('@/lib/GetAllLeads'), { ssr: false });
 const Dot = dynamic(() => import('@/ui/Dot'), { ssr: false });
 const Info = dynamic(() => import('@/ui/Info'), { ssr: false });
 
+
 const Page = () => {
 
     const axiosSecure = useAxiosSecure();

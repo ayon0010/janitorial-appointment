@@ -67,7 +67,6 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            console.log(scrollPosition);
             if (scrollPosition > 90) {
                 setTopPosition(true);
             }

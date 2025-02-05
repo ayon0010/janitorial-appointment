@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdCloseCircleOutline } from 'react-icons/io';
 import logo from '@/../public/assets/Janitorial.png';
@@ -8,6 +8,19 @@ import { FaFacebookSquare, FaLinkedinIn, FaTwitterSquare, FaWhatsappSquare } fro
 
 const SideBar = () => {
     const [open, setOpen] = useState(false);
+    useEffect(() => {
+        // Disable scrolling on the body when the menu is open
+        if (open) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        // Cleanup on unmount
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [open]);
     return (
         <div>
             <div className='btn' onClick={() => setOpen(!open)}>

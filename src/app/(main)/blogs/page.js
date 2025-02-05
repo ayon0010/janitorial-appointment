@@ -2,23 +2,6 @@ import { client } from '@/lib/sanity';
 import BlogCards from '@/ui/BlogCards';
 
 
-export const revalidate = 0;
-
-
-export const blogData = async () => {
-    const query = `*[_type == 'blog'] | order(_createdAt asc) {
-title,
-"currentSlug":slug.current,
-date,
-content,
-titleImage,
-authorName,
- authorImage
-}`
-    const data = await client.fetch(query, { cache: 'no-cache' });
-    return data;
-}
-
 export const metadata = {
     title: "Janitorial Appointments & Commercial Cleaning Leads Blog",
     description:
@@ -46,10 +29,30 @@ export const metadata = {
 };
 
 
+
+export const revalidate = 8;
+
+
+export const blogData = async () => {
+    const query = `*[_type == 'blog'] | order(_createdAt asc) {
+title,
+"currentSlug":slug.current,
+date,
+content,
+titleImage,
+authorName,
+ authorImage
+}`
+    const data = await client.fetch(query, { cache: 'no-cache' });
+    return data;
+}
+
+
+
+
 const page = async () => {
 
     const blogs = await blogData() || [];
-    console.log(blogs, 'x');
 
     return (
         <div className="2xl:pt-40 xl:pt-40 pt-28 pb-20 px-10">

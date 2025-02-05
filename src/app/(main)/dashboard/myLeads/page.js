@@ -1,5 +1,4 @@
 'use client'
-export const dynamic = 'force-dynamic';
 import useAuth from '@/Hooks/useAuth';
 import useAxiosSecure from '@/Hooks/useAxiosSecure';
 import GetSavedLead from '@/lib/getSavedLead';

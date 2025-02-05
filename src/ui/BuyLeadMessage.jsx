@@ -2,9 +2,23 @@
 
 import { FaArrowRight } from "react-icons/fa";
 import Payment from "./Payment";
+import { usePathname, useRouter } from "next/navigation";
+import useAuth from "@/Hooks/useAuth";
+
 
 const BuyLeadMessage = ({ leads, appointmentDate, prize, isDisabled, product_Id }) => {
+    const router = useRouter();
+    const pathName = usePathname();
+    const { user } = useAuth();
+
+
     const handleOpenModal = () => {
+        if (!user) {
+            if (typeof window !== 'undefined') {
+                localStorage.setItem('paymentLink', pathName);
+                return router.push('/login');
+            }
+        }
         if (typeof window !== 'undefined') {
             const modal = document.getElementById('my_modal_3');
             modal?.showModal();
