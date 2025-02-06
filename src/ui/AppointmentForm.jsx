@@ -13,6 +13,8 @@ import 'sweetalert2/src/sweetalert2.scss';
 import lottie from 'lottie-web';
 import useAxiosPublic from '@/Hooks/useAxiosPublic';
 
+
+if (typeof window === 'undefined') return
 const AppointmentForm = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
