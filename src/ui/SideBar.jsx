@@ -9,17 +9,20 @@ import { FaFacebookSquare, FaLinkedinIn, FaTwitterSquare, FaWhatsappSquare } fro
 const SideBar = () => {
     const [open, setOpen] = useState(false);
     useEffect(() => {
-        // Disable scrolling on the body when the menu is open
-        if (open) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
-        }
+        if (typeof window !== 'undefined') {
+            if (open) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
 
-        // Cleanup on unmount
-        return () => {
-            document.body.style.overflow = '';
-        };
+            // Cleanup on unmount
+            return () => {
+                document.body.style.overflow = '';
+            };
+        }
+        // Disable scrolling on the body when the menu is open
+
     }, [open]);
     return (
         <div>

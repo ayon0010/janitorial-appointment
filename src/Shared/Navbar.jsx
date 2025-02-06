@@ -65,20 +65,23 @@ const Navbar = () => {
     // Nav Position
     const [topPosition, setTopPosition] = useState(false);
     useEffect(() => {
-        const handleScroll = () => {
-            const scrollPosition = window.scrollY;
-            if (scrollPosition > 90) {
-                setTopPosition(true);
+        if (typeof window !== 'undefined') {
+            const handleScroll = () => {
+                const scrollPosition = window.scrollY;
+                if (scrollPosition > 90) {
+                    setTopPosition(true);
+                }
+                else {
+                    setTopPosition(false)
+                }
             }
-            else {
-                setTopPosition(false)
-            }
-        }
-        window.addEventListener('scroll', handleScroll);
+            window.addEventListener('scroll', handleScroll);
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }
+
     }, [])
 
 

@@ -86,19 +86,21 @@ const AppointmentForm = () => {
     };
 
     useEffect(() => {
-        const animationContainer = document.getElementById('lottie-animation');
-        lottie.loadAnimation({
-            container: animationContainer,
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            animationData: animation
-        });
+        if (typeof window !== 'undefined') {
+            const animationContainer = document.getElementById('lottie-animation');
+            lottie.loadAnimation({
+                container: animationContainer,
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                animationData: animation
+            });
 
-        // Cleanup on component unmount
-        return () => {
-            lottie.destroy();
-        };
+            // Cleanup on component unmount
+            return () => {
+                lottie.destroy();
+            };
+        }
     }, []);
 
     return (
