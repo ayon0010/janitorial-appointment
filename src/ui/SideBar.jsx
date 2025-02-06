@@ -9,7 +9,7 @@ import { FaFacebookSquare, FaLinkedinIn, FaTwitterSquare, FaWhatsappSquare } fro
 const SideBar = () => {
     const [open, setOpen] = useState(false);
     useEffect(() => {
-        if (typeof window !== 'undefined') {
+        if (typeof document !== 'undefined') {
             if (open) {
                 document.body.style.overflow = 'hidden';
             } else {

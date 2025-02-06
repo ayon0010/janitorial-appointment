@@ -87,7 +87,7 @@ const AppointmentForm = () => {
     };
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
+        if (typeof document !== 'undefined') {
             const animationContainer = document.getElementById('lottie-animation');
             LottieAnimation.loadAnimation({
                 container: animationContainer,

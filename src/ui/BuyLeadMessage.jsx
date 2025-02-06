@@ -19,14 +19,14 @@ const BuyLeadMessage = ({ leads, appointmentDate, prize, isDisabled, product_Id 
                 return router.push('/login');
             }
         }
-        if (typeof window !== 'undefined') {
+        if (typeof document !== 'undefined') {
             const modal = document.getElementById('my_modal_3');
             modal?.showModal();
         }
     };
 
     const handleCloseModal = () => {
-        if (typeof window !== 'undefined') {
+        if (typeof document !== 'undefined') {
             const modal = document.getElementById('my_modal_3');
             modal?.close();
         }
