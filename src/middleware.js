@@ -1,7 +1,6 @@
 import { jwtDecode } from 'jwt-decode';
-import { cookies } from 'next/headers'
+import { cookies } from 'next/headers';
 import { NextResponse } from 'next/server'
-
 
 const userRoutes = ['/profile', '/dashboard'];
 const adminRoutes = ['/adminDashboard', '/adminDashboard/allLeads', '/adminDashboard/allUser', '/adminDashboard/leadUpload', '/adminDashboard/allLeads/:id', '/adminDashboard/subscriber'];
@@ -9,19 +8,19 @@ const sellerRoutes = ['/sellerDashboard', '/sellerDashboard/leadUpload'];
 
 export async function middleware(request) {
     const pathname = request.nextUrl.pathname;
-    const cookieStore = await cookies()
-    const userTokenObj = cookieStore.get('userToken');
-    const token = userTokenObj?.value;
+    const cookieStore = await cookies();
+    const token = cookieStore.get('userToken')?.value;
     console.log(token);
+
     const loginURL = new URL('/login', request.url);
     loginURL.searchParams.append('redirect', pathname);
     loginURL.searchParams.append('message', 'You need to log in to access this page.');
+
     if (!token) {
         return NextResponse.redirect(loginURL);
     }
     try {
         const decoded = jwtDecode(token);
-        console.log(decoded);
         const isAdmin = decoded?.isAdmin;
         const isSeller = decoded?.isSeller;
         console.log(isAdmin, isSeller);

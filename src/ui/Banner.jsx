@@ -85,7 +85,7 @@ const Banner = () => {
                                 fill
                                 className="2xl:block xl:block hidden"
                                 loading="lazy"
-                             
+
                             />
 
                             <Image
@@ -94,7 +94,7 @@ const Banner = () => {
                                 fill
                                 className="min-h-[600px] object-center 2xl:hidden xl:hidden block"
                                 loading="lazy"
-                                
+
                             />
                         </div>
                         <div className='absolute inset-0 bg-black opacity-55 z-30'></div>
@@ -130,7 +130,7 @@ const Banner = () => {
                                 alt="Telemarketing services for janitorial appointments and commercial cleaning leads"
                                 fill
                                 loading="lazy"
-                                
+
                             />
                         </div>
                         <div className='absolute inset-0 bg-black opacity-50 z-30'></div>
@@ -169,16 +169,19 @@ const Banner = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="banner-6 flex flex-col h-full relative">
-                        <div className='absolute inset-0 bg-black opacity-50 2xl:hidden xl:hidden block'></div>
-                        <div className='2xl:w-1/2 xl:w-1/2 w-full my-auto ml-auto z-30 pr-10 2xl:px-6 xl:px-6 px-10'>
-                            <h2 className='2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:banner-text xl:banner-text 2xl:text-black xl:text-black text-white'>
+                        <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
+                            <h2 className='2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:banner-text xl:banner-text text-white'>
                                 Elevate Your Brand, Expert <span className='text-green-600'>Digital Marketing, Web & App Solutions</span>
                             </h2>
-                            <p className='inter 2xl:text-xl xl:text-xl text-sm font-semibold my-6 2xl:text-black xl:text-black text-white'>
-                                We deliver premier IT solutions designed specifically for cleaning companies, empowering your business to achieve greater efficiency and growth.</p>
-                            <Link href={'/contact'}>
-                                <ButtonTertiary label={'Contact Us'} />
-                            </Link>
+                            <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80'>Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!</p>
+                            <div className='flex items-center gap-6'>
+                                <div>
+                                    <Link href={'/register'}>
+                                        <ButtonPrimary label={'Sign Up'} />
+                                    </Link>
+                                </div>
+                                <p className='text-white opacity-80 inter font-bold 2xl:text-base xl:text-base text-xs'>No Credit Card Required</p>
+                            </div>
                         </div>
                     </div>
                 </SwiperSlide>

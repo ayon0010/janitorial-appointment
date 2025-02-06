@@ -99,7 +99,7 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
                                                             className="py-2 text-black hover:text-orange transition-all duration-300 ease-linear border-b-[0.60px] border-b-black border-opacity-20"
                                                             onClick={() => setNav(false)}
                                                         >
-                                                            <Link href={a.href}>{a.name}</Link>
+                                                            <Link href={`${a.href ? a.href : ''}`}>{a.name}</Link>
                                                         </p>
                                                     ))}
                                                     <p
@@ -152,7 +152,7 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
                                                         className="py-2 text-black hover:text-orange transition-all duration-300 ease-linear border-b-[0.60px] border-b-black border-opacity-20"
                                                         onClick={() => setNav(false)}
                                                     >
-                                                        <Link href={a.href}>{a.name}</Link>
+                                                        <Link href={`${a.href ? a.href : ''}`}>{a.name}</Link>
                                                     </p>
                                                 ))}
                                             </div>
@@ -189,7 +189,7 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
                                                         className="py-2 text-black hover:text-orange border-b-[0.60px] border-b-black border-opacity-20 transition-all duration-300 ease-linear"
                                                         onClick={() => setNav(false)}
                                                     >
-                                                        <Link href={s.href}>{s.name}</Link>
+                                                        <Link href={`${s.href ? s.href : ''}`}>{s.name}</Link>
                                                     </p>
                                                 ))}
                                             </div>

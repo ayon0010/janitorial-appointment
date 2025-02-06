@@ -4,10 +4,10 @@ import { cookies } from 'next/headers';
 import React from 'react';
 
 const page = async () => {
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const userTokenObj = cookieStore.get('userToken');
     const token = userTokenObj?.value;
-    const res = await fetch('http://localhost:5000/contacts', {
+    const res = await fetch('https://clean-job-backend-final.vercel.app/appointment', {
         cache: 'no-cache',
         headers: {
             authorization: `Bearer ${token}`
@@ -17,13 +17,17 @@ const page = async () => {
     if (!data) {
         return
     }
+    console.log(data);
+
     return (
-        <div className='2xl:px-[70px] xl:px-16 px-8 2xl:my-36 xl:my-28 my-16'>
-            <SectionTitles heading={'Messages from Users'} subHeading={'See the user messages'} />
+        <div className='2xl:px-[70px] xl:px-16 px-8 2xl:py-36 xl:py-28 my-36'>
+            <div className=''>
+                <SectionTitles heading={'Messages from Users'} subHeading={'See the user messages'} />
+            </div>
             <div className="overflow-x-auto mt-10">
-                <table className="table">
+                <table className="table w-full">
                     {/* head */}
-                    <TableHead tableHead={['#', 'Email', 'Name', 'Company Name', 'Message']} />
+                    <TableHead tableHead={['#', 'Email', 'Company Name', 'Phone Number', 'Area', 'Frequency', 'Rate', 'Variations', 'Dnc']} />
                     <tbody>
                         {/* row 1 */}
                         {
@@ -31,9 +35,13 @@ const page = async () => {
                                 <tr key={d?._id} className="bg-base-200">
                                     <td>{i + 1}</td>
                                     <td>{d?.email}</td>
-                                    <td>{d?.name}</td>
                                     <td>{d?.companyName}</td>
-                                    <td>{d?.comment}</td>
+                                    <td>{d?.number}</td>
+                                    <td>{d?.area}</td>
+                                    <td>{d?.frequency}</td>
+                                    <td>{d?.rate}</td>
+                                    <td>{d?.variations}</td>
+                                    <td>{d?.dnc}</td>
                                 </tr>
                             ))
                         }

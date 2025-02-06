@@ -5,9 +5,12 @@ import SectionTitles from '@/ui/SectionTitles';
 import TableHead from '@/ui/TableHead';
 import React from 'react';
 import Swal from 'sweetalert2';
+import Loading from '../../loading';
 
 const Page = () => {
-    const { allUsers, refetch } = GetAllUsers();
+    const { allUsers, refetch, isLoading } = GetAllUsers();
+    console.log(allUsers, isLoading);
+
     const axiosSecure = useAxiosSecure();
     const makeAdmin = async (id, action, email) => {
         console.log(id, action);
@@ -86,6 +89,10 @@ const Page = () => {
                 confirmButtonText: 'OK'
             });
         }
+    }
+
+    if (isLoading) {
+        return <Loading />
     }
 
     return (

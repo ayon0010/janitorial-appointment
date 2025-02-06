@@ -10,7 +10,7 @@ export const Option = ({ children, arr, show, href }) => {
         <div className="py-3 pointer-events-auto w-full">
             <span className='flex items-center group'>
                 <span className='group-hover:w-[18px] w-[0px] group-hover:mr-2 transition-all duration-300 h-[4px] bg-orange'></span>
-                <Link href={`${href}`}>
+                <Link href={`${href ? href : ''}`}>
                     <span className="text-black group-hover:text-orange font-semibold">
                         {children}
                     </span>

@@ -2,7 +2,6 @@ import Facebook from '@/icons/Facebook';
 import FaEmails from '@/icons/FaEmails';
 import FaLinkedIn from '@/icons/FaLinkedIn';
 import React from 'react';
-import FaLocation from './FaLocation';
 import FaPhone from '@/icons/FaPhone';
 import FaTwitter from '@/icons/FaTwitter';
 import FaWhatsapp from '@/icons/FaWhatsapp';

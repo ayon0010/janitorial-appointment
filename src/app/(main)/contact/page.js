@@ -7,10 +7,7 @@ import image from '../../../../public/assets/image 36_result_result.webp'
 import FaAddress from '@/icons/FaAddress';
 import FaPhone from '@/icons/FaPhone';
 import FaEmail from '@/icons/FaEmail';
-import facebook from '@/../public/assets/Facebook.svg'
-import LinkedIn from '@/../public/assets/Linkedin.svg'
 import ContactForm from '@/ui/ContactForm';
-import ContactUserForm from '@/ui/ContactUserForm';
 import SectionTitles from '@/ui/SectionTitles';
 import fb from '@/../public/assets/Frame (8).svg'
 import insta from '@/../public/assets/Frame (10).svg'
@@ -20,7 +17,8 @@ import youtube from '@/../public/assets/Frame (13).svg'
 import Map from '@/ui/Map';
 import Footer from '@/Shared/Footer';
 import Link from 'next/link';
-
+import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
+const message = encodeURIComponent('Hello! I would like to inquire about your commercial cleaning leads.');
 const page = () => {
     return (
         <div>
@@ -87,7 +85,9 @@ const page = () => {
                                     </div>
                                 </div>
                                 <div className='flex items-start gap-4'>
-                                    <FaPhone />
+                                    <div className='rounded-full border border-green-700 p-[14px]'>
+                                        <FaPhoneAlt color='#15803d' />
+                                    </div>
                                     <div>
                                         <h1 className='text-xl font-medium text-[#0D0D0D]'>Contact  Details</h1>
                                         <p className='text-[#808080] text-base'> +1 800-525-54-589</p>
@@ -97,36 +97,30 @@ const page = () => {
                                     <FaEmail />
                                     <div>
                                         <h1 className='text-xl font-medium text-[#0D0D0D]'>Email Us</h1>
-                                        <p className='text-[#808080] text-base'>info@wdesignkit.com</p>
+                                        <p className='text-[#808080] text-base'>contact@janitorialappointment.com</p>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                        <div className='bg-[#F9F9FB] 2xl:p-10 xl:p-8 p-6 rounded-[30px]'>
-                            <h1 className='text-[#0D0D0D] 2xl:text-4xl xl:text-3xl text-2xl font-medium'>Leave Us Your Info.</h1>
-                            {/* This form data will be used contact with user */}
-                            <ContactUserForm />
-                        </div>
                     </div>
                 </div>
                 <div className='2xl:pb-40 xl:pb-28 pb-16'>
                     <SectionTitles heading={'Find Us on Social Media'} subHeading={"If you want to contact us in person or simply want to know more about us, here's some helpful information about us"} />
-                    <div className='2xl:mt-12 xl:mt-10 mt-8 grid 2xl:grid-cols-5 xl:grid-cols-5 grid-cols-2 2xl:gap-8 xl:gap-8 gap-6'>
-                        <Link href="https://facebook.com" passHref>
-                            <Image src={fb} alt='fb' />
+                    <div className='grid 2xl:grid-cols-4 xl:grid-cols-4 grid-cols-2 2xl:gap-8 xl:gap-8 gap-6 w-3/4 mx-auto mt-10'>
+                        <Link href="https://www.facebook.com/commercialcleaningleads/" target="_blank">
+                            <Image className='cursor-pointer' src={fb} alt="Facebook" />
                         </Link>
-                        <Link href="https://instagram.com" passHref>
-                            <Image src={insta} alt='insta' />
+                        <Link href="https://www.linkedin.com/company/janitorial-appointments-commercial-cleaning-leads/about/?viewAsMember=true" target="_blank">
+                            <Image className='cursor-pointer' src={linked} alt="LinkedIn" />
                         </Link>
-                        <Link href="https://linkedin.com" passHref>
-                            <Image src={linked} alt='linked' />
+                        <Link href="https://x.com/cleaningleads12" target="_blank">
+                            <Image className='cursor-pointer' src={twitt} alt="Twitter" />
                         </Link>
-                        <Link href="https://twitter.com" passHref>
-                            <Image src={twitt} alt='twitt' />
-                        </Link>
-                        <Link href="https://youtube.com" passHref>
-                            <Image src={youtube} alt='youtube' />
+                        <Link href={`https://wa.me/${+8801726108060}?text=${message}`}
+                            target="_blank"
+                            rel="noopener noreferrer" className='border w-full border-[#DDDDDD] rounded-md flex flex-col' target="_blank">
+                            <FaWhatsapp size={'4rem'} color='#006600' className='w-fit m-auto' />
                         </Link>
                     </div>
                 </div>
@@ -139,7 +133,13 @@ const page = () => {
                             <div className='space-y-[16px]'>
                                 <h1 className='text-xl font-medium text-[#0D0D0D]'>Send Us an Email</h1>
                                 <p className='text-[#808080] text-base'>We&apos;d love to hear from you! Please feel free to reach out to us via mail.</p>
-                                <button className='btn bg-primary text-white rounded-lg'>info@wdesignkit.com</button>
+                                <div>
+                                    <a href="mailto:contact@janitorialappointment.com">
+                                        <button className='btn bg-primary text-white rounded-lg'>
+                                            contact@janitorialappointment.com
+                                        </button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div className='flex items-start gap-4 2xl:p-12 xl:p-10 p-8 bg-[#F9F9FB] rounded-[30px]'>
@@ -147,7 +147,13 @@ const page = () => {
                             <div className='space-y-[16px]'>
                                 <h1 className='text-xl font-medium text-[#0D0D0D]'>Give Us a Call</h1>
                                 <p className='text-[#808080] text-base'>We&apos;re here to help! Don&apos;t hesitate to reach out to us by phone.</p>
-                                <button className='btn bg-primary text-white rounded-lg'>+1 800-525-54-589</button>
+                                <div>
+                                    <a href="tel:+180052554589">
+                                        <button className='btn bg-primary text-white rounded-lg'>
+                                            +8801726108060
+                                        </button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div className='flex items-start gap-4 2xl:p-12 xl:p-10 p-8 bg-[#F9F9FB] rounded-[30px]'>
@@ -168,23 +174,37 @@ const page = () => {
                     <div className='2xl:w-3/4 xl:w-3/4 w-full mx-auto mt-10 space-y-8'>
                         <div className="collapse collapse-plus bg-white border border-[#D6D6D6]">
                             <input type="checkbox" id='1' name="my-accordion-1" defaultChecked />
-                            <div className="collapse-title text-xl font-medium">The standard Lorem Ipsum passage.</div>
-                            <div className="collapse-content">
-                                <p>hello</p>
+                            <div className="collapse-title text-xl font-bold">How do I get janitorial or commercial cleaning leads from you?.</div>
+                            <div className="collapse-content text-sm">
+                                <p>You can purchase leads from us by reaching out through our website, phone, or email. We’ll provide you with qualified, pre-screened leads that match your service offerings, including the type of cleaning required, the size of the property, and the frequency of service.</p>
                             </div>
                         </div>
                         <div className="collapse collapse-plus bg-white border border-[#D6D6D6]">
                             <input type="checkbox" id='2' name="my-accordion-2" />
-                            <div className="collapse-title text-xl font-medium">The standard Lorem Ipsum passage.</div>
+                            <div className="collapse-title text-xl font-medium">Are the janitorial leads exclusive?</div>
                             <div className="collapse-content">
-                                <p>hello</p>
+                                <p>Yes, we offer exclusive leads for our clients, meaning you won’t be competing with others for the same lead. This gives you a higher chance of converting the lead into a paying client.</p>
                             </div>
                         </div>
                         <div className="collapse collapse-plus bg-white border border-[#D6D6D6]">
                             <input type="checkbox" id='3' name="my-accordion-3" />
-                            <div className="collapse-title text-xl font-medium">The standard Lorem Ipsum passage.</div>
+                            <div className="collapse-title text-xl font-medium">How do you qualify the leads you provide?</div>
                             <div className="collapse-content">
-                                <p>hello</p>
+                                <p>We qualify leads through a thorough process that includes direct communication with potential clients. We gather information about the property, type of cleaning services needed, and the budget. Only leads that meet these criteria are passed along to you, ensuring you receive high-quality prospects.</p>
+                            </div>
+                        </div>
+                        <div className="collapse collapse-plus bg-white border border-[#D6D6D6]">
+                            <input type="checkbox" id='3' name="my-accordion-3" />
+                            <div className="collapse-title text-xl font-medium">Can I get leads for specific types of cleaning services?</div>
+                            <div className="collapse-content">
+                                <p>Yes, we can provide leads based on your specific area of expertise, whether it's general janitorial services, deep cleaning, post-construction cleaning, or specialized commercial cleaning like carpet cleaning or sanitation.</p>
+                            </div>
+                        </div>
+                        <div className="collapse collapse-plus bg-white border border-[#D6D6D6]">
+                            <input type="checkbox" id='3' name="my-accordion-3" />
+                            <div className="collapse-title text-xl font-medium">How are the leads delivered?</div>
+                            <div className="collapse-content">
+                                <p>Once you purchase the leads, we deliver them through email or a secure online portal. Each lead will include detailed information such as the property type, service needs, contact details, and the best time to reach the client.</p>
                             </div>
                         </div>
                     </div>

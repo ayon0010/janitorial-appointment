@@ -9,7 +9,7 @@ import React from 'react';
 
 const page = async ({ params }) => {
     const { leads } = await params;
-    
+
     if (leads?.length === 3) {
         return (
             <SingleLead Lead={leads} />
@@ -28,6 +28,8 @@ const page = async ({ params }) => {
 };
 
 export default page;
+
+export const revalidate = 1;
 
 export async function generateStaticParams() {
     const leadsData = await getLeads();

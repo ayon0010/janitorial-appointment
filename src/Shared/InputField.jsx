@@ -10,7 +10,7 @@ const InputField = ({ label, type, placeholder, register, name, errors, disabled
                     </label>
                     <input
                         type={type}
-                        min={type === "number" && 1}
+                        min={type === "number" ? 1 : undefined}
                         placeholder={placeholder}
                         disabled={disabled}
                         {...register(name, { required: `${label} is required` })}

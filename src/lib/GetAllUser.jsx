@@ -11,7 +11,6 @@ const GetAllUsers = () => {
             try {
                 const response = await axiosSecure.get(`user`);
                 const data = await response.data;
-                console.log(data, 'allUsers');
                 return data;
             } catch (err) {
                 console.error("Error fetching user data:", err);
@@ -19,7 +18,7 @@ const GetAllUsers = () => {
             }
         },
     });
-    return { isLoading: false, allUsers, refetch };
+    return { isLoading, allUsers, refetch };
 };
 
 export default GetAllUsers;

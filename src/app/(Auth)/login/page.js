@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import useAuth from '@/Hooks/useAuth';
 import Logo from '@/Shared/Logo';
 import Link from 'next/link';
@@ -10,22 +10,41 @@ import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
+import Cookies from "js-cookie";
 
 const LoginPage = () => {
     const searchParams = useSearchParams();
-    const message = searchParams.get('message');
-    const pathName = searchParams.get('redirect');
-    console.log(pathName); 
+    const [message, setMessage] = useState('');
+    const [pathName, setPathName] = useState('');
+    useEffect(() => {
+        setMessage(searchParams.get('message'));
+        setPathName(searchParams.get('redirect'));
+    }, [searchParams]);
+
+    console.log(pathName);
+
 
     const router = useRouter();
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
-    const { signIn, user } = useAuth();
+    const { signIn } = useAuth();
     const [showPassword, setShowPassword] = useState(false);
 
     const togglePasswordVisibility = () => {
         setShowPassword(prev => !prev);
     };
+
+    function getUserToken() {
+        return new Promise((resolve) => {
+            const intervalId = setInterval(() => {
+                const token = Cookies.get('userToken');
+                if (token) {
+                    clearInterval(intervalId); // Stop polling once the token is found
+                    resolve(token);
+                }
+            }, 100); // Check every 100ms
+        });
+    }
 
     const onSubmit = (data) => {
         const email = data.email;
@@ -44,7 +63,8 @@ const LoginPage = () => {
         signIn(email, password)
             .then(async (res) => {
                 const user = res.user;
-                if (user) {
+                const token = await getUserToken();
+                if (user && token) {
                     Swal.close();
                     Swal.fire({
                         position: "center",
@@ -53,15 +73,16 @@ const LoginPage = () => {
                         showConfirmButton: false,
                         timer: 2000,
                     });
-                    if (typeof window !== 'undefined') {
-                        const paymentLink = localStorage.getItem('paymentLink');
-                        if (paymentLink) {
-                            router.push(paymentLink + `?prefilled_email=${user.email}`);
-                            localStorage.removeItem('paymentLink');
-                        }
-                        else {
-                            router.push('/');
-                        }
+                }
+                if (typeof window !== "undefined") {
+                    const paymentLink = localStorage.getItem('paymentLink');
+                    if (pathName) {
+                        return router.replace(`${pathName}`); // Use `replace` instead of `push`
+                    } else if (paymentLink) {
+                        router.replace(paymentLink + `?prefilled_email=${user.email}`);
+                        return localStorage.removeItem('paymentLink');
+                    } else {
+                        return router.replace('/');
                     }
                 }
             })

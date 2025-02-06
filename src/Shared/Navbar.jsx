@@ -115,9 +115,6 @@ const Navbar = () => {
         )
     }
 
-    if (typeof window === 'undefined') return null;
-
-
     return (
         <div className={`w-full relative z-[100]`}>
             {/* Nav Top Part */}

@@ -17,13 +17,19 @@ const page = () => {
                 <div className='2xl:my-32 xl:my-24 my-10'>
                     <div className='w-full grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 2xl:gap-6 xl:gap-6 gap-5'>
                         <DashboardCard
-                            href={''}
-                            Icon={FaMessage}
-                            title="User Message !"
-                            description="Check your messages"
+                            Icon={FaFacebookMessenger}
+                            href={'/adminDashboard/messages'}
+                            title="Messages"
+                            description="Your Messages"
                             iconMargin="4px"
                         />
-
+                        <DashboardCard
+                            Icon={FaAddressBook}
+                            href={'/adminDashboard/appointments'}
+                            title="Appointments"
+                            description="See the people waiting for you"
+                            iconMargin="4px"
+                        />
                         <DashboardCard
                             href={''}
                             Icon={FaDollarSign}
@@ -60,20 +66,8 @@ const page = () => {
                             description="Sell all the subscribers"
                             iconMargin="4px"
                         />
-                        <DashboardCard
-                            Icon={FaAddressBook}
-                            href={'/adminDashboard/contacts'}
-                            title="Contacts"
-                            description="See the people waiting for you"
-                            iconMargin="4px"
-                        />
-                        <DashboardCard
-                            Icon={FaFacebookMessenger}
-                            href={'/adminDashboard/messages'}
-                            title="Messages"
-                            description="Your Messages"
-                            iconMargin="4px"
-                        />
+
+
                         <DashboardCard
                             Icon={FaBlog}
                             href={'https://clean-jobs.sanity.studio/'}

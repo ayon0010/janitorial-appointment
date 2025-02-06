@@ -3,7 +3,7 @@ import React from 'react';
 const TableHead = ({ tableHead, allLeads }) => {
     return (
         <thead>
-            <tr className="bg-[#FCFCFD]">
+            <tr className="bg-[#FCFCFD] w-full">
                 {
                     tableHead.map((th, index) => {
                         return (

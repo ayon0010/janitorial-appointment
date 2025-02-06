@@ -11,6 +11,7 @@ import 'sweetalert2/src/sweetalert2.scss';
 
 // Import lottie-web
 import lottie from 'lottie-web';
+import useAxiosPublic from '@/Hooks/useAxiosPublic';
 
 const AppointmentForm = () => {
     const [email, setEmail] = useState('');
@@ -41,6 +42,9 @@ const AppointmentForm = () => {
         });
     }, [email, name]);
 
+
+    const axiosPublic = useAxiosPublic();
+
     const onSubmit = async (data) => {
         console.log(data);
 
@@ -56,7 +60,7 @@ const AppointmentForm = () => {
                 },
             });
 
-            console.log(data);
+            await axiosPublic.post('/appointment', data)
 
             if (typeof window !== 'undefined') {
                 const email = localStorage.removeItem('email');
