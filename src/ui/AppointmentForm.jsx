@@ -10,11 +10,10 @@ import Swal from 'sweetalert2/dist/sweetalert2.js';
 import 'sweetalert2/src/sweetalert2.scss';
 
 // Import lottie-web
-import lottie from 'lottie-web';
+const LottieAnimation = dynamic(() => import('lottie-web'), { ssr: false });
 import useAxiosPublic from '@/Hooks/useAxiosPublic';
+import dynamic from 'next/dynamic';
 
-
-if (typeof window === 'undefined') return
 const AppointmentForm = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
@@ -90,7 +89,7 @@ const AppointmentForm = () => {
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const animationContainer = document.getElementById('lottie-animation');
-            lottie.loadAnimation({
+            LottieAnimation.loadAnimation({
                 container: animationContainer,
                 renderer: 'svg',
                 loop: true,
