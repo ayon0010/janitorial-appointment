@@ -17,14 +17,6 @@ const Page = () => {
                     <div className='w-full grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 2xl:gap-6 xl:gap-6 gap-5'>
 
                         <DashboardCard
-                            href={''}
-                            Icon={FaMessage}
-                            title="User Message !"
-                            description="Check your messages"
-                            iconMargin="4px"
-                        />
-
-                        <DashboardCard
                             href={'/dashboard/myLeads'}
                             Icon={FaList}
                             title="My Lead List"
@@ -51,7 +43,7 @@ const Page = () => {
                         />
 
                         <DashboardCard
-                            href={''}
+                            href={'/dashboard/purchasedLeads'}
                             Icon={FaShoppingCart}
                             title="Purchase Leads"
                             description="See the lead list you own"

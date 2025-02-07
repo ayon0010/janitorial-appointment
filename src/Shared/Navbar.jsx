@@ -43,7 +43,8 @@ const Navbar = () => {
         { name: 'Dashboard', href: '/dashboard' },
         isSeller && { href: '/sellerDashboard', name: 'Seller dashboard' },
         isAdmin && { href: '/adminDashboard', name: 'Admin dashboard' },
-    ];
+    ].filter(Boolean); // Remove falsy values
+
 
     // Token
     useEffect(() => {

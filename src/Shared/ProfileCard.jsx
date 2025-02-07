@@ -20,7 +20,7 @@ const ProfileCard = ({ sellerDashboard, userDashboard, adminDashboard }) => {
     }
 
     return (
-        <div className='2xl:mt-[50px] xl:mt-[50px] box-shadow rounded-3xl border border-[#246532]'>
+        <div className='2xl:mt-[50px] xl:mt-[50px] box-shadow rounded-3xl border border-[#246532] h-fit pb-10'>
             <div className='2xl:pt-[50px] xl:pt-[50px] pt-7'>
                 <div className="2xl:w-[60px] 2xl:h-[60px] xl:w-[50px] xl:h-[50px] relative w-[30px] h-[30px] rounded-full bg-primary  mx-auto text-white">
                     <span className="absolute top-1/2 right-1/2 transform -translate-y-1/2 translate-x-1/2 md:text-base text-xs font-normal">{firstLetter}</span>
@@ -72,30 +72,6 @@ const ProfileCard = ({ sellerDashboard, userDashboard, adminDashboard }) => {
                         <h2 className='text-base'>Logout</h2>
                     </div>
 
-                    <div className='flex items-center gap-2'>
-                        <MdOutlineNotifications size={'24px'} />
-                        <h2 className='text-base'>Notification</h2>
-                    </div>
-
-                </div>
-                <div className='2xl:px-8 xl:px-6 px-3 space-y-[18px] 2xl:py-12 xl:py-8 py-6'>
-                    <div className='bg-[#C7F2AB] px-6 py-5 rounded-[20px] flex items-start gap-3'>
-                        <div className='mt-[1px]'>
-                            <FaMessage />
-                        </div>
-                        <div>
-                            <h3 className='font-bold text-xs'>New Message !</h3>
-                            <p className=' text-xs'>You got a new message from our admin panel</p>
-                        </div>
-                    </div>
-                    <DashboardCard
-                        size={'24px'}
-                        Icon={MdOutlineNotifications}
-                        title="New Notification !"
-                        description="We just added some new leads check out now"
-                        iconMargin="1px"
-                        iconSize="24px"
-                    />
                 </div>
             </div>
         </div>

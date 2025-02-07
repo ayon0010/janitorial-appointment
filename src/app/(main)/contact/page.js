@@ -10,12 +10,9 @@ import FaEmail from '@/icons/FaEmail';
 import ContactForm from '@/ui/ContactForm';
 import SectionTitles from '@/ui/SectionTitles';
 import fb from '@/../public/assets/Frame (8).svg'
-import insta from '@/../public/assets/Frame (10).svg'
 import linked from '@/../public/assets/Frame (11).svg'
 import twitt from '@/../public/assets/Frame (12).svg'
-import youtube from '@/../public/assets/Frame (13).svg'
 import Map from '@/ui/Map';
-import Footer from '@/Shared/Footer';
 import Link from 'next/link';
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 const message = encodeURIComponent('Hello! I would like to inquire about your commercial cleaning leads.');
@@ -210,7 +207,6 @@ const page = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

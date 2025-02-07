@@ -8,26 +8,9 @@ import getLeads from "@/lib/getLeadById";
 
 
 
-
-// export const revalidate = 1;
-// export async function generateStaticParams() {
-//     const x = await getLeads();
-//     return x.map((d) => {
-//         const category = d.category;
-//         const states = d.states;
-//         const id = d._id;
-//         return {
-//             category, states, id
-//         }
-//     })
-// }
-
-
-
-
 const SingleLead = async ({ Lead }) => {
     const [leads, states, id] = Lead;
-    console.log(leads, states, id, 'z');
+    console.log(leads, states, id);
 
     const data = await getLeads(leads, states, id);
     const appointmentDate = data?.date;

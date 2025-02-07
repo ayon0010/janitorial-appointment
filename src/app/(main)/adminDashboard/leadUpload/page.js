@@ -66,7 +66,7 @@ const LeadForm = () => {
     };
 
     return (
-        <div className='2xl:pt-36 xl:py-28 py-28'>
+        <div className='2xl:pt-36 xl:py-28 py-28 bg-white'>
             <div className=''>
                 <div className="2xl:w-[60px] 2xl:h-[60px] xl:w-[50px] xl:h-[50px] relative w-[30px] h-[30px] rounded-full bg-primary  mx-auto text-white">
                     <span className="absolute top-1/2 right-1/2 transform -translate-y-1/2 translate-x-1/2 md:text-base text-xs font-normal">{firstLetter}</span>

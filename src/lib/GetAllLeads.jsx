@@ -10,8 +10,8 @@ const GetAllLeads = () => {
         queryFn: async () => {
             try {
                 const response = await axiosSecure.get(`allLeads`);
-                const data = await response.data;
-                console.log(data, 'allLeads');
+                const data = await response?.data;
+                console.log(data, 'allLeads', error);
                 return data;
             } catch (err) {
                 console.error("Error fetching user data:", err);
@@ -19,7 +19,7 @@ const GetAllLeads = () => {
             }
         },
     });
-    return { isLoading: false, allLeads, refetch };
+    return { isLoading, allLeads, refetch };
 };
 
 export default GetAllLeads;

@@ -40,7 +40,7 @@ const pricingPlans = [
         priceclassName: "text-6xl font-bold text-white",
         priceUnitclassName: "font-semibold text-base text-white",
         descriptionclassName: "nunito text-xs font-normal text-white",
-        paymentLink: process.env.NEXT_PUBLIC_STRIPE_BI_ANNUALLY_LINK
+        paymentLink: process.env.NEXT_PUBLIC_STRIPE_YEARLY_LINK
     },
     {
         title: "Essential Plan",
@@ -60,7 +60,7 @@ const pricingPlans = [
         priceclassName: "text-6xl font-bold",
         priceUnitclassName: "text-gray-500 font-semibold text-base",
         descriptionclassName: "nunito text-xs font-normal",
-        paymentLink: process.env.NEXT_PUBLIC_STRIPE_YEARLY_LINK
+        paymentLink: process.env.NEXT_PUBLIC_STRIPE_BI_ANNUALLY_LINK
     }
 ];
 

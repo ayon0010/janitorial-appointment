@@ -1,4 +1,5 @@
 'use client'
+export const dynamic = "force-dynamic";
 import useAuth from '@/Hooks/useAuth';
 import useAxiosSecure from '@/Hooks/useAxiosSecure';
 import GetSavedLead from '@/lib/getSavedLead';
@@ -6,7 +7,6 @@ import Table from '@/Shared/Table';
 import SectionTitles from '@/ui/SectionTitles';
 import React from 'react';
 import Swal from 'sweetalert2';
-
 
 const Page = () => {
 

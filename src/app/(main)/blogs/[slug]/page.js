@@ -51,7 +51,7 @@ export async function generateMetadata({ params }) {
             "janitorial marketing strategies",
         ],
         openGraph: {
-            title: "Janitorial Appointments & Commercial Cleaning Leads Blog",
+            title: "Blogs - Janitorial Appointments & Commercial Cleaning Leads",
             description:
                 "Explore industry news and expert tips on generating janitorial appointments and commercial cleaning leads to grow your business.",
             url: "https://www.janitorialappointment.com/blogs/" + params.slug,
@@ -67,7 +67,7 @@ export async function generateMetadata({ params }) {
         },
         twitter: {
             card: "",
-            title: "Janitorial Appointments & Commercial Cleaning Leads Blog",
+            title: "Blogs - Janitorial Appointments & Commercial Cleaning Leads",
             description:
                 "Discover expert insights on janitorial appointments and commercial cleaning leads for growing your cleaning business.",
         },

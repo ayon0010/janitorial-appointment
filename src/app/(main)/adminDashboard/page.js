@@ -31,9 +31,9 @@ const page = () => {
                             iconMargin="4px"
                         />
                         <DashboardCard
-                            href={''}
+                            href={'/adminDashboard/premiumUsers'}
                             Icon={FaDollarSign}
-                            title="Payment Status"
+                            title="Premium Users"
                             description="See the payment status "
                             iconMargin="4px"
                         />

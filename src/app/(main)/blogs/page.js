@@ -3,7 +3,7 @@ import BlogCards from '@/ui/BlogCards';
 
 
 export const metadata = {
-    title: "Janitorial Appointments & Commercial Cleaning Leads Blog",
+    title: "Blog - Janitorial Appointments & Commercial Cleaning Leads",
     description:
         "Stay updated with the latest insights on janitorial appointments and commercial cleaning leads. Learn tips and strategies to grow your business.",
     keywords: [
@@ -29,8 +29,7 @@ export const metadata = {
 };
 
 
-
-export const revalidate = 8;
+export const revalidate = 2;
 
 
 export const blogData = async () => {

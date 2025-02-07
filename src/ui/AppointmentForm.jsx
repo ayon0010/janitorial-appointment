@@ -8,11 +8,9 @@ import { useForm } from 'react-hook-form';
 import FormButton from '@/Shared/FormButton';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 import 'sweetalert2/src/sweetalert2.scss';
-
+import lottie from 'lottie-web'
 // Import lottie-web
-const LottieAnimation = dynamic(() => import('lottie-web'), { ssr: false });
 import useAxiosPublic from '@/Hooks/useAxiosPublic';
-import dynamic from 'next/dynamic';
 
 const AppointmentForm = () => {
     const [email, setEmail] = useState('');
@@ -89,7 +87,7 @@ const AppointmentForm = () => {
     useEffect(() => {
         if (typeof document !== 'undefined') {
             const animationContainer = document.getElementById('lottie-animation');
-            LottieAnimation.loadAnimation({
+            lottie.loadAnimation({
                 container: animationContainer,
                 renderer: 'svg',
                 loop: true,

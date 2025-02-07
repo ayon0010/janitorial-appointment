@@ -1,14 +1,13 @@
-import Table from '@/Shared/Table';
 import SectionTitles from '@/ui/SectionTitles';
 import TableHead from '@/ui/TableHead';
 import { cookies } from 'next/headers';
 import React from 'react';
 
 const page = async () => {
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const userTokenObj = cookieStore.get('userToken');
     const token = userTokenObj?.value;
-    const res = await fetch('https://clean-job-backend-final.vercel.app/subscribedEmail', {
+    const res = await fetch('http://localhost:5000/subscribedEmail', {
         cache: 'no-cache',
         headers: {
             authorization: `Bearer ${token}`
@@ -16,8 +15,8 @@ const page = async () => {
     })
     const data = await res.json();
     return (
-        <div className='2xl:px-[70px] xl:px-16 px-8 2xl:my-36 xl:my-28 my-16'>
-             <SectionTitles heading={'Messages from Users'} subHeading={'See the user messages'} />
+        <div className='2xl:px-[70px] xl:px-16 px-8 2xl:py-36 xl:py-28 my-28'>
+            <SectionTitles heading={'Subscribed Email'} subHeading={'See the user messages'} />
             <div className="overflow-x-auto mt-10">
                 <table className="table">
                     {/* head */}

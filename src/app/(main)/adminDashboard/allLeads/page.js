@@ -7,8 +7,9 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import dynamic from 'next/dynamic';
+import GetAllLeads from '@/lib/GetAllLeads';
+import Loading from '../../loading';
 const Modal = dynamic(() => import('@/ui/Modal'), { ssr: false });
-const GetAllLeads = dynamic(() => import('@/lib/GetAllLeads'), { ssr: false });
 const Dot = dynamic(() => import('@/ui/Dot'), { ssr: false });
 const Info = dynamic(() => import('@/ui/Info'), { ssr: false });
 
@@ -149,7 +150,7 @@ const Page = () => {
 
 
     if (isLoading) {
-        return <p>Loading...</p>
+        return <Loading />
     }
 
     return (
@@ -176,10 +177,10 @@ const Page = () => {
                     <TableHead allLeads={true} tableHead={['Uploader', 'Business Name', 'Decision Maker', 'Appointment Date', 'Appointment Time', 'States', 'City', 'Area', 'Upload Date', 'Audio', 'Status', 'Additional Details', 'Category', 'Sold', 'Change Category', 'Update Status', 'Prize', 'Set Prize', 'Action', 'Edit', 'Details']} />
                     <tbody>
                         {
-                            allLeads?.map(lead => {
+                            allLeads?.map((lead, i) => {
                                 return (
                                     <>
-                                        <tr key={lead?._id}>
+                                        <tr key={i}>
                                             <td>
                                                 <p className='text-xs font-semibold text-black  text-center'>{lead?.companyName}</p>
                                             </td>
