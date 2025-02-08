@@ -1,24 +1,24 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import animation from '../../public/assets/Animation - 1737791900666appointment.json';
 import { motion } from 'framer-motion'; // This is kept as it was in your code
 import InputField from '@/Shared/InputField';
 import { useForm } from 'react-hook-form';
 import FormButton from '@/Shared/FormButton';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 import 'sweetalert2/src/sweetalert2.scss';
-import lottie from 'lottie-web'
+
 // Import lottie-web
 import useAxiosPublic from '@/Hooks/useAxiosPublic';
+import dynamic from 'next/dynamic';
+
+const ContactAnimation = dynamic(() => import('./ContactAnimation'), { 
+  ssr: false // Set to false if the component relies on browser-specific APIs
+});
+
 
 const AppointmentForm = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
-    const [isClient, setIsClient] = useState(false);
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-
 
     useEffect(() => {
         if (typeof window !== 'undefined' && document) {
@@ -88,29 +88,6 @@ const AppointmentForm = () => {
         }
     };
 
-    useEffect(() => {
-        if (isClient) {
-            if (typeof window !== 'undefined' && document) {
-                const animationContainer = document.getElementById('lottie-animation');
-                lottie.loadAnimation({
-                    container: animationContainer,
-                    renderer: 'svg',
-                    loop: true,
-                    autoplay: true,
-                    animationData: animation
-                });
-
-                // Cleanup on component unmount
-                return () => {
-                    lottie.destroy();
-                };
-            }
-        }
-    }, [isClient]);
-
-    if (!isClient) {
-        return null; // Render nothing on the server-side
-    }
 
     return (
         <div className="pt-[100px] px-10 pb-20">
@@ -126,7 +103,7 @@ const AppointmentForm = () => {
                         }}
                         className="w-fit"
                     >
-                        <div id="lottie-animation" className="h-auto 2xl:w-[300px] xl:w-[300px] bg-transparent" />
+                        <ContactAnimation />
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, scale: 0.5 }}

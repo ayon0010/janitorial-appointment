@@ -7,19 +7,6 @@ function capitalizeFirstLetter(string) {
     return string?.charAt(0)?.toUpperCase() + string?.slice(1);
 }
 
-// export const revalidate = 1;
-// export async function generateStaticParams() {
-//     const x = await getLeads();
-//     return x.map((d) => {
-//         const category = d.category;
-//         const states = d.states;
-//         return {
-//             category, states
-//         }
-//     })
-// }
-
-
 const States = async ({ States }) => {
 
     const [leads, states] = States;

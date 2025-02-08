@@ -48,7 +48,7 @@ const Table = ({ tableHead, data, states, Button, bookMarks }) => {
                                                     </>
                                                     :
                                                     <>
-                                                        <Dot width={'w-[30px]'} />
+                                                        <Dot width={'30px'} />
                                                         <p className="text-[#027A48]
                                      inter text-sm font-medium">Available</p>
                                                     </>
