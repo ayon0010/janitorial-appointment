@@ -54,7 +54,8 @@ const SingleLead = async ({ Lead }) => {
                 {data?.sold ? (
                     <SoldMessage />
                 ) : (
-                    <BuyLeadMessage isDisabled={!isDisabled} leads={leads} appointmentDate={data?.date} product_Id={id} prize={data?.prize} />
+                    // <BuyLeadMessage isDisabled={!isDisabled} leads={leads} appointmentDate={data?.date} product_Id={id} prize={data?.prize} />
+                    <p>Ayon</p>
                 )}
             </div>
         </div>
