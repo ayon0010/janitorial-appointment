@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useEffect, useRef } from 'react';
 import lottie from 'lottie-web';
 import animation from '../../public/assets/Animation - 1720847116099.json';
@@ -8,19 +8,24 @@ const FireIcon = ({ width }) => {
 
     useEffect(() => {
         const animationInstance = lottie.loadAnimation({
-            container: containerRef.current, // The DOM element where the animation will render
-            renderer: 'svg', // Use SVG rendering
-            loop: true, // Loop the animation
-            autoplay: true, // Start playing immediately
-            animationData: animation, // The animation data from the imported JSON file
+            container: containerRef.current,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            animationData: animation,
         });
 
         // Cleanup the animation on component unmount
         return () => animationInstance.destroy();
-    }, []); // Empty dependency array to ensure this runs only once
+    }, []);
 
     return (
-        <div ref={containerRef} title="popular" className={`h-auto w-[${width}px]`} />
+        <div
+            ref={containerRef}
+            title="popular"
+            style={{ width: `${width}px` }}
+            className="h-auto"
+        />
     );
 };
 

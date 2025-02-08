@@ -1,8 +1,8 @@
 import Dot from "@/ui/Dot";
 import FireIcon from "@/ui/FireIcon";
 import getDateDifference from "@/js/calculateDate";
-// import Bookmarks from "@/ui/Bookmarks";
-// import BuyLeadMessage from "@/ui/BuyLeadMessage";
+import Bookmarks from "@/ui/Bookmarks";
+import BuyLeadMessage from "@/ui/BuyLeadMessage";
 import getLeads from "@/lib/getLeadById";
 
 
@@ -14,8 +14,8 @@ const SingleLead = async ({ Lead }) => {
 
     const data = await getLeads(leads, states, id);
     const appointmentDate = data?.date;
-    // const currentDate = new Date(); // Replace with new Date() in production
-    // const isDisabled = new Date(appointmentDate) < currentDate;
+    const currentDate = new Date(); // Replace with new Date() in production
+    const isDisabled = new Date(appointmentDate) < currentDate;
 
     return (
         <div className="pt-40 pb-20 px-10 bg-white">
@@ -54,8 +54,7 @@ const SingleLead = async ({ Lead }) => {
                 {data?.sold ? (
                     <SoldMessage />
                 ) : (
-                    // <BuyLeadMessage isDisabled={!isDisabled} leads={leads} appointmentDate={data?.date} product_Id={id} prize={data?.prize} />
-                    <p>Ayon</p>
+                    <BuyLeadMessage isDisabled={!isDisabled} leads={leads} appointmentDate={data?.date} product_Id={id} prize={data?.prize} />
                 )}
             </div>
         </div>
