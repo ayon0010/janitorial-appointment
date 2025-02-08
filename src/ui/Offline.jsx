@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import lottie from 'lottie-web';
 import animation from '../../public/assets/Animation - 1722326215234 (1).json';
 
