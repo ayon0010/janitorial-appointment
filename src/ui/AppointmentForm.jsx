@@ -15,6 +15,11 @@ import useAxiosPublic from '@/Hooks/useAxiosPublic';
 const AppointmentForm = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
 
     useEffect(() => {
         if (typeof window !== 'undefined' && document) {
@@ -85,22 +90,28 @@ const AppointmentForm = () => {
     };
 
     useEffect(() => {
-        if (typeof window !== 'undefined' && document) {
-            const animationContainer = document.getElementById('lottie-animation');
-            lottie.loadAnimation({
-                container: animationContainer,
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                animationData: animation
-            });
+        if (isClient) {
+            if (typeof window !== 'undefined' && document) {
+                const animationContainer = document.getElementById('lottie-animation');
+                lottie.loadAnimation({
+                    container: animationContainer,
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    animationData: animation
+                });
 
-            // Cleanup on component unmount
-            return () => {
-                lottie.destroy();
-            };
+                // Cleanup on component unmount
+                return () => {
+                    lottie.destroy();
+                };
+            }
         }
-    }, []);
+    }, [isClient]);
+
+    if (!isClient) {
+        return null; // Render nothing on the server-side
+    }
 
     return (
         <div className="pt-[100px] px-10 pb-20">

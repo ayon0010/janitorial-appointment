@@ -15,32 +15,43 @@ import { FaWhatsapp } from 'react-icons/fa';
 const ContactInfo = () => {
     const animationRef = useRef(null);
     const animation2Ref = useRef(null);
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
 
     useEffect(() => {
         // Initialize Lottie animations for both refs
-        const animationInstance = lottie.loadAnimation({
-            container: animationRef.current,
-            renderer: 'svg',
-            loop: false,
-            autoplay: true,
-            animationData: animation,
-        });
+        if (isClient) {
+            const animationInstance = lottie.loadAnimation({
+                container: animationRef.current,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                animationData: animation,
+            });
 
-        const animation2Instance = lottie.loadAnimation({
-            container: animation2Ref.current,
-            renderer: 'svg',
-            loop: false,
-            autoplay: true,
-            animationData: animation2,
-            speed: 0.4,
-        });
+            const animation2Instance = lottie.loadAnimation({
+                container: animation2Ref.current,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                animationData: animation2,
+                speed: 0.4,
+            });
 
-        // Cleanup Lottie animations on component unmount
-        return () => {
-            animationInstance.destroy();
-            animation2Instance.destroy();
-        };
+            // Cleanup Lottie animations on component unmount
+            return () => {
+                animationInstance.destroy();
+                animation2Instance.destroy();
+            };
+        }
     }, []);
+
+    if (!isClient) {
+        return null; // Render nothing on the server-side
+    }
+
     const message = encodeURIComponent('Hello! I would like to inquire about your commercial cleaning leads.');
 
     return (
