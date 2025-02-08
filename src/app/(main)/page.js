@@ -13,9 +13,9 @@ import Leads from "@/ui/Leads";
 import Appointment from "@/ui/Appointment";
 import Web from "@/ui/Web";
 import image from '@/../public/assets/group-young-business-people-working-office_result.webp';
-// import ContactInfo from "@/ui/ContactInfo";
 import ReviewItems from "../../ui/ReviewItems";
 import { data } from '@/js/states';
+import ContactAnimationForHome from "@/ui/ContactAnimationForHome";
 
 
 export const metadata = {
@@ -272,7 +272,7 @@ export default function Home() {
             </div>
             <div className="py-28  bg-white">
                 <SectionTitles heading={"Contact Us"} />
-                {/* <ContactInfo /> */}
+                <ContactAnimationForHome />
             </div>
         </div >
     )

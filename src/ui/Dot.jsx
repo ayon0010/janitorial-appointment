@@ -35,7 +35,7 @@ const Dot = ({ width }) => {
     return (
         <div className="flex items-center justify-center pt-40 pb-20 px-10">
             <div className="flex items-center justify-center">
-                <div ref={containerRef} className={`h-auto w-${width}`} />
+                <div ref={containerRef} className={`h-auto w-[${width}]`} />
             </div>
         </div>
     );

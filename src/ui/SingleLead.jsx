@@ -1,9 +1,10 @@
-// import Dot from "@/ui/Dot";
-// import FireIcon from "@/ui/FireIcon";
+
 import getDateDifference from "@/js/calculateDate";
 import Bookmarks from "@/ui/Bookmarks";
 import BuyLeadMessage from "@/ui/BuyLeadMessage";
 import getLeads from "@/lib/getLeadById";
+import DotClient from "./DotClient";
+import FireClient from "./FireClient";
 
 
 const SingleLead = async ({ Lead }) => {
@@ -26,7 +27,7 @@ const SingleLead = async ({ Lead }) => {
                         :
                         <div className="flex items-center justify-center gap-4 w-fit mx-auto">
                             <div className="flex items-center bg-[#ECFDF3] rounded-[20px] py-[3px] pl-[10px] pr-[20px] w-fit mx-auto">
-                                {/* <Dot width={'w-[30px]'} /> */}
+                                <DotClient />
                                 <p className="text-[#027A48] inter text-sm font-medium">Available</p>
                             </div>
                             <Bookmarks id={data?._id} />
@@ -36,7 +37,7 @@ const SingleLead = async ({ Lead }) => {
                     <h3 className="inter text-7xl font-black text-center mt-6">
                         {data?.scope} <span className="inter text-3xl text-secondary font-semibold">-{data?.frequency}</span>
                     </h3>
-                    {/* <FireIcon width={"30"} /> */}
+                    <FireClient />
                 </div>
                 <p className="text-center text-[#585860] font-medium text-2xl mt-4">{getDateDifference(data?.uploadDate)}</p>
                 <div className="mt-10 grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-10">
