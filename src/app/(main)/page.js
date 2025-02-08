@@ -257,7 +257,7 @@ export default function Home() {
                     />
                 </div>
                 <div>
-                    {/* <div className='md:grid md:grid-cols-3 md:gap-3 hidden'>
+                    <div className='md:grid md:grid-cols-3 md:gap-3 hidden'>
                         {
                             data?.map((d, i) => {
                                 return (
@@ -265,14 +265,14 @@ export default function Home() {
                                 )
                             })
                         }
-                    </div> */}
+                    </div>
                 </div>
-                {/* <Reviews /> */}
+                <Reviews />
                 {/*  */}
             </div>
             <div className="py-28  bg-white">
                 <SectionTitles heading={"Contact Us"} />
-                {/* <ContactInfo /> */}
+                <ContactInfo />
             </div>
         </div >
     )
