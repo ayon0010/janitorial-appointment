@@ -31,7 +31,7 @@ const SingleLead = async ({ Lead }) => {
                                 <Dot width={'w-[30px]'} />
                                 <p className="text-[#027A48] inter text-sm font-medium">Available</p>
                             </div>
-                            {/* <Bookmarks id={data?._id} /> */}
+                            <Bookmarks id={data?._id} />
                         </div>
                 }
                 <div className="flex justify-center items-end">
