@@ -1,11 +1,9 @@
 import Dot from "@/ui/Dot";
-import FireIcon from "@/ui/FireIcon";
+// import FireIcon from "@/ui/FireIcon";
 import getDateDifference from "@/js/calculateDate";
 import Bookmarks from "@/ui/Bookmarks";
 import BuyLeadMessage from "@/ui/BuyLeadMessage";
 import getLeads from "@/lib/getLeadById";
-
-
 
 
 const SingleLead = async ({ Lead }) => {
@@ -38,7 +36,7 @@ const SingleLead = async ({ Lead }) => {
                     <h3 className="inter text-7xl font-black text-center mt-6">
                         {data?.scope} <span className="inter text-3xl text-secondary font-semibold">-{data?.frequency}</span>
                     </h3>
-                    <FireIcon width={"30"} />
+                    {/* <FireIcon width={"30"} /> */}
                 </div>
                 <p className="text-center text-[#585860] font-medium text-2xl mt-4">{getDateDifference(data?.uploadDate)}</p>
                 <div className="mt-10 grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-10">
