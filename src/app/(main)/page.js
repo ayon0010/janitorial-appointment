@@ -5,17 +5,17 @@ import slide4 from '../../../public/assets/Screenshot (12)_result_result_result.
 import Banner from "@/ui/Banner";
 import SectionTitles from "@/ui/SectionTitles";
 import FaCheck from "@/ui/FaCheck";
-// import Reviews from "@/ui/Reviews";
-// import Pricing from "@/ui/Pricing";
+import Reviews from "@/ui/Reviews";
+import Pricing from "@/ui/Pricing";
 import '../globals.css'
 import Offers from "@/ui/Offers";
 import Leads from "@/ui/Leads";
-// import Appointment from "@/ui/Appointment";
-// import Web from "@/ui/Web";
-// import image from '@/../public/assets/group-young-business-people-working-office_result.webp';
-// import ContactInfo from "@/ui/ContactInfo";
-// import ReviewItems from "../../ui/ReviewItems";
-// import { data } from '@/js/states';
+import Appointment from "@/ui/Appointment";
+import Web from "@/ui/Web";
+import image from '@/../public/assets/group-young-business-people-working-office_result.webp';
+import ContactInfo from "@/ui/ContactInfo";
+import ReviewItems from "../../ui/ReviewItems";
+import { data } from '@/js/states';
 
 
 export const metadata = {
@@ -41,13 +41,13 @@ export default function Home() {
                     <div className="px-6 mb-10">
                         <SectionTitles heading={"Book an appointment"} subHeading={"Reserve a convenient time for your appointment"} />
                     </div>
-                    {/* <Appointment /> */}
+                    <Appointment />
                 </div>
                 <div className="2xl:py-20 xl:py-20 py-10">
                     <div className="px-6">
                         <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />
                     </div>
-                    {/* <Pricing /> */}
+                    <Pricing />
                 </div>
                 <h5 className="text-secondary text-center font-light text-xl mt-20 mb-4">How We Help You to Grow</h5>
                 <div className="w-[80%] mx-auto">
@@ -241,11 +241,11 @@ export default function Home() {
                             "High-quality commercial cleaning leads delivered to your inbox, connect with top prospects, and automate engagement with key decision-makers."
                         }
                     />
-                    {/* <Offers /> */}
+                    <Offers />
                 </div>
 
                 <div>
-                    {/* <Web image={image} /> */}
+                    <Web image={image} />
                 </div>
 
                 <div className="2xl:mt-40 xl:mt-40 mt-20">
