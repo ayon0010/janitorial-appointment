@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 
 const ChatProvider = ({ children }) => {
     useEffect(() => {
-        if (typeof document !== 'undefined') {
+        if (typeof window !== 'undefined' && document) {
             const loadTawkScript = () => {
                 const script = document.createElement('script');
                 script.async = true;

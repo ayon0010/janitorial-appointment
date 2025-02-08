@@ -17,7 +17,7 @@ const AppointmentForm = () => {
     const [name, setName] = useState('');
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
+        if (typeof window !== 'undefined' && document) {
             const email = localStorage.getItem('email');
             const name = localStorage.getItem('name');
             setEmail(email);
@@ -61,7 +61,7 @@ const AppointmentForm = () => {
 
             await axiosPublic.post('/appointment', data)
 
-            if (typeof window !== 'undefined') {
+            if (typeof window !== 'undefined' && document) {
                 const email = localStorage.removeItem('email');
                 const name = localStorage.removeItem('name');
             }
@@ -85,7 +85,7 @@ const AppointmentForm = () => {
     };
 
     useEffect(() => {
-        if (typeof document !== 'undefined') {
+        if (typeof window !== 'undefined' && document) {
             const animationContainer = document.getElementById('lottie-animation');
             lottie.loadAnimation({
                 container: animationContainer,
