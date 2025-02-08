@@ -3,8 +3,8 @@ import '../globals.css'
 import AuthProvider from '@/Providers/AuthProvider'
 import QueryProvider from '@/Providers/QueryProvider'
 import Footer from '@/Shared/Footer'
-import ChatProvider from '@/Providers/ChatProvider'
-import Navbar from '@/Shared/Navbar'
+// import ChatProvider from '@/Providers/ChatProvider'
+// import Navbar from '@/Shared/Navbar'
 
 
 export const inter = Inter({
@@ -30,11 +30,12 @@ export default function RootLayout({ children }) {
         <main className='overflow-hidden min-h-screen max-w-[1920px] mx-auto bg-[#EEEFF1]'>
           <AuthProvider>
             <QueryProvider>
-              <ChatProvider>
-                <Navbar />
-                {children}
-                <Footer />
-              </ChatProvider>
+              {/* <ChatProvider>
+                
+              </ChatProvider> */}
+              {/* <Navbar /> */}
+              {children}
+              <Footer />
             </QueryProvider>
           </AuthProvider>
         </main>
