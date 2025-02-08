@@ -1,7 +1,7 @@
 import Dot from "@/ui/Dot";
 import FireIcon from "@/ui/FireIcon";
 import getDateDifference from "@/js/calculateDate";
-import Bookmarks from "@/ui/Bookmarks";
+// import Bookmarks from "@/ui/Bookmarks";
 // import BuyLeadMessage from "@/ui/BuyLeadMessage";
 import getLeads from "@/lib/getLeadById";
 
@@ -31,7 +31,7 @@ const SingleLead = async ({ Lead }) => {
                                 <Dot width={'w-[30px]'} />
                                 <p className="text-[#027A48] inter text-sm font-medium">Available</p>
                             </div>
-                            <Bookmarks id={data?._id} />
+                            {/* <Bookmarks id={data?._id} /> */}
                         </div>
                 }
                 <div className="flex justify-center items-end">
