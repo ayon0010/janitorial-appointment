@@ -34,7 +34,7 @@ export default function PaymentForm({ dpmCheckerLink, product_Id, closeModal }) 
         const { error, paymentIntent } = await stripe.confirmPayment({
             elements,
             confirmParams: {
-                return_url: 'http://localhost:3000/',
+                return_url: 'https://www.janitorialappointment.com/',
                 receipt_email: user?.email,
             },
             redirect: redirect ? "always" : 'if_required' // Prevent redirect for now, handle it manually.

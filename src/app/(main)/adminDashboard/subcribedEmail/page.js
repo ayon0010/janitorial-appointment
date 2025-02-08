@@ -7,7 +7,7 @@ const page = async () => {
     const cookieStore = await cookies();
     const userTokenObj = cookieStore.get('userToken');
     const token = userTokenObj?.value;
-    const res = await fetch('http://localhost:5000/subscribedEmail', {
+    const res = await fetch('clean-job-backend-final.vercel.app/subscribedEmail', {
         cache: 'no-cache',
         headers: {
             authorization: `Bearer ${token}`
