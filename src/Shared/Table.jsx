@@ -1,5 +1,7 @@
+'use client'
 import formatTimestamp from '@/js/convertTime';
-import Dot from '@/ui/Dot';
+import dynamic from 'next/dynamic';
+const Dot = dynamic(() => import('@/ui/Dot'), { ssr: false });
 import Info from '@/ui/Info';
 import MapMarker from '@/ui/MapMarker';
 import TableHead from '@/ui/TableHead';

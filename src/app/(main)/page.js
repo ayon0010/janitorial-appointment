@@ -14,7 +14,7 @@ import Appointment from "@/ui/Appointment";
 import Web from "@/ui/Web";
 import image from '@/../public/assets/group-young-business-people-working-office_result.webp';
 import ContactInfo from "@/ui/ContactInfo";
-import ReviewItems from "../../../ReviewItems";
+import ReviewItems from "../../ui/ReviewItems";
 import { data } from '@/js/states';
 
 
