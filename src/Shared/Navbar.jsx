@@ -29,7 +29,6 @@ const Navbar = () => {
         { name: 'Single Decision Maker', href: '/single-decision-maker' },
         { name: 'Cleaning Calculator', href: '/cleaning-calculator' },
         { name: 'Web & App Support', href: '/other-services' },
-        { name: 'Subscription', href: '/my-subscription' },
     ]
 
     const Leads = [

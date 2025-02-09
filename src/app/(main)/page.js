@@ -17,19 +17,25 @@ import ReviewItems from "../../ui/ReviewItems";
 import { data } from '@/js/states';
 import ContactAnimationForHome from "@/ui/ContactAnimationForHome";
 
-
 export const metadata = {
-    title: "Janitorial Appointments and Commercial Cleaning Leads",
+    title: "Janitorial Appointments | Commercial Cleaning Leads",
     description:
-        "Generate high-quality janitorial appointments, commercial cleaning leads, and boost your janitorial business with effective lead generation strategies.",
+        "Boost your janitorial business with high-quality janitorial appointments and commercial cleaning leads. Unlock effective lead generation strategies for growth.",
     keywords: [
         "janitorial appointments",
         "commercial cleaning leads",
         "janitorial lead generation",
+        "cleaning service leads",
+        "book janitorial appointments",
     ],
-    authors: [{ name: "Al Shariar Auon" }],
-    charset: "UTF-8",
+    authors: [
+        {
+            name: "Al Shariar Auon",
+        },
+    ],
+    charset: "utf-8",
 };
+
 
 export default function Home() {
     return (

@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useRef, useState } from 'react';
 
-const Dot = ({ width }) => {
+const Dot = ({ width, h }) => {
     const [isClient, setIsClient] = useState(false);
     const containerRef = useRef(null);
 
@@ -33,7 +33,7 @@ const Dot = ({ width }) => {
     }
 
     return (
-        <div className="flex items-center justify-center pt-40 pb-20 px-10">
+        <div className={`${!h ? 'flex items-center justify-center pt-40 pb-20 px-10' : ''}`}>
             <div className="flex items-center justify-center">
                 <div ref={containerRef} className={`h-auto w-[${width}]`} />
             </div>

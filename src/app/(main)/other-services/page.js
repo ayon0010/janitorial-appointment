@@ -18,12 +18,30 @@ import desing1 from '@/../public/assets/016398bfcbe842bfe46ef81a5438c984_result_
 import desing2 from '@/../public/assets/126d255806c5000ad6d009871cc3b81b_result_result.webp'
 import desing3 from '@/../public/assets/b3e87b895d98f825cbfa5eaddda18e4b_result_result.webp'
 import desing4 from '@/../public/assets/927cc8b897e6124b1c31ff8bc507f55a_result_result.webp'
+import Link from 'next/link';
+import ButtonPrimary from '@/ui/ButtonPrimary';
 
 const page = () => {
     return (
-        <div>
+        <div className='2xl:pt-[100px] xl:pt-[100px] pt-[80px]'>
+            <div className="banner-6 flex flex-col h-full relative">
+                <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
+                    <h2 className='2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:banner-text xl:banner-text text-white'>
+                        Elevate Your Brand, Expert <span className='text-green-600'>Digital Marketing, Web & App Solutions</span>
+                    </h2>
+                    <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80'>Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!</p>
+                    <div className='flex items-center gap-6'>
+                        <div>
+                            <Link href={'/register'}>
+                                <ButtonPrimary label={'Sign Up'} />
+                            </Link>
+                        </div>
+                        <p className='text-white opacity-80 inter font-bold 2xl:text-base xl:text-base text-xs'>No Credit Card Required</p>
+                    </div>
+                </div>
+            </div>
             <div className='2xl:px-40 xl:px-28 px-10 bg-white'>
-                <div className='2xl:py-44 xl:py-44 py-36'>
+                <div className='2xl:py-24 xl:py-24 py-16'>
                     <h1 className={`2xl:text-7xl xl:text-5xl text-3xl `}>Complete IT Solutions &
                         Targeted Telemarketing for Every Sector</h1>
                     <div className='mt-6 grid xl:grid-cols-4 2xl:grid-cols-5 grid-cols-2 gap-5'>
@@ -169,7 +187,9 @@ const page = () => {
                                 <h2 className="card-title  text-primary text-xl font-semibold">UI/UX Design</h2>
                                 <p className='text-xs  text-[#000] opacity-50'>Designs intuitive and visually appealing interfaces that enhance user experience</p>
                                 <div className="card-actions justify-start mt-3">
-                                    <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
+                                    <Link href={'/contact'}>
+                                        <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +201,9 @@ const page = () => {
                                 <h2 className="card-title  text-primary text-xl font-semibold">Front-End Develop</h2>
                                 <p className='text-xs  text-[#000] opacity-50'>Transforms design into responsive, interactive web pages with clean code</p>
                                 <div className="card-actions justify-start mt-3">
-                                    <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
+                                    <Link href={'/contact'}>
+                                        <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -193,7 +215,9 @@ const page = () => {
                                 <h2 className="card-title  text-primary text-xl font-semibold">Back-End Develop</h2>
                                 <p className='text-xs  text-[#000] opacity-50'>Powering Your Applications with Robust Backend Solutions</p>
                                 <div className="card-actions justify-start mt-3">
-                                    <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
+                                    <Link href={'/contact'}>
+                                        <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -204,8 +228,9 @@ const page = () => {
                             <div className="card-body">
                                 <h2 className="card-title  text-primary text-xl font-semibold">Search Engine Optimization (SEO)</h2>
                                 <p className='text-xs  text-[#000] opacity-50'>Optimizes websites and content to improve rankings and drive organic traffic</p>
-                                <div className="card-actions justify-start mt-3">
+                                <div className="card-actions justify-start mt-3"> <Link href={'/contact'}>
                                     <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
+                                </Link>
                                 </div>
                             </div>
                         </div>
@@ -217,14 +242,16 @@ const page = () => {
                                 <h2 className="card-title  text-primary text-xl font-semibold">Tele Marketing</h2>
                                 <p className='text-xs  text-[#000] opacity-50'>Identifies and connects with potential customers to drive business growth and conversions</p>
                                 <div className="card-actions justify-start mt-3">
-                                    <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
+                                    <Link href={'/contact'}>
+                                        <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='grid grid-cols-2'>
-                    <div className='w-full'>
+                <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1'>
+                    <div className='w-full 2xl:block xl:block hidden'>
                         <Image className='max-h-[750px] w-full object-contain' src={people} alt='' />
                     </div>
                     <div>
@@ -240,7 +267,7 @@ const page = () => {
                             </p>
                         </div>
                         <div className='my-10 w-3/4'>
-                            <div className='flex justify-between items-center'>
+                            <div className='flex justify-between items-center gap-10'>
                                 <div className='flex items-start gap-[17px]'>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="51" height="58" viewBox="0 0 51 58" fill="none">
                                         <path d="M50.7934 51.0675L42.3117 36.3769C42.6164 36.0219 43.0304 35.7594 43.5136 35.6455C44.8496 35.3307 45.9575 34.4408 46.553 33.2041C47.1486 31.9674 47.1535 30.5465 46.5667 29.3057C46.1174 28.3561 46.3741 27.2312 47.1909 26.5706C48.2581 25.7072 48.8702 24.4248 48.8702 23.0522C48.8702 21.6796 48.2581 20.3971 47.1909 19.5339C46.3741 18.8732 46.1174 17.7484 46.5667 16.7987C47.1536 15.5579 47.1486 14.1369 46.553 12.9002C45.9575 11.6635 44.8496 10.7736 43.5135 10.4589C42.4909 10.218 41.7716 9.31601 41.7643 8.26542C41.7548 6.89283 41.1337 5.61475 40.0605 4.75893C38.9874 3.90312 37.603 3.58202 36.2628 3.87819C35.2368 4.10467 34.1975 3.60424 33.7351 2.6609C33.1309 1.42839 32.0169 0.546296 30.6786 0.240874C29.3402 -0.0646605 27.9538 0.246852 26.8747 1.09511C26.0489 1.74441 24.8952 1.74441 24.0693 1.09511C22.9902 0.246852 21.6038 -0.0644349 20.2655 0.240874C18.9272 0.546296 17.8132 1.42839 17.209 2.6609C16.7466 3.60424 15.7069 4.105 14.6814 3.87819C13.3411 3.58224 11.9568 3.90312 10.8837 4.75893C9.81056 5.61475 9.18957 6.89283 9.17998 8.26542C9.17265 9.3159 8.45331 10.218 7.43069 10.4589C6.09464 10.7736 4.98675 11.6635 4.39124 12.9002C3.79562 14.1369 3.79077 15.5579 4.37759 16.7986C4.82682 17.7483 4.57012 18.8731 3.75333 19.5338C2.68616 20.3971 2.07407 21.6795 2.07407 23.0521C2.07407 24.4247 2.68616 25.7072 3.75333 26.5704C4.57012 27.2311 4.82682 28.3559 4.37759 29.3056C3.79066 30.5465 3.79562 31.9674 4.39124 33.2041C4.98675 34.4408 6.09463 35.3307 7.4308 35.6455C7.91397 35.7593 8.328 36.0219 8.63264 36.3769L0.151087 51.0675C-0.0773032 51.4631 -0.0444827 51.9575 0.234096 52.3194C0.512788 52.6813 0.9822 52.8393 1.42308 52.7199L7.33042 51.1172L8.89622 57.0345C9.01306 57.4761 9.3848 57.8036 9.83763 57.8639C9.8876 57.8706 9.93745 57.8738 9.98696 57.8738C10.3859 57.8738 10.7601 57.6618 10.9633 57.3099L18.2005 44.7749C18.7737 45.3054 19.4805 45.6844 20.2657 45.8636C21.6038 46.1688 22.9904 45.8576 24.0696 45.0093C24.8955 44.36 26.0491 44.36 26.8751 45.0093C27.6826 45.6441 28.662 45.9783 29.6648 45.9783C30.002 45.9783 30.3421 45.9405 30.6789 45.8636C31.4641 45.6844 32.171 45.3054 32.7441 44.7749L39.9813 57.3099C40.1845 57.6619 40.5587 57.8738 40.9576 57.8738C41.007 57.8738 41.057 57.8706 41.107 57.8639C41.5598 57.8036 41.9315 57.476 42.0484 57.0345L43.6142 51.1172L49.5215 52.7199C49.9624 52.8397 50.4319 52.6813 50.7105 52.3194C50.9891 51.9575 51.0219 51.4631 50.7934 51.0675ZM10.3773 53.8136L9.22081 49.4431C9.14389 49.1528 8.95453 48.905 8.69444 48.7549C8.43425 48.6047 8.1251 48.5645 7.83525 48.6432L3.47204 49.8268L9.4783 39.4238C9.76252 40.1686 10.2414 40.833 10.8839 41.3455C11.9571 42.2013 13.3415 42.5224 14.6816 42.2263C15.4385 42.0591 16.2022 42.2887 16.7367 42.7991L10.3773 53.8136ZM30.1768 43.6645C29.5053 43.8175 28.8102 43.6614 28.2691 43.2361C27.4456 42.5887 26.4591 42.2652 25.4722 42.2652C24.4856 42.2652 23.4986 42.5889 22.6754 43.2361C22.1343 43.6616 21.4392 43.8178 20.7676 43.6645C20.0965 43.5113 19.5377 43.0689 19.2347 42.4507C18.3128 40.5699 16.2401 39.5719 14.195 40.0237C13.5227 40.1722 12.8285 40.0112 12.2903 39.5819C11.752 39.1526 11.4405 38.5117 11.4357 37.8232C11.4211 35.7287 9.98696 33.9303 7.94815 33.45C7.27798 33.2921 6.7224 32.8458 6.42363 32.2255C6.12497 31.6052 6.12249 30.8926 6.41686 30.2701C7.31238 28.3767 6.80056 26.1342 5.17205 24.8169C4.63677 24.3839 4.32989 23.7407 4.32989 23.0522C4.32989 22.3638 4.63689 21.7206 5.17216 21.2876C6.80056 19.9703 7.31249 17.7278 6.41686 15.8342C6.12249 15.2119 6.12497 14.4992 6.42374 13.879C6.7224 13.2586 7.27809 12.8124 7.94815 12.6545C9.98696 12.1741 11.4211 10.3757 11.4357 8.28121C11.4405 7.59277 11.7519 6.9517 12.2903 6.52255C12.8285 6.09329 13.5225 5.93212 14.1951 6.08077C16.24 6.53225 18.3128 5.53456 19.2347 3.65375C19.5377 3.03558 20.0965 2.59312 20.7676 2.43996C21.439 2.28691 22.1343 2.44289 22.6754 2.86832C24.3222 4.16298 26.6223 4.16298 28.2691 2.86832C28.8103 2.44289 29.5054 2.28691 30.1768 2.43996C30.848 2.59312 31.4068 3.03558 31.7098 3.65375C32.6317 5.53456 34.7043 6.53225 36.7495 6.08077C37.4216 5.93201 38.116 6.09329 38.6542 6.52255C39.1924 6.95181 39.5039 7.59277 39.5088 8.28121C39.5233 10.3757 40.9575 12.1741 42.9963 12.6545C43.6665 12.8124 44.2221 13.2586 44.5208 13.879C44.8195 14.4993 44.822 15.2119 44.5276 15.8343C43.6321 17.7278 44.1439 19.9703 45.7724 21.2876C46.3077 21.7206 46.6146 22.3638 46.6146 23.0522C46.6146 23.7407 46.3076 24.3839 45.7723 24.8169C44.1439 26.1342 43.632 28.3767 44.5276 30.2702C44.822 30.8926 44.8195 31.6053 44.5207 32.2255C44.2221 32.8458 43.6664 33.2921 42.9963 33.45C40.9575 33.9303 39.5233 35.7287 39.5088 37.8232C39.5039 38.5117 39.1925 39.1527 38.6542 39.5819C38.116 40.0112 37.4218 40.1721 36.7494 40.0237C34.7043 39.5717 32.6317 40.5699 31.7098 42.4507C31.4068 43.0689 30.848 43.5112 30.1768 43.6645ZM43.1092 48.6432C42.8193 48.5645 42.5101 48.6048 42.25 48.7549C41.99 48.9052 41.8005 49.1528 41.7237 49.4431L40.5672 53.8136L34.2079 42.7991C34.7425 42.2886 35.5062 42.0589 36.2628 42.2263C37.6033 42.5223 38.9874 42.2013 40.0605 41.3455C40.7031 40.8331 41.182 40.1686 41.4662 39.4238L47.4724 49.8268L43.1092 48.6432Z" fill="black" />
@@ -283,22 +310,27 @@ const page = () => {
                             </div>
                         </div>
                         <div>
-                            <button className='px-16 bg-primary btn text-white rounded-2xl text-lg'>
-                                Contact Us
-                            </button>
+                            <Link href={'/contact'}>
+                                <button className='px-16 bg-primary btn text-white rounded-2xl text-lg'>
+                                    Contact Us
+                                </button>
+                            </Link>
+
                         </div>
                     </div>
                 </div>
-                <div className='2xl:py-40 xl:py-28'>
-                    <div className='grid grid-cols-2'>
+                <div className='2xl:py-28 xl:py-28 py-16'>
+                    <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-5'>
                         <h1 className='2xl:text-5xl xl:text-4xl font-medium inter text-[#0D0D0D]'>Our services <br />
-                            <button className='btn bg-primary text-white rounded-xl text-sm mt-4'>Contact Us</button>
+                            <Link href={'/contact'}>
+                                <button className='btn bg-primary text-white rounded-xl text-sm mt-4'>Contact Us</button>
+                            </Link>
                         </h1>
                         <p className={` text-[#111] xl:text-base 2xl:text-xl`}>We provides end-to-end solutions for all your needs in setting up a new brand or developing your current one. We are one of the leading IT consulting firms in the world with experience in catapulting your brands to soar to new heights of success.</p>
                     </div>
-                    <div className='2xl:mt-12 xl:mt-10 space-y-10'>
-                        <div className='2xl:pb-8 xl:pb-6 border-b-[#D6D6D6] border-b-[1px] flex items-center justify-between'>
-                            <div className='flex gap-[50px]'>
+                    <div className='2xl:mt-28 xl:mt-28 mt-16 space-y-10'>
+                        <div className='2xl:pb-8 xl:pb-6 border-b-[#D6D6D6] border-b-[1px] flex 2xl:flex-row xl:flex-row flex-col items-center justify-between gap-10'>
+                            <div className='flex gap-10 2xl:flex-row xl:flex-row flex-col '>
                                 <h1 className={` serial`}>01</h1>
                                 <div>
                                     <h3 className='text-[#0D0D0D] font-bold 2xl:text-2xl xl:text-2xl'>All IT Solution</h3>
@@ -309,8 +341,8 @@ const page = () => {
                                 <Image className='w-[333px] h-[133px] rounded-[33px]' src={img1} alt='' />
                             </div>
                         </div>
-                        <div className='2xl:pb-8 xl:pb-6 border-b-[#D6D6D6] border-b-[1px] flex items-center justify-between'>
-                            <div className='flex gap-10'>
+                        <div className='2xl:pb-8 xl:pb-6 border-b-[#D6D6D6] border-b-[1px] flex 2xl:flex-row xl:flex-row flex-col items-center justify-between gap-10'>
+                            <div className='flex gap-10 2xl:flex-row xl:flex-row flex-col '>
                                 <h1 className={` serial`}>02</h1>
                                 <div>
                                     <h3 className='text-[#0D0D0D] font-bold 2xl:text-2xl xl:text-2xl'>UI/UX For App & Web</h3>
@@ -321,8 +353,8 @@ const page = () => {
                                 <Image className='w-[333px] h-[133px] rounded-[33px]' src={img2} alt='' />
                             </div>
                         </div>
-                        <div className='2xl:pb-8 xl:pb-6 border-b-[#D6D6D6] border-b-[1px] flex items-center justify-between'>
-                            <div className='flex gap-10'>
+                        <div className='2xl:pb-8 xl:pb-6 border-b-[#D6D6D6] border-b-[1px] flex 2xl:flex-row xl:flex-row flex-col  items-center justify-between gap-10'>
+                            <div className='flex gap-10 2xl:flex-row xl:flex-row flex-col '>
                                 <h1 className={` serial`}>03</h1>
                                 <div>
                                     <h3 className='text-[#0D0D0D] font-bold 2xl:text-2xl xl:text-2xl'>Tele Marketing</h3>
@@ -339,7 +371,7 @@ const page = () => {
                     <h3 className='text-primary text-center font-bold  2xl:text-[20px] xl:text-lg uppercase'>Case studies</h3>
                     <SectionTitles heading={'Our Case Studies'} />
                     <div className="2xl:mt-12 xl:mt-10">
-                        <div className='grid grid-cols-2 items-center 2xl:gap-14 xl:gap-10'>
+                        <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 items-center 2xl:gap-14 xl:gap-10 gap-10'>
                             <Image
                                 src={capture1}
                                 className='h-full rounded-[20px]'
@@ -349,7 +381,7 @@ const page = () => {
                                 loading='lazy'
                             />
 
-                            <div className=''>
+                            <div className='2xl:col-start-2 xl:col-start-2'>
                                 <h1 className={` count`}>01</h1>
                                 <h3 className=' 2xl:text-3xl xl:text-2xl font-medium'>Forest website design</h3>
                                 <p className='text-[#000]  text-base my-7'>
@@ -360,7 +392,7 @@ const page = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className='grid grid-cols-2 items-center 2xl:gap-14 xl:gap-10 2xl:my-20 xl:my-14'>
+                        <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 items-center 2xl:gap-14 xl:gap-10 gap-10 2xl:my-20 xl:my-14 my-10'>
                             <div className=''>
                                 <h1 className={` count`}>02</h1>
                                 <h3 className=' 2xl:text-3xl xl:text-2xl font-medium'>Forest website design</h3>
@@ -373,7 +405,7 @@ const page = () => {
                             </div>
                             <Image
                                 src={capture2}
-                                className='h-full rounded-[20px]'
+                                className='h-full rounded-[20px] 2xl:col-start-2 xl:col-start-2 row-start-1'
                                 alt="IT support for janitorial services, improving operational efficiency and service quality"
                                 width={1897}
                                 height={844}
@@ -381,7 +413,7 @@ const page = () => {
                             />
 
                         </div>
-                        <div className='grid grid-cols-2 items-center 2xl:gap-14 xl:gap-10'>
+                        <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 items-center 2xl:gap-14 xl:gap-10 gap-10'>
                             <Image
                                 src={capture3}
                                 className='h-full rounded-[20px]'
@@ -403,12 +435,14 @@ const page = () => {
                         </div>
                     </div>
                     <div className='w-fit mx-auto'>
-                        <button className='px-10 btn bg-primary text-white rounded-xl text-base 2xl:mt-20 xl:mt-16'>
-                            Contact Us
-                        </button>
+                        <Link href={'/contact'}>
+                            <button className='px-10 btn bg-primary text-white rounded-xl text-base 2xl:mt-20 xl:mt-16 mt-16'>
+                                Contact Us
+                            </button>
+                        </Link>
                     </div>
                 </div>
-                <div className="2xl:py-40 xl:py-28">
+                <div className="2xl:py-24 xl:py-24 py-16">
                     <h3 className='text-primary font-bold  2xl:text-[20px] xl:text-lg uppercase text-center'>Portfolio</h3>
                     <SectionTitles heading={'People Lie Work Don’t'} />
                     <div className='grid grid-cols-2 gap-11 2xl:mt-20 xl:mt-16'>

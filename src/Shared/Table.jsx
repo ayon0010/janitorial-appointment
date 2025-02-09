@@ -21,7 +21,7 @@ const Table = ({ tableHead, data, states, Button, bookMarks }) => {
                             return (
                                 <tr key={d._id}>
                                     <td>
-                                        <p className=" text-[#667085] inter 2xl:text-base xl:text-base text-xs font-normal">{d?.businessName}</p>
+                                        <p className=" text-[#667085] inter 2xl:text-base xl:text-base text-xs font-normal">{d?.leadName}</p>
                                     </td>
                                     <td>
                                         <div className="flex items-center gap-4">
@@ -39,7 +39,7 @@ const Table = ({ tableHead, data, states, Button, bookMarks }) => {
                                         <p className=" text-[#667085] inter 2xl:text-base xl:text-base text-[10px] font-normal">{formatTimestamp(d?.uploadDate)}</p>
                                     </td>
                                     <td>
-                                        <div className="flex items-center bg-[#F2F4F7] w-fit rounded-[20px] py-[6px] pl-[10px] pr-[20px]  ">
+                                        <div className="flex items-center bg-[#F2F4F7] w-fit rounded-[20px] py-[6px] pl-[10px] pr-[20px] h-[20px] ">
                                             {
                                                 d?.sold ?
                                                     <>
@@ -48,7 +48,7 @@ const Table = ({ tableHead, data, states, Button, bookMarks }) => {
                                                     </>
                                                     :
                                                     <>
-                                                        <Dot width={'30px'} />
+                                                        <Dot width={'30px'} h={true} />
                                                         <p className="text-[#027A48]
                                      inter text-sm font-medium">Available</p>
                                                     </>

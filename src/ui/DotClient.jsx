@@ -5,7 +5,7 @@ const Dot = dynamic(() => import('@/ui/Dot'), { ssr: false });
 const DotClient = () => {
     return (
         <div>
-            <Dot width={'30px'} />
+            <Dot width={'30px'} h={true} />
         </div>
     );
 };
