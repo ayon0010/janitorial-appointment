@@ -111,7 +111,8 @@ const Page = () => {
             const name = data.companyName;
             await updateUserProfile(name);
             // Make the patch request with axiosSecure
-            const response = await axiosSecure.patch(`/user/${userInfo?._id}`, data)
+            const response = await axiosSecure.patch(`/user/${userInfo?._id}`, data);
+            console.log(response)
             // On success, show success alert
             Swal.fire({
                 title: 'Success!',
