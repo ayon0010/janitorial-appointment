@@ -17,7 +17,7 @@ const SingleLead = async ({ Lead }) => {
     const isDisabled = new Date(appointmentDate) < currentDate;
 
     return (
-        <div className="pt-40 pb-20 px-10 bg-white">
+        <div className="pt-20 pb-20 px-10 bg-white">
             <div>
                 {
                     data?.sold ?

@@ -154,7 +154,7 @@ const Page = () => {
     }
 
     return (
-        <div className='pt-40 pb-20 px-10'>
+        <div className='py-20 px-10'>
             <div>
                 <div className="flex items-center gap-4 justify-center">
                     <h4 className="text-xl inter font-medium text-center">
@@ -174,13 +174,14 @@ const Page = () => {
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
-                    <TableHead allLeads={true} tableHead={['Uploader', 'Business Name', 'Decision Maker', 'Appointment Date', 'Appointment Time', 'States', 'City', 'Area', 'Upload Date', 'Audio', 'Status', 'Additional Details', 'Category', 'Sold', 'Change Category', 'Update Status', 'Prize', 'Set Prize', 'Action', 'Edit', 'Details']} />
+                    <TableHead allLeads={true} tableHead={['#', 'Uploader', 'Business Name', 'Decision Maker', 'Appointment Date', 'Appointment Time', 'States', 'City', 'Area', 'Upload Date', 'Audio', 'Status', 'Additional Details', 'Category', 'Sold', 'Change Category', 'Update Status', 'Prize', 'Set Prize', 'Action', 'Edit', 'Details']} />
                     <tbody>
                         {
                             allLeads?.map((lead, i) => {
                                 return (
                                     <>
                                         <tr key={i}>
+                                            <td>{i + 1}</td>
                                             <td>
                                                 <p className='text-xs font-semibold text-black  text-center'>{lead?.companyName}</p>
                                             </td>
@@ -238,7 +239,7 @@ const Page = () => {
                                                         </>
                                                         :
                                                         <>
-                                                            <Dot width={'w-[30px]'} />
+                                                            <Dot width={'30px'} h={true} />
                                                             <p className="text-[#027A48]
                              inter text-sm font-medium">Not sold</p>
                                                         </>

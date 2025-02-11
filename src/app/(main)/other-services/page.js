@@ -21,9 +21,30 @@ import desing4 from '@/../public/assets/927cc8b897e6124b1c31ff8bc507f55a_result_
 import Link from 'next/link';
 import ButtonPrimary from '@/ui/ButtonPrimary';
 
+
+export const metadata = {
+    title: "Web & App Development and Digital Marketing for Cleaning Companies",
+    description:
+        "Boost your cleaning company’s online presence with expert web & app development and tailored digital marketing services. Enhance SEO, drive leads, and grow your business.",
+    keywords: [
+        "web development for cleaning companies",
+        "app development for cleaning services",
+        "digital marketing for cleaning companies",
+        "SEO for cleaning businesses",
+        "SEO for cleaning companies",
+        "janitorial services digital marketing",
+        "online marketing for cleaning businesses",
+        "cleaning company web design",
+        "cleaning service SEO optimization",
+        "lead generation for cleaning companies",
+    ],
+    robots: "index, follow",
+};
+
+
 const page = () => {
     return (
-        <div className='2xl:pt-[100px] xl:pt-[100px] pt-[80px]'>
+        <div className=''>
             <div className="banner-6 flex flex-col h-full relative">
                 <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
                     <h2 className='2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:banner-text xl:banner-text text-white'>

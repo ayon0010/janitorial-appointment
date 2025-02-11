@@ -30,6 +30,7 @@ export async function generateStaticParams() {
 
 const page = async ({ params }) => {
     const { leads } = await params;
+    console.log(leads)
 
     if (leads?.length === 3) {
         return (

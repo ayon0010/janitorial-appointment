@@ -4,11 +4,8 @@ import Link from 'next/link';
 import React from 'react';
 import formatTimestamp from '@/js/convertTime';
 import { urlFor } from '@/lib/sanity';
-import { PortableText } from 'next-sanity';
-
 const BlogCards = ({ blog }) => {
     const contentWithoutHeadline = blog.content.filter((block) => block._type !== 'heading');
-    console.log(blog)
     return (
         <div className="card p-3 shadow-xl">
             <figure>

@@ -20,7 +20,7 @@ const page = async () => {
     console.log(data);
 
     return (
-        <div className='2xl:px-[70px] xl:px-16 px-8 2xl:py-36 xl:py-28 my-36'>
+        <div className='2xl:px-[70px] xl:px-16 px-8 py-20'>
             <div className=''>
                 <SectionTitles heading={'Booked Appointments'} subHeading={'See the user messages'} />
             </div>

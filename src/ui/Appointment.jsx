@@ -1,6 +1,5 @@
 'use client'
 import React from 'react';
-import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import { nunito } from '@/Shared/nunito';
@@ -30,6 +29,7 @@ const Appointment = () => {
             if (typeof window !== 'undefined') {
                 const email = localStorage.setItem('email', data.email);
                 const name = localStorage.setItem('name', data.name);
+                const it = localStorage.setItem('it', data.service);
                 setTimeout(() => {
                     Swal.close();
                     router.push('/book-an-appointment');
@@ -38,7 +38,6 @@ const Appointment = () => {
 
         } catch (error) {
             console.log(error);
-
             // Show error alert in case of failure
             Swal.fire({
                 icon: 'error',

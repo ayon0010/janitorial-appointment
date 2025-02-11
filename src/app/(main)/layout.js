@@ -32,7 +32,9 @@ export default function RootLayout({ children }) {
             <QueryProvider>
               <ChatProvider>
                 <Navbar />
-                {children}
+                <div className='2xl:pt-[100px] xl:pt-[100px] pt-[80px]'>
+                  {children}
+                </div>
                 <Footer />
               </ChatProvider>
             </QueryProvider>

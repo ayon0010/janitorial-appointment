@@ -1,5 +1,5 @@
 import Image from "next/image";
-import aboutImage from '@/../public/assets/Frame 1272636201.svg'
+import aboutImage from '@/../public/assets/Frame 1272636201.webp'
 import FaTelemarketting from "@/icons/FaTelemarketting";
 import video from '@/../public/assets/Frame.png'
 import image from '@/../public/assets/699f0ea426e250f89c5625fd3790a47b_result_result.webp';
@@ -43,25 +43,17 @@ export const metadata = {
 
 const page = () => {
     return (
-        <div className="pt-[80px]">
+        <div className="">
             <div className="relative 2xl:h-auto xl:h-auto h-[430px] z-10">
                 <Image
-                    className="w-full 2xl:block xl:block hidden"
+                    className="w-full h-full 2xl:object-fill xl:object-fill object-cover"
                     src={aboutImage}
                     alt="About us - Learn more about our cleaning services and expertise"
                     loading='lazy'
                 />
-
-                <Image
-                    className="w-full 2xl:hidden xl:hidden block h-full object-cover z-20"
-                    src={aboutImage1}
-                    loading='lazy'
-                    alt="About our company and professional janitorial services"
-                />
-
                 <div className="absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-40">
-                    <h2 className="2xl:text-6xl xl:text-5xl text-3xl font-medium 2xl:text-white xl:text-white text-black text-center ">The Path to Success</h2>
-                    <p className="text-sm 2xl:text-white xl:text-white text-black font-medium text-center inter">About Us</p>
+                    <h2 className="2xl:text-6xl xl:text-5xl text-3xl font-medium text-white text-center ">The Path to Success</h2>
+                    <p className="text-sm text-white font-medium text-center inter">About Us</p>
                 </div>
             </div>
             <div className="2xl:py-24 xl:py-16 py-10 2xl:px-40 xl:px-28 px-10">

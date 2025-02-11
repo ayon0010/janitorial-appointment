@@ -15,6 +15,7 @@ import twitt from '@/../public/assets/Frame (12).svg'
 import Map from '@/ui/Map';
 import Link from 'next/link';
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
+import Appointment from '@/ui/Appointment';
 const message = encodeURIComponent('Hello! I would like to inquire about your commercial cleaning leads.');
 
 export const metadata = {
@@ -55,7 +56,7 @@ export const metadata = {
 const page = () => {
     return (
         <div>
-            <div className='2xl:px-40 xl:px-28 2xl:pt-52 xl:pt-40 pt-28 px-6 bg-white'>
+            <div className='2xl:px-40 xl:px-28 py-20 px-6 bg-white'>
                 <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-8 max-h-[680px]'>
                     <div className='h-full'>
                         <h1 className='2xl:text-5xl xl:text-4xl text-2xl font-medium inter text-[#0D0D0D]'>Get in Touch</h1>
@@ -69,6 +70,9 @@ const page = () => {
                             alt="Contact us for professional cleaning, telemarketing, and business support services"
                         />
                     </div>
+                </div>
+                <div className='pb-10 pt-28'>
+                    <Appointment />
                 </div>
                 <div className='2xl:py-40 xl:py-28 py-16'>
                     <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 2xl:pb-8 xl:pb-6 pb-4 border-b-[#D6D6D6] border-b-[1px]'>

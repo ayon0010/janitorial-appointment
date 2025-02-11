@@ -11,7 +11,7 @@ const Page = () => {
     console.log(sellerLeads);
 
     return (
-        <div className='pt-40 pb-20 px-10'>
+        <div className='py-20 px-10'>
             <div>
                 <div className="flex items-center gap-4 justify-center">
                     <h4 className="text-xl inter font-medium text-center">

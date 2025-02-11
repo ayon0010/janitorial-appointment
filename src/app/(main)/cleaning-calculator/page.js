@@ -1,70 +1,23 @@
-import PageTitle from "@/Shared/PageTitle";
-import Image from "next/image";
-import image from '@/../public/assets/Frame (1).svg'
-import { FaArrowRight } from "react-icons/fa";
-import { usStates } from "@/js/states";
+import Calculator from '@/ui/Calculator';
+import React from 'react';
+export const metadata = {
+    title: "Pay Rate Calculator | Compare Cleaner Pay Rates",
+    description:
+        "Use our pay rate calculator to determine the best pay for your commercial cleaning and janitorial staff. Enter employee type, pay rate, city, and state for accurate insights.",
+    keywords: [
+        "pay rate calculator",
+        "cleaning pay rates",
+        "janitorial pay calculator",
+        "commercial cleaning salaries",
+        "compare cleaner wages",
+    ],
+    author: "Ayon's Cleaning Services",
+}
 const page = () => {
+
     return (
-        <div className="pb-20 pt-40 px-10 bg-white">
-            <PageTitle heading={'How much should I pay my cleaners?'} subHeading={'Pick the employee type, add your average pay rate, your city, and your state to see how you measure up.'} />
-            <div className="mt-20 flex justify-between items-center">
-                <form className="w-1/2 space-y-10">
-                    <div className="form-control relative">
-                        <label className="label absolute bg-white left-[2%] -top-[50%]">
-                            <span className="label-text text-primary font-normal text-base ">Type</span>
-                        </label>
-                        <select
-                            className="select select-bordered rounded-[10px] bg-white border border-[#5C6272]">
-                            <option className="text-[#666968]  text-lg" selected defaultValue={'Pick a type'} disabled>Pick a type</option>
-                            <option className="text-[#666968]  text-lg" value="Full Time">Full Time</option>
-                            <option className="text-[#666968]  text-lg" value="Part Time">Part Time</option>
-                        </select>
-                    </div>
-                    <div className="form-control relative">
-                        <label className="label absolute bg-white left-[2%] -top-[50%]">
-                            <span className="label-text text-primary font-normal text-base ">Pay rate</span>
-                        </label>
-                        <input
-                            type="number"
-                            placeholder="Enter company/Decision maker name"
-                            className="input input-bordered rounded-[10px] bg-white border border-[#5C6272]"
-                        />
-                    </div>
-                    <div className="form-control relative">
-                        <label className="label absolute bg-white left-[2%] -top-[50%]">
-                            <span className="label-text text-primary font-normal text-base ">State</span>
-                        </label>
-                        <select
-                            className="select select-bordered rounded-[10px] bg-white border border-[#5C6272]">
-                            <option className="text-[#666968]  text-lg" selected defaultValue={'Select a state'} disabled>Select a sate</option>
-                            {
-                                usStates.map(state => {
-                                    return (
-                                        <option key={state} className="text-[#666968]  text-lg" value="Company Name">{state}</option>
-                                    )
-                                })
-                            }
-                        </select>
-                    </div>
-                    <div className="form-control relative">
-                        <label className="label absolute bg-white left-[2%] -top-[50%]">
-                            <span className="label-text text-primary font-normal text-base ">City</span>
-                        </label>
-                        <input
-                            type="text"
-                            placeholder="Enter city name"
-                            className="input input-bordered rounded-[10px] bg-white border border-[#5C6272]"
-                        />
-                    </div>
-                    <div className="form-control relative">
-                        <button className="bg-primary text-white w-3/4 btn rounded-[16px]  text-lg font-semibold h-[60px]">Check Pay Rate <FaArrowRight /></button>
-                    </div>
-                </form>
-                <div className="w-1/2">
-                    <Image src={image} alt='pay-rate-checker' className='w-1/2 h-auto mx-auto'/>
-                    <p className='text-center nunito font-semibold text-4xl mt-6'>Compare Confidently</p>
-                </div>
-            </div>
+        <div>
+            <Calculator />
         </div>
     );
 };

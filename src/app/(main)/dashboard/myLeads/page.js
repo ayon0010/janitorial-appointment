@@ -61,7 +61,7 @@ const Page = () => {
     }
 
     return (
-        <div className='pt-40 pb-20 px-10'>
+        <div className='pt-20 pb-20 px-10'>
             <SectionTitles heading={'Bookmarked'} subHeading={'Saved leads'} />
             <Table
                 tableHead={['Leads', 'Location', 'Opportunity Type', 'Date', 'Status', 'View Details', 'Action']}

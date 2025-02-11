@@ -56,7 +56,7 @@ const page = async ({ params }) => {
 
 
     return (
-        <div className="2xl:px-40 xl:px-28 2xl:pt-52 xl:pt-40 py-28 px-6 space-y-2">
+        <div className="2xl:px-40 xl:px-28 py-20 px-6 space-y-2">
             <h3 className="text-2xl font-semibold ">Uploader: {companyName}</h3>
             <h4 className="text-xl font-semibold ">
                 <span>Business Name</span>: {businessName}

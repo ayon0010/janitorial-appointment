@@ -18,9 +18,72 @@ import image2 from '@/../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash_r
 import image2mbl from '@/../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash1_result.webp';
 import image3 from '@/../public/assets/c4fff5f6b137dec9009b9e4e2c05c82f_result_result.webp'
 
+
+const DynamicBanner = ({
+    desktopImage,
+    mobileImage,
+    title,
+    highlightedText,
+    description,
+    buttonText,
+    buttonLink,
+    note,
+    isTertiaryButton
+}) => {
+    return (
+        <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto">
+            {/* Background Images */}
+            <div className="absolute inset-0 z-20 h-full">
+                <Image
+                    src={desktopImage}
+                    alt="Janitorial appointment and commercial cleaning leads to grow your business"
+                    fill
+                    className="2xl:block xl:block hidden"
+                    loading="lazy"
+                />
+                <Image
+                    src={mobileImage}
+                    alt="Mobile view showcasing janitorial appointments and commercial cleaning leads for business growth"
+                    fill
+                    className="min-h-[600px] object-center 2xl:hidden xl:hidden block"
+                    loading="lazy"
+                />
+            </div>
+
+            {/* Overlays */}
+            <div className="absolute inset-0 bg-black opacity-40 z-30"></div>
+
+            {/* Content Section */}
+            <div className="my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40">
+                <h1 className="text-white font-bold 2xl:text-6xl xl:text-5xl text-3xl">
+                    {title} <span className="text-green-600 banner-text">{highlightedText}</span>
+                </h1>
+                <p className="my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80">
+                    {description}
+                </p>
+                <div className="flex items-center gap-6">
+                    <Link href={`${buttonLink ? buttonLink : ''}`}>
+                        {isTertiaryButton ? (
+                            <ButtonTertiary label={buttonText} />
+                        ) : (
+                            <ButtonPrimary label={buttonText} />
+                        )}
+                    </Link>
+                    {note && (
+                        <p className="text-white opacity-80 inter font-bold 2xl:text-base xl:text-base text-xs">
+                            {note}
+                        </p>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+
 const Banner = () => {
     return (
-        <div className='relative z-30 pt-20'>
+        <div className='relative z-30'>
             <Swiper
                 navigation={true}
                 autoplay={{
@@ -38,77 +101,34 @@ const Banner = () => {
                 modules={[Navigation, Autoplay, Pagination]}
                 className="mySwiper"
             >
+                {/* 1st slider */}
                 <SwiperSlide>
-                    <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto">
-                        <div className='absolute inset-0 z-20 h-full'>
-                            <Image
-                                src={image1}
-                                alt="Janitorial appointment and commercial cleaning leads to grow your business"
-                                fill
-                                className="2xl:object-cover xl:object-cover object-center 2xl:block xl:block hidden"
-                                loading="lazy"
-                            />
-                            <Image
-                                src={image1mbl}
-                                alt="Mobile view showcasing janitorial appointments and commercial cleaning leads for business growth"
-                                className="object-cover min-h-[600px] object-center 2xl:hidden xl:hidden block"
-                                loading="lazy"
-                                width={2682}
-                                height={1736}
-                            />
-                        </div>
-                        <div className='absolute inset-0 banner-1 z-30 2xl:block xl:block hidden'></div>
-                        <div className='absolute inset-0 bg-black opacity-55 z-30 2xl:hidden xl:hidden block'></div>
-                        <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
-                            <h1 className={`text-white font-bold 2xl:text-6xl xl:text-5xl text-3xl`}>
-                                Unlock Cleaning <br />
-                                <span className="text-green-600 banner-text">Opportunities</span> with Ease
-                            </h1>
-                            <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80'>Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!</p>
-                            <div className='flex items-center gap-6'>
-                                <div>
-                                    <Link href={'/register'}>
-                                        <ButtonPrimary label={'Sign Up'} />
-                                    </Link>
-                                </div>
-                                <p className='text-white opacity-80 inter font-bold 2xl:text-base xl:text-base text-xs'>No Credit Card Required</p>
-                            </div>
-                        </div>
-                    </div>
+                    <DynamicBanner
+                        desktopImage={image1}
+                        mobileImage={image1mbl}
+                        title="Unlock Cleaning"
+                        highlightedText="Opportunities"
+                        description="Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!"
+                        buttonText="Sign Up"
+                        buttonLink="/register"
+                        note="No Credit Card Required"
+                        isTertiaryButton={false}
+                    />
                 </SwiperSlide>
+                {/* 2nd Slider */}
                 <SwiperSlide>
-                    <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto">
-                        <div className='absolute inset-0 z-20 h-full'>
-                            <Image
-                                src={image2}
-                                alt="High-quality janitorial appointment booking and commercial cleaning leads for business growth"
-                                fill
-                                className="2xl:block xl:block hidden"
-                                loading="lazy"
-
-                            />
-
-                            <Image
-                                src={image2mbl}
-                                alt="Mobile view of booking janitorial appointments and commercial cleaning leads"
-                                fill
-                                className="min-h-[600px] object-center 2xl:hidden xl:hidden block"
-                                loading="lazy"
-
-                            />
-                        </div>
-                        <div className='absolute inset-0 bg-black opacity-55 z-30'></div>
-                        <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
-                            <h1 className='text-white font-bold 2xl:text-6xl xl:text-5xl text-3xl'>Schedule <span className='text-green-600 banner-text'>Appointments</span> with Confidence</h1>
-                            <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80'>Book appointments now to get the desired leads that match your business needs and unlock new opportunities effortlessly!</p>
-                            <div className='flex items-center gap-6'>
-                                <Link href={'/book-an-appointment'}>
-                                    <ButtonTertiary label={'Book an Appointment'} />
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
+                    <DynamicBanner
+                        desktopImage={image2}
+                        mobileImage={image2mbl}
+                        title="Schedule"
+                        highlightedText="Appointments"
+                        description="Book appointments now to get the desired leads that match your business needs and unlock new opportunities effortlessly!"
+                        buttonText="Book an Appointment"
+                        buttonLink="/book-an-appointment"
+                        isTertiaryButton={true}
+                    />
                 </SwiperSlide>
+                {/* Slider 3 */}
                 <SwiperSlide>
                     <div className="banner-2 flex flex-col h-full">
                         <div className='absolute inset-0 bg-black opacity-50'></div>
@@ -122,6 +142,8 @@ const Banner = () => {
                         </div>
                     </div>
                 </SwiperSlide>
+
+                {/* Slider 4 */}
                 <SwiperSlide>
                     <div className="banner-3 flex flex-col min-h-[600px] max-h-[800px] h-auto">
                         <div className='absolute inset-0 z-20 h-full'>
@@ -167,6 +189,8 @@ const Banner = () => {
                         </div>
                     </div>
                 </SwiperSlide>
+
+                {/* Slider 5 */}
                 <SwiperSlide>
                     <div className="banner-6 flex flex-col h-full relative">
                         <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>

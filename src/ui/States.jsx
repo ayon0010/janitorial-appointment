@@ -13,8 +13,10 @@ const States = async ({ States }) => {
     const decodeState = decodeURIComponent(states);
     console.log(decodeState);
     const data = await getLeads(leads, states);
+    console.log(data);
+
     return (
-        <div className="2xl:pt-40 xl:pt-40 xl:pb-20 2xl:pb-20 py-24 px-6">
+        <div className="py-20 px-6">
             <div>
                 <div className="flex 2xl:flex-row xl:flex-row flex-col items-center gap-4 justify-center">
                     <h4 className="text-xl inter font-medium text-center">

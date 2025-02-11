@@ -136,7 +136,7 @@ const Page = () => {
 
 
     return (
-        <div className="py-40 2xl:pt-60 px-10 bg-white">
+        <div className="py-20 px-10 bg-white">
             <PageTitle
                 heading={'Profile'}
                 subHeading={`Hi! ${userInfo?.companyName || user?.displayName || " "}, Here you can manage your profile`}

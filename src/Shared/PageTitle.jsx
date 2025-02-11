@@ -1,8 +1,8 @@
 const PageTitle = ({ heading, subHeading }) => {
     return (
         <div>
-            <h1 className="inter text-6xl font-bold">{heading}</h1>
-            <p className="text-xl font-normal mt-2">{subHeading}</p>
+            <h1 className="inter 2xl:text-6xl xl:text-5xl text-4xl font-bold">{heading}</h1>
+            <p className="2xl:text-xl xl:text-xl text-base font-normal mt-2">{subHeading}</p>
         </div>
     );
 };
