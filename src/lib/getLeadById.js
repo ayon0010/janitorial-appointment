@@ -14,5 +14,6 @@ export default async function getLeads(leads, states, id) {
         url = `https://clean-job-backend-final.vercel.app/getLeads`;
     }
     const res = await fetch(url);
+    if (!res.ok) throw new Error("Failed to fetch data");
     return res.json();
 }

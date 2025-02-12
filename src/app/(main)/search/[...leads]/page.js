@@ -15,19 +15,25 @@ export const revalidate = 1;
 export async function generateStaticParams() {
     const leadsData = await getLeads();
 
+    const uniqueArray = (arr) => Array.from(new Set(arr.map(JSON.stringify))).map(JSON.parse);
+
     // Categories (one-level paths)
-    const categories = leadsData.map((lead) => [lead?.category]);
+    const categories = leadsData
+        .filter((lead) => lead.category)
+        .map((lead) => [lead.category]);
 
     // States with Category (two-level paths)
-    const statesWithCategory = leadsData.map((lead) => [lead?.category, lead?.states]);
+    const statesWithCategory = leadsData
+        .filter((lead) => lead.category && lead.states)
+        .map((lead) => [lead.category, lead.states]);
 
     // Full paths with category, states, and lead ID (three-level paths)
-    const allLeads = leadsData.map((lead) => [lead?.category, lead?.states, lead?._id]);
+    const allLeads = leadsData
+        .filter((lead) => lead.category && lead.states && lead._id)
+        .map((lead) => [lead.category, lead.states, lead._id]);
 
-    // Combine all paths
-    const pathSegments = [...categories, ...statesWithCategory, ...allLeads];
-
-    // Return paths in the correct format
+    // Combine all paths and ensure uniqueness
+    const pathSegments = uniqueArray([...categories, ...statesWithCategory, ...allLeads]);
     return pathSegments.map((path) => ({ leads: path }));
 }
 
