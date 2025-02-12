@@ -5,6 +5,11 @@ import States from '@/ui/States';
 import React from 'react';
 
 
+export function capitalizeFirstLetter(word) {
+    if (!word) return "";
+    return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
 export const revalidate = 1;
 
 export async function generateStaticParams() {
@@ -26,11 +31,38 @@ export async function generateStaticParams() {
     return pathSegments.map((path) => ({ leads: path }));
 }
 
-
+export async function generateMetadata({ params }) {
+    const { leads } = await params;
+    if (leads) {
+        return {
+            title: `Exclusive Commercial Cleaning Leads | High-Quality Janitorial Leads`,
+            description:
+                "Get exclusive commercial cleaning leads and janitorial leads to grow your cleaning business. High-quality verified leads to help you secure more contracts.",
+            keywords:
+                "commercial cleaning leads, janitorial leads, exclusive cleaning leads, cleaning business leads, high-quality cleaning leads, cleaning contracts",
+            robots: "index, follow",
+            openGraph: {
+                title: "Exclusive Commercial Cleaning Leads | High-Quality Janitorial Leads",
+                description:
+                    "Get exclusive commercial cleaning leads and janitorial leads to grow your cleaning business. High-quality verified leads to help you secure more contracts.",
+                type: "website",
+                url: "https://www.janitorialappointment.com",
+                images: [
+                    {
+                        url: "https://www.janitorialappointment.com/your-image.jpg",
+                        width: 1200,
+                        height: 630,
+                        alt: "Exclusive Commercial Cleaning Leads and Janitorial Leads",
+                    },
+                ],
+            },
+        };
+    }
+}
 
 const page = async ({ params }) => {
     const { leads } = await params;
-    console.log(leads)
+    console.log(leads);
 
     if (leads?.length === 3) {
         return (
