@@ -1,7 +1,7 @@
 import axios from "axios";
 const useAxiosPublic = () => {
     const instance = axios.create({
-        baseURL: 'https://clean-job-backend-final.vercel.app/',
+        baseURL: 'https://backend.janitorialappointment.com/',
     });
     return instance;
 };
