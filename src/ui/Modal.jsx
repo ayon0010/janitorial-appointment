@@ -14,7 +14,6 @@ import Swal from 'sweetalert2';
 const Modal = ({ id }) => {
     const { user } = useAuth();
     const { singleLeads, refetch } = GetSingleLead(id);
-    console.log(singleLeads);
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         defaultValues: singleLeads, // Set default values from singleLeads
     });

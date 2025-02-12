@@ -52,7 +52,7 @@ const page = async ({ params }) => {
         prize,
         date
     } = data || {};
-    console.log(data);
+
 
 
     return (

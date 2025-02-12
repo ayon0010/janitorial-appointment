@@ -21,6 +21,24 @@ export const nunito = Nunito({
   variable: '--font-nunito',
 })
 
+export const metadata = {
+  title: "Janitorial Appointments | Commercial Cleaning Leads",
+  description:
+    "Boost your janitorial business with high-quality janitorial appointments and commercial cleaning leads. Unlock effective lead generation strategies for growth.",
+  keywords: [
+    "janitorial appointments",
+    "commercial cleaning leads",
+    "janitorial lead generation",
+    "cleaning service leads",
+    "book janitorial appointments",
+  ],
+  authors: [
+    {
+      name: "Al Shariar Auon",
+    },
+  ],
+  charset: "utf-8",
+};
 
 
 export default function RootLayout({ children }) {

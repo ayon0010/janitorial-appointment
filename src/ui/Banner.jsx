@@ -45,7 +45,7 @@ const DynamicBanner = ({
                     src={mobileImage}
                     alt="Mobile view showcasing janitorial appointments and commercial cleaning leads for business growth"
                     fill
-                    className="min-h-[600px] object-center 2xl:hidden xl:hidden block"
+                    className="min-h-[400px] object-center 2xl:hidden xl:hidden block"
                     loading="lazy"
                 />
             </div>

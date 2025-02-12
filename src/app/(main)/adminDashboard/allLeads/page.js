@@ -19,8 +19,6 @@ const Page = () => {
     const axiosSecure = useAxiosSecure();
     const { allLeads, refetch, isLoading } = GetAllLeads();
     const [isOpen, setIsOpen] = useState(false);
-    console.log(allLeads);
-
     const handleDelete = (id) => {
         // Show confirmation Swal
         Swal.fire({

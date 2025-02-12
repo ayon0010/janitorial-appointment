@@ -29,7 +29,6 @@ const getData = async (params) => {
 
     try {
         const data = await client.fetch(query, { cache: 'no-cache' });
-        // console.log('Fetched Data:', data); // Log the correct data
         return data;
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -93,7 +92,7 @@ const page = async ({ params }) => {
                                 const { images, layout } = value;
                                 if (!images || images.length === 0) return null;
                                 const imageUrls = images.map(image => urlFor(image.asset).url());
-                                console.log(imageUrls);
+                    
                                 return (
                                     <div className={`${layout === 'grid' ? 'grid 2xl:grid-cols-3 xl:grid-cols-3 gap-4 items-stretch' : 'block'
                                         }`}>

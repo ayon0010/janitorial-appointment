@@ -11,7 +11,6 @@ const GetSingleLead = (id) => {
             try {
                 const response = await axiosSecure.get(`singleLeads/${id}`);
                 const data = await response.data;
-                console.log(data, 'singleLeads');
                 return data;
             } catch (err) {
                 console.error("Error fetching user data:", err);

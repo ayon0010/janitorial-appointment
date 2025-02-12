@@ -21,8 +21,6 @@ const LoginPage = () => {
         setPathName(searchParams.get('redirect'));
     }, [searchParams]);
 
-    console.log(pathName);
-
 
     const router = useRouter();
 
@@ -87,7 +85,6 @@ const LoginPage = () => {
                 }
             })
             .catch((err) => {
-                console.log(err);
                 // If there is an error, show an error message
                 Swal.fire({
                     icon: 'error',

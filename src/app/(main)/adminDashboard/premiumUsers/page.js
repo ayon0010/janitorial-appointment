@@ -17,7 +17,7 @@ const page = async () => {
     if (!data) {
         return
     }
-    console.log(data);
+
 
     function formatTimestamp(isoTimestamp) {
         const date = new Date(isoTimestamp);

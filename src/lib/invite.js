@@ -2,9 +2,7 @@
 import Swal from 'sweetalert2';
 import { client } from './sanity';
 
-export  const inviteUserToSanity = async (email) => {
-    console.log('ayon');
-    
+export  const inviteUserToSanity = async (email) => {    
     try {
         // Invite user with administrator role
         const response = await client.users.invite({ 

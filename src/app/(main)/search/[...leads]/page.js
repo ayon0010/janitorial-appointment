@@ -62,8 +62,6 @@ export async function generateMetadata({ params }) {
 
 const page = async ({ params }) => {
     const { leads } = await params;
-    console.log(leads);
-
     if (leads?.length === 3) {
         return (
             <SingleLead Lead={leads} />

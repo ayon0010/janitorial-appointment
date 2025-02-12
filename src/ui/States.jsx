@@ -11,9 +11,7 @@ const States = async ({ States }) => {
 
     const [leads, states] = States;
     const decodeState = decodeURIComponent(states);
-    console.log(decodeState);
     const data = await getLeads(leads, states);
-    console.log(data);
 
     return (
         <div className="py-20 px-6">

@@ -8,7 +8,6 @@ const Page = () => {
     const axiosSecure = useAxiosSecure();
     const { user } = useAuth();
     const { sellerLeads, refetch } = GetSellerLeads(user?.uid);
-    console.log(sellerLeads);
 
     return (
         <div className='py-20 px-10'>

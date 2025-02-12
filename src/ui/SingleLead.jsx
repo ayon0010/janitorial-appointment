@@ -9,8 +9,6 @@ import FireClient from "./FireClient";
 
 const SingleLead = async ({ Lead }) => {
     const [leads, states, id] = Lead;
-    console.log(leads, states, id);
-
     const data = await getLeads(leads, states, id);
     const appointmentDate = data?.date;
     const currentDate = new Date(); // Replace with new Date() in production

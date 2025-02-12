@@ -47,7 +47,7 @@ const Page = () => {
                     icon: 'error',
                     confirmButtonText: 'OK'
                 });
-                console.log(err);
+
             });
     };
 

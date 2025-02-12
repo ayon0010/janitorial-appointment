@@ -11,7 +11,6 @@ const GetSellerLeads = (sellerId) => {
             try {
                 const response = await axiosSecure.get(`sellerLeads/${sellerId}`);
                 const data = await response.data;
-                console.log(data, 'sellerLeads');
                 return data;
             } catch (err) {
                 console.error("Error fetching user data:", err);

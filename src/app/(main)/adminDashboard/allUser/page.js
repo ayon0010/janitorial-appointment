@@ -9,11 +9,11 @@ import Loading from '../../loading';
 
 const Page = () => {
     const { allUsers, refetch, isLoading } = GetAllUsers();
-    console.log(allUsers, isLoading);
+
 
     const axiosSecure = useAxiosSecure();
     const makeAdmin = async (id, action, email) => {
-        console.log(id, action);
+
         // Show loading spinner
         Swal.fire({
             title: 'Processing...',
@@ -38,7 +38,7 @@ const Page = () => {
             });
             refetch()
         } catch (error) {
-            console.log(error);
+
 
             // Close the loading spinner
             Swal.close();

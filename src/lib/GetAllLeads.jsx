@@ -11,7 +11,6 @@ const GetAllLeads = () => {
             try {
                 const response = await axiosSecure.get(`allLeads`);
                 const data = await response?.data;
-                console.log(data, 'allLeads', error);
                 return data;
             } catch (err) {
                 console.error("Error fetching user data:", err);

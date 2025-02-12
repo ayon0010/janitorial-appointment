@@ -13,7 +13,6 @@ const GetBookMarks = (id) => {
             try {
                 const response = await axiosSecure.get(`/bookMarks/${user?.uid}/${id}`);
                 const data = await response.data;
-                console.log(data, 'bookmarks');
                 return data;
             } catch (err) {
                 console.error("Error fetching user data:", err);

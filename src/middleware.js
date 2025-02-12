@@ -10,8 +10,6 @@ export async function middleware(request) {
     const pathname = request.nextUrl.pathname;
     const cookieStore = await cookies();
     const token = cookieStore.get('userToken')?.value;
-    console.log(token);
-
     const loginURL = new URL('/login', request.url);
     loginURL.searchParams.append('redirect', pathname);
     loginURL.searchParams.append('message', 'You need to log in to access this page.');
@@ -23,8 +21,6 @@ export async function middleware(request) {
         const decoded = jwtDecode(token);
         const isAdmin = decoded?.isAdmin;
         const isSeller = decoded?.isSeller;
-        console.log(isAdmin, isSeller);
-
         if (isAdmin) {
             return NextResponse.next();
         }
@@ -36,7 +32,6 @@ export async function middleware(request) {
         }
         return NextResponse.redirect(loginURL)
     } catch (error) {
-        console.log(error);
         return NextResponse.redirect(loginURL)
     }
 }

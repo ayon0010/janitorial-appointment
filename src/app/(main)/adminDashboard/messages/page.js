@@ -17,7 +17,7 @@ const page = async () => {
     if (!data) {
         return
     }
-    // console.log(data);
+
 
     return (
         <div className='2xl:px-[70px] xl:px-16 px-8 py-20'>

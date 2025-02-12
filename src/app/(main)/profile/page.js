@@ -18,7 +18,6 @@ const Page = () => {
     const { isLoading, userInfo, refetch } = GetUserData();
     const axiosSecure = useAxiosSecure();
     const { user, updateUserProfile } = useAuth();
-    console.log(userInfo);
 
     // Initialize form with default values
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
@@ -78,7 +77,6 @@ const Page = () => {
         setSocialCount(initialMedias?.length);
     }, [userInfo, user, reset]);
 
-    console.log(serviceCityCount);
 
 
     const handleAddField = (type) => {
@@ -94,7 +92,6 @@ const Page = () => {
     };
 
     const onSubmit = async (data) => {
-        console.log(data);
 
         try {
             // Show loading alert
@@ -112,7 +109,7 @@ const Page = () => {
             await updateUserProfile(name);
             // Make the patch request with axiosSecure
             const response = await axiosSecure.patch(`/user/${userInfo?._id}`, data);
-            console.log(response)
+
             // On success, show success alert
             Swal.fire({
                 title: 'Success!',
