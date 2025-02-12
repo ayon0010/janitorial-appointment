@@ -348,16 +348,11 @@ input[type="checkbox"]:checked~.collapse-content {
 
 @media screen and (max-width: 576px) {
   .web {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     background-image: url('../../public/assets/igor-savelev-mxUtpzc85fI-unsplash_result_result.webp');
     height: 500px;
     /* Matches the height of your div */
     margin-top: 20px;
-    /* For spacing above */
-    position: relative;
     /* Required for pseudo-elements */
     overflow: hidden;
   }
