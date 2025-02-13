@@ -12,7 +12,7 @@ const SingleLead = async ({ Lead }) => {
     const data = await getLeads(leads, states, id);
     const appointmentDate = data?.date;
     const currentDate = new Date(); // Replace with new Date() in production
-    const isDisabled = new Date(appointmentDate) < currentDate;
+    const isDisabled = new Date(appointmentDate) > currentDate;
 
     return (
         <div className="pt-20 pb-20 px-10 bg-white">
