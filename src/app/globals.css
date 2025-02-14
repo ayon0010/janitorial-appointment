@@ -25,6 +25,7 @@
 
 .banner {
   background: url("../../public/assets/fc8401c42aac2193aa4293ac4cb98056\ \(1\)_result_result.webp") lightgray 50% / cover no-repeat;
+  will-change: transform; 
 }
 
 .text-secondary {
@@ -230,6 +231,7 @@ input[type="checkbox"]:checked~.collapse-content {
   min-height: 600px;
   width: 100%;
   overflow: hidden;
+  will-change: transform; 
 }
 
 .banner-3 {
@@ -252,6 +254,7 @@ input[type="checkbox"]:checked~.collapse-content {
   min-height: 600px;
   width: 100%;
   overflow: hidden;
+  will-change: transform; 
 }
 
 .banner-text {
@@ -331,6 +334,7 @@ input[type="checkbox"]:checked~.collapse-content {
   background-position: center;
   min-height: 600px;
   width: 100%;
+  will-change: transform; 
   overflow: hidden;
 }
 
@@ -368,5 +372,6 @@ input[type="checkbox"]:checked~.collapse-content {
 
   .banner-6 {
     background-image: url('../../public/assets/igor-savelev-mxUtpzc85fI-unsplash_result_result.webp');
+    will-change: transform; 
   }
 }
