@@ -39,14 +39,14 @@ const DynamicBanner = ({
                     alt="Janitorial appointment and commercial cleaning leads to grow your business"
                     fill
                     className="2xl:block xl:block hidden w-full"
-                    loading="lazy"
+                    
                 />
                 <Image
                     src={mobileImage}
                     alt="Mobile view showcasing janitorial appointments and commercial cleaning leads for business growth"
                     fill
                     className="min-h-[600px] object-center 2xl:hidden xl:hidden block w-full"
-                    loading="lazy"
+                    
                 />
             </div>
 
@@ -151,7 +151,7 @@ const Banner = () => {
                                 src={image3}
                                 alt="Telemarketing services for janitorial appointments and commercial cleaning leads"
                                 fill
-                                loading="lazy"
+                                
 
                             />
                         </div>

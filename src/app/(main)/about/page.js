@@ -12,7 +12,6 @@ import SectionTitles from "@/ui/SectionTitles";
 import { FaStar } from "react-icons/fa";
 import rev1 from '@/../public/assets/close-up-young-successful-man-smiling-camera-standing-casual-outfit-against-blue-background 1.svg'
 import rev2 from '@/../public/assets/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes.svg'
-import aboutImage1 from '@/../public/assets/Group 13778.svg'
 
 
 export const metadata = {
@@ -49,7 +48,6 @@ const page = () => {
                     className="w-full h-full 2xl:object-fill xl:object-fill object-cover"
                     src={aboutImage}
                     alt="About us - Learn more about our cleaning services and expertise"
-                    loading='lazy'
                 />
                 <div className="absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-40">
                     <h2 className="2xl:text-6xl xl:text-5xl text-3xl font-medium text-white text-center ">The Path to Success</h2>

@@ -39,9 +39,8 @@ export default function Leads() {
                         <Image
                             src={img}
                             alt={alt}
+                            fill
                             className="h-full w-full object-cover"
-                            width={4032}
-                            height={3024}
                             loading='lazy'
                         />
 

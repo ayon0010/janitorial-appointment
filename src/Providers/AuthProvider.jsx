@@ -96,6 +96,9 @@ const AuthProvider = ({ children }) => {
             } else {
                 // If no user, clear token and user data
                 setUser(null);
+                if (!user) {
+                    localStorage.removeItem('paymentLink');
+                }
                 setLoader(false);
             }
         });
