@@ -68,7 +68,7 @@ const AuthProvider = ({ children }) => {
     const logOut = () => {
         router.push('/');
         Cookies.remove('userToken');
-        localStorage.removeItem('paymentLink');
+        sessionStorage.removeItem('paymentLink');
         return signOut(auth);
     };
 
@@ -96,9 +96,6 @@ const AuthProvider = ({ children }) => {
             } else {
                 // If no user, clear token and user data
                 setUser(null);
-                if (!user) {
-                    localStorage.removeItem('paymentLink');
-                }
                 setLoader(false);
             }
         });

@@ -9,7 +9,7 @@ const PaymentLink = ({ link, plan }) => {
     const handleLink = () => {
         if (typeof window !== 'undefined') {
             if (link) {
-                localStorage.setItem('paymentLink', link);
+                sessionStorage.setItem('paymentLink', link);
             }
             if (user) {
                 router.push(link + `?prefilled_email=${user.email}`);

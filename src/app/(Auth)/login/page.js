@@ -73,12 +73,12 @@ const LoginPage = () => {
                     });
                 }
                 if (typeof window !== "undefined") {
-                    const paymentLink = localStorage.getItem('paymentLink');
+                    const paymentLink = sessionStorage.getItem('paymentLink');
                     if (pathName) {
                         return router.replace(`${pathName}`); // Use `replace` instead of `push`
                     } else if (paymentLink) {
                         router.replace(paymentLink + `?prefilled_email=${user.email}`);
-                        return localStorage.removeItem('paymentLink');
+                        return sessionStorage.removeItem('paymentLink');
                     } else {
                         return router.replace('/');
                     }

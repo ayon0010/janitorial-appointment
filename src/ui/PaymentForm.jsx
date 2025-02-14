@@ -67,7 +67,7 @@ export default function PaymentForm({ dpmCheckerLink, product_Id, closeModal }) 
                     currency: 'usd'
                 })
                 if (typeof window !== 'undefined') {
-                    localStorage.removeItem('paymentLink');
+                    sessionStorage.removeItem('paymentLink');
                 }
                 setRedirect(true);
             } catch (postError) {

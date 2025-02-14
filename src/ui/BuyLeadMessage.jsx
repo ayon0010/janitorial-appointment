@@ -15,7 +15,7 @@ const BuyLeadMessage = ({ leads, appointmentDate, prize, isDisabled, product_Id 
     const handleOpenModal = () => {
         if (!user) {
             if (typeof window !== 'undefined' && document) {
-                localStorage.setItem('paymentLink', pathName);
+                sessionStorage.setItem('paymentLink', pathName);
                 return router.push('/login');
             }
         }
