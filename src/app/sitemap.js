@@ -18,7 +18,7 @@ export default async function sitemap() {
     const blogs = await blogData() || [];
     const urls = pathName.map((name) => ({
         url: `https://www.janitorialappointment.com${name.path}`,
-        name: page.name,
+        name: page.name.name,
     }));
     const blogsUrl = blogs.map(blog => (
         {
