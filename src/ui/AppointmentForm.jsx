@@ -13,6 +13,7 @@ import image1mbl from '../../public/assets/behnam-norouzi-kmikcu4jrsY-unsplash_r
 import useAxiosPublic from '@/Hooks/useAxiosPublic';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import SelectField from '@/Shared/SelectField';
 
 const ContactAnimation = dynamic(() => import('./ContactAnimation'), {
     ssr: false // Set to false if the component relies on browser-specific APIs
@@ -34,6 +35,9 @@ const AppointmentForm = () => {
             if (it === "Janitorial Leads") {
                 setIt(true);
             }
+            else {
+                setIt(false);
+            }
             setEmail(email);
             setName(name);
         }
@@ -41,12 +45,25 @@ const AppointmentForm = () => {
 
     console.log(email, name);
 
-    const { register, handleSubmit, formState: { errors }, reset } = useForm({
+    const { register, handleSubmit, watch, formState: { errors }, reset } = useForm({
         defaultValues: {
             companyName: name,
             email: email
         }
     });
+
+    const selectedType = watch("type");
+
+    useEffect(() => {
+        console.log(selectedType);
+        
+        if (selectedType === 'It') {
+            setIt(true);
+        }
+        else {
+            setIt(false);
+        }
+    }, [selectedType])
 
     useEffect(() => {
         reset({
@@ -173,6 +190,8 @@ const AppointmentForm = () => {
                         name={'number'}
                         errors={errors}
                     />
+                    <SelectField
+                        type={['It', 'Janitorial Appointment']} register={register} label={'Choose type'} name={'type'} errors={errors} placeholder={'--'} />
                     {
                         it ?
                             <>
@@ -279,6 +298,7 @@ const AppointmentForm = () => {
                                 />
                             </>
                     }
+                    <div></div>
                     <div className="2xl:w-3/4 xl:w-3/4 w-full">
                         <FormButton label={'Book an appointment'} />
                     </div>
