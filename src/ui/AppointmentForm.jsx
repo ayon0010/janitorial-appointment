@@ -33,10 +33,10 @@ const AppointmentForm = () => {
             const name = localStorage.getItem('name');
             const it = localStorage.getItem('it');
             if (it === "Janitorial Leads") {
-                setIt(true);
+                setIt(false);
             }
             else {
-                setIt(false);
+                setIt(true);
             }
             setEmail(email);
             setName(name);
@@ -48,7 +48,7 @@ const AppointmentForm = () => {
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm({
         defaultValues: {
             companyName: name,
-            email: email
+            email: email,
         }
     });
 
@@ -56,7 +56,6 @@ const AppointmentForm = () => {
 
     useEffect(() => {
         console.log(selectedType);
-        
         if (selectedType === 'It') {
             setIt(true);
         }
