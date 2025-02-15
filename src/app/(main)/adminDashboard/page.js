@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import DashboardCard from '@/Shared/DashBoardCard';
 import ProfileCard from '@/Shared/ProfileCard';
 import Profiled from '@/Shared/Profiled';

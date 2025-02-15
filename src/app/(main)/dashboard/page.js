@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { FaList, } from 'react-icons/fa';
 import FaContract from '@/icons/FaContract';
 import FaShoppingCart from '@/icons/FaShoppingCart';

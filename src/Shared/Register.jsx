@@ -57,6 +57,9 @@ const Register = () => {
                 reset();
             }
         } catch (error) {
+            console.log(error.message);
+            console.log(error);
+            
             Swal.fire({
                 icon: 'error',
                 title: 'Registration Failed',

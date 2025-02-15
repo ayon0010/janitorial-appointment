@@ -77,17 +77,11 @@ const AuthProvider = ({ children }) => {
             if (currentUser) {
                 setLoader(true); // Show loader while fetching user data
                 try {
-                    // Avoid re-fetching if the token is already in cookies
-                    const token = Cookies.get('userToken');
-                    if (!token) {
-                        const response = await axiosPublic.post('/userEmail', { email: currentUser.email, userName: currentUser.displayName });
-                        const { token } = response?.data;
-                        if (token) {
-                            Cookies.set('userToken', token, { expires: 1 / 24 });
-                            setUser(currentUser);
-                        }
-                    } else {
-                        setUser(currentUser); // User is authenticated
+                    const response = await axiosPublic.post('/userEmail', { email: currentUser.email, userName: currentUser.displayName });
+                    const { token } = response?.data;
+                    if (token) {
+                        Cookies.set('userToken', token, { expires: 1 / 24 });
+                        setUser(currentUser);
                     }
                 } catch (error) {
                     setError(`Error fetching user data: ${error.message}`);
@@ -97,6 +91,7 @@ const AuthProvider = ({ children }) => {
                 // If no user, clear token and user data
                 setUser(null);
                 setLoader(false);
+                Cookies.remove('userToken');
             }
         });
 
