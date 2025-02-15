@@ -39,7 +39,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
     const { leads } = await params;
-    if (leads) {
+    if (leads?.length === 1) {
         return {
             title: `Exclusive Commercial Cleaning Leads | High-Quality Janitorial Leads`,
             description:
