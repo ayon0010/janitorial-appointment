@@ -39,9 +39,61 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
     const { leads } = await params;
+    console.log(leads);
+
     if (leads?.length === 1) {
         return {
-            title: `Exclusive Commercial Cleaning Leads | High-Quality Janitorial Leads`,
+            title: `${leads[0] === 'exclusive-leads' ? `Exclusive Commercial Cleaning Leads | High-Quality Janitorial Leads` : leads[0] === 'opportunities' ? 'Get opportunities from our commercial Cleaning Leads' : 'High-Quality Janitorial leads'}`,
+            description:
+                "Get exclusive commercial cleaning leads and janitorial leads to grow your cleaning business. High-quality verified leads to help you secure more contracts.",
+            keywords:
+                "commercial cleaning leads, janitorial leads, exclusive cleaning leads, cleaning business leads, high-quality cleaning leads, cleaning contracts",
+            robots: "index, follow",
+            openGraph: {
+                title: "Exclusive Commercial Cleaning Leads | High-Quality Janitorial Leads",
+                description:
+                    "Get exclusive commercial cleaning leads and janitorial leads to grow your cleaning business. High-quality verified leads to help you secure more contracts.",
+                type: "website",
+                url: "https://www.janitorialappointment.com",
+                images: [
+                    {
+                        url: "https://www.janitorialappointment.com/your-image.jpg",
+                        width: 1200,
+                        height: 630,
+                        alt: "Exclusive Commercial Cleaning Leads and Janitorial Leads",
+                    },
+                ],
+            },
+        };
+    }
+    else if (leads?.length === 2) {
+        return {
+            title: `Exclusive Commercial Cleaning Leads in ${leads[1]} | High-Quality Janitorial Leads`,
+            description:
+                "Get exclusive commercial cleaning leads and janitorial leads to grow your cleaning business. High-quality verified leads to help you secure more contracts.",
+            keywords:
+                "commercial cleaning leads, janitorial leads, exclusive cleaning leads, cleaning business leads, high-quality cleaning leads, cleaning contracts",
+            robots: "index, follow",
+            openGraph: {
+                title: "Exclusive Commercial Cleaning Leads | High-Quality Janitorial Leads",
+                description:
+                    "Get exclusive commercial cleaning leads and janitorial leads to grow your cleaning business. High-quality verified leads to help you secure more contracts.",
+                type: "website",
+                url: "https://www.janitorialappointment.com",
+                images: [
+                    {
+                        url: "https://www.janitorialappointment.com/your-image.jpg",
+                        width: 1200,
+                        height: 630,
+                        alt: "Exclusive Commercial Cleaning Leads and Janitorial Leads",
+                    },
+                ],
+            },
+        };
+    }
+    else if (leads?.length === 3) {
+        return {
+            title: `Available Commercial Cleaning Leads in ${leads[1]} | High-Quality Janitorial Leads`,
             description:
                 "Get exclusive commercial cleaning leads and janitorial leads to grow your cleaning business. High-quality verified leads to help you secure more contracts.",
             keywords:
