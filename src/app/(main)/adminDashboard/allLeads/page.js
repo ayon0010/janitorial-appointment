@@ -17,7 +17,11 @@ const Info = dynamic(() => import('@/ui/Info'), { ssr: false });
 const Page = () => {
 
     const axiosSecure = useAxiosSecure();
-    const { allLeads, refetch, isLoading } = GetAllLeads();
+    // const { allLeads, refetch, isLoading } = GetAllLeads();
+    const { allLeads, refetch, isLoading } = GetData(`allLeads`, `allLeads`);
+    console.log(allLeads);
+
+
     const [isOpen, setIsOpen] = useState(false);
     const handleDelete = (id) => {
         // Show confirmation Swal
