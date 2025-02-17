@@ -9,6 +9,7 @@ import Swal from 'sweetalert2';
 import dynamic from 'next/dynamic';
 import GetAllLeads from '@/lib/GetAllLeads';
 import Loading from '../../loading';
+import GetData from '@/lib/GetData';
 const Modal = dynamic(() => import('@/ui/Modal'), { ssr: false });
 const Dot = dynamic(() => import('@/ui/Dot'), { ssr: false });
 const Info = dynamic(() => import('@/ui/Info'), { ssr: false });
