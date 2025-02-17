@@ -18,15 +18,20 @@ import { data } from '@/js/states';
 import ContactAnimationForHome from "@/ui/ContactAnimationForHome";
 
 export const metadata = {
-    title: "Janitorial Appointments | Commercial Cleaning Leads",
+    title: "Janitorial Appointments & Commercial Cleaning Leads | Book High-Quality Leads",
     description:
-        "Boost your janitorial business with high-quality janitorial appointments and commercial cleaning leads. Unlock effective lead generation strategies for growth.",
+        "Get exclusive janitorial appointments and commercial cleaning leads to grow your cleaning business. Connect with offices, hospitals, and commercial centers for high-converting janitorial leads.",
     keywords: [
         "janitorial appointments",
         "commercial cleaning leads",
         "janitorial lead generation",
         "cleaning service leads",
         "book janitorial appointments",
+        "cleaning business leads",
+        "office cleaning leads",
+        "hospital cleaning contracts",
+        "commercial janitorial services",
+        "facility maintenance leads"
     ],
     authors: [
         {
@@ -34,6 +39,8 @@ export const metadata = {
         },
     ],
     charset: "utf-8",
+    robots: "index, follow",
+    viewport: "width=device-width, initial-scale=1.0",
 };
 
 

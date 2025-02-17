@@ -7,7 +7,7 @@ const page = async () => {
     const cookieStore = await cookies();
     const userTokenObj = cookieStore.get('userToken');
     const token = userTokenObj?.value;
-    const res = await fetch('https://backend.janitorialappointment.com/appointment', {
+    const res = await fetch('https://http://localhost:5000//appointment', {
         cache: 'no-cache',
         headers: {
             authorization: `Bearer ${token}`

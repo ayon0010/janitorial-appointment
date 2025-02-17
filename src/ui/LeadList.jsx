@@ -5,7 +5,7 @@ const LeadList = ({ leadList }) => {
     const { user } = useAuth();
 
     const handleDelete = async (id) => {
-        fetch(`https://backend.janitorialappointment.com/leadlist/${id}`, {
+        fetch(`https://http://localhost:5000//leadlist/${id}`, {
             method: 'DELETE',
         })
             .then(res => {
