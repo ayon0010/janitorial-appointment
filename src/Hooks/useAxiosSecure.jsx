@@ -9,7 +9,7 @@ const useAxiosSecure = () => {
     const router = useRouter();
 
     const axiosSecure = axios.create({
-        baseURL: 'https://https://backend.janitorialappointment.com/', // Adjust this to your actual base URL
+        baseURL: 'https://backend.janitorialappointment.com/', // Adjust this to your actual base URL
     });
 
     // Request interceptor
