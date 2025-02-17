@@ -3,6 +3,7 @@ import useAuth from '@/Hooks/useAuth';
 import useAxiosSecure from '@/Hooks/useAxiosSecure';
 import { usStates } from '@/js/states';
 import GetSingleLead from '@/lib/GetAllLeadsById';
+import GetData from '@/lib/GetData';
 import FormButton from '@/Shared/FormButton';
 import InputField from '@/Shared/InputField';
 import SelectField from '@/Shared/SelectField';
@@ -13,7 +14,8 @@ import Swal from 'sweetalert2';
 
 const Modal = ({ id }) => {
     const { user } = useAuth();
-    const { singleLeads, refetch } = GetSingleLead(id);
+    // const { singleLeads, refetch } = GetSingleLead(id);
+    const { allLeads: singleLeads, refetch } = GetData('singleLeads', `singleLeads/${id}`);
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         defaultValues: singleLeads, // Set default values from singleLeads
     });
