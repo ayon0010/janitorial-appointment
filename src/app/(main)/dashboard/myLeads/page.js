@@ -7,6 +7,7 @@ import Table from '@/Shared/Table';
 import SectionTitles from '@/ui/SectionTitles';
 import React from 'react';
 import Swal from 'sweetalert2';
+import Loading from '../../loading';
 
 const Page = () => {
 
@@ -14,10 +15,10 @@ const Page = () => {
     const { user } = useAuth();
     // user id
     const uid = user?.uid;
-   
-    const { data: savedLeads, refetch } = GetData(uid, `savedLeads/${uid}`);
+
+    const { data: savedLeads, refetch, isLoading } = GetData(uid, `savedLeads/${uid}`);
     console.log(savedLeads);
-    
+
     const axiosSecure = useAxiosSecure();
 
     const removeBookmarks = (id) => {
@@ -69,12 +70,15 @@ const Page = () => {
     return (
         <div className='pt-20 pb-20 px-10'>
             <SectionTitles heading={'Bookmarked'} subHeading={'Saved leads'} />
-            <Table
-                tableHead={['Leads', 'Location', 'Opportunity Type', 'Date', 'Status', 'View Details', 'Action']}
-                data={savedLeads}
-                Button={Button}
-                bookMarks={true}
-            />
+            {
+                isLoading ? <Loading /> :
+                    <Table
+                        tableHead={['Leads', 'Location', 'Opportunity Type', 'Date', 'Status', 'View Details', 'Action']}
+                        data={savedLeads}
+                        Button={Button}
+                        bookMarks={true}
+                    />
+            }
         </div>
     );
 };

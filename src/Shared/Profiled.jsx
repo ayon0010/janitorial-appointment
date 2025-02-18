@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image';
 import React from 'react';
-import woman from '@/../public/assets/vecteezy_business-woman-holding-tablet-pc_47656782 2.svg'
+import woman from '../../public/assets/vecteezy_business-woman-holding-tablet-pc_47656782 2.webp'
 import profileImage from '../../public/assets/Frame 1261153333_result_result.webp'
 import useAuth from '@/Hooks/useAuth';
 

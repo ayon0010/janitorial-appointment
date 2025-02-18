@@ -4,9 +4,8 @@ import lottie from 'lottie-web';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaWhatsapp } from 'react-icons/fa';
-
+import image from '../../public/assets/5124556.jpg';
 // Lottie animation paths
-const animationPath1 = '/assets/Animation - 1737470603251c.json';
 const animationPath2 = '/assets/Animation - 1737470167441contact.json';
 
 import fb from '@/../public/assets/Frame (8).svg';
@@ -14,7 +13,6 @@ import linked from '@/../public/assets/Frame (11).svg';
 import twitt from '@/../public/assets/Frame (12).svg';
 
 const ContactInfo = () => {
-    const animationRef = useRef(null);
     const animation2Ref = useRef(null);
     const [isClient, setIsClient] = useState(false);
 
@@ -25,17 +23,6 @@ const ContactInfo = () => {
 
     useEffect(() => {
         if (isClient) {
-            // Initialize Lottie animations
-            if (animationRef.current) {
-                lottie.loadAnimation({
-                    container: animationRef.current,
-                    renderer: 'svg',
-                    loop: false,
-                    autoplay: true,
-                    path: animationPath1,
-                });
-            }
-
             if (animation2Ref.current) {
                 lottie.loadAnimation({
                     container: animation2Ref.current,
@@ -59,8 +46,7 @@ const ContactInfo = () => {
     return (
         <div className="px-10 grid 2xl:grid-cols-2 xl:grid-cols-2 items-center">
             <div className="w-full h-auto">
-                {/* Lottie animation for the first animation */}
-                <div ref={animationRef} className="w-full h-[400px]" />
+                <Image src={image} alt='Contact Us - Janitorial Appointment' className='w-full h-auto' height={400} width={600} />
             </div>
 
             <div className="space-y-8">
