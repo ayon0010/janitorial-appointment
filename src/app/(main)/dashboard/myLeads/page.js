@@ -2,7 +2,7 @@
 export const dynamic = "force-dynamic";
 import useAuth from '@/Hooks/useAuth';
 import useAxiosSecure from '@/Hooks/useAxiosSecure';
-import GetSavedLead from '@/lib/getSavedLead';
+import GetData from '@/lib/GetData';
 import Table from '@/Shared/Table';
 import SectionTitles from '@/ui/SectionTitles';
 import React from 'react';
@@ -10,8 +10,14 @@ import Swal from 'sweetalert2';
 
 const Page = () => {
 
+    // User
     const { user } = useAuth();
-    const { savedLeads, refetch } = GetSavedLead(user?.uid);
+    // user id
+    const uid = user?.uid;
+   
+    const { data: savedLeads, refetch } = GetData(uid, `savedLeads/${uid}`);
+    console.log(savedLeads);
+    
     const axiosSecure = useAxiosSecure();
 
     const removeBookmarks = (id) => {

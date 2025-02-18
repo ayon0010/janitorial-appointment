@@ -1,26 +1,30 @@
 'use client'
 import useAxiosSecure from '@/Hooks/useAxiosSecure';
 import formatTimestamp from '@/js/convertTime';
-import SectionTitles from '@/ui/SectionTitles';
 import TableHead from '@/ui/TableHead';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import dynamic from 'next/dynamic';
-import GetAllLeads from '@/lib/GetAllLeads';
 import Loading from '../../loading';
 import GetData from '@/lib/GetData';
-const Modal = dynamic(() => import('@/ui/Modal'), { ssr: false });
 const Dot = dynamic(() => import('@/ui/Dot'), { ssr: false });
 const Info = dynamic(() => import('@/ui/Info'), { ssr: false });
 
-
 const Page = () => {
 
+    // axios instance
     const axiosSecure = useAxiosSecure();
-    const { allLeads, refetch, isLoading } = GetData(`allLeads`, `allLeads`);
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [currentPage, setPage] = useState(1);
+
+    // Lead data fetching (Automatically re-fetches when `currentPage` changes)
+    const { data: allLeads, refetch, isLoading } = GetData(currentPage, `allLeads?currentPage=${currentPage}`);
+
+    // Pagination Data updating
+    const pagination = (parameter) => {
+        setPage(parameter); //
+    };
     const handleDelete = (id) => {
         // Show confirmation Swal
         Swal.fire({
@@ -107,8 +111,6 @@ const Page = () => {
             });
     };
 
-
-
     const handleStatus = (id, action) => {
         // Show loading Swal
         Swal.fire({
@@ -161,7 +163,7 @@ const Page = () => {
                         Lead verification status
                     </h4>
                     <p className="text-[#6941C6] inter text-sm font-medium pt-[3px] px-[10px] bg-[#F9F5FF] rounded-[18px]">
-                        {allLeads?.length}
+                        {allLeads?.totalLead}
                     </p>
                 </div>
                 <p className="text-[#667085] inter font-normal text-xs text-center mt-2">
@@ -177,142 +179,121 @@ const Page = () => {
                     <TableHead allLeads={true} tableHead={['#', 'Uploader', 'Business Name', 'Decision Maker', 'Appointment Date', 'Appointment Time', 'States', 'City', 'Area', 'Upload Date', 'Audio', 'Status', 'Additional Details', 'Category', 'Sold', 'Change Category', 'Update Status', 'Prize', 'Set Prize', 'Action', 'Edit', 'Details']} />
                     <tbody>
                         {
-                            allLeads?.map((lead, i) => {
+                            allLeads?.result?.map((lead, i) => {
                                 return (
-                                    <>
-                                        <tr key={i}>
-                                            <td>{i + 1}</td>
-                                            <td>
-                                                <p className='text-xs font-semibold text-black  text-center'>{lead?.companyName}</p>
-                                            </td>
-                                            <td>
-                                                <p className='text-xs font-semibold text-black  text-center'>{lead?.businessName}</p>
-                                            </td>
-                                            <td>
-                                                <p className='text-xs font-semibold text-black  text-center'>{lead?.firstName} {lead?.lastName}</p>
-                                            </td>
-                                            <td>
-                                                <p className='text-xs font-semibold text-black  text-center'>{lead?.date}</p>
-                                            </td>
-                                            <td>
-                                                <p className='text-xs font-semibold text-black  text-center'>{lead?.time}</p>
-                                            </td>
-                                            <td>
-                                                <p className='text-xs font-semibold text-black  text-center'>{lead?.states}</p>
-                                            </td>
-                                            <td>
-                                                <p className='text-xs font-semibold text-black  text-center'>{lead?.city}</p>
-                                            </td>
-                                            <td>
-                                                <p className='text-xs font-semibold text-black  text-center'>{lead?.area}</p>
-                                            </td>
-                                            <td>
-                                                <p className='text-xs font-semibold text-black  text-center'>{formatTimestamp(lead?.uploadDate)}</p>
-                                            </td>
-                                            <td>
-                                                <audio src={lead?.audio} controls />
-                                            </td>
-                                            <td>
-                                                {lead?.verified ?
-                                                    <p className='text-xs font-semibold text-green-500  text-center'>Verified</p>
-                                                    :
-                                                    <p className='text-xs font-semibold text-red-500  text-center'>Not verified</p>
-                                                }
+                                    <tr key={i}>
+                                        <td>{((currentPage - 1) * 10 + i + 1)}</td>
+                                        <td>
+                                            <p className='text-xs font-semibold text-black  text-center'>{lead?.companyName}</p>
+                                        </td>
+                                        <td>
+                                            <p className='text-xs font-semibold text-black  text-center'>{lead?.businessName}</p>
+                                        </td>
+                                        <td>
+                                            <p className='text-xs font-semibold text-black  text-center'>{lead?.firstName} {lead?.lastName}</p>
+                                        </td>
+                                        <td>
+                                            <p className='text-xs font-semibold text-black  text-center'>{lead?.date}</p>
+                                        </td>
+                                        <td>
+                                            <p className='text-xs font-semibold text-black  text-center'>{lead?.time}</p>
+                                        </td>
+                                        <td>
+                                            <p className='text-xs font-semibold text-black  text-center'>{lead?.states}</p>
+                                        </td>
+                                        <td>
+                                            <p className='text-xs font-semibold text-black  text-center'>{lead?.city}</p>
+                                        </td>
+                                        <td>
+                                            <p className='text-xs font-semibold text-black  text-center'>{lead?.area}</p>
+                                        </td>
+                                        <td>
+                                            <p className='text-xs font-semibold text-black  text-center'>{formatTimestamp(lead?.uploadDate)}</p>
+                                        </td>
+                                        <td>
+                                            <audio src={lead?.audio} controls />
+                                        </td>
+                                        <td>
+                                            {lead?.verified ?
+                                                <p className='text-xs font-semibold text-green-500  text-center'>Verified</p>
+                                                :
+                                                <p className='text-xs font-semibold text-red-500  text-center'>Not verified</p>
+                                            }
 
-                                            </td>
-                                            <td>
-                                                <p className='text-xs font-semibold text-black  text-center'>
-                                                    {lead?.additionalDetails?.slice(0, 20)}...
-                                                </p>
-                                            </td>
-                                            <td>
-                                                <p className='text-xs font-semibold text-black  text-center'>
-                                                    {lead?.category}
-                                                </p>
-                                            </td>
-                                            <td>
-                                                {
-                                                    lead?.sold ?
-                                                        <>
-                                                            <p className="text-red-600
+                                        </td>
+                                        <td>
+                                            <p className='text-xs font-semibold text-black  text-center'>
+                                                {lead?.additionalDetails?.slice(0, 20)}...
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p className='text-xs font-semibold text-black  text-center'>
+                                                {lead?.category}
+                                            </p>
+                                        </td>
+                                        <td>
+                                            {
+                                                lead?.sold ?
+                                                    <>
+                                                        <p className="text-red-600
                              inter text-sm font-medium">Sold</p>
-                                                        </>
-                                                        :
-                                                        <>
-                                                            <Dot width={'30px'} h={true} />
-                                                            <p className="text-[#027A48]
+                                                    </>
+                                                    :
+                                                    <>
+                                                        <Dot width={'30px'} h={true} />
+                                                        <p className="text-[#027A48]
                              inter text-sm font-medium">Not sold</p>
-                                                        </>
+                                                    </>
 
-                                                }
-                                            </td>
-                                            <td>
-                                                <select onChange={() => handleCategory(event, lead?._id)} defaultValue={lead?.category} className='rounded-[10px] bg-white select select-bordered'>
-                                                    <option>exclusive-leads</option>
-                                                    <option>layUps</option>
-                                                    <option>opportunities</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                {
-                                                    !lead?.verified ?
-                                                        <button onClick={() => handleStatus(lead?._id, true)} className='rounded-[10px] btn btn-outline text-green-500'>
-                                                            Approve
-                                                        </button>
-                                                        :
-                                                        <button onClick={() => handleStatus(lead?._id, false)} className='rounded-[10px] btn btn-outline text-red-500'>
-                                                            Reject
-                                                        </button>
-                                                }
-
-                                            </td>
-                                            <td>
-                                                {
-                                                    !lead?.prize ? 'Not Set' : `$${lead?.prize}`
-                                                }
-                                            </td>
-                                            <td>
-                                                <form onSubmit={() => handlePrize(event, lead?._id)} className='flex items-center justify-center gap-1'>
-                                                    <input name='prize' type='text' min={0} defaultValue={lead?.prize} className='rounded-md input input-bordered' />
-                                                    <input className='rounded-md btn text-white bg-primary' type='submit' value={'Update'} />
-                                                </form>
-                                            </td>
-                                            <td>
-                                                <button onClick={() => handleDelete(lead?._id)} className='rounded-lg btn btn-outline text-red-600'>
-                                                    Delete
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button className="btn btn-outline text-green-600 rounded-lg" onClick={() => setIsOpen(true)}>Edit</button>
-                                            </td>
-                                            <td>
-                                                <Link href={`/adminDashboard/allLeads/${lead?._id}`}>
-                                                    <Info />
-                                                </Link>
-                                            </td>
-                                        </tr>
-                                        {isOpen && (
-                                            <div className="fixed inset-0 flex items-center justify-center z-50">
-                                                {/* Modal Backdrop */}
-                                                <div
-                                                    className="absolute inset-0 bg-black opacity-50"
-                                                    onClick={() => setIsOpen(false)}
-                                                ></div>
-
-                                                {/* Modal Box */}
-                                                <div className="relative bg-white rounded-lg p-8 w-[90vw] max-w-4xl max-h-[80vh] overflow-y-auto">
-                                                    <SectionTitles heading={'Edit'} subHeading={'Edit your leads'} />
-                                                    <Modal id={lead?._id} />
-                                                    <button
-                                                        onClick={() => setIsOpen(false)}
-                                                        className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
-                                                    >
-                                                        ✕
+                                            }
+                                        </td>
+                                        <td>
+                                            <select onChange={() => handleCategory(event, lead?._id)} defaultValue={lead?.category} className='rounded-[10px] bg-white select select-bordered'>
+                                                <option>exclusive-leads</option>
+                                                <option>layUps</option>
+                                                <option>opportunities</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            {
+                                                !lead?.verified ?
+                                                    <button onClick={() => handleStatus(lead?._id, true)} className='rounded-[10px] btn btn-outline text-green-500'>
+                                                        Approve
                                                     </button>
-                                                </div>
-                                            </div>
-                                        )}
-                                    </>
+                                                    :
+                                                    <button onClick={() => handleStatus(lead?._id, false)} className='rounded-[10px] btn btn-outline text-red-500'>
+                                                        Reject
+                                                    </button>
+                                            }
+
+                                        </td>
+                                        <td>
+                                            {
+                                                !lead?.prize ? 'Not Set' : `$${lead?.prize}`
+                                            }
+                                        </td>
+                                        <td>
+                                            <form onSubmit={() => handlePrize(event, lead?._id)} className='flex items-center justify-center gap-1'>
+                                                <input name='prize' type='text' min={0} defaultValue={lead?.prize} className='rounded-md input input-bordered' />
+                                                <input className='rounded-md btn text-white bg-primary' type='submit' value={'Update'} />
+                                            </form>
+                                        </td>
+                                        <td>
+                                            <button onClick={() => handleDelete(lead?._id)} className='rounded-lg btn btn-outline text-red-600'>
+                                                Delete
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <Link href={`/adminDashboard/allLeads/edit/${lead?._id}`}>
+                                                <button className="btn btn-outline text-green-600 rounded-lg">Edit</button>
+                                            </Link>
+                                        </td>
+                                        <td>
+                                            <Link href={`/adminDashboard/allLeads/${lead?._id}`}>
+                                                <Info />
+                                            </Link>
+                                        </td>
+                                    </tr>
                                 )
                             })
                         }
@@ -320,9 +301,40 @@ const Page = () => {
                     </tbody>
                 </table>
             </div>
-            {/* <TableHead tableHead={tableHead} /> */}
+            <Pagination page={allLeads} pagination={pagination} />
         </div>
     );
 };
+
+
+// Pagination component
+const Pagination = ({ page, pagination }) => {
+    const array = Array.from({ length: page?.page }, (_, i) => i + 1);
+    return (
+        <div className='w-fit mx-auto my-10'>
+            <div className="">
+                {
+                    array.map((a, i) => {
+                        return (
+                            <button key={i} onClick={() => pagination(a)} className={`btn btn-square bg-red-400`}>
+                                {/* <input
+                                    key={a}
+
+                                    type="radio"
+                                    name="options"
+                                    aria-label={a}
+                                    
+
+                                /> */}
+                                {a}
+                            </button>
+                        )
+                    })
+                }
+            </div>
+        </div>
+    )
+}
+
 
 export default Page;

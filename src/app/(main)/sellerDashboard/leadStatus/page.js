@@ -1,13 +1,13 @@
 'use client'
 import useAuth from '@/Hooks/useAuth';
-import useAxiosSecure from '@/Hooks/useAxiosSecure';
-import GetSellerLeads from '@/lib/GetSellerLeads';
+import GetData from '@/lib/GetData';
 import React from 'react';
 
 const Page = () => {
-    const axiosSecure = useAxiosSecure();
     const { user } = useAuth();
-    const { sellerLeads, refetch } = GetSellerLeads(user?.uid);
+    
+    const sellerId = user?.uid;
+    const { data: sellerLeads, refetch } = GetData(user?.uid, `sellerLeads/${sellerId}`);
 
     return (
         <div className='py-20 px-10'>

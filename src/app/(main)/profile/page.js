@@ -5,7 +5,6 @@ import FormButton from "@/Shared/FormButton";
 import InputField from "@/Shared/InputField";
 import PageTitle from "@/Shared/PageTitle";
 import SelectField from "@/Shared/SelectField";
-import CustomFileInput from "@/ui/InputButton";
 import { useState, useEffect } from "react";
 import GetUserData from "@/lib/getUserData";
 import useAxiosSecure from "@/Hooks/useAxiosSecure";
@@ -15,10 +14,9 @@ import 'sweetalert2/src/sweetalert2.scss'
 
 const Page = () => {
     // Fetch user data
-    const { isLoading, userInfo, refetch } = GetUserData();
+    const { data: userInfo, refetch } = GetUserData();
     const axiosSecure = useAxiosSecure();
     const { user, updateUserProfile } = useAuth();
-
     // Initialize form with default values
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         defaultValues: {

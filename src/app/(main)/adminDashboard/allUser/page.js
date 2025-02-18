@@ -1,15 +1,14 @@
 'use client'
 import useAxiosSecure from '@/Hooks/useAxiosSecure';
-import GetAllUsers from '@/lib/GetAllUser';
 import SectionTitles from '@/ui/SectionTitles';
 import TableHead from '@/ui/TableHead';
 import React from 'react';
 import Swal from 'sweetalert2';
 import Loading from '../../loading';
+import GetData from '@/lib/GetData';
 
 const Page = () => {
-    const { allUsers, refetch, isLoading } = GetAllUsers();
-
+    const { data: allUsers, refetch, isLoading } = GetData('allUsers', 'user')
 
     const axiosSecure = useAxiosSecure();
     const makeAdmin = async (id, action, email) => {
@@ -102,13 +101,14 @@ const Page = () => {
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}
-                        <TableHead tableHead={['Company Name', 'Email', 'Service State', 'Service City 1', 'Service City 2', 'Service City 3', 'Service City 4', 'Company Websites', 'Years in Business', 'Number of employees', 'Main Contact', 'Phone Number', 'Social Media 1', 'Social Media 2', 'Social Media 3', 'Social Media 4', 'Seller Status', 'Admin Status', 'Make Seller', 'Make admin']} />
+                        <TableHead tableHead={['#', 'Company Name', 'Email', 'Service State', 'Service City 1', 'Service City 2', 'Service City 3', 'Service City 4', 'Company Websites', 'Years in Business', 'Number of employees', 'Main Contact', 'Phone Number', 'Social Media 1', 'Social Media 2', 'Social Media 3', 'Social Media 4', 'Seller Status', 'Admin Status', 'Make Seller', 'Make admin']} />
                         <tbody>
                             {/* row 1 */}
                             {
                                 allUsers?.map((user, i) => {
                                     return (
                                         <tr key={user?._id}>
+                                            <th>{i + 1}</th>
                                             <th>{user?.companyName}</th>
                                             <td>
                                                 <a href={`mailTo:${user?.email}`}>{user?.email}</a>
