@@ -41,15 +41,17 @@ const DynamicBanner = ({
                     src={desktopImage}
                     alt="Janitorial appointment and commercial cleaning leads to grow your business"
                     fill
-                    className="2xl:block xl:block hidden w-full"
-                    loading="eager"
+                    priority // Loads the image faster since it's above the fold
+                    className="hidden xl:block 2xl:block w-full"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw"
                 />
                 <Image
                     src={mobileImage}
                     alt="Mobile view showcasing janitorial appointments and commercial cleaning leads for business growth"
                     fill
-                    className="min-h-[600px] object-center 2xl:hidden xl:hidden block w-full"
-                    loading="eager"
+                    className="object-center 2xl:hidden xl:hidden block w-full object-cover"
+                    priority
+                    sizes="(max-width: 586px) 100vw"
                 />
             </div>
 
@@ -134,7 +136,7 @@ const Banner = () => {
                 {/* Slider 3 */}
                 <SwiperSlide>
                     <div className="flex flex-col min-h-[600px] max-h-[800px] h-auto">
-                        <Image src={image4} alt='Exclusive Commercial cleaning leads all over the usa' loading="eager" fill priority={true} className='object-cover' />
+                        <Image src={image4} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw,1200px" alt='Exclusive Commercial cleaning leads all over the usa' priority fill priority={true} className='object-cover' />
                         <div className='absolute inset-0 bg-black opacity-50'></div>
                         <div className='m-auto z-30 2xl:w-[80%] xl:w-[80%] w-[90%]'>
                             <h1 className='text-white text-center font-bold  2xl:text-6xl xl:text-5xl text-3xl'>Find <span className=''>Qualified, Exclusive Janitorial Leads</span> <br className='2xl:block xl:block hidden' /> available in Your Area!</h1>
@@ -153,9 +155,11 @@ const Banner = () => {
                         <div className='absolute inset-0 z-20 h-full'>
                             <Image
                                 src={image3}
-                                loading="eager"
+                                priority
                                 alt="Telemarketing services for janitorial appointments and commercial cleaning leads"
                                 fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw"
+                                className=''
                             />
                         </div>
                         <div className='absolute inset-0 bg-black opacity-50 z-30'></div>
@@ -196,8 +200,8 @@ const Banner = () => {
                 {/* Slider 5 */}
                 <SwiperSlide>
                     <div className="flex flex-col  min-h-[600px] max-h-[800px] h-auto relative">
-                        <Image src={image5} alt='Web and App developing and IT services' loading="eager" fill priority={true} className='object-cover 2xl:block xl:block hidden' />
-                        <Image src={image5mbl} alt='Web and App developing and IT services' className='2xl:hidden xl:hidden block object-cover' fill priority={true} />
+                        <Image src={image5} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw" priority alt='Web and App developing and IT services' fill className='object-cover 2xl:block xl:block hidden' />
+                        <Image src={image5mbl} sizes="(max-width: 586px) 100vw" alt='Web and App developing and IT services' className='2xl:hidden xl:hidden block object-cover' fill priority={true} />
                         {/* Overlays */}
                         <div className="absolute inset-0 bg-black opacity-40 z-30"></div>
                         <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>

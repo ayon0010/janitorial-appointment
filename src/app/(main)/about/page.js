@@ -90,8 +90,8 @@ const page = () => {
                         </div>
                     </div>
                     <div className="flex flex-col h-full 2xl:mt-0 xl:mt-0 mt-6">
-                        <div>
-                            <Image src={video} className="w-full h-auto" alt="" />
+                        <div className="rounded-lg">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/AKNRRcI6YCc?si=RB_A4ATkNveKns-i" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <div className="mt-6 h-full">
                             <Image

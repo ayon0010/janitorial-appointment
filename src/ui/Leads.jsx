@@ -39,12 +39,12 @@ export default function Leads() {
                         <Image
                             src={img}
                             alt={alt}
-                            fill
-                            className="h-full w-full object-cover"
-                            loading='lazy'
-                            layout="responsive"
+                            width={800} // Default desktop width
+                            height={500} // Default desktop height
+                            className="w-full h-auto object-cover"
+                            loading="lazy"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
                         />
-
                     </div>
 
                     {/* Icon and headline */}
