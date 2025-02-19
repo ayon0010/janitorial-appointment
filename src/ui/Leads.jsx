@@ -42,6 +42,7 @@ export default function Leads() {
                             fill
                             className="h-full w-full object-cover"
                             loading='lazy'
+                            layout="responsive"
                         />
 
                     </div>
@@ -94,7 +95,7 @@ export default function Leads() {
                 <Card
                     img={img6}
                     headline={'Church Cleaning Leads'}
-                    alt="Church cleaning leads for janitorial services and religious facility maintenance" 
+                    alt="Church cleaning leads for janitorial services and religious facility maintenance"
                     text={'Access high-quality church cleaning leads tailored to your business needs. Our service connects you with church administrators and organizers, providing opportunities to maintain clean and welcoming places of worship.'}
                 />
             </div>
