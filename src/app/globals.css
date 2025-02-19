@@ -221,20 +221,7 @@ input[type="checkbox"]:checked~.collapse-content {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
 }
 
-.banner-2 {
-  position: relative;
-  /* Position the banner to allow absolute positioning of overlay */
-  background-image: url("../../public/assets/clay-banks-BY-R0UNRE7w-unsplash_result_result.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 600px;
-  width: 100%;
-  overflow: hidden;
-  will-change: transform; 
-}
-
-.banner-3 {
+/* .banner-3 {
   position: relative;
   background-image: url("../../public/assets/c4fff5f6b137dec9009b9e4e2c05c82f_result_result.webp");
   background-repeat: no-repeat;
@@ -243,9 +230,9 @@ input[type="checkbox"]:checked~.collapse-content {
   min-height: 600px;
   width: 100%;
   overflow: hidden;
-}
+} */
 
-.banner-4 {
+/* .banner-4 {
   position: relative;
   background-image: url("../../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash_result.webp");
   background-repeat: no-repeat;
@@ -255,7 +242,7 @@ input[type="checkbox"]:checked~.collapse-content {
   width: 100%;
   overflow: hidden;
   will-change: transform; 
-}
+} */
 
 .banner-text {
   line-height: 60px !important;
@@ -370,8 +357,8 @@ input[type="checkbox"]:checked~.collapse-content {
     line-height: 25px !important;
   }
 
-  .banner-6 {
+  /* .banner-6 {
     background-image: url('../../public/assets/igor-savelev-mxUtpzc85fI-unsplash_result_result.webp');
     will-change: transform; 
-  }
+  } */
 }

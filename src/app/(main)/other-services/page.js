@@ -19,6 +19,8 @@ import desing2 from '@/../public/assets/126d255806c5000ad6d009871cc3b81b_result_
 import desing3 from '@/../public/assets/b3e87b895d98f825cbfa5eaddda18e4b_result_result.webp'
 import desing4 from '@/../public/assets/927cc8b897e6124b1c31ff8bc507f55a_result_result.webp'
 import Link from 'next/link';
+import image5 from '@/../public/assets/lorenzo-herrera-p0j-mE6mGo4-unsplash_result.webp'
+import image5mbl from '@/../public/assets/igor-savelev-mxUtpzc85fI-unsplash_result_result.webp'
 import ButtonPrimary from '@/ui/ButtonPrimary';
 
 
@@ -45,7 +47,11 @@ export const metadata = {
 const page = () => {
     return (
         <div className=''>
-            <div className="banner-6 flex flex-col h-full relative">
+            <div className="flex flex-col  min-h-[600px] max-h-[800px] h-auto relative">
+                <Image src={image5} alt='Web and App developing and IT services' fill priority={true} className='object-cover 2xl:block xl:block hidden' />
+                <Image src={image5mbl} alt='Web and App developing and IT services' className='2xl:hidden xl:hidden block object-cover' fill priority={true} />
+                {/* Overlays */}
+                <div className="absolute inset-0 bg-black opacity-40 z-30"></div>
                 <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
                     <h2 className='2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:banner-text xl:banner-text text-white'>
                         Elevate Your Brand, Expert <span className='text-green-600'>Digital Marketing, Web & App Solutions</span>

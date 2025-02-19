@@ -17,6 +17,9 @@ import image1mbl from '../../public/assets/1904c9e7a4e1664e4e229a2f3c9155941_res
 import image2 from '@/../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash_result.webp'
 import image2mbl from '@/../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash1_result.webp';
 import image3 from '@/../public/assets/c4fff5f6b137dec9009b9e4e2c05c82f_result_result.webp'
+import image4 from '@/../public/assets/clay-banks-BY-R0UNRE7w-unsplash_result_result.webp'
+import image5 from '@/../public/assets/lorenzo-herrera-p0j-mE6mGo4-unsplash_result.webp'
+import image5mbl from '../../public/assets/igor-savelev-mxUtpzc85fI-unsplash_result_result.webp'
 
 
 const DynamicBanner = ({
@@ -39,13 +42,13 @@ const DynamicBanner = ({
                     alt="Janitorial appointment and commercial cleaning leads to grow your business"
                     fill
                     className="2xl:block xl:block hidden w-full"
-                    
+
                 />
                 <Image
                     src={mobileImage}
                     alt="Mobile view showcasing janitorial appointments and commercial cleaning leads for business growth"
                     fill
-                    className="min-h-[600px] object-center 2xl:hidden xl:hidden block w-full" 
+                    className="min-h-[600px] object-center 2xl:hidden xl:hidden block w-full"
                 />
             </div>
 
@@ -129,7 +132,8 @@ const Banner = () => {
                 </SwiperSlide>
                 {/* Slider 3 */}
                 <SwiperSlide>
-                    <div className="banner-2 flex flex-col h-full">
+                    <div className="flex flex-col min-h-[600px] max-h-[800px] h-auto">
+                        <Image src={image4} alt='Exclusive Commercial cleaning leads all over the usa' fill priority={true} className='object-cover' />
                         <div className='absolute inset-0 bg-black opacity-50'></div>
                         <div className='m-auto z-30 2xl:w-[80%] xl:w-[80%] w-[90%]'>
                             <h1 className='text-white text-center font-bold  2xl:text-6xl xl:text-5xl text-3xl'>Find <span className=''>Qualified, Exclusive Janitorial Leads</span> <br className='2xl:block xl:block hidden' /> available in Your Area!</h1>
@@ -144,14 +148,12 @@ const Banner = () => {
 
                 {/* Slider 4 */}
                 <SwiperSlide>
-                    <div className="banner-3 flex flex-col min-h-[600px] max-h-[800px] h-auto">
+                    <div className="flex flex-col min-h-[600px] max-h-[800px] h-auto">
                         <div className='absolute inset-0 z-20 h-full'>
                             <Image
                                 src={image3}
                                 alt="Telemarketing services for janitorial appointments and commercial cleaning leads"
                                 fill
-                                
-
                             />
                         </div>
                         <div className='absolute inset-0 bg-black opacity-50 z-30'></div>
@@ -191,7 +193,9 @@ const Banner = () => {
 
                 {/* Slider 5 */}
                 <SwiperSlide>
-                    <div className="banner-6 flex flex-col h-full relative">
+                    <div className="flex flex-col  min-h-[600px] max-h-[800px] h-auto relative">
+                        <Image src={image5} alt='Web and App developing and IT services' fill priority={true} className='object-cover 2xl:block xl:block hidden' />
+                        <Image src={image5mbl} alt='Web and App developing and IT services' className='2xl:hidden xl:hidden block object-cover' fill priority={true} />
                         {/* Overlays */}
                         <div className="absolute inset-0 bg-black opacity-40 z-30"></div>
                         <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
