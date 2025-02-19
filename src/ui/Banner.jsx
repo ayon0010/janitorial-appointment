@@ -5,21 +5,20 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import { FaArrowRight } from 'react-icons/fa';
 import 'swiper/css/pagination';
 import { TypeAnimation } from 'react-type-animation';
 import Link from 'next/link';
 import ButtonTertiary from './ButtonTertiary';
 import ButtonPrimary from './ButtonPrimary';
 import Image from 'next/image';
-import image1 from '../../public/assets/1904c9e7a4e1664e4e229a2f3c915594_result_result.webp';
-import image1mbl from '../../public/assets/1904c9e7a4e1664e4e229a2f3c9155941_result_result.webp';
-import image2 from '@/../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash_result.webp'
-import image2mbl from '@/../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash1_result.webp';
-import image3 from '@/../public/assets/c4fff5f6b137dec9009b9e4e2c05c82f_result_result.webp'
-import image4 from '@/../public/assets/clay-banks-BY-R0UNRE7w-unsplash_result_result.webp'
-import image5 from '@/../public/assets/lorenzo-herrera-p0j-mE6mGo4-unsplash_result.webp'
-import image5mbl from '../../public/assets/igor-savelev-mxUtpzc85fI-unsplash_result_result.webp'
+import image1 from '@/../public/assets/janitorial-appointments.webp';
+import image1mbl from '../../public/assets/janitorial-appointments-mobile.webp';
+import image2 from '@/../public/assets/book-an-janitorial-appointments.webp';
+import image2mbl from '@/../public/assets/book-an-janitorial-appointments-mobile.webp';
+import image3 from '@/../public/assets/telemarketing-for-janitorial-campaign.webp'
+import image4 from '@/../public/assets/commercial-cleaning-leads-usa.webp'
+import image5 from '@/../public/assets/web-and-app-services.webp'
+import image5mbl from '../../public/assets/web-and-app-services-mobile.webp'
 
 
 const DynamicBanner = ({

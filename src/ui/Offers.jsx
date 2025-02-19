@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import React from 'react';
-import img1 from '../../public/assets/acquisition-_1_.svg'
-import img2 from '../../public/assets/magnet.svg'
-import img3 from '../../public/assets/appointment.svg'
-import img4 from '../../public/assets/operator.png'
-import img5 from '../../public/assets/png-transparent-web-design-icon-web-application-iphone-progressive-web-apps-icon-design-mobile-phones-line-symbol.png'
-import img6 from '../../public/assets/pngtree-seo-setting-icon-png-image_328700.jpg'
+import img1 from '../../public/assets/janitorial-leads.svg'
+import img2 from '../../public/assets/high-quality-commercial-cleaning-leads.svg'
+import img3 from '../../public/assets/janitorial-appointments.svg'
+import img4 from '../../public/assets/telemarketing-for-your-business.png'
+import img5 from '../../public/assets/web-design-web-development.png'
+import img6 from '../../public/assets/digital-marketing.jpg'
 
 const Offers = () => {
     return (

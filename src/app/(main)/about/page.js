@@ -1,11 +1,9 @@
 import Image from "next/image";
-import aboutImage from '@/../public/assets/Frame 1272636201.webp'
+import aboutImage from '@/../public/assets/about-us-janitorial-appointments.webp'
 import FaTelemarketting from "@/icons/FaTelemarketting";
-import video from '@/../public/assets/Frame.png'
-import image from '@/../public/assets/699f0ea426e250f89c5625fd3790a47b_result_result.webp';
-import image2 from '@/../public/assets/Frame 1.svg';
+import image from '@/../public/assets/verified-commercial-cleaning-leads.webp';
+import image2 from '@/../public/assets/janitorial-leads-support.svg';
 import FaLeads from "@/icons/FaLeads";
-
 import FaWeb from "@/icons/FaWeb";
 import FaCircleCheck from "@/icons/FaCheck";
 import SectionTitles from "@/ui/SectionTitles";

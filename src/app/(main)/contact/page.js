@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import contact from '@/../public/assets/Frame (6).svg'
+import contact from '@/../public/assets/contact-us.svg'
 import Image from 'next/image';
 import FaTick from '@/icons/FaTick';
 import image from '../../../../public/assets/image 36_result_result.webp'
@@ -114,13 +114,13 @@ const page = () => {
                         <div>
                             <h1 className='2xl:text-5xl xl:text-4xl text-2xl font-medium inter text-[#0D0D0D]'>Contact Us</h1>
                             <div className='2xl:mt-10 xl:mt-8 mt-6 space-y-6 border-b-[1px] border-b-[#D6D6D6] pb-8'>
-                                <div className='flex items-start gap-4'>
+                                {/* <div className='flex items-start gap-4'>
                                     <FaAddress />
                                     <div>
                                         <h1 className='text-xl font-medium text-[#0D0D0D]'>Address</h1>
                                         <p className='text-[#808080] text-base'>403, Port Washington Road, Canada.</p>
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className='flex items-start gap-4'>
                                     <div className='rounded-full border border-green-700 p-[14px]'>
                                         <FaPhoneAlt color='#15803d' />
@@ -162,9 +162,9 @@ const page = () => {
                     </div>
                 </div>
                 <div className='2xl:pb-40 xl:pb-28 pb-16'>
-                    <p className='text-center text-primary mb-2 font-medium text-sm'>Location</p>
-                    <SectionTitles heading={'Discover Our Location'} subHeading={"Whether you're visiting us in person or simply want to know where we're based, here's some helpful information about our location"} />
-                    <div className='2xl:mt-12 xl:mt-10 mt-8 grid 2xl:grid-cols-2 xl:grid-cols-2 2xl:grid-rows-2 xl:grid-rows-2 grid-rows-4 grid-cols-1 gap-8'>
+                    <p className='text-center text-primary mb-2 font-medium text-sm'>Contact</p>
+                    <SectionTitles heading={'Have a chat with us'} subHeading={"Boost your business with our services"} />
+                    <div className='2xl:mt-12 xl:mt-10 mt-8 grid 2xl:grid-cols-2 xl:grid-cols-2 2xl:grid-rows-1 xl:grid-rows-1 grid-rows-2 grid-cols-1 gap-8'>
                         <div className='flex items-start gap-4 2xl:p-12 xl:p-10 p-8 bg-[#F9F9FB] rounded-[30px]'>
                             <FaEmail />
                             <div className='space-y-[16px]'>
@@ -193,7 +193,7 @@ const page = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex items-start gap-4 2xl:p-12 xl:p-10 p-8 bg-[#F9F9FB] rounded-[30px]'>
+                        {/* <div className='flex items-start gap-4 2xl:p-12 xl:p-10 p-8 bg-[#F9F9FB] rounded-[30px]'>
                             <FaAddress />
                             <div className='space-y-[16px]'>
                                 <h1 className='text-xl font-medium text-[#0D0D0D]'>Address</h1>
@@ -203,7 +203,7 @@ const page = () => {
                         </div>
                         <div className='h-full'>
                             <Map />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className='2xl:pb-40 xl:pb-28 pb-16'>

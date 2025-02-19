@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import img1 from '../../public/assets/martha-dominguez-de-gouveia-KF-h9HMxRKg-unsplash (1)_result_result.webp';
-import img2 from '../../public/assets/kate-darmody-TDIdPmW2P9k-unsplash_result_result_result.webp'
-import img3 from '../../public/assets/benjamin-child-GWe0dlVD9e0-unsplash_result_result_result.webp'
-import img5 from '../../public/assets/gautam-arora-78Ae6N7rNvI-unsplash_result_result.webp'
-import img6 from '../../public/assets/debby-hudson-sgdyBq6kheQ-unsplash (1)_result_result_result.webp'
-import img4 from '../../public/assets/danielle-cerullo-CQfNt66ttZM-unsplash_result_result_result.webp'
+import img1 from '../../public/assets/medical-cleaning-leads.webp';
+import img2 from '../../public/assets/apartment-cleaning-leads.webp'
+import img3 from '../../public/assets/office-cleaning-leads.webp'
+import img5 from '../../public/assets/day-care-cleaning-leads.webp'
+import img6 from '../../public/assets/church-cleaning-leads.webp'
+import img4 from '../../public/assets/gym-fitness-club-cleaning-leads.webp'
 
 // import img3 from '../../public/assets/'
 
@@ -12,7 +12,6 @@ import img4 from '../../public/assets/danielle-cerullo-CQfNt66ttZM-unsplash_resu
 
 
 export default function Leads() {
-
     const Card = ({ img, headline, text, icon, alt }) => {
         return (
             <div
@@ -41,7 +40,7 @@ export default function Leads() {
                             alt={alt}
                             width={800} // Default desktop width
                             height={500} // Default desktop height
-                            className="w-full h-auto object-cover"
+                            className="w-full h-full object-cover"
                             loading="lazy"
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
                         />

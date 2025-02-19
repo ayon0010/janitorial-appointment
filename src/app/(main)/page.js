@@ -1,7 +1,7 @@
 import Image from "next/image";
-import side1 from "@/../public/assets/597346f805a7ac1230c3c0eb176f2c90_result.webp";
-import side2 from "@/../public/assets/3a5f8d21d291fb96da9cf2d4b91d2db0_result_result.webp";
-import slide4 from '../../../public/assets/Screenshot (12)_result_result_result.webp';
+import side1 from "@/../public/assets/buy-commercial-cleaning-leads.webp";
+import side2 from "@/../public/assets/contact-with-decision-maker.webp";
+import slide4 from '../../../public/assets/exclusive-commercial-cleaning-leads-.webp';
 import Banner from "@/ui/Banner";
 import SectionTitles from "@/ui/SectionTitles";
 import FaCheck from "@/ui/FaCheck";
@@ -12,7 +12,7 @@ import Offers from "@/ui/Offers";
 import Leads from "@/ui/Leads";
 import Appointment from "@/ui/Appointment";
 import Web from "@/ui/Web";
-import image from '@/../public/assets/group-young-business-people-working-office_result.webp';
+import image from '@/../public/assets/it-expert-for-cleaning-companies.webp';
 import ReviewItems from "../../ui/ReviewItems";
 import { data } from '@/js/states';
 import ContactAnimationForHome from "@/ui/ContactAnimationForHome";
@@ -82,8 +82,8 @@ export default function Home() {
                                 alt="Commercial Cleaning Leads across USA"
                                 className="md:h-[400px] md:w-auto w-full h-auto"
                                 loading="lazy"
-                                width={1609}
-                                height={813}
+                                width={950}
+                                height={600}
                                 priority={false} // Use `true` if this image is above the fold
                             />
                         </div>
@@ -131,9 +131,8 @@ export default function Home() {
                                 alt="Uncover Top Janitorial Leads"
                                 className="md:h-[400px] md:w-auto w-full h-auto"
                                 loading="lazy"
-                                width={2895}
-                                height={1891}
-
+                                width={950}
+                                height={600}
                             />
                         </div>
                         <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pl-24">
@@ -170,9 +169,8 @@ export default function Home() {
                                 alt="Reach decision makers instantly and effortlessly with top janitorial leads"
                                 className="md:h-[400px] md:w-auto w-full h-auto"
                                 loading="lazy"
-                                width={2895}
-                                height={1891}
-
+                                width={950}
+                                height={600}
                             />
                         </div>
                         <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pr-24">
@@ -209,8 +207,8 @@ export default function Home() {
                                 className="md:w-auto mx-auto md:h-[500px] w-3/4"
                                 alt="Buy high-quality commercial leads for janitorial services to boost your business"
                                 loading="lazy"
-                                width={1840}
-                                height={2192}
+                                width={950}
+                                height={600}
                             />
                         </div>
                         <div className="space-y-6 md:w-1/2 w-full md:my-auto md:pl-24">

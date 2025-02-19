@@ -4,7 +4,7 @@ import lottie from 'lottie-web';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaWhatsapp } from 'react-icons/fa';
-import image from '../../public/assets/5124556.jpg';
+import image from '../../public/assets/contact-us-janitorial-appointments.jpg';
 // Lottie animation paths
 const animationPath2 = '/assets/Animation - 1737470167441contact.json';
 

@@ -12,7 +12,7 @@ const Footer = () => {
                 <Logo />
                 <div className="flex md:flex-row flex-col items-center md:gap-7 gap-4">
                     <p className="text-base font-medium inter">Ready to get started?</p>
-                    <ButtonSecondary label={'Get Started'} href={'/register'} userHref={'/my-subscription'} />
+                    <ButtonSecondary label={'Get Started'} href={'/register'} userHref={'/register'} />
                 </div>
             </div>
             <div className="flex 2xl:flex-row xl:flex-row flex-col 2xl:justify-between xl:justify-between 2xl:items-end xl:items-end justify-center">

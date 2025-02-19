@@ -2,7 +2,7 @@ import getLeads from "@/lib/getLeadById";
 import SearchState from "@/Shared/SearchState";
 import Image from "next/image";
 import Link from "next/link";
-import image from '../../public/assets/cytonn-photography-n95VMLxqM2I-unsplash_result_result.webp'
+import image from '../../public/assets/exclusive-janitorial-leads.webp'
 import { capitalizeFirstLetter } from "@/app/(main)/search/[...leads]/page";
 
 const LeadPage = async ({ Lead, params }) => {

@@ -1,16 +1,16 @@
 import React from 'react';
 import FaFrontWeb from '@/icons/FaFrontWeb';
-import figmaImage from '@/../public/assets/57e09f4566db0a1ac970d15dde355756_result_result.webp'
-import webImage from '@/../public/assets/2f30fd9858f1c6f448b335b02d2da4a0_result_result.webp'
-import backEnd from '@/../public/assets/6341ab570f90e6856a22d36785e40e3a_result_result.webp'
-import seo from '@/../public/assets/b6632a329f59df9325cd9067db020c92_result_result.webp'
-import telemarketing from '@/../public/assets/42f55d3345549aca47bef4b67d70a404_result_result.webp'
+import figmaImage from '@/../public/assets/web-design.webp'
+import webImage from '@/../public/assets/web-development.webp'
+import backEnd from '@/../public/assets/back-end-development.webp'
+import seo from '@/../public/assets/digital-marketing-and-seo.webp'
+import telemarketing from '@/../public/assets/telemarketing.webp'
 import people from '@/../public/assets/c39594c5017acc3ecabfac7eb3315e8d_result_result.webp'
 import Image from 'next/image';
 import SectionTitles from '@/ui/SectionTitles';
 import img1 from '@/../public/assets/67808d23a26a33ebca61d4f6d94c1822_result_result.webp'
 import img2 from '@/../public/assets/9b4078e905ffb67a9fa1ee52151decca_result_result.webp'
-import img3 from '@/../public/assets/c4fff5f6b137dec9009b9e4e2c05c82f_result_result.webp'
+import img3 from '@/../public/assets/telemarketing-for-janitorial-campaign.webp'
 import capture1 from '@/../public/assets/Capture_result_result.webp'
 import capture2 from '@/../public/assets/Capture2_result_result.webp'
 import capture3 from '@/../public/assets/Capture3_result_result.webp'
@@ -19,8 +19,8 @@ import desing2 from '@/../public/assets/126d255806c5000ad6d009871cc3b81b_result_
 import desing3 from '@/../public/assets/b3e87b895d98f825cbfa5eaddda18e4b_result_result.webp'
 import desing4 from '@/../public/assets/927cc8b897e6124b1c31ff8bc507f55a_result_result.webp'
 import Link from 'next/link';
-import image5 from '@/../public/assets/lorenzo-herrera-p0j-mE6mGo4-unsplash_result.webp'
-import image5mbl from '@/../public/assets/igor-savelev-mxUtpzc85fI-unsplash_result_result.webp'
+import image5 from '@/../public/assets/web-and-app-services.webp'
+import image5mbl from '@/../public/assets/web-and-app-services-mobile.webp'
 import ButtonPrimary from '@/ui/ButtonPrimary';
 
 

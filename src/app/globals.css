@@ -10,17 +10,8 @@
   color: #246532 !important;
 }
 
-/* .card {
-  background-color: #85ffbd;
-  background-image: linear-gradient(45deg, #246532 0%, #85ffbd 100%);
-} */
-
 .bg-primary {
   background-color: #246532 !important;
-}
-
-.inter {
-  font-family: var(--font-inter) !important;
 }
 
 .banner {
@@ -100,12 +91,6 @@
   grid-template-columns: 1fr 3fr 1fr !important;
   gap: 10px !important;
   align-items: center !important;
-}
-
-.subscription {
-  background-image: url("../../public/assets/d52f550b3b5989cf96d343f41333a3ab_result_result.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .count {
@@ -221,29 +206,6 @@ input[type="checkbox"]:checked~.collapse-content {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
 }
 
-/* .banner-3 {
-  position: relative;
-  background-image: url("../../public/assets/c4fff5f6b137dec9009b9e4e2c05c82f_result_result.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 600px;
-  width: 100%;
-  overflow: hidden;
-} */
-
-/* .banner-4 {
-  position: relative;
-  background-image: url("../../public/assets/sebastian-herrmann-O2o1hzDA7iE-unsplash_result.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 600px;
-  width: 100%;
-  overflow: hidden;
-  will-change: transform; 
-} */
-
 .banner-text {
   line-height: 60px !important;
 }
@@ -287,7 +249,7 @@ input[type="checkbox"]:checked~.collapse-content {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('../../public/assets/group-young-business-people-working-office_result.webp');
+  background-image: url('../../public/assets/it-expert-for-cleaning-companies.webp');
   height: 600px;
   /* Matches the height of your div */
   margin-top: 20px;
@@ -313,17 +275,6 @@ input[type="checkbox"]:checked~.collapse-content {
   /* Send the filter effect behind the content */
 }
 
-.banner-6 {
-  position: relative;
-  background-image: url("../../public/assets/lorenzo-herrera-p0j-mE6mGo4-unsplash_result.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 600px;
-  width: 100%;
-  will-change: transform; 
-  overflow: hidden;
-}
 
 .appointment {
   background-image: url("../../public/assets/appointment-bg-1-1_result_result.webp");
@@ -340,7 +291,7 @@ input[type="checkbox"]:checked~.collapse-content {
 @media screen and (max-width: 576px) {
   .web {
     background-size: cover;
-    background-image: url('../../public/assets/igor-savelev-mxUtpzc85fI-unsplash_result_result.webp');
+    background-image: url('../../public/assets/web-and-app-services-mobile.webp');
     height: 500px;
     /* Matches the height of your div */
     margin-top: 20px;
@@ -356,9 +307,4 @@ input[type="checkbox"]:checked~.collapse-content {
   .banner-text {
     line-height: 25px !important;
   }
-
-  /* .banner-6 {
-    background-image: url('../../public/assets/igor-savelev-mxUtpzc85fI-unsplash_result_result.webp');
-    will-change: transform; 
-  } */
 }
