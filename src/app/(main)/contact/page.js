@@ -4,7 +4,6 @@ import contact from '@/../public/assets/contact-us.svg'
 import Image from 'next/image';
 import FaTick from '@/icons/FaTick';
 import image from '../../../../public/assets/image 36_result_result.webp'
-import FaAddress from '@/icons/FaAddress';
 import FaPhone from '@/icons/FaPhone';
 import FaEmail from '@/icons/FaEmail';
 import ContactForm from '@/ui/ContactForm';
@@ -12,7 +11,6 @@ import SectionTitles from '@/ui/SectionTitles';
 import fb from '@/../public/assets/Frame (8).svg'
 import linked from '@/../public/assets/Frame (11).svg'
 import twitt from '@/../public/assets/Frame (12).svg'
-import Map from '@/ui/Map';
 import Link from 'next/link';
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import Appointment from '@/ui/Appointment';
