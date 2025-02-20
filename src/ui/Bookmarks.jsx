@@ -1,23 +1,21 @@
 'use client'
 import useAuth from '@/Hooks/useAuth';
 import useAxiosSecure from '@/Hooks/useAxiosSecure';
-import GetBookMarks from '@/js/getBookMarks';
+import GetData from '@/lib/GetData';
 import React, { useState, useEffect } from 'react';
-import { FaBookmark } from 'react-icons/fa';
-import { MdBookmark } from 'react-icons/md';
+import dynamic from "next/dynamic";
+const FaBookmark = dynamic(() => import("react-icons/fa").then((mod) => mod.FaBookmark), { ssr: false });
+const MdBookmark = dynamic(() => import("react-icons/md").then((mod) => mod.MdBookmark), { ssr: false });
+
 import Swal from 'sweetalert2';
 
 const Bookmarks = ({ id }) => {
     const axiosSecure = useAxiosSecure();
     const { user } = useAuth();
 
-    const { status, refetch } = GetBookMarks(id);
-    const [isBookmarked, setIsBookmarked] = useState(status?.status); // Local state to manage bookmark status
-
-    console.log(isBookmarked);
-    console.log(status);
+    const { data: status, refetch } = GetData(user?.uid, `/bookMarks/${user?.uid}/${id}`);
     
-
+    const [isBookmarked, setIsBookmarked] = useState(status?.status);
 
     // Update local state whenever `status` changes
     useEffect(() => {

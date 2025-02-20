@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image";
-import { FaStar } from "react-icons/fa";
+import dynamic from 'next/dynamic';
+const FaStar = dynamic(() => import('react-icons/fa').then(mod => mod.FaStar), { ssr: false });
 import Rating from "react-rating";
 
 const ReviewItems = ({ d }) => {

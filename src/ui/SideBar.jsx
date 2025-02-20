@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdCloseCircleOutline } from 'react-icons/io';
+import menu from '../../public/assets/burger-menu-svgrepo-com.svg'
 import logo from '@/../public/assets/Janitorial.png';
 import Image from 'next/image';
 import { FaFacebookSquare, FaLinkedinIn, FaTwitterSquare, FaWhatsappSquare } from 'react-icons/fa';
@@ -27,7 +27,7 @@ const SideBar = () => {
     return (
         <div>
             <div className='btn' onClick={() => setOpen(!open)}>
-                <GiHamburgerMenu size={'1.5rem'} />
+                <Image src={menu} className='w-[40px] h-[40px]' width={40} height={40} alt='menu' />
             </div>
             <div
                 className={`h-screen flex items-stretch fixed top-0 overflow-auto z-[60] w-full 

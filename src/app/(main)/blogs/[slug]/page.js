@@ -1,6 +1,6 @@
 import { FaRegCalendar } from "react-icons/fa";
 import Image from "next/image";
-import { client, role, urlFor } from "@/lib/sanity";
+import { client, urlFor } from "@/lib/sanity";
 import formatTimestamp from "@/js/convertTime";
 import { PortableText } from "next-sanity";
 import { blogData } from "../page";

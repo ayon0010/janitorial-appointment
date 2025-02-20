@@ -3,7 +3,8 @@ import { usStates } from '@/js/states';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { useState, useMemo } from 'react';
-import { FaSearch } from 'react-icons/fa';
+import dynamic from 'next/dynamic';
+const FaSearch = dynamic(() => import('react-icons/fa').then(mod => mod.FaSearch), { ssr: false });
 
 const SearchState = ({ leads, data }) => {
     const router = useRouter();
