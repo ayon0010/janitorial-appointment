@@ -5,7 +5,6 @@ import QueryProvider from '@/Providers/QueryProvider'
 import Footer from '@/Shared/Footer'
 import ChatProvider from '@/Providers/ChatProvider'
 import Navbar from '@/Shared/Navbar'
-import Providers from '@/Providers/Providers'
 
 
 export const inter = Inter({
@@ -47,13 +46,17 @@ export default function RootLayout({ children }) {
     <html lang="en" >
       <body className={`${inter.className}`}>
         <main className='overflow-hidden min-h-screen max-w-[1920px] mx-auto bg-[#EEEFF1]'>
-          <Providers>
-            <Navbar />
-            <div className='2xl:pt-[100px] xl:pt-[100px] pt-[80px]'>
-              {children}
-            </div>
-            <Footer />
-          </Providers>
+          <AuthProvider>
+            <QueryProvider>
+              <ChatProvider>
+                <Navbar />
+                <div className='2xl:pt-[100px] xl:pt-[100px] pt-[80px]'>
+                  {children}
+                </div>
+                <Footer />
+              </ChatProvider>
+            </QueryProvider>
+          </AuthProvider>
         </main>
       </body>
     </html>
