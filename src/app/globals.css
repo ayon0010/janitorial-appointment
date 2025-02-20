@@ -14,10 +14,6 @@
   background-color: #246532 !important;
 }
 
-.banner {
-  background: url("../../public/assets/fc8401c42aac2193aa4293ac4cb98056\ \(1\)_result_result.webp") lightgray 50% / cover no-repeat;
-  will-change: transform; 
-}
 
 .text-secondary {
   color: #0f3141 !important;
@@ -125,9 +121,6 @@ input:disabled {
   color: #8862f3 !important;
 }
 
-.bg-services {
-  background-color: #8862f3 !important;
-}
 
 * {
   box-sizing: border-box !important;
@@ -171,11 +164,6 @@ input[type="checkbox"]:checked~.collapse-content {
   }
 }
 
-.zoom-animation {
-  display: inline-block;
-  /* Ensures animation applies on span tags */
-  animation: zoomInOut 1.5s ease-in-out infinite;
-}
 
 .bn-primary:hover {
   @apply bg-deep-blue;
@@ -202,9 +190,6 @@ input[type="checkbox"]:checked~.collapse-content {
   background-color: #ff8c3a !important;
 }
 
-.banner-1 {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
-}
 
 .banner-text {
   line-height: 60px !important;
@@ -236,13 +221,6 @@ input[type="checkbox"]:checked~.collapse-content {
   /* Change to your desired color */
 }
 
-.fb-customerchat {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 50;
-  /* Ensure it stays on top of other elements */
-}
 
 .web {
   background-attachment: fixed;
