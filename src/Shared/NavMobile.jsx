@@ -7,7 +7,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import logo from '../../public/assets/Janitorial.png';
 import { usePathname } from 'next/navigation';
-const FaChevronDown = dynamic(() => import('react-icons/fa').then(mod => mod.FaChevronDown), { ssr: false });
+import { FaChevronDown } from 'react-icons/fa';
 
 const NavMobile = ({ UserDetails, Services, Leads }) => {
     const { user, logOut } = useAuth();

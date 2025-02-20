@@ -6,7 +6,6 @@ import getLeads from "@/lib/getLeadById";
 import DotClient from "./DotClient";
 import FireClient from "./FireClient";
 
-
 const SingleLead = async ({ Lead }) => {
     const [leads, states, id] = Lead;
     const data = await getLeads(leads, states, id);

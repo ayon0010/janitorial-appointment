@@ -3,11 +3,9 @@ import DashboardCard from '@/Shared/DashBoardCard';
 import ProfileCard from '@/Shared/ProfileCard';
 import Profiled from '@/Shared/Profiled';
 import React from 'react';
-import FaMessage from '@/icons/FaMessage';
-import FaHand from '@/icons/FaHand';
 import FaStatus from '@/icons/FaStatus';
 import FaUpload from '@/icons/FaUpload';
-import { FaAddressBook, FaBlog, FaDollarSign, FaFacebookMessenger, FaMailBulk, FaPhone } from 'react-icons/fa';
+import { FaAddressBook, FaBlog, FaDollarSign, FaFacebookMessenger, FaMailBulk } from 'react-icons/fa';
 import FaUserData from '@/icons/FaUserData';
 
 const page = () => {

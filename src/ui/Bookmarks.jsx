@@ -3,10 +3,8 @@ import useAuth from '@/Hooks/useAuth';
 import useAxiosSecure from '@/Hooks/useAxiosSecure';
 import GetData from '@/lib/GetData';
 import React, { useState, useEffect } from 'react';
-import dynamic from "next/dynamic";
-const FaBookmark = dynamic(() => import("react-icons/fa").then((mod) => mod.FaBookmark), { ssr: false });
-const MdBookmark = dynamic(() => import("react-icons/md").then((mod) => mod.MdBookmark), { ssr: false });
-
+import { FaBookmark } from 'react-icons/fa';
+import { MdBookmark } from 'react-icons/md';
 import Swal from 'sweetalert2';
 
 const Bookmarks = ({ id }) => {

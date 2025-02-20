@@ -4,9 +4,7 @@ import Logo from '@/Shared/Logo';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import dynamic from "next/dynamic";
-const FaEye = dynamic(() => import("react-icons/fa").then((mod) => mod.FaEye), { ssr: false });
-const FaEyeSlash = dynamic(() => import("react-icons/fa").then((mod) => mod.FaEyeSlash), { ssr: false });
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
 
