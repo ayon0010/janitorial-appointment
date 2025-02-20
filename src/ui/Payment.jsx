@@ -3,11 +3,13 @@ import React, { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import useAxiosSecure from "@/Hooks/useAxiosSecure";
-import PaymentForm from "./PaymentForm";
+import dynamic from "next/dynamic";
 
-// Make sure to call loadStripe outside of a component’s render to avoid
-// recreating the Stripe object on every render.
-// This is your test publishable API key.
+const PaymentForm = dynamic(() => import("./PaymentForm"), {
+  ssr: false, // Prevents server-side rendering (useful for client-only components)
+  loading: () => <p>Loading Payment Form...</p>, // Optional: Show a loading state
+});
+
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
 
@@ -17,13 +19,6 @@ export default function Payment({ price, product_Id, closeModal }) {
     const [confirmed, setConfirmed] = useState(false);
     const axiosSecure = useAxiosSecure();
 
-
-    // useEffect(() => {
-    //     const x = new URLSearchParams(window.location.search).get(
-    //         "payment_intent_client_secret"
-    //     )
-    //     setConfirmed(x);
-    // });
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads

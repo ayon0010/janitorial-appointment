@@ -1,7 +1,11 @@
 'use client';
 
 import { FaArrowRight } from "react-icons/fa";
-import Payment from "./Payment";
+import dynamic from "next/dynamic";
+const Payment = dynamic(() => import("./Payment"), {
+    ssr: false, // Prevents server-side rendering (useful for client-only components)
+    loading: () => <p>Loading Payment...</p>, // Optional: Show a loading state
+});
 import { usePathname, useRouter } from "next/navigation";
 import useAuth from "@/Hooks/useAuth";
 
