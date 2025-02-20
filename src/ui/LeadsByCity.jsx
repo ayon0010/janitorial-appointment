@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
-import Table from '@/Shared/Table';
+import dynamic from 'next/dynamic';
+const Table = dynamic(() => import('@/Shared/Table'), { ssr: false });
 
 const LeadsByCity = ({ data, states }) => {
     const [city, setCity] = useState('');

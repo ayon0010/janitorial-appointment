@@ -7,9 +7,8 @@ import InputField from '@/Shared/InputField';
 import SelectField from '@/Shared/SelectField';
 import FormButton from '@/Shared/FormButton';
 import { useForm } from 'react-hook-form';
-import Loading from '@/app/(main)/loading';
-
-
+import dynamic from 'next/dynamic';
+const Loading = dynamic(() => import('@/app/(main)/loading'), { ssr: false });
 
 const SingleDecisionMaker = () => {
     const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm();

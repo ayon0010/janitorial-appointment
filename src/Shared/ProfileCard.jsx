@@ -1,10 +1,7 @@
 'use client'
 import React from 'react';
-import DashboardCard from './DashBoardCard';
-import FaMessage from '@/icons/FaMessage';
 import FaProfile from '@/icons/FaProfile';
 import FaExit from '@/icons/FaExit';
-import { MdOutlineNotifications } from 'react-icons/md';
 import useAuth from '@/Hooks/useAuth';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';

@@ -4,8 +4,11 @@ import SectionTitles from '@/ui/SectionTitles';
 import TableHead from '@/ui/TableHead';
 import React from 'react';
 import Swal from 'sweetalert2';
-import Loading from '../../loading';
+import dynamic from 'next/dynamic';
+const Loading = dynamic(() => import('../../loading'), { ssr: false });
+
 import GetData from '@/lib/GetData';
+
 
 const Page = () => {
     const { data: allUsers, refetch, isLoading } = GetData('allUsers', 'user')

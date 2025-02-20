@@ -1,11 +1,12 @@
 'use client'
 import useAuth from '@/Hooks/useAuth';
-import ButtonPrimary from '@/ui/ButtonPrimary';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
-import { Option } from './NavItems';
-import SideBar from '@/ui/SideBar';
+import dynamic from 'next/dynamic';
+const SideBar = dynamic(() => import('@/ui/SideBar'), { ssr: false });
+const ButtonPrimary = dynamic(() => import('@/ui/ButtonPrimary'), { ssr: false });
+const Option = dynamic(() => import('./NavItems').then((mod) => mod.Option), { ssr: false });
 
 const NavUser = ({ UserDetails }) => {
     const [mouse2, setMouse2] = useState(false);
