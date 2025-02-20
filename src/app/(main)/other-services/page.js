@@ -21,7 +21,7 @@ import desing4 from '@/../public/assets/927cc8b897e6124b1c31ff8bc507f55a_result_
 import Link from 'next/link';
 import image5 from '@/../public/assets/web-and-app-services.webp'
 import image5mbl from '@/../public/assets/web-and-app-services-mobile.webp'
-import ButtonPrimary from '@/ui/ButtonPrimary';
+import { DynamicBanner } from '@/ui/Banner';
 
 
 export const metadata = {
@@ -47,26 +47,18 @@ export const metadata = {
 const page = () => {
     return (
         <div className=''>
-            <div className="flex flex-col  min-h-[600px] max-h-[800px] h-auto relative">
-                <Image src={image5} alt='Web and App developing and IT services' fill priority={true} className='object-cover 2xl:block xl:block hidden' />
-                <Image src={image5mbl} alt='Web and App developing and IT services' className='2xl:hidden xl:hidden block object-cover' fill priority={true} />
-                {/* Overlays */}
-                <div className="absolute inset-0 bg-black opacity-40 z-30"></div>
-                <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
-                    <h2 className='2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:banner-text xl:banner-text text-white'>
-                        Elevate Your Brand, Expert <span className='text-green-600'>Digital Marketing, Web & App Solutions</span>
-                    </h2>
-                    <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80'>Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!</p>
-                    <div className='flex items-center gap-6'>
-                        <div>
-                            <Link href={'/register'}>
-                                <ButtonPrimary label={'Sign Up'} />
-                            </Link>
-                        </div>
-                        <p className='text-white opacity-80 inter font-bold 2xl:text-base xl:text-base text-xs'>No Credit Card Required</p>
-                    </div>
-                </div>
-            </div>
+            <DynamicBanner
+                desktopImage={image5}
+                mobileImage={image5mbl}
+                title="Elevate Your Brand, Expert "
+                highlightedText="Digital Marketing, Web & App Solutions"
+                description="Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!"
+                buttonText="Sign Up"
+                buttonLink="/register"
+                note="No Credit Card Required"
+                isTertiaryButton={false}
+                cover={true}
+            />
             <div className='2xl:px-40 xl:px-28 px-10 bg-white'>
                 <div className='2xl:py-24 xl:py-24 py-16'>
                     <h1 className={`2xl:text-7xl xl:text-5xl text-3xl `}>Complete IT Solutions &

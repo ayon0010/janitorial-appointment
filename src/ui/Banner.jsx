@@ -21,7 +21,7 @@ import image5 from '@/../public/assets/web-and-app-services.webp'
 import image5mbl from '../../public/assets/web-and-app-services-mobile.webp'
 
 
-const DynamicBanner = ({
+export const DynamicBanner = ({
     desktopImage,
     mobileImage,
     title,
@@ -30,7 +30,8 @@ const DynamicBanner = ({
     buttonText,
     buttonLink,
     note,
-    isTertiaryButton
+    isTertiaryButton,
+    cover
 }) => {
     return (
         <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto w-full">
@@ -39,18 +40,20 @@ const DynamicBanner = ({
                 <Image
                     src={desktopImage}
                     alt="Janitorial appointment and commercial cleaning leads to grow your business"
-                    fill
+                    width={1920}
+                    height={1080}
                     priority // Loads the image faster since it's above the fold
-                    className="hidden xl:block 2xl:block w-full"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw"
+                    className={`hidden xl:block 2xl:block w-full h-full ${cover ? 'object-cover' : ''}`}
+                    sizes="(max-width: 768px) 500px, (max-width: 1400px) 100vw,100vw"
                 />
                 <Image
                     src={mobileImage}
                     alt="Mobile view showcasing janitorial appointments and commercial cleaning leads for business growth"
-                    fill
-                    className="object-center 2xl:hidden xl:hidden block w-full object-cover"
+                    width={586}
+                    height={300}
+                    className="2xl:hidden xl:hidden block w-full object-cover h-full"
                     priority
-                    sizes="(max-width: 586px) 100vw"
+                    sizes="500px"
                 />
             </div>
 
@@ -134,9 +137,18 @@ const Banner = () => {
                 </SwiperSlide>
                 {/* Slider 3 */}
                 <SwiperSlide>
-                    <div className="flex flex-col min-h-[600px] max-h-[800px] h-auto">
-                        <Image src={image4} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw,1200px" alt='Exclusive Commercial cleaning leads all over the usa' priority fill priority={true} className='object-cover' />
-                        <div className='absolute inset-0 bg-black opacity-50'></div>
+                    <div className="flex flex-col min-h-[600px] max-h-[800px] h-auto relative">
+                        <div className='absolute inset-0 z-20 h-full'>
+                            <Image src={image4}
+                                sizes="(max-width: 768px) 500px, (max-width: 1400px) 100vw,100vw"
+                                alt='Exclusive Commercial cleaning leads all over the usa'
+                                width={1920}
+                                height={1080}
+                                priority
+                                className='object-cover h-full'
+                            />
+                        </div>
+                        <div className='absolute inset-0 bg-black opacity-50 z-30'></div>
                         <div className='m-auto z-30 2xl:w-[80%] xl:w-[80%] w-[90%]'>
                             <h1 className='text-white text-center font-bold  2xl:text-6xl xl:text-5xl text-3xl'>Find <span className=''>Qualified, Exclusive Janitorial Leads</span> <br className='2xl:block xl:block hidden' /> available in Your Area!</h1>
                             <p className='2xl:my-6 xl:my-6 my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80 text-center'>A reliable and stress-free appointment-setting service designed for janitors.<br />
@@ -156,9 +168,10 @@ const Banner = () => {
                                 src={image3}
                                 priority
                                 alt="Telemarketing services for janitorial appointments and commercial cleaning leads"
-                                fill
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw"
-                                className=''
+                                width={1920}
+                                height={1080}
+                                sizes="(max-width: 768px) 500px, (max-width: 1400px) 100vw,100vw"
+                                className='h-full'
                             />
                         </div>
                         <div className='absolute inset-0 bg-black opacity-50 z-30'></div>
@@ -198,26 +211,18 @@ const Banner = () => {
 
                 {/* Slider 5 */}
                 <SwiperSlide>
-                    <div className="flex flex-col  min-h-[600px] max-h-[800px] h-auto relative">
-                        <Image src={image5} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw" priority alt='Web and App developing and IT services' fill className='object-cover 2xl:block xl:block hidden' />
-                        <Image src={image5mbl} sizes="(max-width: 586px) 100vw" alt='Web and App developing and IT services' className='2xl:hidden xl:hidden block object-cover' fill priority={true} />
-                        {/* Overlays */}
-                        <div className="absolute inset-0 bg-black opacity-40 z-30"></div>
-                        <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
-                            <h2 className='2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:banner-text xl:banner-text text-white'>
-                                Elevate Your Brand, Expert <span className='text-green-600'>Digital Marketing, Web & App Solutions</span>
-                            </h2>
-                            <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80'>Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!</p>
-                            <div className='flex items-center gap-6'>
-                                <div>
-                                    <Link href={'/register'}>
-                                        <ButtonPrimary label={'Sign Up'} />
-                                    </Link>
-                                </div>
-                                <p className='text-white opacity-80 inter font-bold 2xl:text-base xl:text-base text-xs'>No Credit Card Required</p>
-                            </div>
-                        </div>
-                    </div>
+                    <DynamicBanner
+                        desktopImage={image5}
+                        mobileImage={image5mbl}
+                        title="Elevate Your Brand, Expert "
+                        highlightedText="Digital Marketing, Web & App Solutions"
+                        description="Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!"
+                        buttonText="Sign Up"
+                        buttonLink="/register"
+                        note="No Credit Card Required"
+                        isTertiaryButton={false}
+                        cover={true}
+                    />
                 </SwiperSlide>
             </Swiper>
         </div>
