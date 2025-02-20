@@ -31,13 +31,6 @@ const AppointmentForm = () => {
         if (typeof window !== 'undefined' && document) {
             const email = localStorage.getItem('email');
             const name = localStorage.getItem('name');
-            const it = localStorage.getItem('it');
-            if (it === "Janitorial Leads") {
-                setIt(false);
-            }
-            else {
-                setIt(true);
-            }
             setEmail(email);
             setName(name);
         }
@@ -65,9 +58,11 @@ const AppointmentForm = () => {
     }, [selectedType])
 
     useEffect(() => {
+        const it = localStorage.getItem('it');
         reset({
             companyName: name,
-            email: email
+            email: email,
+            type: it,
         });
     }, [email, name]);
 
@@ -190,7 +185,7 @@ const AppointmentForm = () => {
                         errors={errors}
                     />
                     <SelectField
-                        type={['It', 'Janitorial Appointment']} register={register} label={'Choose type'} name={'type'} errors={errors} placeholder={'--'} />
+                        type={['Janitorial Appointment', 'It']} register={register} label={'Choose type'} name={'type'} errors={errors} placeholder={'--'} />
                     {
                         it ?
                             <>
@@ -226,14 +221,16 @@ const AppointmentForm = () => {
                                     register={register}
                                     name={'websiteUrl'}
                                     errors={errors}
+                                    noRequired={true}
                                 />
                                 <InputField
-                                    label={'Mobile App Features *'}
+                                    label={'Mobile App Features'}
                                     placeholder={'Describe features you want in the app'}
                                     type={'text'}
                                     register={register}
                                     name={'mobileAppFeatures'}
                                     errors={errors}
+                                    noRequired={true}
                                 />
                                 <InputField
                                     label={'Competitor Websites'}
@@ -242,6 +239,7 @@ const AppointmentForm = () => {
                                     register={register}
                                     name={'competitorWebsites'}
                                     errors={errors}
+                                    noRequired={true}
                                 />
                                 <InputField
                                     label={'Additional Notes'}
@@ -250,6 +248,7 @@ const AppointmentForm = () => {
                                     register={register}
                                     name={'additionalNotes'}
                                     errors={errors}
+                                    noRequired={true}
                                 />
 
                             </>

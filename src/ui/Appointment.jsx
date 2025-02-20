@@ -108,8 +108,8 @@ const Appointment = () => {
                                     <option value="" disabled defaultValue={'---'} selected>
                                         ---
                                     </option>
-                                    <option value="Janitorial Leads">Janitorial Leads</option>
-                                    <option value="IT Support">IT Support</option>
+                                    <option value='Janitorial Appointment'>Janitorial Leads</option>
+                                    <option value='It'>IT Support</option>
                                 </select>
                                 {errors.service && (
                                     <p className="text-red-500 text-sm mt-1">{errors.service.message}</p>

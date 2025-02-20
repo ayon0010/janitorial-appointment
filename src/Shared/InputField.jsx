@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InputField = ({ label, type, placeholder, register, name, errors, disabled }) => {
+const InputField = ({ label, type, placeholder, register, name, errors, disabled, noRequired }) => {
     return (
         <>
             <div>
@@ -13,7 +13,9 @@ const InputField = ({ label, type, placeholder, register, name, errors, disabled
                         min={type === "number" ? 1 : undefined}
                         placeholder={placeholder}
                         disabled={disabled}
-                        {...register(name, { required: `${label} is required` })}
+                        {...register(name, {
+                            required: !noRequired ? `${label} is required` : false
+                        })}
                         className={`input input-bordered rounded-[10px] bg-white border py-2 ${errors[name] ? 'border-red-500' : 'border-[#5C6272]'}`}
                     />
                 </div>
