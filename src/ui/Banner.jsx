@@ -52,7 +52,7 @@ export const DynamicBanner = ({
                     height={300}
                     className="2xl:hidden xl:hidden block w-full object-cover h-full"
                     priority
-                    sizes="500px"
+                    sizes="300px"
                 />
             </div>
 
