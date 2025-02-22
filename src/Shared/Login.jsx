@@ -8,9 +8,8 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import Swal from 'sweetalert2/dist/sweetalert2.js'
-import 'sweetalert2/src/sweetalert2.scss'
 import Cookies from "js-cookie";
+import { closeSwal, showError, showLoading, showSuccess } from "./Swal";
 
 const LoginPage = () => {
     const searchParams = useSearchParams();
@@ -49,28 +48,15 @@ const LoginPage = () => {
         const password = data.password;
 
         // Show the loading spinner
-        Swal.fire({
-            title: 'Signing In...',
-            text: 'Please wait',
-            allowOutsideClick: false,
-            didOpen: () => {
-                Swal.showLoading();
-            },
-        });
+        showLoading()
 
         signIn(email, password)
             .then(async (res) => {
                 const user = res.user;
                 const token = await getUserToken();
                 if (user && token) {
-                    Swal.close();
-                    Swal.fire({
-                        position: "center",
-                        icon: "success",
-                        title: "Signed In Successfully",
-                        showConfirmButton: false,
-                        timer: 2000,
-                    });
+                    closeSwal();
+                    showSuccess()
                 }
                 if (typeof window !== "undefined") {
                     const paymentLink = sessionStorage.getItem('paymentLink');
@@ -85,12 +71,7 @@ const LoginPage = () => {
                 }
             })
             .catch((err) => {
-                // If there is an error, show an error message
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Sign In Failed',
-                    text: err.code?.split('auth/')[1] || 'An error occurred during sign-in',
-                });
+                showError(err.code?.split('auth/')[1] || 'An error occurred during sign-in', 'Sign In Failed');
             });
     };
 
