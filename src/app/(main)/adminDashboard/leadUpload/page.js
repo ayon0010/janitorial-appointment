@@ -2,11 +2,11 @@
 import useAuth from '@/Hooks/useAuth';
 import useAxiosSecure from '@/Hooks/useAxiosSecure';
 import { usStates } from '@/js/states';
-import uploadAudioToFirebase from '@/js/uploadAudio';
 import FormButton from '@/Shared/FormButton';
 import InputField from '@/Shared/InputField';
 import PageTitle from '@/Shared/PageTitle';
 import SelectField from '@/Shared/SelectField';
+import { showSuccess } from '@/Shared/Swal';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
@@ -19,18 +19,9 @@ const LeadForm = () => {
 
     const onSubmit = async (data) => {
         // Show the loading Swal when the form is submitted
-        Swal.fire({
-            title: 'Submitting...',
-            text: 'Please wait while we process your request.',
-            icon: 'info',
-            allowOutsideClick: false,
-            showConfirmButton: false,
-            didOpen: () => {
-                Swal.showLoading(); // Start loading indicator
-            }
-        });
-
+        showSuccess('Please wait while we process your request.', 'Submitting...')
         const record = data.audio[0];
+        const { default: uploadAudioToFirebase } = await import('@/js/uploadAudio');
         const audio = await uploadAudioToFirebase(record);
         const date = new Date();
         if (!audio) {
