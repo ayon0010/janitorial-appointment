@@ -1,12 +1,11 @@
 'use client'
 import useAuth from '@/Hooks/useAuth';
 import Logo from '@/Shared/Logo';
+import { showError, showSuccess } from '@/Shared/Swal';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import Swal from 'sweetalert2/dist/sweetalert2.js'
-import 'sweetalert2/src/sweetalert2.scss'
 
 const Page = ({ searchParams }) => {
     const code = searchParams?.oobCode;
@@ -23,20 +22,11 @@ const Page = ({ searchParams }) => {
         const { password } = data;
         try {
             verifyPassword(code, password)
-            Swal.fire({
-                icon: 'success',
-                title: 'Password reset successful!',
-                showConfirmButton: false,
-                timer: 1500,
-            });
+            showSuccess('', 'Password reset successfully')
             router.push('/login'); // Redirect to login page after successful reset
             reset();
         } catch (error) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Reset failed!',
-                text: error.message,
-            });
+            showError(error.message, 'Reset failed!');
         }
     };
 

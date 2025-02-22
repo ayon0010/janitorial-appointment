@@ -8,6 +8,7 @@ import 'sweetalert2/dist/sweetalert2.css';
 import { usStates } from '@/js/states';
 import { useRouter } from 'next/navigation';
 import useAxiosPublic from '@/Hooks/useAxiosPublic';
+import { closeSwal, showError, showLoading, showSuccess } from './Swal';
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors, isSubmitting }, watch, reset } = useForm();
@@ -24,14 +25,7 @@ const Register = () => {
         }
 
         try {
-            Swal.fire({
-                title: 'Creating Your Account...',
-                text: 'Please wait',
-                allowOutsideClick: false,
-                didOpen: () => {
-                    Swal.showLoading();
-                },
-            });
+            showLoading('Creating Your Account...', 'Please wait')
             const res = await signUp(email, password);
             const user = res.user;
             await updateUserProfile(companyName);
@@ -45,26 +39,13 @@ const Register = () => {
                 serviceCity2: cities[1]
             });
             if (response.data.insertedId) {
-                Swal.close();
-                Swal.fire({
-                    position: "center",
-                    icon: "success",
-                    title: "Signed Up",
-                    showConfirmButton: false,
-                    timer: 1500,
-                });
+                closeSwal()
+                showSuccess('', 'Signed Up')
                 router.push('/')
                 reset();
             }
         } catch (error) {
-            console.log(error.message);
-            console.log(error);
-            
-            Swal.fire({
-                icon: 'error',
-                title: 'Registration Failed',
-                text: error.code?.split('auth/')[1] || 'An error occurred during sign-up',
-            });
+            showError(error.code?.split('auth/')[1] || 'An error occurred during sign-up', 'Registration failed')
         }
     };
 

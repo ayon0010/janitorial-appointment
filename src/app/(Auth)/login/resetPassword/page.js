@@ -1,9 +1,8 @@
 'use client'
 import useAuth from '@/Hooks/useAuth';
 import Logo from '@/Shared/Logo';
+import { showError, showSuccess } from '@/Shared/Swal';
 import { useForm } from 'react-hook-form';
-import Swal from 'sweetalert2/dist/sweetalert2.js'
-import 'sweetalert2/src/sweetalert2.scss'
 
 const Page = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -13,19 +12,10 @@ const Page = () => {
         const { email } = data;
         try {
             await changePassword(email)
-            Swal.fire({
-                icon: 'success',
-                title: 'The email has been sent successfully, please check your email',
-                showConfirmButton: false,
-                timer: 1500,
-            });
+            showSuccess('', 'The email has been sent successfully, please check your email')
             reset();
         } catch (error) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Reset failed!',
-                text: error.message,
-            });
+            showError(error.message, 'Reset failed!');
         }
     };
 
