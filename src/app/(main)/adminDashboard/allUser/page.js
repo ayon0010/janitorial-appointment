@@ -3,11 +3,11 @@ import useAxiosSecure from '@/Hooks/useAxiosSecure';
 import SectionTitles from '@/ui/SectionTitles';
 import TableHead from '@/ui/TableHead';
 import React from 'react';
-import Swal from 'sweetalert2';
 import dynamic from 'next/dynamic';
 const Loading = dynamic(() => import('../../loading'), { ssr: false });
 
 import GetData from '@/lib/GetData';
+import { closeSwal, showError, showLoading, showSuccess } from '../../../../Shared/Swal';
 
 
 const Page = () => {
@@ -15,81 +15,41 @@ const Page = () => {
 
     const axiosSecure = useAxiosSecure();
     const makeAdmin = async (id, action, email) => {
-
-        // Show loading spinner
-        Swal.fire({
-            title: 'Processing...',
-            text: 'Please wait while we update the admin status.',
-            allowOutsideClick: false,
-            didOpen: () => {
-                Swal.showLoading();
-            }
-        });
+        showLoading('Processing...', 'Please wait while we update the admin status.');
 
         try {
             const response = await axiosSecure.patch(`/makeAdmin/${id}`, { isAdmin: action });
             // Close the loading spinner
-            Swal.close();
-
-            // Show success message
-            Swal.fire({
-                title: 'Success!',
-                text: `User has been ${action ? 'made' : 'removed from'} admin successfully.`,
-                icon: 'success',
-                confirmButtonText: 'OK'
-            });
+            closeSwal();
+            showSuccess(`User has been ${action ? 'made' : 'removed from'} admin successfully.`, 'Success!')
             refetch()
         } catch (error) {
 
 
             // Close the loading spinner
-            Swal.close();
-
-            // Show error message
-            Swal.fire({
-                title: 'Error!',
-                text: 'There was an issue updating the admin status. Please try again.',
-                icon: 'error',
-                confirmButtonText: 'OK'
-            });
+            closeSwal();
+            showError('There was an issue updating the admin status. Please try again.')
         }
     };
 
     const makeSeller = async (id, action) => {
-        Swal.fire({
-            title: 'Processing...',
-            text: 'Please wait while we update the admin status.',
-            allowOutsideClick: false,
-            didOpen: () => {
-                Swal.showLoading();
-            }
-        });
-
+        showLoading('Processing...', 'Please wait while we update the admin status.')
         try {
             const response = await axiosSecure.patch(`/makeSeller/${id}`, { isSeller: action });
 
             // Close the loading spinner
-            Swal.close();
+            // Swal.close();
+            closeSwal();
 
-            // Show success message
-            Swal.fire({
-                title: 'Success!',
-                text: `User has been ${action ? 'made' : 'removed from'} admin successfully.`,
-                icon: 'success',
-                confirmButtonText: 'OK'
-            });
+            showSuccess(`User has been ${action ? 'made' : 'removed from'} admin successfully.`, 'Success!')
             refetch()
         } catch (error) {
             // Close the loading spinner
-            Swal.close();
+            closeSwal();
 
             // Show error message
-            Swal.fire({
-                title: 'Error!',
-                text: 'There was an issue updating the admin status. Please try again.',
-                icon: 'error',
-                confirmButtonText: 'OK'
-            });
+
+            showError('There was an issue updating the admin status. Please try again.')
         }
     }
 
