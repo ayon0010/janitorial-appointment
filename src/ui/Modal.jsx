@@ -8,8 +8,8 @@ import SelectField from '@/Shared/SelectField';
 import React from 'react';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import Swal from 'sweetalert2';
 import SectionTitles from './SectionTitles';
+import { showError, showLoading, showSuccess } from '@/Shared/Swal';
 
 const Modal = ({ id }) => {
     const { allLeads: singleLeads, refetch } = GetData('singleLeads', `allLeads/${id}`);
@@ -28,36 +28,15 @@ const Modal = ({ id }) => {
 
 
     const onSubmit = async (data) => {
-        // Show the loading Swal when the form is submitted
-        Swal.fire({
-            title: 'Submitting...',
-            text: 'Please wait while we process your request.',
-            icon: 'info',
-            allowOutsideClick: false,
-            showConfirmButton: false,
-            didOpen: () => {
-                Swal.showLoading(); // Start loading indicator
-            }
-        });
+        showLoading('Submitting...', 'Please wait while we process your request.')
         await axiosSecure.patch(`/leads/${id}`, data)
             .then(response => {
-                // If the request is successful, show success Swal
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'Lead has been updated successfully.',
-                    icon: 'success',
-                    confirmButtonText: 'OK'
-                });
+                showSuccess('Lead has been updated successfully.', 'Success!')
                 refetch();
             })
             .catch(error => {
                 // If there is an error, show error Swal
-                Swal.fire({
-                    title: 'Error!',
-                    text: 'There was an issue submitting the lead. Please try again later.',
-                    icon: 'error',
-                    confirmButtonText: 'OK'
-                });
+                showError('There was an issue submitting the lead. Please try again later.', 'Error!')
             });
     };
 

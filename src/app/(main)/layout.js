@@ -22,23 +22,57 @@ export const nunito = Nunito({
 })
 
 export const metadata = {
-  title: "Janitorial Appointments | Commercial Cleaning Leads",
-  description:
-    "Boost your janitorial business with high-quality janitorial appointments and commercial cleaning leads. Unlock effective lead generation strategies for growth.",
-  keywords: [
-    "janitorial appointments",
-    "commercial cleaning leads",
-    "janitorial lead generation",
-    "cleaning service leads",
-    "book janitorial appointments",
-  ],
-  authors: [
-    {
-      name: "Al Shariar Auon",
-    },
-  ],
-  charset: "utf-8",
+  title: "Janitorial Appointments - Commercial Cleaning Leads",
+  description: "We provide high-quality commercial cleaning leads, including office cleaning leads, janitorial appointments, and more, for cleaning businesses looking to grow.",
+  keywords: "janitorial appointments, janitorial leads, commercial cleaning leads, office cleaning leads, cleaning business leads, commercial cleaning services, office cleaning services, janitorial services, professional cleaning leads, cleaning appointments, cleaning contractor leads, commercial cleaning business, business cleaning leads",
+  other: {
+    "application/ld+json": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Commercial Cleaning Leads",
+      "description": "We provide high-quality commercial cleaning leads, including office cleaning leads, janitorial appointments, and more, for cleaning businesses looking to grow.",
+      "keywords": "janitorial appointments, janitorial leads, commercial cleaning leads, office cleaning leads, cleaning business leads, commercial cleaning services, office cleaning services, janitorial services, professional cleaning leads, cleaning appointments, cleaning contractor leads, commercial cleaning business, business cleaning leads",
+      "provider": {
+        "@type": "Organization",
+        "name": "Janitorial Appointments",
+        "url": "https://www.janitorialappointment.com/"
+      },
+      "serviceType": "Cleaning Leads",
+      "areaServed": {
+        "@type": "Place",
+        "name": "United States"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Cleaning Leads Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial Cleaning Leads"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Office Cleaning Leads"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Janitorial Appointment Booking"
+            }
+          }
+        ]
+      }
+    }),
+  },
 };
+
 
 
 export default function RootLayout({ children }) {
