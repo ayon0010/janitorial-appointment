@@ -124,7 +124,7 @@ const Appointment = () => {
                             >
                                 Our team will reach you at your desired time
                             </p>
-                            <button type='submit' className="bg-[#20DFE3] btn border-none text-white hover:bg-[#20DFE3]">
+                            <button type='submit' className="bg-[#20DFE3] btn border-none text-white border border-black hover:bg-[#20DFE3]">
                                 Get Appointment
                             </button>
                         </div>
