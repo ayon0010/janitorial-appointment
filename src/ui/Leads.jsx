@@ -25,7 +25,7 @@ export default function Leads() {
                     className="absolute bottom-0 right-0 left-0 top-0 z-[45] bg-gradient-to-b from-black/70 via-black/60 to-black/40 opacity-0 group-hover:opacity-100 transform translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-out pointer-events-none"
                 >
                     <div className="p-6">
-                        <h3 className="text-white text-xl xl:text-2xl">{headline}</h3>
+                        <h4 className="text-white text-xl xl:text-2xl">{headline}</h4>
                         <p className="text-white text-xs xl:text-base mt-8">{text}</p>
                     </div>
                 </div>
@@ -49,7 +49,7 @@ export default function Leads() {
                     <div className="absolute bottom-8 left-6 z-50 group-hover:hidden">
                         {icon}
                         <div className="mt-1">
-                            <h3 className="text-white text-2xl">{headline}</h3>
+                            <h4 className="text-white text-2xl">{headline}</h4>
                         </div>
                     </div>
                 </figure>

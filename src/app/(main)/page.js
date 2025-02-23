@@ -89,7 +89,7 @@ export default function Home() {
                     </div>
                     <Pricing />
                 </div>
-                <h5 className="text-secondary text-center font-light text-xl mt-20 mb-4">How We Help You to Grow</h5>
+                <h3 className="text-secondary text-center font-light text-xl mt-20 mb-4">How We Help You to Grow</h3>
                 <div className="w-[80%] mx-auto">
                     <SectionTitles heading={'Discover Commercial Cleaning Leads Across the USA'} subHeading={"Janitorial Appointment connects cleaning companies with top commercial centers, hospitals, schools, and offices. Register now for exclusive access to appointment-setting opportunities."} />
                 </div>

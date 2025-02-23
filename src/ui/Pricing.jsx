@@ -69,7 +69,7 @@ const Pricing = () => {
         <div className='md:px-10 px-6 grid md:grid-cols-3 grid-cols-1 gap-6 2xl:mt-20 xl:mt-20 mt-10'>
             {pricingPlans.map((plan, index) => (
                 <div key={index} className={`rounded-[30px] py-12 px-10 ${plan.containerclassName} flex flex-col`}>
-                    <h3 className={`text-2xl font-medium nunito ${plan.containerclassName === 'bg-white' ? '' : 'text-white'}`}>{plan.title}</h3>
+                    <h2 className={`text-2xl font-medium nunito ${plan.containerclassName === 'bg-white' ? '' : 'text-white'}`}>{plan.title}</h2>
                     <small className={`nunito text-xs font-normal ${plan.containerclassName === 'bg-white' ? '' : 'text-white'}`}>{plan.description}</small>
                     <div className='mt-10'>
                         <small className={`nunito text-xs font-normal ${plan.containerclassName === 'bg-white' ? '' : 'text-white'}`}>Starting from</small>

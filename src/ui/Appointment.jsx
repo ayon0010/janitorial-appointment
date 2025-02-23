@@ -51,11 +51,11 @@ const Appointment = () => {
     return (
         <div>
             <div className="appointment p-10">
-                <h3
+                <h1
                     className={`${nunito.className} text-white font-semibold 2xl:text-4xl xl:text-4xl text-2xl`}
                 >
                     Book Appointment
-                </h3>
+                </h1>
                 <p
                     className={`${nunito.className} text-white font-normal 2xl:text-lg xl:text-lg text-base mt-1 text-opacity-70`}
                 >
@@ -105,7 +105,7 @@ const Appointment = () => {
                                     {...register('service', { required: 'Please select a service' })}
                                     className="select select-bordered rounded-none w-full bg-[#645CFF] py-3 book-appointment text-white"
                                 >
-                                    <option value="" disabled defaultValue={'---'} selected>
+                                    <option value="" disabled defaultValue={'Choose Type'} selected>
                                         ---
                                     </option>
                                     <option value='Janitorial Appointment'>Janitorial Leads</option>
