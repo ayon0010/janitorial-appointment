@@ -1,7 +1,5 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import lottie from 'lottie-web';
-import animation from '../../public/assets/Animation - 1720847116099.json';
 
 const FireIcon = ({ width }) => {
     const [isClient, setIsClient] = useState(false);
@@ -15,6 +13,8 @@ const FireIcon = ({ width }) => {
     useEffect(() => {
         if (isClient) {
             if (typeof window !== 'undefined' && document) {
+                const lottie = require('lottie-web');
+                const animation = require('../../public/assets/Animation - 1720847116099.json');
                 const animationInstance = lottie.loadAnimation({
                     container: containerRef.current,
                     renderer: 'svg',

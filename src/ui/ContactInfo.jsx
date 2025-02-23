@@ -1,13 +1,10 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import lottie from 'lottie-web';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaWhatsapp } from 'react-icons/fa';
 import image from '../../public/assets/contact-us-janitorial-appointments.jpg';
 // Lottie animation paths
-const animationPath2 = '/assets/Animation - 1737470167441contact.json';
-
 import fb from '@/../public/assets/Frame (8).svg';
 import linked from '@/../public/assets/Frame (11).svg';
 import twitt from '@/../public/assets/Frame (12).svg';
@@ -23,6 +20,8 @@ const ContactInfo = () => {
 
     useEffect(() => {
         if (isClient) {
+            const lottie = require('lottie-web');
+            const animationPath2  = require('/assets/Animation - 1737470167441contact.json');
             if (animation2Ref.current) {
                 lottie.loadAnimation({
                     container: animation2Ref.current,

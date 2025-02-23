@@ -1,7 +1,5 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import animation from '../../public/assets/Animation - 1737791900666appointment.json';
-import lottie from 'lottie-web'
 const ContactAnimation = () => {
     const [isClient, setIsClient] = useState(false);
     useEffect(() => {
@@ -11,6 +9,8 @@ const ContactAnimation = () => {
     useEffect(() => {
         if (isClient) {
             if (typeof window !== 'undefined' && document) {
+                const lottie = require('lottie-web');
+                const animation = require('/assets/Animation - 1737470167441contact.json');
                 const animationContainer = document.getElementById('lottie-animation');
                 lottie.loadAnimation({
                     container: animationContainer,

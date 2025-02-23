@@ -1,7 +1,5 @@
 'use client'
 import { useEffect, useRef, useState } from 'react';
-import lottie from 'lottie-web';
-import animation from '../../public/assets/Animation - 1722325725232.json';
 
 const RedDot = () => {
     const [isClient, setIsClient] = useState(false);
@@ -15,6 +13,8 @@ const RedDot = () => {
     useEffect(() => {
         // Initialize Lottie animation
         if (isClient) {
+            const lottie = require('lottie-web');
+            const animation = require('../../public/assets/Animation - 1722325725232.json');
             const animationInstance = lottie.loadAnimation({
                 container: containerRef.current, // The DOM element where the animation will render
                 renderer: 'svg', // Use SVG rendering

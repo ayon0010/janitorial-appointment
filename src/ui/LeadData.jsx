@@ -1,6 +1,5 @@
 import Dot from "@/ui/Dot";
 import FireIcon from "@/ui/FireIcon";
-import getLeadById from "@/lib/getLeadById";
 import getDateDifference from "@/js/calculateDate";
 import Bookmarks from "@/ui/Bookmarks";
 import BuyLeadMessage from "@/ui/BuyLeadMessage";
