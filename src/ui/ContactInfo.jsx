@@ -21,7 +21,7 @@ const ContactInfo = () => {
     useEffect(() => {
         if (isClient) {
             const lottie = require('lottie-web');
-            const animationPath2  = require('/assets/Animation - 1737470167441contact.json');
+            const animationPath2  = require('../../public/assets/Animation - 1737470167441contact.json');
             if (animation2Ref.current) {
                 lottie.loadAnimation({
                     container: animation2Ref.current,
