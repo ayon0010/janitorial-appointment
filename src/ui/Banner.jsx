@@ -41,14 +41,14 @@ export const DynamicBanner = ({
                     alt="Janitorial appointment and commercial cleaning leads to grow your business"
                     fill
                     priority // Loads the image faster since it's above the fold
-                    className={`hidden xl:block 2xl:block w-full h-full ${cover ? 'object-cover' : ''}`}
+                    className={`hidden xl:block 2xl:block ${cover ? 'object-cover' : ''}`}
                     sizes="100vw"
                 />
                 <Image
                     src={mobileImage}
                     alt="Mobile view showcasing janitorial appointments and commercial cleaning leads for business growth"
                     fill
-                    className="2xl:hidden xl:hidden block w-full object-cover h-full"
+                    className="2xl:hidden xl:hidden block object-cover"
                     priority
                     sizes="100vw"
                 />
