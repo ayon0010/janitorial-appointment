@@ -53,7 +53,7 @@ const ContactInfo = () => {
 
             <div className="space-y-8">
                 {/* Lottie animation */}
-                <div ref={animation2Ref} className="h-[200px] w-full" />
+                <div role="region" aria-label="Contact Us" ref={animation2Ref} className="h-[200px] w-full" />
                 <p className="text-3xl font-semibold text-center">+8801726108060</p>
                 <div>
                     <div className="grid 2xl:grid-cols-4 xl:grid-cols-4 grid-cols-2 2xl:gap-8 xl:gap-8 gap-6">
