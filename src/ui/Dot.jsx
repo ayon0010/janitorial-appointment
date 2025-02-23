@@ -5,31 +5,30 @@ const Dot = ({ width, h }) => {
     const [isClient, setIsClient] = useState(false);
     const containerRef = useRef(null);
 
-    // Check if the component is rendered on the client-side
     useEffect(() => {
         setIsClient(true);
     }, []);
 
     useEffect(() => {
         if (isClient) {
-            const lottie = require('lottie-web'); // Import lottie only on the client-side
-            const animation = require('@/../public/assets/Animation - 1722287102834.json');
+            import('lottie-web').then((lottie) => {
+                import('@/../public/assets/Animation - 1722287102834.json').then((animation) => {
+                    const animationInstance = lottie.loadAnimation({
+                        container: containerRef.current,
+                        renderer: 'svg',
+                        loop: true,
+                        autoplay: true,
+                        animationData: animation.default,
+                    });
 
-            const animationInstance = lottie.loadAnimation({
-                container: containerRef.current,
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                animationData: animation,
+                    return () => animationInstance.destroy();
+                });
             });
-
-            // Cleanup the animation on component unmount
-            return () => animationInstance.destroy();
         }
     }, [isClient]);
 
     if (!isClient) {
-        return null; // Render nothing on the server-side
+        return null;
     }
 
     return (

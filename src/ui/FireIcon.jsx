@@ -5,29 +5,30 @@ const FireIcon = ({ width }) => {
     const [isClient, setIsClient] = useState(false);
     const containerRef = useRef(null);
 
-    // Check if the component is rendered on the client-side
     useEffect(() => {
         setIsClient(true);
     }, []);
 
     useEffect(() => {
         if (isClient) {
-            const lottie = require('lottie-web');
-            const animation = require('../../public/assets/Animation - 1720847116099.json');
-            if (typeof window !== 'undefined' && document) {
-                const animationInstance = lottie.loadAnimation({
-                    container: containerRef.current,
-                    renderer: 'svg',
-                    loop: true,
-                    autoplay: true,
-                    animationData: animation,
-                });
+            import('lottie-web').then((lottie) => {
+                import('../../public/assets/Animation - 1720847116099.json').then((animation) => {
+                    if (typeof window !== 'undefined' && document) {
+                        const animationInstance = lottie.loadAnimation({
+                            container: containerRef.current,
+                            renderer: 'svg',
+                            loop: true,
+                            autoplay: true,
+                            animationData: animation.default,
+                        });
 
-                // Cleanup the animation on component unmount
-                return () => animationInstance.destroy();
-            }
+                        return () => animationInstance.destroy();
+                    }
+                });
+            });
         }
     }, [isClient]);
+
     if (!isClient) {
         return null; // Render nothing on the server-side
     }
@@ -43,4 +44,3 @@ const FireIcon = ({ width }) => {
 };
 
 export default FireIcon;
-
