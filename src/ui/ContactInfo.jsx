@@ -13,26 +13,30 @@ const ContactInfo = () => {
     const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
-        // Ensure component runs only on the client
         setIsClient(true);
     }, []);
 
     useEffect(() => {
         if (isClient) {
-            const lottie = require('lottie-web');
-            const animationPath2  = require('../../public/assets/Animation - 1737470167441contact.json');
-            if (animation2Ref.current) {
-                lottie.loadAnimation({
-                    container: animation2Ref.current,
-                    renderer: 'svg',
-                    loop: false,
-                    autoplay: true,
-                    path: animationPath2,
-                });
-            }
+            const loadLottieAnimation = async () => {
+                const lottie = (await import('lottie-web')).default;
+                const animationPath2 = (await import('../../public/assets/Animation - 1737470167441contact.json')).default;
+
+                if (animation2Ref.current) {
+                    lottie.loadAnimation({
+                        container: animation2Ref.current,
+                        renderer: 'svg',
+                        loop: false,
+                        autoplay: true,
+                        animationData: animationPath2,
+                    });
+                }
+            };
+
+            loadLottieAnimation().catch(console.error);
 
             return () => {
-                lottie.destroy(); // Cleanup Lottie animations
+                import('lottie-web').then((lottie) => lottie.destroy()).catch(console.error);
             };
         }
     }, [isClient]);
@@ -48,7 +52,7 @@ const ContactInfo = () => {
             </div>
 
             <div className="space-y-8">
-                {/* Lottie animation for the second animation */}
+                {/* Lottie animation */}
                 <div ref={animation2Ref} className="h-[200px] w-full" />
                 <p className="text-3xl font-semibold text-center">+8801726108060</p>
                 <div>
