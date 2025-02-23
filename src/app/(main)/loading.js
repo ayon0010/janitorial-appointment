@@ -1,33 +1,37 @@
-'use client'
+'use client';
 import { useEffect, useRef, useState } from 'react';
 
 const Loading = () => {
     const [isClient, setIsClient] = useState(false);
     const containerRef = useRef(null);
 
-    // Check if the component is rendered on the client-side
     useEffect(() => {
         setIsClient(true);
     }, []);
 
     useEffect(() => {
         if (isClient) {
-            const lottie = require('lottie-web'); // Import lottie only on the client-side
-            const animation = require('@/../public/assets/Animation - 1722287102834.json');
-            const animationInstance = lottie.loadAnimation({
-                container: containerRef.current,
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                animationData: animation,
-            });
-            // Cleanup the animation on component unmount
-            return () => animationInstance.destroy();
+            const loadLottieAnimation = async () => {
+                const lottie = (await import('lottie-web')).default;
+                const animationData = await import('@/../public/assets/Animation - 1722287102834.json');
+
+                const animationInstance = lottie.loadAnimation({
+                    container: containerRef.current,
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    animationData: animationData.default, // Ensure to use .default for dynamic imports
+                });
+
+                return () => animationInstance.destroy();
+            };
+
+            loadLottieAnimation().catch(console.error);
         }
     }, [isClient]);
 
     if (!isClient) {
-        return null; // Render nothing on the server-side
+        return null;
     }
 
     return (
