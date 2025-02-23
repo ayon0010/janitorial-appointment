@@ -1,30 +1,37 @@
 'use client'
 import React, { useEffect, useState } from 'react';
+
 const ContactAnimation = () => {
     const [isClient, setIsClient] = useState(false);
+
     useEffect(() => {
         setIsClient(true);
     }, []);
 
     useEffect(() => {
         if (isClient) {
-            const lottie = require('lottie-web');
-            const animation = require('@/../public/assets/Animation - 1737470167441contact.json');
-            if (typeof window !== 'undefined' && document) {
-                const animationContainer = document.getElementById('lottie-animation');
-                lottie.loadAnimation({
-                    container: animationContainer,
-                    renderer: 'svg',
-                    loop: true,
-                    autoplay: true,
-                    animationData: animation
-                });
+            const loadLottieAnimation = async () => {
+                const lottie = (await import('lottie-web')).default;
+                const animation = (await import('@/../public/assets/Animation - 1737470167441contact.json')).default;
 
-                // Cleanup on component unmount
-                return () => {
-                    lottie.destroy();
-                };
-            }
+                if (typeof window !== 'undefined' && document) {
+                    const animationContainer = document.getElementById('lottie-animation');
+                    lottie.loadAnimation({
+                        container: animationContainer,
+                        renderer: 'svg',
+                        loop: true,
+                        autoplay: true,
+                        animationData: animation
+                    });
+
+                    // Cleanup on component unmount
+                    return () => {
+                        lottie.destroy();
+                    };
+                }
+            };
+
+            loadLottieAnimation().catch(console.error);
         }
     }, [isClient]);
 
