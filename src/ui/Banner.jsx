@@ -50,7 +50,7 @@ export const DynamicBanner = ({
                     fill
                     className="2xl:hidden xl:hidden block object-cover"
                     priority
-                    layout="fill" 
+                    layout="fill"
                     sizes="100vw"
                 />
             </div>
@@ -156,7 +156,6 @@ const Banner = () => {
                         </div>
                     </div>
                 </SwiperSlide>
-
                 {/* Slider 4 */}
                 <SwiperSlide>
                     <div className="flex flex-col min-h-[600px] max-h-[800px] h-auto">
