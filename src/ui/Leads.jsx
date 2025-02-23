@@ -38,11 +38,10 @@ export default function Leads() {
                         <Image
                             src={img}
                             alt={alt}
-                            width={800} // Default desktop width
-                            height={500} // Default desktop height
+                            fill
                             className="w-full h-full object-cover"
                             loading="lazy"
-                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
+                            sizes="100vw"
                         />
                     </div>
 

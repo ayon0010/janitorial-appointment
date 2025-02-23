@@ -39,20 +39,18 @@ export const DynamicBanner = ({
                 <Image
                     src={desktopImage}
                     alt="Janitorial appointment and commercial cleaning leads to grow your business"
-                    width={1920}
-                    height={1080}
+                    fill
                     priority // Loads the image faster since it's above the fold
                     className={`hidden xl:block 2xl:block w-full h-full ${cover ? 'object-cover' : ''}`}
-                    sizes="(max-width: 768px) 500px, (max-width: 1400px) 100vw,100vw"
+                    sizes="100vw"
                 />
                 <Image
                     src={mobileImage}
                     alt="Mobile view showcasing janitorial appointments and commercial cleaning leads for business growth"
-                    width={586}
-                    height={300}
+                    fill
                     className="2xl:hidden xl:hidden block w-full object-cover h-full"
                     priority
-                    sizes="300px"
+                    sizes="100vw"
                 />
             </div>
 
@@ -139,10 +137,9 @@ const Banner = () => {
                     <div className="flex flex-col min-h-[600px] max-h-[800px] h-auto relative">
                         <div className='absolute inset-0 z-20 h-full'>
                             <Image src={image4}
-                                sizes="(max-width: 768px) 500px, (max-width: 1400px) 100vw,100vw"
+                                sizes="100vw"
                                 alt='Exclusive Commercial cleaning leads all over the usa'
-                                width={1920}
-                                height={1080}
+                                fill
                                 priority
                                 className='object-cover h-full'
                             />
@@ -167,9 +164,8 @@ const Banner = () => {
                                 src={image3}
                                 priority
                                 alt="Telemarketing services for janitorial appointments and commercial cleaning leads"
-                                width={1920}
-                                height={1080}
-                                sizes="(max-width: 768px) 500px, (max-width: 1400px) 100vw,100vw"
+                                fill
+                                sizes="100vw"
                                 className='h-full'
                             />
                         </div>
