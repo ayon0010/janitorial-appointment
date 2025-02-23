@@ -50,6 +50,7 @@ export const DynamicBanner = ({
                     fill
                     className="2xl:hidden xl:hidden block object-cover"
                     priority
+                    layout="fill" 
                     sizes="100vw"
                 />
             </div>
