@@ -57,19 +57,26 @@ const ContactInfo = () => {
                 <p className="text-3xl font-semibold text-center">+8801726108060</p>
                 <div>
                     <div className="grid 2xl:grid-cols-4 xl:grid-cols-4 grid-cols-2 2xl:gap-8 xl:gap-8 gap-6">
-                        <Link href="https://www.facebook.com/commercialcleaningleads/" target="_blank">
+                        <Link href="https://www.facebook.com/commercialcleaningleads/" target="_blank"
+                            aria-label="Follow us in Facebook"
+                        >
                             <Image className="cursor-pointer" src={fb} alt="Facebook" />
                         </Link>
-                        <Link href="https://www.linkedin.com/company/janitorial-appointments-commercial-cleaning-leads/about/?viewAsMember=true" target="_blank">
+                        <Link href="https://www.linkedin.com/company/janitorial-appointments-commercial-cleaning-leads/about/?viewAsMember=true" target="_blank"
+                            aria-label="LinkedIn"
+                        >
                             <Image className="cursor-pointer" src={linked} alt="LinkedIn" />
                         </Link>
-                        <Link href="https://x.com/cleaningleads12" target="_blank">
+                        <Link href="https://x.com/cleaningleads12" target="_blank"
+                            aria-label="Follow us in twitter"
+                        >
                             <Image className="cursor-pointer" src={twitt} alt="Twitter" />
                         </Link>
                         <Link
                             href={`https://wa.me/${+8801726108060}?text=${message}`}
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Chat with us on WhatsApp"
                             className="border w-full border-[#DDDDDD] rounded-md flex flex-col"
                         >
                             <FaWhatsapp size="4rem" color="#006600" className="w-fit m-auto" />
