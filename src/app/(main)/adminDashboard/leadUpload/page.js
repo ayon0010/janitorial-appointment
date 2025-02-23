@@ -6,7 +6,7 @@ import FormButton from '@/Shared/FormButton';
 import InputField from '@/Shared/InputField';
 import PageTitle from '@/Shared/PageTitle';
 import SelectField from '@/Shared/SelectField';
-import { showSuccess } from '@/Shared/Swal';
+import { showLoading, showSuccess } from '@/Shared/Swal';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
@@ -19,7 +19,7 @@ const LeadForm = () => {
 
     const onSubmit = async (data) => {
         // Show the loading Swal when the form is submitted
-        showSuccess('Please wait while we process your request.', 'Submitting...')
+        showLoading('Please wait while we process your request.', 'Submitting...')
         const record = data.audio[0];
         const { default: uploadAudioToFirebase } = await import('@/js/uploadAudio');
         const audio = await uploadAudioToFirebase(record);
