@@ -39,9 +39,9 @@ export default function Leads() {
                             src={img}
                             alt={alt}
                             fill
-                            className="w-full h-full object-cover"
+                            className="object-cover"
                             loading="lazy"
-                            sizes="100vw"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         />
                     </div>
 

@@ -40,7 +40,7 @@ export const metadata = {
 
 const page = () => {
     return (
-        <div className="">
+        <>
             <div className="relative 2xl:h-auto xl:h-auto h-[430px] z-10">
                 <Image
                     className="w-full h-full 2xl:object-fill xl:object-fill object-cover"
@@ -140,18 +140,14 @@ const page = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full h-full flex flex-col">
-                            <div className="w-[40px] h-full">
-                                <div className="w-[23px] h-full border-[#3328BF] border-r-2"></div>
-                            </div>
-                            <div className="flex items-start h-fit mt-auto">
-                                <div className="flex flex-col h-full ml-[3px]">
-                                    <svg width="38" height="38" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="38" height="38" rx="20" fill="#F9F9FB" />
-                                        <path d="M21.1562 28.6875L30 19.8438L28.5625 18.4375L21.1562 25.8438L17.4062 22.0938L16 23.5L21.1562 28.6875ZM23 35.5C21.2917 35.5 19.6771 35.1719 18.1562 34.5156C16.6354 33.8594 15.3073 32.9635 14.1719 31.8281C13.0365 30.6927 12.1406 29.3646 11.4844 27.8438C10.8281 26.3229 10.5 24.7083 10.5 23C10.5 21.2708 10.8281 19.6458 11.4844 18.125C12.1406 16.6042 13.0365 15.2812 14.1719 14.1562C15.3073 13.0312 16.6354 12.1406 18.1562 11.4844C19.6771 10.8281 21.2917 10.5 23 10.5C24.7292 10.5 26.3542 10.8281 27.875 11.4844C29.3958 12.1406 30.7188 13.0312 31.8438 14.1562C32.9688 15.2812 33.8594 16.6042 34.5156 18.125C35.1719 19.6458 35.5 21.2708 35.5 23C35.5 24.7083 35.1719 26.3229 34.5156 27.8438C33.8594 29.3646 32.9688 30.6927 31.8438 31.8281C30.7188 32.9635 29.3958 33.8594 27.875 34.5156C26.3542 35.1719 24.7292 35.5 23 35.5Z" fill="#246532" />
-                                    </svg>
+                        <div className="w-full h-full">
+                            <div className="flex items-start h-full">
+                                <div className="flex flex-col h-full">
+                                    <FaCircleCheck />
+                                    <div className="w-[50px] h-full">
+                                    </div>
                                 </div>
-                                <div className="ml-1">
+                                <div>
                                     <h3 className="xl:text-2xl text-2xl 2xl:text-3xl text-black font-medium inter">Dedicated Support</h3>
                                     <p className=" mt-1 text-[#808080] xl:text-base 2xl:text-xl text-base font-normal inter">Our team works closely with you every step of the way</p>
                                 </div>
@@ -246,7 +242,7 @@ const page = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
