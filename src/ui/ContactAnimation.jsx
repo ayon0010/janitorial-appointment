@@ -8,9 +8,9 @@ const ContactAnimation = () => {
 
     useEffect(() => {
         if (isClient) {
+            const lottie = require('lottie-web');
+            const animation = require('@/../public/assets/Animation - 1737470167441contact.json');
             if (typeof window !== 'undefined' && document) {
-                const lottie = require('lottie-web');
-                const animation = require('@/../public/assets/Animation - 1737470167441contact.json');
                 const animationContainer = document.getElementById('lottie-animation');
                 lottie.loadAnimation({
                     container: animationContainer,
