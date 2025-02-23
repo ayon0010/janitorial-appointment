@@ -14,7 +14,6 @@ const Loading = () => {
         if (isClient) {
             const lottie = require('lottie-web'); // Import lottie only on the client-side
             const animation = require('@/../public/assets/Animation - 1722287102834.json');
-
             const animationInstance = lottie.loadAnimation({
                 container: containerRef.current,
                 renderer: 'svg',
@@ -22,7 +21,6 @@ const Loading = () => {
                 autoplay: true,
                 animationData: animation,
             });
-
             // Cleanup the animation on component unmount
             return () => animationInstance.destroy();
         }

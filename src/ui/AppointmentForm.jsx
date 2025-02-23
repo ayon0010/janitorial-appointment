@@ -8,8 +8,6 @@ import Swal from 'sweetalert2/dist/sweetalert2.js';
 import 'sweetalert2/src/sweetalert2.scss';
 import image1 from '../../public/assets/linkedin-sales-solutions-1A8yP_5msac-unsplash_result_result.webp'
 import image1mbl from '../../public/assets/behnam-norouzi-kmikcu4jrsY-unsplash_result_result_result (1).webp'
-
-// Import lottie-web
 import useAxiosPublic from '@/Hooks/useAxiosPublic';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';

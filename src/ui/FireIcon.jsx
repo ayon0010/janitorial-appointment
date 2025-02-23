@@ -12,9 +12,9 @@ const FireIcon = ({ width }) => {
 
     useEffect(() => {
         if (isClient) {
+            const lottie = require('lottie-web');
+            const animation = require('../../public/assets/Animation - 1720847116099.json');
             if (typeof window !== 'undefined' && document) {
-                const lottie = require('lottie-web');
-                const animation = require('../../public/assets/Animation - 1720847116099.json');
                 const animationInstance = lottie.loadAnimation({
                     container: containerRef.current,
                     renderer: 'svg',
