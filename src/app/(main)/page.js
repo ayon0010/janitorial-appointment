@@ -272,7 +272,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <h5 className="text-secondary  text-center font-light text-xl mt-20 mb-4">Effortless business growth.</h5>
+                <p className="text-secondary  text-center font-light text-xl mt-20 mb-4">Effortless business growth.</p>
                 <SectionTitles
                     heading={"Boost Your Business with a Multi-Channel Lead Generation Strategy"}
                     subHeading={

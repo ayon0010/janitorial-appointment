@@ -18,10 +18,10 @@ const Footer = () => {
             <div className="flex 2xl:flex-row xl:flex-row flex-col 2xl:justify-between xl:justify-between 2xl:items-end xl:items-end justify-center">
                 <aside>
                     <div className="my-20">
-                        <h5 className="text-2xl inter font-bold">
+                        <h1 className="text-2xl inter font-bold">
                             Subscribe to our <br />
                             newsletter
-                        </h5>
+                        </h1>
                         <SubscribeEmail />
                     </div>
                     <div className="flex 2xl:flex-row xl:flex-row flex-col 2xl:items-center xl:items-center items-start 2xl:gap-14 xl:gap-14 gap-6">
