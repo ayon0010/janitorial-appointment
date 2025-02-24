@@ -56,7 +56,7 @@ const SideBar = () => {
                         </div>
                     </div>
                     <div className="mt-10 px-6">
-                        <h3 className="text-center text-xl text-deep-blue font-semibold">About Us</h3>
+                        <h1 className="text-center text-xl text-deep-blue font-semibold">About Us</h1>
                         <p className="text-base mt-6 text-center">
                             <span className="text-deep-blue font-semibold text-base">Janitorial Appointment</span>{' '}
                             we specialize in delivering high-quality janitorial leads to help businesses grow. With a
