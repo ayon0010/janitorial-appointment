@@ -18,7 +18,7 @@ const ContactInfo = () => {
             <div className="space-y-8">
                 <div className='flex items-center justify-center flex-row-reverse gap-10'>
                     <FaPhone size={'4rem'} color='#006600' />
-                    <h5 className='text-[#006600] 2xl:text-5xl xl:text-3xl text-2xl font-semibold'>Contact Us</h5>
+                    <h1 className='text-[#006600] 2xl:text-5xl xl:text-3xl text-2xl font-semibold'>Contact Us</h1>
                 </div>
                 <p className="text-3xl font-semibold text-center">+8801726108060</p>
                 <div>
