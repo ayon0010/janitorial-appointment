@@ -1,6 +1,5 @@
 'use client'
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
@@ -50,7 +49,6 @@ export const DynamicBanner = ({
                     fill
                     className="2xl:hidden xl:hidden block object-cover"
                     priority
-                    layout="fill"
                     sizes="100vw"
                 />
             </div>

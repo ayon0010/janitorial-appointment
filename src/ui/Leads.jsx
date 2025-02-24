@@ -6,11 +6,6 @@ import img5 from '../../public/assets/day-care-cleaning-leads.webp'
 import img6 from '../../public/assets/church-cleaning-leads.webp'
 import img4 from '../../public/assets/gym-fitness-club-cleaning-leads.webp'
 
-// import img3 from '../../public/assets/'
-
-
-
-
 export default function Leads() {
     const Card = ({ img, headline, text, icon, alt }) => {
         return (
@@ -38,6 +33,7 @@ export default function Leads() {
                         <Image
                             src={img}
                             alt={alt}
+                            width={592}
                             height={230}
                             className="object-cover h-[230px] w-full"
                             loading="lazy"
