@@ -291,7 +291,7 @@ export default function Home() {
                         }
                     />
                 </div>
-                <div className='md:grid md:grid-cols-3 md:gap-3 hidden'>
+                <div className='md:grid md:grid-cols-3 md:gap-3 hidden mt-10'>
                     {
                         data?.map((d, i) => {
                             return (

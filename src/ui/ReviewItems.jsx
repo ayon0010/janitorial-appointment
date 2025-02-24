@@ -8,7 +8,7 @@ const ReviewItems = ({ d }) => {
         <div className='space-y-6 p-6'>
             <div>
                 <h5 className='text-xl font-semibold mb-2'>{d.companyName}</h5>
-                <p className='text-base inter text-[#707070]'>{d.text}</p>
+                <p className='text-base inter text-black'>{d.text}</p>
             </div>
             <div className='flex items-center gap-2'>
                 <div>
