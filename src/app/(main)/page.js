@@ -114,10 +114,10 @@ export default function Home() {
                         />
                     </div>
                     <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pr-24">
-                        <h5 className="text-primary  font-medium md:text-lg text-sm">Nationwide Lead Supply</h5>
-                        <h1 className="md:text-5xl text-3xl  font-semibold">
+                        <h1 className="text-primary  font-medium md:text-lg text-sm">Nationwide Lead Supply</h1>
+                        <h2 className="md:text-5xl text-3xl  font-semibold">
                             Get Quality Leads from Anywhere in the U.S.
-                        </h1>
+                        </h2>
                         <p className=" font-normal text-sm">
                             We provide verified leads from all over the United States, helping you connect with potential clients no matter where your business operates.
                         </p>
@@ -163,8 +163,8 @@ export default function Home() {
                         />
                     </div>
                     <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pl-24">
-                        <h5 className="text-primary  font-medium md:text-lg text-sm">Upcoming Cleaning Project Access</h5>
-                        <h1 className="md:text-5xl text-3xl  font-semibold">Uncover Top <br /> Cleaning Jobs</h1>
+                        <h1 className="text-primary  font-medium md:text-lg text-sm">Upcoming Cleaning Project Access</h1>
+                        <h2 className="md:text-5xl text-3xl  font-semibold">Uncover Top <br /> Cleaning Jobs</h2>
                         <p className=" font-normal text-sm">Access upcoming cleaning projects, including office and construction clean-ups, all gathered in one place.</p>
                         <div className="space-y-1">
                             <div className="flex items-center gap-[11px]">
@@ -202,8 +202,8 @@ export default function Home() {
                         />
                     </div>
                     <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pr-24">
-                        <h5 className="text-primary  font-medium md:text-lg text-sm">Local Decision Maker Discovery</h5>
-                        <h1 className="md:text-5xl text-3xl  font-semibold">Reach Decision Makers Instantly & Effortlessly</h1>
+                        <h1 className="text-primary  font-medium md:text-lg text-sm">Local Decision Maker Discovery</h1>
+                        <h2 className="md:text-5xl text-3xl  font-semibold">Reach Decision Makers Instantly & Effortlessly</h2>
                         <p className=" font-normal text-sm">Discover key decision makers nearby and initiate contact seamlessly</p>
                         <div className="space-y-1">
                             <div className="flex items-center gap-[11px]">
@@ -241,10 +241,10 @@ export default function Home() {
                         />
                     </div>
                     <div className="space-y-6 md:w-1/2 w-full md:my-auto md:pl-24">
-                        <h5 className="text-primary  font-medium md:text-lg text-sm">Buy High-Quality Cleaning Leads</h5>
-                        <h1 className="md:text-5xl text-3xl  font-semibold">
+                        <h1 className="text-primary  font-medium md:text-lg text-sm">Buy High-Quality Cleaning Leads</h1>
+                        <h2 className="md:text-5xl text-3xl  font-semibold">
                             Get Access to Exclusive Leads for Your Cleaning Business
-                        </h1>
+                        </h2>
                         <p className=" font-normal text-sm">
                             Purchase our curated leads to connect with potential clients actively seeking cleaning services. Start growing your business with targeted, high-quality leads tailored to your needs.
                         </p>
