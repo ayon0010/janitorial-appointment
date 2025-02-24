@@ -109,6 +109,7 @@ export default function Home() {
                             loading="lazy"
                             width={950}
                             height={600}
+                            sizes="(max-width:768px) 100vw,50vw"
                             priority={false} // Use `true` if this image is above the fold
                         />
                     </div>
@@ -158,6 +159,7 @@ export default function Home() {
                             loading="lazy"
                             width={950}
                             height={600}
+                            sizes="(max-width:768px) 100vw,50vw"
                         />
                     </div>
                     <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pl-24">
@@ -196,6 +198,7 @@ export default function Home() {
                             loading="lazy"
                             width={950}
                             height={600}
+                            sizes="(max-width:768px) 100vw,50vw"
                         />
                     </div>
                     <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pr-24">
@@ -234,6 +237,7 @@ export default function Home() {
                             loading="lazy"
                             width={950}
                             height={600}
+                            sizes="(max-width:768px) 100vw,50vw"
                         />
                     </div>
                     <div className="space-y-6 md:w-1/2 w-full md:my-auto md:pl-24">
