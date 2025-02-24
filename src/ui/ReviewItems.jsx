@@ -7,7 +7,7 @@ const ReviewItems = ({ d }) => {
     return (
         <div className='space-y-6 p-6'>
             <div>
-                <h5 className='text-xl font-semibold mb-2'>{d.companyName}</h5>
+                <h1 className='text-xl font-semibold mb-2'>{d.companyName}</h1>
                 <p className='text-base inter text-black'>{d.text}</p>
             </div>
             <div className='flex items-center gap-2'>
@@ -15,9 +15,9 @@ const ReviewItems = ({ d }) => {
                     <Image src={d?.image} alt="author" />
                 </div>
                 <div>
-                    <h3 className='font-semibold text-lg'>
+                    <h2 className='font-semibold text-lg'>
                         {d.author}
-                    </h3>
+                    </h2>
                     <p className='text-primary text-sm'>{d.authorDesignation}</p>
                     <div className='mt-1'>
                         <Rating
