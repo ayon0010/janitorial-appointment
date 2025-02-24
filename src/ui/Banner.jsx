@@ -46,7 +46,8 @@ export const DynamicBanner = ({
                 <Image
                     src={mobileImage}
                     alt="Mobile view showcasing janitorial appointments and commercial cleaning leads for business growth"
-                    fill
+                    height={600}
+                    width={430}
                     className="2xl:hidden xl:hidden block object-cover"
                     priority
                     sizes="100vw"
