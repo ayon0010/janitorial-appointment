@@ -1,48 +1,12 @@
-'use client';
-import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaPhone, FaWhatsapp } from 'react-icons/fa';
 import image from '../../public/assets/contact-us-janitorial-appointments.jpg';
 import fb from '@/../public/assets/Frame (8).svg';
 import linked from '@/../public/assets/Frame (11).svg';
 import twitt from '@/../public/assets/Frame (12).svg';
 
 const ContactInfo = () => {
-    const animation2Ref = useRef(null);
-    const [isClient, setIsClient] = useState(false);
-
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-
-    useEffect(() => {
-        if (isClient) {
-            const loadLottieAnimation = async () => {
-                const lottie = (await import('lottie-web')).default;
-                const animationPath2 = (await import('../../public/assets/Animation - 1737470167441contact.json')).default;
-
-                if (animation2Ref.current) {
-                    lottie.loadAnimation({
-                        container: animation2Ref.current,
-                        renderer: 'svg',
-                        loop: false,
-                        autoplay: true,
-                        animationData: animationPath2,
-                    });
-                }
-            };
-
-            loadLottieAnimation().catch(console.error);
-
-            return () => {
-                import('lottie-web').then((lottie) => lottie.destroy()).catch(console.error);
-            };
-        }
-    }, [isClient]);
-
-    if (!isClient) return null;
-
     const message = encodeURIComponent('Hello! I would like to inquire about your commercial cleaning leads.');
 
     return (
@@ -52,8 +16,10 @@ const ContactInfo = () => {
             </div>
 
             <div className="space-y-8">
-                {/* Lottie animation */}
-                <div role="region" aria-label="Contact Us" ref={animation2Ref} className="h-[200px] w-full" />
+                <div className='flex items-center justify-center flex-row-reverse gap-10'>
+                    <FaPhone size={'4rem'} color='#006600' />
+                    <h5 className='text-[#006600] 2xl:text-5xl xl:text-3xl text-2xl font-semibold'>Contact Us</h5>
+                </div>
                 <p className="text-3xl font-semibold text-center">+8801726108060</p>
                 <div>
                     <div className="grid 2xl:grid-cols-4 xl:grid-cols-4 grid-cols-2 2xl:gap-8 xl:gap-8 gap-6">

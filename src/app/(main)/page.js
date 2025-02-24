@@ -15,7 +15,7 @@ import Web from "@/ui/Web";
 import image from '@/../public/assets/it-expert-for-cleaning-companies.webp';
 import ReviewItems from "../../ui/ReviewItems";
 import { data } from '@/js/states';
-import ContactAnimationForHome from "@/ui/ContactAnimationForHome";
+import ContactInfo from "@/ui/ContactInfo";
 
 export const metadata = {
     title: "Janitorial Appointments - Commercial Cleaning Leads",
@@ -305,7 +305,7 @@ export default function Home() {
             </div>
             <div className="py-28  bg-white">
                 <SectionTitles heading={"Contact Us"} />
-                <ContactAnimationForHome />
+                <ContactInfo />
             </div>
         </>
     )
