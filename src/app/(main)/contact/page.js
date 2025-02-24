@@ -143,18 +143,18 @@ const page = () => {
                 <div className='2xl:pb-40 xl:pb-28 pb-16'>
                     <SectionTitles heading={'Find Us on Social Media'} subHeading={"If you want to contact us in person or simply want to know more about us, here's some helpful information about us"} />
                     <div className='grid 2xl:grid-cols-4 xl:grid-cols-4 grid-cols-2 2xl:gap-8 xl:gap-8 gap-6 w-3/4 mx-auto mt-10'>
-                        <Link href="https://www.facebook.com/commercialcleaningleads/" target="_blank">
+                        <Link href="https://www.facebook.com/commercialcleaningleads/" target="_blank" aria-label="Visit our Facebook page">
                             <Image className='cursor-pointer' src={fb} alt="Facebook" />
                         </Link>
                         <Link href="https://www.linkedin.com/company/janitorial-appointments-commercial-cleaning-leads/about/?viewAsMember=true" target="_blank">
                             <Image className='cursor-pointer' src={linked} alt="LinkedIn" />
                         </Link>
-                        <Link href="https://x.com/cleaningleads12" target="_blank">
+                        <Link href="https://x.com/cleaningleads12" aria-label="Follow us on Twitter" target="_blank">
                             <Image className='cursor-pointer' src={twitt} alt="Twitter" />
                         </Link>
                         <Link href={`https://wa.me/${+8801726108060}?text=${message}`}
                             target="_blank"
-                            rel="noopener noreferrer" className='border w-full border-[#DDDDDD] rounded-md flex flex-col' target="_blank">
+                            rel="noopener noreferrer" className='border w-full border-[#DDDDDD] rounded-md flex flex-col' aria-label="Chat with us on WhatsApp" target="_blank">
                             <FaWhatsapp size={'4rem'} color='#006600' className='w-fit m-auto' />
                         </Link>
                     </div>

@@ -31,15 +31,17 @@ const Footer = () => {
                 </aside>
                 <aside className="w-fit 2xl:mt-0 xl:mt-0 mt-10">
                     <div className="flex items-center gap-10">
-                        <Link href={'https://www.facebook.com/commercialcleaningleads/'} target='_blank'>
+                        <Link href={'https://www.facebook.com/commercialcleaningleads/'} aria-label="Visit our Facebook page" target='_blank'>
                             <FaFacebook color="#246532" size={'1.5rem'} />
                         </Link>
                         <Link href={`https://wa.me/${+8801726108060}?text=${message}`}
                             target="_blank"
-                            rel="noopener noreferrer">
+                            rel="noopener noreferrer"
+                            aria-label="Chat with us on WhatsApp"
+                        >
                             <FaWhatsapp color="#246532" size={'1.5rem'} />
                         </Link>
-                        <Link href={'https://x.com/cleaningleads12'} target='_blank'>
+                        <Link href={'https://x.com/cleaningleads12'} aria-label="Follow us on Twitter" target='_blank'>
                             <FaTwitter color="#246532" size={'1.5rem'} />
                         </Link>
                     </div>
