@@ -303,7 +303,7 @@ export default function Home() {
                 <Reviews />
                 {/*  */}
             </div>
-            <div className="py-28  bg-white">
+            <div className="py-10 bg-white">
                 <SectionTitles heading={"Contact Us"} />
                 <ContactInfo />
             </div>

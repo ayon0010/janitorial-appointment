@@ -101,6 +101,7 @@ const Appointment = () => {
                     <div className="w-full">
                         <label for="service" className="sr-only">Choose a Service</label>
                         <select
+                            aria-label="Choose a Service"
                             {...register('service', { required: 'Please select a service' })}
                             className="select select-bordered rounded-none w-full bg-[#645CFF] py-3 book-appointment text-white"
                         >
