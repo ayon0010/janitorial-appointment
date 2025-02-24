@@ -33,15 +33,15 @@ export default function Leads() {
                 <figure>
                     {/* Image with hover effect */}
                     <div
-                        className="h-[230px] w-full z-30 transform transition-transform duration-500 ease-out group-hover:scale-110"
+                        className="w-full z-30 transform transition-transform duration-500 ease-out group-hover:scale-110"
                     >
                         <Image
                             src={img}
                             alt={alt}
-                            fill
-                            className="object-cover"
+                            height={230}
+                            className="object-cover h-[230px] w-full"
                             loading="lazy"
-                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            sizes="(max-width:768px) 100vw,50vw"
                         />
                     </div>
 

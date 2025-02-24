@@ -2,7 +2,7 @@ import getLeads from "@/lib/getLeadById";
 import SearchState from "@/Shared/SearchState";
 import Image from "next/image";
 import Link from "next/link";
-import image from '../../public/assets/exclusive-janitorial-leads.webp'
+import image from '../../public/assets/exclusive-commercial-cleaning-leads.webp'
 import { capitalizeFirstLetter } from "@/app/(main)/search/[...leads]/page";
 
 const LeadPage = async ({ Lead, params }) => {
@@ -28,13 +28,19 @@ const LeadPage = async ({ Lead, params }) => {
 
     return (
         <div>
-            <div className="relative h-[500px] flex flex-col">
+            {/* <div className="relative h-[500px] flex flex-col">
                 <Image src={image} className="object-cover h-full absolute inset-0 z-20" alt={`${leadName} janitorial leads for cleaning businesses – High-quality commercial cleaning leads`} />
                 <div className='absolute inset-0 bg-black opacity-30 z-30'></div>
                 <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
                     <h2 className='2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:banner-text xl:banner-text text-white'>
                         Boost Your Business with <span className='text-green-600'>{leadName} Janitorial & Commercial Cleaning Leads</span>
                     </h2>
+                </div>
+            </div> */}
+            <div className="relative h-[350px]">
+                <Image src={image} sizes='100vw' fill className="object-cover object-center" alt={`${leadName} janitorial leads for cleaning businesses – High-quality commercial cleaning leads`} />
+                <div>
+                    
                 </div>
             </div>
             <div className="py-20 px-10">
