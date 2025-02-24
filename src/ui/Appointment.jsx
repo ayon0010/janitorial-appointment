@@ -99,6 +99,7 @@ const Appointment = () => {
 
                     {/* Service Selection */}
                     <div className="w-full">
+                        <label for="service" className="sr-only">Choose a Service</label>
                         <select
                             {...register('service', { required: 'Please select a service' })}
                             className="select select-bordered rounded-none w-full bg-[#645CFF] py-3 book-appointment text-white"

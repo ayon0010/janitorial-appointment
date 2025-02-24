@@ -79,7 +79,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" >
       <body className={`${inter.className}`}>
-        <main className='overflow-hidden min-h-screen max-w-[1920px] mx-auto bg-[#EEEFF1]'>
+        <main className='overflow-hidden min-h-screen max-w-[1920px] mx-auto bg-[#FFFFFF]'>
           <AuthProvider>
             <QueryProvider>
               <ChatProvider>
