@@ -16,7 +16,7 @@ const InputField = ({ label, type, placeholder, register, name, errors, disabled
                         {...register(name, {
                             required: !noRequired ? `${label} is required` : false
                         })}
-                        className={`input input-bordered rounded-[10px] bg-white border py-2 ${errors[name] ? 'border-red-500' : 'border-[#5C6272]'}`}
+                        className={`input input-bordered rounded-[10px] 2xl:h-auto xl:h-auto h-[60px] bg-white border py-2 ${errors[name] ? 'border-red-500' : 'border-[#5C6272]'}`}
                     />
                 </div>
                 {errors[name] && <p className="text-red-500 text-sm mt-2">{errors[name]?.message}</p>}

@@ -261,7 +261,7 @@ const AppointmentForm = () => {
                                     errors={errors}
                                 />
                                 <InputField
-                                    label={'Your monthy minimum Frequency for cleaning.*'}
+                                    label={'Monthly minimum cleaning frequency.*'}
                                     placeholder={'frequency'}
                                     type={'text'}
                                     register={register}
@@ -269,7 +269,7 @@ const AppointmentForm = () => {
                                     errors={errors}
                                 />
                                 <InputField
-                                    label={'How much do you charge for 1000 Square Feet? *'}
+                                    label={'Charge for 1000 Square Feet? *'}
                                     placeholder={'charged for 1000 Square Feet'}
                                     type={'text'}
                                     register={register}
@@ -285,7 +285,7 @@ const AppointmentForm = () => {
                                     errors={errors}
                                 />
                                 <InputField
-                                    label={'Is there any DNC list that you dont want us to call?*'}
+                                    label={'Is there any DNC list not to call?*'}
                                     placeholder={'DNC list'}
                                     type={'text'}
                                     register={register}
