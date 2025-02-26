@@ -8,6 +8,26 @@ import SectionTitles from "./SectionTitles";
 import { gilroy } from "@/app/(main)/layout";
 import ContactInfo from "./ContactInfo";
 
+export const AppointmentButton = ({ leadName }) => {
+    return (
+        <div>
+            <Link href={'/book-an-appointment'} className="bg-black p-2 fixed z-[60] top-[80px] w-full h-[90px] 2xl:hidden xl:hidden block">
+                <button className={`w-full h-full text-lg hover:bg-primary btn border-none hover:text-white text-white border border-black bg-[#14516D] font-normal rounded-md ${gilroy.className}`}>
+                    Get Appointment
+                </button>
+            </Link>
+            <div className="relative h-[350px]">
+                <Image priority src={image} sizes='100vw' fill className="object-cover object-center z-30" alt={`${leadName} janitorial leads for cleaning businesses – High-quality commercial cleaning leads`} />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] z-40">
+                    <LeadAppointment />
+                    <h2 className='text-2xl font-semibold 2xl:hidden xl:hidden block text-white'>Boost Your Business with <span className='text-green-600'>{leadName} Janitorial & Commercial Cleaning Leads</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 const LeadPage = async ({ Lead, params }) => {
     console.log(params);
 
@@ -29,19 +49,7 @@ const LeadPage = async ({ Lead, params }) => {
 
     return (
         <div>
-            <Link href={'/book-an-appointment'} className="bg-black p-2 fixed z-[60] top-[80px] w-full h-[90px] 2xl:hidden xl:hidden block">
-                <button className={`w-full h-full text-lg hover:bg-primary btn border-none hover:text-white text-white border border-black bg-[#14516D] font-normal rounded-md ${gilroy.className}`}>
-                    Get Appointment
-                </button>
-            </Link>
-            <div className="relative h-[350px]">
-                <Image priority src={image} sizes='100vw' fill className="object-cover object-center z-30" alt={`${leadName} janitorial leads for cleaning businesses – High-quality commercial cleaning leads`} />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] z-40">
-                    <LeadAppointment />
-                    <h2 className='text-2xl font-semibold 2xl:hidden xl:hidden block text-white'>Boost Your Business with <span className='text-green-600'>{leadName} Janitorial & Commercial Cleaning Leads</span>
-                    </h2>
-                </div>
-            </div>
+            <AppointmentButton leadName={leadName} />
             <div className="ml-8 mt-10 bg-[#F8FAFB] w-fit px-4 py-2 rounded-[50px]">
                 <h1 className={`${gilroy.className}`}>Home  {'>'}  {capitalizeFirstLetter(Lead)}</h1>
             </div>
