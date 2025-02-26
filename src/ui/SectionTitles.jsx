@@ -1,3 +1,4 @@
+'use server'
 import { gilroy } from "@/app/(main)/layout";
 
 const SectionTitles = ({ heading, subHeading }) => {
