@@ -1,5 +1,5 @@
-'use server'
-import { gilroy } from "@/app/(main)/layout";
+import { gilroy } from "@/Shared/gilroy";
+
 
 const SectionTitles = ({ heading, subHeading }) => {
     return (
