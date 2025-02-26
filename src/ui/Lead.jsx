@@ -7,7 +7,6 @@ import LeadAppointment from "@/Shared/LeadAppointment";
 import SectionTitles from "./SectionTitles";
 import { gilroy } from "@/app/(main)/layout";
 import ContactInfo from "./ContactInfo";
-import Data from "./Data";
 
 const LeadPage = async ({ Lead, params }) => {
     console.log(params);
