@@ -1,9 +1,13 @@
 import getLeads from "@/lib/getLeadById";
-import SearchState from "@/Shared/SearchState";
 import Image from "next/image";
 import Link from "next/link";
 import image from '../../public/assets/exclusive-commercial-cleaning-leads.webp'
 import { capitalizeFirstLetter } from "@/app/(main)/search/[...leads]/page";
+import LeadAppointment from "@/Shared/LeadAppointment";
+import SectionTitles from "./SectionTitles";
+import { gilroy } from "@/app/(main)/layout";
+import ContactInfo from "./ContactInfo";
+import Data from "./Data";
 
 const LeadPage = async ({ Lead, params }) => {
     console.log(params);
@@ -24,43 +28,46 @@ const LeadPage = async ({ Lead, params }) => {
 
     const leadName = capitalizeFirstLetter(Lead.split('-')[0]);
 
-
-
     return (
         <div>
-            {/* <div className="relative h-[500px] flex flex-col">
-                <Image src={image} className="object-cover h-full absolute inset-0 z-20" alt={`${leadName} janitorial leads for cleaning businesses – High-quality commercial cleaning leads`} />
-                <div className='absolute inset-0 bg-black opacity-30 z-30'></div>
-                <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
-                    <h2 className='2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:banner-text xl:banner-text text-white'>
-                        Boost Your Business with <span className='text-green-600'>{leadName} Janitorial & Commercial Cleaning Leads</span>
+            <Link href={'/book-an-appointment'} className="bg-black p-2 fixed z-[60] top-[80px] w-full h-[90px] 2xl:hidden xl:hidden block">
+                <button className={`w-full h-full text-lg hover:bg-primary btn border-none hover:text-white text-white border border-black bg-[#14516D] font-normal rounded-md ${gilroy.className}`}>
+                    Get Appointment
+                </button>
+            </Link>
+            <div className="relative h-[350px]">
+                <Image priority src={image} sizes='100vw' fill className="object-cover object-center z-30" alt={`${leadName} janitorial leads for cleaning businesses – High-quality commercial cleaning leads`} />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] z-40">
+                    <LeadAppointment />
+                    <h2 className='text-2xl font-semibold 2xl:hidden xl:hidden block text-white'>Boost Your Business with <span className='text-green-600'>{leadName} Janitorial & Commercial Cleaning Leads</span>
                     </h2>
                 </div>
-            </div> */}
-            <div className="relative h-[350px]">
-                <Image src={image} sizes='100vw' fill className="object-cover object-center" alt={`${leadName} janitorial leads for cleaning businesses – High-quality commercial cleaning leads`} />
-                <div>
-                    
+            </div>
+            <div className="ml-8 mt-10 bg-[#F8FAFB] w-fit px-4 py-2 rounded-[50px]">
+                <h1 className={`${gilroy.className}`}>Home  {'>'}  {capitalizeFirstLetter(Lead)}</h1>
+            </div>
+            <div className="2xl:py-20 xl:py-20 py-10 px-10">
+                <SectionTitles heading={'Choose your states'} />
+                {/* <SearchState data={data} leads={Lead} /> */}
+                <ul className="2xl:w-3/4 xl:w-3/4 w-full grid 2xl:grid-cols-6 xl:grid-cols-5 grid-cols-2 mx-auto mt-10 items-center justify-center gap-y-6">
+                    {selectedStates?.map((state) => (
+                        <Link key={state} href={`${Lead}/${state}`}>
+                            <li className={`bg-state text-white text-xl text-center py-2 border hover:underline transition-all duration-100 border-white ${gilroy.className} font-normal`}>{state}</li>
+                        </Link>
+                    ))}
+                </ul>
+                <div className="2xl:w-3/4 xl:w-3/4 w-full mx-auto 2xl:my-16 xl:my-16 my-10">
+                    <SectionTitles heading={'Get Exclusive Commercial Cleaning leads in all over the USA'} />
+                    <p className={`text-center ${gilroy.className} my-10`}>
+                        Located at the heart of the industry, we specialize in commercial cleaning leads to help businesses grow. Our janitorial appointment-setting service ensures you connect with high-quality clients actively seeking cleaning services. With our expertise, you can get janitorial appointments with decision-makers who need reliable and professional cleaning solutions. Our dedicated team works around the clock to generate exclusive leads, schedule meetings, and maximize your business potential. Whether you're a startup or an established cleaning company, we provide tailored solutions to keep your pipeline full of qualified prospects.
+                    </p>
+                </div>
+                <div className="mt-10">
+                    <SectionTitles heading={'Contact Us'} />
                 </div>
             </div>
-            <div className="py-20 px-10">
-                <SearchState data={data} leads={Lead} />
-                <div className="2xl:w-3/4 xl:w-3/4 w-full mx-auto mt-10">
-                    <ul>
-                        {selectedStates?.map((state) => (
-                            <Link key={state} href={`${Lead}/${state}`}>
-                                <li className="p-3 hover:bg-[#F7F8F9] border-b-2 rounded">
-                                    <div>
-                                        <h3 className="text-base font-medium">{state}</h3>
-                                        <p className="text-[#64748B] font-semibold text-xs mt-2">
-                                            {filteredData(state) || 0}
-                                        </p>
-                                    </div>
-                                </li>
-                            </Link>
-                        ))}
-                    </ul>
-                </div>
+            <div className="mb-10">
+                <ContactInfo />
             </div>
         </div>
     );

@@ -20,6 +20,8 @@ module.exports = {
         'orange-light': '#FFB683',
         'yellow': '#FFF900',
         'deep-blue': '#0B286D',
+        'state': '#14516D'
+
       },
     },
   },

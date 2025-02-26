@@ -1,4 +1,5 @@
 import { Inter, Nunito, } from 'next/font/google'
+import localFont from 'next/font/local'
 import '../globals.css'
 import AuthProvider from '@/Providers/AuthProvider'
 import QueryProvider from '@/Providers/QueryProvider'
@@ -20,6 +21,18 @@ export const nunito = Nunito({
   weight: ['400', '500', '600', '900'],
   variable: '--font-nunito',
 })
+
+export const gilroy = localFont({
+  src: [
+    {
+      path: '../../../public/font/gilroy-regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+})
+
+
 
 export const metadata = {
   title: "Janitorial Appointments - Commercial Cleaning Leads",

@@ -1,10 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaPhone, FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa';
 import image from '../../public/assets/contact-us-janitorial-appointments.jpg';
 import fb from '@/../public/assets/Frame (8).svg';
 import linked from '@/../public/assets/Frame (11).svg';
 import twitt from '@/../public/assets/Frame (12).svg';
+import { gilroy } from '@/app/(main)/layout';
+import FaEmail from '@/icons/FaEmail';
 
 const ContactInfo = () => {
     const message = encodeURIComponent('Hello! I would like to inquire about your commercial cleaning leads.');
@@ -17,10 +19,18 @@ const ContactInfo = () => {
 
             <div className="space-y-8">
                 <div className='flex items-center justify-center flex-row-reverse gap-10'>
-                    <FaPhone size={'4rem'} color='#006600' />
+                    <FaEmail size={'4rem'} color='#006600' />
                     <h1 className='text-[#006600] 2xl:text-5xl xl:text-3xl text-2xl font-semibold'>Contact Us</h1>
                 </div>
-                <p className="text-3xl font-semibold text-center">+8801726108060</p>
+                <p className='w-fit mx-auto'>
+                    <a
+                        href="mailto:contact@janitorialappointment.com"
+                        aria-label="Send an email to contact@janitorialappointment.com"
+                        className={`font-normal text-center text-xl ${gilroy.className}`}
+                    >
+                        contact@janitorialappointment.com
+                    </a>
+                </p>
                 <div>
                     <div className="grid 2xl:grid-cols-4 xl:grid-cols-4 grid-cols-2 2xl:gap-8 xl:gap-8 gap-6">
                         <Link href="https://www.facebook.com/commercialcleaningleads/" target="_blank"
