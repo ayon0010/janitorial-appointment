@@ -1,5 +1,3 @@
-'use client'
-
 import localFont from "next/font/local"
 
 export const gilroy = localFont({
