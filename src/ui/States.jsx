@@ -1,7 +1,8 @@
 import getLeads from "@/lib/getLeadById";
 import LeadsByCity from "@/ui/LeadsByCity";
 import { AppointmentButton } from "./Lead";
-
+import { gilroy } from "@/app/(main)/layout";
+import image from '../../public/assets/exclusive-commercial-cleaning-leads-1.webp'
 
 function capitalizeFirstLetter(string) {
     if (!string) return '';
@@ -16,7 +17,10 @@ const States = async ({ States }) => {
 
     return (
         <>
-            <AppointmentButton />
+            <AppointmentButton image={image} />
+            <div className="ml-8 mt-10 bg-[#F8FAFB] w-fit px-4 py-2 rounded-[50px]">
+                <h1 className={`${gilroy.className}`}>Home  {'>'}  {capitalizeFirstLetter(leads)}  {'>'}  {capitalizeFirstLetter(states)}</h1>
+            </div>
             <div className="py-20 px-6">
                 <div>
                     <div className="flex 2xl:flex-row xl:flex-row flex-col items-center gap-4 justify-center">

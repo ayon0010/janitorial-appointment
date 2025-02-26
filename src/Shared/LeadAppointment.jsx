@@ -3,6 +3,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import { useRouter } from 'next/navigation';
+import { gilroy } from './gilroy';
 
 const LeadAppointment = () => {
     const {
@@ -89,7 +90,7 @@ const LeadAppointment = () => {
                     <select
                         aria-label="Choose a Service"
                         {...register('service', { required: 'Please select a service' })}
-                        className="select rounded-tr-lg rounded-br-lg rounded-tl-none rounded-bl-none lead text-2xl focus:outline-none focus:ring-0 border-none w-full py-3 text-black h-[100px]"
+                        className={`select rounded-tr-lg rounded-br-lg rounded-tl-none rounded-bl-none lead text-2xl focus:outline-none focus:ring-0 border-none w-full py-3 text-black h-[100px] ${gilroy.className}`}
                     >
                         <option value="" disabled defaultValue={'Choose Type'} selected>
                             Choose Type
@@ -101,7 +102,7 @@ const LeadAppointment = () => {
                         <p className="text-red-500 text-sm mt-1">{errors.service.message}</p>
                     )}
                 </div>
-                <button type='submit' className="ml-2 h-[100px] hover:bg-primary btn border-none hover:text-white text-white border border-black bg-[#20DFE3]">
+                <button type='submit' className={`ml-2 h-[100px] hover:bg-primary text-xl btn border-none hover:text-white text-white border border-black bg-[#20DFE3] ${gilroy.className}`}>
                     Get Appointment
                 </button>
             </div>

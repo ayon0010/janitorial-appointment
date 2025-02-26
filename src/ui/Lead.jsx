@@ -8,7 +8,7 @@ import SectionTitles from "./SectionTitles";
 import { gilroy } from "@/app/(main)/layout";
 import ContactInfo from "./ContactInfo";
 
-export const AppointmentButton = ({ leadName }) => {
+export const AppointmentButton = ({ leadName, image }) => {
     return (
         <div>
             <Link href={'/book-an-appointment'} className="bg-black p-2 fixed z-[60] top-[80px] w-full h-[90px] 2xl:hidden xl:hidden block">
@@ -49,7 +49,7 @@ const LeadPage = async ({ Lead, params }) => {
 
     return (
         <div>
-            <AppointmentButton leadName={leadName} />
+            <AppointmentButton image={image} leadName={leadName} />
             <div className="ml-8 mt-10 bg-[#F8FAFB] w-fit px-4 py-2 rounded-[50px]">
                 <h1 className={`${gilroy.className}`}>Home  {'>'}  {capitalizeFirstLetter(Lead)}</h1>
             </div>
@@ -69,11 +69,9 @@ const LeadPage = async ({ Lead, params }) => {
                         Located at the heart of the industry, we specialize in commercial cleaning leads to help businesses grow. Our janitorial appointment-setting service ensures you connect with high-quality clients actively seeking cleaning services. With our expertise, you can get janitorial appointments with decision-makers who need reliable and professional cleaning solutions. Our dedicated team works around the clock to generate exclusive leads, schedule meetings, and maximize your business potential. Whether you're a startup or an established cleaning company, we provide tailored solutions to keep your pipeline full of qualified prospects.
                     </p>
                 </div>
-                <div className="mt-10">
-                    <SectionTitles heading={'Contact Us'} />
-                </div>
             </div>
             <div className="mb-10">
+                <SectionTitles heading={'Contact Us'} />
                 <ContactInfo />
             </div>
         </div>
