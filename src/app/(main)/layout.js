@@ -6,7 +6,8 @@ import QueryProvider from '@/Providers/QueryProvider'
 import Footer from '@/Shared/Footer'
 import ChatProvider from '@/Providers/ChatProvider'
 import Navbar from '@/Shared/Navbar'
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 export const inter = Inter({
   subsets: ['latin'],
@@ -105,6 +106,8 @@ export default function RootLayout({ children }) {
             </QueryProvider>
           </AuthProvider>
         </main>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
