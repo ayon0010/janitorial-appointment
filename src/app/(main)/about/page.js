@@ -104,7 +104,6 @@ const page = () => {
                     </div>
                 </div>
             </div>
-
             <div className="2xl:py-24 xl:py-16 py-10 2xl:px-40 xl:px-28 px-10">
                 <div className="grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 xl:gap-8 2xl:gap-12">
                     <h1 className="xl:text-2xl 2xl:text-3xl text-2xl text-black font-medium inter">Transforming Dreams into <br />Reality</h1>
