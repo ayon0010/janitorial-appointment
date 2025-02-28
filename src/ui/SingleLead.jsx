@@ -5,6 +5,7 @@ import BuyLeadMessage from "@/ui/BuyLeadMessage";
 import getLeads from "@/lib/getLeadById";
 import DotClient from "./DotClient";
 import FireClient from "./FireClient";
+import { gilroy } from "@/app/(main)/layout";
 
 const SingleLead = async ({ Lead }) => {
     const [leads, states, id] = Lead;
@@ -31,7 +32,7 @@ const SingleLead = async ({ Lead }) => {
                         </div>
                 }
                 <div className="flex justify-center items-end">
-                    <h3 className="inter text-7xl font-black text-center mt-6">
+                    <h3 className={`2xl:text-7xl xl:text-5xl text-3xl text-center mt-6 ${gilroy.className}`}>
                         {data?.scope} <span className="inter text-3xl text-secondary font-semibold">-{data?.frequency}</span>
                     </h3>
                     <FireClient />
