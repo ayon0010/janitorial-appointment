@@ -15,7 +15,7 @@ const SingleLead = async ({ Lead }) => {
     const isDisabled = new Date(appointmentDate) > currentDate;
 
     return (
-        <div className="pt-20 pb-20 px-10 bg-white">
+        <div className={`pt-20 pb-20 px-10 bg-white ${gilroy.className}`}>
             <div>
                 {
                     data?.sold ?
@@ -32,7 +32,7 @@ const SingleLead = async ({ Lead }) => {
                         </div>
                 }
                 <div className="flex justify-center items-end">
-                    <h3 className={`2xl:text-7xl xl:text-5xl text-3xl text-center mt-6 ${gilroy.className}`}>
+                    <h3 className={`2xl:text-7xl xl:text-5xl text-3xl text-center mt-6`}>
                         {data?.scope} <span className="inter text-3xl text-secondary font-semibold">-{data?.frequency}</span>
                     </h3>
                     <FireClient />
