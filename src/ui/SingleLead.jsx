@@ -32,8 +32,8 @@ const SingleLead = async ({ Lead }) => {
                         </div>
                 }
                 <div className="flex justify-center items-end">
-                    <h3 className={`2xl:text-7xl xl:text-5xl text-3xl text-center mt-6`}>
-                        {data?.scope} <span className="inter text-3xl text-secondary font-semibold">-{data?.frequency}</span>
+                    <h3 className={`2xl:text-7xl xl:text-5xl text-3xl text-center mt-6 ${gilroy.className}`}>
+                        {data?.scope} <span className={`2xl:text-3xl xl:text-2xl text-xl text-secondary font-semibold ${gilroy.className}`}>-{data?.frequency}</span>
                     </h3>
                     <FireClient />
                 </div>
