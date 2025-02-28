@@ -8,6 +8,7 @@ import ChatProvider from '@/Providers/ChatProvider'
 import Navbar from '@/Shared/Navbar'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
+import Head from 'next/head'
 
 export const inter = Inter({
   subsets: ['latin'],
@@ -93,6 +94,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" >
       <body className={`${inter.className}`}>
+        <Head>
+          <title>{metadata.title}</title>
+          <meta name="description" content={metadata.description} />
+          <meta name="keywords" content={metadata.keywords} />
+          <meta name="robots" content="index, follow" />
+          <link rel="canonical" href="https://www.janitorialappointment.com" />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: metadata.other["application/ld+json"] }}
+          />
+        </Head>
         <main className='overflow-hidden min-h-screen max-w-[1920px] mx-auto bg-[#FFFFFF]'>
           <AuthProvider>
             <QueryProvider>
