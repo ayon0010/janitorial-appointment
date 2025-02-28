@@ -98,7 +98,7 @@ export default function RootLayout({ children }) {
             <QueryProvider>
               <ChatProvider>
                 <Navbar />
-                <div className='2xl:pt-[100px] xl:pt-[100px] pt-[80px]'>
+                <div className='2xl:pt-[100px] xl:pt-[100px] pt-[80px] min-h-[400px]'>
                   {children}
                 </div>
                 <Footer />
