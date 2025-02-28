@@ -60,8 +60,8 @@ const SingleLead = async ({ Lead }) => {
 
 const DetailCard = ({ title, content }) => (
     <div className="bg-white p-12 border-4 border-[#F4F4F5] rounded-[24px]">
-        <h4 className="text-[#246532] poppins text-xs font-black px-4 py-2 w-fit bg-[#DDFFE4] rounded-[100px] mx-auto">{title}</h4>
-        <p className="text-[#72777A] inter text-sm font-medium text-center mt-4">{content}</p>
+        <h4 className="text-[#246532] poppins text-xs  px-4 py-2 w-fit bg-[#DDFFE4] rounded-[100px] mx-auto">{title}</h4>
+        <p className="text-sm font-medium text-center mt-4">{content}</p>
     </div>
 );
 
