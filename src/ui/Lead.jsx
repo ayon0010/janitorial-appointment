@@ -58,9 +58,12 @@ const LeadPage = async ({ Lead, params }) => {
                 {/* <SearchState data={data} leads={Lead} /> */}
                 <ul className="2xl:w-3/4 xl:w-3/4 w-full grid 2xl:grid-cols-6 xl:grid-cols-5 grid-cols-2 mx-auto mt-10 items-center justify-center gap-y-6">
                     {selectedStates?.map((state) => (
-                        <Link key={state} href={`${Lead}/${state}`}>
-                            <li className={`bg-state text-white text-xl text-center py-2 border hover:underline transition-all duration-100 border-white ${gilroy.className} font-normal`}>{state}</li>
-                        </Link>
+                        <li key={state} className={`bg-state text-white text-xl text-center py-2 border hover:underline transition-all duration-100 border-white ${gilroy.className} font-normal`}>
+                            <Link href={`${Lead}/${state}`}>
+                                {state}
+                            </Link>
+                        </li>
+
                     ))}
                 </ul>
                 <div className="2xl:w-3/4 xl:w-3/4 w-full mx-auto 2xl:my-16 xl:my-16 my-10">

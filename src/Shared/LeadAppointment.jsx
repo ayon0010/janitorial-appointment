@@ -102,7 +102,7 @@ const LeadAppointment = () => {
                         <p className="text-red-500 text-sm mt-1">{errors.service.message}</p>
                     )}
                 </div>
-                <button type='submit' className={`ml-2 h-[100px] hover:bg-primary text-xl btn border-none hover:text-white text-white border border-black bg-[#20DFE3] ${gilroy.className}`}>
+                <button type='submit' className={`ml-2 h-[100px] hover:bg-primary text-xl btn border-none hover:text-white text-white border border-black bg-orange ${gilroy.className}`}>
                     Get Appointment
                 </button>
             </div>
