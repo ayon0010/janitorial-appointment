@@ -105,7 +105,7 @@ export default function RootLayout({ children }) {
             dangerouslySetInnerHTML={{ __html: metadata.other["application/ld+json"] }}
           />
         </Head>
-        <main className='overflow-hidden min-h-screen max-w-[1920px] mx-auto bg-[#FFFFFF]'>
+        <main className={`overflow-hidden min-h-screen max-w-[1920px] mx-auto bg-[#FFFFFF] ${gilroy.className}`}>
           <AuthProvider>
             <QueryProvider>
               <ChatProvider>
