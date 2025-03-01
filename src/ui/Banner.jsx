@@ -31,7 +31,7 @@ export const DynamicBanner = ({
     isTertiaryButton,
     cover
 }) => {
-    const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(null);
     useEffect(() => {
         // Check screen width on mount & window resize
         const handleResize = () => setIsMobile(window.innerWidth < 786);
@@ -39,6 +39,7 @@ export const DynamicBanner = ({
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
+    if(isMobile === null) return null;
     return (
         <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto w-full">
             {/* Background Images */}
