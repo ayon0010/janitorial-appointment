@@ -46,6 +46,7 @@ const page = () => {
                     className="w-full h-full 2xl:object-fill xl:object-fill object-cover"
                     src={aboutImage}
                     alt="About us - Learn more about our cleaning services and expertise"
+                    priority
                 />
                 <div className="absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-40">
                     <h2 className="2xl:text-6xl xl:text-5xl text-3xl font-medium text-white text-center ">The Path to Success</h2>

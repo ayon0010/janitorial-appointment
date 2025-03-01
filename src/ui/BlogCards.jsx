@@ -9,9 +9,9 @@ const BlogCards = ({ blog }) => {
     return (
         <div className="card p-3 shadow-xl max-h-[450px]">
             <figure>
-                <Image layout='responsive' src={urlFor(blog.titleImage).url()} alt={blog.title || blog?.currentSlug} width={950} height={665} className='w-full h-[150px]' />
+                <Image layout='responsive' priority src={urlFor(blog.titleImage).url()} alt={blog.title || blog?.currentSlug} width={950} height={665} className='w-full h-[150px]' />
             </figure>
-            <div className="card-body p-0 mt-3">
+            <div className="card-body p-0 mt-3 h-full flex flex-col">
                 <h2 className="card-title inter text-base font-semibold">{blog?.title}</h2>
                 <hr className='h-[2px]' />
                 <div className='flex items-center gap-2'>
