@@ -17,8 +17,7 @@ import image3 from '@/../public/assets/telemarketing-for-janitorial-campaign.web
 import image4 from '@/../public/assets/commercial-cleaning-leads-usa.webp'
 import image5 from '@/../public/assets/web-and-app-services.webp'
 import image5mbl from '../../public/assets/web-and-app-services-mobile.webp'
-import Head from 'next/head';
-
+import { useEffect, useState } from 'react';
 
 export const DynamicBanner = ({
     desktopImage,
@@ -32,41 +31,38 @@ export const DynamicBanner = ({
     isTertiaryButton,
     cover
 }) => {
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        // Check screen width on mount & window resize
+        const handleResize = () => setIsMobile(window.innerWidth < 786);
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
     return (
         <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto w-full">
             {/* Background Images */}
             <div className="absolute inset-0 z-20 h-full">
-                {/* <Image
-                    src={desktopImage}
-                    alt="Janitorial appointment and commercial cleaning leads to grow your business"
-                    fill
-                    priority // Loads the image faster since it's above the fold
-                    className={`hidden xl:block 2xl:block ${cover ? 'object-cover' : ''}`}
-                    sizes="(min-width:786px) 100vw"
-                />
-                <Image
-                    src={mobileImage}
-                    alt="Mobile view showcasing janitorial appointments and commercial cleaning leads for business growth"
-                    width={430}
-                    height={600}
-                    className="2xl:hidden xl:hidden block object-cover"
-                    priority
-                    sizes="(max-width:786px) 100vw"
-                /> */}
-                <picture>
-                    {/* Load mobile image for small screens */}
-                    <source srcSet={mobileImage} media="(max-width: 786px)" />
-                    {/* Load desktop image for larger screens */}
-                    <source srcSet={desktopImage} media="(min-width: 787px)" />
+                {isMobile ? (
                     <Image
-                        src={desktopImage} // Fallback in case <picture> doesn't work
-                        alt="Janitorial appointment and commercial cleaning leads to grow your business"
+                        src={mobileImage}
+                        alt="Mobile janitorial appointments"
+                        width={430}
+                        height={600}
+                        className="object-cover"
+                        priority
+                        sizes="(max-width: 786px) 100vw"
+                    />
+                ) : (
+                    <Image
+                        src={desktopImage}
+                        alt="Janitorial appointment leads"
                         fill
                         priority
                         className="object-cover"
-                        sizes="(max-width:786px) 100vw,100vw"
+                        sizes="(min-width: 787px) 100vw"
                     />
-                </picture>
+                )}
             </div>
 
             {/* Overlays */}
