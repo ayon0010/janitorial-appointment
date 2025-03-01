@@ -63,7 +63,6 @@ const LeadPage = async ({ Lead, params }) => {
                                 {state}
                             </Link>
                         </li>
-
                     ))}
                 </ul>
                 <div className="2xl:w-3/4 xl:w-3/4 w-full mx-auto 2xl:my-16 xl:my-16 my-10">

@@ -34,8 +34,6 @@ const AppointmentForm = () => {
         }
     }, []);
 
-    console.log(email, name);
-
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm({
         defaultValues: {
             companyName: name,

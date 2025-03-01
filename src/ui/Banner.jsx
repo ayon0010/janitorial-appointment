@@ -36,7 +36,7 @@ export const DynamicBanner = ({
         <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto w-full">
             {/* Background Images */}
             <div className="absolute inset-0 z-20 h-full">
-                <Image
+                {/* <Image
                     src={desktopImage}
                     alt="Janitorial appointment and commercial cleaning leads to grow your business"
                     fill
@@ -47,11 +47,26 @@ export const DynamicBanner = ({
                 <Image
                     src={mobileImage}
                     alt="Mobile view showcasing janitorial appointments and commercial cleaning leads for business growth"
-                    fill
+                    width={430}
+                    height={600}
                     className="2xl:hidden xl:hidden block object-cover"
                     priority
                     sizes="(max-width:786px) 100vw"
-                />
+                /> */}
+                <picture>
+                    {/* Load mobile image for small screens */}
+                    <source srcSet={mobileImage} media="(max-width: 786px)" />
+                    {/* Load desktop image for larger screens */}
+                    <source srcSet={desktopImage} media="(min-width: 787px)" />
+                    <Image
+                        src={desktopImage} // Fallback in case <picture> doesn't work
+                        alt="Janitorial appointment and commercial cleaning leads to grow your business"
+                        fill
+                        priority
+                        className="object-cover"
+                        sizes="(max-width:786px) 100vw,100vw"
+                    />
+                </picture>
             </div>
 
             {/* Overlays */}
@@ -88,17 +103,6 @@ export const DynamicBanner = ({
 const Banner = () => {
     return (
         <>
-            <Head>
-                {/* Preload images */}
-                <link rel="preload" href="/assets/janitorial-appointments.webp" as="image" />
-                <link rel="preload" href="/assets/janitorial-appointments-mobile.webp" as="image" />
-                <link rel="preload" href="/assets/book-an-janitorial-appointments.webp" as="image" />
-                <link rel="preload" href="/assets/book-an-janitorial-appointments-mobile.webp" as="image" />
-                <link rel="preload" href="/assets/telemarketing-for-janitorial-campaign.webp" as="image" />
-                <link rel="preload" href="/assets/commercial-cleaning-leads-usa.webp" as="image" />
-                <link rel="preload" href="/assets/web-and-app-services.webp" as="image" />
-                <link rel="preload" href="/assets/web-and-app-services-mobile.webp" as="image" />
-            </Head>
             <div className='relative z-30'>
                 <Swiper
                     navigation={true}
