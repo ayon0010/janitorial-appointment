@@ -63,7 +63,7 @@ const page = () => {
                     <div className='h-full 2xl:block xl:block hidden'>
                         <Image
                             src={contact}
-                            loading='lazy'
+                            priority
                             className="w-full max-h-[680px] object-contain"
                             alt="Contact us for professional cleaning, telemarketing, and business support services"
                         />
