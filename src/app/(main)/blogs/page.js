@@ -29,7 +29,7 @@ export const metadata = {
 };
 
 
-export const revalidate = 2;
+export const revalidate = 1;
 
 
 export const blogData = async () => {
