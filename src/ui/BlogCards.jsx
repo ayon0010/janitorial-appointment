@@ -8,8 +8,8 @@ const BlogCards = ({ blog }) => {
     const contentWithoutHeadline = blog.content.filter((block) => block._type !== 'heading');
     return (
         <div className="card p-3 shadow-xl max-h-[450px]">
-            <figure>
-                <Image layout='responsive' priority src={urlFor(blog.titleImage).url()} alt={blog.title || blog?.currentSlug} width={950} height={665} sizes="(max-width: 768px) 100vw, 100vw" className='w-full h-[150px]' />
+            <figure className='h-[150px]'>
+                <Image layout='responsive' priority src={urlFor(blog.titleImage).url()} alt={blog.title || blog?.currentSlug} width={950} height={665} sizes="(max-width: 768px) 100vw, 100vw" className='w-full h-full' />
             </figure>
             <div className="card-body p-0 mt-3">
                 <h2 className="card-title inter text-base font-semibold">{blog?.title}</h2>
