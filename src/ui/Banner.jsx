@@ -49,7 +49,7 @@ export const DynamicBanner = ({
                         alt="Mobile janitorial appointments"
                         width={430}
                         height={600}
-                        className="object-cover"
+                        className="object-cover h-full w-full"
                         priority
                         sizes="(max-width: 786px) 100vw"
                     />
