@@ -3,7 +3,8 @@ import withBundleAnalyzer from '@next/bundle-analyzer';
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ['cdn.sanity.io', 'i.ibb.co.com', 'i.ibb.co', 'img.youtube.com',], // Allow images from Sanity's CDN
+    domains: ['cdn.sanity.io', 'i.ibb.co.com', 'i.ibb.co', 'img.youtube.com',],
+    formats: ['image/avif', 'image/webp'], // Allow images from Sanity's CDN
   },
 };
 export default withBundleAnalyzer({
