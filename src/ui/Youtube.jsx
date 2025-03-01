@@ -16,7 +16,7 @@ const YoutubeEmbed = ({ videoId, title }) => {
                     <>
                         <Image
                             src={`https://img.youtube.com/vi/AKNRRcI6YCc/hqdefault.jpg`}
-                            alt={title}
+                            alt={'Janitorial Appointments video'}
                             width={503}
                             height={283}
                             className='object-cover aspect-[16/9] block z-20'
