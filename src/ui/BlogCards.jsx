@@ -7,7 +7,7 @@ import { urlFor } from '@/lib/sanity';
 
 const BlogCards = ({ blog }) => {
     return (
-        <div className="card p-3 shadow-xl max-h-[450px] flex flex-col justify-between">
+        <div className="card p-3 shadow-xl min-h-[450px] flex flex-col justify-between">
             {/* Optimized Title Image */}
             <div className="relative h-[150px] w-full">
                 <Image
@@ -18,7 +18,6 @@ const BlogCards = ({ blog }) => {
                     className="object-cover"
                 />
             </div>
-
             <div className="card-body p-0 mt-3">
                 <h2 className="card-title inter text-base font-semibold">{blog?.title}</h2>
                 <hr className="h-[2px]" />
