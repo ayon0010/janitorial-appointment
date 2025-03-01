@@ -45,11 +45,12 @@ const page = () => {
         <div className={`${gilroy.className}`}>
             <div className="relative 2xl:h-auto xl:h-auto h-[430px] z-10">
                 <Image
-                    className="w-full h-full object-cover"
+                    className="w-full h-full 2xl:object-fill xl:object-fill object-cover"
                     src={aboutImage}
                     alt="About us - Learn more about our cleaning services and expertise"
                     priority
-                    fill
+                    width={1920}
+                    height={430}
                     sizes="(max-width: 768px) 100vw, 100vw"
                 />
                 <div className="absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-40">
