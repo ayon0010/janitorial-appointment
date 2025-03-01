@@ -51,7 +51,7 @@ const page = () => {
                     priority
                     width={1920}
                     height={430}
-                    sizes="(max-width: 768px) 100vw, 1920px"
+                    sizes="(max-width: 768px) 100vw, 100vw"
                 />
                 <div className="absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-40">
                     <h2 className="2xl:text-6xl xl:text-5xl text-3xl font-medium text-white text-center ">The Path to Success</h2>
@@ -103,6 +103,7 @@ const page = () => {
                                 width={1920}
                                 height={1080}
                                 loading='lazy'
+                                sizes="(max-width: 768px) 100vw, 100vw"
                             />
                         </div>
                     </div>
@@ -157,7 +158,7 @@ const page = () => {
                             </div>
                         </div>
                     </div>
-                    <Image src={image2} className="rounded-[30px] w-full 2xl:mt-0 xl:mt-0 mt-10" alt="" />
+                    <Image src={image2} className="rounded-[30px] w-full 2xl:mt-0 xl:mt-0 mt-10" alt="About-Us" sizes="(max-width: 768px) 100vw, 100vw" />
                 </div>
             </div>
 
@@ -219,7 +220,7 @@ const page = () => {
                         </div>
                         <p className="text-deep-blue 2xl:text-lg xl:text-base text-center">Their lead generation services are top-tier! We saw a huge boost in qualified leads, and the integration with our CRM was seamless. If you need reliable, high-quality leads, Janitorial Appointments is the way to go.</p>
                         <div className="flex items-start justify-center gap-2">
-                            <Image src={rev1} alt="" />
+                            <Image src={rev1} alt="About-Us" />
                             <div>
                                 <h3 className="2xl:text-lg xl:text-lg text-black font-semibold">Artemisia Udinese</h3>
                                 <p className="text-deep-blue 2xl:text-xs xl:text-xs">Marketing Specialist</p>
@@ -236,7 +237,7 @@ const page = () => {
                         </div>
                         <p className="text-deep-blue 2xl:text-lg xl:text-base text-center">Working with them has been a game-changer. Their web solutions helped us build an online presence that drives sales, and their telemarketing service added a personal touch that boosted customer engagement.</p>
                         <div className="flex items-start justify-center gap-2">
-                            <Image src={rev2} alt="" />
+                            <Image src={rev2} alt="About-Us" />
                             <div>
                                 <h3 className="2xl:text-lg xl:text-lg text-black font-semibold">Artemisia Udinese</h3>
                                 <p className="text-deep-blue 2xl:text-xs xl:text-xs">Marketing Specialist</p>

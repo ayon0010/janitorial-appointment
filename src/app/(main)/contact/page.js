@@ -66,6 +66,7 @@ const page = () => {
                             priority
                             className="w-full max-h-[680px] object-contain"
                             alt="Contact us for professional cleaning, telemarketing, and business support services"
+                            sizes="(max-width:786px) 100vw,100vw"
                         />
                     </div>
                 </div>
@@ -91,7 +92,7 @@ const page = () => {
                             </div>
                         </div>
                         <div className='w-full'>
-                            <Image src={image} className='w-full max-h-[420px]' alt='' />
+                            <Image src={image} className='w-full max-h-[420px]' sizes="(max-width:786px) 100vw,100vw" alt='' />
                         </div>
                         <div className='flex flex-col justify-between'>
                             <div className='2xl:space-y-4 xl:space-y-3 space-y-2 2xl:p-6 xl:p-6 p-4 bg-[#F9F9FB]'>

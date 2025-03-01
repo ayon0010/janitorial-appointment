@@ -41,7 +41,7 @@ export const DynamicBanner = ({
                     fill
                     priority // Loads the image faster since it's above the fold
                     className={`hidden xl:block 2xl:block ${cover ? 'object-cover' : ''}`}
-                    sizes="100vw"
+                    sizes="(min-width:786px) 100vw"
                 />
                 <Image
                     src={mobileImage}
@@ -49,7 +49,7 @@ export const DynamicBanner = ({
                     fill
                     className="2xl:hidden xl:hidden block object-cover"
                     priority
-                    sizes="100vw"
+                    sizes="(max-width:786px) 100vw"
                 />
             </div>
 
@@ -136,7 +136,7 @@ const Banner = () => {
                     <div className="flex flex-col min-h-[600px] max-h-[800px] h-auto relative">
                         <div className='absolute inset-0 z-20 h-full'>
                             <Image src={image4}
-                                sizes="100vw"
+                                sizes="(max-width:786px) 100vw,100vw"
                                 alt='Exclusive Commercial cleaning leads all over the usa'
                                 fill
                                 priority
@@ -163,7 +163,7 @@ const Banner = () => {
                                 priority
                                 alt="Telemarketing services for janitorial appointments and commercial cleaning leads"
                                 fill
-                                sizes="100vw"
+                                sizes="(max-width:786px) 100vw,100vw"
                                 className='h-full'
                             />
                         </div>
