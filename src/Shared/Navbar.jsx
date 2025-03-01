@@ -136,7 +136,7 @@ const Navbar = () => {
                                         height={90}
                                         sizes="(min-width: 1536px) 140px, (min-width: 1280px) 110px"
                                         src={logo}
-                                        alt='janitorial-appointment-logo'
+                                        alt='janitorial-appointments-logo'
                                         priority
                                     />
                                 </div>

@@ -11,7 +11,7 @@ const BlogCards = ({ blog }) => {
             <figure>
                 <Image layout='responsive' priority src={urlFor(blog.titleImage).url()} alt={blog.title || blog?.currentSlug} width={950} height={665} className='w-full h-[150px]' />
             </figure>
-            <div className="card-body p-0 mt-3 h-full flex flex-col">
+            <div className="card-body p-0 mt-3">
                 <h2 className="card-title inter text-base font-semibold">{blog?.title}</h2>
                 <hr className='h-[2px]' />
                 <div className='flex items-center gap-2'>

@@ -10,6 +10,7 @@ import SectionTitles from "@/ui/SectionTitles";
 import { FaStar } from "react-icons/fa";
 import rev1 from '@/../public/assets/close-up-young-successful-man-smiling-camera-standing-casual-outfit-against-blue-background 1.svg'
 import rev2 from '@/../public/assets/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes.svg'
+import YoutubeEmbed from '@/ui/Youtube'
 
 
 export const metadata = {
@@ -89,9 +90,7 @@ const page = () => {
                         </div>
                     </div>
                     <div className="flex flex-col h-full 2xl:mt-0 xl:mt-0 mt-6">
-                        <div className="rounded-lg">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/AKNRRcI6YCc?si=RB_A4ATkNveKns-i" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
+                        <YoutubeEmbed />
                         <div className="mt-6 h-full">
                             <Image
                                 src={image}
