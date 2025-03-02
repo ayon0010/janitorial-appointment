@@ -6,6 +6,7 @@ import getLeads from "@/lib/getLeadById";
 import DotClient from "./DotClient";
 import FireClient from "./FireClient";
 import { gilroy } from "@/app/(main)/layout";
+import Stripe from "./Stripe";
 
 const SingleLead = async ({ Lead }) => {
     const [leads, states, id] = Lead;
@@ -51,7 +52,7 @@ const SingleLead = async ({ Lead }) => {
                 {data?.sold ? (
                     <SoldMessage />
                 ) : (
-                    <BuyLeadMessage isDisabled={!isDisabled} leads={leads} appointmentDate={data?.date} product_Id={id} prize={data?.prize} />
+                    <Stripe isDisabled={!isDisabled} leads={leads} appointmentDate={data?.date} product_Id={id} prize={data?.prize} />
                 )}
             </div>
         </div>
