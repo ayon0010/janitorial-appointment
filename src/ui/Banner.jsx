@@ -39,7 +39,7 @@ export const DynamicBanner = ({
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
-    if(isMobile === null) return null;
+    if (isMobile === null) return null;
     return (
         <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto w-full">
             {/* Background Images */}
@@ -52,7 +52,7 @@ export const DynamicBanner = ({
                         height={600}
                         className="object-cover h-full w-full"
                         priority
-                        sizes="(max-width: 786px) 100vw"
+                        sizes="(max-width: 786px) 400px, 100vw"
                     />
                 ) : (
                     <Image
