@@ -11,22 +11,22 @@ const Footer = () => {
             <div className="flex 2xl:flex-row xl:flex-row flex-col 2xl:justify-between 2xl:items-start xl:justify-between xl:items-start justify-start items-start 2xl:gap-0 xl:gap-0 gap-10">
                 <Logo />
                 <div className="flex md:flex-row flex-col items-center md:gap-7 gap-4">
-                    <p className="text-base font-medium inter">Ready to get started?</p>
+                    <p className="text-base font-medium ">Ready to get started?</p>
                     <ButtonSecondary label={'Get Started'} href={'/register'} userHref={'/register'} />
                 </div>
             </div>
             <div className="flex 2xl:flex-row xl:flex-row flex-col 2xl:justify-between xl:justify-between 2xl:items-end xl:items-end justify-center">
                 <aside>
                     <div className="my-20">
-                        <h1 className="text-2xl inter font-bold">
+                        <h1 className="text-2xl  font-bold">
                             Subscribe to our <br />
                             newsletter
                         </h1>
                         <SubscribeEmail />
                     </div>
                     <div className="flex 2xl:flex-row xl:flex-row flex-col 2xl:items-center xl:items-center items-start 2xl:gap-14 xl:gap-14 gap-6">
-                        <Link href={'/term&condition'} className="font-medium text-base inter">Terms & Conditions</Link>
-                        <Link href={'/privacy'} className="font-medium text-base inter">Privacy Policy</Link>
+                        <Link href={'/term&condition'} className="font-medium text-base ">Terms & Conditions</Link>
+                        <Link href={'/privacy'} className="font-medium text-base ">Privacy Policy</Link>
                     </div>
                 </aside>
                 <aside className="w-fit 2xl:mt-0 xl:mt-0 mt-10">

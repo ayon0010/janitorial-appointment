@@ -51,11 +51,11 @@ const page = () => {
                     priority
                     width={1920}
                     height={430}
-                    sizes="(max-width: 768px) 100vw, 100vw"
+                    sizes="(max-width: 768px) 350px, 100vw"
                 />
                 <div className="absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-40">
                     <h1 className="2xl:text-6xl xl:text-5xl text-3xl font-medium text-white text-center ">The Path to Success</h1>
-                    <p className="text-sm text-white font-medium text-center inter">About Us</p>
+                    <p className="text-sm text-white font-medium text-center ">About Us</p>
                 </div>
             </div>
             <div className="2xl:py-24 xl:py-16 py-10 2xl:px-40 xl:px-28 px-10">
@@ -63,15 +63,15 @@ const page = () => {
                     <div className="flex flex-col h-full justify-between">
                         <div>
                             <h2 className="text-primary text-sm xl:text-sm 2xl:text-lg 2xl:font-medium xl:font-medium font-semibold">Why choose us</h2>
-                            <h2 className="2xl:text-5xl xl:text-4xl text-3xl 2xl:font-medium xl:font-medium font-semibold inter mt-2 ">Creative and Unique <br /> Solutions</h2>
+                            <h2 className="2xl:text-5xl xl:text-4xl text-3xl 2xl:font-medium xl:font-medium font-semibold  mt-2 ">Creative and Unique <br /> Solutions</h2>
                         </div>
                         <div className="flex 2xl:flex-row xl:flex-row flex-col items-start gap-5 py-6 border-b-2 border-[#D6D6D6] mt-6">
                             <div>
                                 <FaTelemarketting />
                             </div>
                             <div className="mt-1">
-                                <h3 className="xl:text-2xl 2xl:text-3xl text-2xl text-black font-medium inter">Telemarketing</h3>
-                                <p className={`ml-[2px] text-deep-blue xl:text-base text-base 2xl:text-xl font-normal inter 2xl:mt-0 xl:mt-0 mt-4 ${gilroy.className}`}>Our expert team delivers tailored telemarketing solutions, ensuring high-quality leads and increased sales.</p>
+                                <h3 className="xl:text-2xl 2xl:text-3xl text-2xl text-black font-medium ">Telemarketing</h3>
+                                <p className={`ml-[2px] text-deep-blue xl:text-base text-base 2xl:text-xl font-normal  2xl:mt-0 xl:mt-0 mt-4 ${gilroy.className}`}>Our expert team delivers tailored telemarketing solutions, ensuring high-quality leads and increased sales.</p>
                             </div>
                         </div>
                         <div className="flex 2xl:flex-row xl:flex-row flex-col items-start gap-5 py-6 border-b-2 border-[#D6D6D6]">
@@ -79,8 +79,8 @@ const page = () => {
                                 <FaLeads />
                             </div>
                             <div className="mt-1">
-                                <h3 className="xl:text-2xl 2xl:text-3xl text-2xl text-black font-medium inter">Lead Generation</h3>
-                                <p className={`ml-[2px] text-deep-blue xl:text-base text-base 2xl:text-xl font-normal inter 2xl:mt-0 xl:mt-0 mt-4 ${gilroy.className}`}>Our expert team delivers tailored telemarketing solutions, ensuring high-quality leads and increased sales.</p>
+                                <h3 className="xl:text-2xl 2xl:text-3xl text-2xl text-black font-medium ">Lead Generation</h3>
+                                <p className={`ml-[2px] text-deep-blue xl:text-base text-base 2xl:text-xl font-normal  2xl:mt-0 xl:mt-0 mt-4 ${gilroy.className}`}>Our expert team delivers tailored telemarketing solutions, ensuring high-quality leads and increased sales.</p>
                             </div>
                         </div>
                         <div className="flex 2xl:flex-row xl:flex-row flex-col items-start gap-5 py-6 border-b-2 border-[#D6D6D6]">
@@ -88,8 +88,8 @@ const page = () => {
                                 <FaWeb />
                             </div>
                             <div className="mt-1">
-                                <h3 className="xl:text-2xl 2xl:text-3xl text-2xl text-black font-medium inter">Your online presence solution</h3>
-                                <p className={`ml-[2px] text-deep-blue xl:text-base text-base 2xl:text-xl font-normal inter 2xl:mt-0 xl:mt-0 mt-4 ${gilroy.className}`}>From web design to SEO, our full-service web solutions help your business thrive online.</p>
+                                <h3 className="xl:text-2xl 2xl:text-3xl text-2xl text-black font-medium ">Your online presence solution</h3>
+                                <p className={`ml-[2px] text-deep-blue xl:text-base text-base 2xl:text-xl font-normal  2xl:mt-0 xl:mt-0 mt-4 ${gilroy.className}`}>From web design to SEO, our full-service web solutions help your business thrive online.</p>
                             </div>
                         </div>
                     </div>
@@ -111,7 +111,7 @@ const page = () => {
             </div>
             <div className="2xl:py-24 xl:py-16 py-10 2xl:px-40 xl:px-28 px-10">
                 <div className="grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 xl:gap-8 2xl:gap-12">
-                    <h3 className="xl:text-2xl 2xl:text-3xl text-2xl text-black font-medium inter">Transforming Dreams into <br />Reality</h3>
+                    <h3 className="xl:text-2xl 2xl:text-3xl text-2xl text-black font-medium ">Transforming Dreams into <br />Reality</h3>
                     <p className="text-deep-blue xl:text-base 2xl:text-xl text-base 2xl:mt-0 xl:mt-0 mt-6">We are dedicated to turning your vision into a tangible success story. With a deep understanding of your goals and our expertise across various industries, we bring innovative solutions that align with your aspirations. Whether you&apos;re a small business or a growing enterprise, we are committed to delivering results that exceed your expectations.</p>
                 </div>
                 <div className="grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 xl:gap-8 2xl:gap-12 2xl:mt-12 xl:mt-10 mt-6">
@@ -125,8 +125,8 @@ const page = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="xl:text-2xl text-2xl 2xl:text-3xl text-black font-medium inter">Tailored Solutions</h3>
-                                    <p className="ml-[2px] mt-1 text-deep-blue xl:text-base 2xl:text-xl text-base font-normal inter">We customize our approach to meet your unique needs</p>
+                                    <h3 className="xl:text-2xl text-2xl 2xl:text-3xl text-black font-medium ">Tailored Solutions</h3>
+                                    <p className="ml-[2px] mt-1 text-deep-blue xl:text-base 2xl:text-xl text-base font-normal ">We customize our approach to meet your unique needs</p>
                                 </div>
                             </div>
                         </div>
@@ -139,8 +139,8 @@ const page = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="xl:text-2xl text-2xl 2xl:text-3xl text-black font-medium inter">Innovative Strategies</h3>
-                                    <p className="ml-[2px] mt-1 text-deep-blue xl:text-base text-base 2xl:text-xl font-normal inter">We create cutting-edge solutions to drive your business forward.</p>
+                                    <h3 className="xl:text-2xl text-2xl 2xl:text-3xl text-black font-medium ">Innovative Strategies</h3>
+                                    <p className="ml-[2px] mt-1 text-deep-blue xl:text-base text-base 2xl:text-xl font-normal ">We create cutting-edge solutions to drive your business forward.</p>
                                 </div>
                             </div>
                         </div>
@@ -152,8 +152,8 @@ const page = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="xl:text-2xl text-2xl 2xl:text-3xl text-black font-medium inter">Dedicated Support</h3>
-                                    <p className=" mt-1 text-deep-blue xl:text-base 2xl:text-xl text-base font-normal inter">Our team works closely with you every step of the way</p>
+                                    <h3 className="xl:text-2xl text-2xl 2xl:text-3xl text-black font-medium ">Dedicated Support</h3>
+                                    <p className=" mt-1 text-deep-blue xl:text-base 2xl:text-xl text-base font-normal ">Our team works closely with you every step of the way</p>
                                 </div>
                             </div>
                         </div>

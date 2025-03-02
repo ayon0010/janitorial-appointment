@@ -44,26 +44,14 @@ export const DynamicBanner = ({
         <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto w-full">
             {/* Background Images */}
             <div className="absolute inset-0 z-20 h-full">
-                {isMobile ? (
-                    <Image
-                        src={mobileImage}
-                        alt="Mobile janitorial appointments"
-                        width={430}
-                        height={600}
-                        className="object-cover h-full w-full"
-                        priority
-                        sizes="(max-width: 786px) 400px, 100vw"
-                    />
-                ) : (
-                    <Image
-                        src={desktopImage}
-                        alt="Janitorial appointment leads"
-                        fill
-                        priority
-                        className="object-cover"
-                        sizes="(min-width: 787px) 100vw"
-                    />
-                )}
+                <Image
+                    src={isMobile ? mobileImage : desktopImage}
+                    alt="Mobile janitorial appointments"
+                    fill
+                    className="object-cover h-full w-full"
+                    priority
+                    sizes="(max-width: 786px) 350px, 100vw"
+                />
             </div>
 
             {/* Overlays */}
@@ -74,7 +62,7 @@ export const DynamicBanner = ({
                 <h1 className="text-white font-bold 2xl:text-6xl xl:text-5xl text-3xl">
                     {title} <span className="text-green-600 banner-text">{highlightedText}</span>
                 </h1>
-                <p className="my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80">
+                <p className="my-6 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80">
                     {description}
                 </p>
                 <div className="flex items-center gap-6">
@@ -86,7 +74,7 @@ export const DynamicBanner = ({
                         )}
                     </Link>
                     {note && (
-                        <p className="text-white opacity-80 inter font-bold 2xl:text-base xl:text-base text-xs">
+                        <p className="text-white opacity-8 font-bold 2xl:text-base xl:text-base text-xs">
                             {note}
                         </p>
                     )}

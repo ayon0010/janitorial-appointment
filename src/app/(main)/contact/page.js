@@ -57,7 +57,7 @@ const page = () => {
             <div className='2xl:px-40 xl:px-28 py-20 px-6 bg-white'>
                 <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-8 max-h-[680px]'>
                     <div className='h-full'>
-                        <h1 className='2xl:text-5xl xl:text-4xl text-2xl font-medium inter text-[#0D0D0D]'>Get in Touch</h1>
+                        <h1 className='2xl:text-5xl xl:text-4xl text-2xl font-medium  text-[#0D0D0D]'>Get in Touch</h1>
                         <ContactForm />
                     </div>
                     <div className='h-full 2xl:block xl:block hidden'>
@@ -75,7 +75,7 @@ const page = () => {
                 </div>
                 <div className='2xl:py-40 xl:py-28 py-16'>
                     <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 2xl:pb-8 xl:pb-6 pb-4 border-b-[#D6D6D6] border-b-[1px]'>
-                        <h1 className='2xl:text-5xl xl:text-4xl text-2xl font-medium inter text-[#0D0D0D]'>Taking Your Goals to <br /> New Heights</h1>
+                        <h1 className='2xl:text-5xl xl:text-4xl text-2xl font-medium  text-[#0D0D0D]'>Taking Your Goals to <br /> New Heights</h1>
                         <p className="text-[#808080] xl:text-base 2xl:text-xl text-sm 2xl:mt-0 xl:mt-0 mt-4">Our mission is to elevate your goals with innovative strategies, cutting-edge solutions, and a relentless commitment to excellence. Whether you&apos;re expanding your brand or scaling operations, we&apos;re here to take you to new heights of success.</p>
                     </div>
                     <div className='2xl:mt-11 xl:mt-9 mt-5 grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-6'>
@@ -111,7 +111,7 @@ const page = () => {
                 <div className='2xl:pb-40 xl:pb-28 pb-16'>
                     <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-8'>
                         <div>
-                            <h1 className='2xl:text-5xl xl:text-4xl text-2xl font-medium inter text-[#0D0D0D]'>Contact Us</h1>
+                            <h1 className='2xl:text-5xl xl:text-4xl text-2xl font-medium  text-[#0D0D0D]'>Contact Us</h1>
                             <div className='2xl:mt-10 xl:mt-8 mt-6 space-y-6 border-b-[1px] border-b-[#D6D6D6] pb-8'>
                                 {/* <div className='flex items-start gap-4'>
                                     <FaAddress />

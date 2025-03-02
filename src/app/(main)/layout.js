@@ -1,4 +1,4 @@
-import { Inter, Nunito, } from 'next/font/google'
+import { Nunito } from 'next/font/google'
 import localFont from 'next/font/local'
 import '../globals.css'
 import AuthProvider from '@/Providers/AuthProvider'
@@ -9,13 +9,6 @@ import Navbar from '@/Shared/Navbar'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import Head from 'next/head'
-
-export const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter'
-})
-
 
 export const nunito = Nunito({
   subsets: ['latin'],
@@ -93,7 +86,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" >
-      <body className={`${inter.className}`}>
+      <body className={``}>
         <Head>
           <title>{metadata.title}</title>
           <meta name="description" content={metadata.description} />

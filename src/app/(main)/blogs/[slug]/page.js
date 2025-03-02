@@ -77,8 +77,8 @@ const page = async ({ params }) => {
     const data = await getData(params.slug) || {};
     return (
         <div className="pt-20 pb-20 2xl:px-10 xl:px-10 px-6">
-            <h2 className="2xl:text-5xl xl:text-5xl text-3xl inter font-bold text-black text-center">{data?.title}</h2>
-            <p className="mt-10 text-center flex justify-center items-center gap-2"><FaRegCalendar className="mt-1" size={'1.2rem'} /><span className="inter 2xl:text-2xl xl:text-2xl text-xl font-semibold">{formatTimestamp(data?.date)}</span></p>
+            <h2 className="2xl:text-5xl xl:text-5xl text-3xl  font-bold text-black text-center">{data?.title}</h2>
+            <p className="mt-10 text-center flex justify-center items-center gap-2"><FaRegCalendar className="mt-1" size={'1.2rem'} /><span className=" 2xl:text-2xl xl:text-2xl text-xl font-semibold">{formatTimestamp(data?.date)}</span></p>
             <Image
                 priority
                 src={urlFor(data?.titleImage).url()}
@@ -91,7 +91,7 @@ const page = async ({ params }) => {
             <div className="2xl:px-16 xl:px-16">
                 <div className="flex items-center gap-2 mb-10">
                     <Image src={urlFor(data?.authorImage).url()} width={50} height={50} className='w-[50px] h-[50px] rounded-full' alt='' />
-                    <p className="inter text-xl font-semibold">By {data?.authorName}</p>
+                    <p className=" text-xl font-semibold">By {data?.authorName}</p>
                 </div>
                 <div className="prose 2xl:prose-xl xl:prose-xl prose-indigo">
                     <PortableText value={data?.content} components={{

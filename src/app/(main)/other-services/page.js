@@ -295,7 +295,7 @@ const page = () => {
                                         <path d="M25.4721 36.5861C25.1755 36.5861 24.8845 36.7068 24.6747 36.9166C24.4649 37.1264 24.3442 37.4174 24.3442 37.714C24.3442 38.0106 24.4649 38.3016 24.6747 38.5114C24.8845 38.7212 25.1755 38.8419 25.4721 38.8419C25.7688 38.8419 26.0598 38.7212 26.2695 38.5114C26.4793 38.3016 26.6 38.0106 26.6 37.714C26.6 37.4174 26.4793 37.1264 26.2695 36.9166C26.0598 36.7068 25.7688 36.5861 25.4721 36.5861Z" fill="#246532" />
                                     </svg>
                                     <div>
-                                        <h3 className='text-primary  font-bold inter text-2xl'>5 year+</h3>
+                                        <h3 className='text-primary  font-bold  text-2xl'>5 year+</h3>
                                         <p className='text-lg text-[#000] '>Experience</p>
                                     </div>
                                 </div>
@@ -311,7 +311,7 @@ const page = () => {
                                         <path d="M39.346 18.8491H19.5639C18.9414 18.8491 18.436 19.354 18.436 19.9769C18.436 20.5999 18.9414 21.1048 19.5639 21.1048H39.346C39.9689 21.1048 40.4738 20.5999 40.4738 19.9769C40.4738 19.354 39.9689 18.8491 39.346 18.8491Z" fill="#246532" />
                                     </svg>
                                     <div>
-                                        <h3 className='text-primary  font-bold inter text-2xl'>700+</h3>
+                                        <h3 className='text-primary  font-bold  text-2xl'>700+</h3>
                                         <p className='text-lg text-[#000] '>Projects</p>
                                     </div>
                                 </div>
@@ -323,7 +323,7 @@ const page = () => {
                                     <path d="M46.1922 50.9274C45.4384 49.4187 44.3343 48.0783 42.9992 47.0512C42.5055 46.6712 41.7974 46.7636 41.4176 47.2574C41.0377 47.7512 41.1301 48.4593 41.6238 48.8392C42.6901 49.6595 43.5719 50.7302 44.174 51.9355C44.453 52.4937 45.1308 52.7184 45.6871 52.4405C46.2443 52.1621 46.4704 51.4847 46.1922 50.9274Z" fill="#246532" />
                                 </svg>
                                 <div>
-                                    <h3 className='text-primary  font-bold inter text-2xl'>700+</h3>
+                                    <h3 className='text-primary  font-bold  text-2xl'>700+</h3>
                                     <p className='text-lg text-[#000] '>Projects</p>
                                 </div>
                             </div>
@@ -340,7 +340,7 @@ const page = () => {
                 </div>
                 <div className='2xl:py-28 xl:py-28 py-16'>
                     <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-5'>
-                        <h1 className='2xl:text-5xl xl:text-4xl font-medium inter text-[#0D0D0D]'>Our services <br />
+                        <h1 className='2xl:text-5xl xl:text-4xl font-medium  text-[#0D0D0D]'>Our services <br />
                             <Link href={'/contact'}>
                                 <button className='btn bg-primary text-white rounded-xl text-sm mt-4'>Contact Us</button>
                             </Link>

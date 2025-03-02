@@ -56,7 +56,7 @@ const SearchState = ({ leads, data }) => {
                     aria-label={`Search ${leads ? leads : 'leads'}`}
                 >
                     <FaSearch size={'1rem'} className='2xl:block xl:block hidden' />
-                    <span className="inter 2xl:text-base xl:text-base text-xs font-medium">Search</span>
+                    <span className=" 2xl:text-base xl:text-base text-xs font-medium">Search</span>
                 </button>
             </div>
             {inputValue.length > 1 && (
