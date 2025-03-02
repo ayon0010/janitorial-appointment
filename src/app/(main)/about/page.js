@@ -51,6 +51,7 @@ const page = () => {
                     priority
                     width={1920}
                     height={430}
+                    loading="eager"
                     sizes="(max-width: 768px) 350px, 100vw"
                 />
                 <div className="absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-40">
@@ -222,7 +223,7 @@ const page = () => {
                         <div className="flex items-start justify-center gap-2">
                             <Image src={rev1} alt="About-Us" />
                             <div>
-                                <h3 className="2xl:text-lg xl:text-lg text-black font-semibold">Artemisia Udinese</h3>
+                                <h4 className="2xl:text-lg xl:text-lg text-black font-semibold">Artemisia Udinese</h4>
                                 <p className="text-deep-blue 2xl:text-xs xl:text-xs">Marketing Specialist</p>
                             </div>
                         </div>
@@ -239,7 +240,7 @@ const page = () => {
                         <div className="flex items-start justify-center gap-2">
                             <Image src={rev2} alt="About-Us" />
                             <div>
-                                <h3 className="2xl:text-lg xl:text-lg text-black font-semibold">Artemisia Udinese</h3>
+                                <h4 className="2xl:text-lg xl:text-lg text-black font-semibold">Artemisia Udinese</h4>
                                 <p className="text-deep-blue 2xl:text-xs xl:text-xs">Marketing Specialist</p>
                             </div>
                         </div>
