@@ -63,7 +63,7 @@ const SearchState = ({ leads, data }) => {
                 <ul className="mt-6">
                     {filteredStates.length ? (
                         filteredStates.map((state) => (
-                            <Link key={state} href={`${leads}/${state}`}>
+                            <Link key={state} href={`${leads}/${state}/`}>
                                 <li className='p-3 border-b-2 hover:bg-[#F7F8F9] rounded'>
                                     <h3 className=" text-base font-medium">{state}</h3>
                                     <p className="text-[#64748B] font-semibold  text-xs mt-2">

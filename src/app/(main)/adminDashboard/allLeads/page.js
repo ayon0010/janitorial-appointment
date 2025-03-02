@@ -284,12 +284,12 @@ const Page = () => {
                                             </button>
                                         </td>
                                         <td>
-                                            <Link href={`/adminDashboard/allLeads/edit/${lead?._id}`}>
+                                            <Link href={`/adminDashboard/allLeads/edit/${lead?._id}/`}>
                                                 <button className="btn btn-outline text-green-600 rounded-lg">Edit</button>
                                             </Link>
                                         </td>
                                         <td>
-                                            <Link href={`/adminDashboard/allLeads/${lead?._id}`}>
+                                            <Link href={`/adminDashboard/allLeads/${lead?._id}/`}>
                                                 <Info />
                                             </Link>
                                         </td>

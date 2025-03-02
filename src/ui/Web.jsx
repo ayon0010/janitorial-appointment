@@ -12,7 +12,7 @@ const Web = () => {
                         We deliver premier IT solutions designed <br /> specifically for cleaning companies,<br /> empowering your business to achieve greater <br /> efficiency and growth.
                     </p>
                     <div>
-                        <Link href={'/other-services'}>
+                        <Link href={'/other-services/'}>
                             <button className="btn btn-outline text-white rounded-none hover:bg-white hover:text-black font-normal">
                                 View More
                             </button>

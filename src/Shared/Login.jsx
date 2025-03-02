@@ -126,7 +126,7 @@ const LoginPage = () => {
                         </div>
                         {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
                         <label className="label">
-                            <Link href="/login/resetPassword" className="label-text-alt link link-hover">Forgot password?</Link>
+                            <Link href="/login/resetPassword/" className="label-text-alt link link-hover">Forgot password?</Link>
                         </label>
                     </div>
                     <div className="form-control w-full mx-auto">
@@ -134,7 +134,7 @@ const LoginPage = () => {
                         <label className="label mt-2">
                             <span className='text-[#AEAEAE] text-base nunito font-normal'>
                                 Don’t have an account?
-                                <Link href="/register" className="label-text-alt link link-hover underline text-base"> SignUp</Link>
+                                <Link href="/register/" className="label-text-alt link link-hover underline text-base"> SignUp</Link>
                             </span>
                         </label>
                     </div>

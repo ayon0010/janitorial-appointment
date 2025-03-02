@@ -206,7 +206,7 @@ const page = () => {
                                 <h2 className="card-title  text-primary text-xl font-semibold">UI/UX Design</h2>
                                 <p className='text-xs  text-[#000] opacity-50'>Designs intuitive and visually appealing interfaces that enhance user experience</p>
                                 <div className="card-actions justify-start mt-3">
-                                    <Link href={'/contact'}>
+                                    <Link href={'/contact/'}>
                                         <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
                                     </Link>
                                 </div>
@@ -220,7 +220,7 @@ const page = () => {
                                 <h2 className="card-title  text-primary text-xl font-semibold">Front-End Develop</h2>
                                 <p className='text-xs  text-[#000] opacity-50'>Transforms design into responsive, interactive web pages with clean code</p>
                                 <div className="card-actions justify-start mt-3">
-                                    <Link href={'/contact'}>
+                                    <Link href={'/contact/'}>
                                         <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
                                     </Link>
                                 </div>
@@ -234,7 +234,7 @@ const page = () => {
                                 <h2 className="card-title  text-primary text-xl font-semibold">Back-End Develop</h2>
                                 <p className='text-xs  text-[#000] opacity-50'>Powering Your Applications with Robust Backend Solutions</p>
                                 <div className="card-actions justify-start mt-3">
-                                    <Link href={'/contact'}>
+                                    <Link href={'/contact/'}>
                                         <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
                                     </Link>
                                 </div>
@@ -261,7 +261,7 @@ const page = () => {
                                 <h2 className="card-title  text-primary text-xl font-semibold">Tele Marketing</h2>
                                 <p className='text-xs  text-[#000] opacity-50'>Identifies and connects with potential customers to drive business growth and conversions</p>
                                 <div className="card-actions justify-start mt-3">
-                                    <Link href={'/contact'}>
+                                    <Link href={'/contact/'}>
                                         <button className="px-3 py-2 btn bg-primary text-white text-xs font-semibold  rounded-lg">Contact Us Now</button>
                                     </Link>
                                 </div>
@@ -329,7 +329,7 @@ const page = () => {
                             </div>
                         </div>
                         <div>
-                            <Link href={'/contact'}>
+                            <Link href={'/contact/'}>
                                 <button className='px-16 bg-primary btn text-white rounded-2xl text-lg'>
                                     Contact Us
                                 </button>
@@ -341,7 +341,7 @@ const page = () => {
                 <div className='2xl:py-28 xl:py-28 py-16'>
                     <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-5'>
                         <h1 className='2xl:text-5xl xl:text-4xl font-medium  text-[#0D0D0D]'>Our services <br />
-                            <Link href={'/contact'}>
+                            <Link href={'/contact/'}>
                                 <button className='btn bg-primary text-white rounded-xl text-sm mt-4'>Contact Us</button>
                             </Link>
                         </h1>
@@ -454,7 +454,7 @@ const page = () => {
                         </div>
                     </div>
                     <div className='w-fit mx-auto'>
-                        <Link href={'/contact'}>
+                        <Link href={'/contact/'}>
                             <button className='px-10 btn bg-primary text-white rounded-xl text-base 2xl:mt-20 xl:mt-16 mt-16'>
                                 Contact Us
                             </button>

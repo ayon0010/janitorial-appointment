@@ -58,7 +58,7 @@ const ProfileCard = ({ sellerDashboard, userDashboard, adminDashboard }) => {
                 <div className='2xl:px-6 xl:px-6 px-3 space-y-6'>
                     <h2 className='text-lg font-bold text-black'>Account</h2>
                     <div>
-                        <Link className='flex items-center gap-2' href={'/profile'}>
+                        <Link className='flex items-center gap-2' href={'/profile/'}>
                             <FaProfile />
                             <h2 className='text-base'>Profile</h2>
                         </Link>

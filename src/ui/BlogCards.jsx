@@ -39,7 +39,7 @@ const BlogCards = ({ blog }) => {
                 </p>
 
                 {/* View Post Button */}
-                <Link href={`/blogs/${blog?.currentSlug}`} className="w-full">
+                <Link href={`/blogs/${blog?.currentSlug}/`} className="w-full">
                     <button className="btn w-full rounded-lg bg-primary text-white">View post</button>
                 </Link>
             </div>
