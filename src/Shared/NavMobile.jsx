@@ -28,7 +28,7 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
                 <div className='flex items-center gap-3'>
                     {
                         !user &&
-                        <Link href={'/login/'}>
+                        <Link href={'/login'}>
                             <ButtonPrimary label={'Sign In'} />
                         </Link>
                     }
@@ -119,10 +119,10 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
                                         <Link href={'/'}>Home</Link>
                                     </li>
                                     <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange py-3 border-b-[0.60px] border-b-black border-opacity-20 transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`} onClick={() => setNav(false)}>
-                                        <Link href="/about/">About</Link>
+                                        <Link href="/about">About</Link>
                                     </li>
                                     <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange py-3 border-b-[0.60px] border-b-black border-opacity-20 transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`} onClick={() => setNav(false)}>
-                                        <Link href="/blogs/">Blogs</Link>
+                                        <Link href="/blogs">Blogs</Link>
                                     </li>
                                     <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100`}>
                                         <div className='flex items-center justify-between border-b-[0.60px] border-b-black border-opacity-20 py-3'>
@@ -199,10 +199,10 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
                                     </li>
 
                                     <li className={`2xl:text-base xl:text-sm text-sm hover:text-orange transition-all border-b-[0.60px] border-b-black border-opacity-20 text-black duration-100 font-bold py-3 ${pathname === '/contact' ? 'text-orange' : ''}`} onClick={() => setNav(false)}>
-                                        <Link href="/contact/">Contact</Link>
+                                        <Link href="/contact">Contact</Link>
                                     </li>
                                     <li className={`2xl:text-base xl:text-sm text-sm hover:text-orange transition-all text-black duration-100 font-bold py-3 ${pathname === '/contact' ? 'text-orange' : ''}`} onClick={() => setNav(false)}>
-                                        <Link href="/book-an-appointment/">Appointment</Link>
+                                        <Link href="/book-an-appointment">Appointment</Link>
                                     </li>
                                 </ul>
                             </div >

@@ -150,7 +150,7 @@ const Banner = () => {
                                 <h1 className='text-white text-center font-bold  2xl:text-6xl xl:text-5xl text-3xl'>Find <span className=''>Qualified, Exclusive Janitorial Leads</span> <br className='2xl:block xl:block hidden' /> available in Your Area!</h1>
                                 <p className='2xl:my-6 xl:my-6 my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80 text-center'>A reliable and stress-free appointment-setting service designed for janitors.<br />
                                     Partner with the trusted provider of quality janitorial job opportunities.</p>
-                                <Link className="flex justify-center items-center" href={'/search/exclusive-leads/'}>
+                                <Link className="flex justify-center items-center" href={'/search/exclusive-leads'}>
                                     <ButtonTertiary label={'Explore Now'} />
                                 </Link>
                             </div>
@@ -196,7 +196,7 @@ const Banner = () => {
                                     </span>
                                 </p>
                                 <div className='flex items-center justify-center gap-6'>
-                                    <Link className='flex items-center gap-2' href={'/contact/'}>
+                                    <Link className='flex items-center gap-2' href={'/contact'}>
                                         <ButtonTertiary label={'Contact Us'} />
                                     </Link>
                                 </div>

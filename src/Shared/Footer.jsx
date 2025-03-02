@@ -25,8 +25,8 @@ const Footer = () => {
                         <SubscribeEmail />
                     </div>
                     <div className="flex 2xl:flex-row xl:flex-row flex-col 2xl:items-center xl:items-center items-start 2xl:gap-14 xl:gap-14 gap-6">
-                        <Link href={'/term&condition/'} className="font-medium text-base ">Terms & Conditions</Link>
-                        <Link href={'/privacy/'} className="font-medium text-base ">Privacy Policy</Link>
+                        <Link href={'/term&condition'} className="font-medium text-base ">Terms & Conditions</Link>
+                        <Link href={'/privacy'} className="font-medium text-base ">Privacy Policy</Link>
                     </div>
                 </aside>
                 <aside className="w-fit 2xl:mt-0 xl:mt-0 mt-10">

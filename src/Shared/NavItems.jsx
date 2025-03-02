@@ -32,14 +32,14 @@ const NavItems = ({ Services, Leads }) => {
                 <Link href={'/'}>Home</Link>
             </li>
             <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`}>
-                <Link href="/about/">About</Link>
+                <Link href="/about">About</Link>
             </li>
             <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/blogs' ? 'text-orange' : ''}`}>
-                <Link href="/blogs/">Blogs</Link>
+                <Link href="/blogs">Blogs</Link>
             </li>
             <li className="relative" onMouseEnter={() => setMouse(true)} onMouseLeave={() => setMouse(false)}>
                 <div
-                    className={`2xl:text-xl xl:text-base 2xl:h-[60px] xl:h-[60px] text-sm font-semibold h-full hover-color group flex gap-[2px] ${pathname === '/services/' ? 'text-orange' : ''}`}>
+                    className={`2xl:text-xl xl:text-base 2xl:h-[60px] xl:h-[60px] text-sm font-semibold h-full hover-color group flex gap-[2px] ${pathname === '/services' ? 'text-orange' : ''}`}>
                     <span className="my-auto 2xl:text-base xl:text-sm text-sm group-hover:text-orange transition-all duration-100">Services</span>
                     <div className="h-fit my-auto">
                         <DropDown />
@@ -93,10 +93,10 @@ const NavItems = ({ Services, Leads }) => {
                 </ul>
             </li>
             <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/contact' ? 'text-orange' : ''}`}>
-                <Link href="/contact/">Contact</Link>
+                <Link href="/contact">Contact</Link>
             </li>
             <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/contact' ? 'text-orange' : ''}`}>
-                <Link href="/book-an-appointment/">Appointment</Link>
+                <Link href="/book-an-appointment">Appointment</Link>
             </li>
         </>
     );

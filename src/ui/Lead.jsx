@@ -11,7 +11,7 @@ import ContactInfo from "./ContactInfo";
 export const AppointmentButton = ({ leadName, image }) => {
     return (
         <div>
-            <Link href={'/book-an-appointment/'} className="bg-black p-2 fixed z-[60] top-[80px] w-full h-[90px] 2xl:hidden xl:hidden block">
+            <Link href={'/book-an-appointment'} className="bg-black p-2 fixed z-[60] top-[80px] w-full h-[90px] 2xl:hidden xl:hidden block">
                 <button className={`w-full h-full text-lg hover:bg-primary btn border-none hover:text-white text-white border border-black bg-[#14516D] font-normal rounded-md ${gilroy.className}`}>
                     Get Appointment
                 </button>
@@ -59,7 +59,7 @@ const LeadPage = async ({ Lead, params }) => {
                 <ul className="2xl:w-3/4 xl:w-3/4 w-full grid 2xl:grid-cols-6 xl:grid-cols-5 grid-cols-2 mx-auto mt-10 items-center justify-center gap-y-6">
                     {selectedStates?.map((state) => (
                         <li key={state} className={`bg-state text-white text-xl text-center py-2 border hover:underline transition-all duration-100 border-white ${gilroy.className} font-normal`}>
-                            <Link href={`${Lead}/${state}/`}>
+                            <Link href={`${Lead}/${state}`}>
                                 {state}
                             </Link>
                         </li>

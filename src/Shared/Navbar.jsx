@@ -25,23 +25,23 @@ const Navbar = () => {
 
     // Nav Links
     const Services = [
-        { name: 'Decision Maker', href: '/decision-maker/' },
-        { name: 'Single Decision Maker', href: '/single-decision-maker/' },
-        { name: 'Cleaning Calculator', href: '/cleaning-calculator/' },
-        { name: 'Web & App Support', href: '/other-services/' },
+        { name: 'Decision Maker', href: '/decision-maker' },
+        { name: 'Single Decision Maker', href: '/single-decision-maker' },
+        { name: 'Cleaning Calculator', href: '/cleaning-calculator' },
+        { name: 'Web & App Support', href: '/other-services' },
     ]
 
     const Leads = [
-        { name: 'Exclusive Leads', href: '/search/exclusive-leads/' },
-        { name: 'Opportunities', href: '/search/opportunities/' },
-        { name: 'Lay Ups', href: '/search/layUps/' },
+        { name: 'Exclusive Leads', href: '/search/exclusive-leads' },
+        { name: 'Opportunities', href: '/search/opportunities' },
+        { name: 'Lay Ups', href: '/search/layUps' },
     ];
 
     let UserDetails = [
-        { name: 'Profile', href: '/profile/' },
-        { name: 'Dashboard', href: '/dashboard/' },
-        isSeller && { href: '/sellerDashboard/', name: 'Seller dashboard' },
-        isAdmin && { href: '/adminDashboard/', name: 'Admin dashboard' },
+        { name: 'Profile', href: '/profile' },
+        { name: 'Dashboard', href: '/dashboard' },
+        isSeller && { href: '/sellerDashboard', name: 'Seller dashboard' },
+        isAdmin && { href: '/adminDashboard', name: 'Admin dashboard' },
     ].filter(Boolean); // Remove falsy values
 
 

@@ -59,11 +59,11 @@ const Table = ({ tableHead, data, states, Button, bookMarks }) => {
                                         <div className="cursor-po">
                                             {
                                                 bookMarks ?
-                                                    <Link href={`/search/${d?.category}/${d?.states}/${d?._id}/`}>
+                                                    <Link href={`/search/${d?.category}/${d?.states}/${d?._id}`}>
                                                         <Info />
                                                     </Link>
                                                     :
-                                                    <Link href={`${d?.states}/${d?._id}/`}>
+                                                    <Link href={`${d?.states}/${d?._id}`}>
                                                         <Info />
                                                     </Link>
                                             }

@@ -51,8 +51,8 @@ const NavUser = ({ UserDetails }) => {
                 </div>
                     :
                     <>
-                        <Link href={'/login/'}><button className="font-semibold text-xs md:text-base">Sign In</button></Link>
-                        <Link href={'/register/'}>
+                        <Link href={'/login'}><button className="font-semibold text-xs md:text-base">Sign In</button></Link>
+                        <Link href={'/register'}>
                             <ButtonPrimary label={'Get Started Free'} />
                         </Link>
                     </>
