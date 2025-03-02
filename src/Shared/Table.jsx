@@ -63,7 +63,7 @@ const Table = ({ tableHead, data, states, Button, bookMarks }) => {
                                                         <Info />
                                                     </Link>
                                                     :
-                                                    <Link href={`${d?.states}/${d?._id}`}>
+                                                    <Link href={`${d?._id}`}>
                                                         <Info />
                                                     </Link>
                                             }

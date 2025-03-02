@@ -27,9 +27,9 @@ const States = async ({ States }) => {
                 {/* <SectionTitles heading={'Choose Cities'} /> */}
                 <div>
                     <div className="flex 2xl:flex-row xl:flex-row flex-col items-center gap-4 justify-center">
-                        <h4 className={`text-2xl inter font-medium text-center ${gilroy.className}`}>
+                        <h2 className={`text-2xl inter font-medium text-center ${gilroy.className}`}>
                             Available {capitalizeFirstLetter(leads)} in {decodeState}
-                        </h4>
+                        </h2>
                         <p className="text-[#6941C6] inter text-sm font-medium py-[3px] px-[10px] bg-[#F9F5FF] rounded-[18px]">
                             {data?.length} leads
                         </p>
@@ -41,9 +41,9 @@ const States = async ({ States }) => {
                 <LeadsByCity data={data} states={states} />
                 <div className="2xl:w-3/4 xl:w-3/4 w-full mx-auto my-20">
                     <SectionTitles heading={`Get Exclusive Commercial Cleaning leads in ${decodeState}`} />
-                    <p className={`text-center ${gilroy.className} my-10`}>
+                    <h3 className={`text-center ${gilroy.className} my-10`}>
                         Located at the heart of the industry, we specialize in providing commercial cleaning leads in {decodeState} to help businesses grow. Our janitorial appointment-setting service connects you with high-quality clients actively seeking cleaning services across {decodeState}. We generate exclusive commercial cleaning leads by targeting decision-makers who need reliable cleaning solutions. Whether you're a startup or an established cleaning company, our dedicated team works around the clock to deliver qualified janitorial appointments in {decodeState}, helping you maximize your business potential and keep your pipeline full of prospects.
-                    </p>
+                    </h3>
                 </div>
             </div>
             <div className="mb-10">
