@@ -1,3 +1,4 @@
 import blog from "./blog";
-import stateContert from "./stateContert";
-export const schemaTypes = [blog, stateContert];
+import stateContent from "./stateContent";
+
+export const schemaTypes = [blog, stateContent];
