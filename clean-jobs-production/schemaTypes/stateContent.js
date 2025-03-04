@@ -1,12 +1,12 @@
 export default {
-    name: 'State Content',
+    name: 'State',
     type: 'document',
     title: 'State Content',
     fields: [
         {
-            name: 'state',
-            title: 'State',
+            name: 'slug',
             type: 'string',
+            title: 'slug',
         },
         {
             name: 'content',
