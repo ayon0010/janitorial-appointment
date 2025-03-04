@@ -51,7 +51,7 @@ const page = () => {
                     priority
                     width={1233}
                     height={240}
-                    sizes="(max-width: 768px) 350px, 100vw"
+                    sizes="(max-width: 768px) 430px, 100vw"
                 />
                 <div className="absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-40">
                     <h1 className="2xl:text-6xl xl:text-5xl text-3xl font-medium text-white text-center ">The Path to Success</h1>
