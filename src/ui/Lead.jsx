@@ -7,6 +7,9 @@ import LeadAppointment from "@/Shared/LeadAppointment";
 import SectionTitles from "./SectionTitles";
 import { gilroy } from "@/app/(main)/layout";
 import ContactInfo from "./ContactInfo";
+import singleContent from "@/lib/singleContent";
+import { PortableText } from "next-sanity";
+import { urlFor } from "@/lib/sanity";
 
 export const AppointmentButton = ({ leadName, image }) => {
     return (
@@ -30,7 +33,7 @@ export const AppointmentButton = ({ leadName, image }) => {
 
 const LeadPage = async ({ Lead, params }) => {
     console.log(params, Lead);
-
+    const stateContent = await singleContent('USA');
     let data = [];
     try {
         data = await getLeads(Lead); // Ensure this is optimized for server fetching
@@ -47,7 +50,7 @@ const LeadPage = async ({ Lead, params }) => {
 
     const leadName = capitalizeFirstLetter(Lead.split('-')[0]);
 
-   
+
 
     return (
         <div>
@@ -67,11 +70,43 @@ const LeadPage = async ({ Lead, params }) => {
                         </li>
                     ))}
                 </ul>
-                <div className="2xl:w-3/4 xl:w-3/4 w-full mx-auto 2xl:my-16 xl:my-16 my-10">
-                    <SectionTitles heading={'Get Exclusive Commercial Cleaning leads in all over the USA'} />
-                    <p className={`text-center ${gilroy.className} my-10`}>
-                        Located at the heart of the industry, we specialize in commercial cleaning leads to help businesses grow. Our janitorial appointment-setting service ensures you connect with high-quality clients actively seeking cleaning services. With our expertise, you can get janitorial appointments with decision-makers who need reliable and professional cleaning solutions. Our dedicated team works around the clock to generate exclusive leads, schedule meetings, and maximize your business potential. Whether you're a startup or an established cleaning company, we provide tailored solutions to keep your pipeline full of qualified prospects.
-                    </p>
+                <div className="mt-20 mx-auto prose prose-2xl font-normal my-10">
+                    <PortableText value={stateContent?.content} components={{
+                        types: {
+                            imageGroup: ({ value }) => {
+                                const { images, layout } = value;
+                                if (!images || images.length === 0) return null;
+                                const imageUrls = images.map(image => urlFor(image.asset).url());
+
+                                return (
+                                    <div className={`${layout === 'grid' ? 'grid 2xl:grid-cols-3 xl:grid-cols-3 gap-4 items-stretch' : 'block w-fit mx-auto'
+                                        }`}>
+                                        {
+                                            imageUrls?.map((url, i) => {
+                                                return (
+                                                    <Image
+                                                        key={i}
+                                                        src={url}
+                                                        alt={`Cleaning Map of ${states}`}
+                                                        width={950}
+                                                        height={665}
+                                                        className={`rounded-lg shadow-lg ${layout === 'grid' ? 'w-full h-auto' : ' w-[500px] h-[300px]'
+                                                            } `}
+                                                    />
+                                                )
+                                            })
+                                        }
+                                    </div>
+                                )
+                            }
+                        },
+                        block: {
+                            normal: ({ children }) => <p className="text-base text-gray-800 leading-relaxed mb-4">{children}</p>,
+                            h1: ({ children }) => <h1 className="text-gray-900 2xl:text-6xl xl:text-5xl text-3xl font-normal mb-6">{children}</h1>,
+                            h2: ({ children }) => <h2 className="2xl:text-4xl xl:text-3xl text-2xl text-gray-700 mb-5">{children}</h2>,
+                            h3: ({ children }) => <h3 className="2xl:text-3xl xl:text-2xl text-xl text-gray-600 mb-4">{children}</h3>,
+                        },
+                    }} />
                 </div>
             </div>
             <div className="mb-10">

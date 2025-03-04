@@ -59,7 +59,7 @@ const States = async ({ States }) => {
                 {/* Table */}
                 <LeadsByCity data={data} states={states} />
                 {/*  */}
-                <div className="mt-20 mx-auto prose prose-xl font-normal my-10">
+                <div className="mt-20 mx-auto prose prose-2xl font-normal my-10">
                     <PortableText value={stateContent?.content} components={{
                         types: {
                             imageGroup: ({ value }) => {
