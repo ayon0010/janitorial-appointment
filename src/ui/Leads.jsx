@@ -37,7 +37,7 @@ export default function Leads() {
                             height={230}
                             className="object-cover h-[230px] w-full"
                             loading="lazy"
-                            sizes="(max-width:768px) 100vw,50vw"
+                            sizes="(max-width:768px) 150px,200px"
                         />
                     </div>
 
