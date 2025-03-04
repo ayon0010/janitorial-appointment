@@ -16,6 +16,7 @@ import image from '@/../public/assets/it-expert-for-cleaning-companies.webp';
 import ReviewItems from "../../ui/ReviewItems";
 import { data } from '@/js/states';
 import ContactInfo from "@/ui/ContactInfo";
+import AudioPlayer from "@/Shared/Audio";
 
 export const metadata = {
     title: "Janitorial Appointments - Commercial Cleaning Leads",
@@ -70,14 +71,22 @@ export const metadata = {
 };
 
 
-
 export default function Home() {
     return (
         <>
             {/* Banner */}
             <Banner />
-            <div className="2xl:px-10 xl:px-10 px-6">
-                <div className="mt-20">
+            <div className="mt-20">
+                <div className="2xl:px-10 xl:px-10 px-6">
+                    <SectionTitles
+                        heading={"Closed Deals"}
+                        subHeading={"Listen to our agents successfully engaging with decision-makers"}
+                    />
+                    <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-6 my-16">
+                        <AudioPlayer src={'/assets/2023-10-16T19_16_15+00_00.mp3'} name={'Apartment Complex Cleaning Leads'} />
+                        <AudioPlayer src={'/assets/The Royal King Palace and Convention Center- Diego- JAN.mp3'} name={'Convention Center Cleaning Leads'} />
+                        <AudioPlayer src={'/assets/2024-10-29T15_24_20+00_00 (2).mp3'} name={'Apartment Complex Cleaning Leads'} />
+                    </div>
                     <div className="px-6 mb-10">
                         <SectionTitles heading={"Book an appointment"} subHeading={"Reserve a convenient time for your appointment"} />
                     </div>
