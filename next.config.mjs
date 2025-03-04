@@ -6,7 +6,7 @@ const nextConfig = {
     domains: ['cdn.sanity.io', 'i.ibb.co.com', 'i.ibb.co', 'img.youtube.com',],
     formats: ['image/avif', 'image/webp'], // Allow images from Sanity's CDN
   },
-  // trailingSlash: true,
+  trailingSlash: true,
 };
 export default withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
