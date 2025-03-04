@@ -49,8 +49,8 @@ const page = () => {
                     src={aboutImage}
                     alt="About us - Learn more about our cleaning services and expertise"
                     priority
-                    width={1920}
-                    height={430}
+                    width={1233}
+                    height={240}
                     sizes="(max-width: 768px) 350px, 100vw"
                 />
                 <div className="absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-40">
