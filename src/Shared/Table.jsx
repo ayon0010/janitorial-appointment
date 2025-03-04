@@ -56,7 +56,7 @@ const Table = ({ tableHead, data, states, Button, bookMarks }) => {
                                         </div>
                                     </td>
                                     <td>
-                                        <div className="cursor-po">
+                                        <div className="cursor-po w-fit mx-auto">
                                             {
                                                 bookMarks ?
                                                     <Link href={`/search/${d?.category}/${d?.states}/${d?._id}`}>

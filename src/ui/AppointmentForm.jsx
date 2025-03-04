@@ -128,7 +128,7 @@ const AppointmentForm = () => {
                                 width={1263}
                                 height={600}
                                 priority
-                                className='object-cover h-full'
+                                className='object-cover h-full w-full'
                                 alt='Book a janitorial appointment with top commercial cleaning leads'
                                 sizes='(min-width:786px) 100vw'
                             />
@@ -138,7 +138,7 @@ const AppointmentForm = () => {
                                 height={600}
                                 width={430}
                                 priority sizes='(max-width: 768px) 100vw'
-                                className='object-cover h-full'
+                                className='object-cover h-full w-full'
                                 alt='Get high-quality janitorial leads for commercial cleaning appointments'
                             />
                     }

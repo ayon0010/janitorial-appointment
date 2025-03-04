@@ -39,8 +39,6 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
     const { leads } = await params;
-    console.log(leads);
-
     if (leads?.length === 1) {
         return {
             title: `${leads[0] === 'exclusive-leads' ? `Exclusive Commercial Cleaning Leads | High-Quality Janitorial Leads` : leads[0] === 'opportunities' ? 'Get opportunities from our commercial Cleaning Leads' : 'High-Quality Janitorial leads'}`,

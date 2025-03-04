@@ -29,7 +29,7 @@ export const AppointmentButton = ({ leadName, image }) => {
 }
 
 const LeadPage = async ({ Lead, params }) => {
-    console.log(params);
+    console.log(params, Lead);
 
     let data = [];
     try {
@@ -47,6 +47,8 @@ const LeadPage = async ({ Lead, params }) => {
 
     const leadName = capitalizeFirstLetter(Lead.split('-')[0]);
 
+   
+
     return (
         <div>
             <AppointmentButton image={image} leadName={leadName} />
@@ -56,10 +58,10 @@ const LeadPage = async ({ Lead, params }) => {
             <div className="2xl:py-20 xl:py-20 py-10 px-10">
                 <SectionTitles heading={'Choose your states'} />
                 {/* <SearchState data={data} leads={Lead} /> */}
-                <ul className="2xl:w-3/4 xl:w-3/4 w-full grid 2xl:grid-cols-6 xl:grid-cols-5 grid-cols-2 mx-auto mt-10 items-center justify-center gap-y-6">
+                <ul className="2xl:w-3/4 xl:w-3/4 w-full flex mx-auto flex-nowrap mt-10 items-center justify-center gap-y-6">
                     {selectedStates?.map((state) => (
-                        <li key={state} className={`bg-state text-white text-xl text-center py-2 border hover:underline transition-all duration-100 border-white ${gilroy.className} font-normal`}>
-                            <Link href={`${state}`}>
+                        <li key={state} className={`bg-state flex-1 min-w-[148px] text-white text-xl text-center py-2 border hover:underline transition-all duration-100 border-white ${gilroy.className} font-normal`}>
+                            <Link href={`${Lead}/${state}`}>
                                 {state}
                             </Link>
                         </li>

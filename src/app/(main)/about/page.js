@@ -51,7 +51,6 @@ const page = () => {
                     priority
                     width={1920}
                     height={430}
-                    loading="eager"
                     sizes="(max-width: 768px) 350px, 100vw"
                 />
                 <div className="absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-40">
@@ -103,6 +102,7 @@ const page = () => {
                                 alt="Telemarketing and business support services for enhanced lead generation and customer outreach"
                                 width={1920}
                                 height={1080}
+                                placeholder="blur"
                                 loading='lazy'
                                 sizes="(max-width: 768px) 100vw, 100vw"
                             />
@@ -159,7 +159,7 @@ const page = () => {
                             </div>
                         </div>
                     </div>
-                    <Image src={image2} className="rounded-[30px] w-full 2xl:mt-0 xl:mt-0 mt-10" alt="About-Us" sizes="(max-width: 768px) 100vw, 100vw" />
+                    <Image src={image2} className="rounded-[30px] w-full 2xl:mt-0 xl:mt-0 mt-10" loading="lazy" alt="About-Us" sizes="(max-width: 768px) 100vw, 100vw" />
                 </div>
             </div>
 
@@ -221,7 +221,7 @@ const page = () => {
                         </div>
                         <p className="text-deep-blue 2xl:text-lg xl:text-base text-center">Their lead generation services are top-tier! We saw a huge boost in qualified leads, and the integration with our CRM was seamless. If you need reliable, high-quality leads, Janitorial Appointments is the way to go.</p>
                         <div className="flex items-start justify-center gap-2">
-                            <Image src={rev1} alt="About-Us" />
+                            <Image src={rev1} alt="About-Us" loading="lazy" />
                             <div>
                                 <h4 className="2xl:text-lg xl:text-lg text-black font-semibold">Artemisia Udinese</h4>
                                 <p className="text-deep-blue 2xl:text-xs xl:text-xs">Marketing Specialist</p>
