@@ -22,7 +22,7 @@ const States = async ({ States }) => {
     const data = await getLeads(leads, states);
     const availableStates = await getLeads(leads);
     const selectedStates = [...new Set(availableStates?.map(d => d.states))]?.sort();
-    const stateContent = await singleContent(states.toLowerCase());
+    const stateContent = await singleContent(decodeState.toLowerCase());
 
     return (
         <>
