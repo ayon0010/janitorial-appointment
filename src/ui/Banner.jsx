@@ -50,7 +50,7 @@ export const DynamicBanner = ({
                     fill
                     className="object-cover h-full w-full"
                     priority
-                    sizes="(max-width: 480px) 60px, (max-width: 768px) 80px, (max-width: 1024px) 100px, 100vw"
+                    sizes="(max-width: 768px) 120px, (max-width: 1024px) 150px, 100vw"
                 />
             </div>
 
