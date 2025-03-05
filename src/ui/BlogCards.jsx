@@ -16,6 +16,7 @@ const BlogCards = ({ blog }) => {
                     fill
                     sizes="(max-width: 768px) 100vw, 100vw"
                     className="object-cover"
+                    priority
                 />
             </div>
             <div className="card-body p-0 mt-3">
