@@ -14,7 +14,7 @@ const BlogCards = ({ blog }) => {
                     src={urlFor(blog.titleImage).url()}
                     alt={blog.title || blog?.currentSlug}
                     fill
-                    sizes="(max-width: 768px) 60px, 100vw"
+                    sizes="(max-width: 768px) 100vw, 100vw"
                     className="object-cover"
                     priority
                 />
