@@ -101,8 +101,8 @@ const LeadPage = async ({ Lead, params }) => {
                         },
                         block: {
                             normal: ({ children }) => <p className="text-base text-gray-800 leading-relaxed mb-4">{children}</p>,
-                            h1: ({ children }) => <h1 className="text-gray-900 2xl:text-6xl xl:text-5xl text-3xl font-normal mb-6">{children}</h1>,
-                            h2: ({ children }) => <h2 className="2xl:text-4xl xl:text-3xl text-2xl text-gray-700 mb-5">{children}</h2>,
+                            h1: ({ children }) => <h1 className="text-gray-900 2xl:text-6xl xl:text-5xl text-3xl text-center font-normal mb-6">{children}</h1>,
+                            h2: ({ children }) => <h2 className="2xl:text-4xl xl:text-3xl text-2xl text-center text-gray-700 mb-5">{children}</h2>,
                             h3: ({ children }) => <h3 className="2xl:text-3xl xl:text-2xl text-xl text-gray-600 mb-4">{children}</h3>,
                         },
                     }} />
