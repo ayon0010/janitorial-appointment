@@ -134,7 +134,7 @@ const Navbar = () => {
                                         className='object-contain h-[110px]'
                                         width={140}
                                         height={90}
-                                        sizes="(min-width: 1536px) 140px, (min-width: 1280px) 110px"
+                                        sizes="(max-width:786px) 60px,100vw"
                                         src={logo}
                                         alt='janitorial-appointments-logo'
                                         priority
