@@ -94,9 +94,9 @@ export default function Home() {
                     subHeading={"Listen to our agents successfully engaging with decision-makers"}
                 />
                 <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-6 my-16 2xl:px-10 xl:px-10 px-6">
-                    <AudioPlayer src={'/assets/2023-10-16T19_16_15+00_00.mp3'} name={'Apartment Complex Cleaning Leads'} />
-                    <AudioPlayer src={'../../../public/assets/The Royal King Palace and Convention Center- Diego- JAN.mp3'} name={'Convention Center Cleaning Leads'} />
-                    <AudioPlayer src={'/assets/2024-10-29T15_24_20+00_00 (2).mp3'} name={'Apartment Complex Cleaning Leads'} />
+                    <AudioPlayer src={'https://firebasestorage.googleapis.com/v0/b/clean-jobs-production.appspot.com/o/records%2F2023-10-16T19_16_15%2B00_00.mp3?alt=media&token=a6d77910-b142-4b4a-85a0-1d3f881f48c0'} name={'Apartment Complex Cleaning Leads'} />
+                    <AudioPlayer src={'https://firebasestorage.googleapis.com/v0/b/clean-jobs-production.appspot.com/o/records%2FThe%20Royal%20King%20Palace%20and%20Convention%20Center-%20Diego-%20JAN.mp3?alt=media&token=fa1f1d37-b96c-4ceb-b17d-fa9d71aa3bc5'} name={'Convention Center Cleaning Leads'} />
+                    <AudioPlayer src={'https://firebasestorage.googleapis.com/v0/b/clean-jobs-production.appspot.com/o/records%2F2024-10-29T15_24_20%2B00_00%20(2).mp3?alt=media&token=d1dec64b-7503-48c7-b8ec-61afc61c9cb0'} name={'Apartment Complex Cleaning Leads'} />
                 </div>
                 <h3 className="text-secondary text-center font-light text-xl mt-20 mb-4">How We Help You to Grow</h3>
                 <div className="w-[80%] mx-auto">
