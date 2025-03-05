@@ -95,7 +95,7 @@ export default function Home() {
                 />
                 <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-6 my-16 2xl:px-10 xl:px-10 px-6">
                     <AudioPlayer src={'/assets/2023-10-16T19_16_15+00_00.mp3'} name={'Apartment Complex Cleaning Leads'} />
-                    <AudioPlayer src={'/assets/The Royal King Palace and Convention Center- Diego- JAN.mp3'} name={'Convention Center Cleaning Leads'} />
+                    <AudioPlayer src={'../../../public/assets/The Royal King Palace and Convention Center- Diego- JAN.mp3'} name={'Convention Center Cleaning Leads'} />
                     <AudioPlayer src={'/assets/2024-10-29T15_24_20+00_00 (2).mp3'} name={'Apartment Complex Cleaning Leads'} />
                 </div>
                 <h3 className="text-secondary text-center font-light text-xl mt-20 mb-4">How We Help You to Grow</h3>
