@@ -32,7 +32,6 @@ export const AppointmentButton = ({ leadName, image }) => {
 }
 
 const LeadPage = async ({ Lead, params }) => {
-    console.log(params, Lead);
     const stateContent = await singleContent('USA');
     let data = [];
     try {
@@ -64,7 +63,7 @@ const LeadPage = async ({ Lead, params }) => {
                 <ul className="2xl:w-3/4 xl:w-3/4 w-full flex mx-auto flex-nowrap mt-10 items-center justify-center gap-y-6">
                     {selectedStates?.map((state) => (
                         <li key={state} className={`bg-state flex-1 min-w-[148px] text-white text-xl text-center py-2 border hover:underline transition-all duration-100 border-white ${gilroy.className} font-normal`}>
-                            <Link href={`${Lead}/${state}`}>
+                            <Link href={`${state}`}>
                                 {state}
                             </Link>
                         </li>
