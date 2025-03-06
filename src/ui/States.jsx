@@ -33,7 +33,7 @@ const States = async ({ States }) => {
             <div className="py-20 px-6">
                 <div className="2xl:w-3/4 xl:w-3/4 w-full mx-auto mb-20">
                     <SectionTitles heading={'Exclusive commercial leads available in these states'} />
-                    <ul className="w-full flex flex-nowrap mx-auto mt-10 items-center justify-center gap-y-6">
+                    <ul className="w-full flex mx-auto mt-10 items-center justify-center gap-y-6">
                         {selectedStates?.map((state) => (
                             <li key={state} className={`${decodeState !== state ? 'bg-state text-white' : 'text-deep-blue py-4 bg-gray-1'} flex-1 min-w-[148px] text-xl text-center py-2 border hover:underline transition-all duration-100 border-white ${gilroy.className} font-normal`}>
                                 <Link href={`/search/${leads}/${state}`}>
