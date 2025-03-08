@@ -29,7 +29,8 @@ export const DynamicBanner = ({
     buttonLink,
     note,
     isTertiaryButton,
-    cover
+    cover,
+    priority
 }) => {
     const [isMobile, setIsMobile] = useState(null);
     useEffect(() => {
@@ -49,8 +50,8 @@ export const DynamicBanner = ({
                     alt="Mobile janitorial appointments"
                     fill
                     className="object-cover h-full w-full"
-                    priority
-                    sizes="(max-width: 786px) 350px,100vw"
+                    priority={priority}
+                    sizes="(max-width: 786px) 350px,(max-width: 1260px) 100vw, 1920px"
                 />
             </div>
 
@@ -118,6 +119,7 @@ const Banner = () => {
                             buttonLink="/register"
                             note="No Credit Card Required"
                             isTertiaryButton={false}
+                            priority={true}
                         />
                     </SwiperSlide>
                     {/* 2nd Slider */}
@@ -131,6 +133,7 @@ const Banner = () => {
                             buttonText="Book an Appointment"
                             buttonLink="/book-an-appointment"
                             isTertiaryButton={true}
+                            priority={false}
                         />
                     </SwiperSlide>
                     {/* Slider 3 */}
@@ -141,7 +144,6 @@ const Banner = () => {
                                     sizes="(max-width:786px) 100vw,100vw"
                                     alt='Exclusive Commercial cleaning leads all over the usa'
                                     fill
-                                    priority
                                     className='object-cover h-full'
                                 />
                             </div>
@@ -162,7 +164,6 @@ const Banner = () => {
                             <div className='absolute inset-0 z-20 h-full'>
                                 <Image
                                     src={image3}
-                                    priority
                                     alt="Telemarketing services for janitorial appointments and commercial cleaning leads"
                                     fill
                                     sizes="(max-width:786px) 100vw,100vw"
@@ -217,6 +218,7 @@ const Banner = () => {
                             note="No Credit Card Required"
                             isTertiaryButton={false}
                             cover={true}
+                            priority={false}
                         />
                     </SwiperSlide>
                 </Swiper>

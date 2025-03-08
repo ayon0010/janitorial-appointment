@@ -58,6 +58,7 @@ const page = () => {
                 note="No Credit Card Required"
                 isTertiaryButton={false}
                 cover={true}
+                priority={true}
             />
             <div className='2xl:px-40 xl:px-28 px-10 bg-white'>
                 <div className='2xl:py-24 xl:py-24 py-16'>
