@@ -4,6 +4,7 @@ import { client, urlFor } from "@/lib/sanity";
 import formatTimestamp from "@/js/convertTime";
 import { PortableText } from "next-sanity";
 import { blogData } from "../page";
+import Link from "next/link";
 
 export const revalidate = 1;
 export async function generateStaticParams() {
@@ -138,7 +139,7 @@ const page = async ({ params }) => {
                             },
                             marks: {
                                 sectionLink: ({ value, children }) => {
-                                    return <a href={`#${value.sectionId}`} className="text-sky-400 hover:underline">{children}</a>;
+                                    return <Link href={`#${value.sectionId}`} className="text-sky-400 hover:underline">{children}</Link>;
                                 },
                             },
                         }}
