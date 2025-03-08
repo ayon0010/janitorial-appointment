@@ -148,7 +148,7 @@ const page = async ({ params }) => {
                                         .toLowerCase()
                                         .replace(/\s+/g, '-') // Replace spaces with dashes
                                         .replace(/^-+|-+$/g, '');
-                                    return <h4 id={sectionId} className="text-lg font-medium mt-2 mb-1">{children}</h4>;
+                                    return <h4 id={sectionId} className="text-lg font-semibold mt-2 mb-1">{children}</h4>;
                                 },
                                 normal: ({ children }) => <p className="mb-4">{children}</p>,
                             },
