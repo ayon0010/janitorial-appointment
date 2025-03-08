@@ -6,11 +6,8 @@ import { useForm } from 'react-hook-form';
 import FormButton from '@/Shared/FormButton';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 import 'sweetalert2/src/sweetalert2.scss';
-import image1 from '../../public/assets/get-janitorial-appointments.webp'
-import image1mbl from '../../public/assets/get-janitorial-appointments-mobile.webp'
 import useAxiosPublic from '@/Hooks/useAxiosPublic';
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
 import SelectField from '@/Shared/SelectField';
 
 const ContactAnimation = dynamic(() => import('./ContactAnimation'), {
@@ -22,8 +19,6 @@ const AppointmentForm = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [it, setIt] = useState(false);
-    console.log(it);
-
 
     useEffect(() => {
         if (typeof window !== 'undefined' && document) {
@@ -67,8 +62,6 @@ const AppointmentForm = () => {
 
 
     const onSubmit = async (data) => {
-        console.log(data);
-
         try {
             Swal.fire({
                 title: 'Updating user...',
@@ -117,41 +110,7 @@ const AppointmentForm = () => {
     if (isMobile === null) return null;
 
     return (
-        <div className="">
-            <div className='relative h-[600px] flex flex-col'>
-                <div className='absolute inset-0 bg-black opacity-30 z-30'></div>
-                <div className="absolute inset-0 z-20 h-full">
-                    {
-                        !isMobile ?
-                            <Image
-                                src={image1}
-                                width={1263}
-                                height={600}
-                                priority
-                                className='object-cover h-full w-full'
-                                alt='Book a janitorial appointment with top commercial cleaning leads'
-                                sizes='(min-width:786px) 100vw'
-                            />
-                            :
-                            <Image
-                                src={image1mbl}
-                                height={600}
-                                width={430}
-                                priority sizes='(max-width: 768px) 100vw'
-                                className='object-cover h-full w-full'
-                                alt='Get high-quality janitorial leads for commercial cleaning appointments'
-                            />
-                    }
-                </div>
-                <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
-                    <h2 className='2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:banner-text xl:banner-text text-white'>
-                        Book Janitorial Appointments with <span className='text-green-600'>Top Commercial Cleaning Leads</span>
-                    </h2>
-                    <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80'>
-                        Connect with businesses seeking janitorial services and secure valuable appointments effortlessly!
-                    </p>
-                </div>
-            </div>
+        <>
             <div className='pt-20 px-10 pb-20'>
                 <div className="flex 2xl:flex-row xl:flex-row flex-col items-center justify-center">
                     <motion.div
@@ -326,7 +285,7 @@ const AppointmentForm = () => {
                     </div>
                 </form>
             </div>
-        </div>
+        </>
     );
 };
 
