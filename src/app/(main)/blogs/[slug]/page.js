@@ -139,7 +139,7 @@ const page = async ({ params }) => {
                             },
                             marks: {
                                 sectionLink: ({ value, children }) => {
-                                    return <Link href={`#${value.sectionId}`} className="text-sky-400 hover:underline">{children}</Link>;
+                                    return <Link href={`${value.sectionId}`} className="text-sky-400 hover:underline">{children}</Link>;
                                 },
                             },
                         }}
