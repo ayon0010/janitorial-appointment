@@ -123,6 +123,11 @@ const page = async ({ params }) => {
                                 )
                             }
                         },
+                        marks: {
+                            internalLink: ({ value, children }) => {
+                                return <a href={`#${value.sectionId}`} className="text-blue-500 underline">{children}</a>;
+                            }
+                        },
                         blocks: {
                             normal: ({ children }) => <p>{children}</p>,
                         },

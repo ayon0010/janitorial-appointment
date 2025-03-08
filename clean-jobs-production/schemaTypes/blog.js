@@ -6,7 +6,7 @@ export default {
         {
             name: 'title',
             type: 'string',
-            title: 'The title of the blog post.',
+            title: 'The title of the blog post',
         },
         {
             name: 'date',
@@ -34,7 +34,7 @@ export default {
             title: 'Slug of your blog article',
             options: {
                 source: 'title',
-            }
+            },
         },
         {
             name: 'titleImage',
@@ -55,15 +55,33 @@ export default {
                         { title: 'Heading 3', value: 'h3' },
                         { title: 'Heading 4', value: 'h4' },
                         { title: 'Heading 5', value: 'h5' },
-                        { title: 'Heading 6', value: 'h6' }, // Adding Heading 6
+                        { title: 'Heading 6', value: 'h6' },
                     ],
                     marks: {
-                        // Here, you can define custom inline styles
                         decorators: [
                             { title: 'Bold', value: 'strong' },
                             { title: 'Italic', value: 'em' },
                             { title: 'Underline', value: 'underline' },
-                            // Add more custom styles as needed
+                        ],
+                        annotations: [
+                            {
+                                name: 'internalLink',
+                                type: 'object',
+                                title: 'Internal Link',
+                                fields: [
+                                    {
+                                        name: '_key', // Required for tracking
+                                        type: 'string',
+                                        hidden: true,
+                                    },
+                                    {
+                                        name: 'sectionId',
+                                        type: 'string',
+                                        title: 'Section ID',
+                                        description: 'Enter the ID of the section to link to.',
+                                    },
+                                ],
+                            },
                         ],
                     },
                 },
@@ -90,12 +108,12 @@ export default {
                                     { title: 'Grid', value: 'grid' },
                                     { title: 'Block', value: 'block' },
                                 ],
-                                layout: 'radio', // Use radio buttons for selection
+                                layout: 'radio',
                             },
                         },
                     ],
                 },
             ],
         },
-    ]
-}
+    ],
+};
