@@ -26,6 +26,11 @@
   background-size: cover;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;

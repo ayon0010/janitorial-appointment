@@ -6,7 +6,7 @@ export default {
         {
             name: 'title',
             type: 'string',
-            title: 'The title of the blog post',
+            title: 'The title of the blog post.',
         },
         {
             name: 'date',
@@ -34,7 +34,7 @@ export default {
             title: 'Slug of your blog article',
             options: {
                 source: 'title',
-            },
+            }
         },
         {
             name: 'titleImage',
@@ -63,22 +63,17 @@ export default {
                             { title: 'Italic', value: 'em' },
                             { title: 'Underline', value: 'underline' },
                         ],
+                        // Adding sectionId as a custom mark
                         annotations: [
                             {
-                                name: 'internalLink',
+                                name: 'sectionLink',
+                                title: 'Section Link',
                                 type: 'object',
-                                title: 'Internal Link',
                                 fields: [
-                                    {
-                                        name: '_key', // Required for tracking
-                                        type: 'string',
-                                        hidden: true,
-                                    },
                                     {
                                         name: 'sectionId',
                                         type: 'string',
                                         title: 'Section ID',
-                                        description: 'Enter the ID of the section to link to.',
                                     },
                                 ],
                             },
@@ -115,5 +110,5 @@ export default {
                 },
             ],
         },
-    ],
-};
+    ]
+}

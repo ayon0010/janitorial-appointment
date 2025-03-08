@@ -94,18 +94,18 @@ const page = async ({ params }) => {
                     <p className=" text-xl font-semibold">By {data?.authorName}</p>
                 </div>
                 <div className="prose 2xl:prose-xl xl:prose-xl prose-indigo">
-                    <PortableText value={data?.content} components={{
-                        types: {
-                            imageGroup: ({ value }) => {
-                                const { images, layout } = value;
-                                if (!images || images.length === 0) return null;
-                                const imageUrls = images.map(image => urlFor(image.asset).url());
+                    <PortableText
+                        value={data?.content}
+                        components={{
+                            types: {
+                                imageGroup: ({ value }) => {
+                                    const { images, layout } = value;
+                                    if (!images || images.length === 0) return null;
+                                    const imageUrls = images.map(image => urlFor(image.asset).url());
 
-                                return (
-                                    <div className={`${layout === 'grid' ? 'grid 2xl:grid-cols-3 xl:grid-cols-3 gap-4 items-stretch' : 'block'
-                                        }`}>
-                                        {
-                                            imageUrls?.map((url, i) => {
+                                    return (
+                                        <div className={`${layout === 'grid' ? 'grid 2xl:grid-cols-3 xl:grid-cols-3 gap-4 items-stretch' : 'block'}`}>
+                                            {imageUrls?.map((url, i) => {
                                                 return (
                                                     <Image
                                                         key={i}
@@ -113,25 +113,37 @@ const page = async ({ params }) => {
                                                         alt={`${params.slug}`}
                                                         width={950}
                                                         height={665}
-                                                        className={`rounded-lg shadow-lg h-auto ${layout === 'grid' ? 'w-full' : 'mb-4'
-                                                            } `}
+                                                        className={`rounded-lg shadow-lg h-auto ${layout === 'grid' ? 'w-full' : 'mb-4'}`}
                                                     />
-                                                )
-                                            })
-                                        }
-                                    </div>
-                                )
-                            }
-                        },
-                        marks: {
-                            internalLink: ({ value, children }) => {
-                                return <a href={`#${value.sectionId}`} className="text-blue-500 underline">{children}</a>;
-                            }
-                        },
-                        blocks: {
-                            normal: ({ children }) => <p>{children}</p>,
-                        },
-                    }} />
+                                                );
+                                            })}
+                                        </div>
+                                    );
+                                }
+                            },
+                            block: {
+                                h2: ({ children }) => {
+                                    const sectionId = children.toString().toLowerCase().replace(/\s+/g, '-');
+                                    return <h2 id={sectionId} className="text-2xl font-bold mt-6 mb-3">{children}</h2>;
+                                },
+                                h3: ({ children }) => {
+                                    const sectionId = children.toString().toLowerCase().replace(/\s+/g, '-');
+                                    return <h3 id={sectionId} className="text-xl font-semibold mt-4 mb-2">{children}</h3>;
+                                },
+                                h4: ({ children }) => {
+                                    const sectionId = children.toString().toLowerCase().replace(/\s+/g, '-');
+                                    return <h4 id={sectionId} className="text-lg font-medium mt-2 mb-1">{children}</h4>;
+                                },
+                                normal: ({ children }) => <p className="mb-4">{children}</p>,
+                            },
+                            marks: {
+                                sectionLink: ({ value, children }) => {
+                                    return <a href={`#${value.sectionId}`} className="text-blue-500 underline">{children}</a>;
+                                },
+                            },
+                        }}
+                    />
+
                 </div>
             </div>
         </div>
