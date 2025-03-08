@@ -32,27 +32,26 @@ export const DynamicBanner = ({
     cover,
     priority
 }) => {
-    const [isMobile, setIsMobile] = useState(null);
-    useEffect(() => {
-        // Check screen width on mount & window resize
-        const handleResize = () => setIsMobile(window.innerWidth < 786);
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-    if (isMobile === null) return null;
     return (
         <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto w-full">
             {/* Background Images */}
             <div className="absolute inset-0 z-20 h-full">
                 <Image
-                    src={isMobile ? mobileImage : desktopImage}
-                    alt="Mobile janitorial appointments"
-                    fill
-                    objectFit="cover"
-                    className="h-full w-full"
-                    priority={priority}
-                    sizes="(max-width: 786px) 100vw, 100vw"
+                    src={desktopImage}
+                    width={1263}
+                    height={600}
+                    priority
+                    className='object-cover h-full w-full 2xl:block xl:block hidden'
+                    alt='Janitorial Appointments'
+                    sizes='(min-width:787px) 100vw'
+                />
+                <Image
+                    src={mobileImage}
+                    height={600}
+                    width={430}
+                    priority sizes='(max-width: 768px) 430px'
+                    className='object-cover h-full w-full 2xl:hidden xl:hidden block'
+                    alt='Janitorial Appointment'
                 />
             </div>
 
