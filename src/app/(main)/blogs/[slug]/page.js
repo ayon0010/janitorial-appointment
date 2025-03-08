@@ -121,7 +121,7 @@ const page = async ({ params }) => {
                                     );
                                 }
                             },
-                            block: {
+                            blocks: {
                                 h2: ({ children }) => {
                                     const sectionId = children.toString().toLowerCase().replace(/\s+/g, '-');
                                     return <h2 id={sectionId} className="text-2xl font-bold mt-6 mb-3">{children}</h2>;
@@ -138,7 +138,7 @@ const page = async ({ params }) => {
                             },
                             marks: {
                                 sectionLink: ({ value, children }) => {
-                                    return <a href={`#${value.sectionId}`} className="text-blue-500 underline">{children}</a>;
+                                    return <a href={`#${value.sectionId}`} className="text-sky-400 hover:underline">{children}</a>;
                                 },
                             },
                         }}
