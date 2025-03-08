@@ -49,9 +49,10 @@ export const DynamicBanner = ({
                     src={isMobile ? mobileImage : desktopImage}
                     alt="Mobile janitorial appointments"
                     fill
-                    className="object-cover h-full w-full"
+                    objectFit="cover"
+                    className="h-full w-full"
                     priority={priority}
-                    sizes="(max-width: 786px) 350px,(max-width: 1260px) 100vw, 1920px"
+                    sizes="(max-width: 786px) 350px,(max-width: 1260px) 800px, 1920px"
                 />
             </div>
 
