@@ -122,24 +122,39 @@ const page = async ({ params }) => {
                                     );
                                 }
                             },
-                            blocks: {
+                            block: {
                                 h2: ({ children }) => {
-                                    const sectionId = children.toString().toLowerCase().replace(/\s+/g, '-');
+                                    const sectionId = children
+                                        .map(child => (typeof child === "string" ? child.trim() : ""))
+                                        .join(" ")
+                                        .toLowerCase()
+                                        .replace(/\s+/g, '-') // Replace spaces with dashes
+                                        .replace(/^-+|-+$/g, '');
                                     return <h2 id={sectionId} className="text-2xl font-bold mt-6 mb-3">{children}</h2>;
                                 },
                                 h3: ({ children }) => {
-                                    const sectionId = children.toString().toLowerCase().replace(/\s+/g, '-');
+                                    const sectionId = children
+                                        .map(child => (typeof child === "string" ? child.trim() : ""))
+                                        .join(" ")
+                                        .toLowerCase()
+                                        .replace(/\s+/g, '-') // Replace spaces with dashes
+                                        .replace(/^-+|-+$/g, '');
                                     return <h3 id={sectionId} className="text-xl font-semibold mt-4 mb-2">{children}</h3>;
                                 },
                                 h4: ({ children }) => {
-                                    const sectionId = children.toString().toLowerCase().replace(/\s+/g, '-');
+                                    const sectionId = children
+                                        .map(child => (typeof child === "string" ? child.trim() : ""))
+                                        .join(" ")
+                                        .toLowerCase()
+                                        .replace(/\s+/g, '-') // Replace spaces with dashes
+                                        .replace(/^-+|-+$/g, '');
                                     return <h4 id={sectionId} className="text-lg font-medium mt-2 mb-1">{children}</h4>;
                                 },
                                 normal: ({ children }) => <p className="mb-4">{children}</p>,
                             },
                             marks: {
                                 sectionLink: ({ value, children }) => {
-                                    return <Link href={`${value.sectionId}`} className="text-sky-400 hover:underline">{children}</Link>;
+                                    return <Link href={`#${value.sectionId}`} className="text-sky-400 hover:underline">{children}</Link>;
                                 },
                             },
                         }}
