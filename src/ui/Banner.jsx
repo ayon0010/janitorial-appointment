@@ -49,7 +49,8 @@ export const DynamicBanner = ({
                     src={mobileImage}
                     height={600}
                     width={430}
-                    priority sizes='(max-width: 768px) 430px'
+                    priority 
+                    sizes='(max-width: 768px) 430px'
                     className='object-cover h-full w-full 2xl:hidden xl:hidden block'
                     alt='Janitorial Appointment'
                 />
