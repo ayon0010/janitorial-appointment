@@ -33,7 +33,7 @@ export const DynamicBanner = ({
     priority
 }) => {
     return (
-        <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto w-full">
+        <div className="flex flex-col relative h-[600px] w-full">
             {/* Background Images */}
             <div className="absolute inset-0 z-20 h-full">
                 <Image
@@ -46,7 +46,7 @@ export const DynamicBanner = ({
                 />
                 <Image
                     src={mobileImage}
-                   fill
+                    fill
                     priority={priority}
                     sizes='(max-width: 768px) 430px'
                     className='object-cover h-full w-full 2xl:hidden xl:hidden block'
