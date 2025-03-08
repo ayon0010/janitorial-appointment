@@ -82,7 +82,6 @@ export const metadata = {
 };
 
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" >
@@ -93,6 +92,7 @@ export default function RootLayout({ children }) {
           <meta name="keywords" content={metadata.keywords} />
           <meta name="robots" content="index, follow" />
           <link rel="canonical" href="https://www.janitorialappointment.com" />
+          <link rel="preload" href="../globals.css" as="style" />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: metadata.other["application/ld+json"] }}
