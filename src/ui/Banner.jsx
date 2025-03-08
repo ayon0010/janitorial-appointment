@@ -40,7 +40,7 @@ export const DynamicBanner = ({
                     src={desktopImage}
                     width={1263}
                     height={600}
-                    priority
+                    priority={priority}
                     className='object-cover h-full w-full 2xl:block xl:block hidden'
                     alt='Janitorial Appointments'
                     sizes='(min-width:787px) 100vw'
@@ -49,7 +49,7 @@ export const DynamicBanner = ({
                     src={mobileImage}
                     height={600}
                     width={430}
-                    priority 
+                    priority={priority}
                     sizes='(max-width: 768px) 430px'
                     className='object-cover h-full w-full 2xl:hidden xl:hidden block'
                     alt='Janitorial Appointment'
