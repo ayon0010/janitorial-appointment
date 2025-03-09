@@ -32,7 +32,7 @@ export const DynamicBanner = ({
                     width={430}
                     height={600}
                     priority={priority}
-                    sizes='(max-width: 768px) 85vw'
+                    sizes='(max-width: 768px) 90vw'
                     className='object-cover h-full w-full 2xl:hidden xl:hidden block'
                     alt='Janitorial Appointment'
                 />
