@@ -21,7 +21,8 @@ import desing4 from '@/../public/assets/927cc8b897e6124b1c31ff8bc507f55a_result_
 import Link from 'next/link';
 import image5 from '@/../public/assets/web-and-app-services.webp'
 import image5mbl from '@/../public/assets/web-and-app-services-mobile.webp'
-import { DynamicBanner } from '@/ui/Banner';
+import { DynamicBanner } from '@/ui/DynamicBanner';
+
 
 
 export const metadata = {
