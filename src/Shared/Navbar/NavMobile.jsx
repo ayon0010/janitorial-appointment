@@ -5,7 +5,7 @@ const ButtonPrimary = dynamic(() => import('@/ui/ButtonPrimary'), { ssr: false }
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import logo from '../../public/assets/Janitorial.png';
+import logo from '@/../public/assets/Janitorial.png';
 import { usePathname } from 'next/navigation';
 import { FaChevronDown } from 'react-icons/fa';
 

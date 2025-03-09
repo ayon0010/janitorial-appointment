@@ -5,10 +5,10 @@ import AuthProvider from '@/Providers/AuthProvider'
 import QueryProvider from '@/Providers/QueryProvider'
 import Footer from '@/Shared/Footer'
 import ChatProvider from '@/Providers/ChatProvider'
-import Navbar from '@/Shared/Navbar'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import Head from 'next/head'
+import Navbar from '@/Shared/Navbar/Navbar'
 
 export const nunito = Nunito({
   subsets: ['latin'],
@@ -25,6 +25,7 @@ export const gilroy = localFont({
       style: 'normal',
     },
   ],
+  display: 'swap',
 })
 
 

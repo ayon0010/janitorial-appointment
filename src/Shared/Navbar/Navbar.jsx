@@ -2,19 +2,14 @@
 import React, { useEffect, useState } from 'react';
 import { jwtDecode } from 'jwt-decode';
 import Cookies from 'js-cookie';
-import Facebook from '@/icons/Facebook';
-import FaLinkedIn from '@/icons/FaLinkedIn';
-import FaTwitter from '@/icons/FaTwitter';
-import FaWhatsapp from '@/icons/FaWhatsapp';
-import FaPhone from '@/icons/FaPhone';
-import FaEmail from '@/icons/FaEmail';
 import dynamic from 'next/dynamic'
 const NavItems = dynamic(() => import('./NavItems'), { ssr: false });
 const NavUser = dynamic(() => import('./NavUser'), { ssr: false });
 const NavMobile = dynamic(() => import('./NavMobile'), { ssr: false });
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../public/assets/Janitorial.png';
+import logo from '@/../public/assets/Janitorial.png';
+import NavComponent from './NavComponent';
 
 
 const Navbar = () => {
@@ -83,40 +78,6 @@ const Navbar = () => {
         }
 
     }, [])
-
-
-    // Nav Top Part
-    const NavComponent = () => {
-        return (
-            <div className='w-full 2xl:h-[60px] xl:h-[60px] h-0 hidden 2xl:flex xl:flex items-center justify-between bg-sky-200'>
-                <div className='flex gap-4 items-center px-11 py-[12px]'>
-                    <h3 className='text-base'>Connect with us</h3>
-                    <div className='nav-start flex gap-1'>
-                        <Facebook />
-                        <FaLinkedIn />
-                        <FaTwitter />
-                        <FaWhatsapp />
-                    </div>
-                </div>
-                <div className='nav-end flex items-center gap-12 pe-6'>
-                    <div className='flex items-center gap-2'>
-                        <FaEmail />
-                        <p className='font-normal text-sm hover:text-deep-blue transition-colors duration-500 cursor-pointer'>
-                            <a href="mailto:contact@janitorialappointment.com">contact@janitorialappointment.com</a>
-                        </p>
-                    </div>
-                    {/* <div className='bg-deep-blue flex items-center gap-1 px-12 py-[18px]'>
-                        <FaPhone />
-                        <div className="phone-number">
-                            <a href="tel:+8801726108060">
-                                <span className="letter text-base font-semibold text-white animate__backOutDown">+8801726108060</span>
-                            </a>
-                        </div>
-                    </div> */}
-                </div>
-            </div>
-        )
-    }
 
     return (
         <div className={`w-full relative z-[100]`}>
