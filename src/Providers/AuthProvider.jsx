@@ -13,7 +13,9 @@ import {
 import useAxiosPublic from "@/Hooks/useAxiosPublic";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
-import { app } from "@/js/firebase.init";
+const app = dynamic(() => import("@/js/firebase.init").then(mod => mod.app), {
+    ssr: false,
+});
 
 // Create context for authentication
 export const AuthContext = createContext();
