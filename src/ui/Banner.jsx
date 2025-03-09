@@ -7,7 +7,6 @@ import 'swiper/css/pagination';
 import { TypeAnimation } from 'react-type-animation';
 import Link from 'next/link';
 import ButtonTertiary from './ButtonTertiary';
-import ButtonPrimary from './ButtonPrimary';
 import Image from 'next/image';
 import image1 from '@/../public/assets/janitorial-appointments.webp';
 import image1mbl from '../../public/assets/janitorial-appointments-mobile.webp';
@@ -17,73 +16,7 @@ import image3 from '@/../public/assets/telemarketing-for-janitorial-campaign.web
 import image4 from '@/../public/assets/commercial-cleaning-leads-usa.webp'
 import image5 from '@/../public/assets/web-and-app-services.webp'
 import image5mbl from '../../public/assets/web-and-app-services-mobile.webp'
-import { useEffect, useState } from 'react';
-
-export const DynamicBanner = ({
-    desktopImage,
-    mobileImage,
-    title,
-    highlightedText,
-    description,
-    buttonText,
-    buttonLink,
-    note,
-    isTertiaryButton,
-    cover,
-    priority
-}) => {
-    return (
-        <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto w-full">
-            {/* Background Images */}
-            <div className="absolute inset-0 z-20 h-full">
-                <Image
-                    src={desktopImage}
-                    fill
-                    priority={priority}
-                    className='object-cover h-full w-full 2xl:block xl:block hidden'
-                    alt='Janitorial Appointments'
-                    sizes='(min-width:787px) 100vw'
-                />
-                <Image
-                    src={mobileImage}
-                    fill
-                    priority={priority}
-                    sizes='(max-width: 768px) 430px'
-                    className='object-cover h-full w-full 2xl:hidden xl:hidden block'
-                    alt='Janitorial Appointment'
-                />
-            </div>
-
-            {/* Overlays */}
-            <div className="absolute inset-0 bg-black opacity-40 z-30"></div>
-
-            {/* Content Section */}
-            <div className="my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40">
-                <h1 className="text-white font-bold 2xl:text-6xl xl:text-5xl text-3xl">
-                    {title} <span className="text-green-600 banner-text">{highlightedText}</span>
-                </h1>
-                <p className="my-6 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80">
-                    {description}
-                </p>
-                <div className="flex items-center gap-6">
-                    <Link href={`${buttonLink ? buttonLink : ''}`}>
-                        {isTertiaryButton ? (
-                            <ButtonTertiary label={buttonText} />
-                        ) : (
-                            <ButtonPrimary label={buttonText} />
-                        )}
-                    </Link>
-                    {note && (
-                        <p className="text-white opacity-8 font-bold 2xl:text-base xl:text-base text-xs">
-                            {note}
-                        </p>
-                    )}
-                </div>
-            </div>
-        </div>
-    );
-};
-
+import { DynamicBanner } from './DynamicBanner';
 
 const Banner = () => {
     return (
