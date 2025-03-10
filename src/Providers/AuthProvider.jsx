@@ -72,35 +72,42 @@ const AuthProvider = ({ children }) => {
     };
 
     useEffect(() => {
+        let unsubscribe;
         const subscribe = async () => {
             const { onAuthStateChanged } = await import("firebase/auth");
-            return (
-                onAuthStateChanged(auth, async (currentUser) => {
-                    if (currentUser) {
-                        setLoader(true); // Show loader while fetching user data
-                        try {
-                            const response = await axiosPublic.post('/userEmail', { email: currentUser.email, userName: currentUser.displayName });
-                            const { token } = response?.data;
-                            if (token) {
-                                Cookies.set('userToken', token, { expires: 1 / 24 });
-                                setUser(currentUser);
-                            }
-                        } catch (error) {
-                            setError(`Error fetching user data: ${error.message}`);
+            unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+                if (currentUser) {
+                    setLoader(true);
+                    try {
+                        const response = await axiosPublic.post('/userEmail', {
+                            email: currentUser.email,
+                            userName: currentUser.displayName
+                        });
+                        const { token } = response?.data;
+                        if (token) {
+                            Cookies.set('userToken', token, { expires: 1 / 24 });
+                            setUser(currentUser);
+                        } else {
+                            setUser(null);
                         }
-                        setLoader(false);
-                    } else {
-                        // If no user, clear token and user data
-                        setUser(null);
-                        setLoader(false);
-                        Cookies.remove('userToken');
+                    } catch (error) {
+                        setError(`Error fetching user data: ${error.message}`);
                     }
-                })
-            )
-        }
+                    setLoader(false);
+                } else {
+                    setUser(null);
+                    setLoader(false);
+                    Cookies.remove('userToken');
+                }
+            });
+        };
 
-        return () => subscribe(); // Cleanup subscription on unmount
+        subscribe();
+        return () => {
+            if (unsubscribe) unsubscribe();
+        };
     }, [auth, axiosPublic]);
+
 
     // Expose authentication methods via context
     const authInfo = {
