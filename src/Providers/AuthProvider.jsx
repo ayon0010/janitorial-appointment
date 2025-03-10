@@ -1,46 +1,45 @@
-'use client'
-import { createContext, useEffect, useState } from "react";
-import {
-    confirmPasswordReset,
-    createUserWithEmailAndPassword,
-    getAuth,
-    onAuthStateChanged,
-    sendPasswordResetEmail,
-    signInWithEmailAndPassword,
-    signOut,
-    updateProfile
-} from "firebase/auth";
-import useAxiosPublic from "@/Hooks/useAxiosPublic";
-import Cookies from "js-cookie";
+"use client";
+import { createContext, useEffect, useMemo, useState } from "react";
+import { getAuth } from "firebase/auth";
 import { useRouter } from "next/navigation";
+import useAxiosPublic from "@/Hooks/useAxiosPublic";
 import { app } from "@/js/firebase.init";
 
-// Create context for authentication
+// Create authentication context
 export const AuthContext = createContext();
 
+// Singleton pattern to prevent multiple Firebase instances
+let authInstance;
+const getFirebaseAuth = () => {
+    if (!authInstance) {
+        authInstance = getAuth(app);
+    }
+    return authInstance;
+};
+
 const AuthProvider = ({ children }) => {
-    const auth = getAuth(app);
+    const auth = getFirebaseAuth();
     const router = useRouter();
+    const axiosPublic = useAxiosPublic();
 
     const [user, setUser] = useState(null);
     const [loader, setLoader] = useState(true);
-    const [error, setError] = useState(null); // Error state to manage issues
+    const [error, setError] = useState(null);
 
-    const axiosPublic = useAxiosPublic();
-
-    // Functions for authentication
-    const signUp = (email, password) => {
+    // Lazy load Firebase functions to reduce unused JavaScript
+    const signUp = async (email, password) => {
+        const { createUserWithEmailAndPassword } = await import("firebase/auth");
         return createUserWithEmailAndPassword(auth, email, password);
     };
 
-    const signIn = (email, password) => {
+    const signIn = async (email, password) => {
+        const { signInWithEmailAndPassword } = await import("firebase/auth");
         return signInWithEmailAndPassword(auth, email, password);
     };
 
-    const updateUserProfile = (name) => {
-        return updateProfile(auth.currentUser, {
-            displayName: name
-        });
+    const updateUserProfile = async (name) => {
+        const { updateProfile } = await import("firebase/auth");
+        return updateProfile(auth.currentUser, { displayName: name });
     };
 
     const changePassword = async (email) => {
@@ -49,6 +48,7 @@ const AuthProvider = ({ children }) => {
             return;
         }
         try {
+            const { sendPasswordResetEmail } = await import("firebase/auth");
             await sendPasswordResetEmail(auth, email);
             console.log("Password reset email sent successfully.");
         } catch (error) {
@@ -58,48 +58,53 @@ const AuthProvider = ({ children }) => {
 
     const verifyPassword = async (actionCode, newPassword) => {
         try {
+            const { confirmPasswordReset } = await import("firebase/auth");
             await confirmPasswordReset(auth, actionCode, newPassword);
-            console.log('Password reset successful');
+            console.log("Password reset successful");
         } catch (error) {
             setError(`Error resetting password: ${error.message}`);
         }
     };
 
-    const logOut = () => {
-        router.push('/');
-        Cookies.remove('userToken');
-        sessionStorage.removeItem('paymentLink');
-        return signOut(auth);
+    const logOut = async () => {
+        const { signOut } = await import("firebase/auth");
+        await signOut(auth);
+        sessionStorage.removeItem("userToken");
+        sessionStorage.removeItem("paymentLink");
+        router.push("/");
+        setUser(null);
     };
 
+    // Handle authentication state changes
     useEffect(() => {
-        const subscribe = onAuthStateChanged(auth, async (currentUser) => {
+        const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
+            setLoader(true);
             if (currentUser) {
-                setLoader(true); // Show loader while fetching user data
                 try {
-                    const response = await axiosPublic.post('/userEmail', { email: currentUser.email, userName: currentUser.displayName });
+                    const response = await axiosPublic.post("/userEmail", {
+                        email: currentUser.email,
+                        userName: currentUser.displayName,
+                    });
                     const { token } = response?.data;
                     if (token) {
-                        Cookies.set('userToken', token, { expires: 1 / 24 });
+                        sessionStorage.setItem("userToken", token);
                         setUser(currentUser);
                     }
                 } catch (error) {
                     setError(`Error fetching user data: ${error.message}`);
                 }
-                setLoader(false);
             } else {
-                // If no user, clear token and user data
                 setUser(null);
-                setLoader(false);
-                Cookies.remove('userToken');
+                sessionStorage.removeItem("userToken");
             }
+            setLoader(false);
         });
 
-        return () => subscribe(); // Cleanup subscription on unmount
-    }, [auth, axiosPublic]);
+        return () => unsubscribe();
+    }, [axiosPublic]); // Removed `auth` from dependencies since it doesn't change
 
-    // Expose authentication methods via context
-    const authInfo = {
+    // Memoize context values to prevent unnecessary re-renders
+    const authInfo = useMemo(() => ({
         signUp,
         signIn,
         logOut,
@@ -109,7 +114,7 @@ const AuthProvider = ({ children }) => {
         changePassword,
         verifyPassword,
         error,
-    };
+    }), [user, loader, error]);
 
     return (
         <AuthContext.Provider value={authInfo}>
