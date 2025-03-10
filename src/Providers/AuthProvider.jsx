@@ -65,10 +65,10 @@ const AuthProvider = ({ children }) => {
 
     const logOut = async () => {
         const { signOut } = await import("firebase/auth");
+        await signOut(auth);
         router.push('/');
         Cookies.remove('userToken');
         sessionStorage.removeItem('paymentLink');
-        return signOut(auth);
     };
 
     useEffect(() => {
@@ -87,8 +87,6 @@ const AuthProvider = ({ children }) => {
                         if (token) {
                             Cookies.set('userToken', token, { expires: 1 / 24 });
                             setUser(currentUser);
-                        } else {
-                            setUser(null);
                         }
                     } catch (error) {
                         setError(`Error fetching user data: ${error.message}`);
