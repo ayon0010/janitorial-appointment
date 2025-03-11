@@ -77,6 +77,9 @@ export default function Home() {
     return (
         <>
             {/* Banner */}
+            <div className="2xl:block xl:block hidden">
+                <Banner />
+            </div>
             <div className="2xl:hidden xl:hidden block">
                 <DynamicBanner
                     mobileImage={image1mbl}
@@ -89,9 +92,6 @@ export default function Home() {
                     isTertiaryButton={false}
                     priority={true}
                 />
-            </div>
-            <div className="2xl:block xl:block hidden">
-                <Banner />
             </div>
             <div className="mt-20">
                 <div className="2xl:px-10 xl:px-10 px-6">
