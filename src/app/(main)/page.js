@@ -17,6 +17,12 @@ import ReviewItems from "../../ui/ReviewItems";
 import { data } from '@/js/states';
 import ContactInfo from "@/ui/ContactInfo";
 import AudioPlayer from "@/Shared/Audio";
+import ButtonPrimary from "@/ui/ButtonPrimary";
+import Link from "next/link";
+import { headers } from "next/headers";
+import { DynamicBanner } from "@/ui/DynamicBanner";
+import image1mbl from '@/../public/assets/janitorial-appointments-mobile.webp';
+
 
 export const metadata = {
     title: "Janitorial Appointments - Commercial Cleaning Leads",
@@ -71,11 +77,26 @@ export const metadata = {
 };
 
 
-export default function Home() {
+export default async function Home() {
+    const headersList = await headers();
+    const userAgent = headersList.get("user-agent") || "";
+    const isMobile = /Mobi|Android/i.test(userAgent);
+    console.log(isMobile);
+
     return (
         <>
             {/* Banner */}
-            <Banner />
+            {isMobile ? <DynamicBanner
+                mobileImage={image1mbl}
+                title="Unlock Cleaning"
+                highlightedText="Opportunities"
+                description="Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!"
+                buttonText="Sign Up"
+                buttonLink="/register"
+                note="No Credit Card Required"
+                isTertiaryButton={false}
+                priority={true}
+            /> : <Banner />}
             <div className="mt-20">
                 <div className="2xl:px-10 xl:px-10 px-6">
                     <div className="px-6 mb-10">
@@ -110,7 +131,7 @@ export default function Home() {
 
             <div className=" md:px-10 px-6">
                 <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row-reverse flex-col">
-                    <div className="md:w-fit w-full md:pb-6 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F5F6F7] rounded-[32px]">
+                    <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F5F6F7] rounded-[32px] h-fit">
                         <Image
                             src={slide4}
                             alt="Commercial Cleaning Leads across USA"
@@ -122,7 +143,7 @@ export default function Home() {
                             priority={false} // Use `true` if this image is above the fold
                         />
                     </div>
-                    <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pr-24">
+                    <div className="md:space-y-3 space-y-3 md:w-1/2 w-full md:my-auto md:pr-24">
                         <h1 className="text-primary  font-medium md:text-lg text-sm">Nationwide Lead Supply</h1>
                         <h2 className="md:text-5xl text-3xl  font-semibold">
                             Get Quality Leads from Anywhere in the U.S.
@@ -155,6 +176,11 @@ export default function Home() {
                                 </div>
                                 <p className="md:text-lg text-sm font-medium ">Verified and Targeted Leads</p>
                             </div>
+                        </div>
+                        <div>
+                            <Link href={'/search/exclusive-leads'}>
+                                <ButtonPrimary label={'View More'} />
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -195,6 +221,11 @@ export default function Home() {
                                 <p className="md:text-lg text-sm font-medium ">Expanded Opportunities</p>
                             </div>
                         </div>
+                        <div>
+                            <Link href={'/search/exclusive-leads'}>
+                                <ButtonPrimary label={'View More'} />
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
@@ -233,6 +264,11 @@ export default function Home() {
                                 </div>
                                 <p className="md:text-lg text-sm font-medium ">Enhanced Collaboration</p>
                             </div>
+                        </div>
+                        <div>
+                            <Link href={'/search/exclusive-leads'}>
+                                <ButtonPrimary label={'View More'} />
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -277,6 +313,11 @@ export default function Home() {
                                 </div>
                                 <p className="md:text-lg text-sm font-medium ">Boosted Business Growth</p>
                             </div>
+                        </div>
+                        <div>
+                            <Link href={'/search/exclusive-leads'}>
+                                <ButtonPrimary label={'View More'} />
+                            </Link>
                         </div>
                     </div>
                 </div>

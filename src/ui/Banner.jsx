@@ -1,8 +1,7 @@
 'use client'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css/navigation';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import { TypeAnimation } from 'react-type-animation';
 import Link from 'next/link';
 import ButtonTertiary from './ButtonTertiary';
