@@ -8,9 +8,7 @@ import Link from 'next/link';
 import ButtonTertiary from './ButtonTertiary';
 import Image from 'next/image';
 import image1 from '@/../public/assets/janitorial-appointments.webp';
-import image1mbl from '../../public/assets/janitorial-appointments-mobile.webp';
 import image2 from '@/../public/assets/book-an-janitorial-appointments.webp';
-import image2mbl from '@/../public/assets/book-an-janitorial-appointments-mobile.webp';
 import image3 from '@/../public/assets/telemarketing-for-janitorial-campaign.webp'
 import image4 from '@/../public/assets/commercial-cleaning-leads-usa.webp'
 import image5 from '@/../public/assets/web-and-app-services.webp'
@@ -42,7 +40,6 @@ const Banner = () => {
                     <SwiperSlide>
                         <DynamicBanner
                             desktopImage={image1}
-                            mobileImage={image1mbl}
                             title="Unlock Cleaning"
                             highlightedText="Opportunities"
                             description="Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!"
@@ -57,7 +54,6 @@ const Banner = () => {
                     <SwiperSlide>
                         <DynamicBanner
                             desktopImage={image2}
-                            mobileImage={image2mbl}
                             title="Schedule"
                             highlightedText="Appointments"
                             description="Book appointments now to get the desired leads that match your business needs and unlock new opportunities effortlessly!"
