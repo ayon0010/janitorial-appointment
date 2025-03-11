@@ -1,4 +1,6 @@
-import { FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook";
+import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
+import { FaWhatsapp } from "@react-icons/all-files/fa/FaWhatsapp";
 import Logo from "./Logo";
 import ButtonSecondary from "@/ui/ButtonSecondary";
 import SubscribeEmail from "@/ui/SubscribeEmail";

@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import { FaStar } from 'react-icons/fa';
+import { FaStar } from "@react-icons/all-files/fa/FaStar";
 import Rating from "react-rating";
 
 const ReviewItems = ({ d }) => {

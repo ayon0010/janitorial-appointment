@@ -1,5 +1,5 @@
 export const dynamic = "force-dynamic";
-import { FaList, } from 'react-icons/fa';
+import { FaList } from "@react-icons/all-files/fa/FaList";
 import FaContract from '@/icons/FaContract';
 import FaShoppingCart from '@/icons/FaShoppingCart';
 import FaHand from '@/icons/FaHand';

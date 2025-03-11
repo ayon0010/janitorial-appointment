@@ -7,7 +7,7 @@ import {
 } from "@stripe/react-stripe-js";
 import useAuth from "@/Hooks/useAuth";
 import Swal from "sweetalert2";
-import { FaStripe } from "react-icons/fa";
+import { FaStripe } from "@react-icons/all-files/fa/FaStripe";
 import useAxiosSecure from "@/Hooks/useAxiosSecure";
 
 export default function PaymentForm({ dpmCheckerLink, product_Id, closeModal }) {

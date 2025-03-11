@@ -1,10 +1,14 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import { IoMdCloseCircleOutline } from 'react-icons/io';
+import { IoMdCloseCircleOutline } from "@react-icons/all-files/io/IoMdCloseCircleOutline";
 import menu from '../../public/assets/burger-menu-svgrepo-com.svg'
 import logo from '@/../public/assets/Janitorial.png';
 import Image from 'next/image';
-import { FaFacebookSquare, FaLinkedinIn, FaTwitterSquare, FaWhatsappSquare } from 'react-icons/fa';
+import { FaFacebookSquare } from "@react-icons/all-files/fa/FaFacebookSquare";
+import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn";
+import { FaTwitterSquare } from "@react-icons/all-files/fa/FaTwitterSquare";
+import { FaWhatsappSquare } from "@react-icons/all-files/fa/FaWhatsappSquare";
+
 
 const SideBar = () => {
     const [open, setOpen] = useState(false);

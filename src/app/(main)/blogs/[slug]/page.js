@@ -1,4 +1,4 @@
-import { FaRegCalendar } from "react-icons/fa";
+import { FaRegCalendar } from "@react-icons/all-files/fa/FaRegCalendar";
 import Image from "next/image";
 import { client, urlFor } from "@/lib/sanity";
 import formatTimestamp from "@/js/convertTime";

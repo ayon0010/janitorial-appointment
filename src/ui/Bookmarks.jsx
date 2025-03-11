@@ -3,8 +3,8 @@ import useAuth from '@/Hooks/useAuth';
 import useAxiosSecure from '@/Hooks/useAxiosSecure';
 import GetData from '@/lib/GetData';
 import React, { useState, useEffect } from 'react';
-import { FaBookmark } from 'react-icons/fa';
-import { MdBookmark } from 'react-icons/md';
+import { FaBookmark } from "@react-icons/all-files/fa/FaBookmark";
+import { MdBookmark } from "@react-icons/all-files/md/MdBookmark";
 import Swal from 'sweetalert2';
 
 const Bookmarks = ({ id }) => {

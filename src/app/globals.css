@@ -226,39 +226,6 @@ input[type="checkbox"]:checked~.collapse-content {
   /* Change to your desired color */
 }
 
-
-.web {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url('../../public/assets/it-expert-for-cleaning-companies.webp');
-  height: 600px;
-  /* Matches the height of your div */
-  margin-top: 20px;
-  /* For spacing above */
-  position: relative;
-  /* Required for pseudo-elements */
-  overflow: hidden;
-}
-
-/* Backdrop filter effect */
-.parallax::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Semi-transparent overlay */
-  backdrop-filter: blur(10px);
-  /* Apply blur effect */
-  z-index: -1;
-  /* Send the filter effect behind the content */
-}
-
-
 .appointment {
   background-image: url("../../public/assets/appointment-bg-1-1_result_result.webp");
   background-repeat: no-repeat;
@@ -276,16 +243,6 @@ input[type="checkbox"]:checked~.collapse-content {
 
 
 @media screen and (max-width: 576px) {
-  .web {
-    background-size: cover;
-    background-image: url('../../public/assets/web-and-app-services-mobile.webp');
-    height: 500px;
-    /* Matches the height of your div */
-    margin-top: 20px;
-    /* Required for pseudo-elements */
-    overflow: hidden;
-  }
-
   .dashboard {
     display: grid !important;
     grid-template-columns: 1fr !important;

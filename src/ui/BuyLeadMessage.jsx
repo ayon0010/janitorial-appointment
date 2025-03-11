@@ -1,6 +1,5 @@
 'use client';
-
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight } from "@react-icons/all-files/fa/FaArrowRight";
 import dynamic from "next/dynamic";
 const Payment = dynamic(() => import("./Payment"), {
     ssr: false, // Prevents server-side rendering (useful for client-only components)

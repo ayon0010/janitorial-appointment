@@ -5,7 +5,11 @@ import Profiled from '@/Shared/Profiled';
 import React from 'react';
 import FaStatus from '@/icons/FaStatus';
 import FaUpload from '@/icons/FaUpload';
-import { FaAddressBook, FaBlog, FaDollarSign, FaFacebookMessenger, FaMailBulk } from 'react-icons/fa';
+import { FaAddressBook } from "@react-icons/all-files/fa/FaAddressBook";
+import { FaBlog } from "@react-icons/all-files/fa/FaBlog";
+import { FaDollarSign } from "@react-icons/all-files/fa/FaDollarSign";
+import { FaFacebookMessenger } from "@react-icons/all-files/fa/FaFacebookMessenger";
+import { FaMailBulk } from "@react-icons/all-files/fa/FaMailBulk";
 import FaUserData from '@/icons/FaUserData';
 
 const page = () => {

@@ -5,7 +5,9 @@ import { showError, showSuccess } from '@/Shared/Swal';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye } from "@react-icons/all-files/fa/FaEye";
+import { FaEyeSlash } from "@react-icons/all-files/fa/FaEyeSlash";
+
 
 const Page = ({ searchParams }) => {
     const code = searchParams?.oobCode;

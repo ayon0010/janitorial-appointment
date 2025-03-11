@@ -1,4 +1,4 @@
-import { FaCheckCircle } from 'react-icons/fa';
+import { FaCheckCircle } from "@react-icons/all-files/fa/FaCheckCircle";
 
 const TickCircle = () => {
     return (

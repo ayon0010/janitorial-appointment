@@ -2,7 +2,7 @@
 import PageTitle from "@/Shared/PageTitle";
 import Image from "next/image";
 import image from '@/../public/assets/Frame (1).svg';
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight } from "@react-icons/all-files/fa/FaArrowRight";
 import { usStates } from "@/js/states";
 import { useForm } from "react-hook-form";
 

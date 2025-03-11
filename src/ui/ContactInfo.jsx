@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp } from "@react-icons/all-files/fa/FaWhatsapp";
 import image from '../../public/assets/contact-us-janitorial-appointments.jpg';
 import fb from '@/../public/assets/Frame (8).svg';
 import linked from '@/../public/assets/Frame (11).svg';

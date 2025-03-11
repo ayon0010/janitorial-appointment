@@ -1,7 +1,6 @@
 'use client';
-
 import React, { useState } from 'react';
-import { FaSearch } from 'react-icons/fa';
+import { FaSearch } from "@react-icons/all-files/fa/FaSearch";
 import dynamic from 'next/dynamic';
 const Table = dynamic(() => import('@/Shared/Table'), { ssr: false });
 

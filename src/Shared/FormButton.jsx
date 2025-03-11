@@ -1,6 +1,5 @@
 import React from 'react';
-import { FaArrowRight } from 'react-icons/fa';
-
+import { FaArrowRight } from "@react-icons/all-files/fa/FaArrowRight";
 const FormButton = ({ width, label }) => {
     return (
         <div className="form-control relative">

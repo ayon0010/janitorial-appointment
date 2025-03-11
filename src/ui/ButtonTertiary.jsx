@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight } from "@react-icons/all-files/fa/FaArrowRight";
 
 const ButtonTertiary = ({ label, width }) => {
     const [hover, setHover] = useState(false)

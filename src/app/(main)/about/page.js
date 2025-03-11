@@ -7,7 +7,7 @@ import FaLeads from "@/icons/FaLeads";
 import FaWeb from "@/icons/FaWeb";
 import FaCircleCheck from "@/icons/FaCheck";
 import SectionTitles from "@/ui/SectionTitles";
-import { FaStar } from "react-icons/fa";
+import { FaStar } from "@react-icons/all-files/fa/FaStar";
 import rev1 from '@/../public/assets/close-up-young-successful-man-smiling-camera-standing-casual-outfit-against-blue-background 1.svg'
 import rev2 from '@/../public/assets/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes.svg'
 import YoutubeEmbed from '@/ui/Youtube'
