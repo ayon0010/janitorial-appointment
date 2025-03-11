@@ -43,7 +43,7 @@ export const DynamicBanner = ({
             <picture className="absolute inset-0 z-20 h-full">
                 <source media="(min-width: 787px)" srcSet={desktop} />
                 <source media="(max-width: 786px)" srcSet={mobile} />
-                <img {...rest} className='object-cover' loading='eager' style={{ width: '100%', maxHeight: '800px', minHeight: '600px' }} />
+                <img {...rest} className='object-cover' loading={priority ? 'eager' : 'lazy'} style={{ width: '100%', maxHeight: '800px', minHeight: '600px' }} />
             </picture>
 
             {/* Overlays */}
