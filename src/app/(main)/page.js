@@ -16,10 +16,7 @@ import image from '@/../public/assets/it-expert-for-cleaning-companies.webp';
 import ReviewItems from "../../ui/ReviewItems";
 import { data } from '@/js/states';
 import ContactInfo from "@/ui/ContactInfo";
-import image1 from '@/../public/assets/janitorial-appointments.webp';
-import image1mbl from '@/../public/assets/janitorial-appointments-mobile.webp';
 import AudioPlayer from "@/Shared/Audio";
-import { DynamicBanner } from "@/ui/DynamicBanner";
 
 export const metadata = {
     title: "Janitorial Appointments - Commercial Cleaning Leads",
@@ -78,19 +75,7 @@ export default function Home() {
     return (
         <>
             {/* Banner */}
-            {/* <Banner /> */}
-            <DynamicBanner
-                desktopImage={image1}
-                mobileImage={image1mbl}
-                title="Unlock Cleaning"
-                highlightedText="Opportunities"
-                description="Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!"
-                buttonText="Sign Up"
-                buttonLink="/register"
-                note="No Credit Card Required"
-                isTertiaryButton={false}
-                priority={true}
-            />
+            <Banner />
             <div className="mt-20">
                 <div className="2xl:px-10 xl:px-10 px-6">
                     <div className="px-6 mb-10">

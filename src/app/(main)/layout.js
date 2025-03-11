@@ -94,6 +94,7 @@ export default function RootLayout({ children }) {
           <meta name="robots" content="index, follow" />
           <link rel="canonical" href="https://www.janitorialappointment.com" />
           <link rel="preload" href="../globals.css" as="style" />
+          <link rel="preload" as="image" href="../../../public/assets/janitorial-appointments-mobile.webp" type="image/webp" />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: metadata.other["application/ld+json"] }}
