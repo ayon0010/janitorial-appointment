@@ -17,10 +17,6 @@ import ReviewItems from "../../ui/ReviewItems";
 import { data } from '@/js/states';
 import ContactInfo from "@/ui/ContactInfo";
 import AudioPlayer from "@/Shared/Audio";
-import image1mbl from '@/../public/assets/janitorial-appointments-mobile.webp';
-import { DynamicBanner } from "@/ui/DynamicBanner";
-import Link from "next/link";
-import ButtonPrimary from "@/ui/ButtonPrimary";
 
 export const metadata = {
     title: "Janitorial Appointments - Commercial Cleaning Leads",
@@ -79,24 +75,7 @@ export default function Home() {
     return (
         <>
             {/* Banner */}
-            {/* <div className="2xl:block xl:block hidden">
-                <Banner />
-            </div> */}
-            <div className="relative 2xl:h-auto xl:h-auto h-[430px] z-10">
-                <Image
-                    className="w-full h-full 2xl:object-fill xl:object-fill object-cover"
-                    src={image1mbl}
-                    alt="About us - Learn more about our cleaning services and expertise"
-                    priority
-                    width={430}
-                    jeight={430}
-                    sizes="(max-width: 768px) 100vw, 100vw"
-                />
-                <div className="absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-40">
-                    <h1 className="2xl:text-6xl xl:text-5xl text-3xl font-medium text-white text-center ">The Path to Success</h1>
-                    <p className="text-sm text-white font-medium text-center ">About Us</p>
-                </div>
-            </div>
+            <Banner />
             <div className="mt-20">
                 <div className="2xl:px-10 xl:px-10 px-6">
                     <div className="px-6 mb-10">

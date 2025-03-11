@@ -183,11 +183,6 @@ input[type="checkbox"]:checked~.collapse-content {
   /* Change to your desired color */
 }
 
-.appointment {
-  background-image: url("../../public/assets/appointment-bg-1-1_result_result.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 .book-appointment::placeholder {
   color: white !important;
