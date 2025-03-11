@@ -20,21 +20,22 @@ export const DynamicBanner = ({
             {/* Background Images */}
             <div className="absolute inset-0 z-20 h-full">
                 <Image
-                    src={mobileImage}
-                    width={430}
-                    height={600}
-                    priority={priority}
-                    sizes='(max-width: 768px) 90vw'
-                    className='object-cover h-full w-full 2xl:hidden xl:hidden block'
-                    alt='Janitorial Appointment'
-                />
-                <Image
                     src={desktopImage}
                     fill
                     priority={priority}
                     className='object-cover h-full w-full 2xl:block xl:block hidden'
                     alt='Janitorial Appointments'
                     sizes='(min-width:787px) 100vw'
+                />
+                <Image
+                    src={mobileImage}
+                    width={430}
+                    height={600}
+                    priority={priority}
+                    sizes='(max-width: 768px) 100vw'
+                    className='object-cover h-full w-full 2xl:hidden xl:hidden block'
+                    alt='Janitorial Appointment'
+                    quality={80}
                 />
             </div>
 

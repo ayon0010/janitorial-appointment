@@ -21,7 +21,15 @@ module.exports = {
         'orange-light': '#FFB683',
         'yellow': '#FFF900',
         'deep-blue': '#0B286D',
-        'state': '#14516D'
+        'state': '#14516D',
+        'secondary': '#0f3141',
+        'primary': '#246532',
+      },
+      backgroundImage: {
+        'login': "url('/assets/Untitled_result_result.webp')", // Custom background image path
+      },
+      gridTemplateRows: {
+        'custom-rows': '2fr 2fr 1fr',
       },
     },
   },

@@ -116,7 +116,7 @@ const page = () => {
                     <p className="text-deep-blue xl:text-base 2xl:text-xl text-base 2xl:mt-0 xl:mt-0 mt-6">We are dedicated to turning your vision into a tangible success story. With a deep understanding of your goals and our expertise across various industries, we bring innovative solutions that align with your aspirations. Whether you&apos;re a small business or a growing enterprise, we are committed to delivering results that exceed your expectations.</p>
                 </div>
                 <div className="grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 xl:gap-8 2xl:gap-12 2xl:mt-12 xl:mt-10 mt-6">
-                    <div className="h-full custom-row gap-0">
+                    <div className="h-full grid grid-rows-[2fr_2fr_1fr] gap-0">
                         <div className="w-full h-full">
                             <div className="flex items-start h-full">
                                 <div className="flex flex-col h-full">

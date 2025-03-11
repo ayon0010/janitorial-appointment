@@ -53,7 +53,7 @@ const Register = () => {
     const errorclassName = "text-red-500 text-sm";
 
     return (
-        <div className="md:h-screen login lg:px-16 max-w-screen-2xl mx-auto md:py-0 py-10">
+        <div className="md:h-screen bg-cover bg-center bg-no-repeat bg-login lg:px-16 max-w-screen-2xl mx-auto md:py-0 py-10">
             <div className="flex md:flex-row flex-col h-full items-start justify-center">
                 <div className="md:w-[40%] w-full h-full flex flex-col">
                     <div className="my-auto">

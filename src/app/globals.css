@@ -2,54 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-secondary {
-  color: #0f3141 !important;
-}
-
-.text-primary {
-  color: #246532 !important;
-}
-
-.bg-primary {
-  background-color: #246532 !important;
-}
-
-
-.text-secondary {
-  color: #0f3141 !important;
-}
-
-.login {
-  background-image: url("../../public//assets/Untitled_result_result.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 125px;
 }
 
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
-.custom-row {
-  display: grid !important;
-  grid-template-rows: 2fr 2fr 1fr !important;
-}
-
-.disabled-link {
-  pointer-events: none !important;
-}
 
 #search::placeholder {
   color: #667085 !important;
