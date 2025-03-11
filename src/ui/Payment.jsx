@@ -6,8 +6,8 @@ import useAxiosSecure from "@/Hooks/useAxiosSecure";
 import dynamic from "next/dynamic";
 
 const PaymentForm = dynamic(() => import("./PaymentForm"), {
-  ssr: false, // Prevents server-side rendering (useful for client-only components)
-  loading: () => <p>Loading Payment Form...</p>, // Optional: Show a loading state
+    ssr: false, // Prevents server-side rendering (useful for client-only components)
+    loading: () => <p>Loading Payment Form...</p>, // Optional: Show a loading state
 });
 
 
@@ -36,6 +36,9 @@ export default function Payment({ price, product_Id, closeModal }) {
         appearance,
     };
 
+    if (!clientSecret) {
+        return <p>Loading...</p>;
+    }
 
     return (
         <div>
