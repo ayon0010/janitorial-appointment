@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import ButtonPrimary from './ButtonPrimary';
 import ButtonTertiary from './ButtonTertiary';
-import Image from 'next/image';
+import Image, { getImageProps } from 'next/image';
 export const DynamicBanner = ({
     desktopImage,
     mobileImage,
@@ -15,36 +15,36 @@ export const DynamicBanner = ({
     cover,
     priority
 }) => {
+
+    const common = { alt: "Janitorial Appointment", sizes: "100vw" };
+    const {
+        props: { srcSet: desktop },
+    } = getImageProps({
+        ...common,
+        width: 1920,
+        height: 600,
+        src: desktopImage,
+    });
+
+    const {
+        props: { srcSet: mobile, ...rest },
+    } = getImageProps({
+        ...common,
+        width: 430,
+        height: 600,
+        src: mobileImage,
+    });
+
+
+
     return (
         <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto w-full">
             {/* Background Images */}
-            <div className="absolute inset-0 z-20 h-full">
-                {
-                    desktopImage && (
-                        <Image
-                            src={desktopImage}
-                            fill
-                            priority={priority}
-                            className='object-cover h-full w-full 2xl:block xl:block hidden'
-                            alt='Janitorial Appointments'
-                            sizes='(min-width:787px) 100vw'
-                        />
-                    )
-                }
-                {
-                    mobileImage && (
-                        <Image
-                            src={mobileImage}
-                            width={430}
-                            height={600}
-                            priority={priority}
-                            sizes='(max-width: 768px) 90vw'
-                            className='object-cover h-full w-full 2xl:hidden xl:hidden block'
-                            alt='Janitorial Appointment'
-                        />
-                    )
-                }
-            </div>
+            <picture className="absolute inset-0 z-20 h-full">
+                <source media="(min-width: 787px)" srcSet={desktop} />
+                <source media="(max-width: 786px)" srcSet={mobile} />
+                <img {...rest} className='object-cover' priority loading='eager' style={{ width: '100%', maxHeight: '800px', minHeight: '600px' }} />
+            </picture>
 
             {/* Overlays */}
             <div className="absolute inset-0 bg-black opacity-40 z-30"></div>
