@@ -12,7 +12,8 @@ import fb from '@/../public/assets/Frame (8).svg'
 import linked from '@/../public/assets/Frame (11).svg'
 import twitt from '@/../public/assets/Frame (12).svg'
 import Link from 'next/link';
-import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
+import { FaPhoneAlt } from "@react-icons/all-files/fa/FaPhoneAlt";
+import { FaWhatsapp } from "@react-icons/all-files/fa/FaWhatsapp";
 import Appointment from '@/ui/Appointment';
 const message = encodeURIComponent('Hello! I would like to inquire about your commercial cleaning leads.');
 
