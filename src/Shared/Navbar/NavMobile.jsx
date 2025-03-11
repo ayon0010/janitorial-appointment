@@ -47,7 +47,7 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
                         </svg>
                     </div>
                     <div
-                        className={`h-screen w-full bg-white overflow-y-auto overflow-x-hidden z-[1000] transition-all duration-1000 ease-in-out fixed top-0 right-0 ${nav ? 'left-0' : '-left-full'
+                        className={`h-screen w-full bg-white overflow-y-auto overflow-x-hidden z-[1000] transition-all duration-1000 ease-in-out fixed top-0 right-0 ${nav ? 'translate-x-0' : '-translate-x-[1000px]'
                             }`}
                     >
                         <span
