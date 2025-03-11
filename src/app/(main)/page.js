@@ -79,7 +79,7 @@ export default function Home() {
             {/* Banner */}
             <div className="2xl:hidden xl:hidden block">
                 <DynamicBanner
-                    desktopImage={image1mbl}
+                    mobileImage={image1mbl}
                     title="Unlock Cleaning"
                     highlightedText="Opportunities"
                     description="Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!"
