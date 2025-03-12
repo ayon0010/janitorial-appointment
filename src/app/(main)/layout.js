@@ -93,7 +93,6 @@ export default function RootLayout({ children }) {
           <meta name="keywords" content={metadata.keywords} />
           <meta name="robots" content="index, follow" />
           <link rel="canonical" href="https://www.janitorialappointment.com" />
-          <meta name="google-site-verification" content="hbsjTBX4mGLMu5pXhPROvHkABPHA9tOC7t_-KWOqIjU" />
           <link rel="preload" href="../globals.css" as="style" />
           <link rel="preload" as="image" href="../../../public/assets/janitorial-appointments-mobile.webp" type="image/webp" />
           <script
