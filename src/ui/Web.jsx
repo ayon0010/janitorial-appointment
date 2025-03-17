@@ -4,7 +4,7 @@ import image1mbl from '@/../public/assets/web-and-app-services-mobile.webp'
 
 const Web = () => {
     return (
-        <div className='mt-40 h-[600px]'>
+        <div className='mt-40 h-[600px] overflow-hidden'>
             <DynamicBanner
                 desktopImage={image1}
                 mobileImage={image1mbl}
