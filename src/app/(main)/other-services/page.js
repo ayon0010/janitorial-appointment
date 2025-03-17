@@ -47,8 +47,10 @@ export const metadata = {
 
 const page = () => {
     return (
-        <div className='overflow-hidden h-[600px]'>
-            <DynamicBanner
+        <div>
+           <div className='overflow-hidden h-[600px]'>
+
+ <DynamicBanner
                 desktopImage={image5}
                 mobileImage={image5mbl}
                 title="Elevate Your Brand, Expert "
@@ -60,7 +62,7 @@ const page = () => {
                 isTertiaryButton={false}
                 cover={true}
                 priority={true}
-            />
+            /></div>
             <div className='2xl:px-40 xl:px-28 px-10 bg-white'>
                 <div className='2xl:py-24 xl:py-24 py-16'>
                     <h1 className={`2xl:text-7xl xl:text-5xl text-3xl `}>Complete IT Solutions &
