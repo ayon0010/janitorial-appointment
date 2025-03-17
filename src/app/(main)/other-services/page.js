@@ -47,7 +47,7 @@ export const metadata = {
 
 const page = () => {
     return (
-        <div className='overflow-hidden'>
+        <div className='overflow-hidden h-[600px]'>
             <DynamicBanner
                 desktopImage={image5}
                 mobileImage={image5mbl}
