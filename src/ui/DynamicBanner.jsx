@@ -38,7 +38,7 @@ export const DynamicBanner = ({
 
 
     return (
-        <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-auto w-full">
+        <div className="flex flex-col relative min-h-[600px] max-h-[800px] h-full w-full">
             {/* Background Images */}
             <picture className="absolute inset-0 z-20 h-full">
                 <source media="(min-width: 787px)" srcSet={desktop} />
