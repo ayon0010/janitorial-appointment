@@ -68,7 +68,7 @@ const Page = () => {
                         <tbody>
                             {/* row 1 */}
                             {
-                                allUsers?.filter(user => user?.email === 'shariar.ayon128@gmail.com')?.map((user, i) => {
+                                allUsers?.filter(user => user?.email !== 'shariar.ayon128@gmail.com')?.map((user, i) => {
                                     return (
                                         <tr key={user?._id}>
                                             <th>{i + 1}</th>
