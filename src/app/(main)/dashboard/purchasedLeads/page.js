@@ -1,17 +1,14 @@
 'use client'
 import useAuth from '@/Hooks/useAuth';
-import useAxiosSecure from '@/Hooks/useAxiosSecure';
-import { data } from '@/js/states';
 import SectionTitles from '@/ui/SectionTitles';
 import TableHead from '@/ui/TableHead';
-import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import Loading from '../../loading';
 import GetData from '@/lib/GetData';
 
 const Page = () => {
     const { user } = useAuth();
-    const { data: purchasedLeads, isLoading } = GetData(user?.uid, `myProducts/${user?.uid}`);
+    const { data: purchasedLeads = [], isLoading } = GetData(user?.uid, `myProducts/${user?.uid}`);
 
     if (isLoading) {
         return <Loading />

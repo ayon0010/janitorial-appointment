@@ -17,7 +17,7 @@ const Page = () => {
     // user id
     const uid = user?.uid;
 
-    const { data: savedLeads, refetch, isLoading } = GetData(uid, `savedLeads/${uid}`);
+    const { data: savedLeads = [], refetch, isLoading } = GetData(uid, `savedLeads/${uid}`);
     console.log(savedLeads);
 
     const axiosSecure = useAxiosSecure();

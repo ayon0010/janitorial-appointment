@@ -38,5 +38,5 @@ export async function middleware(request) {
 
 // See "Matching Paths" below to learn more
 export const config = {
-    matcher: ['/profile', '/dashboard', '/adminDashboard', '/adminDashboard/allLeads', '/adminDashboard/allUser', '/adminDashboard/leadUpload', '/sellerDashboard', '/sellerDashboard/leadUpload', '/adminDashboard/allLeads/:id', '/adminDashboard/subscriber', '/adminDashboard/contacts', '/adminDashboard/messages'],
+    matcher: ['/profile', '/dashboard', '/dashboard/:path*', '/adminDashboard', '/adminDashboard/allLeads', '/adminDashboard/allUser', '/adminDashboard/leadUpload', '/sellerDashboard', '/sellerDashboard/leadUpload', '/adminDashboard/allLeads/:id', '/adminDashboard/subscriber', '/adminDashboard/contacts', '/adminDashboard/messages'],
 }
