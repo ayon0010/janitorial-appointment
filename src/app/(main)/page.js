@@ -21,7 +21,7 @@ import ButtonPrimary from "@/ui/ButtonPrimary";
 import Link from "next/link";
 import { headers } from "next/headers";
 import { DynamicBanner } from "@/ui/DynamicBanner";
-import image1mbl from '@/../public/assets/janitorial-appointments-mobile.webp';
+import image1mbl from '@/../public/assets/janitorial-appointments-mobile.jpg'
 
 
 export const metadata = {

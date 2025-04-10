@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import ButtonPrimary from './ButtonPrimary';
 import ButtonTertiary from './ButtonTertiary';
-import Image, { getImageProps } from 'next/image';
+import { getImageProps } from 'next/image';
 export const DynamicBanner = ({
     desktopImage,
     mobileImage,
@@ -47,14 +47,14 @@ export const DynamicBanner = ({
             </picture>
 
             {/* Overlays */}
-            <div className="absolute inset-0 bg-black opacity-40 z-30"></div>
+            <div className="absolute inset-0 bg-black opacity-5 z-30"></div>
 
             {/* Content Section */}
             <div className="my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40">
-                <h1 className="text-white font-bold 2xl:text-6xl xl:text-5xl text-3xl">
+                <h1 className="text-deep-blue font-bold 2xl:text-6xl xl:text-5xl text-3xl">
                     {title} <span className="text-green-600 banner-text">{highlightedText}</span>
                 </h1>
-                <p className="my-6 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80">
+                <p className="my-6 2xl:text-xl xl:text-xl text-sm font-semibold text-black opacity-80">
                     {description}
                 </p>
                 <div className="flex items-center gap-6">
@@ -66,7 +66,7 @@ export const DynamicBanner = ({
                         )}
                     </Link>
                     {note && (
-                        <p className="text-white opacity-8 font-bold 2xl:text-base xl:text-base text-xs">
+                        <p className="text-deep-blue opacity-8 font-bold 2xl:text-base xl:text-base text-xs">
                             {note}
                         </p>
                     )}
