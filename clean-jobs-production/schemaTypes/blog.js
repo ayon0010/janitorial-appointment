@@ -16,7 +16,7 @@ export default {
                 dateFormat: 'YYYY-MM-DD',
                 calendarTodayLabel: 'Today',
             },
-            initialValue: () => new Date().toISOString().split('T')[0], // Sets today's date automatically
+            initialValue: () => new Date().toISOString().split('T')[0],
         },
         {
             name: 'authorImage',
@@ -63,7 +63,6 @@ export default {
                             { title: 'Italic', value: 'em' },
                             { title: 'Underline', value: 'underline' },
                         ],
-                        // Adding sectionId as a custom mark
                         annotations: [
                             {
                                 name: 'sectionLink',
@@ -108,7 +107,34 @@ export default {
                         },
                     ],
                 },
-            ],
-        },
+                {
+                    type: 'object',
+                    name: 'table',
+                    title: 'Table',
+                    fields: [
+                        {
+                            name: 'rows',
+                            title: 'Rows',
+                            type: 'array',
+                            of: [
+                                {
+                                    type: 'object',
+                                    name: 'row',
+                                    title: 'Row',
+                                    fields: [
+                                        {
+                                            name: 'columns',
+                                            title: 'Columns',
+                                            type: 'array',
+                                            of: [{ type: 'string' }]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }

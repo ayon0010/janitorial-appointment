@@ -120,7 +120,30 @@ const page = async ({ params }) => {
                                             })}
                                         </div>
                                     );
-                                }
+                                },
+                                table: ({ value }) => {
+                                    // Assuming value contains rows and columns
+                                    return (
+                                        <table className="table-auto w-full my-6">
+                                            <thead>
+                                                <tr className="bg-gray-200">
+                                                    {value.rows[0]?.columns.map((column, index) => (
+                                                        <th key={index} className="px-4 py-2 border">{column}</th>
+                                                    ))}
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {value.rows.map((row, rowIndex) => (
+                                                    <tr key={rowIndex} className="border-b">
+                                                        {row.columns.map((column, colIndex) => (
+                                                            <td key={colIndex} className="px-4 py-2">{column}</td>
+                                                        ))}
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    );
+                                },
                             },
                             block: {
                                 h2: ({ children }) => {
@@ -137,7 +160,7 @@ const page = async ({ params }) => {
                                         .map(child => (typeof child === "string" ? child.trim() : ""))
                                         .join(" ")
                                         .toLowerCase()
-                                        .replace(/\s+/g, '-') // Replace spaces with dashes
+                                        .replace(/\s+/g, '-')
                                         .replace(/^-+|-+$/g, '');
                                     return <h3 id={sectionId} className="text-xl font-semibold mt-4 mb-2">{children}</h3>;
                                 },
@@ -146,7 +169,7 @@ const page = async ({ params }) => {
                                         .map(child => (typeof child === "string" ? child.trim() : ""))
                                         .join(" ")
                                         .toLowerCase()
-                                        .replace(/\s+/g, '-') // Replace spaces with dashes
+                                        .replace(/\s+/g, '-')
                                         .replace(/^-+|-+$/g, '');
                                     return <h4 id={sectionId} className="text-lg font-semibold mt-2 mb-1">{children}</h4>;
                                 },
@@ -159,7 +182,6 @@ const page = async ({ params }) => {
                             },
                         }}
                     />
-
                 </div>
             </div>
         </div>
