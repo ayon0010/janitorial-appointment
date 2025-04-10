@@ -122,26 +122,31 @@ const page = async ({ params }) => {
                                     );
                                 },
                                 table: ({ value }) => {
+                                    console.log(value);
                                     // Assuming value contains rows and columns
                                     return (
-                                        <table className="table-auto w-full my-6">
-                                            <thead>
-                                                <tr className="bg-gray-200">
-                                                    {value.rows[0]?.columns.map((column, index) => (
-                                                        <th key={index} className="px-4 py-2 border">{column}</th>
-                                                    ))}
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {value.rows.map((row, rowIndex) => (
-                                                    <tr key={rowIndex} className="border-b">
-                                                        {row.columns.map((column, colIndex) => (
-                                                            <td key={colIndex} className="px-4 py-2">{column}</td>
+                                        <div className="overflow-x-auto">
+                                            <table className="table">
+                                                {/* head */}
+                                                <thead>
+                                                    <tr className="bg-gray-200">
+                                                        {value.rows[0]?.columns.map((column, index) => (
+                                                            <th key={index} className="">{column}</th>
                                                         ))}
                                                     </tr>
-                                                ))}
-                                            </tbody>
-                                        </table>
+                                                </thead>
+                                                <tbody>
+                                                    {/* row 1 */}
+                                                    {value.rows.filter((row, i) => i !== 0).map((row, rowIndex) => (
+                                                        <tr key={rowIndex} className="border-b">
+                                                            {row.columns.map((column, colIndex) => (
+                                                                <td key={colIndex} className="px-4 py-2">{column}</td>
+                                                            ))}
+                                                        </tr>
+                                                    ))}
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     );
                                 },
                             },
