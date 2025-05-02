@@ -1,0 +1,23 @@
+'use client'
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const SlideRight = ({ children, delay = 0 }) => {
+    return (
+        <motion.div
+            initial={{ opacity: 0, x: 90 }} // Smaller offset feels smoother
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+                delay,
+                duration: 1.2, // slightly longer for fluid motion
+                ease: [0.22, 1, 0.36, 1], // standard "easeOutExpo" feel
+            }}
+            style={{ willChange: 'opacity, transform' }}
+        >
+            {children}
+        </motion.div>
+    );
+};
+
+export default SlideRight;

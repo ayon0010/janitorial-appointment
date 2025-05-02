@@ -1,6 +1,7 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination, EffectFade } from 'swiper/modules';
+import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import Image from 'next/image';
@@ -25,18 +26,18 @@ const Banner = () => {
         return (
             <div className={positionClasses}>
                 <div className='2xl:space-y-8 xl:space-y-8 space-y-6 max-w-[1440px] mx-auto'>
-                    <UpAnimation delay={0.1} key={activeIndex}>
+                    <UpAnimation delay={0.3} key={activeIndex}>
                         <h1 className={headingClasses}>
                             {heading}
                         </h1>
                     </UpAnimation>
-                    <UpAnimation delay={0.3} key={activeIndex}>
+                    <UpAnimation delay={0.5} key={activeIndex}>
                         <p className={paragraphClasses}>
                             {paragraph}
                         </p>
                     </UpAnimation>
                     <div className='w-fit 2xl:mx-0 xl:mx-0 mx-auto'>
-                        <UpAnimation delay={0.5} key={activeIndex}>
+                        <UpAnimation delay={0.7} key={activeIndex}>
                             <ButtonTertiary label={buttonLabel} />
                         </UpAnimation>
                     </div>
@@ -60,8 +61,10 @@ const Banner = () => {
                     clickable: true,
                     el: '.swiper-pagination',
                 }}
-                loop={true}
-                effect="fade"
+                initialSlide={0}
+                // loop={true}
+                effect="fade"  // Enable fade effect
+                fadeEffect={{ crossFade: true }}
                 modules={[Navigation, Autoplay, Pagination, EffectFade]}
                 className="mySwiper pointer-events-none"
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}

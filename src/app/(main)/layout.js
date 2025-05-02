@@ -1,4 +1,4 @@
-import { Nunito } from 'next/font/google'
+import { Nunito, Poppins } from 'next/font/google'
 import localFont from 'next/font/local'
 import '../globals.css'
 import AuthProvider from '@/Providers/AuthProvider'
@@ -28,6 +28,14 @@ export const gilroy = localFont({
   ],
   display: 'swap',
 })
+
+export const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '500', '600', '900'],
+  variable: '--font-nunito',
+})
+
 
 
 

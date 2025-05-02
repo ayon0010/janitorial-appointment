@@ -23,7 +23,7 @@ module.exports = {
         'deep-blue': '#0B286D',
         'state': '#14516D',
         'secondary': '#0f3141',
-        'primary': '#246532',
+        'primary': '#6073FC',
       },
       backgroundImage: {
         'login': "url('/assets/Untitled_result_result.webp')", // Custom background image path

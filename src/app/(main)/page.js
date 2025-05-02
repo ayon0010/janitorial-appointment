@@ -20,6 +20,12 @@ import AudioPlayer from "@/Shared/Audio";
 import ButtonPrimary from "@/ui/ButtonPrimary";
 import Link from "next/link";
 import { headers } from "next/headers";
+import Title from "@/Shared/Titles/Title";
+import image2 from '@/../public/assets/img_03.jpg'
+import image3 from '@/../public/assets/img_04.jpg'
+import { poppins } from "./layout";
+import ButtonTertiary from "@/ui/ButtonTertiary";
+import SlideRight from "@/Animations/SlideRight";
 
 
 export const metadata = {
@@ -91,17 +97,44 @@ export default async function Home() {
                     </div>
                 </div>
             </div>
-            <div className="mt-[470px] 2xl:mt-40 xl:mt-40">
-                <div className="2xl:py-20 xl:py-20 py-10">
-                    <div className="px-6">
-                        <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />
+            <div className="mt-[470px] 2xl:mt-60 xl:mt-60 2xl:w-[1150px] xl:w-[1150px] w-[90%] mx-auto">
+                <div className="2xl:py-20 xl:py-20 py-10 grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 items-center 2xl:gap-0 xl:gap-0 gap-8">
+                    <div>
+                        <Title />
+                        <p className="text-base text-[#777] font-light mt-7">Our agents are fully bilingual, bi-cultural, well educated <br /> and have expertise in a wide array of business functions <br /> such as Debt Collection, Customer Service.</p>
+                        <div className="mt-6 2xl:w-[75%] xl:w-[75%] w-full">
+                            <div className="flex items-center justify-between mb-4">
+                                <p className={`text-base font-light ${poppins.className}`}>Customer Service</p>
+                                <p className={`text-base font-light ${poppins.className}`}>85%</p>
+                            </div>
+                            <progress className="progress progress-secondary w-full" value="85" max="100"></progress>
+                            <div className="mt-6 flex items-center justify-between mb-4">
+                                <p className={`text-base font-light ${poppins.className}`}>Sales / Lead Generation</p>
+                                <p className={`text-base font-light ${poppins.className}`}>90%</p>
+                            </div>
+                            <progress className="progress progress-success w-full" value="90" max="100"></progress>
+                        </div>
+                        <div className="mt-12">
+                            <ButtonTertiary label={'Learn More'} />
+                        </div>
                     </div>
-                    <Pricing />
+                    <SlideRight>
+                        <div className="relative 2xl:h-[580px] xl:h-[580px] h-[480px]">
+                            <Image src={image2} height={450} width={370} className="z-30 absolute bottom-0 left-0" alt="Janitorial lead generating by our agent" />
+                            <Image src={image3} height={450} width={370} className="z-20 absolute top-0 right-0 2xl:hover:translate-x-6 xl:hover:translate-x-6 duration-300 transition-all" alt="Janitorial lead generating by our agent" />
+                        </div>
+                    </SlideRight>
                 </div>
-                <SectionTitles
-                    heading={"Closed Deals"}
-                    subHeading={"Listen to our agents successfully engaging with decision-makers"}
-                />
+                <div className="px-6 mb-20">
+                    <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />
+                </div>
+                <Pricing />
+                <div className="mt-20">
+                    <SectionTitles
+                        heading={"Closed Deals"}
+                        subHeading={"Listen to our agents successfully engaging with decision-makers"}
+                    />
+                </div>
                 <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-6 my-16 2xl:px-10 xl:px-10 px-6">
                     <AudioPlayer src={'https://firebasestorage.googleapis.com/v0/b/clean-jobs-production.appspot.com/o/records%2F2023-10-16T19_16_15%2B00_00.mp3?alt=media&token=a6d77910-b142-4b4a-85a0-1d3f881f48c0'} name={'Apartment Complex Cleaning Leads'} />
                     <AudioPlayer src={'https://firebasestorage.googleapis.com/v0/b/clean-jobs-production.appspot.com/o/records%2FThe%20Royal%20King%20Palace%20and%20Convention%20Center-%20Diego-%20JAN.mp3?alt=media&token=fa1f1d37-b96c-4ceb-b17d-fa9d71aa3bc5'} name={'Convention Center Cleaning Leads'} />
