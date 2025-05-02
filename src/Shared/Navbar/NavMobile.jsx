@@ -5,9 +5,10 @@ const ButtonPrimary = dynamic(() => import('@/ui/ButtonPrimary'), { ssr: false }
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import logo from '@/../public/assets/Janitorial.png';
+import logo from '@/../public/assets/Blue_and_White_Simple_Cleaning_Services_Logo-removebg-preview-1.png'
 import { usePathname } from 'next/navigation';
 import { FaChevronDown } from "@react-icons/all-files/fa/FaChevronDown";
+import { poppins } from '@/fonts/Poppins';
 
 const NavMobile = ({ UserDetails, Services, Leads }) => {
     const { user, logOut } = useAuth();
@@ -22,6 +23,17 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
         logOut();
         setNav(false);
     }
+
+    const Logo = () => {
+        return (
+            <Link href={'/'} className='bg-transparent w-[140px] flex items-center'>
+                <Image src={logo} className='w-[50px]' alt='janitorial-appointment-logo' />
+                <p className={`${poppins.className} font-light text-lg text-white`}>Janitorial <br /> Appointments</p>
+            </Link>
+        )
+    }
+
+
     return (
         <div>
             <div className="2xl:ml-0 xl:ml-0 ml-auto 2xl:hidden xl:hidden block">
@@ -57,13 +69,7 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
                             X
                         </span>
                         <div className="pt-10 px-10 pb-20 w-full">
-                            <Image
-                                src={logo}
-                                alt="Janitorial Appointment Scheduling Logo - Reliable and professional janitorial services"
-                                className="w-[100px] h-auto"
-                                width={429}
-                                height={221}
-                            />
+                            <Logo />
                             <div className='mt-6'>
                                 <ul className='pb-10'>
                                     {

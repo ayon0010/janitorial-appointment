@@ -11,7 +11,7 @@ export const Option = ({ children, arr, show, href }) => {
             <span className='flex items-center group'>
                 <span className='group-hover:w-[18px] w-[0px] group-hover:mr-2 transition-all duration-300 h-[4px] bg-orange'></span>
                 <Link href={`${href ? href : ''}`}>
-                    <span className="text-black group-hover:text-orange font-semibold">
+                    <span className="text-black group-hover:text-orange font-light">
                         {children}
                     </span>
                 </Link>
@@ -28,19 +28,19 @@ const NavItems = ({ Services, Leads }) => {
 
     return (
         <>
-            <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/' ? 'text-orange' : ''}`}>
+            <li className={`2xl:text-base xl:text-base text-sm font-light hover:text-orange transition-all duration-100 ${pathname === '/' ? 'text-orange' : ''}`}>
                 <Link href={'/'}>Home</Link>
             </li>
-            <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`}>
+            <li className={`2xl:text-base xl:text-base text-sm font-light hover:text-orange transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`}>
                 <Link href="/about">About</Link>
             </li>
-            <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/blogs' ? 'text-orange' : ''}`}>
+            <li className={`2xl:text-base xl:text-base text-sm font-light hover:text-orange transition-all duration-100 ${pathname === '/blogs' ? 'text-orange' : ''}`}>
                 <Link href="/blogs">Blogs</Link>
             </li>
             <li className="relative" onMouseEnter={() => setMouse(true)} onMouseLeave={() => setMouse(false)}>
                 <div
-                    className={`2xl:text-xl xl:text-base 2xl:h-[60px] xl:h-[60px] text-sm font-semibold h-full hover-color group flex gap-[2px] ${pathname === '/services' ? 'text-orange' : ''}`}>
-                    <span className="my-auto 2xl:text-base xl:text-sm text-sm group-hover:text-orange transition-all duration-100">Services</span>
+                    className={`2xl:text-xl xl:text-base 2xl:h-[60px] xl:h-[60px] text-sm font-light h-full hover-color group flex gap-[2px] ${pathname === '/services' ? 'text-orange' : ''}`}>
+                    <span className="my-auto 2xl:text-base xl:text-base text-sm group-hover:text-orange transition-all duration-100">Services</span>
                     <div className="h-fit my-auto">
                         <DropDown />
                     </div>
@@ -69,8 +69,8 @@ const NavItems = ({ Services, Leads }) => {
 
             <li className='relative' onMouseEnter={() => setMouse1(true)} onMouseLeave={() => setMouse1(false)}>
                 <div
-                    className={`2xl:text-xl xl:text-base 2xl:h-[60px] xl:h-[60px] text-sm font-semibold h-full hover-color group flex gap-[2px] ${pathname === '/services' ? 'text-orange' : ''}`}>
-                    <span className='my-auto 2xl:text-base xl:text-sm text-sm group-hover:text-orange transition-all duration-100 '>Leads</span>
+                    className={`2xl:text-xl xl:text-base 2xl:h-[60px] xl:h-[60px] text-sm font-light h-full hover-color group flex gap-[2px] ${pathname === '/services' ? 'text-orange' : ''}`}>
+                    <span className='my-auto 2xl:text-base xl:text-base text-sm group-hover:text-orange transition-all duration-100 '>Leads</span>
                     <div className='h-fit my-auto'>
                         <DropDown />
                     </div>
@@ -92,10 +92,10 @@ const NavItems = ({ Services, Leads }) => {
                     }
                 </ul>
             </li>
-            <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/contact' ? 'text-orange' : ''}`}>
+            <li className={`2xl:text-base xl:text-base text-sm font-light hover:text-orange transition-all duration-100 ${pathname === '/contact' ? 'text-orange' : ''}`}>
                 <Link href="/contact">Contact</Link>
             </li>
-            <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/contact' ? 'text-orange' : ''}`}>
+            <li className={`2xl:text-base xl:text-base text-sm font-light hover:text-orange transition-all duration-100 ${pathname === '/contact' ? 'text-orange' : ''}`}>
                 <Link href="/book-an-appointment">Appointment</Link>
             </li>
         </>

@@ -20,8 +20,6 @@ import AudioPlayer from "@/Shared/Audio";
 import ButtonPrimary from "@/ui/ButtonPrimary";
 import Link from "next/link";
 import { headers } from "next/headers";
-import { DynamicBanner } from "@/ui/DynamicBanner";
-import image1mbl from '@/../public/assets/janitorial-appointments-mobile.jpg'
 
 
 export const metadata = {
@@ -85,25 +83,15 @@ export default async function Home() {
 
     return (
         <>
-            {/* Banner */}
-            {isMobile ? <DynamicBanner
-                mobileImage={image1mbl}
-                title="Unlock Cleaning"
-                highlightedText="Opportunities"
-                description="Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!"
-                buttonText="Sign Up"
-                buttonLink="/register"
-                note="No Credit Card Required"
-                isTertiaryButton={false}
-                priority={true}
-            /> : <Banner />}
-            <div className="mt-20">
-                <div className="2xl:px-10 xl:px-10 px-6">
-                    <div className="px-6 mb-10">
-                        <SectionTitles heading={"Book an appointment"} subHeading={"Reserve a convenient time for your appointment"} />
+            <div className="relative">
+                <Banner />
+                <div className="absolute -bottom-[150px] w-full right-0 left-0">
+                    <div className="max-w-[1150px] mx-auto">
+                        <Appointment />
                     </div>
-                    <Appointment />
                 </div>
+            </div>
+            <div className="mt-40">
                 <div className="2xl:py-20 xl:py-20 py-10">
                     <div className="px-6">
                         <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />

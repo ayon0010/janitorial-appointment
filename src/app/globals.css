@@ -7,6 +7,53 @@ html {
   scroll-padding-top: 125px;
 }
 
+.swiper-slide {
+  transition: opacity 1s ease-in-out !important;
+}
+
+.slider::before {
+  content: '';
+  position: absolute;
+  inset: 0px;
+  background-color: #27205F4D !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: white !important;
+  position: relative;
+  z-index: 1 !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: red !important;
+  position: relative !important;
+}
+
+/* .swiper-pagination-bullet-active::before {
+  width: 14px !important;
+  height: 14px !important;
+  inset: 0px !important;
+  background-color: transparent !important;
+  border-radius: 50%;
+  border: 1px solid red !important;
+}  */
+
+/* .pagination-slide {
+  position: absolute !important;
+  left: 50px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+} */
+
+.swiper {
+  position: relative !important;
+  height: 890px !important;
+}
+
 
 #search::placeholder {
   color: #667085 !important;

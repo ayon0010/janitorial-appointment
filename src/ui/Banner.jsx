@@ -1,109 +1,127 @@
-'use client'
+'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination, EffectFade } from 'swiper/modules';
 import 'swiper/css/navigation';
-import { TypeAnimation } from 'react-type-animation';
-import Link from 'next/link';
-import ButtonTertiary from './ButtonTertiary';
+import 'swiper/css/effect-fade';
 import Image from 'next/image';
-import image1 from '../../public/assets/janitorial-appointments.jpg';
-// import image1 from '@/../public/assets/New Project (13).jpg';
-// import image1mbl from '../../public/assets/janitorial-appointments-mobile.webp';
-import image2 from '@/../public/assets/book-an-janitorial-appointments.webp';
-import image2mbl from '@/../public/assets/book-an-janitorial-appointments-mobile.webp';
-// import image3 from '@/../public/assets/New Project (14).jpg'
-import image4 from '@/../public/assets/commercial-cleaning-leads-usa.jpg'
-// import image5 from '@/../public/assets/web-and-app-services.webp'
-// import image5mbl from '../../public/assets/web-and-app-services-mobile.webp'
-import { DynamicBanner } from './DynamicBanner';
-import ClipAnimation from '@/Animations/ClipAnimation';
-import { useState } from 'react';
+import image1 from '../../public/assets/slide01.jpg';
+import image2 from '../../public/assets/slide02.jpg';
+import image3 from '../../public/assets/slide03.jpg';
+import { useRef, useState } from 'react';
+import ButtonPrimary from './ButtonPrimary';
+import UpAnimation from '@/Animations/UpAnimation';
+
 const Banner = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    return (
-        <>
-            <div className='relative z-30'>
-                <Swiper
-                    navigation={true}
-                    autoplay={{
-                        delay: 7000,
-                    }}
-                    pagination={{
-                        clickable: true,
-                        el: '.swiper-pagination',
-                    }}
-                    loop={false}
-                    effect="slide" // Changed from "fade" to "slide" for better performance
-                    style={{
-                        '--swiper-pagination-color': '#16a34a',
-                    }}
-                    modules={[Navigation, Autoplay, Pagination]}
-                    className="mySwiper"
-                    onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-                >
-                    {/* 1st slider */}
-                    <SwiperSlide>
-                        <ClipAnimation key={activeIndex}>
-                            <DynamicBanner
-                                desktopImage={image1}
-                                mobileImage={image1}
-                                title="Unlock Cleaning"
-                                highlightedText="Opportunities"
-                                description="Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!"
-                                buttonText="Sign Up"
-                                buttonLink="/register"
-                                note="No Credit Card Required"
-                                isTertiaryButton={false}
-                                priority={true}
-                            />
-                        </ClipAnimation>
-                    </SwiperSlide>
-                    {/* 2nd Slider */}
 
-                    <SwiperSlide>
-                        <ClipAnimation key={activeIndex}>
-                            <DynamicBanner
-                                desktopImage={image2}
-                                mobileImage={image2mbl}
-                                title="Schedule"
-                                highlightedText="Appointments"
-                                description="Book appointments now to get the desired leads that match your business needs and unlock new opportunities effortlessly!"
-                                buttonText="Book an Appointment"
-                                buttonLink="/book-an-appointment"
-                                isTertiaryButton={true}
-                                priority={false}
-                            />
-                        </ClipAnimation>
-                    </SwiperSlide>
-
-                    {/* Slider 3 */}
-                    <SwiperSlide>
-                        <ClipAnimation key={activeIndex}>
-                            <div className="flex flex-col min-h-[600px] max-h-[800px] h-auto relative">
-                                <div className='absolute inset-0 z-20 h-full'>
-                                    <Image src={image4}
-                                        sizes="(max-width:786px) 100vw,100vw"
-                                        alt='Exclusive Commercial cleaning leads all over the usa'
-                                        fill
-                                        className='object-cover h-full'
-                                    />
-                                </div>
-                                {/* <div className='absolute inset-0 bg-black opacity-50 z-30'></div> */}
-                                <div className='m-auto z-30 2xl:w-[80%] xl:w-[80%] w-[90%]'>
-                                    <h1 className='text-white text-center font-bold  2xl:text-6xl xl:text-5xl text-3xl'>Find <span className=''>Qualified, Exclusive Janitorial Leads</span> <br className='2xl:block xl:block hidden' /> available in Your Area!</h1>
-                                    <p className='2xl:my-6 xl:my-6 my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80 text-center'>A reliable and stress-free appointment-setting service designed for janitors.<br />
-                                        Partner with the trusted provider of quality janitorial job opportunities.</p>
-                                    <Link className="flex justify-center items-center" href={'/search/exclusive-leads'}>
-                                        <ButtonTertiary label={'Explore Now'} />
-                                    </Link>
-                                </div>
-                            </div>
-                        </ClipAnimation>
-                    </SwiperSlide>
-                </Swiper>
+    const HeroBannerContent = ({
+        heading,
+        paragraph,
+        buttonLabel,
+        positionClasses = 'absolute 2xl:left-24 xl:left-24 2xl:-translate-x-0 xl:-translate-x-0 -translate-x-1/2 left-1/2 top-1/2 -translate-y-1/2 w-full 2xl:p-0 xl:p-0 p-10',
+        headingClasses = 'text-white text-5xl font-semibold 2xl:text-left xl:text-left text-center',
+        paragraphClasses = 'text-white text-lg 2xl:text-left xl:text-left text-center',
+    }) => {
+        return (
+            <div className={positionClasses}>
+                <div className='space-y-8 max-w-[1440px] mx-auto'>
+                    <UpAnimation delay={0.1} key={activeIndex}>
+                        <h1 className={headingClasses}>
+                            {heading}
+                        </h1>
+                    </UpAnimation>
+                    <UpAnimation delay={0.3} key={activeIndex}>
+                        <p className={paragraphClasses}>
+                            {paragraph}
+                        </p>
+                    </UpAnimation>
+                    <div className='w-fit 2xl:mx-0 xl:mx-0 mx-auto'>
+                        <UpAnimation delay={0.5} key={activeIndex}>
+                            <ButtonPrimary label={buttonLabel} />
+                        </UpAnimation>
+                    </div>
+                </div>
             </div>
-        </>
+        );
+    };
+    const swiperRef = useRef(null);
+    const handleSlideChange = (index) => {
+        if (swiperRef.current && swiperRef.current.swiper) {
+            swiperRef.current.swiper.slideToLoop(index);
+        }
+    };
 
+    return (
+        <div className='relative'>
+            <Swiper
+                ref={swiperRef}
+                autoplay={{ delay: 3000 }}
+                pagination={{
+                    clickable: true,
+                    el: '.swiper-pagination',
+                }}
+                loop={true}
+                effect="fade"
+                modules={[Navigation, Autoplay, Pagination, EffectFade]}
+                className="mySwiper pointer-events-none"
+                onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+            >
+                <SwiperSlide>
+                    <div className='w-full h-[890px] relative'>
+                        <Image src={image1} height={890} width={1920} className='object-cover w-full h-full' />
+                        <HeroBannerContent
+
+                            heading={<>Convert Leads With <br /> Integrated Call Center</>}
+                            paragraph={<>Our Mexican debt collectors helped us handle three-times the <br />
+                                amount of placements.</>}
+                            buttonLabel={'Request Pricing'}
+                        />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='w-full h-[890px] slider'>
+                        <Image src={image2} height={890} width={1920} className='object-cover w-full h-full' />
+                        <HeroBannerContent
+
+                            heading={<>Convert Leads With <br /> Integrated Call Center</>}
+                            paragraph={<>Our Mexican debt collectors helped us handle three-times the <br />
+                                amount of placements.</>}
+                            buttonLabel={'Request Pricing'}
+                        />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='w-full h-[890px] slider '>
+                        <Image src={image3} height={890} width={1920} className='object-cover w-full h-full' />
+                        <HeroBannerContent
+                            heading={<>Convert Leads With <br /> Integrated Call Center</>}
+                            paragraph={<>Our Mexican debt collectors helped us handle three-times the <br />
+                                amount of placements.</>}
+                            buttonLabel={'Request Pricing'}
+                        />
+                    </div>
+                </SwiperSlide>
+            </Swiper>
+            {/* Pagination Dots */}
+            <div className='absolute top-1/2 -translate-y-1/2 z-50 pointer-events-auto left-6 xl:left-14 2xl:left-14'>
+                <div className='flex flex-col gap-4'>
+                    {[0, 1, 2].map((index) => (
+                        <div
+                            key={index}
+                            className={`w-6 h-6 rounded-full bg-transparent pointer-events-auto ${activeIndex === index ? 'border-red-600 border' : 'border-none'
+                                } relative`}
+                        >
+                            <button
+                                onClick={() => handleSlideChange(index)}
+                                className={`2xl:w-4 2xl:h-4 xl:w-4 xl:h-4 w-2 h-2 rounded-full transition-all cursor-pointer absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ${activeIndex === index ? 'bg-red-700' : 'bg-white'
+                                    }`}
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+        </div>
     );
 };
 

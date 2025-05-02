@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
-const SideBar = dynamic(() => import('@/ui/SideBar'), { ssr: false });
 const ButtonPrimary = dynamic(() => import('@/ui/ButtonPrimary'), { ssr: false });
 const Option = dynamic(() => import('./NavItems').then((mod) => mod.Option), { ssr: false });
+
 
 const NavUser = ({ UserDetails }) => {
     const [mouse2, setMouse2] = useState(false);
@@ -16,8 +16,9 @@ const NavUser = ({ UserDetails }) => {
     const pathname = usePathname();
     const handleLogOut = () => {
         logOut();
-        // setNav(false)
     }
+
+
     return (
         <div className='2xl:flex xl:flex items-center gap-6'>
             {
@@ -57,7 +58,6 @@ const NavUser = ({ UserDetails }) => {
                         </Link>
                     </>
             }
-            <SideBar />
         </div>
     );
 };

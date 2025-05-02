@@ -9,6 +9,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import Head from 'next/head'
 import Navbar from '@/Shared/Navbar/Navbar'
+import NavAnimation from '@/Animations/Navanimation'
 
 export const nunito = Nunito({
   subsets: ['latin'],
@@ -100,12 +101,13 @@ export default function RootLayout({ children }) {
             dangerouslySetInnerHTML={{ __html: metadata.other["application/ld+json"] }}
           />
         </Head>
-        <main className={`overflow-hidden min-h-screen max-w-[1920px] mx-auto bg-[#FFFFFF] ${gilroy.className}`}>
+        <main className={`overflow-hidden min-h-screen bg-[#FFFFFF] ${gilroy.className}`}>
           <AuthProvider>
             <QueryProvider>
               <ChatProvider>
+                {/* <NavAnimation /> */}
                 <Navbar />
-                <div className='2xl:pt-[100px] xl:pt-[100px] pt-[80px] min-h-[400px]'>
+                <div className='min-h-[400px]'>
                   {children}
                 </div>
                 <Footer />
