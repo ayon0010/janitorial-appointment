@@ -32,7 +32,7 @@ const NavUser = ({ UserDetails }) => {
                             <span className='my-auto 2xl:text-base xl:text-sm text-sm group-hover:text-orange transition-all duration-100 '>{userName?.length < 20 ? userName : userName?.slice(0, 16)}...</span>
                         </div>
                         <ul
-                            className={`w-[350px] pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0 shadow-xl 
+                            className={`w-[350px] pt-10 px-10 pb-6 absolute top-[60px] bg-white right-0 shadow-xl 
                 ${mouse2 ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}
                 transition-all duration-500 ease-in-out`}
                             style={{
