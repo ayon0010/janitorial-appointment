@@ -8,8 +8,8 @@ import image1 from '../../public/assets/slide01.jpg';
 import image2 from '../../public/assets/slide02.jpg';
 import image3 from '../../public/assets/slide03.jpg';
 import { useRef, useState } from 'react';
-import ButtonPrimary from './ButtonPrimary';
 import UpAnimation from '@/Animations/UpAnimation';
+import ButtonTertiary from './ButtonTertiary';
 
 const Banner = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -18,13 +18,13 @@ const Banner = () => {
         heading,
         paragraph,
         buttonLabel,
-        positionClasses = 'absolute 2xl:left-24 xl:left-24 2xl:-translate-x-0 xl:-translate-x-0 -translate-x-1/2 left-1/2 top-1/2 -translate-y-1/2 w-full 2xl:p-0 xl:p-0 p-10',
-        headingClasses = 'text-white text-5xl font-semibold 2xl:text-left xl:text-left text-center',
-        paragraphClasses = 'text-white text-lg 2xl:text-left xl:text-left text-center',
+        positionClasses = 'absolute 2xl:left-24 xl:left-24 2xl:-translate-x-0 xl:-translate-x-0 -translate-x-1/2 left-1/2 top-1/2 -translate-y-1/2 w-full 2xl:p-0 xl:p-0 2xl:p-10 xl:p-10 p-4',
+        headingClasses = 'text-white 2xl:text-5xl xl:text-5xl text-3xl font-semibold 2xl:text-left xl:text-left text-center',
+        paragraphClasses = 'text-white 2xl:text-lg xl:text-lg text-base 2xl:text-left xl:text-left text-center',
     }) => {
         return (
             <div className={positionClasses}>
-                <div className='space-y-8 max-w-[1440px] mx-auto'>
+                <div className='2xl:space-y-8 xl:space-y-8 space-y-6 max-w-[1440px] mx-auto'>
                     <UpAnimation delay={0.1} key={activeIndex}>
                         <h1 className={headingClasses}>
                             {heading}
@@ -37,7 +37,7 @@ const Banner = () => {
                     </UpAnimation>
                     <div className='w-fit 2xl:mx-0 xl:mx-0 mx-auto'>
                         <UpAnimation delay={0.5} key={activeIndex}>
-                            <ButtonPrimary label={buttonLabel} />
+                            <ButtonTertiary label={buttonLabel} />
                         </UpAnimation>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ const Banner = () => {
         <div className='relative'>
             <Swiper
                 ref={swiperRef}
-                autoplay={{ delay: 3000 }}
+                autoplay={{ delay: 5000 }}
                 pagination={{
                     clickable: true,
                     el: '.swiper-pagination',
@@ -67,44 +67,43 @@ const Banner = () => {
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             >
                 <SwiperSlide>
-                    <div className='w-full h-[890px] relative'>
-                        <Image src={image1} height={890} width={1920} className='object-cover w-full h-full' />
+                    <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] relative'>
+                        <Image src={image1} height={890} width={1920} alt='janitorial-leads-generation' className='object-cover w-full h-full' />
                         <HeroBannerContent
 
-                            heading={<>Convert Leads With <br /> Integrated Call Center</>}
-                            paragraph={<>Our Mexican debt collectors helped us handle three-times the <br />
-                                amount of placements.</>}
+                            heading={<>Schedule an <br /> Appointment with Us</>}
+                            paragraph={<>Book now to get leads tailored to your business and unlock <br /> new opportunities.
+                            </>}
                             buttonLabel={'Request Pricing'}
                         />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='w-full h-[890px] slider'>
-                        <Image src={image2} height={890} width={1920} className='object-cover w-full h-full' />
+                    <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] slider'>
+                        <Image src={image2} height={890} width={1920} alt='Telemarketing agent doing a call' className='object-cover w-full h-full' />
                         <HeroBannerContent
 
-                            heading={<>Convert Leads With <br /> Integrated Call Center</>}
-                            paragraph={<>Our Mexican debt collectors helped us handle three-times the <br />
-                                amount of placements.</>}
+                            heading={<>Find Qualified ,<br /> Exclusive Janitorial <br /> Leads in your area</>}
+                            paragraph={<>A reliable and stress-free appointment setting <br />
+                                service for janitorial business owner</>}
                             buttonLabel={'Request Pricing'}
                         />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='w-full h-[890px] slider '>
-                        <Image src={image3} height={890} width={1920} className='object-cover w-full h-full' />
+                    <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] slider '>
+                        <Image src={image3} height={890} width={1920} alt='Commercial cleaning lead pricing' className='object-cover w-full h-full' />
                         <HeroBannerContent
                             heading={<>Convert Leads With <br /> Integrated Call Center</>}
-                            paragraph={<>Our Mexican debt collectors helped us handle three-times the <br />
-                                amount of placements.</>}
+                            paragraph={<>Connect with key-decision makers and receive valuable <br /> opportunities delivered straight to your inbox-automatically</>}
                             buttonLabel={'Request Pricing'}
                         />
                     </div>
                 </SwiperSlide>
             </Swiper>
             {/* Pagination Dots */}
-            <div className='absolute top-1/2 -translate-y-1/2 z-50 pointer-events-auto left-6 xl:left-14 2xl:left-14'>
-                <div className='flex flex-col gap-4'>
+            <div className='absolute 2xl:top-1/2 xl:top-1/2 top-[385px] 2xl:-translate-y-1/2 xl:-translate-y-1/2 z-50 pointer-events-auto left-1/2 2xl:-translate-x-0 xl:-translate-x-0 -translate-x-1/2 xl:left-14 2xl:left-14'>
+                <div className='flex 2xl:flex-col xl:flex-col flex-row 2xl:gap-4 xl:gap-4 gap-3'>
                     {[0, 1, 2].map((index) => (
                         <div
                             key={index}
@@ -113,6 +112,7 @@ const Banner = () => {
                         >
                             <button
                                 onClick={() => handleSlideChange(index)}
+                                aria-label={index}
                                 className={`2xl:w-4 2xl:h-4 xl:w-4 xl:h-4 w-2 h-2 rounded-full transition-all cursor-pointer absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ${activeIndex === index ? 'bg-red-700' : 'bg-white'
                                     }`}
                             />

@@ -2,11 +2,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowRight } from "@react-icons/all-files/fa/FaArrowRight";
+import { poppins } from '@/fonts/Poppins';
 
 const ButtonTertiary = ({ label, width }) => {
     const [hover, setHover] = useState(false)
     return (
-        <div className={`${width ? 'w-full rounded-lg' : 'w-fit rounded-[40px]'} h-fit overflow-clip py-4 btn border-none relative btn-hover bg-primary`} onMouseEnter={(e) => setHover(true)} onMouseLeave={(e) => setHover(false)}>
+        <div className={`${width ? 'w-full rounded-lg' : 'w-fit rounded-[40px]'} h-fit overflow-clip py-4 btn border-none relative btn-hover bg-primary ${poppins.className}`} onMouseEnter={(e) => setHover(true)} onMouseLeave={(e) => setHover(false)}>
             <motion.div
                 initial='initial'
                 whileHover='hovered'

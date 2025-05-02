@@ -85,13 +85,13 @@ export default async function Home() {
         <>
             <div className="relative">
                 <Banner />
-                <div className="absolute -bottom-[150px] w-full right-0 left-0">
-                    <div className="max-w-[1150px] mx-auto">
+                <div className="absolute 2xl:-bottom-[150px] xl:-bottom-[150px] -bottom-[450px] w-full right-0 left-0">
+                    <div className="2xl:w-[1150px] xl:w-[1150px] w-[90%] mx-auto">
                         <Appointment />
                     </div>
                 </div>
             </div>
-            <div className="mt-40">
+            <div className="mt-[470px] 2xl:mt-40 xl:mt-40">
                 <div className="2xl:py-20 xl:py-20 py-10">
                     <div className="px-6">
                         <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />
@@ -114,7 +114,7 @@ export default async function Home() {
                 <Leads />
             </div>
 
-            <h5 className="text-secondary  text-center font-light text-xl mt-20 mb-4">What We Offer</h5>
+            <h5 className="text-secondary  text-center font-light text-xl mt-40 mb-4">What We Offer</h5>
             <SectionTitles heading={'Maximize results with minimal effort'} subHeading={"Get cleaning contracts sent straight to your inbox, easily find and delegate tasks to subcontractors, and engage with decision makers automatically"} />
 
             <div className=" md:px-10 px-6">

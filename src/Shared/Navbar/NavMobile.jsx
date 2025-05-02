@@ -46,16 +46,18 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
                     }
                     <div className="btn btn-ghost btn-circle" onClick={() => setNav(true)}>
                         <svg
-                            xmlns="http:www.w3.org/2000/svg"
-                            className="h-5 w-5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5 text-white"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke="currentColor">
+                            stroke="currentColor"
+                        >
                             <path
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeWidth="2"
-                                d="M4 6h16M4 12h16M4 18h7" />
+                                d="M4 6h16M4 12h16M4 18h7"
+                            />
                         </svg>
                     </div>
                     <div
@@ -69,7 +71,10 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
                             X
                         </span>
                         <div className="pt-10 px-10 pb-20 w-full">
-                            <Logo />
+                            {/*  */}
+                            <div className='mt-6'>
+                                <Logo />
+                            </div>
                             <div className='mt-6'>
                                 <ul className='pb-10'>
                                     {

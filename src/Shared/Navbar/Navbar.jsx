@@ -102,9 +102,9 @@ const Navbar = () => {
             </div>
             {/* Nav Mobile */}
             <div className='2xl:hidden xl:hidden h-[80px] flex items-center justify-between px-6'>
-                <Link className='h-[90px]' href={'/'}>
+                <Link className='h-[80px]' href={'/'}>
                     <div className='absolute top-0 2xl:left-11 xl:left-11 left-5'>
-                        <div className='nav-start shadow-xl'>
+                        <div className='nav-start shadow-xl mt-3'>
                             <Logo />
                         </div>
                     </div>

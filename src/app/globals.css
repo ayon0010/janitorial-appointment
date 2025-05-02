@@ -32,26 +32,9 @@ html {
   position: relative !important;
 }
 
-/* .swiper-pagination-bullet-active::before {
-  width: 14px !important;
-  height: 14px !important;
-  inset: 0px !important;
-  background-color: transparent !important;
-  border-radius: 50%;
-  border: 1px solid red !important;
-}  */
-
-/* .pagination-slide {
-  position: absolute !important;
-  left: 50px !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  z-index: 10 !important;
-} */
 
 .swiper {
   position: relative !important;
-  height: 890px !important;
 }
 
 
