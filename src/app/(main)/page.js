@@ -2,7 +2,7 @@ import Image from "next/image";
 import side1 from "@/../public/assets/buy-commercial-cleaning-leads.webp";
 import side2 from "@/../public/assets/contact-with-decision-maker.webp";
 import slide4 from '../../../public/assets/exclusive-commercial-cleaning-leads-.webp';
-import Banner from "@/ui/Banner";
+
 import SectionTitles from "@/ui/SectionTitles";
 import FaCheck from "@/ui/FaCheck";
 import Reviews from "@/ui/Reviews";
@@ -26,6 +26,8 @@ import image3 from '@/../public/assets/img_04.jpg'
 import { poppins } from "./layout";
 import ButtonTertiary from "@/ui/ButtonTertiary";
 import SlideRight from "@/Animations/SlideRight";
+import Banner from "@/ui/Home/Banner";
+import Stepper from "@/ui/Home/Stepper";
 
 
 export const metadata = {
@@ -90,34 +92,53 @@ export default async function Home() {
     return (
         <>
             <div className="relative">
+                {/* Banner */}
                 <Banner />
+
+                {/* Book an appointment */}
                 <div className="absolute 2xl:-bottom-[150px] xl:-bottom-[150px] -bottom-[450px] w-full right-0 left-0">
                     <div className="2xl:w-[1150px] xl:w-[1150px] w-[90%] mx-auto">
+                        {/* Appointment form */}
                         <Appointment />
                     </div>
                 </div>
             </div>
-            <div className="mt-[470px] 2xl:mt-60 xl:mt-60 2xl:w-[1150px] xl:w-[1150px] w-[90%] mx-auto">
-                <div className="2xl:py-20 xl:py-20 py-10 grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 items-center 2xl:gap-0 xl:gap-0 gap-8">
+
+            {/* Rest of the section */}
+            <div className="mt-[470px] 2xl:mt-60 xl:mt-60">
+                {/* About Us section for call center */}
+                <div className="2xl:py-20 xl:py-20 py-10 2xl:w-[1150px] xl:w-[1150px] w-[90%] mx-auto grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 items-center 2xl:gap-0 xl:gap-0 gap-8">
+                    {/* Text side */}
                     <div>
-                        <Title />
+                        {/* Section Title*/}
+                        <Title
+                            head={<>About Us</>}
+                            details={<>World Class <br />Janitorial Lead <br /> Generator</>}
+                        />
                         <p className="text-base text-[#777] font-light mt-7">Our agents are fully bilingual, bi-cultural, well educated <br /> and have expertise in a wide array of business functions <br /> such as Debt Collection, Customer Service.</p>
                         <div className="mt-6 2xl:w-[75%] xl:w-[75%] w-full">
+                            {/* Progress Type (Customer Service) */}
                             <div className="flex items-center justify-between mb-4">
                                 <p className={`text-base font-light ${poppins.className}`}>Customer Service</p>
                                 <p className={`text-base font-light ${poppins.className}`}>85%</p>
                             </div>
+                            {/* Progress Bar Customer Service */}
                             <progress className="progress progress-secondary w-full" value="85" max="100"></progress>
+
+                            {/* Progress Type (Lead Generation) */}
                             <div className="mt-6 flex items-center justify-between mb-4">
                                 <p className={`text-base font-light ${poppins.className}`}>Sales / Lead Generation</p>
                                 <p className={`text-base font-light ${poppins.className}`}>90%</p>
                             </div>
-                            <progress className="progress progress-success w-full" value="90" max="100"></progress>
+
+                            {/* Progress Bar Lead Generation */}
+                            <progress className="progress w-full progress-primary" value="90" max="100"></progress>
                         </div>
                         <div className="mt-12">
                             <ButtonTertiary label={'Learn More'} />
                         </div>
                     </div>
+                    {/* Images */}
                     <SlideRight>
                         <div className="relative 2xl:h-[580px] xl:h-[580px] h-[480px]">
                             <Image src={image2} height={450} width={370} className="z-30 absolute bottom-0 left-0" alt="Janitorial lead generating by our agent" />
@@ -125,6 +146,19 @@ export default async function Home() {
                         </div>
                     </SlideRight>
                 </div>
+
+                {/* How to get Started */}
+
+                <div className="bg-[#F8F8F8] 2xl:my-20 xl:my-20 my-10 2xl:py-32 xl:py-32 py-16">
+                    <div className="2xl:w-[1150px] xl:w-[1150px] w-[90%] mx-auto">
+                        <Title
+                            head={<>Four easy steps</>}
+                            details={<>How To Get <br /> Started</>}
+                        />
+                        <Stepper />
+                    </div>
+                </div>
+
                 <div className="px-6 mb-20">
                     <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />
                 </div>

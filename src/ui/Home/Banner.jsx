@@ -5,12 +5,13 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import Image from 'next/image';
-import image1 from '../../public/assets/slide01.jpg';
-import image2 from '../../public/assets/slide02.jpg';
-import image3 from '../../public/assets/slide03.jpg';
+import image1 from '@/../public/assets/slide01.jpg';
+import image2 from '@/../public/assets/slide02.jpg';
+import image3 from '@/../public/assets/slide03.jpg';
 import { useRef, useState } from 'react';
 import UpAnimation from '@/Animations/UpAnimation';
-import ButtonTertiary from './ButtonTertiary';
+import ButtonTertiary from '../ButtonTertiary';
+
 
 const Banner = () => {
     const [activeIndex, setActiveIndex] = useState(0);
