@@ -160,17 +160,21 @@ export default async function Home() {
 
                 {/* Our Services */}
                 <div className="2xl:w-[1150px] xl:w-[1150px] w-[90%] mx-auto flex 2xl:flex-row xl:flex-row flex-col gap-16 2xl:items-center xl:items-center items-start 2xl:py-16 xl:py-16 py-10">
+                    {/* Description of services */}
                     <div>
+                        {/* Title */}
                         <Title
                             head={<>Our Expertise</>}
                             details={<>Some Of The
                                 <br />  Services We Offer</>}
                         />
                         <p className="text-base text-[#777] font-light my-7 leading-7">Call Center Services International’s <br />management team has over 35-years of <br /> expertise in successfully establishing U.S.</p>
+                        {/* Button */}
                         <ButtonTertiary label={'Learn More'} />
                     </div>
+                    {/* Card Section */}
                     <div className="flex-1 w-full">
-                        <SlideRight>
+                        <SlideRight amount={0.1}>
                             <div className="2xl:h-[878px] xl:h-[878px] grid 2xl:grid-cols-2 xl:grid-cols-2 2xl:grid-rows-2 xl:grid-rows-2 gap-x-8 2xl:gap-y-0 xl:gap-y-0 gap-y-8 grid-cols-1 grid-rows-4">
                                 <div className="relative 2xl:pt-10 xl:pt-10 pt-0">
                                     <div className="shadow-[0_0_10px_rgba(0,0,0,0.2)] h-[384px] flex flex-col services">
