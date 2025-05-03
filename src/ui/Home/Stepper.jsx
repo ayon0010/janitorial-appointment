@@ -47,11 +47,11 @@ export default function Stepper() {
                     steps.map((step, i) => {
                         return (
                             <div className="flex items-start gap-6 h-full">
-                                <div className="relative h-full">
+                                <div className="relative h-full flex flex-col items-center">
                                     <div className={`w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center z-20 hover:scale-110 duration-300 transition-all ${poppins.className}`}>
                                         {step.number}
                                     </div>
-                                    <div className="w-[2px] absolute left-1/2 -translate-x-1/2 bottom-0 top-0 h-full bg-primary -z-10">
+                                    <div className="w-[2px] absolute left-1/2 -translate-x-1/2 bottom-0 top-0 h-full bg-primary z-10">
                                     </div>
                                 </div>
                                 <div className={`space-y-4 ${i === 3 ? 'pb-0' : 'pb-8'}`}>
