@@ -44,6 +44,30 @@ html {
   font-weight: 400 !important;
 }
 
+.service-img {
+  @apply text-red-500 transition-all duration-150 ease-in
+}
+
+.services {
+  @apply transition-all duration-150 ease-in
+}
+
+.services:hover .service-img {
+  @apply text-white
+}
+
+.service-text {
+  @apply transition-all duration-150 ease-in
+}
+
+.services:hover .service-text {
+  @apply text-white
+}
+
+.services:hover {
+  @apply bg-primary text-white
+}
+
 .message {
   grid-template-columns: 1fr 2fr !important;
 }

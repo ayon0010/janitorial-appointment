@@ -1,7 +1,7 @@
 import Image from "next/image";
 import side1 from "@/../public/assets/buy-commercial-cleaning-leads.webp";
 import side2 from "@/../public/assets/contact-with-decision-maker.webp";
-import slide4 from '../../../public/assets/exclusive-commercial-cleaning-leads-.webp';
+import slide4 from '@/../public/assets/exclusive-commercial-cleaning-leads-.webp';
 
 import SectionTitles from "@/ui/SectionTitles";
 import FaCheck from "@/ui/FaCheck";
@@ -19,7 +19,6 @@ import ContactInfo from "@/ui/ContactInfo";
 import AudioPlayer from "@/Shared/Audio";
 import ButtonPrimary from "@/ui/ButtonPrimary";
 import Link from "next/link";
-import { headers } from "next/headers";
 import Title from "@/Shared/Titles/Title";
 import image2 from '@/../public/assets/img_03.jpg'
 import image3 from '@/../public/assets/img_04.jpg'
@@ -28,6 +27,10 @@ import ButtonTertiary from "@/ui/ButtonTertiary";
 import SlideRight from "@/Animations/SlideRight";
 import Banner from "@/ui/Home/Banner";
 import Stepper from "@/ui/Home/Stepper";
+import Service1 from "@/icons/Service-1";
+import Service2 from "@/icons/Service2";
+import Service3 from "@/icons/Service3";
+import Service4 from "@/icons/Service4";
 
 
 export const metadata = {
@@ -84,11 +87,6 @@ export const metadata = {
 
 
 export default async function Home() {
-    const headersList = await headers();
-    const userAgent = headersList.get("user-agent") || "";
-    const isMobile = /Mobi|Android/i.test(userAgent);
-    console.log(isMobile);
-
     return (
         <>
             <div className="relative">
@@ -155,11 +153,75 @@ export default async function Home() {
                             head={<>Four easy steps</>}
                             details={<>How To Get <br /> Started</>}
                         />
+                        {/* Step Part */}
                         <Stepper />
                     </div>
                 </div>
 
-                <div className="px-6 mb-20">
+                {/* Our Services */}
+                <div className="2xl:w-[1150px] xl:w-[1150px] w-[90%] mx-auto flex 2xl:flex-row xl:flex-row flex-col gap-16 2xl:items-center xl:items-center items-start 2xl:py-16 xl:py-16 py-10">
+                    <div>
+                        <Title
+                            head={<>Our Expertise</>}
+                            details={<>Some Of The
+                                <br />  Services We Offer</>}
+                        />
+                        <p className="text-base text-[#777] font-light my-7 leading-7">Call Center Services International’s <br />management team has over 35-years of <br /> expertise in successfully establishing U.S.</p>
+                        <ButtonTertiary label={'Learn More'} />
+                    </div>
+                    <div className="flex-1 w-full">
+                        <SlideRight>
+                            <div className="2xl:h-[878px] xl:h-[878px] grid 2xl:grid-cols-2 xl:grid-cols-2 2xl:grid-rows-2 xl:grid-rows-2 gap-x-8 2xl:gap-y-0 xl:gap-y-0 gap-y-8 grid-cols-1 grid-rows-4">
+                                <div className="relative 2xl:pt-10 xl:pt-10 pt-0">
+                                    <div className="shadow-[0_0_10px_rgba(0,0,0,0.2)] h-[384px] flex flex-col services">
+                                        <div className="w-fit h-fit m-auto">
+                                            <Service1 />
+                                            <div className="mt-7 space-y-6">
+                                                <h3 className={`text-xl ${poppins.className} font-medium`}>IT Development</h3>
+                                                <p className="text-base text-[#777] font-light leading-7 service-text">We provides nearshore IT staff in <br /> Mexico</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="2xl:pt-3 xl:pt-3 pt-0">
+                                    <div className="shadow-[0_0_10px_rgba(0,0,0,0.2)] h-[384px] flex flex-col services">
+                                        <div className="w-fit h-fit m-auto">
+                                            <Service2 />
+                                            <div className="mt-7 space-y-6">
+                                                <h3 className={`text-xl ${poppins.className} font-medium`}>Lead Generation</h3>
+                                                <p className="text-base text-[#777] font-light leading-7 service-text">Improve direct response time,<br /> increase</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="z-10 relative 2xl:pt-7 xl:pt-7 pt-0">
+                                    <div className="shadow-[0_0_10px_rgba(0,0,0,0.2)] h-[384px] flex flex-col services">
+                                        <div className="w-fit h-fit m-auto">
+                                            <Service3 />
+                                            <div className="mt-7 space-y-6">
+                                                <h3 className={`text-xl ${poppins.className} font-medium`}>Debt Collection</h3>
+                                                <p className="text-base text-[#777] font-light leading-7 service-text">We will allow you to establish a <br /> world-class</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="relative">
+                                    <div className="shadow-[0_0_10px_rgba(0,0,0,0.2)] h-[384px] flex flex-col services">
+                                        <div className="w-fit h-fit m-auto">
+                                            <Service4 />
+                                            <div className="mt-7 space-y-6">
+                                                <h3 className={`text-xl ${poppins.className} font-medium`}>Customer Service</h3>
+                                                <p className="text-base text-[#777] font-light leading-7 service-text">Center with bicultural & bilingual <br /> agents</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </SlideRight>
+                    </div>
+                </div>
+
+                <div className="px-6 my-20">
                     <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />
                 </div>
                 <Pricing />
