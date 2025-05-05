@@ -231,10 +231,10 @@ export default async function Home() {
                 </div>
 
                 <div>
-                    <SectionTitles
+                    {/* <SectionTitles
                         heading="Testimonials"
                         subHeading="What People Say About Our Services"
-                    />
+                    /> */}
                     {/* <div className="relative w-full h-screen overflow-hidden">
                         <ParticlesContainer />
                         <div className="absolute inset-0 z-10 flex items-center justify-center text-white">
