@@ -27,18 +27,18 @@ const Banner = () => {
         return (
             <div className={positionClasses}>
                 <div className='2xl:space-y-8 xl:space-y-8 space-y-6 max-w-[1440px] mx-auto'>
-                    <UpAnimation delay={0.3} key={activeIndex}>
+                    <UpAnimation delay={0.8} key={activeIndex}>
                         <h1 className={headingClasses}>
                             {heading}
                         </h1>
                     </UpAnimation>
-                    <UpAnimation delay={0.5} key={activeIndex}>
+                    <UpAnimation delay={1} key={activeIndex}>
                         <p className={paragraphClasses}>
                             {paragraph}
                         </p>
                     </UpAnimation>
                     <div className='w-fit 2xl:mx-0 xl:mx-0 mx-auto'>
-                        <UpAnimation delay={0.7} key={activeIndex}>
+                        <UpAnimation delay={1.2} key={activeIndex}>
                             <ButtonTertiary label={buttonLabel} />
                         </UpAnimation>
                     </div>

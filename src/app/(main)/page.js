@@ -31,6 +31,9 @@ import Service1 from "@/icons/Service-1";
 import Service2 from "@/icons/Service2";
 import Service3 from "@/icons/Service3";
 import Service4 from "@/icons/Service4";
+import ParticlesBackground, { ParticlesContainer } from "@/Animations/Particles";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 
 export const metadata = {
@@ -91,7 +94,9 @@ export default async function Home() {
         <>
             <div className="relative">
                 {/* Banner */}
-                <Banner />
+                <Suspense fallback={<Loading />}>
+                    <Banner />
+                </Suspense>
 
                 {/* Book an appointment */}
                 <div className="absolute 2xl:-bottom-[150px] xl:-bottom-[150px] -bottom-[450px] w-full right-0 left-0">
@@ -139,8 +144,8 @@ export default async function Home() {
                     {/* Images */}
                     <SlideRight>
                         <div className="relative 2xl:h-[580px] xl:h-[580px] h-[480px]">
-                            <Image src={image2} height={450} width={370} className="z-30 absolute bottom-0 left-0" alt="Janitorial lead generating by our agent" />
-                            <Image src={image3} height={450} width={370} className="z-20 absolute top-0 right-0 2xl:hover:translate-x-6 xl:hover:translate-x-6 duration-300 transition-all" alt="Janitorial lead generating by our agent" />
+                            <Image src={image2} loading="lazy" placeholder="blur" height={450} width={370} className="z-30 absolute bottom-0 left-0" alt="Janitorial lead generating by our agent" />
+                            <Image src={image3} loading="lazy" placeholder="blur" height={450} width={370} className="z-20 absolute top-0 right-0 2xl:hover:translate-x-6 xl:hover:translate-x-6 duration-300 transition-all" alt="Janitorial lead generating by our agent" />
                         </div>
                     </SlideRight>
                 </div>
@@ -224,6 +229,40 @@ export default async function Home() {
                         </SlideRight>
                     </div>
                 </div>
+
+                <div>
+                    <SectionTitles
+                        heading="Testimonials"
+                        subHeading="What People Say About Our Services"
+                    />
+                    {/* <div className="relative w-full h-screen overflow-hidden">
+                        <ParticlesContainer />
+                        <div className="absolute inset-0 z-10 flex items-center justify-center text-white">
+                            <h1 className="text-4xl font-bold">Welcome to My Site</h1>
+                        </div>
+                    </div> */}
+                    {/* <div className="bg-primary" style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
+                        <ParticlesContainer />
+
+                        <div
+                            style={{
+                                position: "absolute",
+                                top: 0,
+                                left: 0,
+                                width: "100%",
+                                height: "100%",
+                                color: "white",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                zIndex: 1,
+                            }}
+                        >
+                            <h1>Welcome to My Site</h1>
+                        </div>
+                    </div> */}
+                </div>
+
 
                 <div className="px-6 my-20">
                     <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />
@@ -451,9 +490,6 @@ export default async function Home() {
                     }
                 />
                 <Offers />
-
-                <Web image={image} />
-
                 <div className="2xl:mt-40 xl:mt-40 mt-20">
                     <SectionTitles
                         heading={"What Our Clients Say"}
