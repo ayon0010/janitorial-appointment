@@ -8,11 +8,8 @@ import FaCheck from "@/ui/FaCheck";
 import Reviews from "@/ui/Reviews";
 import Pricing from "@/ui/Pricing";
 import '../globals.css'
-import Offers from "@/ui/Offers";
 import Leads from "@/ui/Leads";
 import Appointment from "@/ui/Appointment";
-import Web from "@/ui/Web";
-import image from '@/../public/assets/it-expert-for-cleaning-companies.webp';
 import ReviewItems from "../../ui/ReviewItems";
 import { data } from '@/js/states';
 import ContactInfo from "@/ui/ContactInfo";
@@ -31,9 +28,8 @@ import Service1 from "@/icons/Service-1";
 import Service2 from "@/icons/Service2";
 import Service3 from "@/icons/Service3";
 import Service4 from "@/icons/Service4";
-import ParticlesBackground, { ParticlesContainer } from "@/Animations/Particles";
-import { Suspense } from "react";
-import Loading from "./loading";
+import ParticlesComponent from "@/Animations/Particles";
+import ReviewSwiper from "@/ui/Home/ReviewSwiper";
 
 
 export const metadata = {
@@ -94,9 +90,7 @@ export default async function Home() {
         <>
             <div className="relative">
                 {/* Banner */}
-                <Suspense fallback={<Loading />}>
-                    <Banner />
-                </Suspense>
+                <Banner />
 
                 {/* Book an appointment */}
                 <div className="absolute 2xl:-bottom-[150px] xl:-bottom-[150px] -bottom-[450px] w-full right-0 left-0">
@@ -143,7 +137,7 @@ export default async function Home() {
                     </div>
                     {/* Images */}
                     <SlideRight>
-                        <div className="relative 2xl:h-[580px] xl:h-[580px] h-[480px]">
+                        <div className="relative 2xl:h-[580px] xl:h-[580px] h-[480px] 2xl:w-full xl:w-full w-[387px]">
                             <Image src={image2} loading="lazy" placeholder="blur" height={450} width={370} className="z-30 absolute bottom-0 left-0" alt="Janitorial lead generating by our agent" />
                             <Image src={image3} loading="lazy" placeholder="blur" height={450} width={370} className="z-20 absolute top-0 right-0 2xl:hover:translate-x-6 xl:hover:translate-x-6 duration-300 transition-all" alt="Janitorial lead generating by our agent" />
                         </div>
@@ -180,18 +174,21 @@ export default async function Home() {
                     {/* Card Section */}
                     <div className="flex-1 w-full">
                         <SlideRight amount={0.1}>
+                            {/* Services */}
                             <div className="2xl:h-[878px] xl:h-[878px] grid 2xl:grid-cols-2 xl:grid-cols-2 2xl:grid-rows-2 xl:grid-rows-2 gap-x-8 2xl:gap-y-0 xl:gap-y-0 gap-y-8 grid-cols-1 grid-rows-4">
+                                {/* It Support */}
                                 <div className="relative 2xl:pt-10 xl:pt-10 pt-0">
                                     <div className="shadow-[0_0_10px_rgba(0,0,0,0.2)] h-[384px] flex flex-col services">
                                         <div className="w-fit h-fit m-auto">
                                             <Service1 />
                                             <div className="mt-7 space-y-6">
                                                 <h3 className={`text-xl ${poppins.className} font-medium`}>IT Development</h3>
-                                                <p className="text-base text-[#777] font-light leading-7 service-text">We provides nearshore IT staff in <br /> Mexico</p>
+                                                <p className="text-base text-[#777] font-light leading-7 service-text">Professional Web Solutions and <br /> Support Services</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                {/* Lead Generation */}
                                 <div className="2xl:pt-3 xl:pt-3 pt-0">
                                     <div className="shadow-[0_0_10px_rgba(0,0,0,0.2)] h-[384px] flex flex-col services">
                                         <div className="w-fit h-fit m-auto">
@@ -203,24 +200,26 @@ export default async function Home() {
                                         </div>
                                     </div>
                                 </div>
+                                {/* Appointment Setting Service */}
                                 <div className="z-10 relative 2xl:pt-7 xl:pt-7 pt-0">
                                     <div className="shadow-[0_0_10px_rgba(0,0,0,0.2)] h-[384px] flex flex-col services">
                                         <div className="w-fit h-fit m-auto">
                                             <Service3 />
                                             <div className="mt-7 space-y-6">
-                                                <h3 className={`text-xl ${poppins.className} font-medium`}>Debt Collection</h3>
-                                                <p className="text-base text-[#777] font-light leading-7 service-text">We will allow you to establish a <br /> world-class</p>
+                                                <h3 className={`text-xl ${poppins.className} font-medium`}>Appointment Setting</h3>
+                                                <p className="text-base text-[#777] font-light leading-7 service-text">Exclusive Appointment Setting for <br /> Janitorial Services</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                {/* Digital Marketing */}
                                 <div className="relative">
                                     <div className="shadow-[0_0_10px_rgba(0,0,0,0.2)] h-[384px] flex flex-col services">
                                         <div className="w-fit h-fit m-auto">
                                             <Service4 />
                                             <div className="mt-7 space-y-6">
-                                                <h3 className={`text-xl ${poppins.className} font-medium`}>Customer Service</h3>
-                                                <p className="text-base text-[#777] font-light leading-7 service-text">Center with bicultural & bilingual <br /> agents</p>
+                                                <h3 className={`text-xl ${poppins.className} font-medium`}>Digital Marketing</h3>
+                                                <p className="text-base text-[#777] font-light leading-7 service-text">Expert SEO and Digital Marketing <br /> Services</p>
                                             </div>
                                         </div>
                                     </div>
@@ -230,66 +229,36 @@ export default async function Home() {
                     </div>
                 </div>
 
-                <div>
-                    {/* <SectionTitles
-                        heading="Testimonials"
-                        subHeading="What People Say About Our Services"
-                    /> */}
-                    {/* <div className="relative w-full h-screen overflow-hidden">
-                        <ParticlesContainer />
-                        <div className="absolute inset-0 z-10 flex items-center justify-center text-white">
-                            <h1 className="text-4xl font-bold">Welcome to My Site</h1>
+                {/* Reviews */}
+                <div className="relative my-16">
+                    {/* Background */}
+                    <ParticlesComponent id="particles" />
+                    {/* Swiper Reviews */}
+                    <div className="w-fit h-fit absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+                        <div className="space-y-5 mb-10">
+                            <p className="text-white text-lg font-medium text-center">Testimonial</p>
+                            <h3 className="text-white text-2xl font-bold text-center">What People Say About <br />Our Service</h3>
                         </div>
-                    </div> */}
-                    {/* <div className="bg-primary" style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
-                        <ParticlesContainer />
-
-                        <div
-                            style={{
-                                position: "absolute",
-                                top: 0,
-                                left: 0,
-                                width: "100%",
-                                height: "100%",
-                                color: "white",
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                zIndex: 1,
-                            }}
-                        >
-                            <h1>Welcome to My Site</h1>
-                        </div>
-                    </div> */}
+                        {/* Swiper */}
+                        <ReviewSwiper />
+                    </div>
                 </div>
-
-
-                <div className="px-6 my-20">
+              
+                {/* <div className="px-6 my-20">
                     <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />
                 </div>
-                <Pricing />
-                <div className="mt-20">
-                    <SectionTitles
-                        heading={"Closed Deals"}
-                        subHeading={"Listen to our agents successfully engaging with decision-makers"}
-                    />
-                </div>
-                <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-6 my-16 2xl:px-10 xl:px-10 px-6">
+                <Pricing /> */}
+               
+                {/* <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-6 my-16 2xl:px-10 xl:px-10 px-6">
                     <AudioPlayer src={'https://firebasestorage.googleapis.com/v0/b/clean-jobs-production.appspot.com/o/records%2F2023-10-16T19_16_15%2B00_00.mp3?alt=media&token=a6d77910-b142-4b4a-85a0-1d3f881f48c0'} name={'Apartment Complex Cleaning Leads'} />
                     <AudioPlayer src={'https://firebasestorage.googleapis.com/v0/b/clean-jobs-production.appspot.com/o/records%2FThe%20Royal%20King%20Palace%20and%20Convention%20Center-%20Diego-%20JAN.mp3?alt=media&token=fa1f1d37-b96c-4ceb-b17d-fa9d71aa3bc5'} name={'Convention Center Cleaning Leads'} />
                     <AudioPlayer src={'https://firebasestorage.googleapis.com/v0/b/clean-jobs-production.appspot.com/o/records%2F2024-10-29T15_24_20%2B00_00%20(2).mp3?alt=media&token=d1dec64b-7503-48c7-b8ec-61afc61c9cb0'} name={'Apartment Complex Cleaning Leads'} />
-                </div>
-                <h3 className="text-secondary text-center font-light text-xl mt-20 mb-4">How We Help You to Grow</h3>
-                <div className="w-[80%] mx-auto">
-                    <SectionTitles heading={'Discover Commercial Cleaning Leads Across the USA'} subHeading={"Janitorial Appointment connects cleaning companies with top commercial centers, hospitals, schools, and offices. Register now for exclusive access to appointment-setting opportunities."} />
-                </div>
-                <Leads />
+                </div> */}
+                
             </div>
 
-            <h5 className="text-secondary  text-center font-light text-xl mt-40 mb-4">What We Offer</h5>
-            <SectionTitles heading={'Maximize results with minimal effort'} subHeading={"Get cleaning contracts sent straight to your inbox, easily find and delegate tasks to subcontractors, and engage with decision makers automatically"} />
-
-            <div className=" md:px-10 px-6">
+           
+            {/* <div className=" md:px-10 px-6">
                 <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row-reverse flex-col">
                     <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F5F6F7] rounded-[32px] h-fit">
                         <Image
@@ -481,35 +450,7 @@ export default async function Home() {
                         </div>
                     </div>
                 </div>
-
-                <p className="text-secondary  text-center font-light text-xl mt-20 mb-4">Effortless business growth.</p>
-                <SectionTitles
-                    heading={"Boost Your Business with a Multi-Channel Lead Generation Strategy"}
-                    subHeading={
-                        "High-quality commercial cleaning leads delivered to your inbox, connect with top prospects, and automate engagement with key decision-makers."
-                    }
-                />
-                <Offers />
-                <div className="2xl:mt-40 xl:mt-40 mt-20">
-                    <SectionTitles
-                        heading={"What Our Clients Say"}
-                        subHeading={
-                            "We appreciate your trust in Janitorial Appointment! Our commitment is to provide quality janitorial leads and reliable service connections to meet your business needs. Hear from clients who have successfully grown their businesses with us."
-                        }
-                    />
-                </div>
-                <div className='md:grid md:grid-cols-3 md:gap-3 hidden mt-10'>
-                    {
-                        data?.map((d, i) => {
-                            return (
-                                <ReviewItems key={i} d={d} />
-                            )
-                        })
-                    }
-                </div>
-                <Reviews />
-                {/*  */}
-            </div>
+            </div> */}
             <div className="py-10 bg-white">
                 <SectionTitles heading={"Contact Us"} />
                 <ContactInfo />

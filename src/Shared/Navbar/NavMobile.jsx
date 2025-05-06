@@ -36,7 +36,7 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
 
     return (
         <div>
-            <div className="2xl:ml-0 xl:ml-0 ml-auto 2xl:hidden xl:hidden block">
+            <div className="2xl:ml-0 xl:ml-0 ml-auto 2xl:hidden xl:hidden md:hidden block">
                 <div className='flex items-center gap-3'>
                     {
                         !user &&

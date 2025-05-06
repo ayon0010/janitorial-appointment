@@ -35,8 +35,12 @@ html {
 
 .swiper {
   position: relative !important;
+  height: 890px !important;
 }
 
+#particles {
+  @apply relative h-[932px] w-full overflow-hidden
+}
 
 #search::placeholder {
   color: #667085 !important;
@@ -248,13 +252,32 @@ input[type="checkbox"]:checked~.collapse-content {
 }
 
 
+.review-items {
+  height: 550px !important;
+}
+
+
 @media screen and (max-width: 576px) {
   .dashboard {
     display: grid !important;
     grid-template-columns: 1fr !important;
   }
 
+  .swiper {
+    height: 480px !important;
+  }
+
+  .review-items {
+    height: 350px !important;
+  }
+
   .banner-text {
     line-height: 25px !important;
+  }
+}
+
+@media screen and (min-width:577px) and (max-width:1024px) {
+  .swiper {
+    height: 480px !important;
   }
 }

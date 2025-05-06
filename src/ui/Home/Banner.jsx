@@ -20,13 +20,13 @@ const Banner = () => {
         heading,
         paragraph,
         buttonLabel,
-        positionClasses = 'absolute 2xl:left-24 xl:left-24 2xl:-translate-x-0 xl:-translate-x-0 -translate-x-1/2 left-1/2 top-1/2 -translate-y-1/2 w-full 2xl:p-0 xl:p-0 2xl:p-10 xl:p-10 p-4',
+        positionClasses = 'absolute 2xl:left-0 xl:left-0 2xl:-translate-x-0 xl:-translate-x-0 -translate-x-1/2 left-1/2 top-1/2 -translate-y-1/2 w-full 2xl:p-0 xl:p-0 2xl:p-10 xl:p-10 p-4',
         headingClasses = 'text-white 2xl:text-5xl xl:text-5xl text-3xl font-semibold 2xl:text-left xl:text-left text-center',
         paragraphClasses = 'text-white 2xl:text-lg xl:text-lg text-base 2xl:text-left xl:text-left text-center',
     }) => {
         return (
             <div className={positionClasses}>
-                <div className='2xl:space-y-8 xl:space-y-8 space-y-6 max-w-[1440px] mx-auto'>
+                <div className='2xl:space-y-8 xl:space-y-8 space-y-6 max-w-[1150px] mx-auto'>
                     <UpAnimation delay={0.8} key={activeIndex}>
                         <h1 className={headingClasses}>
                             {heading}
@@ -106,7 +106,7 @@ const Banner = () => {
                 </SwiperSlide>
             </Swiper>
             {/* Pagination Dots */}
-            <div className='absolute 2xl:top-1/2 xl:top-1/2 top-[385px] 2xl:-translate-y-1/2 xl:-translate-y-1/2 z-50 pointer-events-auto left-1/2 2xl:-translate-x-0 xl:-translate-x-0 -translate-x-1/2 xl:left-14 2xl:left-14'>
+            <div className='absolute 2xl:top-1/2 xl:top-1/2 top-[385px] 2xl:-translate-y-1/2 xl:-translate-y-1/2 z-50 pointer-events-auto left-1/2 2xl:-translate-x-0 xl:-translate-x-0 -translate-x-1/2 xl:left-3 2xl:left-14'>
                 <div className='flex 2xl:flex-col xl:flex-col flex-row 2xl:gap-4 xl:gap-4 gap-3'>
                     {[0, 1, 2].map((index) => (
                         <div
