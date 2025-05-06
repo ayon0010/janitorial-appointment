@@ -15,7 +15,7 @@ const SlideRight = ({ children, delay = 0, amount = 0.2 }) => {
             }}
             style={{
                 willChange: 'opacity, transform',
-                transform: 'translateZ(0)'
+                transform: 'translateZ(0)',
             }}
         >
             {children}

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import TickCircle from './TickCircle';
 import PaymentLink from './PaymentLink';
+import ButtonPrimary from './ButtonPrimary';
 
 const pricingPlans = [
     {
@@ -36,7 +37,7 @@ const pricingPlans = [
         ],
         buttonLabel: "Start Now",
         buttonclassName: "text-black bg-white hover:bg-green-700 hover:text-white",
-        containerclassName: "bg-primary",
+        containerclassName: "bg-[#1D1D1D]",
         priceclassName: "text-6xl font-bold text-white",
         priceUnitclassName: "font-semibold text-base text-white",
         descriptionclassName: "nunito text-xs font-normal text-white",
@@ -87,8 +88,8 @@ const Pricing = () => {
                             </div>
                         ))}
                     </div>
-                    <div className='mt-auto'>
-                        {index !== 0 ? <PaymentLink plan={plan} link={`${plan.paymentLink}`} register={index} /> : <Link href={`/login`}> <button className={`btn ${plan.buttonclassName} font-semibold w-full`}>Start Now</button></Link>}
+                    <div className='mt-auto mx-auto'>
+                        {index !== 0 ? <PaymentLink plan={plan} link={`${plan.paymentLink}`} register={index} /> : <Link href={`/login`}> <ButtonPrimary label={'Start Now'}/></Link>}
                     </div>
                 </div>
             ))}

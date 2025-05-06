@@ -11,6 +11,7 @@ import image3 from '@/../public/assets/slide03.jpg';
 import { useRef, useState } from 'react';
 import UpAnimation from '@/Animations/UpAnimation';
 import ButtonTertiary from '../ButtonTertiary';
+import Link from 'next/link';
 
 
 const Banner = () => {
@@ -39,7 +40,9 @@ const Banner = () => {
                     </UpAnimation>
                     <div className='w-fit 2xl:mx-0 xl:mx-0 mx-auto'>
                         <UpAnimation delay={1.2} key={activeIndex}>
-                            <ButtonTertiary label={buttonLabel} />
+                            <Link href={'#pricing'}>
+                                <ButtonTertiary label={buttonLabel} />
+                            </Link>
                         </UpAnimation>
                     </div>
                 </div>
