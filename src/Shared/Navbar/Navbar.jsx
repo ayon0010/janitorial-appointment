@@ -11,6 +11,15 @@ import Image from 'next/image';
 import logo from '@/../public/assets/Blue_and_White_Simple_Cleaning_Services_Logo-removebg-preview-1.png'
 import { poppins } from '@/fonts/Poppins';
 
+export const Logo = () => {
+    return (
+        <Link href={'/'} className='bg-transparent w-[140px] flex items-center'>
+            <Image src={logo} className='w-[50px]' alt='janitorial-appointment-logo' />
+            <p className={`${poppins.className} font-light text-lg text-white`}>Janitorial <br /> Appointments</p>
+        </Link>
+    )
+}
+
 const Navbar = () => {
     // User Token
     const token = Cookies.get('userToken');
@@ -77,15 +86,6 @@ const Navbar = () => {
         }
 
     }, [])
-
-    const Logo = () => {
-        return (
-            <Link href={'/'} className='bg-transparent w-[140px] flex items-center'>
-                <Image src={logo} className='w-[50px]' alt='janitorial-appointment-logo' />
-                <p className={`${poppins.className} font-light text-lg text-white`}>Janitorial <br /> Appointments</p>
-            </Link>
-        )
-    }
 
     return (
         <div className={`w-full transition-all duration-500 ease-in-out 2xl:h-[100px] xl:h-[100px] h-[80px] ${!topPosition ? 'absolute bg-transparent' : 'fixed bg-[#212121]'} inset-0 left-0 right-0 top-0 z-[100] `}>

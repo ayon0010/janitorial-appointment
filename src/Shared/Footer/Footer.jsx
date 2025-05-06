@@ -1,0 +1,118 @@
+import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook";
+import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
+import { FaWhatsapp } from "@react-icons/all-files/fa/FaWhatsapp";
+// import Logo fro../Logoogo";
+// import ButtonSecondary from "@/ui/ButtonSecondary";
+// import SubscribeEmail from "@/ui/SubscribeEmail";
+// import Link from "next/link";
+
+// const Footer = () => {
+//     
+//     return (
+//         <footer className="bg-[#EBF1EC] text-base-content 2xl:px-10 xl:px-10 px-6 py-16 justify-between max-w-[1920px] mx-auto min-h-[200px]">
+//             <div className="flex 2xl:flex-row xl:flex-row flex-col 2xl:justify-between 2xl:items-start xl:justify-between xl:items-start justify-start items-start 2xl:gap-0 xl:gap-0 gap-10">
+//                 <Logo />
+//                 <div className="flex md:flex-row flex-col items-center md:gap-7 gap-4">
+//                     <p className="text-base font-medium ">Ready to get started?</p>
+//                     <ButtonSecondary label={'Get Started'} href={'/register'} userHref={'/register'} />
+//                 </div>
+//             </div>
+//             <div className="flex 2xl:flex-row xl:flex-row flex-col 2xl:justify-between xl:justify-between 2xl:items-end xl:items-end justify-center">
+//                 <aside>
+//                     <div className="my-20">
+//                         <h1 className="text-2xl  font-bold">
+//                             Subscribe to our <br />
+//                             newsletter
+//                         </h1>
+//                         <SubscribeEmail />
+//                     </div>
+//                     <div className="flex 2xl:flex-row xl:flex-row flex-col 2xl:items-center xl:items-center items-start 2xl:gap-14 xl:gap-14 gap-6">
+//                         <Link href={'/term&condition'} className="font-medium text-base ">Terms & Conditions</Link>
+//                         <Link href={'/privacy'} className="font-medium text-base ">Privacy Policy</Link>
+//                     </div>
+//                 </aside>
+//                 <aside className="w-fit 2xl:mt-0 xl:mt-0 mt-10">
+//                     
+//                 </aside>
+//             </div>
+//         </footer>
+
+//     );
+// };
+
+// export default Footer;
+
+
+import React from 'react';
+import { Logo } from '../Navbar/Navbar';
+import Link from 'next/link';
+import { poppins } from '@/fonts/Poppins';
+import DownAnimation from "@/Animations/DownAnimation";
+
+const Footer = () => {
+    const message = encodeURIComponent('Hello! I would like to inquire about your commercial cleaning leads.');
+    return (
+        <div className='2xl:h-[412px] xl:h-[412px] h-auto bg-[#1D1D1D] flex flex-col'>
+            <footer className="footer sm:footer-horizontal text-base-content max-w-[1150px] m-auto h-fit 2xl:pt-0 xl:pt-0 2xl:pb-0 xl:pb-0 2xl:px-0 xl:px-0 px-6 pt-14 pb-20">
+                <aside>
+                    <DownAnimation>
+                        <Logo />
+                    </DownAnimation>
+                </aside>
+                <DownAnimation delay={0.3}>
+                    <nav>
+                        <Link href={'/book-an-appointment'}>
+                            <h2 className={`${poppins.className} text-base font-light text-[#777] hover:text-red-500 transition-all duration-100 ease-linear`}>Appointment</h2>
+                        </Link>
+                        <div className='my-2'>
+                            <Link href={'/exclusive-leads'}>
+                                <h2 className={`${poppins.className} text-base font-light text-[#777] hover:text-red-500 transition-all duration-100 ease-linear`}>Leads</h2>
+                            </Link>
+                        </div>
+                        <Link href={'/blogs'}>
+                            <h2 className={`${poppins.className} text-base font-light text-[#777] hover:text-red-500 transition-all duration-100 ease-linear`}>Blogs</h2>
+                        </Link>
+                    </nav>
+                </DownAnimation>
+                <DownAnimation delay={0.5}>
+                    <nav>
+                        <div>
+                            <h2 className={`text-white ${poppins.className} text-base font-medium`}>Give Us a Call</h2>
+                            <p className={`${poppins.className} text-base font-light text-[#777] hover:text-red-500 transition-all duration-100 ease-linear mt-3`}>880-1726-108060</p>
+                        </div>
+                        <div className='mt-3'>
+                            <h2 className={`text-white ${poppins.className} text-base font-medium`}>Email Us</h2>
+                            <p className={`${poppins.className} text-base font-light text-[#777] hover:text-red-500 transition-all duration-100 ease-linear mt-3`}><a href="mailto:contact@janitorialappointment.com">contact@janitorialappointment.com</a></p>
+                        </div>
+                    </nav>
+                </DownAnimation>
+                <DownAnimation delay={0.7}>
+                    <nav>
+                        <h2 className={`text-white ${poppins.className} text-base font-medium`}>Join Us</h2>
+                        <div className="flex items-center gap-4 mt-3">
+                            <Link className="hover:text-red-500" href={'https://www.facebook.com/commercialcleaningleads/'} aria-label="Visit our Facebook page" target='_blank'>
+                                <FaFacebook color="#777" size={'1.5rem'} />
+                            </Link>
+                            <Link href={`https://wa.me/${+8801726108060}?text=${message}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Chat with us on WhatsApp"
+                                className="hover:text-red-500"
+                            >
+                                <FaWhatsapp color="#777" size={'1.5rem'} />
+                            </Link>
+                            <Link href={'https://x.com/cleaningleads12'} className="hover:text-red-500" aria-label="Follow us on Twitter" target='_blank'>
+                                <FaTwitter color="#777" size={'1.5rem'} />
+                            </Link>
+                        </div>
+                    </nav>
+                </DownAnimation>
+            </footer>
+            <aside>
+                <p className="text-white text-center py-5 border-t-[1px] border-white hover:text-red-500 duration-100 transition-all">Copyright © {new Date().getFullYear()} - All right reserved by Shariar Ayon <a href="mailto:shariar.ayon128@gmail.com">shariar.ayon128@gmail.com</a></p>
+            </aside>
+        </div>
+    );
+};
+
+export default Footer;

@@ -2,6 +2,9 @@
 import Image from 'next/image';
 import cs1 from '@/../public/assets/testimonials_01.jpg'
 import cs2 from '@/../public/assets/testimonial_03.jpg'
+import cs3 from '@/../public/assets/testimonial_04.jpg'
+import cs4 from '@/../public/assets/testimonial_05.jpg'
+import cs5 from '@/../public/assets/testimonials_02.jpg'
 import { FaQuoteLeft } from 'react-icons/fa';
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
@@ -109,44 +112,44 @@ const ReviewSwiper = () => {
 
                 <SwiperSlide className="2xl:!w-[570px] xl:!w-[570px] !w-full !h-[290px]">
                     <BigSlide image={cs1} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
+                    <MobileSlide image={cs1} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
+                </SwiperSlide>
+                <SwiperSlide className="2xl:!w-[270px] xl:!w-[270px] !w-full !h-[290px]">
+                    <SmallSlide image={cs4} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
                     <MobileSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
                 </SwiperSlide>
                 <SwiperSlide className="2xl:!w-[270px] xl:!w-[270px] !w-full !h-[290px]">
                     <SmallSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                    <MobileSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                </SwiperSlide>
-                <SwiperSlide className="2xl:!w-[270px] xl:!w-[270px] !w-full !h-[290px]">
-                    <SmallSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                    <MobileSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
+                    <MobileSlide image={cs3} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
                 </SwiperSlide>
                 <SwiperSlide className="2xl:!w-[570px] xl:!w-[570px] !w-full !h-[290px]">
-                    <BigSlide image={cs1} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                    <MobileSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
+                    <BigSlide image={cs3} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
+                    <MobileSlide image={cs4} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
                 </SwiperSlide>
                 <SwiperSlide className="2xl:!w-[270px] xl:!w-[270px] !w-full !h-[290px]">
-                    <SmallSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                    <MobileSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                </SwiperSlide>
-                <SwiperSlide className="2xl:!w-[270px] xl:!w-[270px] !w-full !h-[290px]">
-                    <SmallSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                    <MobileSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                </SwiperSlide>
-                <SwiperSlide className="2xl:!w-[570px] xl:!w-[570px] !w-full !h-[290px]">
-                    <BigSlide image={cs1} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                    <MobileSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                </SwiperSlide>
-                <SwiperSlide className="2xl:!w-[270px] xl:!w-[270px] !w-full !h-[290px]">
-                    <SmallSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                    <MobileSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                </SwiperSlide>
-                <SwiperSlide className="2xl:!w-[270px] xl:!w-[270px] !w-full !h-[290px]">
-                    <SmallSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                    <MobileSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
+                    <SmallSlide image={cs5} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
+                    <MobileSlide image={cs5} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
                 </SwiperSlide>
             </Swiper>
             <div className='absolute z-50 left-1/2 -translate-x-1/2'>
-                <div className='flex flex-row 2xl:gap-4 xl:gap-4 gap-3'>
-                    {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
+                <div className='2xl:flex xl:flex hidden flex-row 2xl:gap-4 xl:gap-4 gap-3'>
+                    {[0, 1, 2].map((index) => (
+                        <div
+                            key={index}
+                            className={`w-4 h-4 rounded-full bg-transparent pointer-events-auto ${activeIndex === index ? 'border-red-600 border' : 'border-none'
+                                } relative`}
+                        >
+                            <button
+                                onClick={() => handleSlideChange(index)}
+                                aria-label={index}
+                                className={`w-2 h-2 rounded-full transition-all cursor-pointer absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ${activeIndex === index ? 'bg-red-700' : 'bg-white'
+                                    }`}
+                            />
+                        </div>
+                    ))}
+                </div>
+                <div className='2xl:hidden xl:hidden flex flex-row 2xl:gap-4 xl:gap-4 gap-3'>
+                    {[0, 1, 2, 3, 4].map((index) => (
                         <div
                             key={index}
                             className={`w-4 h-4 rounded-full bg-transparent pointer-events-auto ${activeIndex === index ? 'border-red-600 border' : 'border-none'

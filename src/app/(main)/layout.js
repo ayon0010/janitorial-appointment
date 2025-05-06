@@ -3,13 +3,13 @@ import localFont from 'next/font/local'
 import '../globals.css'
 import AuthProvider from '@/Providers/AuthProvider'
 import QueryProvider from '@/Providers/QueryProvider'
-import Footer from '@/Shared/Footer'
 import ChatProvider from '@/Providers/ChatProvider'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import Head from 'next/head'
 import Navbar from '@/Shared/Navbar/Navbar'
 import NavAnimation from '@/Animations/Navanimation'
+import Footer from '@/Shared/Footer/Footer'
 
 export const nunito = Nunito({
   subsets: ['latin'],
