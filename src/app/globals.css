@@ -256,6 +256,13 @@ input[type="checkbox"]:checked~.collapse-content {
   height: 550px !important;
 }
 
+.team {
+  height: 100% !important;
+}
+
+.people:hover .team-image {
+  @apply opacity-100 !important;
+}
 
 @media screen and (max-width: 576px) {
   .dashboard {
@@ -273,6 +280,10 @@ input[type="checkbox"]:checked~.collapse-content {
 
   .banner-text {
     line-height: 25px !important;
+  }
+
+  .team {
+    height: 100% !important;
   }
 }
 

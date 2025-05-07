@@ -12,6 +12,9 @@ import rev1 from '@/../public/assets/close-up-young-successful-man-smiling-camer
 import rev2 from '@/../public/assets/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes.svg'
 import YoutubeEmbed from '@/ui/Youtube'
 import { gilroy } from "../layout";
+import { UserReviews } from "../page";
+import ParticlesComponent from "@/Animations/Particles";
+import ReviewSwiper from "@/ui/Home/ReviewSwiper";
 
 
 export const metadata = {
@@ -208,43 +211,18 @@ const page = async () => {
                     </div>
                 </div>
             </div>
-            <div className="2xl:py-24 xl:py-16 py-10 2xl:px-40 xl:px-28 px-10">
-                <SectionTitles heading={'Experiences Shared by Our Clients'} subHeading={'Our team provided unparalleled support throughout every project. Their expertise and dedication were evident from day one, helping customers navigate complex challenges.'} />
-                <div className="2xl:mt-12 xl:mt-10 mt-6 flex 2xl:flex-row xl:flex-row flex-col items-start 2xl:gap-8 xl:gap-6 gap-4">
-                    <div className="2xl:p-8 xl:p-6 p-4 2xl:space-y-8 xl:space-y-6 space-y-4 border border-[#D6D6D6]">
-                        <div className="flex items-center justify-center">
-                            {
-                                Array.from({ length: 5 }, (_, i) => i + 1).map(i => (
-                                    <FaStar key={i} color="#F5C74D" />
-                                ))
-                            }
-                        </div>
-                        <p className="text-deep-blue 2xl:text-lg xl:text-base text-center">Their lead generation services are top-tier! We saw a huge boost in qualified leads, and the integration with our CRM was seamless. If you need reliable, high-quality leads, Janitorial Appointments is the way to go.</p>
-                        <div className="flex items-start justify-center gap-2">
-                            <Image src={rev1} alt="About-Us" loading="lazy" />
-                            <div>
-                                <h4 className="2xl:text-lg xl:text-lg text-black font-semibold">Artemisia Udinese</h4>
-                                <p className="text-deep-blue 2xl:text-xs xl:text-xs">Marketing Specialist</p>
-                            </div>
-                        </div>
+            {/* Reviews */}
+            <div className="relative mt-16">
+                {/* Background */}
+                <ParticlesComponent id="particles" />
+                {/* Swiper Reviews */}
+                <div className="w-fit h-fit absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+                    <div className="space-y-5 mb-10">
+                        <p className="text-white text-lg font-medium text-center">Testimonial</p>
+                        <h3 className="text-white text-2xl font-bold text-center">What People Say About <br />Our Service</h3>
                     </div>
-                    <div className="2xl:p-8 xl:p-6 p-4 2xl:space-y-8 xl:space-y-6 space-y-4 border border-[#D6D6D6]">
-                        <div className="flex items-center justify-center">
-                            {
-                                Array.from({ length: 5 }, (_, i) => i + 1).map(i => (
-                                    <FaStar key={i} color="#F5C74D" />
-                                ))
-                            }
-                        </div>
-                        <p className="text-deep-blue 2xl:text-lg xl:text-base text-center">Working with them has been a game-changer. Their web solutions helped us build an online presence that drives sales, and their telemarketing service added a personal touch that boosted customer engagement.</p>
-                        <div className="flex items-start justify-center gap-2">
-                            <Image src={rev2} alt="About-Us" />
-                            <div>
-                                <h4 className="2xl:text-lg xl:text-lg text-black font-semibold">Artemisia Udinese</h4>
-                                <p className="text-deep-blue 2xl:text-xs xl:text-xs">Marketing Specialist</p>
-                            </div>
-                        </div>
-                    </div>
+                    {/* Swiper */}
+                    <ReviewSwiper />
                 </div>
             </div>
         </div>

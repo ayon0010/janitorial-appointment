@@ -30,6 +30,7 @@ import Service3 from "@/icons/Service3";
 import Service4 from "@/icons/Service4";
 import ParticlesComponent from "@/Animations/Particles";
 import ReviewSwiper from "@/ui/Home/ReviewSwiper";
+import Team from "@/ui/Home/Team";
 
 
 export const metadata = {
@@ -243,220 +244,28 @@ export default async function Home() {
                         <ReviewSwiper />
                     </div>
                 </div>
+                {/* Pricing */}
                 <div id="pricing" className="max-w-[1150px] mx-auto mb-20 mt-28">
                     <Pricing />
                 </div>
 
-                {/* <div className="px-6 my-20">
-                    <SectionTitles heading={"Find the right plan"} subHeading={"Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals."} />
+
+                {/* Our Team */}
+                <div className="text-center my-24 max-w-[1150px] mx-auto">
+                    <Title
+                        head={<>Our team</>}
+                        details={<>Our Best Specialists <br />
+                            Work For You</>}
+                    />
+                    <Team />
                 </div>
-                 */}
-
-                {/* <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-6 my-16 2xl:px-10 xl:px-10 px-6">
-                    <AudioPlayer src={'https://firebasestorage.googleapis.com/v0/b/clean-jobs-production.appspot.com/o/records%2F2023-10-16T19_16_15%2B00_00.mp3?alt=media&token=a6d77910-b142-4b4a-85a0-1d3f881f48c0'} name={'Apartment Complex Cleaning Leads'} />
-                    <AudioPlayer src={'https://firebasestorage.googleapis.com/v0/b/clean-jobs-production.appspot.com/o/records%2FThe%20Royal%20King%20Palace%20and%20Convention%20Center-%20Diego-%20JAN.mp3?alt=media&token=fa1f1d37-b96c-4ceb-b17d-fa9d71aa3bc5'} name={'Convention Center Cleaning Leads'} />
-                    <AudioPlayer src={'https://firebasestorage.googleapis.com/v0/b/clean-jobs-production.appspot.com/o/records%2F2024-10-29T15_24_20%2B00_00%20(2).mp3?alt=media&token=d1dec64b-7503-48c7-b8ec-61afc61c9cb0'} name={'Apartment Complex Cleaning Leads'} />
-                </div> */}
-
             </div>
-
-
-            {/* <div className=" md:px-10 px-6">
-                <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row-reverse flex-col">
-                    <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F5F6F7] rounded-[32px] h-fit">
-                        <Image
-                            src={slide4}
-                            alt="Commercial Cleaning Leads across USA"
-                            className="md:h-[400px] md:w-auto w-full h-auto"
-                            loading="lazy"
-                            width={950}
-                            height={600}
-                            sizes="(max-width:768px) 100vw,50vw"
-                            priority={false} // Use `true` if this image is above the fold
-                        />
-                    </div>
-                    <div className="md:space-y-3 space-y-3 md:w-1/2 w-full md:my-auto md:pr-24">
-                        <h1 className="text-primary  font-medium md:text-lg text-sm">Nationwide Lead Supply</h1>
-                        <h2 className="md:text-5xl text-3xl  font-semibold">
-                            Get Quality Leads from Anywhere in the U.S.
-                        </h2>
-                        <p className=" font-normal text-sm">
-                            We provide verified leads from all over the United States, helping you connect with potential clients no matter where your business operates.
-                        </p>
-                        <div className="space-y-1">
-                            <div className="flex items-center gap-[11px]">
-                                <div>
-                                    <FaCheck />
-                                </div>
-                                <p className="md:text-lg text-sm font-medium ">Effortless Networking</p>
-                            </div>
-                            <div className="flex items-center gap-[11px]">
-                                <div>
-                                    <FaCheck />
-                                </div>
-                                <p className="md:text-lg text-sm font-medium ">Seamless Outreach</p>
-                            </div>
-                            <div className="flex items-center gap-[11px]">
-                                <div>
-                                    <FaCheck />
-                                </div>
-                                <p className="md:text-lg text-sm font-medium ">Nationwide Lead Coverage</p>
-                            </div>
-                            <div className="flex items-center gap-[11px]">
-                                <div>
-                                    <FaCheck />
-                                </div>
-                                <p className="md:text-lg text-sm font-medium ">Verified and Targeted Leads</p>
-                            </div>
-                        </div>
-                        <div>
-                            <Link href={'/search/exclusive-leads'}>
-                                <ButtonPrimary label={'View More'} />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row flex-col">
-                    <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pr-10 pb-6 pt-6 pr-6 bg-[#F5F6F7] rounded-[32px]" >
-                        <Image
-                            src={side2}
-                            alt="Uncover Top Janitorial Leads"
-                            className="md:h-[400px] md:w-auto w-full h-auto"
-                            loading="lazy"
-                            width={950}
-                            height={600}
-                            sizes="(max-width:768px) 100vw,50vw"
-                        />
-                    </div>
-                    <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pl-24">
-                        <h1 className="text-primary  font-medium md:text-lg text-sm">Upcoming Cleaning Project Access</h1>
-                        <h2 className="md:text-5xl text-3xl  font-semibold">Uncover Top <br /> Cleaning Jobs</h2>
-                        <p className=" font-normal text-sm">Access upcoming cleaning projects, including office and construction clean-ups, all gathered in one place.</p>
-                        <div className="space-y-1">
-                            <div className="flex items-center gap-[11px]">
-                                <div className="">
-                                    <FaCheck />
-                                </div>
-                                <p className="md:text-lg text-sm font-medium ">Effortless Access</p>
-                            </div>
-                            <div className="flex items-center gap-[11px]">
-                                <div className="">
-                                    <FaCheck />
-                                </div>
-                                <p className="md:text-lg text-sm font-medium ">Enhanced Planning</p>
-                            </div>
-                            <div className="flex items-center gap-[11px]">
-                                <div className="">
-                                    <FaCheck />
-                                </div>
-                                <p className="md:text-lg text-sm font-medium ">Expanded Opportunities</p>
-                            </div>
-                        </div>
-                        <div>
-                            <Link href={'/search/exclusive-leads'}>
-                                <ButtonPrimary label={'View More'} />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row-reverse flex-col">
-                    <div className="md:w-fit w-full md:pb-10 md:pt-10 md:pl-10 pb-6 pt-6 pl-6 bg-[#F5F6F7] rounded-[32px]">
-                        <Image
-                            src={side2}
-                            alt="Reach decision makers instantly and effortlessly with top janitorial leads"
-                            className="md:h-[400px] md:w-auto w-full h-auto"
-                            loading="lazy"
-                            width={950}
-                            height={600}
-                            sizes="(max-width:768px) 100vw,50vw"
-                        />
-                    </div>
-                    <div className="md:space-y-8 space-y-3 md:w-1/2 w-full md:my-auto md:pr-24">
-                        <h1 className="text-primary  font-medium md:text-lg text-sm">Local Decision Maker Discovery</h1>
-                        <h2 className="md:text-5xl text-3xl  font-semibold">Reach Decision Makers Instantly & Effortlessly</h2>
-                        <p className=" font-normal text-sm">Discover key decision makers nearby and initiate contact seamlessly</p>
-                        <div className="space-y-1">
-                            <div className="flex items-center gap-[11px]">
-                                <div>
-                                    <FaCheck />
-                                </div>
-                                <p className="md:text-lg text-sm font-medium ">Effortless Networking</p>
-                            </div>
-                            <div className="flex items-center gap-[11px]">
-                                <div>
-                                    <FaCheck />
-                                </div>
-                                <p className="md:text-lg text-sm font-medium ">Seamless Outreach</p>
-                            </div>
-                            <div className="flex items-center gap-[11px]">
-                                <div>
-                                    <FaCheck />
-                                </div>
-                                <p className="md:text-lg text-sm font-medium ">Enhanced Collaboration</p>
-                            </div>
-                        </div>
-                        <div>
-                            <Link href={'/search/exclusive-leads'}>
-                                <ButtonPrimary label={'View More'} />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="md:mt-32 mt-14 flex md:gap-0 gap-4 md:flex-row flex-col" >
-                    <div className="md:w-1/2 w-full bg-[#F5F6F7] rounded-[32px]">
-                        <Image
-                            src={side1}
-                            className="md:w-auto mx-auto md:h-[500px] w-3/4"
-                            alt="Buy high-quality commercial leads for janitorial services to boost your business"
-                            loading="lazy"
-                            width={950}
-                            height={600}
-                            sizes="(max-width:768px) 100vw,50vw"
-                        />
-                    </div>
-                    <div className="space-y-6 md:w-1/2 w-full md:my-auto md:pl-24">
-                        <h1 className="text-primary  font-medium md:text-lg text-sm">Buy High-Quality Cleaning Leads</h1>
-                        <h2 className="md:text-5xl text-3xl  font-semibold">
-                            Get Access to Exclusive Leads for Your Cleaning Business
-                        </h2>
-                        <p className=" font-normal text-sm">
-                            Purchase our curated leads to connect with potential clients actively seeking cleaning services. Start growing your business with targeted, high-quality leads tailored to your needs.
-                        </p>
-
-                        <div className="space-y-1">
-                            <div className="flex items-center gap-[11px]">
-                                <div className="">
-                                    <FaCheck />
-                                </div>
-                                <p className="md:text-lg text-sm font-medium ">Exclusive Cleaning Leads</p>
-                            </div>
-                            <div className="flex items-center gap-[11px]">
-                                <div className="">
-                                    <FaCheck />
-                                </div>
-                                <p className="md:text-lg text-sm font-medium ">Verified Client Information</p>
-                            </div>
-                            <div className="flex items-center gap-[11px]">
-                                <div className="">
-                                    <FaCheck />
-                                </div>
-                                <p className="md:text-lg text-sm font-medium ">Boosted Business Growth</p>
-                            </div>
-                        </div>
-                        <div>
-                            <Link href={'/search/exclusive-leads'}>
-                                <ButtonPrimary label={'View More'} />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-            <div className="py-10 bg-white">
+            {/* Contact Info */}
+            <div className="bg-white 2xl:pb-0 xl:pb-0 pb-20">
                 <SectionTitles heading={"Contact Us"} />
-                <ContactInfo />
+                <div className="max-w-[1150px] mx-auto">
+                    <ContactInfo />
+                </div>
             </div>
         </>
     )
