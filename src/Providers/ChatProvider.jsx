@@ -8,6 +8,10 @@ const ChatProvider = ({ children }) => {
     console.log(pathName);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathName]);
+
+    useEffect(() => {
         if (typeof window === 'undefined') return;
 
         let scriptLoaded = false;
