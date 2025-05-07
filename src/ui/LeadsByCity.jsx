@@ -19,7 +19,7 @@ const LeadsByCity = ({ data, states }) => {
 
     return (
         <div className='w-full'>
-            <div className="2xl:w-1/2 xl:w-1/2 w-full mx-auto mt-9">
+            <div className="w-full mx-auto mt-9">
                 <div className="flex justify-center items-start gap-2 w-full">
                     <input
                         onChange={handleOnChange}

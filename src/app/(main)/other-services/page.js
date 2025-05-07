@@ -22,7 +22,12 @@ import Link from 'next/link';
 import image5 from '@/../public/assets/web-and-app-services.webp'
 import image5mbl from '@/../public/assets/web-and-app-services-mobile.webp'
 import { DynamicBanner } from '@/ui/DynamicBanner';
-
+import { PageSection } from '../about/page';
+import DownAnimation from '@/Animations/DownAnimation';
+import Title from '@/Shared/Titles/Title';
+import Team from '@/ui/Home/Team';
+import ParticlesComponent from '@/Animations/Particles';
+import ReviewSwiper from '@/ui/Home/ReviewSwiper';
 
 
 export const metadata = {
@@ -48,22 +53,9 @@ export const metadata = {
 const page = () => {
     return (
         <div>
-           <div className='overflow-hidden h-[600px]'>
-
- <DynamicBanner
-                desktopImage={image5}
-                mobileImage={image5mbl}
-                title="Elevate Your Brand, Expert "
-                highlightedText="Digital Marketing, Web & App Solutions"
-                description="Connect with key decision-makers and receive valuable opportunities delivered straight to your inbox—automatically!"
-                buttonText="Sign Up"
-                buttonLink="/register"
-                note="No Credit Card Required"
-                isTertiaryButton={false}
-                cover={true}
-                priority={true}
-            /></div>
-            <div className='2xl:px-40 xl:px-28 px-10 bg-white'>
+            <PageSection image={backEnd} text={<>Boost Your Cleaning Business with Proven Digital Strategies</>}
+                title={<>Web & Digital Marketing</>} />
+            <div className='max-w-[1150px] mx-auto bg-white'>
                 <div className='2xl:py-24 xl:py-24 py-16'>
                     <h1 className={`2xl:text-7xl xl:text-5xl text-3xl `}>Complete IT Solutions &
                         Targeted Telemarketing for Every Sector</h1>
@@ -475,7 +467,32 @@ const page = () => {
                         <Image src={desing4} alt='' className='rounded-2xl' />
                     </div>
                 </div>
+                <div className="text-center my-24 max-w-[1150px] mx-auto">
+                    <DownAnimation>
+                        <Title
+                            head={<>Our team</>}
+                            details={<>Our Best Specialists <br />
+                                Work For You</>}
+                        />
+                    </DownAnimation>
+                    <DownAnimation delay={0.6}>
+                        <Team />
+                    </DownAnimation>
+                </div>
             </div >
+            <div className="relative mt-16">
+                {/* Background */}
+                <ParticlesComponent id="particles" />
+                {/* Swiper Reviews */}
+                <div className="w-fit h-fit absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+                    <div className="space-y-5 mb-10">
+                        <p className="text-white text-lg font-medium text-center">Testimonial</p>
+                        <h3 className="text-white text-2xl font-bold text-center">What People Say About <br />Our Service</h3>
+                    </div>
+                    {/* Swiper */}
+                    <ReviewSwiper />
+                </div>
+            </div>
         </div>
     );
 };

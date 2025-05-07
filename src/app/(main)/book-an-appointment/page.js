@@ -4,6 +4,7 @@ import image1 from '@/../public/assets/appointment.jpg'
 import { PageSection } from '../about/page';
 import ButtonTertiary from '@/ui/ButtonTertiary';
 import { Faq } from '../contact/page';
+import { Services } from '../page';
 
 export const metadata = {
     title: 'Book a Janitorial Appointment | Commercial Cleaning Leads',
@@ -32,7 +33,7 @@ export const metadata = {
     },
 };
 
-const Discover = () => {
+export const Discover = () => {
     return (
         <div
             style={{ backgroundImage: "url('/assets/pattern-big.jpg')" }}
@@ -57,11 +58,12 @@ const page = () => {
             <PageSection image={image1} text={<>Schedule Your Appointment Today</>} title={<>Book a Janitorial Appointment</>} />
             <div className='max-w-[1150px] mx-auto'>
                 <AppointmentForm />
+                <Services />
             </div>
             <div className='my-20'>
                 <Discover />
             </div>
-            <div className='2xl:px-0 xl:px-0 px-10'>
+            <div className='2xl:px-0 xl:px-0 px-10 mt-20'>
                 <Faq />
             </div>
         </div>

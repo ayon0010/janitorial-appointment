@@ -1,6 +1,7 @@
 import { client } from '@/lib/sanity';
 import BlogCards from '@/ui/BlogCards';
-
+import { PageSection } from '../about/page';
+import image3 from '@/../public/assets/New Project (1).jpg';
 
 export const metadata = {
     title: "Blog - Janitorial Appointments & Commercial Cleaning Leads",
@@ -54,17 +55,24 @@ const page = async () => {
     const blogs = await blogData() || [];
 
     return (
-        <div className="pt-20 pb-20 px-10">
-            <h1 className="text-2xl font-bold ">Stories, News, and Insights for Business Growth</h1>
-            <p className=" 2xl:text-sm xl:text-sm text-xs opacity-60 font-medium mt-3">A thoughtfully curated blog featuring stories, news, and insights to help you grow and enhance your cleaning service business.</p>
-            <div className='grid 2xl:grid-cols-4 xl:grid-cols-4 grid-cols-1 items-stretch gap-6 mt-10'>
-                {
-                    blogs.map((blog, i) => {
-                        return (
-                            <BlogCards key={i} id={i} blog={blog} />
-                        )
-                    })
-                }
+        <div>
+            <PageSection
+                image={image3}
+                text={<>Insights, Tips, and News for Your Cleaning Business</>}
+                title={<>Our Blog</>}
+            />
+            <div className="pt-20 pb-20 max-w-[1150px] mx-auto">
+                <h1 className="text-2xl font-bold ">Stories, News, and Insights for Business Growth</h1>
+                <p className=" 2xl:text-sm xl:text-sm text-xs opacity-60 font-medium mt-3">A thoughtfully curated blog featuring stories, news, and insights to help you grow and enhance your cleaning service business.</p>
+                <div className='grid 2xl:grid-cols-4 xl:grid-cols-4 grid-cols-1 items-stretch gap-6 mt-10'>
+                    {
+                        blogs.map((blog, i) => {
+                            return (
+                                <BlogCards key={i} id={i} blog={blog} />
+                            )
+                        })
+                    }
+                </div>
             </div>
         </div>
     );

@@ -30,6 +30,12 @@ const Footer = () => {
                         <Link href={'/blogs'}>
                             <h2 className={`${poppins.className} text-base font-light text-[#777] hover:text-red-500 transition-all duration-100 ease-linear`}>Blogs</h2>
                         </Link>
+                        <Link className='my-2' href={'/term&condition'}>
+                            <h2 className={`${poppins.className} text-base font-light text-[#777] hover:text-red-500 transition-all duration-100 ease-linear`}>Terms & Condition</h2>
+                        </Link>
+                        <Link href={'/blogs'}>
+                            <h2 className={`${poppins.className} text-base font-light text-[#777] hover:text-red-500 transition-all duration-100 ease-linear`}>Privacy Policy</h2>
+                        </Link>
                     </nav>
                 </DownAnimation>
                 <DownAnimation delay={0.5}>
@@ -67,7 +73,7 @@ const Footer = () => {
                 </DownAnimation>
             </footer>
             <aside>
-                <p className="text-white text-center py-5 border-t-[1px] border-white hover:text-red-500 duration-100 transition-all">Copyright © {new Date().getFullYear()} - All right reserved by Shariar Ayon <a href="mailto:shariar.ayon128@gmail.com">shariar.ayon128@gmail.com</a></p>
+                <p className="text-white text-center py-5 border-t-[1px] border-white hover:text-red-500 duration-100 transition-all">Copyright © {new Date().getFullYear()} - All right reserved by Shariar Ayon <a href="mailto:shariar.ayon128@gmail.com">(shariar.ayon128@gmail.com)</a></p>
             </aside>
         </div>
     );

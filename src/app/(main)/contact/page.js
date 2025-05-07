@@ -55,7 +55,7 @@ export const metadata = {
 
 export const Faq = () => {
     return (
-        <div className='2xl:pb-40 xl:pb-28 pb-16'>
+        <div className='2xl:pb-40 xl:pb-28 pb-16 max-w-[1150px] mx-auto'>
             <SectionTitles heading={'Frequently asked questions.'} subHeading={'Lorem ipsum dolor sit amet consectetur. Orci malesuada mi et mi pellentesque tincidunt at mollis facilisis. Nisl eu blandit nunc parturient adipiscing commodo.'} />
             <div className='2xl:w-3/4 xl:w-3/4 w-full mx-auto mt-10 space-y-8'>
                 <div className="collapse collapse-plus bg-white border border-[#D6D6D6]">

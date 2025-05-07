@@ -10,6 +10,7 @@ import singleContent from "@/lib/singleContent";
 import { PortableText } from "next-sanity";
 import { urlFor } from "@/lib/sanity";
 import Image from "next/image";
+import { PageSection } from "@/app/(main)/about/page";
 
 function capitalizeFirstLetter(string) {
     if (!string) return '';
@@ -23,15 +24,16 @@ const States = async ({ States }) => {
     const availableStates = await getLeads(leads);
     const selectedStates = [...new Set(availableStates?.map(d => d.states))]?.sort();
     const stateContent = await singleContent(decodeState.toLowerCase());
+    const leadName = capitalizeFirstLetter(leads.split('-')[0]);
 
     return (
         <>
-            <AppointmentButton image={image} />
-            <div className="ml-8 mt-10 bg-[#F8FAFB] w-fit px-4 py-2 rounded-[50px]">
-                <h1 className={`${gilroy.className}`}>Home  {'>'}  {capitalizeFirstLetter(leads)}  {'>'}  {decodeState}</h1>
-            </div>
-            <div className="py-20 px-6">
-                <div className="2xl:w-3/4 xl:w-3/4 w-full mx-auto mb-20">
+            <PageSection image={image} title={`Get ${leadName} Leads in ${states}`} text={<>High-Quality, {leadName} Leads in {states}</>} />
+            <div className="max-w-[1150px] mx-auto">
+                <div className="mt-10 bg-[#F8FAFB] py-2 w-fit px-4">
+                    <h1 className={`${gilroy.className}`}>Home  {'>'}  {capitalizeFirstLetter(leads)}  {'>'}  {decodeState}</h1>
+                </div>
+                <div className="py-20">
                     <SectionTitles heading={'Exclusive commercial leads available in these states'} />
                     <ul className="w-full flex flex-wrap mx-auto mt-10 items-center justify-center gap-y-6">
                         {selectedStates?.map((state) => (
@@ -56,9 +58,7 @@ const States = async ({ States }) => {
                         Opportunites can range from city/state, construcion clean ups, airbnb cleanings, sub contracts, and more. The process of providing a quote varies for each opportunity, and contact information is available for reaching out to the respective contacts in every opportunity
                     </p>
                 </div>
-                {/* Table */}
                 <LeadsByCity data={data} states={states} />
-                {/*  */}
                 <div className="mt-20 mx-auto prose prose-2xl font-normal my-10">
                     <PortableText value={stateContent?.content} components={{
                         types: {
@@ -98,7 +98,10 @@ const States = async ({ States }) => {
                     }} />
                 </div>
             </div>
-            <div className="">
+            <div className="mt-20">
+                <AppointmentButton />
+            </div>
+            <div className="max-w-[1150px] mx-auto mt-20">
                 <SectionTitles heading={'Contact Us'} />
                 <ContactInfo />
             </div>

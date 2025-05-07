@@ -1,5 +1,7 @@
 import Calculator from '@/ui/Calculator';
 import React from 'react';
+import { PageSection } from '../about/page';
+import image3 from '@/../public/assets/New Project (1).jpg';
 export const metadata = {
     title: "Pay Rate Calculator | Compare Cleaner Pay Rates",
     description:
@@ -17,7 +19,10 @@ const page = () => {
 
     return (
         <div>
-            <Calculator />
+            <PageSection image={image3} text={<>Coming Soon</>} title={<>Single Decision Maker</>} />
+            <div className="max-w-[1150px] mx-auto">
+                <Calculator />
+            </div>
         </div>
     );
 };
