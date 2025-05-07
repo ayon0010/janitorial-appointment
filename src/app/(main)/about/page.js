@@ -40,10 +40,10 @@ export const metadata = {
 };
 
 
-const page = () => {
+const page = async () => {
     return (
         <div className={`${gilroy.className}`}>
-            <div className="relative 2xl:h-auto xl:h-auto h-[430px] z-10">
+            <div className="relative 2xl:h-[352px] xl:h-[352px] h-[430px] z-10">
                 <Image
                     className="w-full h-full 2xl:object-fill xl:object-fill object-cover"
                     src={aboutImage}

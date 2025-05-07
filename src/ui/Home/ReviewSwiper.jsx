@@ -115,20 +115,20 @@ const ReviewSwiper = () => {
                     <MobileSlide image={cs1} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
                 </SwiperSlide>
                 <SwiperSlide className="2xl:!w-[270px] xl:!w-[270px] !w-full !h-[290px]">
-                    <SmallSlide image={cs4} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                    <MobileSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
+                    <SmallSlide image={cs4} name={<>Albert M. Doyle</>} title={<>CEO</>} review={<>You made it so simple.My new site is so much faster and easier work to with than my old.</>} />
+                    <MobileSlide image={cs2} name={<>Albert M. Doyle</>} title={<>CEO</>} review={<>You made it so simple.My new site is so much faster and easier work to with than my old.</>} />
                 </SwiperSlide>
                 <SwiperSlide className="2xl:!w-[270px] xl:!w-[270px] !w-full !h-[290px]">
-                    <SmallSlide image={cs2} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                    <MobileSlide image={cs3} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
+                    <SmallSlide image={cs2} name={<>Jacob B. Ginley</>} title={<>Manager</>} review={<>High-quality janitorial leads that actually convert—saved us tons of time.</>} />
+                    <MobileSlide image={cs3} name={<>Jacob B. Ginley</>} title={<>Manager</>} review={<>High-quality janitorial leads that actually convert—saved us tons of time.</>} />
                 </SwiperSlide>
                 <SwiperSlide className="2xl:!w-[570px] xl:!w-[570px] !w-full !h-[290px]">
-                    <BigSlide image={cs3} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                    <MobileSlide image={cs4} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
+                    <BigSlide image={cs3} name={<>Devon Carter</>} title={<>Cleaning Business Owner</>} review={<>Great service! We closed three deals in the first week.</>} />
+                    <MobileSlide image={cs4} name={<>Devon Carter</>} title={<>Cleaning Business Owner</>} review={<>Great service! We closed three deals in the first week.</>} />
                 </SwiperSlide>
                 <SwiperSlide className="2xl:!w-[270px] xl:!w-[270px] !w-full !h-[290px]">
-                    <SmallSlide image={cs5} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
-                    <MobileSlide image={cs5} name={<>Jane Smith</>} title={<>Manager</>} review={<>I just want to share a good quick note and let you know that you guys do a really good job</>} />
+                    <SmallSlide image={cs5} name={<>Angela Ramirez</>} title={<>Sales Director</>} review={<>Reliable appointments every week—no fluff, just results.</>} />
+                    <MobileSlide image={cs5} name={<>Angela Ramirez</>} title={<>Sales Director</>} review={<>Reliable appointments every week—no fluff, just results.</>} />
                 </SwiperSlide>
             </Swiper>
             <div className='absolute z-50 left-1/2 -translate-x-1/2'>
