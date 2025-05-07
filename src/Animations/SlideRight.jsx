@@ -1,26 +1,23 @@
-'use client'
+'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 
 const SlideRight = ({ children, delay = 0, amount = 0.2 }) => {
     return (
         <motion.div
-            initial={{ opacity: 0, x: 150 }}
+            initial={{ opacity: 0, x: 80 }} // Less movement
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: amount }}
+            viewport={{ once: true, amount }}
             transition={{
                 delay,
-                duration: 0.9,
+                duration: 0.6,
                 ease: 'easeOut',
             }}
-            style={{
-                willChange: 'opacity, transform',
-                transform: 'translateZ(0)',
-            }}
+            layout="position"
+            className="transform-gpu will-change-transform"
         >
             {children}
         </motion.div>
-
     );
 };
 

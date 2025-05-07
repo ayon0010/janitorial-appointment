@@ -1,8 +1,9 @@
 import AppointmentForm from '@/ui/AppointmentForm';
-import Image from 'next/image';
 import React from 'react';
-import image1 from '@/../public/assets/get-janitorial-appointments.webp'
-import image1mbl from '@/../public/assets/get-janitorial-appointments-mobile.webp'
+import image1 from '@/../public/assets/appointment.jpg'
+import { PageSection } from '../about/page';
+import ButtonTertiary from '@/ui/ButtonTertiary';
+import { Faq } from '../contact/page';
 
 export const metadata = {
     title: 'Book a Janitorial Appointment | Commercial Cleaning Leads',
@@ -31,40 +32,38 @@ export const metadata = {
     },
 };
 
+const Discover = () => {
+    return (
+        <div
+            style={{ backgroundImage: "url('/assets/pattern-big.jpg')" }}
+            className="w-full h-[210px] bg-cover bg-center flex justify-center items-center"
+        >
+            <div>
+                <div className='2xl:w-[1150px] xl:w-[1150px] w-full 2xl:p-0 xl:p-0 p-10 m-auto flex 2xl:flex-row xl:flex-row flex-col items-center 2xl:justify-between xl:justify-between justify-center h-fit gap-6'>
+                    <h2 className='text-white 2xl:text-3xl xl:text-3xl text-2xl 2xl:text-left xl:text-left text-center  font-medium'>
+                        Ensure Your Business <br />
+                        Continuity & Service Levels
+                    </h2>
+                    <ButtonTertiary label={'Discover More'} />
+                </div>
+            </div>
+        </div>
+    )
+}
+
 const page = () => {
     return (
         <div className='bg-white'>
-            <div className='relative h-[600px] flex flex-col'>
-                <div className='absolute inset-0 bg-black opacity-30 z-30'></div>
-                <div className="absolute inset-0 z-20 h-full">
-                    <Image
-                        src={image1}
-                        width={1263}
-                        height={600}
-                        priority
-                        className='object-cover h-full w-full 2xl:block xl:block hidden'
-                        alt='Book a janitorial appointment with top commercial cleaning leads'
-                        sizes='(min-width:787px) 100vw'
-                    />
-                    <Image
-                        src={image1mbl}
-                        height={600}
-                        width={430}
-                        priority sizes='(max-width: 768px) 430px'
-                        className='object-cover h-full w-full 2xl:hidden xl:hidden block'
-                        alt='Get high-quality janitorial leads for commercial cleaning appointments'
-                    />
-                </div>
-                <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
-                    <h2 className='2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:banner-text xl:banner-text text-white'>
-                        Book Janitorial Appointments with <span className='text-green-600'>Top Commercial Cleaning Leads</span>
-                    </h2>
-                    <p className='my-6 inter 2xl:text-xl xl:text-xl text-sm font-semibold text-white opacity-80'>
-                        Connect with businesses seeking janitorial services and secure valuable appointments effortlessly!
-                    </p>
-                </div>
+            <PageSection image={image1} text={<>Schedule Your Appointment Today</>} title={<>Book a Janitorial Appointment</>} />
+            <div className='max-w-[1150px] mx-auto'>
+                <AppointmentForm />
             </div>
-            <AppointmentForm />
+            <div className='my-20'>
+                <Discover />
+            </div>
+            <div className='2xl:px-0 xl:px-0 px-10'>
+                <Faq />
+            </div>
         </div>
     );
 };

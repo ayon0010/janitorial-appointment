@@ -260,7 +260,7 @@ export default async function Home() {
                                 Work For You</>}
                         />
                     </DownAnimation>
-                    <DownAnimation delay={1}>
+                    <DownAnimation delay={0.6}>
                         <Team />
                     </DownAnimation>
                 </div>

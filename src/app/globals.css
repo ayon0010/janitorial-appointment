@@ -18,6 +18,20 @@ html {
   background-color: #27205F4D !important;
 }
 
+.pageImage {
+  position: relative;
+  z-index: 20;
+}
+
+.pageImage::before {
+  content: '';
+  position: absolute;
+  inset: 0px;
+  background-color: #27205F4D !important;
+  z-index: 30;
+}
+
+
 .swiper-pagination-bullet {
   width: 12px !important;
   height: 12px !important;
@@ -262,17 +276,6 @@ input[type="checkbox"]:checked~.collapse-content {
 
 .people:hover .team-image {
   @apply opacity-100 !important;
-}
-
-.slide-right {
-  opacity: 0;
-  transform: translateX(300);
-  transition: all 0.5s ease-in-out;
-}
-
-.slide-right-active {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 @media screen and (max-width: 576px) {

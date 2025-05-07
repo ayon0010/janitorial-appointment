@@ -7,12 +7,8 @@ import FaLeads from "@/icons/FaLeads";
 import FaWeb from "@/icons/FaWeb";
 import FaCircleCheck from "@/icons/FaCheck";
 import SectionTitles from "@/ui/SectionTitles";
-import { FaStar } from "@react-icons/all-files/fa/FaStar";
-import rev1 from '@/../public/assets/close-up-young-successful-man-smiling-camera-standing-casual-outfit-against-blue-background 1.svg'
-import rev2 from '@/../public/assets/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes.svg'
 import YoutubeEmbed from '@/ui/Youtube'
 import { gilroy } from "../layout";
-import { UserReviews } from "../page";
 import ParticlesComponent from "@/Animations/Particles";
 import ReviewSwiper from "@/ui/Home/ReviewSwiper";
 import DownAnimation from "@/Animations/DownAnimation";
@@ -47,28 +43,33 @@ export const metadata = {
 };
 
 
+export const PageSection = ({ image, text, title }) => {
+    return (
+        <div className="relative 2xl:h-[352px] xl:h-[352px] h-[430px] z-10 pageImage">
+            {/* About Image */}
+            <Image
+                className="w-full h-full object-cover"
+                src={image}
+                alt="About us - Learn more about our cleaning services and expertise"
+                priority
+                width={1233}
+                height={240}
+                sizes="(max-width: 768px) 100vw, 100vw"
+            />
+            <div className="absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-40">
+                <h1 className="2xl:text-6xl xl:text-5xl text-3xl font-medium text-white text-center ">{text}</h1>
+                <p className="text-sm text-white font-medium text-center ">{title}</p>
+            </div>
+        </div>
+    )
+}
+
 const page = async () => {
     return (
         <div className={`${gilroy.className}`}>
 
             {/* About Image section */}
-            <div className="relative 2xl:h-[352px] xl:h-[352px] h-[430px] z-10">
-                {/* About Image */}
-                <Image
-                    className="w-full h-full 2xl:object-fill xl:object-fill object-cover"
-                    src={aboutImage}
-                    alt="About us - Learn more about our cleaning services and expertise"
-                    priority
-                    width={1233}
-                    height={240}
-                    sizes="(max-width: 768px) 100vw, 100vw"
-                />
-                <div className="absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-40">
-                    <h1 className="2xl:text-6xl xl:text-5xl text-3xl font-medium text-white text-center ">The Path to Success</h1>
-                    <p className="text-sm text-white font-medium text-center ">About Us</p>
-                </div>
-            </div>
-
+            <PageSection image={aboutImage} text={<>The Path to Success</>} title={<>About Us</>} />
 
             <div className="max-w-[1150px] mx-auto">
                 <div className="2xl:py-24 xl:py-16 py-10 2xl:px-0 xl:px-0 px-10">

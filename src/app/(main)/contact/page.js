@@ -15,8 +15,9 @@ import Link from 'next/link';
 import { FaPhoneAlt } from "@react-icons/all-files/fa/FaPhoneAlt";
 import { FaWhatsapp } from "@react-icons/all-files/fa/FaWhatsapp";
 import Appointment from '@/ui/Appointment';
+import { PageSection } from '../about/page';
 const message = encodeURIComponent('Hello! I would like to inquire about your commercial cleaning leads.');
-
+import image3 from '@/../public/assets/New Project (1).jpg';
 export const metadata = {
     title: 'Contact Us | Janitorial Leads & Commercial Cleaning Services',
     description:
@@ -52,10 +53,57 @@ export const metadata = {
 };
 
 
+export const Faq = () => {
+    return (
+        <div className='2xl:pb-40 xl:pb-28 pb-16'>
+            <SectionTitles heading={'Frequently asked questions.'} subHeading={'Lorem ipsum dolor sit amet consectetur. Orci malesuada mi et mi pellentesque tincidunt at mollis facilisis. Nisl eu blandit nunc parturient adipiscing commodo.'} />
+            <div className='2xl:w-3/4 xl:w-3/4 w-full mx-auto mt-10 space-y-8'>
+                <div className="collapse collapse-plus bg-white border border-[#D6D6D6]">
+                    <input type="checkbox" id='1' name="my-accordion-1" defaultChecked />
+                    <div className="collapse-title text-xl font-bold">How do I get janitorial or commercial cleaning leads from you?.</div>
+                    <div className="collapse-content text-sm">
+                        <p>You can purchase leads from us by reaching out through our website, phone, or email. We’ll provide you with qualified, pre-screened leads that match your service offerings, including the type of cleaning required, the size of the property, and the frequency of service.</p>
+                    </div>
+                </div>
+                <div className="collapse collapse-plus bg-white border border-[#D6D6D6]">
+                    <input type="checkbox" id='2' name="my-accordion-2" />
+                    <div className="collapse-title text-xl font-medium">Are the janitorial leads exclusive?</div>
+                    <div className="collapse-content">
+                        <p>Yes, we offer exclusive leads for our clients, meaning you won’t be competing with others for the same lead. This gives you a higher chance of converting the lead into a paying client.</p>
+                    </div>
+                </div>
+                <div className="collapse collapse-plus bg-white border border-[#D6D6D6]">
+                    <input type="checkbox" id='3' name="my-accordion-3" />
+                    <div className="collapse-title text-xl font-medium">How do you qualify the leads you provide?</div>
+                    <div className="collapse-content">
+                        <p>We qualify leads through a thorough process that includes direct communication with potential clients. We gather information about the property, type of cleaning services needed, and the budget. Only leads that meet these criteria are passed along to you, ensuring you receive high-quality prospects.</p>
+                    </div>
+                </div>
+                <div className="collapse collapse-plus bg-white border border-[#D6D6D6]">
+                    <input type="checkbox" id='3' name="my-accordion-3" />
+                    <div className="collapse-title text-xl font-medium">Can I get leads for specific types of cleaning services?</div>
+                    <div className="collapse-content">
+                        <p>Yes, we can provide leads based on your specific area of expertise, whether it's general janitorial services, deep cleaning, post-construction cleaning, or specialized commercial cleaning like carpet cleaning or sanitation.</p>
+                    </div>
+                </div>
+                <div className="collapse collapse-plus bg-white border border-[#D6D6D6]">
+                    <input type="checkbox" id='3' name="my-accordion-3" />
+                    <div className="collapse-title text-xl font-medium">How are the leads delivered?</div>
+                    <div className="collapse-content">
+                        <p>Once you purchase the leads, we deliver them through email or a secure online portal. Each lead will include detailed information such as the property type, service needs, contact details, and the best time to reach the client.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+
 const page = () => {
     return (
         <div>
-            <div className='2xl:px-40 xl:px-28 py-20 px-6 bg-white'>
+            <PageSection image={image3} text={<>Get in Touch With Us</>} title={<>Contact Us</>} />
+            <div className='2xl:px-0 xl:px-0 py-20 px-10 bg-white max-w-[1150px] mx-auto'>
                 <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-8 max-h-[680px]'>
                     <div className='h-full'>
                         <h1 className='2xl:text-5xl xl:text-4xl text-2xl font-medium  text-[#0D0D0D]'>Get in Touch</h1>
@@ -206,46 +254,7 @@ const page = () => {
                         </div> */}
                     </div>
                 </div>
-                <div className='2xl:pb-40 xl:pb-28 pb-16'>
-                    <SectionTitles heading={'Frequently asked questions.'} subHeading={'Lorem ipsum dolor sit amet consectetur. Orci malesuada mi et mi pellentesque tincidunt at mollis facilisis. Nisl eu blandit nunc parturient adipiscing commodo.'} />
-                    <div className='2xl:w-3/4 xl:w-3/4 w-full mx-auto mt-10 space-y-8'>
-                        <div className="collapse collapse-plus bg-white border border-[#D6D6D6]">
-                            <input type="checkbox" id='1' name="my-accordion-1" defaultChecked />
-                            <div className="collapse-title text-xl font-bold">How do I get janitorial or commercial cleaning leads from you?.</div>
-                            <div className="collapse-content text-sm">
-                                <p>You can purchase leads from us by reaching out through our website, phone, or email. We’ll provide you with qualified, pre-screened leads that match your service offerings, including the type of cleaning required, the size of the property, and the frequency of service.</p>
-                            </div>
-                        </div>
-                        <div className="collapse collapse-plus bg-white border border-[#D6D6D6]">
-                            <input type="checkbox" id='2' name="my-accordion-2" />
-                            <div className="collapse-title text-xl font-medium">Are the janitorial leads exclusive?</div>
-                            <div className="collapse-content">
-                                <p>Yes, we offer exclusive leads for our clients, meaning you won’t be competing with others for the same lead. This gives you a higher chance of converting the lead into a paying client.</p>
-                            </div>
-                        </div>
-                        <div className="collapse collapse-plus bg-white border border-[#D6D6D6]">
-                            <input type="checkbox" id='3' name="my-accordion-3" />
-                            <div className="collapse-title text-xl font-medium">How do you qualify the leads you provide?</div>
-                            <div className="collapse-content">
-                                <p>We qualify leads through a thorough process that includes direct communication with potential clients. We gather information about the property, type of cleaning services needed, and the budget. Only leads that meet these criteria are passed along to you, ensuring you receive high-quality prospects.</p>
-                            </div>
-                        </div>
-                        <div className="collapse collapse-plus bg-white border border-[#D6D6D6]">
-                            <input type="checkbox" id='3' name="my-accordion-3" />
-                            <div className="collapse-title text-xl font-medium">Can I get leads for specific types of cleaning services?</div>
-                            <div className="collapse-content">
-                                <p>Yes, we can provide leads based on your specific area of expertise, whether it's general janitorial services, deep cleaning, post-construction cleaning, or specialized commercial cleaning like carpet cleaning or sanitation.</p>
-                            </div>
-                        </div>
-                        <div className="collapse collapse-plus bg-white border border-[#D6D6D6]">
-                            <input type="checkbox" id='3' name="my-accordion-3" />
-                            <div className="collapse-title text-xl font-medium">How are the leads delivered?</div>
-                            <div className="collapse-content">
-                                <p>Once you purchase the leads, we deliver them through email or a secure online portal. Each lead will include detailed information such as the property type, service needs, contact details, and the best time to reach the client.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Faq />
             </div>
         </div>
     );
