@@ -1,10 +1,10 @@
-const OtherSectionTitle = ({ heading, subHeading }) => {
-    return (
-        <>
-            <h5 className="text-lg  font-bold text-services text-center">{heading}</h5>
-            <h1 className=" text-5xl font-medium text-center">{subHeading}</h1>
-        </>
-    );
-};
+// const OtherSectionTitle = ({ heading, subHeading }) => {
+//     return (
+//         <>
+//             <h5 className="text-lg  font-bold text-services text-center">{heading}</h5>
+//             <h1 className=" text-5xl font-medium text-center">{subHeading}</h1>
+//         </>
+//     );
+// };
 
-export default OtherSectionTitle;
+// export default OtherSectionTitle;
