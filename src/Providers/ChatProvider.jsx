@@ -1,7 +1,12 @@
 'use client';
+import FadeIn from '@/Animations/FadeIn';
+import { usePathname } from 'next/navigation';
 import React, { useEffect } from 'react';
 
 const ChatProvider = ({ children }) => {
+    const pathName = usePathname();
+    console.log(pathName);
+
     useEffect(() => {
         if (typeof window === 'undefined') return;
 
@@ -38,7 +43,11 @@ const ChatProvider = ({ children }) => {
         };
     }, []);
 
-    return <>{children}</>;
+    return <>
+        <FadeIn key={pathName}>
+            {children}
+        </FadeIn>
+    </>;
 };
 
 export default ChatProvider;

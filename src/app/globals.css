@@ -264,6 +264,17 @@ input[type="checkbox"]:checked~.collapse-content {
   @apply opacity-100 !important;
 }
 
+.slide-right {
+  opacity: 0;
+  transform: translateX(300);
+  transition: all 0.5s ease-in-out;
+}
+
+.slide-right-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 @media screen and (max-width: 576px) {
   .dashboard {
     display: grid !important;

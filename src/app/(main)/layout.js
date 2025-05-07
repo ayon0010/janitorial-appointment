@@ -8,8 +8,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import Head from 'next/head'
 import Navbar from '@/Shared/Navbar/Navbar'
-import NavAnimation from '@/Animations/Navanimation'
 import Footer from '@/Shared/Footer/Footer'
+// import { headers } from 'next/headers'
 
 export const nunito = Nunito({
   subsets: ['latin'],
@@ -93,6 +93,13 @@ export const metadata = {
 
 
 export default function RootLayout({ children }) {
+  // const headersList = headers();
+  // const host = headersList.get('host');
+  // const protocol = headersList.get('x-forwarded-proto') || 'http';
+  // const url = new URL(`${protocol}://${host}${headersList.get('x-invoke-path') || '/'}`);
+  // const pathname = url.pathname;
+  // console.log(pathname);
+
   return (
     <html lang="en" >
       <body className={``}>
@@ -113,7 +120,6 @@ export default function RootLayout({ children }) {
           <AuthProvider>
             <QueryProvider>
               <ChatProvider>
-                {/* <NavAnimation /> */}
                 <Navbar />
                 <div className='min-h-[400px]'>
                   {children}

@@ -15,6 +15,9 @@ import { gilroy } from "../layout";
 import { UserReviews } from "../page";
 import ParticlesComponent from "@/Animations/Particles";
 import ReviewSwiper from "@/ui/Home/ReviewSwiper";
+import DownAnimation from "@/Animations/DownAnimation";
+import Title from "@/Shared/Titles/Title";
+import Team from "@/ui/Home/Team";
 
 
 export const metadata = {
@@ -224,6 +227,19 @@ const page = async () => {
                     {/* Swiper */}
                     <ReviewSwiper />
                 </div>
+            </div>
+            {/* Our Team */}
+            <div className="text-center my-24 max-w-[1150px] mx-auto">
+                <DownAnimation>
+                    <Title
+                        head={<>Our team</>}
+                        details={<>Our Best Specialists <br />
+                            Work For You</>}
+                    />
+                </DownAnimation>
+                <DownAnimation delay={1}>
+                    <Team />
+                </DownAnimation>
             </div>
         </div>
     );
