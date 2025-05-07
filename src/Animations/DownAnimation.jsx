@@ -1,11 +1,13 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 const DownAnimation = ({ animationKey, children, delay = 0 }) => {
+    const pathName = usePathname()
     return (
         <motion.div
-            key={animationKey}
+            key={pathName}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

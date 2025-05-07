@@ -1,14 +1,16 @@
-'use effect'
+'use client';
 import React from 'react';
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-const FadeIn = ({ key, children }) => {
+const FadeIn = ({ children }) => {
     return (
         <motion.div
-            key={key}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0 }} // slight vertical motion makes it feel more natural
             animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{
+                duration: 0.8,
+                ease: [0.25, 0.46, 0.45, 0.94], // easeOutCubic
+            }}
         >
             {children}
         </motion.div>

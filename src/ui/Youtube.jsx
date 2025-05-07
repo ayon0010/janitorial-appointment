@@ -17,9 +17,9 @@ const YoutubeEmbed = ({ videoId, title }) => {
                         <Image
                             src={`https://img.youtube.com/vi/AKNRRcI6YCc/hqdefault.jpg`}
                             alt={'Janitorial Appointments video'}
-                            width={503}
+                            width={555}
                             height={283}
-                            className='object-cover aspect-[16/9] block z-20'
+                            className='object-cover aspect-[16/9] block z-20 rounded-[30px]'
                         />
                         {/* 🎯 Play Button Overlay */}
                         <div
@@ -31,7 +31,7 @@ const YoutubeEmbed = ({ videoId, title }) => {
                                 backgroundColor: "rgba(0, 0, 0, 0.7)",
                                 color: "#fff",
                                 padding: "20px",
-                                borderRadius: "50%",
+                                borderRadius: "30px",
                                 fontSize: "24px",
                                 textAlign: "center",
                                 display: "flex",
@@ -46,7 +46,7 @@ const YoutubeEmbed = ({ videoId, title }) => {
                     </>
                     :
                     <>
-                        <iframe width="503" height="283" src="https://www.youtube.com/embed/AKNRRcI6YCc?si=RB_A4ATkNveKns-i" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe width="555" height="283" src="https://www.youtube.com/embed/AKNRRcI6YCc?si=RB_A4ATkNveKns-i" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </>
             }
         </div>
