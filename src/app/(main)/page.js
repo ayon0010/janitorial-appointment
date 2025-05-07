@@ -31,6 +31,7 @@ import Service4 from "@/icons/Service4";
 import ParticlesComponent from "@/Animations/Particles";
 import ReviewSwiper from "@/ui/Home/ReviewSwiper";
 import Team from "@/ui/Home/Team";
+import DownAnimation from "@/Animations/DownAnimation";
 
 
 export const metadata = {
@@ -252,12 +253,16 @@ export default async function Home() {
 
                 {/* Our Team */}
                 <div className="text-center my-24 max-w-[1150px] mx-auto">
-                    <Title
-                        head={<>Our team</>}
-                        details={<>Our Best Specialists <br />
-                            Work For You</>}
-                    />
-                    <Team />
+                    <DownAnimation>
+                        <Title
+                            head={<>Our team</>}
+                            details={<>Our Best Specialists <br />
+                                Work For You</>}
+                        />
+                    </DownAnimation>
+                    <DownAnimation delay={1}>
+                        <Team />
+                    </DownAnimation>
                 </div>
             </div>
             {/* Contact Info */}
