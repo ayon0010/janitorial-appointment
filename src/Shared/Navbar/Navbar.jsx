@@ -89,11 +89,11 @@ const Navbar = () => {
 
     return (
         <div className={`w-full transition-all duration-500 ease-in-out 2xl:h-[100px] xl:h-[100px] h-[80px] ${!topPosition ? 'absolute bg-transparent' : 'fixed bg-[#212121]'} inset-0 left-0 right-0 top-0 z-[100] `}>
-            <div className='text-white items-center justify-between max-w-[1440px] mx-auto relative 2xl:h-[100px] xl:h-[100px] 2xl:flex xl:flex hidden 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11'>
+            <div className='text-white items-center justify-between max-w-[1150px] mx-auto relative 2xl:h-[100px] xl:h-[100px] 2xl:flex xl:flex hidden 2xl:py-10 xl:py-10'>
                 <Logo />
                 {/* Nav Items */}
-                <div className="">
-                    <ul className={`flex navItems items-center justify-between 2xl:gap-10 xl:gap-6 ${poppins.className}`}>
+                <div className="w-fit mx-auto">
+                    <ul className={`flex navItems items-center justify-between gap-4 ${poppins.className}`}>
                         <NavItems Services={Services} Leads={Leads} />
                     </ul>
                 </div>

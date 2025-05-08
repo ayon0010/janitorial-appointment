@@ -28,7 +28,7 @@ const States = async ({ States }) => {
 
     return (
         <>
-            <PageSection image={image} title={`Get ${leadName} Leads in ${states}`} text={<>High-Quality, {leadName} Leads in {states}</>} />
+            <PageSection image={image} title={`Get ${leadName} Leads in ${decodeState}`} text={<>High-Quality, {leadName} Leads in {decodeState}</>} />
             <div className="max-w-[1150px] mx-auto">
                 <div className="mt-10 bg-[#F8FAFB] py-2 w-fit px-4">
                     <h1 className={`${gilroy.className}`}>Home  {'>'}  {capitalizeFirstLetter(leads)}  {'>'}  {decodeState}</h1>
