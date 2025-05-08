@@ -93,7 +93,7 @@ const Navbar = () => {
                 <Logo />
                 {/* Nav Items */}
                 <div className="w-fit mx-auto">
-                    <ul className={`flex navItems items-center justify-between gap-4 ${poppins.className}`}>
+                    <ul className={`flex navItems items-center justify-between gap-6 ${poppins.className}`}>
                         <NavItems Services={Services} Leads={Leads} />
                     </ul>
                 </div>

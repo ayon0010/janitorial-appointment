@@ -11,6 +11,7 @@ import singleContent from "@/lib/singleContent";
 import { PortableText } from "next-sanity";
 import { urlFor } from "@/lib/sanity";
 import { PageSection } from "@/app/(main)/about/page";
+import { Discover } from "@/app/(main)/book-an-appointment/page";
 
 export const AppointmentButton = ({ leadName, image }) => {
     return (
@@ -65,7 +66,7 @@ const LeadPage = async ({ Lead, params }) => {
                             </li>
                         ))}
                     </ul>
-                    <div className="mt-20 mx-auto prose prose-2xl font-normal my-10">
+                    <div className="mt-20 mx-auto prose prose-2xl font-normal my-10 2xl:px-0 xl:px-0 px-10">
                         <PortableText value={stateContent?.content} components={{
                             types: {
                                 imageGroup: ({ value }) => {
@@ -106,8 +107,12 @@ const LeadPage = async ({ Lead, params }) => {
                 </div>
             </div>
             <div className="mb-20">
-                {/* <Discover /> */}
-                <AppointmentButton />
+                <div className="2xl:hidden xl:hidden block">
+                    <Discover />
+                </div>
+                <div className="2xl:block xl:block hidden">
+                    <AppointmentButton />
+                </div>
             </div>
             <div className="mb-10 max-w-[1150px] mx-auto">
                 <SectionTitles heading={'Contact Us'} />

@@ -1,7 +1,7 @@
 import SingleDecisionMaker from '@/ui/SingleDecisonMaker';
 import React from 'react';
 import { PageSection } from '../about/page';
-import image3 from '@/../public/assets/New Project (1).jpg';
+import image3 from '@/../public/assets/slide03.jpg';
 
 export const metadata = {
     title: 'Exclusive Commercial Cleaning & Janitorial Leads | Single Decision Maker Insights',

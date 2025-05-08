@@ -1,6 +1,6 @@
 import DecisionMaker from '@/ui/DecisionMaker';
 import React from 'react';
-import image3 from '@/../public/assets/New Project (1).jpg';
+import image3 from '@/../public/assets/slide03.jpg';
 import { PageSection } from '../about/page';
 export const metadata = {
     title: 'Find Commercial Cleaning & Janitorial Leads | Janitorial Appointment Services',

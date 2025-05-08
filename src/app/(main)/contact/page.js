@@ -17,7 +17,7 @@ import { FaWhatsapp } from "@react-icons/all-files/fa/FaWhatsapp";
 import Appointment from '@/ui/Appointment';
 import { PageSection } from '../about/page';
 const message = encodeURIComponent('Hello! I would like to inquire about your commercial cleaning leads.');
-import image3 from '@/../public/assets/New Project (1).jpg';
+import image3 from '@/../public/assets/slide03.jpg';
 export const metadata = {
     title: 'Contact Us | Janitorial Leads & Commercial Cleaning Services',
     description:

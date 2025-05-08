@@ -11,6 +11,7 @@ import { PortableText } from "next-sanity";
 import { urlFor } from "@/lib/sanity";
 import Image from "next/image";
 import { PageSection } from "@/app/(main)/about/page";
+import { Discover } from "@/app/(main)/book-an-appointment/page";
 
 function capitalizeFirstLetter(string) {
     if (!string) return '';
@@ -29,7 +30,7 @@ const States = async ({ States }) => {
     return (
         <>
             <PageSection image={image} title={`Get ${leadName} Leads in ${decodeState}`} text={<>High-Quality, {leadName} Leads in {decodeState}</>} />
-            <div className="max-w-[1150px] mx-auto">
+            <div className="max-w-[1150px] mx-auto 2xl:px-0 xl:px-0 px-10">
                 <div className="mt-10 bg-[#F8FAFB] py-2 w-fit px-4">
                     <h1 className={`${gilroy.className}`}>Home  {'>'}  {capitalizeFirstLetter(leads)}  {'>'}  {decodeState}</h1>
                 </div>
@@ -99,9 +100,14 @@ const States = async ({ States }) => {
                 </div>
             </div>
             <div className="mt-20">
-                <AppointmentButton />
+                <div className="2xl:hidden xl:hidden block">
+                    <Discover />
+                </div>
+                <div className="2xl:block xl:block hidden">
+                    <AppointmentButton />
+                </div>
             </div>
-            <div className="max-w-[1150px] mx-auto mt-20">
+            <div className="max-w-[1150px] mx-auto mt-20 2xl:mb-0 xl:mb-0 mb-20">
                 <SectionTitles heading={'Contact Us'} />
                 <ContactInfo />
             </div>

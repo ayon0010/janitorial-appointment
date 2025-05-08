@@ -1,7 +1,7 @@
 import Calculator from '@/ui/Calculator';
 import React from 'react';
 import { PageSection } from '../about/page';
-import image3 from '@/../public/assets/New Project (1).jpg';
+import image3 from '@/../public/assets/slide03.jpg';
 export const metadata = {
     title: "Pay Rate Calculator | Compare Cleaner Pay Rates",
     description:

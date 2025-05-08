@@ -5,6 +5,7 @@ import { PageSection } from '../about/page';
 import ButtonTertiary from '@/Shared/Buttons/ButtonTertiary';
 import { Faq } from '../contact/page';
 import { Services } from '../page';
+import Link from 'next/link';
 
 export const metadata = {
     title: 'Book a Janitorial Appointment | Commercial Cleaning Leads',
@@ -45,7 +46,9 @@ export const Discover = () => {
                         Ensure Your Business <br />
                         Continuity & Service Levels
                     </h2>
-                    <ButtonTertiary label={'Discover More'} />
+                    <Link href={'/about'}>
+                        <ButtonTertiary label={'Discover More'} />
+                    </Link>
                 </div>
             </div>
         </div>

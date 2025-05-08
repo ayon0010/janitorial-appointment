@@ -53,7 +53,7 @@ const page = () => {
         <div>
             <PageSection image={backEnd} text={<>Boost Your Cleaning Business with Proven Digital Strategies</>}
                 title={<>Web & Digital Marketing</>} />
-            <div className='max-w-[1150px] mx-auto bg-white'>
+            <div className='max-w-[1150px] mx-auto bg-white 2xl:px-0 xl:px-0 px-10'>
                 <div className='2xl:py-24 xl:py-24 py-16'>
                     <h1 className={`2xl:text-7xl xl:text-5xl text-3xl `}>Complete IT Solutions &
                         Targeted Telemarketing for Every Sector</h1>
