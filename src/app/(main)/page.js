@@ -1,5 +1,4 @@
 import Image from "next/image";
-import SectionTitles from "@/ui/SectionTitles";
 import Pricing from "@/ui/Pricing";
 import '../globals.css'
 import Appointment from "@/ui/Appointment";
@@ -22,6 +21,7 @@ import ParticlesComponent from "@/Animations/Particles";
 import ReviewSwiper from "@/ui/Home/ReviewSwiper";
 import Team from "@/ui/Home/Team";
 import DownAnimation from "@/Animations/DownAnimation";
+import SectionTitles from "@/Shared/SectionTitles";
 
 
 export const metadata = {

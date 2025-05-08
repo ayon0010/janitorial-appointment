@@ -8,7 +8,7 @@ import SelectField from '@/Shared/SelectField';
 import React from 'react';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import SectionTitles from './SectionTitles';
+import SectionTitles from "@/Shared/SectionTitles";
 import { showError, showLoading, showSuccess } from '@/Shared/Swal';
 
 const Modal = ({ id }) => {

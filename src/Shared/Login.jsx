@@ -1,8 +1,6 @@
 "use client";
-
 import { Suspense, useEffect } from "react";
 import useAuth from '@/Hooks/useAuth';
-import Logo from '@/Shared/Logo';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useState } from 'react';
@@ -11,6 +9,7 @@ import { FaEye } from "@react-icons/all-files/fa/FaEye";
 import { FaEyeSlash } from "@react-icons/all-files/fa/FaEyeSlash";
 import Cookies from "js-cookie";
 import { closeSwal, showError, showLoading, showSuccess } from "./Swal";
+import { Logo } from "./Navbar/Navbar";
 
 const LoginPage = () => {
     const searchParams = useSearchParams();

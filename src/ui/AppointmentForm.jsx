@@ -1,3 +1,4 @@
+// used
 'use client';
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion'; // This is kept as it was in your code

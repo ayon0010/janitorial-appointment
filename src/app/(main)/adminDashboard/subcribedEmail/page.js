@@ -1,4 +1,4 @@
-import SectionTitles from '@/ui/SectionTitles';
+import SectionTitles from "@/Shared/SectionTitles";
 import TableHead from '@/ui/TableHead';
 import { cookies } from 'next/headers';
 import React from 'react';

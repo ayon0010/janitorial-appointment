@@ -3,7 +3,7 @@ import LeadsByCity from "@/ui/LeadsByCity";
 import { AppointmentButton } from "./Lead";
 import { gilroy } from "@/app/(main)/layout";
 import image from '../../public/assets/exclusive-commercial-cleaning-leads-1.webp'
-import SectionTitles from "./SectionTitles";
+import SectionTitles from "@/Shared/SectionTitles";
 import ContactInfo from "./ContactInfo";
 import Link from "next/link";
 import singleContent from "@/lib/singleContent";

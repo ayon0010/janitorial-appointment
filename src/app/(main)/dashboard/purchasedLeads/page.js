@@ -1,6 +1,6 @@
 'use client'
 import useAuth from '@/Hooks/useAuth';
-import SectionTitles from '@/ui/SectionTitles';
+import SectionTitles from "@/Shared/SectionTitles";
 import TableHead from '@/ui/TableHead';
 import React from 'react';
 import Loading from '../../loading';

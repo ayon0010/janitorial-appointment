@@ -1,6 +1,6 @@
 'use client'
 import useAxiosSecure from '@/Hooks/useAxiosSecure';
-import SectionTitles from '@/ui/SectionTitles';
+import SectionTitles from "@/Shared/SectionTitles";
 import TableHead from '@/ui/TableHead';
 import React from 'react';
 import dynamic from 'next/dynamic';

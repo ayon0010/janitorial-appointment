@@ -1,4 +1,4 @@
-import SectionTitles from '@/ui/SectionTitles';
+import SectionTitles from "@/Shared/SectionTitles";
 import Link from 'next/link';
 import React from 'react';
 

@@ -7,7 +7,7 @@ import seo from '@/../public/assets/digital-marketing-and-seo.webp'
 import telemarketing from '@/../public/assets/telemarketing.webp'
 import people from '@/../public/assets/c39594c5017acc3ecabfac7eb3315e8d_result_result.webp'
 import Image from 'next/image';
-import SectionTitles from '@/ui/SectionTitles';
+import SectionTitles from "@/Shared/SectionTitles";
 import img1 from '@/../public/assets/67808d23a26a33ebca61d4f6d94c1822_result_result.webp'
 import img2 from '@/../public/assets/9b4078e905ffb67a9fa1ee52151decca_result_result.webp'
 import img3 from '@/../public/assets/telemarketing-for-janitorial-campaign.webp'
@@ -19,9 +19,7 @@ import desing2 from '@/../public/assets/126d255806c5000ad6d009871cc3b81b_result_
 import desing3 from '@/../public/assets/b3e87b895d98f825cbfa5eaddda18e4b_result_result.webp'
 import desing4 from '@/../public/assets/927cc8b897e6124b1c31ff8bc507f55a_result_result.webp'
 import Link from 'next/link';
-import image5 from '@/../public/assets/web-and-app-services.webp'
-import image5mbl from '@/../public/assets/web-and-app-services-mobile.webp'
-import { DynamicBanner } from '@/ui/DynamicBanner';
+
 import { PageSection } from '../about/page';
 import DownAnimation from '@/Animations/DownAnimation';
 import Title from '@/Shared/Titles/Title';

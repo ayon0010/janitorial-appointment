@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+// used
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';

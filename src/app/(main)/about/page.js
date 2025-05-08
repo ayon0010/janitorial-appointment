@@ -6,7 +6,7 @@ import image2 from '@/../public/assets/janitorial-leads-support.svg';
 import FaLeads from "@/icons/FaLeads";
 import FaWeb from "@/icons/FaWeb";
 import FaCircleCheck from "@/icons/FaCheck";
-import SectionTitles from "@/ui/SectionTitles";
+import SectionTitles from "@/Shared/SectionTitles";
 import YoutubeEmbed from '@/ui/Youtube'
 import { gilroy } from "../layout";
 import ParticlesComponent from "@/Animations/Particles";

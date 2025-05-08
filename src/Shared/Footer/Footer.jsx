@@ -30,10 +30,12 @@ const Footer = () => {
                         <Link href={'/blogs'}>
                             <h2 className={`${poppins.className} text-base font-light text-[#777] hover:text-red-500 transition-all duration-100 ease-linear`}>Blogs</h2>
                         </Link>
-                        <Link className='my-2' href={'/term&condition'}>
-                            <h2 className={`${poppins.className} text-base font-light text-[#777] hover:text-red-500 transition-all duration-100 ease-linear`}>Terms & Condition</h2>
-                        </Link>
-                        <Link href={'/blogs'}>
+                        <div className="my-2">
+                            <Link href={'/term&condition'}>
+                                <h2 className={`${poppins.className} text-base font-light text-[#777] hover:text-red-500 transition-all duration-100 ease-linear`}>Terms & Condition</h2>
+                            </Link>
+                        </div>
+                        <Link href={'/privacy'}>
                             <h2 className={`${poppins.className} text-base font-light text-[#777] hover:text-red-500 transition-all duration-100 ease-linear`}>Privacy Policy</h2>
                         </Link>
                     </nav>

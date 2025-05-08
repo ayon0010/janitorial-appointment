@@ -7,7 +7,7 @@ import image from '../../../../public/assets/image 36_result_result.webp'
 import FaPhone from '@/icons/FaPhone';
 import FaEmail from '@/icons/FaEmail';
 import ContactForm from '@/ui/ContactForm';
-import SectionTitles from '@/ui/SectionTitles';
+import SectionTitles from "@/Shared/SectionTitles";
 import fb from '@/../public/assets/Frame (8).svg'
 import linked from '@/../public/assets/Frame (11).svg'
 import twitt from '@/../public/assets/Frame (12).svg'

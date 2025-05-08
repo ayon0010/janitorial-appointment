@@ -4,7 +4,7 @@ import useAuth from '@/Hooks/useAuth';
 import useAxiosSecure from '@/Hooks/useAxiosSecure';
 import GetData from '@/lib/GetData';
 import Table from '@/Shared/Table';
-import SectionTitles from '@/ui/SectionTitles';
+import SectionTitles from "@/Shared/SectionTitles";
 import dynamic from 'next/dynamic';
 import React from 'react';
 import Swal from 'sweetalert2';
