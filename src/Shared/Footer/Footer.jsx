@@ -50,7 +50,7 @@ const Footer = () => {
                         </div>
                     </nav>
                 </DownAnimation>
-                <DownAnimation delay={0.7}>
+                <DownAnimation delay={0.4}>
                     <nav>
                         <h2 className={`text-white ${poppins.className} text-base font-medium`}>Join Us</h2>
                         <div className="flex items-center gap-4 mt-3">

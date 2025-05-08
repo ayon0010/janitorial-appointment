@@ -1,19 +1,9 @@
 import Image from "next/image";
-import side1 from "@/../public/assets/buy-commercial-cleaning-leads.webp";
-import side2 from "@/../public/assets/contact-with-decision-maker.webp";
-import slide4 from '@/../public/assets/exclusive-commercial-cleaning-leads-.webp';
-
 import SectionTitles from "@/ui/SectionTitles";
-import FaCheck from "@/ui/FaCheck";
-import Reviews from "@/ui/Reviews";
 import Pricing from "@/ui/Pricing";
 import '../globals.css'
-import Leads from "@/ui/Leads";
 import Appointment from "@/ui/Appointment";
-import ReviewItems from "../../ui/ReviewItems";
-import { data } from '@/js/states';
 import ContactInfo from "@/ui/ContactInfo";
-import AudioPlayer from "@/Shared/Audio";
 import ButtonPrimary from "@/ui/ButtonPrimary";
 import Link from "next/link";
 import Title from "@/Shared/Titles/Title";
@@ -100,7 +90,9 @@ export const Services = () => {
                 />
                 <p className="text-base text-[#777] font-light my-7 leading-7">Call Center Services International’s <br />management team has over 35-years of <br /> expertise in successfully establishing U.S.</p>
                 {/* Button */}
-                <ButtonTertiary label={'Learn More'} />
+                <Link href={'/search/exclusive-leads'}>
+                    <ButtonPrimary label={'Get Exclusive Leads'} />
+                </Link>
             </div>
             {/* Card Section */}
             <div className="flex-1 w-full">
@@ -210,7 +202,9 @@ export default async function Home() {
                             <progress className="progress w-full progress-primary" value="90" max="100"></progress>
                         </div>
                         <div className="mt-12">
-                            <ButtonTertiary label={'Learn More'} />
+                            <Link href={'/about'}>
+                                <ButtonTertiary label={'Learn More'} />
+                            </Link>
                         </div>
                     </div>
                     {/* Images */}
