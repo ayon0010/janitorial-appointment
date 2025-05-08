@@ -15,6 +15,7 @@ import DownAnimation from "@/Animations/DownAnimation";
 import Title from "@/Shared/Titles/Title";
 import Team from "@/ui/Home/Team";
 import ContactInfo from "@/ui/ContactInfo";
+import Stepper from "@/ui/Home/Stepper";
 
 
 export const metadata = {
@@ -223,8 +224,21 @@ const page = async () => {
                 </div>
             </div>
 
+            {/* How to start */}
+
+            <div className="bg-[#F8F8F8] 2xl:mt-20 xl:mt-20 mt-10 2xl:py-32 xl:py-32 py-16">
+                <div className="2xl:w-[1150px] xl:w-[1150px] w-[90%] mx-auto">
+                    <Title
+                        head={<>Four easy steps</>}
+                        details={<>How To Get <br /> Started</>}
+                    />
+                    {/* Step Part */}
+                    <Stepper />
+                </div>
+            </div>
+
             {/* Reviews */}
-            <div className="relative mt-16">
+            <div className="relative">
                 {/* Background */}
                 <ParticlesComponent id="particles" />
                 {/* Swiper Reviews */}
@@ -237,6 +251,7 @@ const page = async () => {
                     <ReviewSwiper />
                 </div>
             </div>
+
             {/* Our Team */}
             <div className="text-center my-24 max-w-[1150px] mx-auto">
                 <DownAnimation>
