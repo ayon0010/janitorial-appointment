@@ -3,13 +3,13 @@ import Pricing from "@/ui/Pricing";
 import '../globals.css'
 import Appointment from "@/ui/Appointment";
 import ContactInfo from "@/ui/ContactInfo";
-import ButtonPrimary from "@/ui/ButtonPrimary";
+import ButtonPrimary from "@/Shared/Buttons/ButtonPrimary";
 import Link from "next/link";
 import Title from "@/Shared/Titles/Title";
 import image2 from '@/../public/assets/img_03.jpg'
 import image3 from '@/../public/assets/img_04.jpg'
 import { poppins } from "./layout";
-import ButtonTertiary from "@/ui/ButtonTertiary";
+import ButtonTertiary from "@/Shared/Buttons/ButtonTertiary";
 import SlideRight from "@/Animations/SlideRight";
 import Banner from "@/ui/Home/Banner";
 import Stepper from "@/ui/Home/Stepper";

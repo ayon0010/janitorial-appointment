@@ -2,7 +2,7 @@
 import useAuth from '@/Hooks/useAuth';
 import { useRouter } from 'next/navigation';
 import React from 'react';
-import ButtonPrimary from './ButtonPrimary';
+import ButtonPrimary from '../Shared/Buttons/ButtonPrimary';
 
 const PaymentLink = ({ link, plan }) => {
     const router = useRouter();

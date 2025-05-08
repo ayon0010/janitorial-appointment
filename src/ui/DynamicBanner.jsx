@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import ButtonPrimary from './ButtonPrimary';
-import ButtonTertiary from './ButtonTertiary';
+import ButtonPrimary from '../Shared/Buttons/ButtonPrimary';
+import ButtonTertiary from '../Shared/Buttons/ButtonTertiary';
 import { getImageProps } from 'next/image';
 export const DynamicBanner = ({
     desktopImage,

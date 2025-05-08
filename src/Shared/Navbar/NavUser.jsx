@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
-const ButtonPrimary = dynamic(() => import('@/ui/ButtonPrimary'), { ssr: false });
+const ButtonPrimary = dynamic(() => import('@/Shared/Buttons/ButtonPrimary'), { ssr: false });
 const Option = dynamic(() => import('./NavItems').then((mod) => mod.Option), { ssr: false });
 
 

@@ -1,6 +1,6 @@
 'use client'
 import useAuth from '@/Hooks/useAuth';
-import Logo from '@/Shared/Logo';
+import { Logo } from '@/Shared/Navbar/Navbar';
 import { showError, showSuccess } from '@/Shared/Swal';
 import { useForm } from 'react-hook-form';
 

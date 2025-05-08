@@ -1,7 +1,7 @@
 'use client'
 import useAuth from '@/Hooks/useAuth';
 import dynamic from 'next/dynamic';
-const ButtonPrimary = dynamic(() => import('@/ui/ButtonPrimary'), { ssr: false });
+const ButtonPrimary = dynamic(() => import('@/Shared/Buttons/ButtonPrimary'), { ssr: false });
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';

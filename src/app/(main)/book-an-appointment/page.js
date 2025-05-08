@@ -2,7 +2,7 @@ import AppointmentForm from '@/ui/AppointmentForm';
 import React from 'react';
 import image1 from '@/../public/assets/appointment.jpg'
 import { PageSection } from '../about/page';
-import ButtonTertiary from '@/ui/ButtonTertiary';
+import ButtonTertiary from '@/Shared/Buttons/ButtonTertiary';
 import { Faq } from '../contact/page';
 import { Services } from '../page';
 

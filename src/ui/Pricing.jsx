@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import TickCircle from './TickCircle';
 import PaymentLink from './PaymentLink';
-import ButtonPrimary from './ButtonPrimary';
+import ButtonPrimary from '../Shared/Buttons/ButtonPrimary';
 
 const pricingPlans = [
     {

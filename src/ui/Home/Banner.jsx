@@ -10,7 +10,7 @@ import image2 from '@/../public/assets/slide02.jpg';
 import image3 from '@/../public/assets/slide03.jpg';
 import { useRef, useState } from 'react';
 import UpAnimation from '@/Animations/UpAnimation';
-import ButtonTertiary from '../ButtonTertiary';
+import ButtonTertiary from '../../Shared/Buttons/ButtonTertiary';
 import Link from 'next/link';
 
 
