@@ -13,7 +13,7 @@ const ContactInfo = () => {
     const message = encodeURIComponent('Hello! I would like to inquire about your commercial cleaning leads.');
 
     return (
-        <div className="px-10 grid 2xl:grid-cols-2 xl:grid-cols-2 items-center">
+        <div className="px-10 grid 2xl:grid-cols-2 xl:grid-cols-2 items-center 2xl:justify-between xl:justify-between justify-center">
             <div className="w-full h-auto">
                 <Image src={image} alt='Contact Us - Janitorial Appointment' className='w-full h-auto' height={400} width={600} />
             </div>

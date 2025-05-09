@@ -101,9 +101,9 @@ const Navbar = () => {
                 <div className=''><NavUser UserDetails={UserDetails} /></div>
             </div>
             {/* Nav Mobile */}
-            <div className='2xl:hidden xl:hidden h-[80px] flex items-center justify-between px-6'>
+            <div className='2xl:hidden xl:hidden h-[80px] flex items-center justify-between'>
                 <Link className='h-[80px]' href={'/'}>
-                    <div className='absolute top-0 2xl:left-11 xl:left-11 left-5'>
+                    <div className='absolute top-0 2xl:left-11 xl:left-11 md:left-11 left-2'>
                         <div className='nav-start shadow-xl mt-3'>
                             <Logo />
                         </div>

@@ -7,7 +7,7 @@ import Profiled from '@/Shared/Profiled';
 import DashboardCard from '@/Shared/DashBoardCard';
 import ProfileCard from '@/Shared/ProfileCard';
 import FaNetwork from '@/icons/FaNetwork';
-import image from '@/../public/assets/New Project (1).jpg';
+import image3 from '@/../public/assets/slide03.jpg';
 import { PageSection } from "../about/page";
 
 const Page = () => {
@@ -16,7 +16,7 @@ const Page = () => {
             <PageSection
                 title={<>Dashboard</>}
                 text={<>Manage leads and track your progress.</>}
-                image={image}
+                image={image3}
             />
             <div className='dashboard max-w-[1150px] mx-auto 2xl:gap-14 xl:gap-10 gap-5 2xl:px-0 xl:px-0 px-8 py-20'>
                 <div className=''>

@@ -8,7 +8,9 @@ import SectionTitles from "@/Shared/SectionTitles";
 import dynamic from 'next/dynamic';
 import React from 'react';
 import Swal from 'sweetalert2';
+import { PageSection } from '../../about/page';
 const Loading = dynamic(() => import('../../loading'), { ssr: false });
+import image3 from '@/../public/assets/slide03.jpg';
 
 const Page = () => {
 
@@ -69,17 +71,24 @@ const Page = () => {
     }
 
     return (
-        <div className='pt-20 pb-20 px-10'>
-            <SectionTitles heading={'Bookmarked'} subHeading={'Saved leads'} />
-            {
-                isLoading ? <Loading /> :
-                    <Table
-                        tableHead={['Leads', 'Location', 'Opportunity Type', 'Date', 'Status', 'View Details', 'Action']}
-                        data={savedLeads}
-                        Button={Button}
-                        bookMarks={true}
-                    />
-            }
+        <div>
+            <PageSection
+                title={<>Dashboard</>}
+                text={<>Manage leads</>}
+                image={image3}
+            />
+            <div className='pt-20 pb-20 px-10'>
+                <SectionTitles heading={'Bookmarked'} subHeading={'Saved leads'} />
+                {
+                    isLoading ? <Loading /> :
+                        <Table
+                            tableHead={['Leads', 'Location', 'Opportunity Type', 'Date', 'Status', 'View Details', 'Action']}
+                            data={savedLeads}
+                            Button={Button}
+                            bookMarks={true}
+                        />
+                }
+            </div>
         </div>
     );
 };

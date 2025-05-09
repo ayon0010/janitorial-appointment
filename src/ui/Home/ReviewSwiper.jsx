@@ -70,7 +70,7 @@ const ReviewSwiper = () => {
 
     const MobileSlide = ({ name, title, image, review }) => {
         return (
-            <div className='bg-white w-[400px] space-y-6 p-10 mx-auto 2xl:hidden xl:hidden block h-full'>
+            <div className='bg-white w-[370px] space-y-6 p-10 mx-auto 2xl:hidden xl:hidden block h-full'>
                 <div className='w-fit ml-auto'>
                     <FaQuoteLeft color='red' size={'3.5rem'} />
                 </div>

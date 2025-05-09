@@ -26,7 +26,7 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
 
     const Logo = () => {
         return (
-            <Link href={'/'} className='bg-transparent w-[140px] flex items-center'>
+            <Link href={'/'} className='bg-transparent 2xl:w-[140px] xl:w-[140px] md:w-[140px] w-[100px] flex items-center'>
                 <Image src={logo} className='w-[50px]' alt='janitorial-appointment-logo' />
                 <p className={`${poppins.className} font-light text-lg text-white`}>Janitorial <br /> Appointments</p>
             </Link>
@@ -36,7 +36,7 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
 
     return (
         <div>
-            <div className="2xl:ml-0 xl:ml-0 ml-auto 2xl:hidden xl:hidden md:hidden block">
+            <div className="2xl:ml-0 xl:ml-0 ml-auto 2xl:hidden xl:hidden md:block block">
                 <div className='flex items-center gap-3'>
                     {
                         !user &&
