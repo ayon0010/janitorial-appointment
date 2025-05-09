@@ -5,7 +5,7 @@ import cs2 from '@/../public/assets/testimonial_03.jpg'
 import cs3 from '@/../public/assets/testimonial_04.jpg'
 import cs4 from '@/../public/assets/testimonial_05.jpg'
 import cs5 from '@/../public/assets/testimonials_02.jpg'
-import { FaQuoteLeft } from 'react-icons/fa';
+import { FaQuoteLeft } from '@react-icons/all-files/fa/FaQuoteLeft';
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
