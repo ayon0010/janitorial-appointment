@@ -75,7 +75,7 @@ const Banner = () => {
             >
                 <SwiperSlide>
                     <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] relative'>
-                        <Image src={image1} height={890} width={1920} alt='janitorial-leads-generation' className='object-cover w-full h-full' />
+                        <Image src={image1} sizes="(max-width: 768px) 80vw, 100vw" height={890} width={1920} alt='janitorial-leads-generation' priority className='object-cover w-full h-full' />
                         <HeroBannerContent
 
                             heading={<>Schedule an <br /> Appointment with Us</>}
@@ -87,7 +87,7 @@ const Banner = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] slider'>
-                        <Image src={image2} height={890} width={1920} alt='Telemarketing agent doing a call' className='object-cover w-full h-full' />
+                        <Image src={image2} sizes="(max-width: 768px) 80vw, 100vw"  height={890} width={1920} alt='Telemarketing agent doing a call' priority={false} loading='lazy' className='object-cover w-full h-full' />
                         <HeroBannerContent
 
                             heading={<>Find Qualified ,<br /> Exclusive Janitorial <br /> Leads in your area</>}
@@ -99,7 +99,7 @@ const Banner = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] slider '>
-                        <Image src={image3} height={890} width={1920} alt='Commercial cleaning lead pricing' className='object-cover w-full h-full' />
+                        <Image src={image3} sizes="(max-width: 768px) 80vw, 100vw" height={890} width={1920} priority={false} loading='lazy' alt='Commercial cleaning lead pricing' className='object-cover w-full h-full' />
                         <HeroBannerContent
                             heading={<>Convert Leads With <br /> Integrated Call Center</>}
                             paragraph={<>Connect with key-decision makers and receive valuable <br /> opportunities delivered straight to your inbox-automatically</>}
