@@ -10,9 +10,13 @@ import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-
-// Import Swiper styles
 import 'swiper/css';
+import dynamic from 'next/dynamic';
+
+const ParticlesComponent = dynamic(() => import('@/Animations/Particles'), {
+    ssr: false,        // Must be false for client-only libs
+    loading: () => null // Optional: can use a spinner or div here
+});
 
 
 const ReviewSwiper = () => {
@@ -169,4 +173,22 @@ const ReviewSwiper = () => {
     );
 };
 
-export default ReviewSwiper;
+const UserReview = () => {
+    return (
+        <div className="relative">
+            {/* Background */}
+            <ParticlesComponent id="particles" />
+            {/* Swiper Reviews */}
+            <div className="w-fit h-fit absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+                <div className="space-y-5 mb-10">
+                    <p className="text-white text-lg font-medium text-center">Testimonial</p>
+                    <h3 className="text-white text-2xl font-bold text-center">What People Say About <br />Our Service</h3>
+                </div>
+                {/* Swiper */}
+                <ReviewSwiper />
+            </div>
+        </div>
+    )
+}
+
+export default UserReview;

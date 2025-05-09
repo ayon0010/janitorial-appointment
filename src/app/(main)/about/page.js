@@ -16,6 +16,7 @@ import Title from "@/Shared/Titles/Title";
 import Team from "@/ui/Home/Team";
 import ContactInfo from "@/ui/ContactInfo";
 import Stepper from "@/ui/Home/Stepper";
+import UserReview from "@/ui/Home/ReviewSwiper";
 
 
 export const metadata = {
@@ -238,19 +239,7 @@ const page = async () => {
             </div>
 
             {/* Reviews */}
-            <div className="relative">
-                {/* Background */}
-                <ParticlesComponent id="particles" />
-                {/* Swiper Reviews */}
-                <div className="w-fit h-fit absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
-                    <div className="space-y-5 mb-10">
-                        <p className="text-white text-lg font-medium text-center">Testimonial</p>
-                        <h3 className="text-white text-2xl font-bold text-center">What People Say About <br />Our Service</h3>
-                    </div>
-                    {/* Swiper */}
-                    <ReviewSwiper />
-                </div>
-            </div>
+            <UserReview />
 
             {/* Our Team */}
             <div className="text-center my-24 max-w-[1150px] mx-auto">

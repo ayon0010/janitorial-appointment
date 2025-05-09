@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 125px;
+  @apply scroll-smooth scroll-pt-[125px];
 }
 
 .swiper-slide {
@@ -19,31 +18,14 @@ html {
 }
 
 .pageImage {
-  position: relative;
-  z-index: 20;
+  @apply relative z-20;
 }
 
 .pageImage::before {
+  @apply absolute inset-0 z-30;
   content: '';
-  position: absolute;
-  inset: 0px;
   background-color: #27205F4D !important;
-  z-index: 30;
-}
-
-
-.swiper-pagination-bullet {
-  width: 12px !important;
-  height: 12px !important;
-  background-color: white !important;
-  position: relative;
-  z-index: 1 !important;
-  opacity: 1 !important;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: red !important;
-  position: relative !important;
+  /* Tailwind doesn't provide arbitrary colors with opacity in utilities, so you can keep it as custom */
 }
 
 
@@ -57,9 +39,8 @@ html {
 }
 
 #search::placeholder {
-  color: #667085 !important;
-  font-size: 18px !important;
-  font-weight: 400 !important;
+  @apply text-[#667085] text-lg font-normal;
+  /* Tailwind utilities for color, font-size, and font-weight */
 }
 
 .service-img {
@@ -87,15 +68,14 @@ html {
 }
 
 .message {
-  grid-template-columns: 1fr 2fr !important;
+  @apply grid grid-cols-[1fr_2fr] !important;
 }
 
+/* globals.css or your custom CSS file */
 .navbar a:focus,
 .navbar a:active,
 .navbar a:visited {
-  outline: none !important;
-  background-color: transparent !important;
-  color: inherit !important;
+  @apply outline-none bg-transparent text-inherit !important;
 }
 
 .dashboard {

@@ -17,11 +17,10 @@ import Service1 from "@/icons/Service-1";
 import Service2 from "@/icons/Service2";
 import Service3 from "@/icons/Service3";
 import Service4 from "@/icons/Service4";
-import ParticlesComponent from "@/Animations/Particles";
-import ReviewSwiper from "@/ui/Home/ReviewSwiper";
 import Team from "@/ui/Home/Team";
 import DownAnimation from "@/Animations/DownAnimation";
 import SectionTitles from "@/Shared/SectionTitles";
+import UserReview from "@/ui/Home/ReviewSwiper";
 
 
 export const metadata = {
@@ -233,18 +232,8 @@ export default async function Home() {
                 <Services />
 
                 {/* Reviews */}
-                <div className="relative my-16">
-                    {/* Background */}
-                    <ParticlesComponent id="particles" />
-                    {/* Swiper Reviews */}
-                    <div className="w-fit h-fit absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
-                        <div className="space-y-5 mb-10">
-                            <p className="text-white text-lg font-medium text-center">Testimonial</p>
-                            <h3 className="text-white text-2xl font-bold text-center">What People Say About <br />Our Service</h3>
-                        </div>
-                        {/* Swiper */}
-                        <ReviewSwiper />
-                    </div>
+                <div className="my-16">
+                    <UserReview />
                 </div>
                 {/* Pricing */}
                 <div id="pricing" className="max-w-[1150px] mx-auto mb-20 mt-28">
