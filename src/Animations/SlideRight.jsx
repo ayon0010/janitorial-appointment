@@ -10,16 +10,13 @@ const SlideRight = ({ children, delay = 0, amount = 0.2 }) => {
             viewport={{ once: true, amount }}
             transition={{
                 delay,
-                type: 'spring',
-                stiffness: 60,
-                damping: 15,
+                duration: 0.5,  // Optional: Adjust the duration of the animation
+                ease: 'easeOut',  // Standard easing function
             }}
             className="transform-gpu"
         >
             {children}
         </motion.div>
-
-
     );
 };
 
