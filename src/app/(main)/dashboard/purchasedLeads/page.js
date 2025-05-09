@@ -5,8 +5,9 @@ import TableHead from '@/ui/TableHead';
 import React from 'react';
 import Loading from '../../loading';
 import GetData from '@/lib/GetData';
-import { PageSection } from '../../about/page';
+
 import image3 from '@/../public/assets/slide03.jpg';
+import PageSection from '@/Shared/PageClient';
 const Page = () => {
     const { user } = useAuth();
     const { data: purchasedLeads = [], isLoading } = GetData(user?.uid, `myProducts/${user?.uid}`);

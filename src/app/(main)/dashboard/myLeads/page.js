@@ -8,9 +8,10 @@ import SectionTitles from "@/Shared/SectionTitles";
 import dynamic from 'next/dynamic';
 import React from 'react';
 import Swal from 'sweetalert2';
-import { PageSection } from '../../about/page';
+
 const Loading = dynamic(() => import('../../loading'), { ssr: false });
 import image3 from '@/../public/assets/slide03.jpg';
+import PageSection from '@/Shared/PageClient';
 
 const Page = () => {
 
