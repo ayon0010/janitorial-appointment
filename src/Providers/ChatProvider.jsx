@@ -5,11 +5,6 @@ import React, { useEffect } from 'react';
 
 const ChatProvider = ({ children }) => {
     const pathName = usePathname();
-    console.log(pathName);
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [pathName]);
 
     useEffect(() => {
         if (typeof window === 'undefined') return;
