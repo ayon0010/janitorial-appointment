@@ -9,7 +9,12 @@ import image1 from '@/../public/assets/slide01.jpg';
 import image2 from '@/../public/assets/slide02.jpg';
 import image3 from '@/../public/assets/slide03.jpg';
 import { useRef, useState } from 'react';
-import UpAnimation from '@/Animations/UpAnimation';
+import dynamic from 'next/dynamic';
+const UpAnimation = dynamic(() => import('@/Animations/UpAnimation'), {
+    ssr: false, // optional: disable server-side rendering if animation relies on `window` or browser APIs
+    loading: () => <></>, // optional: fallback while loading
+});
+
 import ButtonTertiary from '../../Shared/Buttons/ButtonTertiary';
 import Link from 'next/link';
 
@@ -87,7 +92,7 @@ const Banner = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] slider'>
-                        <Image src={image2} sizes="(max-width: 768px) 80vw, 100vw"  height={890} width={1920} alt='Telemarketing agent doing a call' priority={false} loading='lazy' className='object-cover w-full h-full' />
+                        <Image src={image2} sizes="(max-width: 768px) 80vw, 100vw" height={890} width={1920} alt='Telemarketing agent doing a call' priority={false} loading='lazy' className='object-cover w-full h-full' />
                         <HeroBannerContent
 
                             heading={<>Find Qualified ,<br /> Exclusive Janitorial <br /> Leads in your area</>}
