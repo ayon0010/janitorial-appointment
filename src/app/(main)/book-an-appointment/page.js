@@ -4,8 +4,9 @@ import image1 from '@/../public/assets/appointment.jpg'
 import { PageSection } from '../about/page';
 import ButtonTertiary from '@/Shared/Buttons/ButtonTertiary';
 import { Faq } from '../contact/page';
-import { Services } from '../page';
+
 import Link from 'next/link';
+import Services from '@/Shared/Services';
 
 export const metadata = {
     title: 'Book a Janitorial Appointment | Commercial Cleaning Leads',
