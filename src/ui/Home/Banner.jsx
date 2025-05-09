@@ -8,7 +8,7 @@ import Image from 'next/image';
 import image1 from '@/../public/assets/slide01.jpg';
 import image2 from '@/../public/assets/slide02.jpg';
 import image3 from '@/../public/assets/slide03.jpg';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 const UpAnimation = dynamic(() => import('@/Animations/UpAnimation'), {
     ssr: false, // optional: disable server-side rendering if animation relies on `window` or browser APIs
@@ -73,8 +73,9 @@ const Banner = () => {
                 initialSlide={0}
                 loop={true}
                 speed={1000}
-                effect="fade"  // Enable fade effect
-                fadeEffect={{ crossFade: true }}
+                effect={`slide`}
+                fadeEffect={{ crossFade: true }}// Enable fade effect
+                slidesPerView={1}
                 modules={[Navigation, Autoplay, Pagination, EffectFade]}
                 className="mySwiper pointer-events-none"
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}

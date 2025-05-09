@@ -9,9 +9,6 @@ import { Analytics } from "@vercel/analytics/react"
 import Head from 'next/head'
 import Navbar from '@/Shared/Navbar/Navbar'
 import Footer from '@/Shared/Footer/Footer'
-import { Suspense } from 'react'
-import Loading from './loading'
-// import { headers } from 'next/headers'
 
 export const nunito = Nunito({
   subsets: ['latin'],
@@ -114,13 +111,11 @@ export default function RootLayout({ children }) {
           <AuthProvider>
             <QueryProvider>
               <ChatProvider>
-                <Suspense fallback={<><Loading /></>}>
-                  <Navbar />
-                  <div className='min-h-[400px]'>
-                    {children}
-                  </div>
-                  <Footer />
-                </Suspense>
+                <Navbar />
+                <div className="min-h-[400px]">
+                  {children}
+                </div>
+                <Footer />
               </ChatProvider>
             </QueryProvider>
           </AuthProvider>
