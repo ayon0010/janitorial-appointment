@@ -11,7 +11,7 @@ import Link from 'next/link';
 import { poppins } from '@/fonts/Poppins';
 export default function () {
     return (
-        <div className="2xl:w-[1150px] xl:w-[1150px] w-[90%] mx-auto flex 2xl:flex-row xl:flex-row flex-col gap-16 2xl:items-center xl:items-center items-start 2xl:py-16 xl:py-16 py-10">
+        <div className="2xl:w-[1150px] xl:w-[1150px] sm:w-[90%] w-[90%] mx-auto flex 2xl:flex-row xl:flex-row flex-col gap-16 2xl:items-center xl:items-center items-start 2xl:py-16 xl:py-16 py-10">
             {/* Description of services */}
             <div>
                 {/* Title */}
@@ -30,7 +30,7 @@ export default function () {
             <div className="flex-1 w-full">
                 <SlideRight amount={0.1}>
                     {/* Services */}
-                    <div className="2xl:h-[878px] xl:h-[878px] grid 2xl:grid-cols-2 xl:grid-cols-2 2xl:grid-rows-2 xl:grid-rows-2 gap-x-8 2xl:gap-y-0 xl:gap-y-0 gap-y-8 grid-cols-1 grid-rows-4">
+                    <div className="2xl:h-[878px] xl:h-[878px] grid 2xl:grid-cols-2 xl:grid-cols-2 2xl:grid-rows-2 xl:grid-rows-2 gap-x-8 2xl:gap-y-0 xl:gap-y-0 gap-y-8 sm:grid-cols-1 sm:grid-rows-4 grid-cols-1 grid-rows-4">
                         {/* It Support */}
                         <div className="relative 2xl:pt-10 xl:pt-10 pt-0">
                             <div className="shadow-[0_0_10px_rgba(0,0,0,0.2)] h-[384px] flex flex-col services">

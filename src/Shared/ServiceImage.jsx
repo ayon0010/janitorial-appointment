@@ -2,7 +2,6 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import React from 'react';
-
 const SlideRight = dynamic(() => import('@/Animations/SlideRight'), { ssr: false });
 import image2 from '@/../public/assets/img_03.jpg';
 import image3 from '@/../public/assets/img_04.jpg';
@@ -10,7 +9,7 @@ import image3 from '@/../public/assets/img_04.jpg';
 const ServiceImage = () => {
     return (
         <SlideRight>
-            <div className="relative 2xl:h-[580px] xl:h-[580px] h-[480px] 2xl:w-full xl:w-full w-[387px] overflow-hidden">
+            <div className="relative 2xl:h-[580px] xl:h-[580px] h-[480px] 2xl:w-full xl:w-full sm:w-[387px] w-[380px] overflow-hidden">
                 <Image
                     src={image2}
                     loading="lazy"
