@@ -9,12 +9,25 @@ import Stripe from "./Stripe";
 import { PageSection } from "@/app/(main)/about/page";
 import image from '@/../public/assets/exclusive-commercial-cleaning-leads-1.webp'
 
+function isDateInPast(dateStr) {
+    const today = new Date();
+    const inputDate = new Date(dateStr);
+
+    const todayStr = today.toISOString().split('T')[0];
+    const inputDateStr = inputDate.toISOString().split('T')[0];
+
+    return inputDateStr < todayStr;
+}
+
+
+
 const SingleLead = async ({ Lead }) => {
     const [leads, states, id] = Lead;
     const data = await getLeads(leads, states, id);
     const appointmentDate = data?.date;
-    const currentDate = new Date(); // Replace with new Date() in production
-    const isDisabled = new Date(appointmentDate) > currentDate;
+    const isDisabled = isDateInPast(appointmentDate);
+    console.log(isDisabled);
+    
 
     return (
         <div>
@@ -55,7 +68,7 @@ const SingleLead = async ({ Lead }) => {
                     {data?.sold ? (
                         <SoldMessage />
                     ) : (
-                        <Stripe isDisabled={!isDisabled} leads={leads} appointmentDate={data?.date} product_Id={id} prize={data?.prize} />
+                        <Stripe isDisabled={isDisabled} leads={leads} appointmentDate={data?.date} product_Id={id} prize={data?.prize} />
                     )}
                 </div>
             </div>

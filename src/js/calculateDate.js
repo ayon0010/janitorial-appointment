@@ -2,17 +2,29 @@ function getDateDifference(givenDateStr) {
     const givenDate = new Date(givenDateStr);
     const currentDate = new Date();
 
-    // Calculate the difference in time (milliseconds)
-    const timeDifference = givenDate.getTime() - currentDate.getTime();
+    // Ensure we're working with past dates
+    if (givenDate > currentDate) {
+        return 'Date is in the future';
+    }
 
-    // Convert milliseconds to days and ensure no negative sign
-    const daysDifference = Math.abs(Math.floor(timeDifference / (1000 * 60 * 60 * 24)));
+    let years = currentDate.getFullYear() - givenDate.getFullYear();
+    let months = currentDate.getMonth() - givenDate.getMonth();
+    let days = currentDate.getDate() - givenDate.getDate();
 
-    // Calculate the difference in months and ensure no negative sign
-    let monthsDifference = Math.abs((givenDate.getFullYear() - currentDate.getFullYear()) * 12);
-    monthsDifference += Math.abs(givenDate.getMonth() - currentDate.getMonth());
-    return `Posted ${monthsDifference > 0 ? `${monthsDifference} months and` : ''} ${daysDifference} days ago`;
+    if (days < 0) {
+        months--;
+        const prevMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0);
+        days += prevMonth.getDate();
+    }
 
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    const totalMonths = years * 12 + months;
+
+    return `Posted${totalMonths > 0 ? ` ${totalMonths} month${totalMonths > 1 ? 's' : ''} and` : ''} ${days} day${days !== 1 ? 's' : ''} ago`;
 }
 
 export default getDateDifference;

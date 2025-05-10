@@ -12,7 +12,7 @@ const BuyLeadMessage = dynamic(() => import('./BuyLeadMessage'), {
 const Stripe = ({ isDisabled, leads, appointmentDate, product_Id, prize }) => {
     return (
         <div>
-            <BuyLeadMessage isDisabled={!isDisabled} leads={leads} appointmentDate={appointmentDate} product_Id={product_Id} prize={prize} />
+            <BuyLeadMessage isDisabled={isDisabled} leads={leads} appointmentDate={appointmentDate} product_Id={product_Id} prize={prize} />
         </div>
     );
 };
