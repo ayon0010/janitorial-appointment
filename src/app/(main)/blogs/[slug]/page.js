@@ -5,6 +5,7 @@ import formatTimestamp from "@/js/convertTime";
 import { PortableText } from "next-sanity";
 import { blogData } from "../page";
 import Link from "next/link";
+import { PageSection } from "../../about/page";
 
 export const revalidate = 1;
 export async function generateStaticParams() {
@@ -77,119 +78,114 @@ export async function generateMetadata({ params }) {
 const page = async ({ params }) => {
     const data = await getData(params.slug) || {};
     return (
-        <div className="pt-20 pb-20 2xl:px-10 xl:px-10 px-6">
-            <h2 className="2xl:text-5xl xl:text-5xl text-3xl  font-bold text-black text-center">{data?.title}</h2>
-            <p className="mt-10 text-center flex justify-center items-center gap-2"><FaRegCalendar className="mt-1" size={'1.2rem'} /><span className=" 2xl:text-2xl xl:text-2xl text-xl font-semibold">{formatTimestamp(data?.date)}</span></p>
-            <Image
-                priority
-                src={urlFor(data?.titleImage).url()}
-                width={950}
-                height={665}
-                className="my-10 2xl:h-[665px] w-full xl:h-[665px] h-[500px] object-cover"
-                sizes="(max-width: 786px) 400px, 100vw"
-                alt={data?.title}
-            />
-            <div className="2xl:px-16 xl:px-16">
-                <div className="flex items-center gap-2 mb-10">
-                    <Image src={urlFor(data?.authorImage).url()} width={50} height={50} className='w-[50px] h-[50px] rounded-full' alt='' />
-                    <p className=" text-xl font-semibold">By {data?.authorName}</p>
-                </div>
-                <div className="prose 2xl:prose-xl xl:prose-xl prose-indigo">
-                    <PortableText
-                        value={data?.content}
-                        components={{
-                            types: {
-                                imageGroup: ({ value }) => {
-                                    const { images, layout } = value;
-                                    if (!images || images.length === 0) return null;
-                                    const imageUrls = images.map(image => urlFor(image.asset).url());
+        <div>
+            <PageSection image={urlFor(data?.titleImage).url()} title={<><p className="flex justify-center items-center gap-2 mt-2"><FaRegCalendar className="" size={'1rem'} /><span className="2xl:text-lg xl:text-lg text-base font-semibold">{formatTimestamp(data?.date)}</span></p></>} text={<><span className="2xl:text-4xl xl:text-4xl text-xl">{data?.title}</span></>} />
+            <div className="pt-20 pb-20 max-w-[1150px] mx-auto 2xl:px-0 xl:px-0 px-6">
+                {/* <h2 className="2xl:text-5xl xl:text-5xl text-3xl  font-bold text-black text-center">{data?.title}</h2>
+                <p className="my-10 text-center flex justify-center items-center gap-2"><FaRegCalendar className="mt-1" size={'1.2rem'} /><span className=" 2xl:text-2xl xl:text-2xl text-xl font-semibold">{formatTimestamp(data?.date)}</span></p> */}
+                <div className="">
+                    <div className="flex items-center gap-2 mb-10">
+                        <Image src={urlFor(data?.authorImage).url()} width={50} height={50} className='w-[50px] h-[50px] rounded-full' alt='' />
+                        <p className=" text-xl font-semibold">By {data?.authorName}</p>
+                    </div>
+                    <div className="prose 2xl:prose-xl xl:prose-xl prose-indigo">
+                        <PortableText
+                            value={data?.content}
+                            components={{
+                                types: {
+                                    imageGroup: ({ value }) => {
+                                        const { images, layout } = value;
+                                        if (!images || images.length === 0) return null;
+                                        const imageUrls = images.map(image => urlFor(image.asset).url());
 
-                                    return (
-                                        <div className={`${layout === 'grid' ? 'grid 2xl:grid-cols-3 xl:grid-cols-3 gap-4 items-stretch' : 'block'}`}>
-                                            {imageUrls?.map((url, i) => {
-                                                return (
-                                                    <Image
-                                                        key={i}
-                                                        src={url}
-                                                        alt={`${params.slug}`}
-                                                        width={950}
-                                                        height={665}
-                                                        className={`rounded-lg shadow-lg h-auto ${layout === 'grid' ? 'w-full' : 'mb-4'}`}
-                                                    />
-                                                );
-                                            })}
-                                        </div>
-                                    );
-                                },
-                                table: ({ value }) => {
-                                    console.log(value);
-                                    // Assuming value contains rows and columns
-                                    return (
-                                        <div className="overflow-x-auto">
-                                            <table className="table">
-                                                {/* head */}
-                                                <thead>
-                                                    <tr className="bg-gray-200">
-                                                        {value.rows[0]?.columns.map((column, index) => (
-                                                            <th key={index} className="">{column}</th>
-                                                        ))}
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    {/* row 1 */}
-                                                    {value.rows.filter((row, i) => i !== 0).map((row, rowIndex) => (
-                                                        <tr key={rowIndex} className="border-b">
-                                                            {row.columns.map((column, colIndex) => (
-                                                                <td key={colIndex} className="px-4 py-2">{column}</td>
+                                        return (
+                                            <div className={`${layout === 'grid' ? 'grid 2xl:grid-cols-3 xl:grid-cols-3 gap-4 items-stretch' : 'block'}`}>
+                                                {imageUrls?.map((url, i) => {
+                                                    return (
+                                                        <Image
+                                                            key={i}
+                                                            src={url}
+                                                            alt={`${params.slug}`}
+                                                            width={950}
+                                                            height={665}
+                                                            className={`rounded-lg shadow-lg h-auto ${layout === 'grid' ? 'w-full' : 'mb-4'}`}
+                                                        />
+                                                    );
+                                                })}
+                                            </div>
+                                        );
+                                    },
+                                    table: ({ value }) => {
+                                        console.log(value);
+                                        // Assuming value contains rows and columns
+                                        return (
+                                            <div className="overflow-x-auto">
+                                                <table className="table">
+                                                    {/* head */}
+                                                    <thead>
+                                                        <tr className="bg-gray-200">
+                                                            {value.rows[0]?.columns.map((column, index) => (
+                                                                <th key={index} className="">{column}</th>
                                                             ))}
                                                         </tr>
-                                                    ))}
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    );
+                                                    </thead>
+                                                    <tbody>
+                                                        {/* row 1 */}
+                                                        {value.rows.filter((row, i) => i !== 0).map((row, rowIndex) => (
+                                                            <tr key={rowIndex} className="border-b">
+                                                                {row.columns.map((column, colIndex) => (
+                                                                    <td key={colIndex} className="px-4 py-2">{column}</td>
+                                                                ))}
+                                                            </tr>
+                                                        ))}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        );
+                                    },
                                 },
-                            },
-                            block: {
-                                h2: ({ children }) => {
-                                    const sectionId = children
-                                        .map(child => (typeof child === "string" ? child.trim() : ""))
-                                        .join(" ")
-                                        .toLowerCase()
-                                        .replace(/\s+/g, '-') // Replace spaces with dashes
-                                        .replace(/^-+|-+$/g, '');
-                                    return <h2 id={sectionId} className="text-2xl font-bold mt-6 mb-3">{children}</h2>;
+                                block: {
+                                    h2: ({ children }) => {
+                                        const sectionId = children
+                                            .map(child => (typeof child === "string" ? child.trim() : ""))
+                                            .join(" ")
+                                            .toLowerCase()
+                                            .replace(/\s+/g, '-') // Replace spaces with dashes
+                                            .replace(/^-+|-+$/g, '');
+                                        return <h2 id={sectionId} className="text-2xl font-bold mt-6 mb-3">{children}</h2>;
+                                    },
+                                    h3: ({ children }) => {
+                                        const sectionId = children
+                                            .map(child => (typeof child === "string" ? child.trim() : ""))
+                                            .join(" ")
+                                            .toLowerCase()
+                                            .replace(/\s+/g, '-')
+                                            .replace(/^-+|-+$/g, '');
+                                        return <h3 id={sectionId} className="text-xl font-semibold mt-4 mb-2">{children}</h3>;
+                                    },
+                                    h4: ({ children }) => {
+                                        const sectionId = children
+                                            .map(child => (typeof child === "string" ? child.trim() : ""))
+                                            .join(" ")
+                                            .toLowerCase()
+                                            .replace(/\s+/g, '-')
+                                            .replace(/^-+|-+$/g, '');
+                                        return <h4 id={sectionId} className="text-lg font-semibold mt-2 mb-1">{children}</h4>;
+                                    },
+                                    normal: ({ children }) => <p className="mb-4">{children}</p>,
                                 },
-                                h3: ({ children }) => {
-                                    const sectionId = children
-                                        .map(child => (typeof child === "string" ? child.trim() : ""))
-                                        .join(" ")
-                                        .toLowerCase()
-                                        .replace(/\s+/g, '-')
-                                        .replace(/^-+|-+$/g, '');
-                                    return <h3 id={sectionId} className="text-xl font-semibold mt-4 mb-2">{children}</h3>;
+                                marks: {
+                                    sectionLink: ({ value, children }) => {
+                                        return <Link href={`#${value.sectionId}`} className="text-sky-400 hover:underline">{children}</Link>;
+                                    },
                                 },
-                                h4: ({ children }) => {
-                                    const sectionId = children
-                                        .map(child => (typeof child === "string" ? child.trim() : ""))
-                                        .join(" ")
-                                        .toLowerCase()
-                                        .replace(/\s+/g, '-')
-                                        .replace(/^-+|-+$/g, '');
-                                    return <h4 id={sectionId} className="text-lg font-semibold mt-2 mb-1">{children}</h4>;
-                                },
-                                normal: ({ children }) => <p className="mb-4">{children}</p>,
-                            },
-                            marks: {
-                                sectionLink: ({ value, children }) => {
-                                    return <Link href={`#${value.sectionId}`} className="text-sky-400 hover:underline">{children}</Link>;
-                                },
-                            },
-                        }}
-                    />
+                            }}
+                        />
+                    </div>
                 </div>
             </div>
         </div>
+
     );
 };
 

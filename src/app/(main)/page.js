@@ -14,6 +14,7 @@ import SectionTitles from "@/Shared/SectionTitles";
 import UserReview from "@/ui/Home/ReviewSwiper";
 import Services from "@/Shared/Services";
 import ServiceImage from "@/Shared/ServiceImage";
+import Load from "@/Animations/Load";
 
 
 export const metadata = {
@@ -75,6 +76,7 @@ export const metadata = {
 export default async function Home() {
     return (
         <>
+            <Load />
             <div className="relative">
                 {/* Banner */}
                 <Banner />

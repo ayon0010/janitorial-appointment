@@ -35,7 +35,7 @@ const Loading = () => {
     }
 
     return (
-        <div className="flex items-center justify-center pt-40 pb-20 px-10">
+        <div className="flex items-center justify-center h-screen bg-white w-full overflow-hidden">
             <div className="flex items-center justify-center">
                 <div ref={containerRef} className="h-auto w-[400px]" />
             </div>
