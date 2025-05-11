@@ -111,7 +111,7 @@ html {
   line-height: normal;
 }
 
-.swiper-fade .swiper-slide {
+/* .swiper-fade .swiper-slide {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
@@ -122,7 +122,7 @@ html {
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
-}
+} */
 
 
 .serial {

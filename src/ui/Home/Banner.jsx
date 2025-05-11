@@ -72,11 +72,10 @@ const Banner = () => {
                 initialSlide={0}
                 loop={true}
                 speed={1000}
-                effect={`fade`}
-                fadeEffect={{ crossFade: true }}// Enable fade effect
+                effect={`slide`}
                 slidesPerView={1}
                 modules={[Navigation, Autoplay, Pagination, EffectFade]}
-                className="mySwiper pointer-events-none swiper-fade"
+                className="mySwiper pointer-events-none"
                 
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             >
