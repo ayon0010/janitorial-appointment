@@ -64,7 +64,7 @@ const Banner = () => {
         <div className='relative'>
             <Swiper
                 ref={swiperRef}
-                autoplay={{ delay: 5000 }}
+                autoplay={{ delay: 10000 }}
                 pagination={{
                     clickable: true,
                     el: '.swiper-pagination',
