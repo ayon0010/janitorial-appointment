@@ -6,16 +6,8 @@ import QueryProvider from '@/Providers/QueryProvider'
 import ChatProvider from '@/Providers/ChatProvider'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
-import Head from 'next/head'
 import Navbar from '@/Shared/Navbar/Navbar'
 import Footer from '@/Shared/Footer/Footer'
-
-export const nunito = Nunito({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '500', '600', '900'],
-  variable: '--font-nunito',
-})
 
 export const gilroy = localFont({
   src: [
@@ -27,16 +19,6 @@ export const gilroy = localFont({
   ],
   display: 'swap',
 })
-
-export const poppins = Poppins({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '500', '600', '900'],
-  variable: '--font-nunito',
-})
-
-
-
 
 export const metadata = {
   title: "Janitorial Appointments - Commercial Cleaning Leads",
@@ -95,18 +77,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" >
       <body className={``}>
-        <Head>
-          <title>{metadata.title}</title>
-          <meta name="description" content={metadata.description} />
-          <meta name="keywords" content={metadata.keywords} />
-          <meta name="robots" content="index, follow" />
-          <link rel="canonical" href="https://www.janitorialappointment.com" />
-          <link rel="preload" href="../globals.css" as="style" />
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: metadata.other["application/ld+json"] }}
-          />
-        </Head>
         <main className={`overflow-hidden min-h-screen bg-[#FFFFFF] ${gilroy.className}`}>
           <AuthProvider>
             <QueryProvider>

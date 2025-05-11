@@ -4,7 +4,6 @@ import Appointment from "@/ui/Appointment";
 import ContactInfo from "@/ui/ContactInfo";
 import Link from "next/link";
 import Title from "@/Shared/Titles/Title";
-import { poppins } from "./layout";
 import ButtonTertiary from "@/Shared/Buttons/ButtonTertiary";
 import Banner from "@/ui/Home/Banner";
 import Stepper from "@/ui/Home/Stepper";
@@ -13,6 +12,7 @@ import ServiceImageWrapper from "@/Shared/ServiceImageWrapper";
 import ServiceWrapper from "@/Shared/ServiceWrappper";
 import UserReviewWrapper from "@/Shared/UserReviewWrapper";
 import TeamWrapper from "@/ui/TeamWrapper";
+import { poppins } from "@/fonts/Poppins";
 
 
 
