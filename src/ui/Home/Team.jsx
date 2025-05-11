@@ -15,6 +15,13 @@ import team6 from '@/../public/assets/team_06-625x855.jpg'
 import "swiper/css";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
+import dynamic from 'next/dynamic';
+import Title from "@/Shared/Titles/Title";
+const DownAnimation = dynamic(() => import('@/Animations/DownAnimation'), {
+    ssr: false, // Optional: if this component should only render on the client
+    loading: () => <div>Loading animation...</div>, // Optional fallback
+});
+
 
 const People = ({ image, name, position }) => {
     return (
@@ -35,35 +42,44 @@ const People = ({ image, name, position }) => {
 export default function Team() {
     return (
         <>
-            <Swiper modules={[Autoplay]} loop={true} autoplay={{ delay: 6000, disableOnInteraction: false }}
-                speed={800} slidesPerView={4} spaceBetween={30} breakpoints={{
-                    0: {
-                        slidesPerView: 1, // 👈 1 slide on all screen sizes below 640px
-                    },
-                    640: {
-                        slidesPerView: 4, // 👈 auto on medium screens and up
-                    }
-                }} className="mySwiper team mt-20">
-                <SwiperSlide>
-                    <People image={team1} name="Alice Johnson" position="Chief Executive Officer" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <People image={team2} name="Michael Lee" position="Head of Operations" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <People image={team3} name="Sofia Martinez" position="Marketing Director" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <People image={team4} name="David Kim" position="Lead Developer" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <People image={team5} name="Emily Zhang" position="Sales Manager" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <People image={team6} name="James Anderson" position="Customer Success Lead" />
-                </SwiperSlide>
+            <DownAnimation>
+                <Title
+                    head={<>Our team</>}
+                    details={<>Our Best Specialists <br />
+                        Work For You</>}
+                />
+            </DownAnimation>
+            <DownAnimation delay={0.4}>
+                <Swiper modules={[Autoplay]} loop={true} autoplay={{ delay: 6000, disableOnInteraction: false }}
+                    speed={800} slidesPerView={4} spaceBetween={30} breakpoints={{
+                        0: {
+                            slidesPerView: 1, // 👈 1 slide on all screen sizes below 640px
+                        },
+                        640: {
+                            slidesPerView: 4, // 👈 auto on medium screens and up
+                        }
+                    }} className="mySwiper team mt-20">
+                    <SwiperSlide>
+                        <People image={team1} name="Alice Johnson" position="Chief Executive Officer" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <People image={team2} name="Michael Lee" position="Head of Operations" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <People image={team3} name="Sofia Martinez" position="Marketing Director" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <People image={team4} name="David Kim" position="Lead Developer" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <People image={team5} name="Emily Zhang" position="Sales Manager" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <People image={team6} name="James Anderson" position="Customer Success Lead" />
+                    </SwiperSlide>
 
-            </Swiper>
+                </Swiper>
+            </DownAnimation>
         </>
     );
 }

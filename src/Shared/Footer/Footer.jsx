@@ -1,3 +1,4 @@
+'use client'
 import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook";
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
 import { FaWhatsapp } from "@react-icons/all-files/fa/FaWhatsapp";
@@ -5,7 +6,12 @@ import React from 'react';
 import { Logo } from '../Navbar/Navbar';
 import Link from 'next/link';
 import { poppins } from '@/fonts/Poppins';
-import DownAnimation from "@/Animations/DownAnimation";
+import dynamic from 'next/dynamic';
+const DownAnimation = dynamic(() => import('@/Animations/DownAnimation'), {
+    ssr: false, // Disable Server-Side Rendering (required for components using 'use client')
+    loading: () => <></>, // Optional: fallback UI
+});
+
 
 const Footer = () => {
     const message = encodeURIComponent('Hello! I would like to inquire about your commercial cleaning leads.');

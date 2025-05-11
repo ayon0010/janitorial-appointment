@@ -156,16 +156,7 @@ export default async function Home() {
 
                 {/* Our Team */}
                 <div className="text-center my-24 max-w-[1150px] mx-auto">
-                    <DownAnimation>
-                        <Title
-                            head={<>Our team</>}
-                            details={<>Our Best Specialists <br />
-                                Work For You</>}
-                        />
-                    </DownAnimation>
-                    <DownAnimation delay={0.6}>
-                        <Team />
-                    </DownAnimation>
+                    <Team />
                 </div>
             </div>
             {/* Contact Info */}
