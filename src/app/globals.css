@@ -6,10 +6,6 @@ html {
   @apply scroll-smooth scroll-pt-[125px];
 }
 
-.swiper-slide {
-  transition: opacity 1s ease-in-out !important;
-}
-
 .slider::before {
   content: '';
   position: absolute;
@@ -111,7 +107,7 @@ html {
   line-height: normal;
 }
 
-/* .swiper-fade .swiper-slide {
+.swiper-fade .swiper-slide {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
@@ -122,7 +118,7 @@ html {
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
-} */
+}
 
 
 .serial {
