@@ -8,12 +8,13 @@ import { poppins } from "./layout";
 import ButtonTertiary from "@/Shared/Buttons/ButtonTertiary";
 import Banner from "@/ui/Home/Banner";
 import Stepper from "@/ui/Home/Stepper";
-import Team from "@/ui/Home/Team";
-import DownAnimation from "@/Animations/DownAnimation";
 import SectionTitles from "@/Shared/SectionTitles";
-import UserReview from "@/ui/Home/ReviewSwiper";
-import Services from "@/Shared/Services";
-import ServiceImage from "@/Shared/ServiceImage";
+import ServiceImageWrapper from "@/Shared/ServiceImageWrapper";
+import ServiceWrapper from "@/Shared/ServiceWrappper";
+import UserReviewWrapper from "@/Shared/UserReviewWrapper";
+import TeamWrapper from "@/ui/TeamWrapper";
+
+
 
 
 export const metadata = {
@@ -125,7 +126,7 @@ export default async function Home() {
                         </div>
                     </div>
                     {/* Images */}
-                    <ServiceImage />
+                    <ServiceImageWrapper />
                 </div>
 
                 {/* How to get Started */}
@@ -142,11 +143,11 @@ export default async function Home() {
                 </div>
 
                 {/* Our Services */}
-                <Services />
+                <ServiceWrapper />
 
                 {/* Reviews */}
                 <div className="my-16">
-                    <UserReview />
+                    <UserReviewWrapper />
                 </div>
                 {/* Pricing */}
                 <div id="pricing" className="max-w-[1150px] mx-auto mb-20 mt-28">
@@ -156,7 +157,7 @@ export default async function Home() {
 
                 {/* Our Team */}
                 <div className="text-center my-24 max-w-[1150px] mx-auto">
-                    <Team />
+                    <TeamWrapper />
                 </div>
             </div>
             {/* Contact Info */}
