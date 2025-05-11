@@ -243,16 +243,7 @@ const page = async () => {
 
             {/* Our Team */}
             <div className="text-center my-24 max-w-[1150px] mx-auto">
-                <DownAnimation>
-                    <Title
-                        head={<>Our team</>}
-                        details={<>Our Best Specialists <br />
-                            Work For You</>}
-                    />
-                </DownAnimation>
-                <DownAnimation delay={1}>
-                    <Team />
-                </DownAnimation>
+                <Team />
             </div>
             <div className="bg-white 2xl:pb-0 xl:pb-0 pb-20">
                 <SectionTitles heading={"Contact Us"} />
