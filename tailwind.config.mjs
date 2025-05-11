@@ -5,8 +5,6 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-
-    // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -26,7 +24,7 @@ module.exports = {
         'primary': '#6073FC',
       },
       backgroundImage: {
-        'login': "url('/assets/Untitled_result_result.webp')", // Custom background image path
+        'login': "url('/assets/Untitled_result_result.webp')",
       },
       gridTemplateRows: {
         'custom-rows': '2fr 2fr 1fr',
@@ -35,6 +33,11 @@ module.exports = {
   },
   plugins: [require("daisyui"), require('@tailwindcss/typography')],
   daisyui: {
-    themes: ["light", "dark", "cupcake"],
+    logs: false,
+    styled: true,
+    base: true,
+    utils: true,
+    rtl: false,
+    prefix: "",
   },
 }
