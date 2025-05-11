@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: 'jit',
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -32,12 +31,4 @@ module.exports = {
     },
   },
   plugins: [require("daisyui"), require('@tailwindcss/typography')],
-  daisyui: {
-    logs: false,
-    styled: true,
-    base: true,
-    utils: true,
-    rtl: false,
-    prefix: "",
-  },
 }
