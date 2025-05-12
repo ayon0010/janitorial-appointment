@@ -25,7 +25,7 @@ const Banner = () => {
         heading,
         paragraph,
         buttonLabel,
-        positionClasses = 'absolute 2xl:left-0 xl:left-0 2xl:-translate-x-0 xl:-translate-x-0 -translate-x-1/2 left-1/2 top-1/2 -translate-y-1/2 w-full 2xl:p-0 xl:p-0 2xl:p-10 xl:p-10 p-4',
+        positionClasses = 'absolute 2xl:left-0 xl:left-0 2xl:-translate-x-0 xl:-translate-x-0 -translate-x-1/2 left-1/2 top-1/2 -translate-y-1/2 w-full 2xl:p-0 xl:p-0 2xl:p-10 xl:p-10 p-4 z-[60]',
         headingClasses = 'text-white 2xl:text-5xl xl:text-5xl text-3xl font-semibold 2xl:text-left xl:text-left text-center',
         paragraphClasses = 'text-white 2xl:text-lg xl:text-lg text-base 2xl:text-left xl:text-left text-center',
     }) => {
