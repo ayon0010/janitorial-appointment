@@ -21,14 +21,14 @@ html {
 .slider {
   position: relative;
   width: 100%;
-  aspect-ratio: 1920/890;
+  /* aspect-ratio: 1920/890; */
   z-index: 40;
 }
 
 .lcp {
   position: relative;
   width: 100%;
-  aspect-ratio: 1920/890;
+  /* aspect-ratio: 1920/890; */
   z-index: 40;
 }
 
