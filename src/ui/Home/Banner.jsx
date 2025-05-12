@@ -82,8 +82,8 @@ const Banner = () => {
             >
                 <SwiperSlide>
                     <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] slider'>
-                        <Image src={image1} sizes="(max-width: 768px) 90vw, 100vw"
-                            // height={890} width={1920}
+                        <Image src={image1} sizes="(max-width: 768px) 60vw, 100vw"
+                            layout={'responsive'}
                             fill
                             alt='janitorial-leads-generation' priority className='object-cover w-full h-full' />
                         <HeroBannerContent
