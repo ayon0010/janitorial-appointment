@@ -2,6 +2,14 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
+import dynamic from "next/dynamic";
+import Loading from "@/app/(main)/loading";
+const ChatProvider = dynamic(() => import('./ChatProvider'), {
+    ssr: false,
+    loading: () => <div>
+        <Loading />
+    </div>, // Optional loading state
+});
 
 const queryClient = new QueryClient()
 
@@ -15,9 +23,11 @@ const QueryProvider = ({ children }) => {
 
 
     return (
-        <QueryClientProvider client={queryClient}>
-            {children}
-        </QueryClientProvider>
+        <ChatProvider>
+            <QueryClientProvider client={queryClient}>
+                {children}
+            </QueryClientProvider>
+        </ChatProvider>
     );
 };
 

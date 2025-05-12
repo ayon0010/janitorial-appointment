@@ -80,13 +80,11 @@ export default function RootLayout({ children }) {
         <main className={`overflow-hidden min-h-screen bg-[#FFFFFF] ${gilroy.className}`}>
           <AuthProvider>
             <QueryProvider>
-              <ChatProvider>
-                <Navbar />
-                <div className="min-h-[400px]">
-                  {children}
-                </div>
-                <Footer />
-              </ChatProvider>
+              <Navbar />
+              <div className="min-h-[400px]">
+                {children}
+              </div>
+              <Footer />
             </QueryProvider>
           </AuthProvider>
         </main>
