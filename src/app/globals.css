@@ -6,13 +6,6 @@ html {
   @apply scroll-smooth scroll-pt-[125px];
 }
 
-.slider::before {
-  content: '';
-  position: absolute;
-  inset: 0px;
-  background-color: #27205F4D !important;
-}
-
 .pageImage {
   @apply relative z-20;
 }
@@ -29,7 +22,21 @@ html {
   position: relative;
   width: 100%;
   aspect-ratio: 1920/890;
+  z-index: 40;
 }
+
+.lcp::before {
+  content: '';
+  position: absolute;
+  inset: 0px;
+  top:0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 50;
+  background-color: #27205F4D !important;
+}
+
 
 .swiper {
   position: relative !important;
