@@ -6,11 +6,11 @@ const nextConfig = {
     domains: ['cdn.sanity.io', 'i.ibb.co.com', 'i.ibb.co', 'img.youtube.com',],
     formats: ['image/avif', 'image/webp'], // Allow images from Sanity's CDN
   },
-  images: {
-    deviceSizes: [320, 640, 768, 1024, 1280, 1600, 1920],
-    // No need for imageSizes since you're not using fixed-width images
-    // // ← Add external image domains here if needed
-  },
+  // images: {
+  //   deviceSizes: [320, 640, 768, 1024, 1280, 1600, 1920],
+  //   // No need for imageSizes since you're not using fixed-width images
+  //   // // ← Add external image domains here if needed
+  // },
   trailingSlash: true,
 };
 export default withBundleAnalyzer({
