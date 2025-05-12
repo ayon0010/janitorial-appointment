@@ -81,7 +81,7 @@ const Banner = () => {
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             >
                 <SwiperSlide>
-                    <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] relative lcp'>
+                    <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] slider'>
                         <Image src={image1} sizes="(max-width: 768px) 90vw, 100vw"
                             // height={890} width={1920}
                             fill
@@ -96,7 +96,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] slider lcp'>
+                    <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] lcp'>
                         <Image src={image2} sizes="(max-width: 768px) 90vw, 100vw"
                             // height={890} width={1920}
                             fill
@@ -111,7 +111,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] slider lcp'>
+                    <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] lcp'>
                         <Image src={image3} sizes="(max-width: 768px) 90vw, 100vw"
                             // height={890} width={1920}
                             fill

@@ -18,6 +18,13 @@ html {
 }
 
 
+.slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1920/890;
+  z-index: 40;
+}
+
 .lcp {
   position: relative;
   width: 100%;
@@ -29,7 +36,7 @@ html {
   content: '';
   position: absolute;
   inset: 0px;
-  top:0px;
+  top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
