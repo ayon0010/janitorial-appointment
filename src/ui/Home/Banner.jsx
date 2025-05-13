@@ -83,7 +83,7 @@ const Banner = () => {
                 <SwiperSlide>
                     <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] slider'>
                         <Image src={image1} sizes="(max-width: 768px) 80vw, 100vw"
-                        
+                            fill
                             alt='janitorial-leads-generation' priority className='object-cover w-full h-full' />
                         <HeroBannerContent
 
@@ -98,7 +98,7 @@ const Banner = () => {
                     <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] lcp'>
                         <Image src={image2} sizes="(max-width: 768px) 80vw, 100vw"
                             height={890} width={1920}
-                        
+                            fill
                             alt='Telemarketing agent doing a call' priority={false} loading='lazy' className='object-cover w-full h-full' />
                         <HeroBannerContent
 
@@ -113,7 +113,7 @@ const Banner = () => {
                     <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] lcp'>
                         <Image src={image3} sizes="(max-width: 768px) 80vw, 100vw"
                             height={890} width={1920}
-                        
+                            fill
                             priority={false} loading='lazy' alt='Commercial cleaning lead pricing' className='object-cover w-full h-full' />
                         <HeroBannerContent
                             heading={<>Convert Leads With <br /> Integrated Call Center</>}
