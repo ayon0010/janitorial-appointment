@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
 import Image from 'next/image';
 import image1 from '@/../public/assets/slide01.jpg';
 import image2 from '@/../public/assets/slide02.jpg';
@@ -76,7 +77,7 @@ const Banner = () => {
                 fadeEffect={{ crossFade: true }}// Enable fade effect
                 slidesPerView={1}
                 modules={[Navigation, Autoplay, Pagination, EffectFade]}
-                className="mySwiper pointer-events-none swiper-fade"
+                className="mySwiper pointer-events-none"
 
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             >
@@ -97,7 +98,6 @@ const Banner = () => {
                 <SwiperSlide>
                     <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] lcp'>
                         <Image src={image2} sizes="(max-width: 768px) 80vw, 100vw"
-                            height={890} width={1920}
                             fill
                             alt='Telemarketing agent doing a call' priority={false} loading='lazy' className='object-cover w-full h-full' />
                         <HeroBannerContent
@@ -112,7 +112,6 @@ const Banner = () => {
                 <SwiperSlide>
                     <div className='w-full 2xl:h-[890px] xl:h-[890px] h-[480px] lcp'>
                         <Image src={image3} sizes="(max-width: 768px) 80vw, 100vw"
-                            height={890} width={1920}
                             fill
                             priority={false} loading='lazy' alt='Commercial cleaning lead pricing' className='object-cover w-full h-full' />
                         <HeroBannerContent
