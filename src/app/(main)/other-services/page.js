@@ -21,11 +21,7 @@ import desing4 from '@/../public/assets/927cc8b897e6124b1c31ff8bc507f55a_result_
 import Link from 'next/link';
 
 import { PageSection } from '../about/page';
-import DownAnimation from '@/Animations/DownAnimation';
-import Title from '@/Shared/Titles/Title';
 import Team from '@/ui/Home/Team';
-import ParticlesComponent from '@/Animations/Particles';
-import ReviewSwiper from '@/ui/Home/ReviewSwiper';
 import UserReview from '@/ui/Home/ReviewSwiper';
 
 
@@ -467,16 +463,7 @@ const page = () => {
                     </div>
                 </div>
                 <div className="text-center my-24 max-w-[1150px] mx-auto">
-                    <DownAnimation>
-                        <Title
-                            head={<>Our team</>}
-                            details={<>Our Best Specialists <br />
-                                Work For You</>}
-                        />
-                    </DownAnimation>
-                    <DownAnimation delay={0.6}>
-                        <Team />
-                    </DownAnimation>
+                    <Team />
                 </div>
             </div >
             <div className='mt-16 mb-0'>
