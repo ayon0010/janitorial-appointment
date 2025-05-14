@@ -1,12 +1,6 @@
-import { Inter, Nunito,  } from 'next/font/google'
 import '../globals.css'
 import AuthProvider from '@/Providers/AuthProvider'
 
-
-export const inter = Inter({
-    subsets: ['latin'],
-    variable: '--font-inter'
-})
 
 export const metadata = {
     title: 'Buy Janitorial Appointments & Leads | Grow Your Cleaning Business',
@@ -32,14 +26,6 @@ export const metadata = {
         image: '../../../public/assets/Vector.png',
     },
 };
-
-
-
-export const nunito = Nunito({
-    subsets: ['latin'],
-    weight: ['400', '500', '600', '900'],
-    variable: '--font-nunito',
-})
 
 
 

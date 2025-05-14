@@ -1,7 +1,0 @@
-import { Nunito } from "next/font/google";
-
-export const nunito = Nunito({
-    subsets: ['latin'],
-    weight: ['400', '500', '600', '900'],
-    variable: '--font-nunito',
-})

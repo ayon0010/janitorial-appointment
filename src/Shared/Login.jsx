@@ -83,10 +83,10 @@ const LoginPage = () => {
                     <div className='w-3/4'>
                         <Logo />
                     </div>
-                    <h2 className='text-base font-normal nunito'>Welcome back. Please enter your details</h2>
+                    <h2 className='text-base font-normal'>Welcome back. Please enter your details</h2>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text text-[#5C6272] font-normal text-base nunito">Email/User name</span>
+                            <span className="label-text text-[#5C6272] font-normal text-base">Email/User name</span>
                         </label>
                         <input
                             type="email"
@@ -98,7 +98,7 @@ const LoginPage = () => {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text text-[#5C6272] font-normal text-base nunito">Password</span>
+                            <span className="label-text text-[#5C6272] font-normal text-base">Password</span>
                         </label>
                         <div className='relative'>
                             <input
@@ -132,7 +132,7 @@ const LoginPage = () => {
                     <div className="form-control w-full mx-auto">
                         <button type="submit" className="btn rounded-[10px] btn-primary bg-primary text-white">Login</button>
                         <label className="label mt-2">
-                            <span className='text-[#AEAEAE] text-base nunito font-normal'>
+                            <span className='text-[#AEAEAE] text-base font-normal'>
                                 Don’t have an account?
                                 <Link href="/register" className="label-text-alt link link-hover underline text-base"> SignUp</Link>
                             </span>

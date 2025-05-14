@@ -1,7 +1,7 @@
 import getLeads from "@/lib/getLeadById";
 import LeadsByCity from "@/ui/LeadsByCity";
 import { AppointmentButton } from "./Lead";
-import { gilroy } from "@/app/(main)/layout";
+import { gilroy } from '@/Shared/gilroy';
 import image from '../../public/assets/exclusive-commercial-cleaning-leads-1.webp'
 import SectionTitles from "@/Shared/SectionTitles";
 import ContactInfo from "./ContactInfo";

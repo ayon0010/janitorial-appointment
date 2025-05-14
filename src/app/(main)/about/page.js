@@ -8,15 +8,12 @@ import FaWeb from "@/icons/FaWeb";
 import FaCircleCheck from "@/icons/FaCheck";
 import SectionTitles from "@/Shared/SectionTitles";
 import YoutubeEmbed from '@/ui/Youtube'
-import { gilroy } from "../layout";
-import ParticlesComponent from "@/Animations/Particles";
-import ReviewSwiper from "@/ui/Home/ReviewSwiper";
-import DownAnimation from "@/Animations/DownAnimation";
 import Title from "@/Shared/Titles/Title";
 import Team from "@/ui/Home/Team";
 import ContactInfo from "@/ui/ContactInfo";
 import Stepper from "@/ui/Home/Stepper";
 import UserReview from "@/ui/Home/ReviewSwiper";
+import { gilroy } from "@/Shared/gilroy";
 
 
 export const metadata = {

@@ -3,10 +3,10 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
-import { nunito } from '@/Shared/nunito';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import appointment from '@/../public/assets/appointment-bg-1-1_result_result.webp'
+import { gilroy } from '@/Shared/gilroy';
 
 const Appointment = () => {
     const {
@@ -56,12 +56,12 @@ const Appointment = () => {
             <Image src={appointment} width={1150} height={350} sizes="(max-width: 768px) 60vw, 100vw" priority alt='book-an-appointment' className='absolute h-full w-full right-0 left-0 inset-0 z-20' />
             <div className="relative z-30 p-10">
                 <h1
-                    className={`${nunito.className} text-white font-semibold 2xl:text-4xl xl:text-4xl text-2xl`}
+                    className={`${gilroy.className} text-white font-semibold 2xl:text-4xl xl:text-4xl text-2xl`}
                 >
                     Book Appointment
                 </h1>
                 <p
-                    className={`${nunito.className} text-white font-normal 2xl:text-lg xl:text-lg text-base mt-1 text-opacity-70`}
+                    className={`${gilroy.className} text-white font-normal 2xl:text-lg xl:text-lg text-base mt-1 text-opacity-70`}
                 >
                     Set an appointment with us
                 </p>
@@ -125,7 +125,7 @@ const Appointment = () => {
                     {/* Submit Button */}
                     <div className="flex 2xl:items-center xl:items-center items-start 2xl:flex-row xl:flex-row flex-col 2xl:justify-between xl:justify-between justify-start gap-4">
                         <p
-                            className={`${nunito.className} text-white font-normal 2xl:text-lg xl:text-lg text-base mt-1 text-opacity-70`}
+                            className={`${gilroy.className} text-white font-normal 2xl:text-lg xl:text-lg text-base mt-1 text-opacity-70`}
                         >
                             Our team will reach you at your desired time
                         </p>

@@ -1,24 +1,11 @@
-import { Nunito, Poppins } from 'next/font/google'
-import localFont from 'next/font/local'
 import '../globals.css'
 import AuthProvider from '@/Providers/AuthProvider'
 import QueryProvider from '@/Providers/QueryProvider'
-import ChatProvider from '@/Providers/ChatProvider'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import Navbar from '@/Shared/Navbar/Navbar'
 import Footer from '@/Shared/Footer/Footer'
-
-export const gilroy = localFont({
-  src: [
-    {
-      path: '../../../public/font/gilroy-regular.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-  ],
-  display: 'swap',
-})
+import { gilroy } from '@/Shared/gilroy'
 
 export const metadata = {
   title: "Janitorial Appointments - Commercial Cleaning Leads",

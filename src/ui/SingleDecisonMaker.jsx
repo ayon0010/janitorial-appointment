@@ -99,7 +99,7 @@ const SingleDecisionMaker = () => {
                         height={276}
                         className='mx-auto'
                     />
-                    <p className='text-center nunito font-semibold text-4xl mt-6'>Compare Confidently</p>
+                    <p className='text-center font-semibold text-4xl mt-6'>Compare Confidently</p>
                 </div>
             </div>
         </div>

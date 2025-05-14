@@ -20,7 +20,7 @@ const LeadList = ({ leadList }) => {
         <>
             <div>
                 <h2 className="text-5xl inter font-bold">Hi! {user?.displayName}</h2>
-                <p className="text-secondary text-base mt-6 nunito">A lead list helps you keep track of all the potential clients you want to connect with.</p>
+                <p className="text-secondary text-base mt-6">A lead list helps you keep track of all the potential clients you want to connect with.</p>
             </div>
             <div className="overflow-x-auto mt-6">
                 <table className="table">

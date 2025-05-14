@@ -5,7 +5,7 @@ import image from '@/../public/assets/exclusive-commercial-cleaning-leads.webp'
 import { capitalizeFirstLetter } from "@/app/(main)/search/[...leads]/page";
 import LeadAppointment from "@/Shared/LeadAppointment";
 import SectionTitles from "@/Shared/SectionTitles";
-import { gilroy } from "@/app/(main)/layout";
+import { gilroy } from '@/Shared/gilroy';
 import ContactInfo from "./ContactInfo";
 import singleContent from "@/lib/singleContent";
 import { PortableText } from "next-sanity";

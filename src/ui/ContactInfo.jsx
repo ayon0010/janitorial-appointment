@@ -6,8 +6,9 @@ import image from '../../public/assets/contact-us-janitorial-appointments.jpg';
 import fb from '@/../public/assets/Frame (8).svg';
 import linked from '@/../public/assets/Frame (11).svg';
 import twitt from '@/../public/assets/Frame (12).svg';
-import { gilroy } from '@/app/(main)/layout';
+
 import FaEmail from '@/icons/FaEmail';
+import { gilroy } from '@/Shared/gilroy';
 
 const ContactInfo = () => {
     const message = encodeURIComponent('Hello! I would like to inquire about your commercial cleaning leads.');

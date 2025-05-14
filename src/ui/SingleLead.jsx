@@ -4,7 +4,7 @@ import Bookmarks from "@/ui/Bookmarks";
 import getLeads from "@/lib/getLeadById";
 import DotClient from "./DotClient";
 import FireClient from "./FireClient";
-import { gilroy } from "@/app/(main)/layout";
+import { gilroy } from '@/Shared/gilroy';
 import Stripe from "./Stripe";
 import { PageSection } from "@/app/(main)/about/page";
 import image from '@/../public/assets/exclusive-commercial-cleaning-leads-1.webp'

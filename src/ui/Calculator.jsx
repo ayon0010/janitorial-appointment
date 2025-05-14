@@ -100,7 +100,7 @@ const Calculator = () => {
 
                 <div className="2xl:w-1/2 xl:w-1/2 w-full">
                     <Image src={image} alt="Pay Rate Checker Illustration" width={276} height={276} className="mx-auto" />
-                    <p className='text-center nunito font-semibold text-4xl mt-6'>Compare Confidently</p>
+                    <p className='text-center font-semibold text-4xl mt-6'>Compare Confidently</p>
                 </div>
             </div>
             <dialog id="my_modal_1" className="modal">
