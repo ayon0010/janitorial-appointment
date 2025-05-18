@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from "motion/react";
 
 const UpAnimation = ({ animationKey, children, delay = 0 }) => {
     return (
