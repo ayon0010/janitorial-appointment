@@ -28,7 +28,7 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
         return (
             <Link href={'/'} className='bg-transparent 2xl:w-[140px] xl:w-[140px] md:w-[140px] w-[100px] flex items-center'>
                 <Image src={logo} className='w-[50px]' alt='janitorial-appointment-logo' />
-                <p className={`${poppins.className} font-light text-lg text-white`}>Janitorial <br /> Appointments</p>
+                <p className={`${poppins.className} font-light text-lg text-black`}>Janitorial <br /> Appointments</p>
             </Link>
         )
     }
@@ -61,7 +61,7 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
                         </svg>
                     </div>
                     <div
-                        className={`h-screen w-full bg-white overflow-y-auto overflow-x-hidden z-[1000] transition-all duration-1000 ease-in-out fixed top-0 right-0 ${nav ? 'translate-x-0' : '-translate-x-[1000px]'
+                        className={`h-screen w-full bg-white overflow-y-auto overflow-x-hidden z-[1000] transition-all duration-500 ease-in-out fixed top-0 right-0 ${nav ? 'translate-x-0' : '-translate-x-[1000px]'
                             }`}
                     >
                         <span
@@ -135,16 +135,16 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
                                     <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange py-3 border-b-[0.60px] border-b-black border-opacity-20 transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`} onClick={() => setNav(false)}>
                                         <Link href="/blogs">Blogs</Link>
                                     </li>
-                                    <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100`}>
+                                    <li onClick={() => {
+                                        setClicked1(!clicked1)
+                                        setClicked2(false)
+                                        setClicked(false)
+                                    }} className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100`}>
                                         <div className='flex items-center justify-between border-b-[0.60px] border-b-black border-opacity-20 py-3'>
                                             <div>
                                                 Services
                                             </div>
-                                            <div className='bg-slate-300 p-1 rounded bg-opacity-45' onClick={() => {
-                                                setClicked1(!clicked1)
-                                                setClicked2(false)
-                                                setClicked(false)
-                                            }}>
+                                            <div className='bg-slate-300 p-1 rounded bg-opacity-45'>
                                                 <div
                                                     className={`h-fit transition-transform duration-300 ease-in-out ${clicked1 ? 'rotate-180' : 'rotate-0'
                                                         }`}
@@ -172,16 +172,16 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
 
                                         </>
                                     </li>
-                                    <li className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100`}>
+                                    <li onClick={() => {
+                                        setClicked2(!clicked2)
+                                        setClicked1(false)
+                                        setClicked(false)
+                                    }} className={`2xl:text-base xl:text-sm text-sm font-semibold hover:text-orange transition-all duration-100`}>
                                         <div className='flex items-center justify-between border-b-[0.60px] border-b-black border-opacity-20 py-3'>
                                             <div>
                                                 Leads
                                             </div>
-                                            <div className='bg-slate-300 p-1 rounded bg-opacity-45' onClick={() => {
-                                                setClicked2(!clicked2)
-                                                setClicked1(false)
-                                                setClicked(false)
-                                            }}>
+                                            <div className='bg-slate-300 p-1 rounded bg-opacity-45'>
                                                 <div
                                                     className={`h-fit transition-transform duration-300 ease-in-out ${clicked2 ? 'rotate-180' : 'rotate-0'
                                                         }`}
