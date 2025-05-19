@@ -7,7 +7,7 @@ html {
 }
 
 .pageImage {
-  @apply relative z-20;
+  @apply relative z-20 aspect-[1233/240] w-full;
 }
 
 .pageImage::before {

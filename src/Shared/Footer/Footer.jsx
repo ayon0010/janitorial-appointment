@@ -29,7 +29,7 @@ const Footer = () => {
                             <h2 className={`${poppins.className} text-base font-light text-[#777] hover:text-red-500 transition-all duration-100 ease-linear`}>Appointment</h2>
                         </Link>
                         <div className='my-2'>
-                            <Link href={'/exclusive-leads'}>
+                            <Link href={'search/exclusive-leads'}>
                                 <h2 className={`${poppins.className} text-base font-light text-[#777] hover:text-red-500 transition-all duration-100 ease-linear`}>Leads</h2>
                             </Link>
                         </div>

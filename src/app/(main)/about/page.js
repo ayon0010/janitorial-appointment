@@ -51,8 +51,7 @@ export const PageSection = ({ image, text, title }) => {
                 src={image}
                 alt="About us - Learn more about our cleaning services and expertise"
                 priority
-                width={1233}
-                height={240}
+                fill
                 sizes="(max-width: 768px) 100vw, 100vw"
             />
             <div className="absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-40">
