@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import image from '../../../../public/assets/romain-dancre-doplSDELX7E-unsplash_result.webp'
+import image from '@/../public/assets/romain-dancre-doplSDELX7E-unsplash_result.webp'
+import PageSection from '@/Shared/PageClient';
 
 
 export const metadata = {
@@ -11,14 +11,9 @@ export const metadata = {
 export default async function TermsAndConditions() {
     return (
         <div>
-            <div className='relative h-[400px] flex flex-col '>
-                <Image src={image} alt='Terms and Conditions for janitorial services and commercial cleaning leads' className='object-cover absolute inset-0 z-40 h-full' width={1920} height={600} />
-                <div className='my-auto 2xl:pl-40 xl:pl-40 2xl:w-1/2 xl:w-1/2 w-full pl-10 2xl:pr-0 xl:pr-0 pr-10 z-40'>
-                    <h2 className='2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:banner-text xl:banner-text text-white'>
-                       Follow our <span className='text-green-600'>Terms & Conditions</span>
-                    </h2>
-                </div>
-            </div>
+            <PageSection image={image} title={<h2 className='2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:banner-text xl:banner-text text-white'>
+                Follow our <br /><span className='text-green-600'>Terms & Conditions</span>
+            </h2>} />
             <section className="bg-white rounded-lg shadow-lg py-8 px-16">
                 <h1 className="text-4xl font-bold text-green-700 mb-6">
                     Terms & Conditions
@@ -102,7 +97,7 @@ export default async function TermsAndConditions() {
                 </p>
                 <address className="not-italic mb-4">
                     <p className="text-gray-600">Email: contact@janitorialappointment.com</p>
-                    <p className="text-gray-600">Phone: +8801726108060</p>
+                    <p className="text-gray-600">Phone: +8801568868704</p>
                 </address>
                 <p className="text-sm text-gray-500">
                     Last updated on 09/02/2025.

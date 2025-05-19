@@ -202,7 +202,7 @@ const page = () => {
                         <Link href="https://x.com/cleaningleads12" aria-label="Follow us on Twitter" target="_blank">
                             <Image className='cursor-pointer' src={twitt} alt="Twitter" />
                         </Link>
-                        <Link href={`https://wa.me/${+8801726108060}?text=${message}`}
+                        <Link href={`https://wa.me/${+8801568868704}?text=${message}`}
                             target="_blank"
                             rel="noopener noreferrer" className='border w-full border-[#DDDDDD] rounded-md flex flex-col' aria-label="Chat with us on WhatsApp" target="_blank">
                             <FaWhatsapp size={'4rem'} color='#006600' className='w-fit m-auto' />
@@ -235,7 +235,7 @@ const page = () => {
                                 <div>
                                     <a href="tel:+180052554589">
                                         <button className='btn bg-primary text-white rounded-lg'>
-                                            +8801726108060
+                                            +8801568868704
                                         </button>
                                     </a>
                                 </div>

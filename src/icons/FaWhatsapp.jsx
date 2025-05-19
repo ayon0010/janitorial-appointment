@@ -4,7 +4,7 @@ import React from 'react';
 const FaWhatsapp = () => {
     const message = encodeURIComponent('Hello! I would like to inquire about your commercial cleaning leads.');
     return (
-        <Link href={`https://wa.me/${+8801726108060}?text=${message}`}
+        <Link href={`https://wa.me/${+8801568868704}?text=${message}`}
             target="_blank"
             rel="noopener noreferrer" aria-label="Message in Whatsapp">
             <div className='p-2 rounded-full w-fit transition-colors duration-300 icon cursor-pointer'>

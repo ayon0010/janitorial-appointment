@@ -27,8 +27,8 @@ const NavComponent = () => {
                 {/* <div className='bg-deep-blue flex items-center gap-1 px-12 py-[18px]'>
                     <FaPhone />
                     <div className="phone-number">
-                        <a href="tel:+8801726108060">
-                            <span className="letter text-base font-semibold text-white animate__backOutDown">+8801726108060</span>
+                        <a href="tel:+8801568868704">
+                            <span className="letter text-base font-semibold text-white animate__backOutDown">+8801568868704</span>
                         </a>
                     </div>
                 </div> */}

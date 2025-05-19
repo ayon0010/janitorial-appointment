@@ -50,7 +50,7 @@ const Footer = () => {
                     <nav>
                         <div>
                             <h2 className={`text-white ${poppins.className} text-base font-medium`}>Give Us a Call</h2>
-                            <p className={`${poppins.className} text-base font-light text-[#777] hover:text-red-500 transition-all duration-100 ease-linear mt-3`}>880-1726-108060</p>
+                            <p className={`${poppins.className} text-base font-light text-[#777] hover:text-red-500 transition-all duration-100 ease-linear mt-3`}>880-15688-68704</p>
                         </div>
                         <div className='mt-3'>
                             <h2 className={`text-white ${poppins.className} text-base font-medium`}>Email Us</h2>
@@ -65,7 +65,7 @@ const Footer = () => {
                             <Link className="hover:text-red-500" href={'https://www.facebook.com/commercialcleaningleads/'} aria-label="Visit our Facebook page" target='_blank'>
                                 <FaFacebook color="#777" size={'1.5rem'} />
                             </Link>
-                            <Link href={`https://wa.me/${+8801726108060}?text=${message}`}
+                            <Link href={`https://wa.me/${+8801568868704}?text=${message}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Chat with us on WhatsApp"

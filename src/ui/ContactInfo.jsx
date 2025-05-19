@@ -59,7 +59,7 @@ const ContactInfo = () => {
                         </div>
                         <div className='h-full'>
                             <Link
-                                href={`https://wa.me/${+8801726108060}?text=${message}`}
+                                href={`https://wa.me/${+8801568868704}?text=${message}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Chat with us on WhatsApp"
