@@ -1,7 +1,7 @@
 import axios from "axios";
 const useAxiosPublic = () => {
     const instance = axios.create({
-        baseURL: 'https://backend.janitorialappointment.com/',
+        baseURL: 'http://localhost:5000/',
     });
     return instance;
 };

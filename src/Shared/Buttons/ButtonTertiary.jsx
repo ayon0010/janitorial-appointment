@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { FaArrowRight } from "@react-icons/all-files/fa/FaArrowRight";
 import { poppins } from '@/fonts/Poppins';
 
