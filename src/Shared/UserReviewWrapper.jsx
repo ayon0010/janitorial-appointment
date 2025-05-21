@@ -1,46 +1,58 @@
-'use client'
-import { useEffect } from 'react';
+'use client';
+import { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 
-// Dynamically import the UserReview component with a loading state
 const UserReview = dynamic(() => import('@/ui/Home/ReviewSwiper'), {
-    loading: () => <p>Loading reviews...</p>, // Display loading text while the component is being loaded
-    ssr: false, // Disable server-side rendering for this component
+    loading: () => <p>Loading reviews...</p>,
+    ssr: false,
 });
 
 const UserReviewWrapper = () => {
-    // Function to initialize particles during idle time
-    const initializeParticles = () => {
-        if (window.requestIdleCallback) {
-            // If the browser supports requestIdleCallback, use it to initialize particles during idle time
-            requestIdleCallback(() => {
-                // Initialize the `tsParticles` or any particle-related logic here
-                console.log("Particles initialized during idle time");
+    const [isVisible, setIsVisible] = useState(false);
+    const containerRef = useRef(null);
 
-                // Example particle logic (replace this with your actual tsParticles initialization)
-                // particlesJS('particles-js', { ... }); 
-            });
-        } else {
-            // Fallback for browsers that don't support requestIdleCallback
-            setTimeout(() => {
-                // Initialize particles after a short delay if requestIdleCallback is not available
-                console.log("Fallback: Particles initialized");
-
-                // Example particle logic (replace this with your actual tsParticles initialization)
-                // particlesJS('particles-js', { ... });
-            }, 1000); // Delay initialization by 1 second
-        }
-    };
-
-    // Run the initializeParticles function when the component is mounted
     useEffect(() => {
-        initializeParticles();
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect(); // Stop observing once it's visible
+                }
+            },
+            {
+                root: null, // Use viewport
+                rootMargin: '0px',
+                threshold: 0.1, // Adjust as needed
+            }
+        );
+
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
+        }
+
+        return () => observer.disconnect();
     }, []);
 
+    // Initialize particles once the section is visible
+    useEffect(() => {
+        if (!isVisible) return;
+
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => {
+                console.log('Particles initialized during idle time');
+                // particlesJS('particles-js', { ... });
+            });
+        } else {
+            setTimeout(() => {
+                console.log('Fallback: Particles initialized');
+                // particlesJS('particles-js', { ... });
+            }, 1000);
+        }
+    }, [isVisible]);
+
     return (
-        <div>
-            {/* Display the UserReview component */}
-            <UserReview />
+        <div ref={containerRef}>
+            {isVisible && <UserReview />}
         </div>
     );
 };
