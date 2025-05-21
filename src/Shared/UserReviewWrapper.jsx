@@ -51,7 +51,7 @@ const UserReviewWrapper = () => {
     }, [isVisible]);
 
     return (
-        <div ref={containerRef}>
+        <div ref={containerRef} className='h-[932px]'>
             {isVisible && <UserReview />}
         </div>
     );
