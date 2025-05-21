@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/effect-fade';
+// import 'swiper/css/effect-fade';
 import Image from 'next/image';
 import image1 from '@/../public/assets/slide01.jpg';
 import image2 from '@/../public/assets/slide02.jpg';
@@ -77,7 +77,7 @@ const Banner = () => {
                 fadeEffect={{ crossFade: true }}// Enable fade effect
                 slidesPerView={1}
                 modules={[Navigation, Autoplay, Pagination, EffectFade]}
-                className="mySwiper pointer-events-none"
+                className="mySwiper pointer-events-none swiper-fade"
 
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             >
