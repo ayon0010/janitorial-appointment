@@ -15,7 +15,7 @@ const page = async ({ params }) => {
     const token = userTokenObj?.value;
 
     const id = params?.lead;
-    const res = await fetch(`http://localhost:5000/allLeads/${id}`, {
+    const res = await fetch(`https://backend.janitorialappointment.com/allLeads/${id}`, {
         cache: 'no-cache',
         headers: {
             authorization: `Bearer ${token}`,
