@@ -12,12 +12,9 @@ export default async function PrivacyPolicy() {
     <div>
       <PageSection
         image={image}
-        text={<>Coming Soon</>}
-        title={
+        text={
           <>
-            <h2 className="2xl:text-6xl xl:text-5xl text-3xl font-semibold 2xl:banner-text xl:banner-text text-white">
-              Read Our <span className="text-green-600">Privacy Policy</span>
-            </h2>
+            Read Our <span className="text-green-600">Privacy Policy</span>
           </>
         }
       />
