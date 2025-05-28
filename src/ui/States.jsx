@@ -60,7 +60,7 @@ const States = async ({ States }) => {
                     </p>
                 </div>
                 <LeadsByCity data={data} states={states} />
-                <div className="mt-20 mx-auto prose prose-2xl font-normal my-10">
+                <div className="mt-20 mx-auto prose prose-2xl font-normal my-10 text-black">
                     <PortableText value={stateContent?.content} components={{
                         types: {
                             imageGroup: ({ value }) => {

@@ -88,7 +88,7 @@ const page = async ({ params }) => {
                         <Image src={urlFor(data?.authorImage).url()} width={50} height={50} className='w-[50px] h-[50px] rounded-full' alt='' />
                         <p className=" text-xl font-semibold">By {data?.authorName}</p>
                     </div>
-                    <div className="prose 2xl:prose-xl xl:prose-xl prose-indigo">
+                    <div className="prose 2xl:prose-xl xl:prose-xl prose-indigo text-black">
                         <PortableText
                             value={data?.content}
                             components={{
