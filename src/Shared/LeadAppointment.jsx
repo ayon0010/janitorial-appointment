@@ -57,7 +57,7 @@ const LeadAppointment = () => {
                         type="text"
                         placeholder="Your Name"
                         {...register('name', { required: 'Name is required' })}
-                        className="input rounded-tl-lg rounded-bl-lg rounded-none focus:outline-none focus:ring-0 border-none text-2xl w-full bg-white text-black h-[100px]"
+                        className="input rounded-tl-lg rounded-bl-lg rounded-none focus:outline-none focus:ring-0 border-none bg-white text-2xl w-full bg-white text-black h-[100px]"
                     />
                     {errors.name && (
                         <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -77,7 +77,7 @@ const LeadAppointment = () => {
                                 message: 'Enter a valid email address',
                             },
                         })}
-                        className="input rounded-none focus:outline-none focus:ring-0 text-2xl w-full text-black h-[100px]"
+                        className="input rounded-none bg-white focus:outline-none focus:ring-0 text-2xl w-full text-black h-[100px]"
                     />
                     {errors.email && (
                         <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
@@ -90,7 +90,7 @@ const LeadAppointment = () => {
                     <select
                         aria-label="Choose a Service"
                         {...register('service', { required: 'Please select a service' })}
-                        className={`select rounded-tr-lg rounded-br-lg rounded-tl-none rounded-bl-none lead text-2xl focus:outline-none focus:ring-0 border-none w-full py-3 text-black h-[100px] ${gilroy.className}`}
+                        className={`select rounded-tr-lg rounded-br-lg bg-white rounded-tl-none rounded-bl-none lead text-2xl focus:outline-none focus:ring-0 border-none w-full py-3 text-black h-[100px] ${gilroy.className}`}
                     >
                         <option value="" disabled defaultValue={'Choose Type'} selected>
                             Choose Type
