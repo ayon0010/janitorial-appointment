@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from "motion/react"
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 
 const DownAnimation = ({ animationKey, children, delay = 0 }) => {
     const pathName = usePathname();
