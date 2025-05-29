@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { usePathname } from "next/navigation";
 
 const FadeIn = ({ children }) => {
+  const pathname = usePathname();
   return (
     <AnimatePresence mode="wait" initial={false}>
       <motion.div
