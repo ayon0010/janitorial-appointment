@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 
 const FadeIn = ({ children }) => {
   return (
