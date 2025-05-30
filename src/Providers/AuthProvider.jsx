@@ -92,12 +92,10 @@ const AuthProvider = ({ children }) => {
                         setError(`Error fetching user data: ${error.message}`);
                     }
                     setLoader(false);
-                    localStorage.setItem('uid',currentUser.uid)
                 } else {
                     setUser(null);
                     setLoader(false);
                     Cookies.remove('userToken');
-                    localStorage.removeItem(uid)
                 }
             });
         };
