@@ -22,7 +22,7 @@ const Page = () => {
     // user id
     const uid = user?.uid;
     setUid(uid)
-  }, [])
+  }, [user])
 
   if (!uid) return <Loading />
 
