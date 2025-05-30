@@ -3,25 +3,26 @@ import { poppins } from "@/fonts/Poppins";
 const steps = [
     {
         number: '01',
-        title: <>Setup Your <br /> Campaign</>,
-        description: <>Name your Campaign and <br /> choose your country</>,
+        title: <>Choose How You <br /> Want Leads</>,
+        description: <>Pick from Dedicated Team, <br /> Cold Calling Agent, or Direct Leads</>,
     },
     {
         number: '02',
-        title: <>Get a Tracking <br /> Number</>,
-        description: <>Get a unique Tracking Number <br /> where you can send calls</>,
+        title: <>Set Your <br /> Preferences</>,
+        description: <>Tell us your target industry, <br /> service areas, and lead goals</>,
     },
     {
         number: '03',
-        title: <>Add a Target <br /> Line</>,
-        description: <>Forward your calls to buyers or <br /> anywhere you’d like them to go</>,
+        title: <>We Generate & <br /> Qualify Leads</>,
+        description: <>Our team handles research, <br /> calls, and appointment setting</>,
     },
     {
         number: '04',
-        title: <>Launch Your <br /> Campaign</>,
-        description: <>Name your Campaign and <br /> choose your country</>,
+        title: <>Receive Leads or <br /> Booked Appointments</>,
+        description: <>Get leads sent to you directly <br /> or receive live booked calls</>,
     },
 ];
+
 
 export default function Stepper() {
     return (
