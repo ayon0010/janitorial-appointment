@@ -92,22 +92,11 @@ const AuthProvider = ({ children }) => {
                         setError(`Error fetching user data: ${error.message}`);
                     }
                     setLoader(false);
-<<<<<<< HEAD
-=======
-                    if (typeof window !== 'undefined') {
-                            localStorage.setItem('uid', currentUser.uid);
-                        }
->>>>>>> cbeccc69d9dc07b8aa3d7e8cc9bbd24d62898b9c
+
                 } else {
                     setUser(null);
                     setLoader(false);
                     Cookies.remove('userToken');
-<<<<<<< HEAD
-=======
-                     if (typeof window !== 'undefined') {
-                    localStorage.removeItem('uid');
-                }
->>>>>>> cbeccc69d9dc07b8aa3d7e8cc9bbd24d62898b9c
                 }
             });
         };
