@@ -16,15 +16,9 @@ import PageSection from "@/Shared/PageClient";
 const Page = () => {
   // User
   const { user } = useAuth();
-  const [uid, setUid] = useState(null)
+  const uid = user?.uid;
 
-  useEffect(() => {
-    // user id
-    const uid = user?.uid;
-    setUid(uid)
-  }, [user])
-
-  if (!uid) return <Loading />
+  if (!uid) return <Loading/>
 
   const {
     data: savedLeads = [],
