@@ -18,7 +18,7 @@ const Page = () => {
   const { user } = useAuth();
   const uid = user?.uid;
 
-  if (!uid) return <Loading/>
+  if (!uid) return <Loading />
 
   const {
     data: savedLeads = [],

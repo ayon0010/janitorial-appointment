@@ -43,9 +43,7 @@ const ChatProvider = ({ children }) => {
     }, []);
 
     return <>
-        <FadeIn key={pathName}>
-            {children}
-        </FadeIn>
+       {children}
     </>;
 };
 
