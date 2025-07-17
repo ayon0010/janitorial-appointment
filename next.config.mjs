@@ -3,8 +3,9 @@ import withBundleAnalyzer from '@next/bundle-analyzer';
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ['cdn.sanity.io', 'i.ibb.co.com', 'i.ibb.co', 'img.youtube.com',],
+    domains: ['cdn.sanity.io', 'i.ibb.co.com', 'i.ibb.co', 'img.youtube.com'],
     formats: ['image/avif', 'image/webp'], // Allow images from Sanity's CDN
+    minimumCacheTTL: 60 * 60 * 24 * 30,
   },
   // images: {
   //   deviceSizes: [320, 640, 768, 1024, 1280, 1600, 1920],
@@ -12,6 +13,10 @@ const nextConfig = {
   //   // // ← Add external image domains here if needed
   // },
   trailingSlash: true,
+  compress: true,
+  experimental: {
+    optimizeCss: true,
+  },
 };
 export default withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
