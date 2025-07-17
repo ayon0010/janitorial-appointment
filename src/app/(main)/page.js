@@ -15,62 +15,17 @@ import TeamWrapper from "@/ui/TeamWrapper";
 import { poppins } from "@/fonts/Poppins";
 
 
-
-
-export const metadata = {
-    title: "Janitorial Appointments - Commercial Cleaning Leads",
-    description: "We provide high-quality commercial cleaning leads, including office cleaning leads, janitorial appointments, and more, for cleaning businesses looking to grow.",
-    keywords: "janitorial appointments, janitorial leads, commercial cleaning leads, office cleaning leads, cleaning business leads, commercial cleaning services, office cleaning services, janitorial services, professional cleaning leads, cleaning appointments, cleaning contractor leads, commercial cleaning business, business cleaning leads",
-    other: {
-        "application/ld+json": JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Commercial Cleaning Leads",
-            "description": "We provide high-quality commercial cleaning leads, including office cleaning leads, janitorial appointments, and more, for cleaning businesses looking to grow.",
-            "keywords": "janitorial appointments, janitorial leads, commercial cleaning leads, office cleaning leads, cleaning business leads, commercial cleaning services, office cleaning services, janitorial services, professional cleaning leads, cleaning appointments, cleaning contractor leads, commercial cleaning business, business cleaning leads",
-            "provider": {
-                "@type": "Organization",
-                "name": "Janitorial Appointments",
-                "url": "https://www.janitorialappointment.com/"
-            },
-            "serviceType": "Cleaning Leads",
-            "areaServed": {
-                "@type": "Place",
-                "name": "United States"
-            },
-            "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Cleaning Leads Services",
-                "itemListElement": [
-                    {
-                        "@type": "Offer",
-                        "itemOffered": {
-                            "@type": "Service",
-                            "name": "Commercial Cleaning Leads"
-                        }
-                    },
-                    {
-                        "@type": "Offer",
-                        "itemOffered": {
-                            "@type": "Service",
-                            "name": "Office Cleaning Leads"
-                        }
-                    },
-                    {
-                        "@type": "Offer",
-                        "itemOffered": {
-                            "@type": "Service",
-                            "name": "Janitorial Appointment Booking"
-                        }
-                    }
-                ]
-            }
-        }),
-    },
-};
-
-
-
+export const metadata: Metadata = {
+  title: 'Janitorial Appointments & Commercial Cleaning Leads | Get Qualified Clients',
+  description: 'Get high-quality janitorial appointments and commercial cleaning leads. We generate qualified prospects and book appointments for cleaning businesses nationwide. Start free today!',
+  keywords: ['janitorial appointments', 'commercial cleaning leads', 'janitorial leads', 'cleaning leads', 'appointment booking'],
+  openGraph: {
+    title: 'Janitorial Appointments & Commercial Cleaning Leads',
+    description: 'Get qualified janitorial appointments and commercial cleaning leads.',
+    url: 'https://www.janitorialappointment.com',
+    type: 'website',
+  },
+}
 
 
 export default async function Home() {
