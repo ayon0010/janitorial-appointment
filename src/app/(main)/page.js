@@ -15,16 +15,16 @@ import TeamWrapper from "@/ui/TeamWrapper";
 import { poppins } from "@/fonts/Poppins";
 
 
-export const metadata: Metadata = {
-  title: 'Janitorial Appointments & Commercial Cleaning Leads | Get Qualified Clients',
-  description: 'Get high-quality janitorial appointments and commercial cleaning leads. We generate qualified prospects and book appointments for cleaning businesses nationwide. Start free today!',
-  keywords: ['janitorial appointments', 'commercial cleaning leads', 'janitorial leads', 'cleaning leads', 'appointment booking'],
-  openGraph: {
-    title: 'Janitorial Appointments & Commercial Cleaning Leads',
-    description: 'Get qualified janitorial appointments and commercial cleaning leads.',
-    url: 'https://www.janitorialappointment.com',
-    type: 'website',
-  },
+export const metadata = {
+    title: 'Janitorial Appointments & Commercial Cleaning Leads | Get Qualified Clients',
+    description: 'Get high-quality janitorial appointments and commercial cleaning leads. We generate qualified prospects and book appointments for cleaning businesses nationwide. Start free today!',
+    keywords: ['janitorial appointments', 'commercial cleaning leads', 'janitorial leads', 'cleaning leads', 'appointment booking'],
+    openGraph: {
+        title: 'Janitorial Appointments & Commercial Cleaning Leads',
+        description: 'Get qualified janitorial appointments and commercial cleaning leads.',
+        url: 'https://www.janitorialappointment.com',
+        type: 'website',
+    },
 }
 
 
