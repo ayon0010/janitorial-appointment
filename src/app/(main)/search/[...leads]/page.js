@@ -13,28 +13,34 @@ export function capitalizeFirstLetter(word) {
 export const revalidate = 1;
 
 export async function generateStaticParams() {
-    const leadsData = await getLeads();
+    try {
+        const leadsData = await getLeads();
 
-    const uniqueArray = (arr) => Array.from(new Set(arr.map(JSON.stringify))).map(JSON.parse);
+        const uniqueArray = (arr) => Array.from(new Set(arr.map(JSON.stringify))).map(JSON.parse);
 
-    // Categories (one-level paths)
-    const categories = leadsData
-        .filter((lead) => lead.category)
-        .map((lead) => [lead.category]);
+        // Categories (one-level paths)
+        const categories = leadsData
+            .filter((lead) => lead.category)
+            .map((lead) => [lead.category]);
 
-    // States with Category (two-level paths)
-    const statesWithCategory = leadsData
-        .filter((lead) => lead.category && lead.states)
-        .map((lead) => [lead.category, lead.states]);
+        // States with Category (two-level paths)
+        const statesWithCategory = leadsData
+            .filter((lead) => lead.category && lead.states)
+            .map((lead) => [lead.category, lead.states]);
 
-    // Full paths with category, states, and lead ID (three-level paths)
-    const allLeads = leadsData
-        .filter((lead) => lead.category && lead.states && lead._id)
-        .map((lead) => [lead.category, lead.states, lead._id]);
+        // Full paths with category, states, and lead ID (three-level paths)
+        const allLeads = leadsData
+            .filter((lead) => lead.category && lead.states && lead._id)
+            .map((lead) => [lead.category, lead.states, lead._id]);
 
-    // Combine all paths and ensure uniqueness
-    const pathSegments = uniqueArray([...categories, ...statesWithCategory, ...allLeads]);
-    return pathSegments.map((path) => ({ leads: path }));
+        // Combine all paths and ensure uniqueness
+        const pathSegments = uniqueArray([...categories, ...statesWithCategory, ...allLeads]);
+        return pathSegments.map((path) => ({ leads: path }));
+    } catch (error) {
+        console.warn('Failed to fetch leads during static generation, returning empty params:', error.message);
+        // Return empty array to allow dynamic rendering as fallback
+        return [];
+    }
 }
 
 export async function generateMetadata({ params }) {
@@ -118,6 +124,11 @@ export async function generateMetadata({ params }) {
 
 const page = async ({ params }) => {
     const { leads } = await params;
+    
+    if (!leads || leads.length === 0) {
+        return <div>No leads found</div>;
+    }
+    
     if (leads?.length === 3) {
         return (
             <SingleLead Lead={leads} />

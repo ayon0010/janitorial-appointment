@@ -15,7 +15,6 @@ const nextConfig = {
   trailingSlash: true,
   compress: true,
   experimental: {
-    optimizeCss: true,
   },
 };
 export default withBundleAnalyzer({

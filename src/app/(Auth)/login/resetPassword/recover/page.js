@@ -5,8 +5,6 @@ import { showError, showSuccess } from '@/Shared/Swal';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { FaEye } from "@react-icons/all-files/fa/FaEye";
-import { FaEyeSlash } from "@react-icons/all-files/fa/FaEyeSlash";
 
 
 const Page = ({ searchParams }) => {
@@ -54,19 +52,23 @@ const Page = ({ searchParams }) => {
                             />
                             {
                                 !showPassword &&
-                                <FaEye
-                                    className='text-[#999999] absolute right-4 top-1/2 bottom-1/2 cursor-pointer'
+                                <button
+                                    type="button"
+                                    className='text-[#999999] absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer'
                                     onClick={togglePasswordVisibility}
-                                    style={{ transform: "translateY(-50%)" }}
-                                />
+                                >
+                                    👁️
+                                </button>
                             }
                             {
                                 showPassword &&
-                                <FaEyeSlash
-                                    className='text-[#999999] absolute right-4 top-1/2 bottom-1/2 cursor-pointer'
+                                <button
+                                    type="button"
+                                    className='text-[#999999] absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer'
                                     onClick={togglePasswordVisibility}
-                                    style={{ transform: "translateY(-50%)" }}
-                                />
+                                >
+                                    👁️‍🗨️
+                                </button>
                             }
                         </div>
                         {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}

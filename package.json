@@ -60,7 +60,7 @@
     "eslint-config-next": "16.0.10",
     "postcss": "^8.5.6",
     "sass": "^1.96.0",
-    "tailwindcss": "^4.1.18",
+    "tailwindcss": "^3.4.24",
     "webpack-bundle-analyzer": "^5.1.0"
   }
 }

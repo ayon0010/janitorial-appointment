@@ -40,6 +40,8 @@ const getData = async (params) => {
 
 export async function generateMetadata({ params }) {
     const data = await getData(params.slug) || {};
+    const imageUrl = data?.titleImage ? urlFor(data.titleImage).url() : null;
+    
     return {
         title: data?.title,
         description:
@@ -51,21 +53,22 @@ export async function generateMetadata({ params }) {
             "lead generation for cleaning services",
             "janitorial marketing strategies",
         ],
-        openGraph: {
-            title: "Blogs - Janitorial Appointments & Commercial Cleaning Leads",
-            description:
-                "Explore industry news and expert tips on generating janitorial appointments and commercial cleaning leads to grow your business.",
-            url: "https://www.janitorialappointment.com/blogs/" + params.slug,
-            type: "website",
-            images:
-                [
+        ...(imageUrl ? {
+            openGraph: {
+                title: "Blogs - Janitorial Appointments & Commercial Cleaning Leads",
+                description:
+                    "Explore industry news and expert tips on generating janitorial appointments and commercial cleaning leads to grow your business.",
+                url: "https://www.janitorialappointment.com/blogs/" + params.slug,
+                type: "website",
+                images: [
                     {
-                        url: urlFor(data?.titleImage).url(),
+                        url: imageUrl,
                         width: 800,
                         height: 600,
                     }
                 ]
-        },
+            },
+        } : {}),
         twitter: {
             card: "",
             title: "Blogs - Janitorial Appointments & Commercial Cleaning Leads",
@@ -77,15 +80,18 @@ export async function generateMetadata({ params }) {
 
 const page = async ({ params }) => {
     const data = await getData(params.slug) || {};
+    const titleImageUrl = data?.titleImage ? urlFor(data.titleImage).url() : '/assets/placeholder.png';
+    const authorImageUrl = data?.authorImage ? urlFor(data.authorImage).url() : '/assets/placeholder.png';
+    
     return (
         <div>
-            <PageSection image={urlFor(data?.titleImage).url()} title={<><p className="flex justify-center items-center gap-2 mt-2"><FaRegCalendar className="" size={'1rem'} /><span className="2xl:text-lg xl:text-lg text-base font-semibold">{formatTimestamp(data?.date)}</span></p></>} text={<><span className="2xl:text-4xl xl:text-4xl text-xl">{data?.title}</span></>} />
+            <PageSection image={titleImageUrl} title={<><p className="flex justify-center items-center gap-2 mt-2"><FaRegCalendar className="" size={'1rem'} /><span className="2xl:text-lg xl:text-lg text-base font-semibold">{formatTimestamp(data?.date)}</span></p></>} text={<><span className="2xl:text-4xl xl:text-4xl text-xl">{data?.title}</span></>} />
             <div className="pt-20 pb-20 max-w-[1150px] mx-auto 2xl:px-0 xl:px-0 px-6">
                 {/* <h2 className="2xl:text-5xl xl:text-5xl text-3xl  font-bold text-black text-center">{data?.title}</h2>
                 <p className="my-10 text-center flex justify-center items-center gap-2"><FaRegCalendar className="mt-1" size={'1.2rem'} /><span className=" 2xl:text-2xl xl:text-2xl text-xl font-semibold">{formatTimestamp(data?.date)}</span></p> */}
                 <div className="">
                     <div className="flex items-center gap-2 mb-10">
-                        <Image src={urlFor(data?.authorImage).url()} width={50} height={50} className='w-[50px] h-[50px] rounded-full' alt='' />
+                        <Image src={authorImageUrl} width={50} height={50} className='w-[50px] h-[50px] rounded-full' alt='' />
                         <p className=" text-xl font-semibold">By {data?.authorName}</p>
                     </div>
                     <div className="prose 2xl:prose-xl xl:prose-xl prose-indigo text-black">
