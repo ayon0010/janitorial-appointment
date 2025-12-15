@@ -8,7 +8,7 @@ import Footer from '@/Shared/Footer/Footer'
 import { gilroy } from '@/Shared/gilroy'
 
 export const metadata = {
-  metadataBase: new URL('https://www.janitorialappointment.com'),
+  // metadataBase: new URL('https://www.janitorialappointment.com'),
   title: {
     default: 'Janitorial Appointments & Commercial Cleaning Leads',
     template: '%s | JanitorialAppointment.com'
