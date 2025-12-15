@@ -5,7 +5,7 @@ const LeadList = ({ leadList }) => {
     const { user } = useAuth();
 
     const handleDelete = async (id) => {
-        fetch(`https://backend.janitorialappointment.com/leadlist/${id}`, {
+        fetch(`https://backend-janitorial-appointment.vercel.app/leadlist/${id}`, {
             method: 'DELETE',
         })
             .then(res => {
