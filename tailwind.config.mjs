@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-const daisyui = require('daisyui');
-const typography = require('@tailwindcss/typography');
+import daisyui from 'daisyui';
+import typography from '@tailwindcss/typography';
 
-module.exports = {
+export default {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",

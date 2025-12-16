@@ -1,6 +1,6 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities
+@tailwind utilities;
 
 html {
   @apply scroll-smooth scroll-pt-[125px];
@@ -51,7 +51,7 @@ html {
 }
 
 #particles {
-  @apply relative h-[932px] w-full overflow-hidden
+  @apply relative h-[932px] w-full overflow-hidden;
 }
 
 #search::placeholder {
@@ -60,38 +60,41 @@ html {
 }
 
 .service-img {
-  @apply text-red-500 transition-all duration-150 ease-in
+  @apply text-red-500 transition-all duration-150 ease-in;
 }
 
 .services {
-  @apply transition-all duration-150 ease-in
+  @apply transition-all duration-150 ease-in;
 }
 
 .services:hover .service-img {
-  @apply text-white
+  @apply text-white;
 }
 
 .service-text {
-  @apply transition-all duration-150 ease-in
+  @apply transition-all duration-150 ease-in;
 }
 
 .services:hover .service-text {
-  @apply text-white
+  @apply text-white;
 }
 
 .services:hover {
-  @apply bg-primary text-white
+  @apply bg-primary text-white;
 }
 
 .message {
-  @apply grid grid-cols-[1fr_2fr] !important;
+  display: grid !important;
+  grid-template-columns: 1fr 2fr !important;
 }
 
 /* globals.css or your custom CSS file */
 .navbar a:focus,
 .navbar a:active,
 .navbar a:visited {
-  @apply outline-none bg-transparent text-inherit !important;
+  outline: none !important;
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
 .dashboard {
@@ -252,7 +255,7 @@ input[type="checkbox"]:checked~.collapse-content {
 /*  */
 
 .option:hover .option-text {
-  @apply text-orange !important;
+  color: #C6250C !important;
 }
 
 .dropdown-icon:hover .dropdown-path {
@@ -285,7 +288,7 @@ input[type="checkbox"]:checked~.collapse-content {
 }
 
 .people:hover .team-image {
-  @apply opacity-100 !important;
+  opacity: 1 !important;
 }
 
 @media screen and (max-width: 576px) {
