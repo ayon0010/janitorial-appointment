@@ -30,7 +30,7 @@ const Register = () => {
             const user = res.user;
             await updateUserProfile(companyName);
             const cities = serviceCities.split(',').map(city => city.trim());
-            const response = await axiosPublic.post('user', {
+            const response = await axiosPublic.post('/user', {
                 userId: user.uid,
                 companyName,
                 email,
@@ -49,7 +49,7 @@ const Register = () => {
         }
     };
 
-    const inputclassName = "input input-bordered w-full";
+    const inputclassName = "input input-bordered w-full px-3";
     const errorclassName = "text-red-500 text-sm";
 
     return (
@@ -145,10 +145,10 @@ const Register = () => {
                                 <div key={idx} className="form-control">
                                     <label className="form-control w-full">
                                         <div className="label">
-                                            <span className="label-text text-base text-primary">{field.label}</span>
+                                            <span className="label-text text-base text-primary mb-1">{field.label}</span>
                                         </div>
                                         {field.type === "select" ? (
-                                            <select className="select text-primary text-base select-bordered w-full" {...register(field.name, { required: field.required })}>
+                                            <select className="select text-primary text-base select-bordered w-full px-3" {...register(field.name, { required: field.required })}>
                                                 <option disabled selected defaultValue={'Pick Your State'}>Pick Your State</option>
                                                 {field.options.map((option, index) => (
                                                     <option key={index} value={option}>{option}</option>

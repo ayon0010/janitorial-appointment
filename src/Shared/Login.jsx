@@ -91,7 +91,7 @@ const LoginPage = () => {
                         <input
                             type="email"
                             placeholder="emailaddress@gmail.com"
-                            className="input input-bordered rounded-[10px] bg-[#FAFAFB] border border-[#5C6272]"
+                            className="input input-bordered my-1 rounded-[10px] bg-[#FAFAFB] w-full px-3 border border-[#5C6272]"
                             {...register('email', { required: 'Email is required' })}
                         />
                         {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
@@ -104,7 +104,7 @@ const LoginPage = () => {
                             <input
                                 type={showPassword ? 'text' : 'password'}
                                 placeholder="password"
-                                className="input input-bordered rounded-[10px] bg-[#FAFAFB] border border-[#5C6272] w-full"
+                                className="input input-bordered rounded-[10px] bg-[#FAFAFB] border border-[#5C6272] px-3 my-1 w-full"
                                 {...register('password', { required: 'Password is required' })}
                             />
                             {
@@ -129,8 +129,8 @@ const LoginPage = () => {
                             <Link href="/login/resetPassword" className="label-text-alt link link-hover">Forgot password?</Link>
                         </label>
                     </div>
-                    <div className="form-control w-full mx-auto">
-                        <button type="submit" className="btn rounded-[10px] btn-primary bg-primary text-white">Login</button>
+                    <div className="form-control w-full mx-auto flex flex-col items-center justify-center">
+                        <button type="submit" className="btn rounded-[10px] btn-primary bg-primary text-white w-full">Login</button>
                         <label className="label mt-2">
                             <span className='text-[#AEAEAE] text-base font-normal'>
                                 Don’t have an account?

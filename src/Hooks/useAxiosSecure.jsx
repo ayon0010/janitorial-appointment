@@ -9,7 +9,7 @@ const useAxiosSecure = () => {
     const router = useRouter();
 
     const axiosSecure = axios.create({
-        baseURL: 'https://backend-janitorial-appointment.vercel.app/', // Adjust this to your actual base URL
+        baseURL: `${process.env.NEXT_PUBLIC_BACKEND_URL}`, // Adjust this to your actual base URL
     });
 
     // Request interceptor

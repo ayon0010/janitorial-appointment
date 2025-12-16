@@ -8,7 +8,7 @@ const GetData = (key, params) => {
         queryKey: [key], // Include `uid` in queryKey to refetch if `uid` changes
         queryFn: async () => {
             try {
-                const response = await axiosSecure.get(params);
+                const response = await axiosSecure.get(`/${params}`);
                 const data = await response?.data;
                 return data;
             } catch (err) {

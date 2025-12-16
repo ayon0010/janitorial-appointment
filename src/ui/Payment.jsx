@@ -22,7 +22,7 @@ export default function Payment({ price, product_Id, closeModal }) {
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
-        axiosSecure.post("create-payment-intent", { price: price })
+        axiosSecure.post("/create-payment-intent", { price: price })
             .then(response => {
                 setClientSecret(response.data.clientSecret);
             })

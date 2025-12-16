@@ -15,7 +15,7 @@ const page = async ({ params }) => {
     const token = userTokenObj?.value;
 
     const id = params?.lead;
-    const res = await fetch(`https://backend-janitorial-appointment.vercel.app/allLeads/${id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/allLeads/${id}`, {
         cache: 'no-cache',
         headers: {
             authorization: `Bearer ${token}`,

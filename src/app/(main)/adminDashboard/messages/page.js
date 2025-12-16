@@ -9,7 +9,7 @@ const page = async () => {
     const cookieStore = await cookies();
     const userTokenObj = cookieStore.get('userToken');
     const token = userTokenObj?.value;
-    const res = await fetch('https://backend-janitorial-appointment.vercel.app/messages', {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/messages`, {
         cache: 'no-cache',
         headers: {
             authorization: `Bearer ${token}`
