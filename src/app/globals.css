@@ -1,6 +1,6 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities
 
 html {
   @apply scroll-smooth scroll-pt-[125px];
